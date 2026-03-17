@@ -18,3 +18,5 @@ minecraftinstance.json
 config/splash.properties
 config/buildcraft/detailed.properties
 config/AppliedEnergistics2/CustomRecipes.cfg
+/vintagefix
+/cache
