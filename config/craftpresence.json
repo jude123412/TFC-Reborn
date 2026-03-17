@@ -123,7 +123,7 @@
       "gameState": "{getOrDefault(server.message)} {getOrDefault(pack.name)}",
       "gameStateUrl": "",
       "appName": "",
-      "largeImageKey": "{getFirst(menu.icon, dimension.icon)}",
+      "largeImageKey": "main_icon",
       "largeImageText": "{getFirst(menu.message, dimension.message)}",
       "largeImageUrl": "",
       "smallImageKey": "{getFirst(server.icon, pack.icon)}",
@@ -133,7 +133,11 @@
       "endTimestamp": "",
       "buttons": {}
     },
-    "dynamicIcons": {},
+    "dynamicIcons": {
+      "main_icon": "https://github.com/jude123412/TFC-Reborn/raw/main/icon.png",
+      "default": "https://via.placeholder.com/256.png",
+      "xXjudeXx": "https://mc-heads.net/avatar/845b32efdd0242c28d19c5bcdcf6eabb"
+    },
     "dynamicVariables": {
       "mods": "{general.mods} Mod(s)",
       "player_info_coordinate": "At {player.position.x}, {player.position.z}",
