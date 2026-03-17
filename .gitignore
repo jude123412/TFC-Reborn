@@ -1,0 +1,13 @@
+.curseclient
+config/AppliedEnergistics2/items.csv
+*.log
+/crash-reports
+/journeymap/data
+local/ftbutilities/players.txt
+local/ftbutilities/ranks.txt
+/logs
+/mods
+/saves
+/screenshots
+usercache.json
+usernamecache.json

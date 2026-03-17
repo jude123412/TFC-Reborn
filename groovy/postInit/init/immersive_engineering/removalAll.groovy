@@ -1,0 +1,1 @@
+mods.immersiveengineering.alloy_kiln.removeAll()
