@@ -17,7 +17,18 @@ def recipesToRemove = [
     'immersiveengineering:treated_wood/treated_wood_stairs2',
     'immersiveengineering:treated_wood/treated_wood_fence',
     'immersiveengineering:treated_wood/treated_wood_scaffolding',
-    'immersiveengineering:wooden_devices/item_router',
+    'immersiveengineering:wooden_devices/reinforced_crate',
+    'immersiveengineering:sheetmetal/copper_sheetmetal',
+    'immersiveengineering:sheetmetal/aluminum_sheetmetal',
+    'immersiveengineering:sheetmetal/lead_sheetmetal',
+    'immersiveengineering:sheetmetal/silver_sheetmetal',
+    'immersiveengineering:sheetmetal/nickel_sheetmetal',
+    'immersiveengineering:sheetmetal/uranium_sheetmetal',
+    'immersiveengineering:sheetmetal/constantan_sheetmetal',
+    'immersiveengineering:sheetmetal/electrum_sheetmetal',
+    'immersiveengineering:sheetmetal/steel_sheetmetal',
+    'immersiveengineering:sheetmetal/iron_sheetmetal',
+    'immersiveengineering:sheetmetal/gold_sheetmetal',
 ]
 
 // Coke Oven
@@ -92,15 +103,25 @@ crafting.shapedBuilder()
 
 // Treated Wood Scaffolding
 crafting.shapedBuilder()
-    .output(item('immersiveengineering:wooden_decoration', 1) * 6)
+    .output(item('immersiveengineering:wooden_decoration', 1) * 8)
     .shape([
-        [item('immersiveengineering:treated_wood'),item('immersiveengineering:treated_wood'),item('immersiveengineering:treated_wood')],
-        [ore('screwAnyBronze'),ore('stickTreatedWood'),ore('screwAnyBronze')],
-        [ore('stickTreatedWood'),ore('screwAnyBronze'),ore('stickTreatedWood')]
+        [null,null,null],
+        [item('immersiveengineering:treated_wood'),ore('stickTreatedWood'),null],
+        [ore('stickTreatedWood'),item('immersiveengineering:treated_wood'),null]
     ])
     .register()
 
-def stairRecipeItems = [
+// Reinforced Storage Crate
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:wooden_device0', 5))
+    .shape([
+        [ore('plankTreatedWood'),ore('sheetIron'),ore('plankTreatedWood')],
+        [ore('stickIron'),item('immersiveengineering:wooden_device0'),ore('stickIron')],
+        [ore('plankTreatedWood'),ore('sheetIron'),ore('plankTreatedWood')]
+    ])
+    .register()
+
+def stairItems = [
     (item('immersiveengineering:stone_decoration', 4)):(item('immersiveengineering:stone_decoration_stairs_hempcrete') * 8),
     (item('immersiveengineering:stone_decoration', 5)):(item('immersiveengineering:stone_decoration_stairs_concrete') * 8),
     (item('immersiveengineering:stone_decoration', 6)):(item('immersiveengineering:stone_decoration_stairs_concrete_tile') * 8),
@@ -110,13 +131,39 @@ def stairRecipeItems = [
     (item('immersiveengineering:treated_wood', 2)):(item('immersiveengineering:treated_wood_stairs2') * 8)
 ]
 
-for (entry in stairRecipeItems) {
+for (entry in stairItems) {
     crafting.shapedBuilder()
         .output(entry.value)
         .shape([
             [entry.key,null,null],
             [entry.key,entry.key,null],
             [entry.key,entry.key,entry.key]
+        ])
+        .register()
+}
+
+def sheetMetalItems = [
+    (ore('sheetCopper')):(item('immersiveengineering:sheetmetal') * 8),
+    (ore('sheetAluminium')):(item('immersiveengineering:sheetmetal', 1) * 8),
+    (ore('sheetLead')):(item('immersiveengineering:sheetmetal', 2) * 8),
+    (ore('sheetSilver')):(item('immersiveengineering:sheetmetal', 3) * 8),
+    (ore('sheetNickel')):(item('immersiveengineering:sheetmetal', 4) * 8),
+    (ore('sheetUranium')):(item('immersiveengineering:sheetmetal', 5) * 8),
+    (ore('sheetConstantan')):(item('immersiveengineering:sheetmetal', 6) * 8),
+    (ore('sheetElectrum')):(item('immersiveengineering:sheetmetal', 7) * 8),
+    (ore('sheetSteel')):(item('immersiveengineering:sheetmetal', 8) * 8),
+    (ore('sheetIron')):(item('immersiveengineering:sheetmetal', 9) * 8),
+    (ore('sheetGold')):(item('immersiveengineering:sheetmetal', 10) * 8),
+
+]
+
+for (entry in sheetMetalItems) {
+    crafting.shapedBuilder()
+        .output(entry.value)
+        .shape([
+            [null,entry.key,null],
+            [entry.key,null,entry.key],
+            [null,entry.key,null]
         ])
         .register()
 }

@@ -23,3 +23,5 @@ config/AppliedEnergistics2/CustomRecipes.cfg
 options.txt
 /local
 config/jei/worldSettings.cfg
+config/AppliedEnergistics2/VersionChecker.cfg
+hei_bookmarks.ini
