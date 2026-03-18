@@ -105,9 +105,9 @@ crafting.shapedBuilder()
 crafting.shapedBuilder()
     .output(item('immersiveengineering:wooden_decoration', 1) * 8)
     .shape([
-        [null,null,null],
-        [item('immersiveengineering:treated_wood'),ore('stickTreatedWood'),null],
-        [ore('stickTreatedWood'),item('immersiveengineering:treated_wood'),null]
+        [ore('stickTreatedWood'),ore('plankTreatedWood'),ore('stickTreatedWood')],
+        [ore('plankTreatedWood'),ore('stickTreatedWood'),ore('plankTreatedWood')],
+        [ore('stickTreatedWood'),ore('plankTreatedWood'),ore('stickTreatedWood')]
     ])
     .register()
 
@@ -121,6 +121,7 @@ crafting.shapedBuilder()
     ])
     .register()
 
+// Stair Recipes
 def stairItems = [
     (item('immersiveengineering:stone_decoration', 4)):(item('immersiveengineering:stone_decoration_stairs_hempcrete') * 8),
     (item('immersiveengineering:stone_decoration', 5)):(item('immersiveengineering:stone_decoration_stairs_concrete') * 8),
@@ -142,6 +143,7 @@ for (entry in stairItems) {
         .register()
 }
 
+// Sheet Metal Recipes
 def sheetMetalItems = [
     (ore('sheetCopper')):(item('immersiveengineering:sheetmetal') * 8),
     (ore('sheetAluminium')):(item('immersiveengineering:sheetmetal', 1) * 8),
