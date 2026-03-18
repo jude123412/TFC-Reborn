@@ -29,6 +29,9 @@ def recipesToRemove = [
     'immersiveengineering:sheetmetal/steel_sheetmetal',
     'immersiveengineering:sheetmetal/iron_sheetmetal',
     'immersiveengineering:sheetmetal/gold_sheetmetal',
+    'immersiveengineering:metal_decoration/coil_copper',
+    'immersiveengineering:metal_decoration/coil_electrum',
+    'immersiveengineering:metal_decoration/coil_hv',
 ]
 
 // Stair Recipes
@@ -145,6 +148,33 @@ crafting.shapedBuilder()
         [ore('plankTreatedWood'),ore('sheetIron'),ore('plankTreatedWood')],
         [ore('stickIron'),item('immersiveengineering:wooden_device0'),ore('stickIron')],
         [ore('plankTreatedWood'),ore('sheetIron'),ore('plankTreatedWood')]
+    ])
+    .register()
+
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_decoration0'))
+    .shape([
+        [item('immersiveengineering:wirecoil'),item('immersiveengineering:wirecoil'),item('immersiveengineering:wirecoil')],
+        [item('immersiveengineering:wirecoil'),ore('stickLongIron'),item('immersiveengineering:wirecoil')],
+        [item('immersiveengineering:wirecoil'),item('immersiveengineering:wirecoil'),item('immersiveengineering:wirecoil')]
+    ])
+    .register()
+
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_decoration0', 1))
+    .shape([
+        [item('immersiveengineering:wirecoil', 1),item('immersiveengineering:wirecoil', 1),item('immersiveengineering:wirecoil', 1)],
+        [item('immersiveengineering:wirecoil', 1),ore('stickLongIron'),item('immersiveengineering:wirecoil', 1)],
+        [item('immersiveengineering:wirecoil', 1),item('immersiveengineering:wirecoil', 1),item('immersiveengineering:wirecoil', 1)]
+    ])
+    .register()
+
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_decoration0', 2))
+    .shape([
+        [item('immersiveengineering:wirecoil', 2),item('immersiveengineering:wirecoil', 2),item('immersiveengineering:wirecoil', 2)],
+        [item('immersiveengineering:wirecoil', 2),ore('stickLongIron'),item('immersiveengineering:wirecoil', 2)],
+        [item('immersiveengineering:wirecoil', 2),item('immersiveengineering:wirecoil', 2),item('immersiveengineering:wirecoil', 2)]
     ])
     .register()
 
