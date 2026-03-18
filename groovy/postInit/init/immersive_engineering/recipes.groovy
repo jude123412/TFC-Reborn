@@ -31,6 +31,33 @@ def recipesToRemove = [
     'immersiveengineering:sheetmetal/gold_sheetmetal',
 ]
 
+// Stair Recipes
+def stairItems = [
+    (item('immersiveengineering:stone_decoration', 4)):(item('immersiveengineering:stone_decoration_stairs_hempcrete') * 8),
+    (item('immersiveengineering:stone_decoration', 5)):(item('immersiveengineering:stone_decoration_stairs_concrete') * 8),
+    (item('immersiveengineering:stone_decoration', 6)):(item('immersiveengineering:stone_decoration_stairs_concrete_tile') * 8),
+    (item('immersiveengineering:stone_decoration', 7)):(item('immersiveengineering:stone_decoration_stairs_concrete_leaded') * 8),
+    (item('immersiveengineering:treated_wood')):(item('immersiveengineering:treated_wood_stairs0') * 8),
+    (item('immersiveengineering:treated_wood', 1)):(item('immersiveengineering:treated_wood_stairs1') * 8),
+    (item('immersiveengineering:treated_wood', 2)):(item('immersiveengineering:treated_wood_stairs2') * 8)
+]
+
+// Sheet Metal Recipes
+def sheetMetalItems = [
+    (ore('sheetCopper')):(item('immersiveengineering:sheetmetal') * 8),
+    (ore('sheetAluminium')):(item('immersiveengineering:sheetmetal', 1) * 8),
+    (ore('sheetLead')):(item('immersiveengineering:sheetmetal', 2) * 8),
+    (ore('sheetSilver')):(item('immersiveengineering:sheetmetal', 3) * 8),
+    (ore('sheetNickel')):(item('immersiveengineering:sheetmetal', 4) * 8),
+    (ore('sheetUranium')):(item('immersiveengineering:sheetmetal', 5) * 8),
+    (ore('sheetConstantan')):(item('immersiveengineering:sheetmetal', 6) * 8),
+    (ore('sheetElectrum')):(item('immersiveengineering:sheetmetal', 7) * 8),
+    (ore('sheetSteel')):(item('immersiveengineering:sheetmetal', 8) * 8),
+    (ore('sheetIron')):(item('immersiveengineering:sheetmetal', 9) * 8),
+    (ore('sheetGold')):(item('immersiveengineering:sheetmetal', 10) * 8),
+
+]
+
 // Coke Oven
 crafting.shapedBuilder()
     .output(item('immersiveengineering:stone_decoration'))
@@ -121,17 +148,7 @@ crafting.shapedBuilder()
     ])
     .register()
 
-// Stair Recipes
-def stairItems = [
-    (item('immersiveengineering:stone_decoration', 4)):(item('immersiveengineering:stone_decoration_stairs_hempcrete') * 8),
-    (item('immersiveengineering:stone_decoration', 5)):(item('immersiveengineering:stone_decoration_stairs_concrete') * 8),
-    (item('immersiveengineering:stone_decoration', 6)):(item('immersiveengineering:stone_decoration_stairs_concrete_tile') * 8),
-    (item('immersiveengineering:stone_decoration', 7)):(item('immersiveengineering:stone_decoration_stairs_concrete_leaded') * 8),
-    (item('immersiveengineering:treated_wood')):(item('immersiveengineering:treated_wood_stairs0') * 8),
-    (item('immersiveengineering:treated_wood', 1)):(item('immersiveengineering:treated_wood_stairs1') * 8),
-    (item('immersiveengineering:treated_wood', 2)):(item('immersiveengineering:treated_wood_stairs2') * 8)
-]
-
+// Recipe Builder for Stairs
 for (entry in stairItems) {
     crafting.shapedBuilder()
         .output(entry.value)
@@ -143,22 +160,7 @@ for (entry in stairItems) {
         .register()
 }
 
-// Sheet Metal Recipes
-def sheetMetalItems = [
-    (ore('sheetCopper')):(item('immersiveengineering:sheetmetal') * 8),
-    (ore('sheetAluminium')):(item('immersiveengineering:sheetmetal', 1) * 8),
-    (ore('sheetLead')):(item('immersiveengineering:sheetmetal', 2) * 8),
-    (ore('sheetSilver')):(item('immersiveengineering:sheetmetal', 3) * 8),
-    (ore('sheetNickel')):(item('immersiveengineering:sheetmetal', 4) * 8),
-    (ore('sheetUranium')):(item('immersiveengineering:sheetmetal', 5) * 8),
-    (ore('sheetConstantan')):(item('immersiveengineering:sheetmetal', 6) * 8),
-    (ore('sheetElectrum')):(item('immersiveengineering:sheetmetal', 7) * 8),
-    (ore('sheetSteel')):(item('immersiveengineering:sheetmetal', 8) * 8),
-    (ore('sheetIron')):(item('immersiveengineering:sheetmetal', 9) * 8),
-    (ore('sheetGold')):(item('immersiveengineering:sheetmetal', 10) * 8),
-
-]
-
+// Recipe Builder for Sheet Metal
 for (entry in sheetMetalItems) {
     crafting.shapedBuilder()
         .output(entry.value)
@@ -170,6 +172,7 @@ for (entry in sheetMetalItems) {
         .register()
 }
 
+// Recipe Removal
 for (id in recipesToRemove) {
     crafting.remove(id)
 }
