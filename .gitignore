@@ -26,3 +26,5 @@ config/jei/worldSettings.cfg
 config/AppliedEnergistics2/VersionChecker.cfg
 hei_bookmarks.ini
 /config/waila/theme
+config/dynamiclights_onfire.cfg
+config/dynamiclights_entityclasses.cfg
