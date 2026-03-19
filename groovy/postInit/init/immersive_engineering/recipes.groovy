@@ -32,6 +32,9 @@ def recipesToRemove = [
     'immersiveengineering:metal_decoration/coil_copper',
     'immersiveengineering:metal_decoration/coil_electrum',
     'immersiveengineering:metal_decoration/coil_hv',
+    'immersiveengineering:metal_decoration/redstone_engineering',
+    'immersiveengineering:metal_decoration/light_engineering',
+    'immersiveengineering:metal_decoration/heavy_engineering',
 ]
 
 // Stair Recipes
@@ -151,6 +154,7 @@ crafting.shapedBuilder()
     ])
     .register()
 
+// Copper Coil Block
 crafting.shapedBuilder()
     .output(item('immersiveengineering:metal_decoration0'))
     .shape([
@@ -160,6 +164,7 @@ crafting.shapedBuilder()
     ])
     .register()
 
+// Electrum Coil Block
 crafting.shapedBuilder()
     .output(item('immersiveengineering:metal_decoration0', 1))
     .shape([
@@ -169,12 +174,43 @@ crafting.shapedBuilder()
     ])
     .register()
 
+// High-Voltage Coil Block
 crafting.shapedBuilder()
     .output(item('immersiveengineering:metal_decoration0', 2))
     .shape([
         [item('immersiveengineering:wirecoil', 2),item('immersiveengineering:wirecoil', 2),item('immersiveengineering:wirecoil', 2)],
         [item('immersiveengineering:wirecoil', 2),ore('stickLongIron'),item('immersiveengineering:wirecoil', 2)],
         [item('immersiveengineering:wirecoil', 2),item('immersiveengineering:wirecoil', 2),item('immersiveengineering:wirecoil', 2)]
+    ])
+    .register()
+
+// Redstone Engineering Block
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_decoration0', 3) * 4)
+    .shape([
+        [ore('sheetIron'),item('minecraft:redstone'),ore('sheetIron')],
+        [item('minecraft:redstone'),ore('gearCopper'),item('minecraft:redstone')],
+        [ore('sheetIron'),item('minecraft:redstone'),ore('sheetIron')]
+    ])
+    .register()
+
+// Light Engineering Block
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_decoration0', 4) * 4)
+    .shape([
+        [ore('sheetIron'),item('immersiveengineering:material', 8),ore('sheetIron')],
+        [item('minecraft:piston'),ore('gearCopper'),item('minecraft:piston')],
+        [ore('sheetIron'),item('immersiveengineering:material', 8),ore('sheetIron')]
+    ])
+    .register()
+
+// Heavy Engineering Block
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_decoration0', 5) * 4)
+    .shape([
+        [ore('sheetSteel'),item('immersiveengineering:material', 9),ore('sheetSteel')],
+        [item('minecraft:piston'),ore('gearElectrum'),item('minecraft:piston')],
+        [ore('sheetSteel'),item('immersiveengineering:material', 9),ore('sheetSteel')]
     ])
     .register()
 
