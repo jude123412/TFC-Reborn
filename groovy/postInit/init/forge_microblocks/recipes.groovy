@@ -19,7 +19,7 @@ crafting.shapedBuilder()
     .shape([
         [null,null,null],
         [ore('stickSilver'),ore('stickSilver'),ore('stickWood')],
-        [ore('stickSilver'),item('tfc:metal/saw_blade/bismuth_bronze'),ore('stickWood')]
+        [ore('stickSilver'),item('tfc:metal/saw_blade/wrought_iron'),ore('stickWood')]
     ])
     .register()
 
@@ -29,6 +29,6 @@ crafting.shapedBuilder()
     .shape([
         [null,null,null],
         [ore('stickSilver'),ore('stickSilver'),ore('stickWood')],
-        [ore('stickSilver'),item('tfc:metal/saw_blade/wrought_iron'),ore('stickWood')]
+        [ore('stickSilver'),item('tfc:metal/saw_blade/black_steel'),ore('stickWood')]
     ])
     .register()
