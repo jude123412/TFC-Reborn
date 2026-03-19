@@ -18,6 +18,7 @@ def recipesToRemove = [
     'immersiveengineering:treated_wood/treated_wood_fence',
     'immersiveengineering:treated_wood/treated_wood_scaffolding',
     'immersiveengineering:wooden_devices/reinforced_crate',
+    'immersiveengineering:wooden_devices/post',
     'immersiveengineering:sheetmetal/copper_sheetmetal',
     'immersiveengineering:sheetmetal/aluminum_sheetmetal',
     'immersiveengineering:sheetmetal/lead_sheetmetal',
@@ -35,6 +36,23 @@ def recipesToRemove = [
     'immersiveengineering:metal_decoration/redstone_engineering',
     'immersiveengineering:metal_decoration/light_engineering',
     'immersiveengineering:metal_decoration/heavy_engineering',
+    'immersiveengineering:metal_decoration/generator',
+    'immersiveengineering:metal_decoration/radiator',
+    'immersiveengineering:metal_decoration/steel_fence',
+    'immersiveengineering:metal_decoration/steel_scaffolding',
+    'immersiveengineering:metal_decoration/aluminum_fence',
+    'immersiveengineering:metal_decoration/aluminum_scaffolding',
+    'immersiveengineering:metal_decoration/steel_post',
+    'immersiveengineering:metal_decoration/aluminum_post',
+    'immersiveengineering:metal_decoration/structural_arm_steel',
+    'immersiveengineering:metal_decoration/structural_arm_alu',
+    'immersiveengineering:metal_decoration/steel_scaffolding_stairs0',
+    'immersiveengineering:metal_decoration/steel_scaffolding_stairs1',
+    'immersiveengineering:metal_decoration/steel_scaffolding_stairs2',
+    'immersiveengineering:metal_decoration/aluminum_scaffolding_stairs0',
+    'immersiveengineering:metal_decoration/aluminum_scaffolding_stairs1',
+    'immersiveengineering:metal_decoration/aluminum_scaffolding_stairs2',
+    'immersiveengineering:metal_decoration/ladder',
 ]
 
 // Stair Recipes
@@ -45,7 +63,13 @@ def stairItems = [
     (item('immersiveengineering:stone_decoration', 7)):(item('immersiveengineering:stone_decoration_stairs_concrete_leaded') * 8),
     (item('immersiveengineering:treated_wood')):(item('immersiveengineering:treated_wood_stairs0') * 8),
     (item('immersiveengineering:treated_wood', 1)):(item('immersiveengineering:treated_wood_stairs1') * 8),
-    (item('immersiveengineering:treated_wood', 2)):(item('immersiveengineering:treated_wood_stairs2') * 8)
+    (item('immersiveengineering:treated_wood', 2)):(item('immersiveengineering:treated_wood_stairs2') * 8),
+    (item('immersiveengineering:metal_decoration1', 1)):(item('immersiveengineering:steel_scaffolding_stairs0') * 8),
+    (item('immersiveengineering:metal_decoration1', 2)):(item('immersiveengineering:steel_scaffolding_stairs1') * 8),
+    (item('immersiveengineering:metal_decoration1', 3)):(item('immersiveengineering:steel_scaffolding_stairs2') * 8),
+    (item('immersiveengineering:metal_decoration1', 5)):(item('immersiveengineering:aluminum_scaffolding_stairs0') * 8),
+    (item('immersiveengineering:metal_decoration1', 6)):(item('immersiveengineering:aluminum_scaffolding_stairs1') * 8),
+    (item('immersiveengineering:metal_decoration1', 7)):(item('immersiveengineering:aluminum_scaffolding_stairs2') * 8),
 ]
 
 // Sheet Metal Recipes
@@ -61,7 +85,19 @@ def sheetMetalItems = [
     (ore('sheetSteel')):(item('immersiveengineering:sheetmetal', 8) * 8),
     (ore('sheetIron')):(item('immersiveengineering:sheetmetal', 9) * 8),
     (ore('sheetGold')):(item('immersiveengineering:sheetmetal', 10) * 8),
+]
 
+// Post Recipes
+def postItems = [
+    (ore('fenceTreatedWood')):(item('immersiveengineering:wooden_device1', 3)),
+    (ore('fenceSteel')):(item('immersiveengineering:metal_decoration2')),
+    (ore('fenceAluminum')):(item('immersiveengineering:metal_decoration2', 2))
+]
+
+def ladderItems = [
+    ore('stickIron'),
+    ore('stickAluminum'),
+    ore('stickSteel')
 ]
 
 // Coke Oven
@@ -214,6 +250,99 @@ crafting.shapedBuilder()
     ])
     .register()
 
+// Generator Block
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_decoration0', 6) * 2)
+    .shape([
+        [ore('sheetSteel'),ore('sheetSteel'),ore('sheetSteel')],
+        [ore('gearElectrum'),item('immersiveengineering:metal_device1', 2),ore('gearElectrum')],
+        [ore('sheetSteel'),ore('sheetSteel'),ore('sheetSteel')]
+    ])
+    .register()
+
+// Radiator Block
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_decoration0', 7) * 2)
+    .shape([
+        [ore('sheetSteel'),ore('ingotCopper'),ore('sheetSteel')],
+        [ore('ingotCopper'),ore('gearIron'),ore('ingotCopper')],
+        [ore('sheetSteel'),ore('ingotCopper'),ore('sheetSteel')]
+    ])
+    .register()
+
+// Steel Fence
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_decoration1') * 8)
+    .shape([
+        [null,null,null],
+        [ore('ingotSteel'),ore('stickSteel'),ore('ingotSteel')],
+        [ore('ingotSteel'),ore('stickSteel'),ore('ingotSteel')]
+    ])
+    .register()
+
+// Steel Scaffolding
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_decoration1', 1) * 8)
+    .shape([
+        [ore('stickSteel'),ore('ingotSteel'),ore('stickSteel')],
+        [ore('ingotSteel'),ore('stickSteel'),ore('ingotSteel')],
+        [ore('stickSteel'),ore('ingotSteel'),ore('stickSteel')]
+    ])
+    .register()
+
+// Aluminium Fence
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_decoration1', 4) * 8)
+    .shape([
+        [null,null,null],
+        [ore('ingotAluminum'),ore('stickAluminum'),ore('ingotAluminum')],
+        [ore('ingotAluminum'),ore('stickAluminum'),ore('ingotAluminum')]
+    ])
+    .register()
+
+// Aluminium Scaffolding
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_decoration1', 5) * 8)
+    .shape([
+        [ore('stickAluminum'),ore('ingotAluminum'),ore('stickAluminum')],
+        [ore('ingotAluminum'),ore('stickAluminum'),ore('ingotAluminum')],
+        [ore('stickAluminum'),ore('ingotAluminum'),ore('stickAluminum')]
+    ])
+    .register()
+
+
+// Steel Structural Arm
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_decoration2', 7) * 8)
+    .shape([
+        [ore('scaffoldingSteel'),ore('scaffoldingSteel'),ore('scaffoldingSteel')],
+        [ore('scaffoldingSteel'),ore('scaffoldingSteel'),null],
+        [ore('scaffoldingSteel'),null,null]
+    ])
+    .register()
+
+// Aluminium Structural Arm
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_decoration2', 8) * 8)
+    .shape([
+        [ore('scaffoldingAluminum'),ore('scaffoldingAluminum'),ore('scaffoldingAluminum')],
+        [ore('scaffoldingAluminum'),ore('scaffoldingAluminum'),null],
+        [ore('scaffoldingAluminum'),null,null]
+    ])
+    .register()
+
+// Recipe Builder for Metal Ladder
+for (key in ladderItems) {
+    crafting.shapedBuilder()
+        .output(item('immersiveengineering:metal_ladder') * 16)
+        .shape([
+            [key,null,key],
+            [key,null,key],
+            [key,null,key]
+        ])
+        .register()
+}
+
 // Recipe Builder for Stairs
 for (entry in stairItems) {
     crafting.shapedBuilder()
@@ -234,6 +363,18 @@ for (entry in sheetMetalItems) {
             [null,entry.key,null],
             [entry.key,null,entry.key],
             [null,entry.key,null]
+        ])
+        .register()
+}
+
+// Recipe Builder for Pole
+for (entry in postItems) {
+    crafting.shapedBuilder()
+        .output(entry.value)
+        .shape([
+            [null,entry.key,null],
+            [null,entry.key,null],
+            [null,ore('stoneBrick'),null]
         ])
         .register()
 }
