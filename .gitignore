@@ -30,3 +30,4 @@ config/dynamiclights_onfire.cfg
 config/dynamiclights_entityclasses.cfg
 groovy/sideOnlyGenerated.json
 config/itemzoom.cfg
+/backups
