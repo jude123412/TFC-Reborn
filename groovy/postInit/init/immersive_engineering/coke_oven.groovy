@@ -2,7 +2,7 @@
 mods.immersiveengineering.coke_oven.recipeBuilder()
     .input(item('tfc:ore/lignite'))
     .output(item('thermalfoundation:material', 802))
-    .time(1600)
+    .time(3200)
     .creosote(500)
     .register()
 
@@ -10,7 +10,7 @@ mods.immersiveengineering.coke_oven.recipeBuilder()
 mods.immersiveengineering.coke_oven.recipeBuilder()
     .input(item('minecraft:coal'))
     .output(item('thermalfoundation:material', 802))
-    .time(1600)
+    .time(2400)
     .creosote(500)
     .register()
 
