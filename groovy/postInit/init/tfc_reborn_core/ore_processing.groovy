@@ -4,10 +4,10 @@ def names = [
     'native_platinum':'native_iridium',
     'hematite':'garnierite',
     'native_silver':'galena',
-    'cassiterite':'magnetite',
+    'cassiterite':'hematite',
     'galena':'native_silver',
     'bismuthinite':'galena',
-    'garnierite':'magnetite',
+    'garnierite':'native_platinum',
     'sphalerite':'bismuthinite',
     'stibnite':'spodumene',
     'spodumene':'galena',
@@ -59,14 +59,14 @@ for (entry in names) {
     .register()
 
     mods.thermalexpansion.pulverizer.recipeBuilder()
-    .input(item('tfc:ore/' + entry.key))
+    .input(item('tfc:ore/' + entry.key, 1))
     .output(item('tfcreborncore:ore/' + entry.key + '_pile') * 3, item('tfcreborncore:ore/' + entry.value + '_pile'))
     .chance(15)
     .energy(3000)
     .register()
 
     mods.thermalexpansion.pulverizer.recipeBuilder()
-    .input(item('tfc:ore/' + entry.key, 1))
+    .input(item('tfc:ore/' + entry.key))
     .output(item('tfcreborncore:ore/' + entry.key + '_pile') * 5, item('tfcreborncore:ore/' + entry.value + '_pile'))
     .chance(25)
     .energy(5000)
@@ -87,14 +87,14 @@ for (entry in names) {
     .register()
 
     mods.immersiveengineering.crusher.recipeBuilder()
-    .input(item('tfc:ore/' + entry.key))
+    .input(item('tfc:ore/' + entry.key, 1))
     .output(item('tfcreborncore:ore/' + entry.key + '_pile') * 6)
     .secondaryOutput(item('tfcreborncore:ore/' + entry.value + '_pile'), 0.30)
     .energy(200)
     .register()
 
     mods.immersiveengineering.crusher.recipeBuilder()
-    .input(item('tfc:ore/' + entry.key, 1))
+    .input(item('tfc:ore/' + entry.key))
     .output(item('tfcreborncore:ore/' + entry.key + '_pile') * 10)
     .secondaryOutput(item('tfcreborncore:ore/' + entry.value + '_pile'), 0.50)
     .energy(200)
