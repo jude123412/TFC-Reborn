@@ -1,6 +1,9 @@
 // Recipes to remove
 def recipesToRemove = [
     'immersiveengineering:stone_decoration/cokebrick',
+    'immersiveengineering:stone_decoration/blastbrick',
+    'immersiveengineering:stone_decoration/blastbrick_reinforced',
+    'immersiveengineering:stone_decoration/cokeblock',
     'immersiveengineering:stone_decoration/hempcrete',
     'immersiveengineering:stone_decoration/concrete2',
     'immersiveengineering:stone_decoration/concrete',
@@ -11,6 +14,7 @@ def recipesToRemove = [
     'immersiveengineering:stone_decoration/concrete_leaded_stairs',
     'immersiveengineering:stone_decoration/insulating_glass',
     'immersiveengineering:stone_decoration/alloybrick',
+    'immersiveengineering:stone_decoration/cokeblock_uncraft',
     'immersiveengineering:treated_wood/treated_wood',
     'immersiveengineering:treated_wood/treated_wood_stairs0',
     'immersiveengineering:treated_wood/treated_wood_stairs1',
@@ -53,6 +57,97 @@ def recipesToRemove = [
     'immersiveengineering:metal_decoration/aluminum_scaffolding_stairs1',
     'immersiveengineering:metal_decoration/aluminum_scaffolding_stairs2',
     'immersiveengineering:metal_decoration/ladder',
+    'immersiveengineering:metal_devices/fluid_pump',
+    'immersiveengineering:metal_devices/fluid_outlet',
+    'immersiveengineering:metal_devices/thermoelectric_generator',
+    'immersiveengineering:metal_devices/powered_lantern',
+    'immersiveengineering:metal_devices/fluid_pipe',
+    'immersiveengineering:metal_devices/garden_cloche',
+    'immersiveengineering:material/stick_iron',
+    'immersiveengineering:material/stick_steel',
+    'immersiveengineering:material/stick_aluminum',
+    'immersiveengineering:material/hemp_fabric',
+    'immersiveengineering:material/component_iron',
+    'immersiveengineering:material/component_steel',
+    'immersiveengineering:material/wire_copper',
+    'immersiveengineering:material/wire_electrum',
+    'immersiveengineering:material/wire_aluminum',
+    'immersiveengineering:material/wire_steel',
+    'immersiveengineering:metal_storage/copper_ingot',
+    'immersiveengineering:metal_storage/aluminum_ingot',
+    'immersiveengineering:metal_storage/lead_ingot',
+    'immersiveengineering:metal_storage/silver_ingot',
+    'immersiveengineering:metal_storage/nickel_ingot',
+    'immersiveengineering:metal_storage/uranium_ingot',
+    'immersiveengineering:metal_storage/constantan_ingot',
+    'immersiveengineering:metal_storage/electrum_ingot',
+    'immersiveengineering:metal_storage/steel_ingot',
+    'immersiveengineering:hammercrushing_copper',
+    'immersiveengineering:hammercrushing_iron',
+    'immersiveengineering:hammercrushing_tin',
+    'immersiveengineering:hammercrushing_platinum',
+    'immersiveengineering:hammercrushing_iridium',
+    'immersiveengineering:hammercrushing_mithril',
+    'immersiveengineering:hammercrushing_aluminum',
+    'immersiveengineering:hammercrushing_lead',
+    'immersiveengineering:hammercrushing_silver',
+    'immersiveengineering:hammercrushing_nickel',
+    'immersiveengineering:hammercrushing_uranium',
+    'immersiveengineering:hammercrushing_certusquartz',
+    'immersiveengineering:material/dust_constantan',
+    'immersiveengineering:material/dust_electrum',
+    'immersiveengineering:hammercrushing_gold',
+    'immersiveengineering:metal_storage/copper_block_uncraft',
+    'immersiveengineering:metal_storage/aluminum_block_uncraft',
+    'immersiveengineering:metal_storage/lead_block_uncraft',
+    'immersiveengineering:metal_storage/silver_block_uncraft',
+    'immersiveengineering:metal_storage/nickel_block_uncraft',
+    'immersiveengineering:metal_storage/uranium_block_uncraft',
+    'immersiveengineering:metal_storage/constantan_block_uncraft',
+    'immersiveengineering:metal_storage/electrum_block_uncraft',
+    'immersiveengineering:metal_storage/steel_block_uncraft',
+    'immersiveengineering:metal_storage/copper_ingot_uncraft',
+    'immersiveengineering:metal_storage/aluminum_ingot_uncraft',
+    'immersiveengineering:metal_storage/lead_ingot_uncraft',
+    'immersiveengineering:metal_storage/silver_ingot_uncraft',
+    'immersiveengineering:metal_storage/nickel_ingot_uncraft',
+    'immersiveengineering:metal_storage/uranium_ingot_uncraft',
+    'immersiveengineering:metal_storage/constantan_ingot_uncraft',
+    'immersiveengineering:metal_storage/electrum_ingot_uncraft',
+    'immersiveengineering:metal_storage/steel_ingot_uncraft',
+    'immersiveengineering:sheetmetal/copper_sheetmetal_uncraft',
+    'immersiveengineering:sheetmetal/aluminum_sheetmetal_uncraft',
+    'immersiveengineering:sheetmetal/lead_sheetmetal_uncraft',
+    'immersiveengineering:sheetmetal/silver_sheetmetal_uncraft',
+    'immersiveengineering:sheetmetal/nickel_sheetmetal_uncraft',
+    'immersiveengineering:sheetmetal/uranium_sheetmetal_uncraft',
+    'immersiveengineering:sheetmetal/constantan_sheetmetal_uncraft',
+    'immersiveengineering:sheetmetal/electrum_sheetmetal_uncraft',
+    'immersiveengineering:sheetmetal/steel_sheetmetal_uncraft',
+    'immersiveengineering:sheetmetal/iron_sheetmetal_uncraft',
+    'immersiveengineering:sheetmetal/gold_sheetmetal_uncraft',
+    'immersiveengineering:material/plate_copper',
+    'immersiveengineering:material/plate_aluminum',
+    'immersiveengineering:material/plate_lead',
+    'immersiveengineering:material/plate_silver',
+    'immersiveengineering:material/plate_nickel',
+    'immersiveengineering:material/plate_uranium',
+    'immersiveengineering:material/plate_constantan',
+    'immersiveengineering:material/plate_electrum',
+    'immersiveengineering:material/plate_steel',
+    'immersiveengineering:material/plate_iron',
+    'immersiveengineering:material/plate_gold',
+    'immersiveengineering:tool/steel_pickaxe',
+    'immersiveengineering:tool/steel_shovel',
+    'immersiveengineering:tool/steel_axe',
+    'immersiveengineering:tool/steel_hoe',
+    'immersiveengineering:tool/steel_sword',
+    'immersiveengineering:tool/toolbox',
+    'immersiveengineering:tool/jerrycan',
+    'immersiveengineering:toolupgrades/drill_waterproof',
+    'immersiveengineering:toolupgrades/drill_lube',
+    'immersiveengineering:toolupgrades/drill_capacity',
+    'immersiveengineering:toolupgrades/shield_flash',
 ]
 
 // Stair Recipes
@@ -107,6 +202,25 @@ crafting.shapedBuilder()
         [ore('clay'),ore('ingotBrick'),ore('clay')],
         [ore('ingotBrick'),ore('stoneBrick'),ore('ingotBrick')],
         [ore('clay'),ore('ingotBrick'),ore('clay')]
+    ])
+    .register()
+
+// Blast Brick
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:stone_decoration', 1))
+    .shape([
+        [item('tfc:ceramics/fired/fire_brick'),ore('ingotBrick'),item('tfc:ceramics/fired/fire_brick')],
+        [ore('ingotBrick'),ore('dustSteel'),ore('ingotBrick')],
+        [item('tfc:ceramics/fired/fire_brick'),ore('ingotBrick'),item('tfc:ceramics/fired/fire_brick')]
+    ])
+    .register()
+
+// Reinforced Blast Brick
+crafting.shapelessBuilder()
+    .output(item('immersiveengineering:stone_decoration', 2))
+    .input([
+         ore('sheetSteel'),
+         item('immersiveengineering:stone_decoration', 1)
     ])
     .register()
 
@@ -328,6 +442,146 @@ crafting.shapedBuilder()
         [ore('scaffoldingAluminum'),ore('scaffoldingAluminum'),ore('scaffoldingAluminum')],
         [ore('scaffoldingAluminum'),ore('scaffoldingAluminum'),null],
         [ore('scaffoldingAluminum'),null,null]
+    ])
+    .register()
+
+// Fluid Pump
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_device0', 5))
+    .shape([
+        [null,ore('sheetIron'),null],
+        [ore('sheetIron'),item('immersiveengineering:material', 8),ore('sheetIron')],
+        [item('immersiveengineering:metal_device1', 6),item('immersiveengineering:metal_device1', 6),item('immersiveengineering:metal_device1', 6)]
+    ])
+    .register()
+
+// Fluid Outlet
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_device0', 6))
+    .shape([
+        [ore('sheetIron'),item('minecraft:iron_bars'),ore('sheetIron')],
+        [item('minecraft:iron_bars'),null,item('minecraft:iron_bars')],
+        [ore('sheetIron'),item('minecraft:iron_bars'),ore('sheetIron')]
+    ])
+    .register()
+
+// Thermoelectric Generator
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_device1', 3))
+    .shape([
+        [ore('ingotSteel'),ore('ingotSteel'),ore('ingotSteel')],
+        [ore('sheetConstantan'),item('immersiveengineering:metal_decoration0'),ore('sheetConstantan')],
+        [ore('sheetConstantan'),ore('sheetConstantan'),ore('sheetConstantan')]
+    ])
+    .register()
+
+// Powered Lantern
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_device1', 4) * 3)
+    .shape([
+        [null,ore('sheetIron'),null],
+        [ore('paneGlass'),ore('electronTube'),ore('paneGlass')],
+        [ore('sheetIron'),ore('wireCopper'),ore('sheetIron')]
+    ])
+    .register()
+
+// Fluid Pipe
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_device1', 6) * 8)
+    .shape([
+        [ore('sheetIron'),ore('sheetIron'),ore('sheetIron')],
+        [null,null,null],
+        [ore('sheetIron'),ore('sheetIron'),ore('sheetIron')]
+    ])
+    .register()
+
+// Tough Fabric
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:material', 5))
+    .shape([
+        [item('tfc:crop/product/jute_fiber'),item('tfc:crop/product/jute_fiber'),item('tfc:crop/product/jute_fiber')],
+        [item('tfc:crop/product/jute_fiber'),ore('stickTreatedWood'),item('tfc:crop/product/jute_fiber')],
+        [item('tfc:crop/product/jute_fiber'),item('tfc:crop/product/jute_fiber'),item('tfc:crop/product/jute_fiber')]
+    ])
+    .register()
+
+// Iron Mechanical Component
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:material', 8))
+    .shape([
+        [null,ore('sheetIron'),null],
+        [ore('sheetIron'),ore('gearCopper'),ore('sheetIron')],
+        [null,ore('sheetIron'),null]
+    ])
+    .register()
+
+// Steel Mechanical Component
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:material', 9))
+    .shape([
+        [null,ore('sheetSteel'),null],
+        [ore('sheetSteel'),ore('gearAnyBronze'),ore('sheetSteel')],
+        [null,ore('sheetSteel'),null]
+    ])
+    .register()
+
+// Toolbox
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:toolbox'))
+    .shape([
+        [null,null,null],
+        [ore('sheetAluminium'),ore('sheetAluminium'),ore('sheetAluminium')],
+        [ore('dyeRed'),item('immersiveengineering:wooden_device0'),ore('dyeRed')]
+    ])
+    .register()
+
+// Jerrycan FTW
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:jerrycan'))
+    .shape([
+        [null,ore('sheetIron'),ore('sheetIron')],
+        [ore('sheetIron'),ore('dyeGreen'),ore('sheetIron')],
+        [ore('sheetIron'),ore('sheetIron'),ore('sheetIron')]
+    ])
+    .register()
+
+// Pressurized Air Tank
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:toolupgrade'))
+    .shape([
+        [ore('sheetIron'),ore('dyeBlue'),null],
+        [ore('dyeBlue'),ore('sheetIron'),ore('dyeBlue')],
+        [null,ore('dyeBlue'),item('immersiveengineering:material', 8)]
+    ])
+    .register()
+
+// Advanced Lubrication System
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:toolupgrade', 1))
+    .shape([
+        [item('tfc:wooden_bucket').withNbt(['Fluid': ['FluidName': 'lubricant', 'Amount': 1000]]),ore('ingotIron'),null],
+        [ore('ingotIron'),item('tfc:wooden_bucket').withNbt(['Fluid': ['FluidName': 'lubricant', 'Amount': 1000]]),ore('ingotIron')],
+        [null,ore('ingotIron'),item('immersiveengineering:material', 8)]
+    ])
+    .register()
+
+// Large Tank
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:toolupgrade', 3))
+    .shape([
+        [item('immersiveengineering:material', 8),ore('ingotSteel'),null],
+        [ore('ingotSteel'),ore('sheetIron'),ore('dyeRed')],
+        [null,ore('dyeRed'),ore('sheetIron')]
+    ])
+    .register()
+
+// Flashbulb
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:toolupgrade', 10))
+    .shape([
+        [null,null,null],
+        [ore('sheetAluminium'),ore('paneGlass'),ore('sheetAluminium')],
+        [ore('paneGlass'),item('immersiveengineering:material', 26),ore('paneGlass')]
     ])
     .register()
 
