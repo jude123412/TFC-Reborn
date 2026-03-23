@@ -8,7 +8,7 @@ crafting.shapedBuilder()
     .output(item('microblockcbe:stone_rod') * 4)
     .shape([
         [null,ore('stone'),null],
-        [null,ore('stone'),null],
+        [ore('stone'),null,null],
         [null,null,null]
     ])
     .register()
