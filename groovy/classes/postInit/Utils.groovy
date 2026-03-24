@@ -1,7 +1,7 @@
 package classes.postInit
 
 import net.dries007.tfc.api.registries.TFCRegistries
-import net.dries007.tfc.api.types.Metal;
+import net.dries007.tfc.api.types.Metal
 
 class Utils {
     // Gets all metals that are usable and 
