@@ -4,6 +4,7 @@ def recipesToRemove = [
     'chiselsandbits:mirrorprint',
     'chiselsandbits:bit_bag',
 ]
+
 // Positive Chisel Design
 crafting.shapelessBuilder()
     .output(item('chiselsandbits:positiveprint'))
@@ -45,19 +46,3 @@ crafting.shapedBuilder()
 for (var in recipesToRemove) {
     crafting.remove(var)
 }
-
-// crafting.shapedBuilder()
-//     .output(null)
-//     .shape([
-//         [null,null,null],
-//         [null,null,null],
-//         [null,null,null]
-//     ])
-//     .register()
-
-// crafting.shapelessBuilder()
-//     .output(null)
-//     .input([
-//          null
-//     ])
-//     .register()
