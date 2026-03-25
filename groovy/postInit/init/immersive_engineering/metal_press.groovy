@@ -129,6 +129,3 @@ mods.immersiveengineering.metal_press.recipeBuilder()
     .output(item('tfctech:metal/steel_sleeve'))
     .energy(1000)
     .register()
-
-
-
