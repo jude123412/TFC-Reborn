@@ -150,6 +150,11 @@ def recipesToRemove = [
     'immersiveengineering:toolupgrades/shield_flash',
 ]
 
+// Recipe Removal
+for (id in recipesToRemove) {
+    crafting.remove(id)
+}
+
 // Stair Recipes
 def stairItems = [
     (item('immersiveengineering:stone_decoration', 4)):(item('immersiveengineering:stone_decoration_stairs_hempcrete') * 8),
@@ -268,9 +273,8 @@ crafting.shapelessBuilder()
 crafting.shapedBuilder()
     .output(item('immersiveengineering:stone_decoration', 8) * 2)
     .shape([
-        [ore('dustWroughtIron'),ore('blockGlass'),null],
-        [ore('blockGlass'),ore('dyeGreen'),null],
-        [null,null,null]
+        [ore('dustWroughtIron'),ore('blockGlass')],
+        [ore('blockGlass'),ore('dyeGreen')],
     ])
     .register()
 
@@ -278,7 +282,6 @@ crafting.shapedBuilder()
 crafting.shapedBuilder()
     .output(item('immersiveengineering:wooden_decoration') * 8)
     .shape([
-        [null,null,null],
         [ore('plankTreatedWood'),ore('stickTreatedWood'),ore('plankTreatedWood')],
         [ore('plankTreatedWood'),ore('stickTreatedWood'),ore('plankTreatedWood')]
     ])
@@ -388,7 +391,6 @@ crafting.shapedBuilder()
 crafting.shapedBuilder()
     .output(item('immersiveengineering:metal_decoration1') * 8)
     .shape([
-        [null,null,null],
         [ore('ingotSteel'),ore('stickSteel'),ore('ingotSteel')],
         [ore('ingotSteel'),ore('stickSteel'),ore('ingotSteel')]
     ])
@@ -408,7 +410,6 @@ crafting.shapedBuilder()
 crafting.shapedBuilder()
     .output(item('immersiveengineering:metal_decoration1', 4) * 8)
     .shape([
-        [null,null,null],
         [ore('ingotAluminum'),ore('stickAluminum'),ore('ingotAluminum')],
         [ore('ingotAluminum'),ore('stickAluminum'),ore('ingotAluminum')]
     ])
@@ -529,7 +530,6 @@ crafting.shapedBuilder()
 crafting.shapedBuilder()
     .output(item('immersiveengineering:toolbox'))
     .shape([
-        [null,null,null],
         [ore('sheetAluminium'),ore('sheetAluminium'),ore('sheetAluminium')],
         [ore('dyeRed'),item('immersiveengineering:wooden_device0'),ore('dyeRed')]
     ])
@@ -579,7 +579,6 @@ crafting.shapedBuilder()
 crafting.shapedBuilder()
     .output(item('immersiveengineering:toolupgrade', 10))
     .shape([
-        [null,null,null],
         [ore('sheetAluminium'),ore('paneGlass'),ore('sheetAluminium')],
         [ore('paneGlass'),item('immersiveengineering:material', 26),ore('paneGlass')]
     ])
@@ -626,16 +625,11 @@ for (entry in postItems) {
     crafting.shapedBuilder()
         .output(entry.value)
         .shape([
-            [null,entry.key,null],
-            [null,entry.key,null],
-            [null,ore('stoneBrick'),null]
+            [entry.key],
+            [entry.key],
+            [ore('stoneBrick')]
         ])
         .register()
-}
-
-// Recipe Removal
-for (id in recipesToRemove) {
-    crafting.remove(id)
 }
 
 // crafting.shapedBuilder()

@@ -40,12 +40,10 @@ crafting.shapelessBuilder()
 crafting.shapedBuilder()
     .output(item('powerchisels:fluxed_chisel'))
     .shape([
-        [ore('sheetSterlingSilver'),item('chisel:chisel_hitech'),null],
-        [item('thermalfoundation:material', 640),ore('sheetSterlingSilver'),null],
-        [null,null,null]
+        [ore('sheetSterlingSilver'),item('chisel:chisel_hitech')],
+        [item('thermalfoundation:material', 640),ore('sheetSterlingSilver')]
     ])
     .register()
-
 
 // Recipe Removal
 for (var in recipesToRemove) {

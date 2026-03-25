@@ -36,9 +36,8 @@ crafting.shapelessBuilder()
 crafting.shapedBuilder()
     .output(item('chiselsandbits:bit_bag'))
     .shape([
-        [null,ore('string'),null],
-        [null,item('tfc:hide/raw/small'),null],
-        [null,null,null]
+        [ore('string')],
+        [item('tfc:hide/raw/small')],
     ])
     .register()
 
