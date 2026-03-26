@@ -66,14 +66,14 @@ for (name in ores) {
         .register()
 
     mods.thermalexpansion.pulverizer.recipeBuilder()
-        .input(item('tfc:ore/' + name.key))
+        .input(item('tfc:ore/' + name.key, 1))
         .output(item('tfcreborncore:ore/' + name.key + '_pile') * 3, item('tfcreborncore:ore/' + name.value + '_pile'))
         .chance(15)
         .energy(3000)
         .register()
 
     mods.thermalexpansion.pulverizer.recipeBuilder()
-        .input(item('tfc:ore/' + name.key, 1))
+        .input(item('tfc:ore/' + name.key))
         .output(item('tfcreborncore:ore/' + name.key + '_pile') * 5, item('tfcreborncore:ore/' + name.value + '_pile'))
         .chance(25)
         .energy(5000)
@@ -94,14 +94,14 @@ for (name in ores) {
         .register()
 
     mods.immersiveengineering.crusher.recipeBuilder()
-        .input(item('tfc:ore/' + name.key))
+        .input(item('tfc:ore/' + name.key, 1))
         .output(item('tfcreborncore:ore/' + name.key + '_pile') * 6)
         .secondaryOutput(item('tfcreborncore:ore/' + name.value + '_pile'), 0.30)
         .energy(200)
         .register()
 
     mods.immersiveengineering.crusher.recipeBuilder()
-        .input(item('tfc:ore/' + name.key, 1))
+        .input(item('tfc:ore/' + name.key))
         .output(item('tfcreborncore:ore/' + name.key + '_pile') * 10)
         .secondaryOutput(item('tfcreborncore:ore/' + name.value + '_pile'), 0.50)
         .energy(200)

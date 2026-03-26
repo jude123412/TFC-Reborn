@@ -97,20 +97,18 @@ for (var in Utils.materials) {
         .energy(1000)
         .register()
 
-    def ingots = ore_dict.getItems('ingot' + Utils.toPascal(var))
-
-    // Thermal is a bit funny so register multiple
-    // for all items in the ore dictionary table
-    for (items in ingots) {
-        mods.immersiveengineering.crusher.recipeBuilder()
-            .input(items)
-            .output(item('tfc:metal/dust/' + var))
-            .energy(1000)
-            .register()
-        mods.thermalexpansion.pulverizer.recipeBuilder()
-            .input(items)
-            .output(item('tfc:metal/dust/' + var))
-            .energy(2000)
-            .register()
-    }
+    // Dust
+    mods.immersiveengineering.crusher.recipeBuilder()
+        .input(ore('ingot' + Utils.toPascal(var)))
+        .output(item('tfc:metal/dust/' + var))
+        .energy(1000)
+        .register()
+        
+    // Dust || Finally, it works!
+    mods.thermalexpansion.pulverizer.recipeBuilder()
+        .input(ore('ingot' + Utils.toPascal(var)))
+        .output(item('tfc:metal/dust/' + var))
+        .energy(2000)
+        .register()
+    
 }
