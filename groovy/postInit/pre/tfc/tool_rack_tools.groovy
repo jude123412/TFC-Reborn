@@ -60,6 +60,7 @@ def items = [
     item('appliedenergistics2:color_applicator'),
     item('appliedenergistics2:biometric_card'),
     item('appliedenergistics2:memory_card'),
+    item('tfc:spindle', OreDictionary.WILDCARD_VALUE)
 ]
 
 def blowpipe = ore_dict.getItems('blowpipe')
