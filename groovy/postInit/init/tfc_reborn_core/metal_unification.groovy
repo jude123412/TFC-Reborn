@@ -110,5 +110,55 @@ for (var in Utils.materials) {
         .output(item('tfc:metal/dust/' + var))
         .energy(2000)
         .register()
-    
 }
+
+// Redstone Dust
+mods.thermalexpansion.pulverizer.recipeBuilder()
+    .input(ore('ingotRedstone'))
+    .output(item('minecraft:redstone'))
+    .energy(2000)
+    .register()
+
+mods.immersiveengineering.crusher.recipeBuilder()
+    .input(ore('ingotRedstone'))
+    .output(item('minecraft:redstone'))
+    .energy(2000)
+    .register()
+
+// Glowstone Dust
+mods.thermalexpansion.pulverizer.recipeBuilder()
+    .input(ore('ingotGlowstone'))
+    .output(item('minecraft:glowstone_dust'))
+    .energy(2000)
+    .register()
+
+mods.immersiveengineering.crusher.recipeBuilder()
+    .input(ore('ingotGlowstone'))
+    .output(item('minecraft:glowstone_dust'))
+    .energy(2000)
+    .register()
+
+// Ender Dust
+mods.thermalexpansion.pulverizer.recipeBuilder()
+    .input(ore('gemEnder'))
+    .output(item('appliedenergistics2:material', 46))
+    .energy(2000)
+    .register()
+
+mods.immersiveengineering.crusher.recipeBuilder()
+    .input(ore('gemEnder'))
+    .output(item('appliedenergistics2:material', 46))
+    .energy(2000)
+    .register()
+
+mods.thermalexpansion.pulverizer.recipeBuilder()
+    .input(ore('ingotEnder'))
+    .output(item('appliedenergistics2:material', 46))
+    .energy(2000)
+    .register()
+    
+mods.immersiveengineering.crusher.recipeBuilder()
+    .input(ore('ingotEnder'))
+    .output(item('appliedenergistics2:material', 46))
+    .energy(2000)
+    .register()
