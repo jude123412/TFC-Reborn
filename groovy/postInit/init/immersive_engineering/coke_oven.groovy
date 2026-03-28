@@ -1,23 +1,15 @@
 // Coal Coke
 mods.immersiveengineering.coke_oven.recipeBuilder()
-    .input(item('tfc:ore/lignite'))
-    .output(item('thermalfoundation:material', 802))
+    .input(ore('gemLignite'))
+    .output(item('tfcreborncore:item/lignite_coke'))
     .time(3200)
     .creosote(500)
     .register()
 
 // Coal Coke
 mods.immersiveengineering.coke_oven.recipeBuilder()
-    .input(item('minecraft:coal'))
-    .output(item('thermalfoundation:material', 802))
-    .time(2400)
-    .creosote(500)
-    .register()
-
-// Coal Coke
-mods.immersiveengineering.coke_oven.recipeBuilder()
-    .input(item('tfc:ore/bituminous_coal'))
-    .output(item('thermalfoundation:material', 802))
+    .input(ore('gemCoal'))
+    .output(item('tfcreborncore:item/bituminous_coal_coke'))
     .time(1600)
     .creosote(500)
     .register()

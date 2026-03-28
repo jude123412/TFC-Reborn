@@ -13,5 +13,9 @@ ItemRegistry.registerItemMetal(<tfcreborncore:item/electrical_thingamajig_stage_
 ItemRegistry.registerItemMetal(<tfcreborncore:item/electrical_doodar>, "redstone", 25, true);
 ItemRegistry.registerItemMetal(<tfcreborncore:item/electrical_thingamajig>, "redstone", 20, true);
 
+// TFC Fuel Item Regsitry
+ItemRegistry.registerFuel(<tfcreborncore:item/lignite_coke>, 4000, 1415.0, true, false);
+ItemRegistry.registerFuel(<tfcreborncore:item/bituminous_coal_coke>, 4400, 1500.0, true, false);
+
 // Hardened Glass
 Heating.addRecipe("hardened_glass", <tfcreborncore:item/hardened_glass_mix>, <thermalfoundation:glass:3>, 999, 1400);
