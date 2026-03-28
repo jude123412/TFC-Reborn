@@ -10,9 +10,18 @@ def recipesToRemove = [
     item('thermaldynamics:duct_0', 7),
     item('thermaldynamics:duct_0', 8),
     item('thermaldynamics:duct_0', 9),
+    item('thermaldynamics:duct_16'),
+    item('thermaldynamics:duct_16', 1),
+    item('thermaldynamics:duct_16', 2),
+    item('thermaldynamics:duct_16', 3),
+    item('thermaldynamics:duct_16', 4),
+    item('thermaldynamics:duct_16', 5),
+    item('thermaldynamics:duct_16', 6),
+    item('thermaldynamics:duct_16', 7),
     item('thermalfoundation:glass', OreDictionary.WILDCARD_VALUE),
     item('thermalfoundation:glass_alloy', OreDictionary.WILDCARD_VALUE),
-    item('thermalexpansion:frame')
+    item('thermalexpansion:frame'),
+
 ]
 
 // Recipe Removal
@@ -80,6 +89,77 @@ crafting.shapedBuilder()
     ])
     .register()
 
+// Fluiduct
+crafting.shapedBuilder()
+    .output(item('thermaldynamics:duct_16') * 8)
+    .shape([
+        [ore('sheetCopper'),ore('blockGlassHardened'),ore('sheetCopper')],
+    ])
+    .register()
+
+// Fluiduct (Opaque)
+crafting.shapedBuilder()
+    .output(item('thermaldynamics:duct_16', 1) * 8)
+    .shape([
+        [ore('sheetCopper'),ore('sheetLead'),ore('sheetCopper')],
+    ])
+    .register()
+
+// Hardened Fluiduct
+crafting.shapedBuilder()
+    .output(item('thermaldynamics:duct_16', 2) * 8)
+    .shape([
+        [ore('sheetSterlingSilver'),ore('blockGlassHardened'),ore('sheetSterlingSilver')],
+    ])
+    .register()
+
+// Hardened Fluiduct (Opaque)
+crafting.shapedBuilder()
+    .output(item('thermaldynamics:duct_16', 3) * 8)
+    .shape([
+        [ore('sheetSterlingSilver'),ore('sheetLead'),ore('sheetSterlingSilver')]
+    ])
+    .register()
+
+// Signalum-Plated Fluiduct
+crafting.shapedBuilder()
+    .output(item('thermaldynamics:duct_16', 4))
+    .shape([
+        [null,ore('stripElectrum'),null],
+        [ore('stripSignalum'),item('thermaldynamics:duct_16', 2),ore('stripSignalum')],
+        [null,ore('stripElectrum'),null]
+    ])
+    .register()
+    
+// Signalum-Plated Fluiduct (Opaque)
+crafting.shapedBuilder()
+    .output(item('thermaldynamics:duct_16', 5))
+    .shape([
+        [null,ore('stripElectrum'),null],
+        [ore('stripSignalum'),item('thermaldynamics:duct_16', 3),ore('stripSignalum')],
+        [null,ore('stripElectrum'),null]
+    ])
+    .register()
+
+// Super-Laminar Fluiduct
+crafting.shapedBuilder()
+    .output(item('thermaldynamics:duct_16', 6))
+    .shape([
+        [ore('blockGlassHardened'),ore('blockGlassHardened'),ore('blockGlassHardened')],
+        [ore('sheetAnyBronze'),item('thermaldynamics:duct_16', 2),ore('sheetAnyBronze')],
+        [ore('blockGlassHardened'),ore('blockGlassHardened'),ore('blockGlassHardened')]
+    ])
+    .register()
+    
+// Super-Laminar Fluiduct (Opaque)
+crafting.shapedBuilder()
+    .output(item('thermaldynamics:duct_16', 7))
+    .shape([
+        [ore('blockGlassHardened'),ore('blockGlassHardened'),ore('blockGlassHardened')],
+        [ore('sheetAnyBronze'),item('thermaldynamics:duct_16', 3),ore('sheetAnyBronze')],
+        [ore('blockGlassHardened'),ore('blockGlassHardened'),ore('blockGlassHardened')]
+    ])
+    .register()
 
 
 

@@ -2,7 +2,7 @@ import mods.terrafirmacraft.Anvil;
 import mods.terrafirmacraft.Welding;
 
 // Electrical Doodar Base Plate
-Anvil.addRecipe("electrical_doodar_base_plate", <ore:ingotRedstone>, <tfcreborncore:item/electrical_doodar_base_plate> * 4, 2, null, "DRAW_THIRD_LAST", "DRAW_SECOND_LAST", "HIT_LAST");
+Anvil.addRecipe("electrical_doodar_base_plate", <ore:ingotRedstone>, <tfcreborncore:item/electrical_doodar_base_plate> * 5, 2, null, "DRAW_THIRD_LAST", "DRAW_SECOND_LAST", "HIT_LAST");
 // Electrical Thingamajig Stage 1
 Anvil.addRecipe("electrical_thingamajig_stage_1", <ore:ingotRedstone>, <tfcreborncore:item/electrical_thingamajig_stage_1> * 10, 2, null, "HIT_THIRD_LAST", "BEND_SECOND_LAST", "HIT_LAST");
 
