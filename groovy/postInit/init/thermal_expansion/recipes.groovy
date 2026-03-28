@@ -11,7 +11,8 @@ def recipesToRemove = [
     item('thermaldynamics:duct_0', 8),
     item('thermaldynamics:duct_0', 9),
     item('thermalfoundation:glass', OreDictionary.WILDCARD_VALUE),
-    item('thermalfoundation:glass_alloy', OreDictionary.WILDCARD_VALUE)
+    item('thermalfoundation:glass_alloy', OreDictionary.WILDCARD_VALUE),
+    item('thermalexpansion:frame')
 ]
 
 // Recipe Removal
@@ -76,6 +77,20 @@ crafting.shapedBuilder()
         [ore('sheetLumium'), ore('blockGlassHardened'), ore('sheetLumium')],
         [ore('blockGlassHardened'), item('thermaldynamics:duct_0', 4), ore('blockGlassHardened')],
         [ore('sheetLumium'), ore('blockGlassHardened'), ore('sheetLumium')]
+    ])
+    .register()
+
+
+
+
+
+// Machine Frame
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:frame'))
+    .shape([
+        [ore('sheetAnyBronze'),ore('blockGlassHardened'),ore('sheetAnyBronze')],
+        [ore('blockGlassHardened'),item('tfcreborncore:item/rf_control_circuit'),ore('blockGlassHardened')],
+        [ore('sheetAnyBronze'),ore('blockGlassHardened'),ore('sheetAnyBronze')]
     ])
     .register()
 
