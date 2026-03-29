@@ -6,7 +6,7 @@ mods.immersiveengineering.coke_oven.recipeBuilder()
     .creosote(500)
     .register()
 
-// Coal Coke
+// Bituminous Coal Coke
 mods.immersiveengineering.coke_oven.recipeBuilder()
     .input(ore('gemCoal'))
     .output(item('tfcreborncore:item/bituminous_coal_coke'))
