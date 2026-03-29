@@ -1,6 +1,7 @@
 import mods.terrafirmacraft.Heating;
 import mods.terrafirmacraft.ItemRegistry;
 
+// TFC Reborn Core Recipes
 // Item Heat Registry
 ItemRegistry.registerItemHeat(<tfcreborncore:item/hardened_glass_mix>, 0.2, 1400, false);
 ItemRegistry.registerItemHeat(<tfcreborncore:item/electrical_doodar_housing>, 0.2, 1400, true);
@@ -18,4 +19,4 @@ ItemRegistry.registerFuel(<tfcreborncore:item/lignite_coke>, 4000, 1415.0, true,
 ItemRegistry.registerFuel(<tfcreborncore:item/bituminous_coal_coke>, 4400, 1500.0, true, false);
 
 // Hardened Glass
-Heating.addRecipe("hardened_glass", <tfcreborncore:item/hardened_glass_mix>, <thermalfoundation:glass:3>, 999, 1400);
+Heating.addRecipe("tfcreborncore:hardened_glass", <tfcreborncore:item/hardened_glass_mix>, <thermalfoundation:glass:3>, 999, 1400);

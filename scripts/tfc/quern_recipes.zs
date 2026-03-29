@@ -1,6 +1,12 @@
 import mods.terrafirmacraft.Quern;
 
-Quern.addRecipe("redstone_ingot_to_dust", <ore:ingotRedstone>, <minecraft:redstone>);
-Quern.addRecipe("glowstone_ingot_to_dust", <ore:ingotGlowstone>, <minecraft:glowstone_dust>);
-Quern.addRecipe("enderpearl_to_dust", <ore:gemEnder>, <appliedenergistics2:material:46>);
-Quern.addRecipe("enderpearl_ingot_to_dust", <ore:ingotEnder>, <appliedenergistics2:material:46>);
+// TFC Recipes
+Quern.addRecipe("tfcreborncore:redstone_ingot_to_dust", <ore:ingotRedstone>, <minecraft:redstone>);
+Quern.addRecipe("tfcreborncore:glowstone_ingot_to_dust", <ore:ingotGlowstone>, <minecraft:glowstone_dust>);
+Quern.addRecipe("tfcreborncore:enderpearl_to_dust", <ore:gemEnder>, <appliedenergistics2:material:46>);
+Quern.addRecipe("tfcreborncore:enderpearl_ingot_to_dust", <ore:ingotEnder>, <appliedenergistics2:material:46>);
+
+// TFC Reborn Core
+Quern.addRecipe("tfcreborncore:sawdust_from_lumber", <ore:lumber>, <tfcreborncore:item/wood_powder>);
+Quern.addRecipe("tfcreborncore:coal_powder_from_lignite", <tfc:ore/lignite>, <tfcreborncore:item/coal_powder>);
+Quern.addRecipe("tfcreborncore:coal_powder_from_coal", <ore:gemCoal>, <tfcreborncore:item/coal_powder> * 2);
