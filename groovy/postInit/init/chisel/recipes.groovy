@@ -10,8 +10,7 @@ crafting.shapedBuilder()
     .output(item('chisel:chisel_iron'))
     .shape([
         [null,ore('ingotCopper'),null],
-        [ore('stickWood'),null,null],
-        [null,null,null]
+        [ore('stickWood'),null,null]
     ])
     .register()
 
@@ -20,8 +19,7 @@ crafting.shapedBuilder()
     .output(item('chisel:chisel_diamond'))
     .shape([
         [null,ore('ingotIron'),null],
-        [ore('stickWood'),null,null],
-        [null,null,null]
+        [ore('stickWood'),null,null]
     ])
     .register()
 
