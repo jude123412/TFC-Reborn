@@ -44,7 +44,7 @@ crafting.shapedBuilder()
     .shape([
         [null,ore('gemFlawedEmerald'),null],
         [ore('stickGold'),item('baublelicious:itembelt'),ore('stickGold')],
-        [null,item('baublelicious:item.itemmagiccore'),null]
+        [null,ore('ingotAnyBronze'),null]
     ])
     .register()
 
@@ -53,7 +53,7 @@ crafting.shapedBuilder()
     .shape([
         [null,ore('gemFlawedJade'),null],
         [ore('stickGold'),item('baublelicious:itembelt'),ore('stickGold')],
-        [null,item('baublelicious:item.itemmagiccore'),null]
+        [null,ore('ingotAnyBronze'),null]
     ])
     .register()
 
@@ -63,7 +63,7 @@ crafting.shapedBuilder()
     .shape([
         [null,ore('gemExquisiteTourmaline'),null],
         [ore('feather'),item('baublelicious:itemring'),ore('feather')],
-        [null,item('baublelicious:item.itemmagiccore', 2),null]
+        [null,ore('ingotSteel'),null]
     ])
     .register()
 
@@ -73,7 +73,7 @@ crafting.shapedBuilder()
     .shape([
         [null,ore('gemExquisiteBeryl'),null],
         [ore('stickIron'),item('baublelicious:itembelt'),ore('stickIron')],
-        [null,item('baublelicious:item.itemmagiccore', 2),null]
+        [null,ore('ingotSteel'),null]
     ])
     .register()
 
@@ -83,7 +83,7 @@ crafting.shapedBuilder()
     .shape([
         [null,ore('gemSapphire'),null],
         [ore('stickRoseGold'),item('baublelicious:itemamulet'),ore('stickRoseGold')],
-        [null,item('baublelicious:item.itemmagiccore', 1),null]
+        [null,ore('ingotIron'),null]
     ])
     .register()
 
@@ -93,7 +93,7 @@ crafting.shapedBuilder()
     .shape([
         [null,ore('gemAmethyst'),null],
         [item('minecraft:feather'),item('baublelicious:itembelt'),item('minecraft:feather')],
-        [null,item('baublelicious:item.itemmagiccore', 1),null]
+        [null,ore('ingotIron'),null]
     ])
     .register()
 
@@ -103,7 +103,7 @@ crafting.shapedBuilder()
     .shape([
         [null,ore('gemExquisiteJasper'),null],
         [ore('stickLumium'),item('baublelicious:itemamulet'),ore('stickLumium')],
-        [null,item('baublelicious:item.itemmagiccore', 2),null]
+        [null,ore('ingotSteel'),null]
     ])
     .register()
 
@@ -113,7 +113,7 @@ crafting.shapedBuilder()
     .shape([
         [null,ore('gemExquisiteTopaz'),null],
         [ore('stickSignalum'),item('baublelicious:itemamulet'),ore('stickSignalum')],
-        [null,item('baublelicious:item.itemmagiccore', 2),null]
+        [null,ore('ingotSteel'),null]
     ])
     .register()
 
@@ -123,6 +123,6 @@ crafting.shapedBuilder()
     .shape([
         [null,ore('gemFlawedOpal'),null],
         [ore('stickSterlingSilver'),item('baublelicious:itemring'),ore('stickSterlingSilver')],
-        [null,item('baublelicious:item.itemmagiccore'),null]
+        [null,ore('ingotAnyBronze'),null]
     ])
     .register()
