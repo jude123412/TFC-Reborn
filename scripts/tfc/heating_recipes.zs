@@ -5,6 +5,7 @@ import mods.terrafirmacraft.ItemRegistry;
 // Item Heat Registry
 ItemRegistry.registerItemHeat(<tfcreborncore:item/hardened_glass_mix>, 0.2, 1400, false);
 ItemRegistry.registerItemHeat(<tfcreborncore:item/electrical_doodar_housing>, 0.2, 1400, true);
+ItemRegistry.registerItemHeat(<tfcreborncore:item/synthetic_graphite_mix>, 0.1, 2000, false);
 
 // Item Metal Registry
 ItemRegistry.registerItemMetal(<tfcreborncore:item/electrical_doodar_base_plate>, "redstone", 20, true);
@@ -20,3 +21,4 @@ ItemRegistry.registerFuel(<tfcreborncore:item/bituminous_coal_coke>, 4400, 1500.
 
 // Hardened Glass
 Heating.addRecipe("tfcreborncore:hardened_glass", <tfcreborncore:item/hardened_glass_mix>, <thermalfoundation:glass:3>, 999, 1400);
+Heating.addRecipe("tfcreborncore:synthetic_graphite", <tfcreborncore:item/synthetic_graphite_mix>, <tfc:powder/graphite>, 1600, 2000);

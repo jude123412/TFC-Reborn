@@ -57,6 +57,16 @@ crafting.shapelessBuilder()
     ])
     .register()
 
+// Synthetic Graphite Mix
+crafting.shapelessBuilder()
+    .output(item('tfcreborncore:item/synthetic_graphite_mix') * 3)
+    .input([
+         ore('dustFlux'),
+         ore('dustCoal'),
+         ore('dustWood')
+    ])
+    .register()
+
 // crafting.shapedBuilder()
 //     .output(null)
 //     .shape([
