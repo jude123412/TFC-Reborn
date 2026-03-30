@@ -121,7 +121,7 @@ for (var in Utils.materials) {
     crafting.shapelessBuilder()
     .output(item('tfctech:metal/' + var + '_strip'))
     .input([
-         ore('chisel'),
+         ore('chisel').transform(Utils.transformerTool),
          ore('ingot' + Utils.toPascal(var))
     ])
     .register()
@@ -130,7 +130,7 @@ for (var in Utils.materials) {
     crafting.shapelessBuilder()
     .output(item('tfctech:metal/' + var + '_long_rod'))
     .input([
-         ore('hammer'),
+         ore('hammer').transform(Utils.transformerTool),
          ore('stick' + Utils.toPascal(var)),
          ore('stick' + Utils.toPascal(var))
     ])
@@ -140,7 +140,7 @@ for (var in Utils.materials) {
     crafting.shapelessBuilder()
     .output(item('tfctech:metal/' + var + '_rod'))
     .input([
-         ore('chisel'),
+         ore('chisel').transform(Utils.transformerTool),
          ore('ingot' + Utils.toPascal(var))
     ])
     .register()
@@ -149,7 +149,7 @@ for (var in Utils.materials) {
     crafting.shapelessBuilder()
     .output(item('tfctech:metal/' + var + '_bolt'))
     .input([
-         ore('chisel'),
+         ore('chisel').transform(Utils.transformerTool),
          ore('stick' + Utils.toPascal(var))
     ])
     .register()
@@ -158,7 +158,7 @@ for (var in Utils.materials) {
     crafting.shapelessBuilder()
     .output(item('tfctech:metal/' + var + '_screw'))
     .input([
-         ore('chisel'),
+         ore('chisel').transform(Utils.transformerTool),
          ore('bolt' + Utils.toPascal(var)),
          ore('bolt' + Utils.toPascal(var))
     ])
@@ -166,9 +166,9 @@ for (var in Utils.materials) {
 
     // Wire from Sheet
     crafting.shapelessBuilder()
-    .output(item('tfctech:metal/' + var + '_wire'))
+    .output(item('tfctech:metal/' + var + '_wire') * 2)
     .input([
-         item('immersiveengineering:tool', 1),
+         ore('wireCutter').transform(Utils.transformerTool),
          ore('sheet' + Utils.toPascal(var))
     ])
     .register()

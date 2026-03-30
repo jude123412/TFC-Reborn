@@ -1,3 +1,5 @@
+import classes.postInit.Utils
+
 // Recipes to remove
 def recipesToRemove = [
     'immersiveengineering:stone_decoration/cokebrick',
@@ -148,6 +150,8 @@ def recipesToRemove = [
     'immersiveengineering:toolupgrades/drill_lube',
     'immersiveengineering:toolupgrades/drill_capacity',
     'immersiveengineering:toolupgrades/shield_flash',
+    'immersiveengineering:wirecoils/wirecoil_hv2',
+    'immersiveengineering:wirecoils/wirecoil_hv',
 ]
 
 // Recipe Removal
@@ -559,8 +563,8 @@ crafting.shapedBuilder()
 crafting.shapedBuilder()
     .output(item('immersiveengineering:toolupgrade', 1))
     .shape([
-        [item('tfc:wooden_bucket').withNbt(['Fluid': ['FluidName': 'lubricant', 'Amount': 1000]]),ore('ingotIron'),null],
-        [ore('ingotIron'),item('tfc:wooden_bucket').withNbt(['Fluid': ['FluidName': 'lubricant', 'Amount': 1000]]),ore('ingotIron')],
+        [item('tfc:wooden_bucket').withNbt(['Fluid': ['FluidName': 'lubricant', 'Amount': 1000]]).transform(Utils.transformerBucket),ore('ingotIron'),null],
+        [ore('ingotIron'),item('tfc:wooden_bucket').withNbt(['Fluid': ['FluidName': 'lubricant', 'Amount': 1000]]).transform(Utils.transformerBucket),ore('ingotIron')],
         [null,ore('ingotIron'),item('immersiveengineering:material', 8)]
     ])
     .register()
@@ -595,6 +599,16 @@ for (key in ladderItems) {
         ])
         .register()
 }
+
+// HV Wire Coil
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:wirecoil', 2) * 4)
+    .shape([
+        [null,ore('wireSteel'),null],
+        [ore('wireSteel'),ore('stickWood'),ore('wireSteel')],
+        [null,ore('wireSteel'),null]
+    ])
+    .register()
 
 // Recipe Builder for Stairs
 for (entry in stairItems) {

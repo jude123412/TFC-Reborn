@@ -14,4 +14,13 @@ class Utils {
         if (!s) return s
         s.split('_').collect { it.capitalize() }.join('')
     }
+
+    // transforms any item with durability and returns it 
+    // with 1 durability less than original
+    // Only usable within Crafting Table Recipes
+    static def transformerTool = {stack -> return new ItemStack(stack.item, stack.count, stack.getItemDamage() + 1)}
+    
+    // Transforms any bucket with a fluid and returns it
+    // without NBT Data, Rendering the bucket essentially empty
+    static def transformerBucket = {stack -> return new ItemStack(stack.item, stack.count)}
 }

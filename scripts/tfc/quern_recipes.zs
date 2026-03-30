@@ -3,8 +3,11 @@ import mods.terrafirmacraft.Quern;
 // TFC Recipes
 Quern.addRecipe("tfcreborncore:redstone_ingot_to_dust", <ore:ingotRedstone>, <minecraft:redstone>);
 Quern.addRecipe("tfcreborncore:glowstone_ingot_to_dust", <ore:ingotGlowstone>, <minecraft:glowstone_dust>);
-Quern.addRecipe("tfcreborncore:enderpearl_to_dust", <ore:gemEnder>, <appliedenergistics2:material:46>);
-Quern.addRecipe("tfcreborncore:enderpearl_ingot_to_dust", <ore:ingotEnder>, <appliedenergistics2:material:46>);
+Quern.addRecipe("tfcreborncore:enderpearl_to_dust", <ore:gemEnder>, <tfcreborncore:item/enderpearl_powder>);
+Quern.addRecipe("tfcreborncore:enderpearl_ingot_to_dust", <ore:ingotEnder>, <tfcreborncore:item/enderpearl_powder>);
+Quern.addRecipe("tfcreborncore:certus_quartz_to_dust", <ore:crystalCertusQuartz>, <tfcreborncore:item/certus_quartz_powder>);
+Quern.addRecipe("tfcreborncore:pure_certus_quartz_to_dust", <ore:crystalPureCertusQuartz>, <tfcreborncore:item/certus_quartz_powder>);
+Quern.addRecipe("tfcreborncore:charged_certus_quartz_to_dust", <appliedenergistics2:material:1>, <tfcreborncore:item/certus_quartz_powder>);
 
 // TFC Reborn Core
 Quern.addRecipe("tfcreborncore:sawdust_from_lumber", <ore:lumber>, <tfcreborncore:item/wood_powder>);
