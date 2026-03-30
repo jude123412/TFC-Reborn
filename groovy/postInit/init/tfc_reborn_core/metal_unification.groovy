@@ -1,6 +1,12 @@
 import classes.postInit.Utils
 
 for (var in Utils.materials) {
+    // Recipe Removal
+    crafting.removeByOutput(item('tfctech:metal/' + var + '_strip'))
+    crafting.removeByOutput(item('tfctech:metal/' + var + '_rod'))
+    crafting.removeByOutput(item('tfctech:metal/' + var + '_bolt'))
+    crafting.removeByOutput(item('tfctech:metal/' + var + '_screw'))
+
     // Double Ingot
     mods.immersiveengineering.metal_press.recipeBuilder()
         .mold(item('immersiveengineering:mold'))
@@ -110,6 +116,62 @@ for (var in Utils.materials) {
         .output(item('tfc:metal/dust/' + var))
         .energy(2000)
         .register()
+
+    // Strip from Ingot
+    crafting.shapelessBuilder()
+    .output(item('tfctech:metal/' + var + '_strip'))
+    .input([
+         ore('chisel'),
+         ore('ingot' + Utils.toPascal(var))
+    ])
+    .register()
+
+    // Long Rod from Rods
+    crafting.shapelessBuilder()
+    .output(item('tfctech:metal/' + var + '_long_rod'))
+    .input([
+         ore('hammer'),
+         ore('stick' + Utils.toPascal(var)),
+         ore('stick' + Utils.toPascal(var))
+    ])
+    .register()
+
+    // Rod from Ingot
+    crafting.shapelessBuilder()
+    .output(item('tfctech:metal/' + var + '_rod'))
+    .input([
+         ore('chisel'),
+         ore('ingot' + Utils.toPascal(var))
+    ])
+    .register()
+
+    // Bolt from Rod
+    crafting.shapelessBuilder()
+    .output(item('tfctech:metal/' + var + '_bolt'))
+    .input([
+         ore('chisel'),
+         ore('stick' + Utils.toPascal(var))
+    ])
+    .register()
+
+    // Screw from Bolt
+    crafting.shapelessBuilder()
+    .output(item('tfctech:metal/' + var + '_screw'))
+    .input([
+         ore('chisel'),
+         ore('bolt' + Utils.toPascal(var)),
+         ore('bolt' + Utils.toPascal(var))
+    ])
+    .register()
+
+    // Wire from Sheet
+    crafting.shapelessBuilder()
+    .output(item('tfctech:metal/' + var + '_wire'))
+    .input([
+         item('immersiveengineering:tool', 1),
+         ore('sheet' + Utils.toPascal(var))
+    ])
+    .register()
 }
 
 // Redstone Dust
