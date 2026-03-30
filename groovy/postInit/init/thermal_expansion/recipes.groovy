@@ -32,10 +32,10 @@ def recipesToRemoveByOutput = [
     item('thermaldynamics:filter', OreDictionary.WILDCARD_VALUE),
     item('thermaldynamics:retriever', OreDictionary.WILDCARD_VALUE),
     item('thermaldynamics:relay'),
+    item('thermalexpansion:machine', OreDictionary.WILDCARD_VALUE),
     item('thermalfoundation:glass', OreDictionary.WILDCARD_VALUE),
     item('thermalfoundation:glass_alloy', OreDictionary.WILDCARD_VALUE),
     item('thermalexpansion:frame'),
-
 ]
 
 def recipesToRemoveById = [
@@ -55,35 +55,37 @@ for (id in recipesToRemoveById) {
 }
 
 def servoRecipes = [
-    0:"tin",
-    1:"invar",
-    2:"electrum",
-    3:"signalum",
-    4:"enderium",
+    "tin":0,
+    "silver":0,
+    "zinc":0,
+    "invar":1,
+    "electrum":2,
+    "signalum":3,
+    "enderium":4,
 ]
 
 for (array in servoRecipes) {
 crafting.shapedBuilder()
-    .output(item('thermaldynamics:servo', array.key) * 2)
+    .output(item('thermaldynamics:servo', array.value) * 2)
     .shape([
-        [ore('strip' + Utils.toPascal(array.value)),ore('blockGlassHardened'),ore('strip' + Utils.toPascal(array.value))],
-        [ore('sheet' + Utils.toPascal(array.value)),ore('dustRedstone'),ore('sheet' + Utils.toPascal(array.value))]
+        [ore('strip' + Utils.toPascal(array.key)),ore('blockGlassHardened'),ore('strip' + Utils.toPascal(array.key))],
+        [ore('sheet' + Utils.toPascal(array.key)),ore('dustRedstone'),ore('sheet' + Utils.toPascal(array.key))]
     ])
     .register()
 
 crafting.shapedBuilder()
-    .output(item('thermaldynamics:filter', array.key) * 2)
+    .output(item('thermaldynamics:filter', array.value) * 2)
     .shape([
-        [ore('strip' + Utils.toPascal(array.value)),ore('blockGlassHardened'),ore('strip' + Utils.toPascal(array.value))],
-        [ore('sheet' + Utils.toPascal(array.value)),ore('paper'),ore('sheet' + Utils.toPascal(array.value))]
+        [ore('strip' + Utils.toPascal(array.key)),ore('blockGlassHardened'),ore('strip' + Utils.toPascal(array.key))],
+        [ore('sheet' + Utils.toPascal(array.key)),ore('paper'),ore('sheet' + Utils.toPascal(array.key))]
     ])
     .register()
 
 crafting.shapedBuilder()
-    .output(item('thermaldynamics:retriever', array.key) * 2)
+    .output(item('thermaldynamics:retriever', array.value) * 2)
     .shape([
-        [ore('strip' + Utils.toPascal(array.value)),ore('blockGlassHardened'),ore('strip' + Utils.toPascal(array.value))],
-        [ore('sheet' + Utils.toPascal(array.value)),item('minecraft:ender_eye'),ore('sheet' + Utils.toPascal(array.value))]
+        [ore('strip' + Utils.toPascal(array.key)),ore('blockGlassHardened'),ore('strip' + Utils.toPascal(array.key))],
+        [ore('sheet' + Utils.toPascal(array.key)),item('minecraft:ender_eye'),ore('sheet' + Utils.toPascal(array.key))]
     ])
     .register()
 }
@@ -156,6 +158,186 @@ crafting.shapedBuilder()
     .shape([
         [ore('stripSignalum'),ore('gemQuartz'),ore('stripSignalum')],
         [ore('sheetLead'),ore('dustRedstone'),ore('sheetLead')]
+    ])
+    .register()
+
+// Redstone Furnace
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:machine'))
+    .shape([
+        [null,ore('inductorCopper'),null],
+        [item('tfc:fire_bricks'),item('thermalexpansion:frame'),item('tfc:fire_bricks')],
+        [ore('gearCopper'),item('thermalfoundation:material', 513),ore('gearCopper')]
+    ])
+    .register()
+
+// Pulverizer
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:machine', 1))
+    .shape([
+        [null,item('minecraft:flint'),null],
+        [ore('rackwheelAnyBronze'),item('thermalexpansion:frame'),ore('rackwheelAnyBronze')],
+        [ore('gearCopper'),item('thermalfoundation:material', 513),ore('gearCopper')]
+    ])
+    .register()
+
+// Sawmill
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:machine', 2))
+    .shape([
+        [null,item('thermalfoundation:material', 657),null],
+        [ore('plankWood'),item('thermalexpansion:frame'),ore('plankWood')],
+        [ore('gearIron'),item('thermalfoundation:material', 513),ore('gearIron')]
+    ])
+    .register()
+
+// Induction Smelter
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:machine', 3))
+    .shape([
+        [null,ore('gearInvar'),null],
+        [ore('sand'),item('thermalexpansion:frame'),ore('sand')],
+        [ore('gearIron'),item('thermalfoundation:material', 513),ore('gearIron')]
+    ])
+    .register()
+
+// Phytogenic Insulator
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:machine', 4))
+    .shape([
+        [null,ore('gearLumium'),null],
+        [ore('dirt'),item('thermalexpansion:frame'),ore('dirt')],
+        [ore('gearSignalum'),item('thermalfoundation:material', 513),ore('gearSignalum')]
+    ])
+    .register()
+
+// Compactor
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:machine', 5))
+    .shape([
+        [null,item('minecraft:piston'),null],
+        [ore('ingotAnyBronze'),item('thermalexpansion:frame'),ore('ingotAnyBronze')],
+        [ore('gearCopper'),item('thermalfoundation:material', 513),ore('gearCopper')]
+    ])
+    .register()
+
+// Magma Crucible
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:machine', 6))
+    .shape([
+        [null,ore('inductorCopper'),null],
+        [item('tfc:fire_bricks'),item('thermalexpansion:frame'),item('tfc:fire_bricks')],
+        [ore('gearSignalum'),item('thermalfoundation:material', 513),ore('gearSignalum')]
+    ])
+    .register()
+
+// Fractionating Still
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:machine', 7))
+    .shape([
+        [null,ore('gearIridium'),null],
+        [ore('blockGlassHardened'),item('thermalexpansion:frame'),ore('blockGlassHardened')],
+        [ore('gearIron'),item('thermalfoundation:material', 513),ore('gearIron')]
+    ])
+    .register()
+
+// Fluid Transposer
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:machine', 8))
+    .shape([
+        [null,ore('gearGold'),null],
+        [ore('blockGlassHardened'),item('thermalexpansion:frame'),ore('blockGlassHardened')],
+        [ore('gearLumium'),item('thermalfoundation:material', 513),ore('gearLumium')]
+    ])
+    .register()
+
+// Energetic Infuser
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:machine', 9))
+    .shape([
+        [null,ore('gearRedAlloy'),null],
+        [item('thermalfoundation:material', 514),item('thermalexpansion:frame'),item('thermalfoundation:material', 514)],
+        [ore('gearSignalum'),item('thermalfoundation:material', 513),ore('gearSignalum')]
+    ])
+    .register()
+
+// Centrifugal Separator
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:machine', 10))
+    .shape([
+        [null,ore('rackwheelArdite'),null],
+        [ore('ingotConstantan'),item('thermalexpansion:frame'),ore('ingotConstantan')],
+        [ore('gearIron'),item('thermalfoundation:material', 513),ore('gearIron')]
+    ])
+    .register()
+
+// Sequential Fabricator
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:machine', 11))
+    .shape([
+        [null,ore('workbench'),null],
+        [ore('ingotTin'),item('thermalexpansion:frame'),ore('ingotTin')],
+        [ore('gearCopper'),item('thermalfoundation:material', 513),ore('gearCopper')]
+    ])
+    .register()
+
+// Sequential Fabricator Alt 1
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:machine', 11))
+    .shape([
+        [null,ore('workbench'),null],
+        [ore('ingotSilver'),item('thermalexpansion:frame'),ore('ingotSilver')],
+        [ore('gearCopper'),item('thermalfoundation:material', 513),ore('gearCopper')]
+    ])
+    .register()
+
+// Sequential Fabricator Alt 2
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:machine', 11))
+    .shape([
+        [null,ore('workbench'),null],
+        [ore('ingotZinc'),item('thermalexpansion:frame'),ore('ingotZinc')],
+        [ore('gearCopper'),item('thermalfoundation:material', 513),ore('gearCopper')]
+    ])
+    .register()
+
+// Alchemical Imbuer
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:machine', 12))
+    .shape([
+        [null,ore('stickArdite'),null],
+        [ore('blockGlassHardened'),item('thermalexpansion:frame'),ore('blockGlassHardened')],
+        [ore('gearEnderium'),item('thermalfoundation:material', 513),ore('gearEnderium')]
+    ])
+    .register()
+
+// Arcane Ensorcellator
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:machine', 13))
+    .shape([
+        [null,ore('gemExquisiteDiamond'),null],
+        [ore('blockLapis'),item('thermalexpansion:frame'),ore('blockLapis')],
+        [ore('gearSteel'),item('thermalfoundation:material', 513),ore('gearSteel')]
+    ])
+    .register()
+
+// Glacial Precipitator
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:machine', 14))
+    .shape([
+        [null,ore('gemExquisiteJasper'),null],
+        [ore('ingotLumium'),item('thermalexpansion:frame'),ore('ingotLumium')],
+        [ore('gearEnderium'),item('thermalfoundation:material', 513),ore('gearEnderium')]
+    ])
+    .register()
+
+// Igneous Extruder
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:machine', 15))
+    .shape([
+        [null,ore('gemExquisiteGarnet'),null],
+        [ore('ingotSignalum'),item('thermalexpansion:frame'),ore('ingotLumium')],
+        [ore('gearEnderium'),item('thermalfoundation:material', 513),ore('gearEnderium')]
     ])
     .register()
 
