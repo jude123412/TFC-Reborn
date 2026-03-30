@@ -351,7 +351,7 @@ crafting.shapedBuilder()
     .output(item('thermalexpansion:satchel'))
     .shape([
         [null,ore('leather'),null],
-        [ore('ingotTier1'),ore('chestWood'),ore('ingotTier1')],
+        [ore('ingotTin'),ore('chestWood'),ore('ingotTin')],
         [ore('leather'),null,ore('leather')]
     ])
     .register()
@@ -361,7 +361,7 @@ crafting.shapedBuilder()
     .output(item('thermalexpansion:satchel'))
     .shape([
         [null,ore('blockRockwool'),null],
-        [ore('ingotTier1'),ore('chestWood'),ore('ingotTier1')],
+        [ore('ingotTin'),ore('chestWood'),ore('ingotTin')],
         [ore('blockRockwool'),null,ore('blockRockwool')]
     ])
     .register()
