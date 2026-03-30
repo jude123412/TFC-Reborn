@@ -41,7 +41,9 @@ def recipesToRemoveByOutput = [
 def recipesToRemoveById = [
     'thermaldynamics:duct_32',
     'thermaldynamics:duct_32_10',
-    'thermaldynamics:duct_32_12'
+    'thermaldynamics:duct_32_12',
+    'thermalexpansion:satchel',
+    'thermalexpansion:satchel_1',
 ]
 
 // Recipe Removal
@@ -64,28 +66,28 @@ def servoRecipes = [
     "enderium":4,
 ]
 
-for (array in servoRecipes) {
+for (entry in servoRecipes) {
 crafting.shapedBuilder()
-    .output(item('thermaldynamics:servo', array.value) * 2)
+    .output(item('thermaldynamics:servo', entry.value) * 2)
     .shape([
-        [ore('strip' + Utils.toPascal(array.key)),ore('blockGlassHardened'),ore('strip' + Utils.toPascal(array.key))],
-        [ore('sheet' + Utils.toPascal(array.key)),ore('dustRedstone'),ore('sheet' + Utils.toPascal(array.key))]
+        [ore('strip' + Utils.toPascal(entry.key)),ore('blockGlassHardened'),ore('strip' + Utils.toPascal(entry.key))],
+        [ore('sheet' + Utils.toPascal(entry.key)),ore('dustRedstone'),ore('sheet' + Utils.toPascal(entry.key))]
     ])
     .register()
 
 crafting.shapedBuilder()
-    .output(item('thermaldynamics:filter', array.value) * 2)
+    .output(item('thermaldynamics:filter', entry.value) * 2)
     .shape([
-        [ore('strip' + Utils.toPascal(array.key)),ore('blockGlassHardened'),ore('strip' + Utils.toPascal(array.key))],
-        [ore('sheet' + Utils.toPascal(array.key)),ore('paper'),ore('sheet' + Utils.toPascal(array.key))]
+        [ore('strip' + Utils.toPascal(entry.key)),ore('blockGlassHardened'),ore('strip' + Utils.toPascal(entry.key))],
+        [ore('sheet' + Utils.toPascal(entry.key)),ore('paper'),ore('sheet' + Utils.toPascal(entry.key))]
     ])
     .register()
 
 crafting.shapedBuilder()
-    .output(item('thermaldynamics:retriever', array.value) * 2)
+    .output(item('thermaldynamics:retriever', entry.value) * 2)
     .shape([
-        [ore('strip' + Utils.toPascal(array.key)),ore('blockGlassHardened'),ore('strip' + Utils.toPascal(array.key))],
-        [ore('sheet' + Utils.toPascal(array.key)),item('minecraft:ender_eye'),ore('sheet' + Utils.toPascal(array.key))]
+        [ore('strip' + Utils.toPascal(entry.key)),ore('blockGlassHardened'),ore('strip' + Utils.toPascal(entry.key))],
+        [ore('sheet' + Utils.toPascal(entry.key)),item('minecraft:ender_eye'),ore('sheet' + Utils.toPascal(entry.key))]
     ])
     .register()
 }
@@ -342,6 +344,27 @@ crafting.shapedBuilder()
     .register()
 
 
+
+
+// Satchel
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:satchel'))
+    .shape([
+        [null,ore('leather'),null],
+        [ore('ingotTier1'),ore('chestWood'),ore('ingotTier1')],
+        [ore('leather'),null,ore('leather')]
+    ])
+    .register()
+
+// Satchel Alt
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:satchel'))
+    .shape([
+        [null,ore('blockRockwool'),null],
+        [ore('ingotTier1'),ore('chestWood'),ore('ingotTier1')],
+        [ore('blockRockwool'),null,ore('blockRockwool')]
+    ])
+    .register()
 
 
 

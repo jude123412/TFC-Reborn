@@ -1,6 +1,6 @@
 import classes.postInit.Utils
 
-for (var in Utils.materials) {
+for (var in Utils.usableMetals) {
     // Recipe Removal
     crafting.removeByOutput(item('tfctech:metal/' + var + '_strip'))
     crafting.removeByOutput(item('tfctech:metal/' + var + '_rod'))
