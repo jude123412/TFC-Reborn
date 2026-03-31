@@ -14,6 +14,7 @@ ItemRegistry.registerItemMetal(<tfcreborncore:item/electrical_thingamajig_stage_
 ItemRegistry.registerItemMetal(<tfcreborncore:item/electrical_thingamajig_stage_3>, "redstone", 10, true);
 ItemRegistry.registerItemMetal(<tfcreborncore:item/electrical_doodar>, "redstone", 25, true);
 ItemRegistry.registerItemMetal(<tfcreborncore:item/electrical_thingamajig>, "redstone", 20, true);
+ItemRegistry.registerItemMetal(<tfcreborncore:item/brass_piston>, "brass", 750, true);
 
 // TFC Fuel Item Regsitry
 ItemRegistry.registerFuel(<tfcreborncore:item/lignite_coke>, 4000, 1415.0, true, false);
@@ -24,4 +25,8 @@ Heating.addRecipe("tfcreborncore:hardened_glass", <tfcreborncore:item/hardened_g
 Heating.addRecipe("tfcreborncore:synthetic_graphite", <tfcreborncore:item/synthetic_graphite_mix>, <tfc:powder/graphite>, 1600, 2000);
 
 // TFC Recipes
+// Item Heat Registry
 ItemRegistry.registerItemHeat(<tfc:powder/graphite>, 0.6, 2000, false);
+
+// Item Metal Registry
+ItemRegistry.registerItemMetal(<tfc:brass_mechanisms>, "brass", 50, true);

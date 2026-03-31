@@ -236,7 +236,7 @@ crafting.shapedBuilder()
 crafting.shapedBuilder()
     .output(item('thermalexpansion:machine', 5))
     .shape([
-        [null,item('minecraft:piston'),null],
+        [null,item('tfcreborncore:item/brass_piston'),null],
         [ore('ingotAnyBronze'),item('thermalexpansion:frame'),ore('ingotAnyBronze')],
         [ore('gearCopper'),item('thermalfoundation:material', 513),ore('gearCopper')]
     ])
@@ -427,7 +427,7 @@ crafting.shapedBuilder()
     .output(item('thermalexpansion:dynamo'))
     .shape([
         [null,item('thermalfoundation:material', 514),null],
-        [ore('sheetTin'),item('minecraft:piston'),ore('sheetTin')],
+        [ore('sheetTin'),item('tfcreborncore:item/brass_piston'),ore('sheetTin')],
         [ore('gearCopper'),ore('ingotRedstone'),ore('gearCopper')]
     ])
     .register()
@@ -437,7 +437,7 @@ crafting.shapedBuilder()
     .output(item('thermalexpansion:dynamo', 2))
     .shape([
         [null,item('thermalfoundation:material', 514),null],
-        [ore('sheetTin'),item('minecraft:piston'),ore('sheetTin')],
+        [ore('sheetTin'),item('tfcreborncore:item/brass_piston'),ore('sheetTin')],
         [ore('gearIron'),ore('ingotRedstone'),ore('gearIron')]
     ])
     .register()

@@ -67,6 +67,16 @@ crafting.shapelessBuilder()
     ])
     .register()
 
+// Brass Piston
+crafting.shapedBuilder()
+    .output(item('tfcreborncore:item/brass_piston'))
+    .shape([
+        [null,ore('sheetBrass'),null],
+        [ore('ingotBrass'),ore('stickLongBrass'),ore('ingotBrass')],
+        [ore('ingotBrass'),item('tfc:brass_mechanisms'),ore('ingotBrass')]
+    ])
+    .register()
+
 // crafting.shapedBuilder()
 //     .output(null)
 //     .shape([
