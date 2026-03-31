@@ -33,6 +33,8 @@ def recipesToRemoveByOutput = [
     item('thermaldynamics:retriever', OreDictionary.WILDCARD_VALUE),
     item('thermaldynamics:relay'),
     item('thermalexpansion:machine', OreDictionary.WILDCARD_VALUE),
+    item('thermalexpansion:device', OreDictionary.WILDCARD_VALUE),
+    item('thermalexpansion:dynamo'),
     item('thermalfoundation:glass', OreDictionary.WILDCARD_VALUE),
     item('thermalfoundation:glass_alloy', OreDictionary.WILDCARD_VALUE),
     item('thermalexpansion:frame'),
@@ -366,7 +368,76 @@ crafting.shapedBuilder()
     ])
     .register()
 
+// Thermal Mediator
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:device', 2))
+    .shape([
+        [null,ore('ingotCopper'),null],
+        [ore('sheetInvar'),item('thermalexpansion:frame', 64),ore('sheetInvar')],
+        [ore('gearIron'),item('thermalfoundation:material', 512),ore('gearIron')]
+    ])
+    .register()
 
+// Arboreal Extractor
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:device', 3))
+    .shape([
+        [null,ore('groveIron'),null],
+        [item('tfctech:ceramics/fluid_bowl'),item('thermalexpansion:frame', 64),item('tfctech:ceramics/fluid_bowl')],
+        [ore('gearIron'),item('thermalfoundation:material', 512),ore('gearIron')]
+    ])
+    .register()
+
+// Lexical Transmuter
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:device', 7))
+    .shape([
+        [null,item('thermalfoundation:tome_lexicon'),null],
+        [ore('sheetLead'),item('thermalexpansion:frame', 64),ore('sheetLead')],
+        [ore('gearIron'),item('thermalfoundation:material', 512),ore('gearIron')]
+    ])
+    .register()
+
+// Insightful Condenser
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:device', 8))
+    .shape([
+        [null,item('thermalfoundation:tome_experience'),null],
+        [ore('sheetGold'),item('thermalexpansion:frame', 64),ore('sheetGold')],
+        [ore('gearIron'),item('thermalfoundation:material', 512),ore('gearIron')]
+    ])
+    .register()
+
+// Creaturer Encaptulator
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:device', 11))
+    .shape([
+        [null,item('thermalexpansion:morb'),null],
+        [ore('sheetConstantan'),item('thermalexpansion:frame', 64),ore('sheetConstantan')],
+        [ore('gearIron'),item('thermalfoundation:material', 512),ore('gearIron')]
+    ])
+    .register()
+
+// Vacuumulator
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:device', 12))
+    .shape([
+        [null,item('minecraft:hopper'),null],
+        [ore('sheetTin'),item('thermalexpansion:frame', 64),ore('sheetTin')],
+        [ore('gearIron'),item('thermalfoundation:material', 512),ore('gearIron')]
+    ])
+    .register()
+
+
+// Steam Dynamo
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:dynamo'))
+    .shape([
+        [null,item('thermalfoundation:material', 514),null],
+        [ore('ingotSterlingSilver'),ore('sheetAnyBronze'),ore('ingotSterlingSilver')],
+        [ore('gearCopper'),ore('ingotRedstone'),ore('gearCopper')]
+    ])
+    .register()
 
 
 
