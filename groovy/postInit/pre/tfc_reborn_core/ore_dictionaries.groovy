@@ -1,3 +1,9 @@
+// Minecraft
+// Gem Ender
+ore_dict.add("gemEnder", item('minecraft:ender_pearl'))
+
+
+// TFC Tech
 // Any Bronze Strip
 ore_dict.add("stripAnyBronze", item('tfctech:metal/bismuth_bronze_strip'))
 ore_dict.add("stripAnyBronze", item('tfctech:metal/black_bronze_strip'))
@@ -48,5 +54,23 @@ ore_dict.add("stickLongIron", item('tfctech:metal/wrought_iron_long_rod'))
 ore_dict.add("stickIron", item('tfctech:metal/wrought_iron_rod'))
 ore_dict.add("boltIron", item('tfctech:metal/wrought_iron_bolt'))
 ore_dict.add("screwIron", item('tfctech:metal/wrought_iron_screw'))
+
+// Storage Drawers
+def drawers = [
+    item('storagedrawers:customdrawers'),
+    item('storagedrawers:customdrawers', 1),
+    item('storagedrawers:customdrawers', 2),
+    item('storagedrawers:customdrawers', 3),
+    item('storagedrawers:customdrawers', 4),
+    item('storagedrawers:customdrawers', 4),
+]
+
+for (item in drawers) {
+    ore_dict.add("drawerFramed", item)
+}
+
+// Thermal Expansion
+// Add gemCinnabar to TE Cinnabar
+ore_dict.add("gemCinnabar", item('thermalfoundation:material', 866))
 
 // ore_dict.add("", null)

@@ -218,7 +218,7 @@ crafting.shapedBuilder()
     .shape([
         [null,ore('gearInvar'),null],
         [ore('sand'),item('thermalexpansion:frame'),ore('sand')],
-        [ore('gearIron'),item('thermalfoundation:material', 513),ore('gearIron')]
+        [ore('gearSteel'),item('thermalfoundation:material', 513),ore('gearSteel')]
     ])
     .register()
 
