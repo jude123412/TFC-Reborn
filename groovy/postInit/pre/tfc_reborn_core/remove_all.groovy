@@ -1,4 +1,4 @@
-// Thermal
+// Thermal Expansion
 mods.thermalexpansion.compactor.removeAll()
 mods.thermalexpansion.pulverizer.removeAll()
 mods.thermalexpansion.furnace.removeAll()

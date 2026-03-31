@@ -2,7 +2,6 @@
 // Gem Ender
 ore_dict.add("gemEnder", item('minecraft:ender_pearl'))
 
-
 // TFC Tech
 // Any Bronze Strip
 ore_dict.add("stripAnyBronze", item('tfctech:metal/bismuth_bronze_strip'))
