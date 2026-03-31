@@ -10,6 +10,9 @@ class Utils {
     // Gets all rocks
     static def rocks = TFCRegistries.ROCKS.collect{it.registryName.path.toLowerCase()}
 
+    // Gets all trees
+    static def trees = TFCRegistries.TREES.collect{it.registryName.path.toLowerCase()}
+
     // Formats any string using _ to make ore dictionary names easy
     // Example : bismuth_bronze turns to BismuthBronze xD
     static def toPascal(String s) {
