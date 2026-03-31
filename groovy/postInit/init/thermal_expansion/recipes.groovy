@@ -34,10 +34,18 @@ def recipesToRemoveByOutput = [
     item('thermaldynamics:relay'),
     item('thermalexpansion:machine', OreDictionary.WILDCARD_VALUE),
     item('thermalexpansion:device', OreDictionary.WILDCARD_VALUE),
-    item('thermalexpansion:dynamo'),
+    item('thermalexpansion:dynamo', OreDictionary.WILDCARD_VALUE),
+    item('thermalexpansion:cell'),
+    item('thermalexpansion:tank'),
+    item('thermalexpansion:cache'),
+    item('thermalexpansion:strongbox'),
+    item('thermalexpansion:capacitor', OreDictionary.WILDCARD_VALUE),
+    item('thermalexpansion:reservoir', OreDictionary.WILDCARD_VALUE),
+    item('thermalexpansion:frame'),
+    item('thermalexpansion:frame', 64),
+    item('thermalexpansion:frame', 128),
     item('thermalfoundation:glass', OreDictionary.WILDCARD_VALUE),
     item('thermalfoundation:glass_alloy', OreDictionary.WILDCARD_VALUE),
-    item('thermalexpansion:frame'),
 ]
 
 def recipesToRemoveById = [
@@ -46,6 +54,10 @@ def recipesToRemoveById = [
     'thermaldynamics:duct_32_12',
     'thermalexpansion:satchel',
     'thermalexpansion:satchel_1',
+    'thermalexpansion:satchel_2',
+    'thermalexpansion:satchel_3',
+    'thermalexpansion:satchel_4',
+    'thermalexpansion:satchel_5',
 ]
 
 // Recipe Removal
@@ -345,29 +357,6 @@ crafting.shapedBuilder()
     ])
     .register()
 
-
-
-
-// Satchel
-crafting.shapedBuilder()
-    .output(item('thermalexpansion:satchel'))
-    .shape([
-        [null,ore('leather'),null],
-        [ore('ingotTin'),ore('chestWood'),ore('ingotTin')],
-        [ore('leather'),null,ore('leather')]
-    ])
-    .register()
-
-// Satchel Alt
-crafting.shapedBuilder()
-    .output(item('thermalexpansion:satchel'))
-    .shape([
-        [null,ore('blockRockwool'),null],
-        [ore('ingotTin'),ore('chestWood'),ore('ingotTin')],
-        [ore('blockRockwool'),null,ore('blockRockwool')]
-    ])
-    .register()
-
 // Thermal Mediator
 crafting.shapedBuilder()
     .output(item('thermalexpansion:device', 2))
@@ -428,18 +417,249 @@ crafting.shapedBuilder()
     ])
     .register()
 
-
 // Steam Dynamo
 crafting.shapedBuilder()
     .output(item('thermalexpansion:dynamo'))
     .shape([
         [null,item('thermalfoundation:material', 514),null],
-        [ore('ingotSterlingSilver'),ore('sheetAnyBronze'),ore('ingotSterlingSilver')],
+        [ore('sheetTin'),item('minecraft:piston'),ore('sheetTin')],
         [ore('gearCopper'),ore('ingotRedstone'),ore('gearCopper')]
     ])
     .register()
 
+// Compression Dynamo
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:dynamo', 2))
+    .shape([
+        [null,item('thermalfoundation:material', 514),null],
+        [ore('sheetTin'),item('minecraft:piston'),ore('sheetTin')],
+        [ore('gearIron'),ore('ingotRedstone'),ore('gearIron')]
+    ])
+    .register()
 
+// Energy Cell (Basic)
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:cell'))
+    .shape([
+        [ore('sheetLead'),ore('blockRedstone'),ore('sheetLead')],
+        [item('thermalfoundation:material', 513),item('thermalexpansion:frame', 128),item('thermalfoundation:material', 514)],
+        [ore('sheetLead'),item('thermalfoundation:material', 515),ore('sheetLead')]
+    ])
+    .register()
+
+// Portable Tank (Basic)
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:tank'))
+    .shape([
+        [ore('sheetCopper'),ore('blockGlassHardened'),ore('sheetCopper')],
+        [ore('blockGlassHardened'),item('thermalfoundation:material', 512),ore('blockGlassHardened')],
+        [ore('sheetCopper'),ore('blockGlassHardened'),ore('sheetCopper')]
+    ])
+    .register()
+
+// Flux Capacitor (Basic)
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:capacitor'))
+    .shape([
+        [null,ore('dustRedstone'),null],
+        [ore('sheetCopper'),ore('sheetLead'),ore('sheetCopper')],
+        [ore('dustRedstone'),ore('dustSulfur'),ore('dustRedstone')]
+    ])
+    .register()
+
+
+// Flux Capacitor (Hardened)
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:capacitor', 1))
+    .shape([
+        [null,ore('dustRedstone'),null],
+        [ore('sheetInvar'),item('thermalexpansion:capacitor'),ore('sheetInvar')],
+        [ore('dustRedstone'),ore('sheetCopper'),ore('dustRedstone')]
+    ])
+    .register()
+
+
+// Flux Capacitor (Reinforced)
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:capacitor', 2))
+    .shape([
+        [null,ore('dustRedstone'),null],
+        [ore('sheetElectrum'),item('thermalexpansion:capacitor', 1),ore('sheetElectrum')],
+        [ore('dustRedstone'),ore('sheetInvar'),ore('dustRedstone')]
+    ])
+    .register()
+
+
+// Flux Capacitor (Signalum)
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:capacitor', 3))
+    .shape([
+        [null,ore('dustRedstone'),null],
+        [ore('sheetSignalum'),item('thermalexpansion:capacitor', 2),ore('sheetSignalum')],
+        [ore('dustRedstone'),ore('sheetElectrum'),ore('dustRedstone')]
+    ])
+    .register()
+
+
+// Flux Capacitor (Resonant)
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:capacitor', 4))
+    .shape([
+        [null,ore('dustRedstone'),null],
+        [ore('sheetEnderium'),item('thermalexpansion:capacitor', 3),ore('sheetEnderium')],
+        [ore('dustRedstone'),ore('sheetSignalum'),ore('dustRedstone')]
+    ])
+    .register()
+
+// Reservoir (Basic)
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:reservoir'))
+    .shape([
+        [null,ore('sheetTin'),null],
+        [ore('sheetCopper'),ore('blockGlassHardened'),ore('sheetCopper')],
+        [null,item('thermalfoundation:material', 512),null]
+    ])
+    .register()
+
+// Reservoir (Hardened)
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:reservoir', 1))
+    .shape([
+        [null,ore('sheetTin'),null],
+        [ore('sheetInvar'),item('thermalexpansion:reservoir'),ore('sheetInvar')],
+        [null,ore('sheetTin'),null]
+    ])
+    .register()
+
+// Reservoir (Reinforced)
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:reservoir', 2))
+    .shape([
+        [null,ore('sheetInvar'),null],
+        [ore('sheetElectrum'),item('thermalexpansion:reservoir', 1),ore('sheetElectrum')],
+        [null,ore('sheetInvar'),null]
+    ])
+    .register()
+
+// Reservoir (Signalum)
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:reservoir', 3))
+    .shape([
+        [null,ore('sheetElectrum'),null],
+        [ore('sheetSignalum'),item('thermalexpansion:reservoir', 2),ore('sheetSignalum')],
+        [null,ore('sheetElectrum'),null]
+    ])
+    .register()
+
+// Reservoir (Resonant)
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:reservoir', 4))
+    .shape([
+        [null,ore('sheetSignalum'),null],
+        [ore('sheetEnderium'),item('thermalexpansion:reservoir', 3),ore('sheetEnderium')],
+        [null,ore('sheetSignalum'),null]
+    ])
+    .register()
+
+// Satchel (Basic)
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:satchel'))
+    .shape([
+        [null,ore('leather'),null],
+        [ore('sheetTin'),ore('chestWood'),ore('sheetTin')],
+        [ore('leather'),null,ore('leather')]
+    ])
+    .register()
+
+// Satchel (Basic) Alt
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:satchel'))
+    .shape([
+        [null,ore('blockRockwool'),null],
+        [ore('sheetTin'),ore('chestWood'),ore('sheetTin')],
+        [ore('blockRockwool'),null,ore('blockRockwool')]
+    ])
+    .register()
+
+// Satchel (Hardened)
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:satchel', 1))
+    .shape([
+        [null,ore('leather'),null],
+        [ore('sheetInvar'),item('thermalexpansion:satchel'),ore('sheetInvar')],
+        [ore('leather'),null,ore('leather')]
+    ])
+    .register()
+
+// Satchel (Hardened) Alt
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:satchel', 1))
+    .shape([
+        [null,ore('blockRockwool'),null],
+        [ore('sheetInvar'),item('thermalexpansion:satchel'),ore('sheetInvar')],
+        [ore('blockRockwool'),null,ore('blockRockwool')]
+    ])
+    .register()
+
+// Satchel (Reinforced)
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:satchel', 2))
+    .shape([
+        [null,ore('leather'),null],
+        [ore('sheetElectrum'),item('thermalexpansion:satchel', 1),ore('sheetElectrum')],
+        [ore('leather'),null,ore('leather')]
+    ])
+    .register()
+
+// Satchel (Reinforced) Alt
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:satchel', 2))
+    .shape([
+        [null,ore('blockRockwool'),null],
+        [ore('sheetElectrum'),item('thermalexpansion:satchel', 1),ore('sheetElectrum')],
+        [ore('blockRockwool'),null,ore('blockRockwool')]
+    ])
+    .register()
+
+// Satchel (Signalum)
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:satchel', 3))
+    .shape([
+        [null,ore('leather'),null],
+        [ore('sheetSignalum'),item('thermalexpansion:satchel', 2),ore('sheetSignalum')],
+        [ore('leather'),null,ore('leather')]
+    ])
+    .register()
+    
+// Satchel (Signalum) Alt
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:satchel', 3))
+    .shape([
+        [null,ore('blockRockwool'),null],
+        [ore('sheetSignalum'),item('thermalexpansion:satchel', 2),ore('sheetSignalum')],
+        [ore('blockRockwool'),null,ore('blockRockwool')]
+    ])
+    .register()
+
+// Satchel (Resonant)
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:satchel', 4))
+    .shape([
+        [null,ore('leather'),null],
+        [ore('sheetEnderium'),item('thermalexpansion:satchel', 3),ore('sheetEnderium')],
+        [ore('leather'),null,ore('leather')]
+    ])
+    .register()
+
+// Satchel (Resonant) Alt
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:satchel', 4))
+    .shape([
+        [null,ore('blockRockwool'),null],
+        [ore('sheetEnderium'),item('thermalexpansion:satchel', 3),ore('sheetEnderium')],
+        [ore('blockRockwool'),null,ore('blockRockwool')]
+    ])
+    .register()
 
 // Machine Frame
 crafting.shapedBuilder()
@@ -448,6 +668,26 @@ crafting.shapedBuilder()
         [ore('sheetAnyBronze'),ore('blockGlassHardened'),ore('sheetAnyBronze')],
         [ore('blockGlassHardened'),item('tfcreborncore:item/rf_control_circuit'),ore('blockGlassHardened')],
         [ore('sheetAnyBronze'),ore('blockGlassHardened'),ore('sheetAnyBronze')]
+    ])
+    .register()
+
+// Device Frame
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:frame', 64))
+    .shape([
+        [ore('sheetIron'),ore('blockGlassHardened'),ore('sheetIron')],
+        [ore('blockGlassHardened'),item('tfcreborncore:item/rf_control_circuit'),ore('blockGlassHardened')],
+        [ore('sheetIron'),ore('blockGlassHardened'),ore('sheetIron')]
+    ])
+    .register()
+
+// Energy Cell Frame
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:frame', 128))
+    .shape([
+        [ore('sheetLead'),ore('blockGlassHardened'),ore('sheetLead')],
+        [ore('blockGlassHardened'),item('tfcreborncore:item/rf_control_circuit'),ore('blockGlassHardened')],
+        [ore('sheetLead'),ore('blockGlassHardened'),ore('sheetLead')]
     ])
     .register()
 
