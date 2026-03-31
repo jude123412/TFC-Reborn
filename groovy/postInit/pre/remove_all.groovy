@@ -1,6 +1,10 @@
 // Thermal
 mods.thermalexpansion.compactor.removeAll()
 mods.thermalexpansion.pulverizer.removeAll()
+mods.thermalexpansion.furnace.removeAll()
+mods.thermalexpansion.furnace.removeAllFood()
+mods.thermalexpansion.furnace_pyrolysis.removeAll()
+mods.thermalexpansion.smelter.removeAll()
 
 // Immersive Engeneering
 mods.immersiveengineering.alloy_kiln.removeAll()

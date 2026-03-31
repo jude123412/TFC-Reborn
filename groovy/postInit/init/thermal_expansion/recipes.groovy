@@ -44,6 +44,11 @@ def recipesToRemoveByOutput = [
     item('thermalexpansion:frame'),
     item('thermalexpansion:frame', 64),
     item('thermalexpansion:frame', 128),
+    item('thermalfoundation:storage', OreDictionary.WILDCARD_VALUE),
+    item('thermalfoundation:storage_alloy', OreDictionary.WILDCARD_VALUE),
+    item('thermalfoundation:storage_resource', OreDictionary.WILDCARD_VALUE),
+    item('thermalfoundation:bait', OreDictionary.WILDCARD_VALUE),
+    item('thermalfoundation:material', OreDictionary.WILDCARD_VALUE),
     item('thermalfoundation:glass', OreDictionary.WILDCARD_VALUE),
     item('thermalfoundation:glass_alloy', OreDictionary.WILDCARD_VALUE),
 ]

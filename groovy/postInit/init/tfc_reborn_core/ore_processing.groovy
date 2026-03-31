@@ -30,6 +30,36 @@ def ores = [
     'zircon':'native_silver',
 ]
 
+def oresInduction = [
+    'native_copper': ['copper', 'gold'],
+    'native_gold': ['gold', 'silver'],
+    'native_platinum': ['platinum', 'iridium'],
+    'hematite': ['wrought_iron', 'nickel'],
+    'native_silver': ['silver', 'lead'],
+    'cassiterite': ['tin', 'wrought_iron'],
+    'galena': ['lead', 'silver'],
+    'bismuthinite': ['bismuth', 'lead'],
+    'garnierite': ['nickel', 'wrought_iron'],
+    'malachite': ['copper', 'bismuth'],
+    'magnetite': ['wrought_iron', 'copper'],
+    'limonite': ['wrought_iron', 'tungsten'],
+    'sphalerite': ['zinc', 'bismuth'],
+    'tetrahedrite': ['copper', 'tin'],
+    'stibnite': ['antimony', 'lithium'],
+    'spodumene': ['lithium', 'lead'],
+    'native_iridium': ['iridium', 'platinum'],
+    'native_ardite': ['ardite', 'cobalt'],
+    'native_osmium': ['osmium', 'zirconium'],
+    'bauxite': ['aluminium', 'zinc'],
+    'wolframite': ['tungsten', 'titanium'],
+    'cobaltite': ['cobalt', 'ardite'],
+    'rutile': ['titanium', 'tungsten'],
+    'thorianite': ['thorium', 'lead'],
+    'pyrolusite': ['manganese', 'magnesium'],
+    'magnesite': ['magnesium', 'manganese'],
+    'zircon': ['zirconium', 'silver']
+]
+
 // Main loop
 for (entry in ores) {
     mods.thermalexpansion.compactor.recipeBuilder()
@@ -112,5 +142,30 @@ for (entry in ores) {
         .output(item('tfcreborncore:ore/' + entry.key + '_pile') * 14)
         .secondaryOutput(item('tfcreborncore:ore/' + entry.value + '_pile'), 0.70)
         .energy(200)
+        .register()
+}
+
+
+// Secondary Processing
+for (entry in oresInduction) {
+    mods.thermalexpansion.smelter.recipeBuilder()
+        .input(item('tfcreborncore:ore/' + entry.key + '_bar'), ore('sand'))
+        .output(item('tfc:metal/ingot/' + entry.value[0]) * 2, item('tfcreborncore:item/rich_slag'))
+        .chance(5)
+        .energy(16000)
+        .register()
+    
+    mods.thermalexpansion.smelter.recipeBuilder()
+        .input(item('tfcreborncore:ore/' + entry.key + '_bar'), ore('crystalSlagRich'))
+        .output(item('tfc:metal/ingot/' + entry.value[0]) * 3, item('tfcreborncore:item/slag'))
+        .chance(75)
+        .energy(16000)
+        .register()
+    
+    mods.thermalexpansion.smelter.recipeBuilder()
+        .input(item('tfcreborncore:ore/' + entry.key + '_bar'), ore('gemCinnabar'))
+        .output(item('tfc:metal/ingot/' + entry.value[0]) * 2, item('tfc:metal/ingot/' + entry.value[1]))
+        .chance(100)
+        .energy(16000)
         .register()
 }
