@@ -1,3 +1,5 @@
+import net.minecraftforge.oredict.OreDictionary
+
 // Recipes to remove
 def recipesToRemoveByOutput = [
     item('exnihilocreatio:item_material', 6),
@@ -19,7 +21,9 @@ def recipesToRemoveByOutput = [
     item('exnihilocreatio:block_axle_stone'),
     item('exnihilocreatio:block_auto_sifter'),
     item('exnihilocreatio:block_end_cake'),
-    item('exnihilocreatio:block_crucible_wood')
+    item('exnihilocreatio:block_crucible_wood'),
+    item('exnihilocreatio:item_material', 5),
+    item('exnihilocreatio:item_doll', OreDictionary.WILDCARD_VALUE)
 ]
 
 // Recipe Removal
@@ -66,19 +70,3 @@ crafting.shapedBuilder()
         [ore('wireSteel'),ore('wireSteel'),ore('wireSteel')]
     ])
     .register()
-
-// crafting.shapedBuilder()
-//     .output(null)
-//     .shape([
-//         [null,null,null],
-//         [null,null,null],
-//         [null,null,null]
-//     ])
-//     .register()
-
-// crafting.shapelessBuilder()
-//     .output(null)
-//     .input([
-//          null
-//     ])
-//     .register()
