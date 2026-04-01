@@ -187,7 +187,7 @@ crafting.shapedBuilder()
     .output(item('thermalexpansion:machine'))
     .shape([
         [null,ore('inductorCopper'),null],
-        [item('tfc:fire_bricks'),item('thermalexpansion:frame'),item('tfc:fire_bricks')],
+        [item('minecraft:brick_block'),item('thermalexpansion:frame'),item('minecraft:brick_block')],
         [ore('gearCopper'),item('thermalfoundation:material', 513),ore('gearCopper')]
     ])
     .register()
@@ -196,8 +196,8 @@ crafting.shapedBuilder()
 crafting.shapedBuilder()
     .output(item('thermalexpansion:machine', 1))
     .shape([
-        [null,item('minecraft:flint'),null],
-        [ore('rackwheelAnyBronze'),item('thermalexpansion:frame'),ore('rackwheelAnyBronze')],
+        [null,item('tfcreborncore:item/brass_piston'),null],
+        [item('minecraft:flint'),item('thermalexpansion:frame'),item('minecraft:flint')],
         [ore('gearCopper'),item('thermalfoundation:material', 513),ore('gearCopper')]
     ])
     .register()
@@ -217,7 +217,7 @@ crafting.shapedBuilder()
     .output(item('thermalexpansion:machine', 3))
     .shape([
         [null,ore('gearInvar'),null],
-        [ore('sand'),item('thermalexpansion:frame'),ore('sand')],
+        [item('tfc:fire_bricks'),item('thermalexpansion:frame'),item('tfc:fire_bricks')],
         [ore('gearSteel'),item('thermalfoundation:material', 513),ore('gearSteel')]
     ])
     .register()
