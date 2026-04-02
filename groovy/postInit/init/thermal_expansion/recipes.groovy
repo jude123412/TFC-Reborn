@@ -44,6 +44,7 @@ def recipesToRemoveByOutput = [
     item('thermalexpansion:frame'),
     item('thermalexpansion:frame', 64),
     item('thermalexpansion:frame', 128),
+    // item('thermalexpansion:augment', OreDictionary.WILDCARD_VALUE),
     item('thermalfoundation:storage', OreDictionary.WILDCARD_VALUE),
     item('thermalfoundation:storage_alloy', OreDictionary.WILDCARD_VALUE),
     item('thermalfoundation:storage_resource', OreDictionary.WILDCARD_VALUE),
@@ -695,6 +696,111 @@ crafting.shapedBuilder()
         [ore('sheetLead'),ore('blockGlassHardened'),ore('sheetLead')]
     ])
     .register()
+
+// Augment: Auxiliary Reception Coil
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 128))
+    .shape([
+        [null,ore('sheetGold'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 513),ore('sheetIron')],
+        [null,ore('sheetGold'),null]
+    ])
+    .register()
+
+// Augment: Auxiliary Sieve
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 129))
+    .shape([
+        [null,ore('sheetAnyBronze'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 512),ore('sheetIron')],
+        [null,ore('sheetAnyBronze'),null]
+    ])
+    .register()
+
+// Augment: Nullification Chamber
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 130))
+    .shape([
+        [null,ore('sheetInvar'),null],
+        [ore('sheetIron'),item('trashcans:item_trash_can'),ore('sheetIron')],
+        [null,ore('sheetInvar'),null]
+    ])
+    .register()
+
+// Augment: Pyrolytic Conversion
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 258))
+    .shape([
+        [null,ore('gearCopper'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 512),ore('sheetIron')],
+        [null,ore('charcoal'),null]
+    ])
+    .register()
+
+// Augment: Tectonic Initiator
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 273))
+    .shape([
+        [null,ore('gearSignalum'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 512),ore('sheetIron')],
+        [null,ore('dustPetrotheum'),null]
+    ])
+    .register()
+
+// Augment: Metallurgical Recovery
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 303))
+    .shape([
+        [null,ore('gearSilver'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 512),ore('sheetIron')],
+        [null,ore('crystalSlagRich'),null]
+    ])
+    .register()
+
+// Augment: Nutrient Recovery
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 320))
+    .shape([
+        [null,ore('gearSilver'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 512),ore('sheetIron')],
+        [null,item('thermalfoundation:fertilizer', 1),null]
+    ])
+    .register()
+
+// Augment: Agronomic Catalyst
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 323))
+    .shape([
+        [null,ore('gearNickel'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 512),ore('sheetIron')],
+        [null,ore('sheetLumium'),null]
+    ])
+    .register()
+
+// Augment: Monoculture Cycle
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 324))
+    .shape([
+        [null,ore('gearSignalum'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 512),ore('sheetIron')],
+        [null,item('thermalfoundation:fertilizer', 2),null]
+    ])
+    .register()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Redstone Servo
 crafting.shapedBuilder()
