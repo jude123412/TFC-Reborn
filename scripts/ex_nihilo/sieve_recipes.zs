@@ -11,7 +11,11 @@ val ores = [
     <tfc:ore/small/bismuthinite>,
     <tfc:ore/small/cassiterite>,
     <tfc:ore/small/native_gold>,
-    <tfc:ore/small/native_silver>
+    <tfc:ore/small/native_silver>,
+    <tfc:ore/lapis_lazuli>,
+    <tfc:ore/cryolite>,
+    <tfc:ore/gypsum>,
+    <minecraft:flint>
 ] as IItemStack[];
 
 for entry in ores {

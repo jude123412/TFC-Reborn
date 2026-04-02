@@ -39,7 +39,7 @@ crafting.shapedBuilder()
 
 // Hardened Glass Mix
 crafting.shapelessBuilder()
-    .output(item('tfcreborncore:item/hardened_glass_mix') * 2)
+    .output(item('tfcreborncore:item/hardened_glass_mix'))
     .input([
          ore('dustFlux'),
          ore('dustAnyBronze'),
@@ -49,7 +49,7 @@ crafting.shapelessBuilder()
 
 // Hardened Glass Mix Alt
 crafting.shapelessBuilder()
-    .output(item('tfcreborncore:item/hardened_glass_mix') * 2)
+    .output(item('tfcreborncore:item/hardened_glass_mix'))
     .input([
          ore('dustFlux'),
          ore('dustAnyBronze'),
@@ -59,7 +59,7 @@ crafting.shapelessBuilder()
 
 // Synthetic Graphite Mix
 crafting.shapelessBuilder()
-    .output(item('tfcreborncore:item/synthetic_graphite_mix') * 3)
+    .output(item('tfcreborncore:item/synthetic_graphite_mix'))
     .input([
          ore('dustFlux'),
          ore('dustCoal'),
