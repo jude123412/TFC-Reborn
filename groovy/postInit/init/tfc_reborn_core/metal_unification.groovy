@@ -140,7 +140,7 @@ for (var in Utils.usableMetals) {
     crafting.shapelessBuilder()
     .output(item('tfctech:metal/' + var + '_rod'))
     .input([
-         ore('chisel').transform(Utils.transformerTool),
+         ore('saw').transform(Utils.transformerTool),
          ore('ingot' + Utils.toPascal(var))
     ])
     .register()
@@ -170,6 +170,15 @@ for (var in Utils.usableMetals) {
     .input([
          ore('wireCutter').transform(Utils.transformerTool),
          ore('sheet' + Utils.toPascal(var))
+    ])
+    .register()
+
+    // Nugget from Ingot
+    crafting.shapelessBuilder()
+    .output(item('tfc:metal/nugget/' + var) * 10)
+    .input([
+         ore('hammer').transform(Utils.transformerTool),
+         ore('ingot' + Utils.toPascal(var))
     ])
     .register()
 }

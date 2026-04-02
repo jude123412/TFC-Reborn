@@ -696,6 +696,77 @@ crafting.shapedBuilder()
     ])
     .register()
 
+// Redstone Servo
+crafting.shapedBuilder()
+    .output(item('thermalfoundation:material', 512))
+    .shape([
+        [ore('ingotRedstone'),ore('stickLongIron'),ore('ingotRedstone')],
+        [null,ore('stickLongIron'),null],
+        [ore('ingotRedstone'),ore('stickLongIron'),ore('ingotRedstone')]
+    ])
+    .register()
+
+// Redstone Reception Coil
+crafting.shapedBuilder()
+    .output(item('thermalfoundation:material', 513))
+    .shape([
+        [null,ore('dustRedstone'),ore('stickLongGold')],
+        [ore('dustRedstone'),ore('ingotGold'),ore('dustRedstone')],
+        [ore('stickLongGold'),ore('dustRedstone'),null]
+    ])
+    .register()
+
+// Redstone Transmission Coil
+crafting.shapedBuilder()
+    .output(item('thermalfoundation:material', 514))
+    .shape([
+        [null,ore('dustRedstone'),ore('stickLongSilver')],
+        [ore('dustRedstone'),ore('ingotSilver'),ore('dustRedstone')],
+        [ore('stickLongSilver'),ore('dustRedstone'),null]
+    ])
+    .register()
+
+// Redstone Conductanace Coil
+crafting.shapedBuilder()
+    .output(item('thermalfoundation:material', 515))
+    .shape([
+        [ore('stickLongElectrum'),ore('dustRedstone'),null],
+        [ore('dustRedstone'),ore('ingotElectrum'),ore('dustRedstone')],
+        [null,ore('dustRedstone'),ore('stickLongElectrum')]
+    ])
+    .register()
+
+// Tool Casing
+crafting.shapedBuilder()
+    .output(item('thermalfoundation:material', 640))
+    .shape([
+        [null,ore('sheetGold'),null],
+        [ore('ingotRedstone'),item('tfcreborncore:item/rf_control_circuit'),ore('ingotRedstone')],
+        [null,ore('sheetGold'),null]
+    ])
+    .register()
+
+// Drill Head
+crafting.shapedBuilder()
+    .output(item('thermalfoundation:material', 656))
+    .shape([
+        [ore('sheetIron'),ore('rackwheelPieceIron'),null],
+        [ore('rackwheelPieceIron'),ore('sheetIron'),ore('rackwheelPieceIron')],
+        [null,ore('rackwheelPieceIron'),ore('sheetIron')]
+    ])
+    .register()
+
+// Saw Blade
+crafting.shapedBuilder()
+    .output(item('thermalfoundation:material', 657))
+    .shape([
+        [null,ore('rackwheelPieceIron'),null],
+        [ore('rackwheelPieceIron'),ore('sheetIron'),ore('rackwheelPieceIron')],
+        [null,ore('rackwheelPieceIron'),null]
+    ])
+    .register()
+
+
 // crafting.shapedBuilder()
 //     .output(null)
 //     .shape([

@@ -38,8 +38,8 @@ crafting.shapelessBuilder()
 crafting.shapedBuilder()
     .output(item('powerchisels:fluxed_chisel'))
     .shape([
-        [ore('sheetSterlingSilver'),item('chisel:chisel_hitech')],
-        [item('thermalfoundation:material', 640),ore('sheetSterlingSilver')]
+        [ore('sheetGold'),item('chisel:chisel_hitech')],
+        [item('thermalfoundation:material', 640),ore('sheetGold')]
     ])
     .register()
 

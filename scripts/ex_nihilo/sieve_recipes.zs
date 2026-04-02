@@ -15,10 +15,10 @@ val ores = [
 ] as IItemStack[];
 
 for entry in ores {
-    Sieve.addStringMeshRecipe(<ore:gravel>, entry, 0.01);
-    Sieve.addFlintMeshRecipe(<ore:gravel>, entry, 0.02);
-    Sieve.addIronMeshRecipe(<ore:gravel>, entry, 0.04);
-    Sieve.addDiamondMeshRecipe(<ore:gravel>, entry, 0.08);
+    Sieve.addStringMeshRecipe(<ore:gravel>, entry, 0.04);
+    Sieve.addFlintMeshRecipe(<ore:gravel>, entry, 0.08);
+    Sieve.addIronMeshRecipe(<ore:gravel>, entry, 0.12);
+    Sieve.addDiamondMeshRecipe(<ore:gravel>, entry, 0.16);
 }
 
 val seeds = [
@@ -48,8 +48,8 @@ val seeds = [
 ] as IItemStack[];
 
 for entry in seeds {
-    Sieve.addStringMeshRecipe(<ore:dirt>, entry, 0.01);
-    Sieve.addFlintMeshRecipe(<ore:dirt>, entry, 0.02);
-    Sieve.addIronMeshRecipe(<ore:dirt>, entry, 0.03);
-    Sieve.addDiamondMeshRecipe(<ore:dirt>, entry, 0.04);
+    Sieve.addStringMeshRecipe(<ore:dirt>, entry, 0.02);
+    Sieve.addFlintMeshRecipe(<ore:dirt>, entry, 0.04);
+    Sieve.addIronMeshRecipe(<ore:dirt>, entry, 0.06);
+    Sieve.addDiamondMeshRecipe(<ore:dirt>, entry, 0.08);
 }
