@@ -44,7 +44,7 @@ def recipesToRemoveByOutput = [
     item('thermalexpansion:frame'),
     item('thermalexpansion:frame', 64),
     item('thermalexpansion:frame', 128),
-    // item('thermalexpansion:augment', OreDictionary.WILDCARD_VALUE),
+    item('thermalexpansion:augment', OreDictionary.WILDCARD_VALUE),
     item('thermalfoundation:storage', OreDictionary.WILDCARD_VALUE),
     item('thermalfoundation:storage_alloy', OreDictionary.WILDCARD_VALUE),
     item('thermalfoundation:storage_resource', OreDictionary.WILDCARD_VALUE),
@@ -217,7 +217,7 @@ crafting.shapedBuilder()
 crafting.shapedBuilder()
     .output(item('thermalexpansion:machine', 3))
     .shape([
-        [null,ore('gearInvar'),null],
+        [null,ore('inductorCopper'),null],
         [item('tfc:fire_bricks'),item('thermalexpansion:frame'),item('tfc:fire_bricks')],
         [ore('gearSteel'),item('thermalfoundation:material', 513),ore('gearSteel')]
     ])
@@ -701,9 +701,9 @@ crafting.shapedBuilder()
 crafting.shapedBuilder()
     .output(item('thermalexpansion:augment', 128))
     .shape([
-        [null,ore('sheetGold'),null],
+        [null,ore('gearGold'),null],
         [ore('sheetIron'),item('thermalfoundation:material', 513),ore('sheetIron')],
-        [null,ore('sheetGold'),null]
+        [null,item('tfcreborncore:item/rf_control_circuit'),null]
     ])
     .register()
 
@@ -711,9 +711,9 @@ crafting.shapedBuilder()
 crafting.shapedBuilder()
     .output(item('thermalexpansion:augment', 129))
     .shape([
-        [null,ore('sheetAnyBronze'),null],
+        [null,ore('gearAnyBronze'),null],
         [ore('sheetIron'),item('thermalfoundation:material', 512),ore('sheetIron')],
-        [null,ore('sheetAnyBronze'),null]
+        [null,item('exnihilocreatio:item_mesh', 3),null]
     ])
     .register()
 
@@ -721,9 +721,9 @@ crafting.shapedBuilder()
 crafting.shapedBuilder()
     .output(item('thermalexpansion:augment', 130))
     .shape([
-        [null,ore('sheetInvar'),null],
+        [null,ore('gearInvar'),null],
         [ore('sheetIron'),item('trashcans:item_trash_can'),ore('sheetIron')],
-        [null,ore('sheetInvar'),null]
+        [null,ore('fireStarter'),null]
     ])
     .register()
 
@@ -767,13 +767,13 @@ crafting.shapedBuilder()
     ])
     .register()
 
-// Augment: Agronomic Catalyst
+// Augment: Sapling Infuser
 crafting.shapedBuilder()
     .output(item('thermalexpansion:augment', 323))
     .shape([
         [null,ore('gearNickel'),null],
         [ore('sheetIron'),item('thermalfoundation:material', 512),ore('sheetIron')],
-        [null,ore('sheetLumium'),null]
+        [null,ore('stickLumium'),null]
     ])
     .register()
 
@@ -787,20 +787,215 @@ crafting.shapedBuilder()
     ])
     .register()
 
+// Augment: Pyroconvective Loop
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 352))
+    .shape([
+        [null,ore('gearInvar'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 515),ore('sheetIron')],
+        [null,item('tfc:fire_bricks'),null]
+    ])
+    .register()
 
+// Augment: Reflux Column
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 368))
+    .shape([
+        [null,ore('gearConstantan'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 515),ore('sheetIron')],
+        [null,ore('rodBlaze'),null]
+    ])
+    .register()
 
+// Augment: Alchemical Retort
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 369))
+    .shape([
+        [null,ore('gearSignalum'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 515),ore('sheetIron')],
+        [null,ore('stickLead'),null]
+    ])
+    .register()
 
+// Augment: Flux Linkage Concentrator
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 400))
+    .shape([
+        [null,ore('gearElectrum'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 515),ore('sheetIron')],
+        [null,item('tfcreborncore:item/rf_control_circuit'),null]
+    ])
+    .register()
 
+// Augment: Flux Reconstruction
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 401))
+    .shape([
+        [null,ore('gearIron'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 515),ore('sheetIron')],
+        [null,item('tfcreborncore:item/rf_control_circuit'),null]
+    ])
+    .register()
 
+// Augment: Parabolic Flux Coupling
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 402))
+    .shape([
+        [null,ore('gearElectrum'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 512),ore('sheetIron')],
+        [null,ore('stickElectrum'),null]
+    ])
+    .register()
 
+// Augment: Enstabulation Apparatus
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 416))
+    .shape([
+        [null,ore('gearInvar'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 512),ore('sheetIron')],
+        [null,item('tfc:metal/sword/wrought_iron'),null]
+    ])
+    .register()
 
+// Augment: Pattern Validation
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 432))
+    .shape([
+        [null,ore('gearTin'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 512),ore('sheetIron')],
+        [null,ore('blockGlassHardened'),null]
+    ])
+    .register()
 
+// Augment: Fluidic Fabrication
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 433))
+    .shape([
+        [null,ore('gearCopper'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 512),ore('sheetIron')],
+        [null,ore('blockGlassHardened'),null]
+    ])
+    .register()
 
+// Augment: Reagent Recovery
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 448))
+    .shape([
+        [null,ore('gearSilver'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 512),ore('sheetIron')],
+        [null,ore('blockGlassHardened'),null]
+    ])
+    .register()
 
+// Augment: Pyroclastic Injection
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 496))
+    .shape([
+        [null,ore('gearLumium'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 512),ore('sheetIron')],
+        [null,ore('dustCryotheum'),null]
+    ])
+    .register()
 
+// Augment: Clastic Deposition
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 497))
+    .shape([
+        [null,ore('gearNickel'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 515),ore('sheetIron')],
+        [null,ore('dustAerotheum'),null]
+    ])
+    .register()
 
+// Augment: Auxiliary Transmission Coil
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 512))
+    .shape([
+        [null,ore('gearSilver'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 514),ore('sheetIron')],
+        [null,item('tfcreborncore:item/rf_control_circuit'),null]
+    ])
+    .register()
 
+// Augment: Fuel Catalyzer
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 513))
+    .shape([
+        [null,ore('gearLead'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 515),ore('sheetIron')],
+        [null,ore('dustPyrotheum'),null]
+    ])
+    .register()
 
+// Augment: Transmission Coil Ducting
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 514))
+    .shape([
+        [null,item('thermaldynamics:duct_32'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 512),ore('sheetIron')],
+        [null,item('minecraft:hopper'),null]
+    ])
+    .register()
+
+// Augment: Excitation Field Limiter
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 515))
+    .shape([
+        [null,ore('gearLead'),null],
+        [ore('sheetIron'),item('tfcreborncore:item/rf_control_circuit'),ore('sheetIron')],
+        [null,ore('blockGlassHardened'),null]
+    ])
+    .register()
+
+// Augment: Boiler Conversion
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 576))
+    .shape([
+        [null,ore('gearIron'),null],
+        [ore('sheetIron'),ore('blockGlassHardened'),ore('sheetIron')],
+        [null,item('tfc:fire_bricks'),null]
+    ])
+    .register()
+
+// Augment: Turbine Conversion
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 640))
+    .shape([
+        [null,ore('gearIron'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 515),ore('sheetIron')],
+        [null,ore('stickAnyBronze'),null]
+    ])
+    .register()
+
+// Augment: Closed-Loop Cooling
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 672))
+    .shape([
+        [null,ore('gearInvar'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 515),ore('sheetIron')],
+        [null,ore('dustCryotheum'),null]
+    ])
+    .register()
+
+// Augment: Ignition Plugs
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 673))
+    .shape([
+        [null,ore('gearSignalum'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 515),ore('sheetIron')],
+        [null,ore('dustPyrotheum'),null]
+    ])
+    .register()
+
+// Augment: Agitative Manifold
+crafting.shapedBuilder()
+    .output(item('thermalexpansion:augment', 674))
+    .shape([
+        [null,ore('gearConstantan'),null],
+        [ore('sheetIron'),item('thermalfoundation:material', 515),ore('sheetIron')],
+        [null,item('thermalfoundation:material', 1026),null]
+    ])
+    .register()
 
 // Redstone Servo
 crafting.shapedBuilder()
