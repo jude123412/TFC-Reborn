@@ -454,9 +454,9 @@ crafting.shapedBuilder()
 crafting.shapedBuilder()
     .output(item('thermalexpansion:cell'))
     .shape([
-        [ore('sheetLead'),ore('blockRedstone'),ore('sheetLead')],
-        [item('thermalfoundation:material', 513),item('thermalexpansion:frame', 128),item('thermalfoundation:material', 514)],
-        [ore('sheetLead'),item('thermalfoundation:material', 515),ore('sheetLead')]
+        [ore('sheetLead'),item('tfcreborncore:item/advanced_capacitor_cell'),ore('sheetLead')],
+        [item('thermalfoundation:material', 513),ore('blockRedstone'),item('thermalfoundation:material', 514)],
+        [ore('sheetLead'),item('thermalexpansion:frame', 128),ore('sheetLead')]
     ])
     .register()
 

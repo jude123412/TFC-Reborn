@@ -1,4 +1,5 @@
 import classes.postInit.Utils
+import net.minecraftforge.oredict.OreDictionary
 
 // Recipes to remove
 def recipesToRemove = [
@@ -151,12 +152,21 @@ def recipesToRemove = [
     'immersiveengineering:toolupgrades/drill_capacity',
     'immersiveengineering:toolupgrades/shield_flash',
     'immersiveengineering:wirecoils/wirecoil_hv2',
-    'immersiveengineering:wirecoils/wirecoil_hv',
+    'immersiveengineering:wirecoils/wirecoil_hv'
+]
+
+def recipesToRemoveByOutput = [
+    item('immersiveengineering:connector', OreDictionary.WILDCARD_VALUE),
+    item('immersiveengineering:metal_device0', OreDictionary.WILDCARD_VALUE),
+    item('immersiveengineering:metal_decoration2', 4)
 ]
 
 // Recipe Removal
-for (id in recipesToRemove) {
-    crafting.remove(id)
+for (var in recipesToRemove) {
+    crafting.remove(var)
+}
+for (var in recipesToRemoveByOutput) {
+    crafting.removeByOutput(var)
 }
 
 // Stair Recipes
@@ -450,26 +460,6 @@ crafting.shapedBuilder()
     ])
     .register()
 
-// Fluid Pump
-crafting.shapedBuilder()
-    .output(item('immersiveengineering:metal_device0', 5))
-    .shape([
-        [null,ore('sheetIron'),null],
-        [ore('sheetIron'),item('immersiveengineering:material', 8),ore('sheetIron')],
-        [item('immersiveengineering:metal_device1', 6),item('immersiveengineering:metal_device1', 6),item('immersiveengineering:metal_device1', 6)]
-    ])
-    .register()
-
-// Fluid Outlet
-crafting.shapedBuilder()
-    .output(item('immersiveengineering:metal_device0', 6))
-    .shape([
-        [ore('sheetIron'),item('minecraft:iron_bars'),ore('sheetIron')],
-        [item('minecraft:iron_bars'),null,item('minecraft:iron_bars')],
-        [ore('sheetIron'),item('minecraft:iron_bars'),ore('sheetIron')]
-    ])
-    .register()
-
 // Thermoelectric Generator
 crafting.shapedBuilder()
     .output(item('immersiveengineering:metal_device1', 3))
@@ -607,6 +597,209 @@ crafting.shapedBuilder()
         [null,ore('wireSteel'),null],
         [ore('wireSteel'),ore('stickWood'),ore('wireSteel')],
         [null,ore('wireSteel'),null]
+    ])
+    .register()
+
+// LV Wire Connector
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:connector'))
+    .shape([
+        [ore('stickLongCopper')],
+        [item('tfcreborncore:item/ceramic_insulator')],
+    ])
+    .register()
+
+// LV Wire Relay
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:connector', 1))
+    .shape([
+        [ore('stickCopper')],
+        [item('tfcreborncore:item/ceramic_insulator')],
+    ])
+    .register()
+
+// MV Wire Connector
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:connector', 2))
+    .shape([
+        [ore('stickLongIron')],
+        [item('tfcreborncore:item/ceramic_insulator')],
+    ])
+    .register()
+
+// MV Wire Relay
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:connector', 3))
+    .shape([
+        [ore('stickIron')],
+        [item('tfcreborncore:item/ceramic_insulator')],
+    ])
+    .register()
+
+// HV Wire Connector
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:connector', 4))
+    .shape([
+        [ore('stickLongAluminium')],
+        [item('tfcreborncore:item/ceramic_insulator')],
+    ])
+    .register()
+
+// HV Wire Relay
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:connector', 5))
+    .shape([
+        [ore('stickAluminium')],
+        [item('tfcreborncore:item/glass_insulator')],
+    ])
+    .register()
+
+//Structural Cable Connector
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:connector', 6))
+    .shape([
+        [ore('sheetSteel'),ore('stickSteel'),ore('sheetSteel')],
+        [ore('sheetSteel'),null,ore('sheetSteel')]
+    ])
+    .register()
+
+// Transformer
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:connector', 7))
+    .shape([
+        [item('immersiveengineering:connector'),item('immersiveengineering:metal_decoration0'),item('immersiveengineering:connector', 2)],
+        [ore('sheetIron'),item('immersiveengineering:metal_decoration0', 1),ore('sheetIron')],
+        [ore('sheetIron'),ore('sheetIron'),ore('sheetIron')]
+    ])
+    .register()
+
+// HV Transformer
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:connector', 8))
+    .shape([
+        [item('immersiveengineering:connector', 2),item('immersiveengineering:metal_decoration0', 1),item('immersiveengineering:connector', 4)],
+        [ore('sheetIron'),item('immersiveengineering:metal_decoration0', 2),ore('sheetIron')],
+        [ore('sheetIron'),ore('sheetIron'),ore('sheetIron')]
+    ])
+    .register()
+
+// Breaker Switch
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:connector', 9))
+    .shape([
+        [null,item('minecraft:lever'),null],
+        [item('immersiveengineering:connector'),item('tfcreborncore:item/rf_control_circuit'),item('immersiveengineering:connector')],
+        [ore('sheetIron'),ore('sheetIron'),ore('sheetIron')]
+    ])
+    .register()
+
+// Redstone Breaker
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:connector', 10))
+    .shape([
+        [item('immersiveengineering:connector', 4),null,item('immersiveengineering:connector', 4)],
+        [ore('sheetIron'),item('minecraft:repeater'),ore('sheetIron')],
+        [ore('sheetIron'),ore('dustRedstone'),ore('sheetIron')]
+    ])
+    .register()
+
+// Current Transformer
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:connector', 11))
+    .shape([
+        [null,item('immersiveengineering:tool', 2),null],
+        [item('tfcreborncore:item/ceramic_insulator'),item('immersiveengineering:metal_decoration0'),item('tfcreborncore:item/ceramic_insulator')],
+        [ore('sheetIron'),item('immersiveengineering:metal_decoration0'),ore('sheetIron')]
+    ])
+    .register()
+
+//Redstone Wire Connector
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:connector', 12))
+    .shape([
+        [null,ore('stickElectrum'),null],
+        [null,ore('dustRedstone'),null],
+        [null,item('tfcreborncore:item/ceramic_insulator'),null]
+    ])
+    .register()
+
+// Redstone Probe Connector
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:connector', 13))
+    .shape([
+        [null,item('immersiveengineering:connector', 12),null],
+        [ore('paneGlassColorless'),item('immersiveengineering:material', 27),ore('paneGlassColorless')],
+        [null,ore('gemQuartz'),null]
+    ])
+    .register()
+
+// LV Capacitor
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_device0'))
+    .shape([
+        [ore('sheetIron'),ore('sheetIron'),ore('sheetIron')],
+        [ore('sheetCopper'),item('tfcreborncore:item/basic_capacitor_cell'),ore('sheetCopper')],
+        [ore('plankTreatedWood'),item('tfcreborncore:item/rf_control_circuit'),ore('plankTreatedWood')]
+    ])
+    .register()
+
+// MV Capacitor
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_device0', 1))
+    .shape([
+        [ore('sheetIron'),ore('sheetIron'),ore('sheetIron')],
+        [ore('sheetElectrum'),item('tfcreborncore:item/advanced_capacitor_cell'),ore('sheetElectrum')],
+        [ore('plankTreatedWood'),item('tfcreborncore:item/rf_control_circuit'),ore('plankTreatedWood')]
+    ])
+    .register()
+
+// HV Capacitor
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_device0', 2))
+    .shape([
+        [ore('sheetSteel'),ore('sheetSteel'),ore('sheetSteel')],
+        [ore('sheetAluminium'),item('tfcreborncore:item/hi_tech_capacitor_cell'),ore('sheetAluminium')],
+        [ore('plankTreatedWood'),item('tfcreborncore:item/rf_control_circuit'),ore('plankTreatedWood')]
+    ])
+    .register()
+
+// Metal Barrel
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_device0', 4))
+    .shape([
+        [ore('blockSheetmetalIron'),ore('slabSheetmetalIron'),ore('blockSheetmetalIron')],
+        [ore('blockSheetmetalIron'),null,ore('blockSheetmetalIron')],
+        [ore('blockSheetmetalIron'),ore('blockSheetmetalIron'),ore('blockSheetmetalIron')]
+    ])
+    .register()
+
+// Fluid Pump
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_device0', 5))
+    .shape([
+        [null,ore('sheetIron'),null],
+        [ore('sheetIron'),item('immersiveengineering:material', 8),ore('sheetIron')],
+        [item('immersiveengineering:metal_device1', 6),item('immersiveengineering:metal_device1', 6),item('immersiveengineering:metal_device1', 6)]
+    ])
+    .register()
+
+// Fluid Outlet
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_device0', 6))
+    .shape([
+        [ore('sheetIron'),item('minecraft:iron_bars'),ore('sheetIron')],
+        [item('minecraft:iron_bars'),null,item('minecraft:iron_bars')],
+        [ore('sheetIron'),item('minecraft:iron_bars'),ore('sheetIron')]
+    ])
+    .register()
+
+// Lantern
+crafting.shapedBuilder()
+    .output(item('immersiveengineering:metal_decoration2', 4))
+    .shape([
+        [null,ore('sheetIron'),null],
+        [ore('paneGlassColorless'),ore('glowstone'),ore('paneGlassColorless')],
+        [null,ore('sheetIron'),null]
     ])
     .register()
 

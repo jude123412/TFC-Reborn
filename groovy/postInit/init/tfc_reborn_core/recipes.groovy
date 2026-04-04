@@ -1,3 +1,5 @@
+import classes.postInit.Utils
+
 // Wood Sheet
 crafting.shapedBuilder()
     .output(item('tfcreborncore:item/wood_sheet'))
@@ -76,6 +78,65 @@ crafting.shapedBuilder()
         [ore('ingotBrass'),item('tfc:brass_mechanisms'),ore('ingotBrass')]
     ])
     .register()
+
+// Glass Insulator
+crafting.shapelessBuilder()
+    .output(item('tfcreborncore:item/glass_insulator'))
+    .input([
+         item('immersiveengineering:stone_decoration', 8),
+         ore('chisel').transform(Utils.transformerTool)
+    ])
+    .register()
+
+// Nickel-Plated Capacitor Cell
+crafting.shapedBuilder()
+    .output(item('tfcreborncore:item/nickel_plated_capacitor_cell'))
+    .shape([
+        [ore('sheetNickel')],
+        [item('tfcreborncore:item/clay_sheet')]
+    ])
+    .register()
+
+//Ceramic Capacitor Block
+crafting.shapedBuilder()
+    .output(item('tfcreborncore:item/ceramic_capacitor_block'))
+    .shape([
+        [ore('screwNickelSilver'),item('tfcreborncore:item/nickel_plated_capacitor_cell'),ore('screwNickelSilver')],
+        [ore('sheetNickel'),item('tfcreborncore:item/nickel_plated_capacitor_cell'),ore('sheetNickel')],
+        [ore('screwNickelSilver'),item('tfcreborncore:item/nickel_plated_capacitor_cell'),ore('screwNickelSilver')]
+    ])
+    .register()
+
+// LV Capacitor Cell
+crafting.shapedBuilder()
+    .output(item('tfcreborncore:item/basic_capacitor_cell'))
+    .shape([
+        [null,ore('screwCopper'),null],
+        [ore('sheetCopper'),item('tfcreborncore:item/ceramic_capacitor_block'),ore('sheetCopper')],
+        [null,ore('screwCopper'),null]
+    ])
+    .register()
+
+// MV Capacitor Cell
+crafting.shapedBuilder()
+    .output(item('tfcreborncore:item/advanced_capacitor_cell'))
+    .shape([
+        [item('tfcreborncore:item/basic_capacitor_cell'),ore('wireGold'),item('tfcreborncore:item/basic_capacitor_cell')],
+        [ore('screwGold'),ore('sheetGold'),ore('screwGold')],
+        [item('tfcreborncore:item/basic_capacitor_cell'),ore('wireGold'),item('tfcreborncore:item/basic_capacitor_cell')]
+    ])
+    .register()
+
+// HV Capacitor Cell
+crafting.shapedBuilder()
+    .output(item('tfcreborncore:item/hi_tech_capacitor_cell'))
+    .shape([
+        [item('tfcreborncore:item/advanced_capacitor_cell'),ore('wireSteel'),item('tfcreborncore:item/advanced_capacitor_cell')],
+        [ore('screwSteel'),ore('sheetSteel'),ore('screwSteel')],
+        [item('tfcreborncore:item/advanced_capacitor_cell'),ore('wireSteel'),item('tfcreborncore:item/advanced_capacitor_cell')]
+    ])
+    .register()
+
 
 // crafting.shapedBuilder()
 //     .output(null)

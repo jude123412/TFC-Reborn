@@ -27,6 +27,15 @@ Heating.addRecipe("tfcreborncore:synthetic_graphite", <tfcreborncore:item/synthe
 // TFC Recipes
 // Item Heat Registry
 ItemRegistry.registerItemHeat(<tfc:powder/graphite>, 0.6, 2000, false);
+ItemRegistry.registerItemHeat(<tfcreborncore:item/unfired_clay_sheet>, 0.2, 2000, false);
+ItemRegistry.registerItemHeat(<tfcreborncore:item/unfired_ceramic_insulator>, 0.2, 2000, false);
+ItemRegistry.registerItemHeat(<tfcreborncore:item/clay_sheet>, 0.2, 2000, false);
+ItemRegistry.registerItemHeat(<tfcreborncore:item/ceramic_insulator>, 0.2, 2000, false);
+
+// Ceramic Sheet
+Heating.addRecipe("tfcreborncore:ceramic_sheet", <tfcreborncore:item/unfired_clay_sheet>, <tfcreborncore:item/clay_sheet>, 1599, 1599);
+// Ceramic Insulator
+Heating.addRecipe("tfcreborncore:ceramic_insulator", <tfcreborncore:item/unfired_ceramic_insulator>, <tfcreborncore:item/ceramic_insulator>, 1599, 1599);
 
 // Item Metal Registry
 ItemRegistry.registerItemMetal(<tfc:brass_mechanisms>, "brass", 50, true);
