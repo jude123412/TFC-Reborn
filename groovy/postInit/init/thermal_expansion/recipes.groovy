@@ -45,6 +45,13 @@ def recipesToRemoveByOutput = [
     item('thermalexpansion:frame', 64),
     item('thermalexpansion:frame', 128),
     item('thermalexpansion:augment', OreDictionary.WILDCARD_VALUE),
+    item('thermalfoundation:wrench'),
+    item('thermalfoundation:meter'),
+    item('thermalfoundation:upgrade'),
+    item('thermalfoundation:upgrade', 1),
+    item('thermalfoundation:upgrade', 2),
+    item('thermalfoundation:upgrade', 3),
+    item('thermalfoundation:security'),
     item('thermalfoundation:storage', OreDictionary.WILDCARD_VALUE),
     item('thermalfoundation:storage_alloy', OreDictionary.WILDCARD_VALUE),
     item('thermalfoundation:storage_resource', OreDictionary.WILDCARD_VALUE),
@@ -997,6 +1004,76 @@ crafting.shapedBuilder()
     ])
     .register()
 
+// Crescent Hammer
+crafting.shapedBuilder()
+    .output(item('thermalfoundation:wrench'))
+    .shape([
+        [ore('stickLongIron'),null,ore('stickLongIron')],
+        [ore('dyeBlue'),ore('gearTin'),ore('dyeBlue')],
+        [ore('dyeBlue'),ore('stickLongIron'),ore('dyeBlue')]
+    ])
+    .register()
+
+// Multimeter
+crafting.shapedBuilder()
+    .output(item('thermalfoundation:meter'))
+    .shape([
+        [ore('sheetCopper'),null,ore('sheetCopper')],
+        [ore('sheetLead'),item('thermalfoundation:material', 515),ore('sheetLead')],
+        [null,ore('gearGold'),null]
+    ])
+    .register()
+
+// Hardened Upgrade Kit
+crafting.shapedBuilder()
+    .output(item('thermalfoundation:upgrade'))
+    .shape([
+        [null,ore('sheetTin'),null],
+        [ore('sheetInvar'),ore('gearAnyBronze'),ore('sheetInvar')],
+        [ore('dustRedstone'),ore('sheetTin'),ore('dustRedstone')]
+    ])
+    .register()
+
+// Reinforced Upgrade Kit
+crafting.shapedBuilder()
+    .output(item('thermalfoundation:upgrade', 1))
+    .shape([
+        [null,ore('sheetInvar'),null],
+        [ore('sheetElectrum'),ore('gearIron'),ore('sheetElectrum')],
+        [ore('dustGlowstone'),ore('sheetInvar'),ore('dustGlowstone')]
+    ])
+    .register()
+
+// Signalum Upgrade Kit
+crafting.shapedBuilder()
+    .output(item('thermalfoundation:upgrade', 2))
+    .shape([
+        [null,ore('sheetElectrum'),null],
+        [ore('sheetSignalum'),ore('gearSteel'),ore('sheetSignalum')],
+        [ore('dustPyrotheum'),ore('sheetElectrum'),ore('dustPyrotheum')]
+    ])
+    .register()
+
+// Resonant Upgrade Kit
+crafting.shapedBuilder()
+    .output(item('thermalfoundation:upgrade', 3))
+    .shape([
+        [null,ore('sheetSignalum'),null],
+        [ore('sheetEnderium'),ore('gearBlackSteel'),ore('sheetEnderium')],
+        [ore('dustCryotheum'),ore('sheetSignalum'),ore('dustCryotheum')]
+    ])
+    .register()
+
+// Signalum Security Lock
+crafting.shapedBuilder()
+    .output(item('thermalfoundation:security'))
+    .shape([
+        [null,ore('stickSignalum'),null],
+        [ore('stickSignalum'),ore('dustRedstone'),ore('stickSignalum')],
+        [ore('sheetSignalum'),ore('sheetSignalum'),ore('sheetSignalum')]
+    ])
+    .register()
+
 // Redstone Servo
 crafting.shapedBuilder()
     .output(item('thermalfoundation:material', 512))
@@ -1067,6 +1144,60 @@ crafting.shapedBuilder()
     ])
     .register()
 
+// Pulped Bioblend
+crafting.shapelessBuilder()
+    .output(item('thermalfoundation:material', 818) * 4)
+    .input([
+        ore('itemBiomass'),
+        ore('itemBiomass'),
+        ore('dustWood'),
+        ore('dustWood')
+    ])
+    .register()
+
+// Pyrotheum Dust
+crafting.shapelessBuilder()
+    .output(item('thermalfoundation:material', 1024) * 2)
+    .input([
+        ore('dustBlaze'),
+        ore('dustBlaze'),
+        ore('dustRedstone'),
+        ore('dustSulfur')
+    ])
+    .register()
+
+// Cryotheum Dust
+crafting.shapelessBuilder()
+    .output(item('thermalfoundation:material', 1025) * 2)
+    .input([
+        ore('dustBlizz'),
+        ore('dustBlizz'),
+        ore('dustRedstone'),
+        item('minecraft:snowball')
+    ])
+    .register()
+
+// Aerotheum Dust
+crafting.shapelessBuilder()
+    .output(item('thermalfoundation:material', 1026) * 2)
+    .input([
+        ore('dustBlitz'),
+        ore('dustBlitz'),
+        ore('dustRedstone'),
+        ore('dustSaltpeter')
+    ])
+    .register()
+
+// Petrotheum Dust
+crafting.shapelessBuilder()
+    .output(item('thermalfoundation:material', 1027) * 2)
+    .input([
+        ore('dustBasalz'),
+        ore('dustBasalz'),
+        ore('dustRedstone'),
+        ore('dustObsidian')
+    ])
+    .register()
 
 // crafting.shapedBuilder()
 //     .output(null)
