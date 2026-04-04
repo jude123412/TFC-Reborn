@@ -13,6 +13,8 @@ Quern.addRecipe("tfcreborncore:charged_certus_quartz_to_dust", <appliedenergisti
 Quern.addRecipe("tfcreborncore:sawdust_from_lumber", <ore:lumber>, <tfcreborncore:item/wood_powder>);
 Quern.addRecipe("tfcreborncore:coal_powder_from_lignite", <tfc:ore/lignite>, <tfcreborncore:item/coal_powder>);
 Quern.addRecipe("tfcreborncore:coal_powder_from_coal", <ore:gemCoal>, <tfcreborncore:item/coal_powder> * 2);
+Quern.addRecipe("tfcreborncore:snow_powder_from_snow", <minecraft:snow>, <tfcreborncore:item/snow_powder> * 2);
+Quern.addRecipe("tfcreborncore:obsidian_powder_from_obsidian", <minecraft:obsidian>, <tfcreborncore:item/obsidian_powder> * 2);
 
 // Thermal Expansion
 Quern.addRecipe("tfcreborncore:blizz_powder", <ore:rodBlizz>, <thermalfoundation:material:2049> * 2);

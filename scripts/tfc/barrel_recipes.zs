@@ -12,6 +12,8 @@ Barrel.addRecipe("tfcreborncore:latex_coated_wood_sheet", <tfcreborncore:item/wo
 // Witch Water
 Barrel.addRecipe("tfcreborncore:witch_water_from_spores", <exnihilocreatio:item_material:3>, <liquid:fresh_water> * 1000, null, <liquid:witchwater> * 1000, 24);
 Barrel.addRecipe("tfcreborncore:witch_water_from_water", <tfc:wooden_bucket>.withTag({Fluid: {FluidName: "witchwater", Amount: 1000}}), <liquid:fresh_water> * 9000, <tfc:wooden_bucket>, <liquid:witchwater> * 10000, 0);
+
+// Thermal Expansion Recipes
 // Redstone Dust
 Barrel.addRecipe("tfcreborncore:redstone_from_witch_water", <ore:dustCopper>, <liquid:witchwater> * 100, <minecraft:redstone>, null, 8);
 // Glowstone Dust
@@ -26,3 +28,6 @@ Barrel.addRecipe("tfcreborncore:blizz_rod_from_witch_water", <ore:stickCobalt>, 
 Barrel.addRecipe("tfcreborncore:blitz_rod_from_witch_water", <ore:stickGold>, <liquid:witchwater> * 250, <thermalfoundation:material:2050>, null, 8);
 // Basalaz Rod
 Barrel.addRecipe("tfcreborncore:basalaz_from_witch_water", <ore:stickMagnesiumDiboride>, <liquid:witchwater> * 250, <thermalfoundation:material:2052>, null, 8);
+
+// Minecraft Recipes
+Barrel.addRecipe("tfcreborncore:obsidian_from_witch_water", <ore:cobblestone>, <liquid:witchwater> * 250, <minecraft:obsidian>, null, 72);

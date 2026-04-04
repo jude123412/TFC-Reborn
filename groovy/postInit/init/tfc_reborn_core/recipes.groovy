@@ -42,7 +42,7 @@ crafting.shapelessBuilder()
     .output(item('tfcreborncore:item/hardened_glass_mix'))
     .input([
          ore('dustFlux'),
-         ore('dustAnyBronze'),
+         ore('dustObsidian'),
          ore('dustHematite')
     ])
     .register()
@@ -52,7 +52,7 @@ crafting.shapelessBuilder()
     .output(item('tfcreborncore:item/hardened_glass_mix'))
     .input([
          ore('dustFlux'),
-         ore('dustAnyBronze'),
+         ore('dustObsidian'),
          ore('dustLimonite')
     ])
     .register()

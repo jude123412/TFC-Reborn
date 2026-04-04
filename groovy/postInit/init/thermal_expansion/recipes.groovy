@@ -1173,7 +1173,7 @@ crafting.shapelessBuilder()
         ore('dustBlizz'),
         ore('dustBlizz'),
         ore('dustRedstone'),
-        item('minecraft:snowball')
+        ore('dustSnow')
     ])
     .register()
 
