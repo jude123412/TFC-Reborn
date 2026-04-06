@@ -2,16 +2,20 @@ package classes.postInit
 
 import net.dries007.tfc.api.registries.TFCRegistries
 import net.dries007.tfc.api.types.Metal
+import tfcreborncore.objects.items.enums.ItemRCLumberType
 
 class Utils {
-    // Gets all usable metals
+    // Gets all TFC usable metals
     static def usableMetals = TFCRegistries.METALS.findAll{it.usable}.collect{it.registryName.path.toLowerCase()}
 
-    // Gets all rocks
+    // Gets all TFC rocks
     static def rocks = TFCRegistries.ROCKS.collect{it.registryName.path.toLowerCase()}
 
-    // Gets all trees
+    // Gets all TFC trees
     static def trees = TFCRegistries.TREES.collect{it.registryName.path.toLowerCase()}
+
+    // Gets all Forestry Woods
+    static def woods = ItemRCLumberType.values()
 
     // Formats any string using _ to make ore dictionary names easy
     // Example : bismuth_bronze turns to BismuthBronze xD
