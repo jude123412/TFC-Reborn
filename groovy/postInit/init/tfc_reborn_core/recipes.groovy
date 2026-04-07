@@ -137,7 +137,6 @@ crafting.shapedBuilder()
     ])
     .register()
 
-
 // crafting.shapedBuilder()
 //     .output(null)
 //     .shape([

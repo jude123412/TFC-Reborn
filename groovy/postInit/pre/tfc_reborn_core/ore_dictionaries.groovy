@@ -72,4 +72,11 @@ for (item in drawers) {
 // Add gemCinnabar to TE Cinnabar
 ore_dict.add("gemCinnabar", item('thermalfoundation:material', 866))
 
+
+// Forestry
+// Sweetener
+ore_dict.add("sweetener", item('forestry:honey_drop'))
+ore_dict.add("sweetener", item('forestry:honeydew'))
+
+
 // ore_dict.add("", null)
