@@ -1,10 +1,6 @@
 import mods.terrafirmacraft.Anvil;
 import mods.terrafirmacraft.Welding;
 
-// Baublelicious Recipes
-// Ring
-Anvil.addRecipe("baublelicious:gold_ring", <ore:ingotGold>, <baublelicious:itemring>, 1, null, "BEND_ANY", "BEND_ANY", "BEND_ANY");
-
 // TFC Reborn Core Recipes
 // Electrical Doodar Base Plate
 Anvil.addRecipe("tfcreborncore:electrical_doodar_base_plate", <ore:ingotRedstone>, <tfcreborncore:item/electrical_doodar_base_plate> * 5, 2, null, "DRAW_THIRD_LAST", "DRAW_SECOND_LAST", "HIT_LAST");
