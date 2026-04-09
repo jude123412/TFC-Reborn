@@ -1,0 +1,7 @@
+{
+  "name": "mixed_cobble",
+  "blocks": [
+    "tfc:cobble/foidolite",
+    "tfc_decoration:mossy_cobble/foidolite"
+  ]
+} 

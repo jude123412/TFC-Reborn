@@ -1,0 +1,8 @@
+{
+  "name": "crumbling_walls_2",
+  "blocks": [
+    "tfc:cobble/basalt",
+    "tfc_decoration:mossy_cobble/basalt",
+    "minecraft:air"
+  ]
+} 
