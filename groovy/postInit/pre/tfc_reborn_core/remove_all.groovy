@@ -1,6 +1,5 @@
 // Thermal Expansion
 mods.thermalexpansion.compactor.removeAll()
-mods.thermalexpansion.pulverizer.removeAll()
 mods.thermalexpansion.furnace.removeAll()
 mods.thermalexpansion.furnace.removeAllFood()
 mods.thermalexpansion.furnace_pyrolysis.removeAll()

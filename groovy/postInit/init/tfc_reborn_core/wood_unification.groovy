@@ -52,32 +52,6 @@ for (var in Utils.trees) {
         ])
         .register()
 
-    // Leaves Recycling
-    mods.thermalexpansion.pulverizer.recipeBuilder()
-        .input(item('tfc:wood/leaves/' + var))
-        .output(item('thermalfoundation:material', 816))
-        .energy(1600)
-        .register()
-    mods.immersiveengineering.crusher.recipeBuilder()
-        .input(item('tfc:wood/leaves/' + var))
-        .output(item('thermalfoundation:material', 816))
-        .energy(1600)
-        .register()
-
-    // Sapling Recycling
-    mods.thermalexpansion.pulverizer.recipeBuilder()
-        .input(item('tfc:wood/sapling/' + var))
-        .output(item('thermalfoundation:material', 816), item('minecraft:stick'))
-        .chance(25)
-        .energy(1600)
-        .register()
-    mods.immersiveengineering.crusher.recipeBuilder()
-        .input(item('tfc:wood/sapling/' + var))
-        .output(item('thermalfoundation:material', 816))
-        .secondaryOutput(item('minecraft:stick'), 0.25)
-        .energy(1600)
-        .register()
-
     // Log Cutting
     mods.thermalexpansion.sawmill.recipeBuilder()
         .input(item('tfc:wood/log/' + var))
