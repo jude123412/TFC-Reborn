@@ -51,14 +51,6 @@ for (var in Utils.trees) {
             ore('plankWood' + Utils.toPascal(var))
         ])
         .register()
-
-    // Log Cutting
-    mods.thermalexpansion.sawmill.recipeBuilder()
-        .input(item('tfc:wood/log/' + var))
-        .output(item('tfc:wood/lumber/' + var) * 12, item('tfcreborncore:item/wood_powder'))
-        .chance(25)
-        .energy(1600)
-        .register()
 }
 
 // Forestry Wood

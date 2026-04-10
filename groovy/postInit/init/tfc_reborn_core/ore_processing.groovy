@@ -62,20 +62,6 @@ def oresInduction = [
 
 // Main loop
 for (entry in ores) {
-    mods.thermalexpansion.compactor.recipeBuilder()
-        .input(item('tfcreborncore:ore/pile/' + entry.key) * 5)
-        .output(item('tfcreborncore:ore/cube/' + entry.key))
-        .mode(compactorMode('all'))
-        .energy(4000)
-        .register()
-
-    mods.thermalexpansion.compactor.recipeBuilder()
-        .input(item('tfcreborncore:ore/cube/' + entry.key) * 4)
-        .output(item('tfcreborncore:ore/bar/' + entry.key))
-        .mode(compactorMode('all'))
-        .energy(4000)
-        .register()
-
     mods.immersiveengineering.squeezer.recipeBuilder()
         .input(item('tfcreborncore:ore/pile/' + entry.key) * 5)
         .output(item('tfcreborncore:ore/cube/' + entry.key))
@@ -120,27 +106,6 @@ for (entry in ores) {
 
 // Secondary Processing
 for (entry in oresInduction) {
-    mods.thermalexpansion.smelter.recipeBuilder()
-        .input(item('tfcreborncore:ore/bar/' + entry.key), ore('sand'))
-        .output(item('tfc:metal/ingot/' + entry.value[0]) * 2, item('tfcreborncore:item/rich_slag'))
-        .chance(5)
-        .energy(16000)
-        .register()
-    
-    mods.thermalexpansion.smelter.recipeBuilder()
-        .input(item('tfcreborncore:ore/bar/' + entry.key), ore('crystalSlagRich'))
-        .output(item('tfc:metal/ingot/' + entry.value[0]) * 3, item('tfcreborncore:item/slag'))
-        .chance(75)
-        .energy(16000)
-        .register()
-    
-    mods.thermalexpansion.smelter.recipeBuilder()
-        .input(item('tfcreborncore:ore/bar/' + entry.key), ore('gemCinnabar'))
-        .output(item('tfc:metal/ingot/' + entry.value[0]) * 2, item('tfc:metal/ingot/' + entry.value[1]))
-        .chance(100)
-        .energy(16000)
-        .register()
-
     mods.immersiveengineering.arc_furnace.recipeBuilder()
         .mainInput(item('tfcreborncore:ore/bar/' + entry.key))
         .input(ore('sand'))
