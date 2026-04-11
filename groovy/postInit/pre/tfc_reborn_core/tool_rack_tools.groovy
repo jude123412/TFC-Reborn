@@ -16,7 +16,6 @@ def items = [
     item('chiselsandbits:wrench_wood'),
     item('chiselsandbits:bitsaw_diamond'),
     item('chiselsandbits:tape_measure'),
-    item('thermalcultivation:watering_can', OreDictionary.WILDCARD_VALUE),
     item('thermalfoundation:meter'),
     item('thermalfoundation:tome_lexicon'),
     item('thermalfoundation:tome_experience'),

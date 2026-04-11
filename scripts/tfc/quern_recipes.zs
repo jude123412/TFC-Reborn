@@ -15,8 +15,3 @@ Quern.addRecipe("tfcreborncore:coal_powder_from_lignite", <tfc:ore/lignite>, <tf
 Quern.addRecipe("tfcreborncore:coal_powder_from_coal", <ore:gemCoal>, <tfcreborncore:item/coal_powder> * 2);
 Quern.addRecipe("tfcreborncore:snow_powder_from_snow", <minecraft:snow>, <tfcreborncore:item/snow_powder> * 2);
 Quern.addRecipe("tfcreborncore:obsidian_powder_from_obsidian", <minecraft:obsidian>, <tfcreborncore:item/obsidian_powder> * 2);
-
-// Thermal Expansion
-Quern.addRecipe("tfcreborncore:blizz_powder", <ore:rodBlizz>, <thermalfoundation:material:2049> * 2);
-Quern.addRecipe("tfcreborncore:blitz_powder", <ore:rodBlitz>, <thermalfoundation:material:2051> * 2);
-Quern.addRecipe("tfcreborncore:basalz_powder", <ore:rodBasalz>, <thermalfoundation:material:2053> * 2);
