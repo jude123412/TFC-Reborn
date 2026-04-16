@@ -1,8 +1,0 @@
-{
-  "name": "mixed_bricks_3",
-  "blocks": [
-    "tfc:bricks/foidolite",
-    "tfc_decoration:mossy_bricks/foidolite",
-    "tfc_decoration:cracked_bricks/foidolite"
-  ]
-} 

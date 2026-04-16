@@ -1,9 +1,0 @@
-{
-  "name": "crumbling_walls_1",
-  "blocks": [
-    "tfc:bricks/granite",
-    "tfc_decoration:mossy_bricks/granite",
-    "tfc_decoration:cracked_bricks/granite",
-    "minecraft:air"
-  ]
-} 
