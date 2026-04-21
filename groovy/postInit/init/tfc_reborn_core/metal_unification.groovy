@@ -159,7 +159,7 @@ for (var in Utils.usableMetals) {
 
     // Wire from Sheet
     crafting.shapelessBuilder()
-    .output(item('tfctech:metal/' + var + '_wire') * 2)
+    .output(item('tfctech:metal/' + var + '_wire', 4) * 2)
     .input([
          ore('wireCutter').transform(Utils.transformerTool),
          ore('sheet' + Utils.toPascal(var))
