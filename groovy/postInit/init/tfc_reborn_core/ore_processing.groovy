@@ -60,50 +60,6 @@ def oresInduction = [
     'zircon': ['zirconium', 'silver']
 ]
 
-// Main loop
-for (entry in ores) {
-    mods.immersiveengineering.squeezer.recipeBuilder()
-        .input(item('tfcreborncore:ore/pile/' + entry.key) * 5)
-        .output(item('tfcreborncore:ore/cube/' + entry.key))
-        .energy(400)
-        .register()
-
-    mods.immersiveengineering.squeezer.recipeBuilder()
-        .input(item('tfcreborncore:ore/cube/' + entry.key) * 4)
-        .output(item('tfcreborncore:ore/bar/' + entry.key))
-        .energy(400)
-        .register()
-
-    mods.immersiveengineering.crusher.recipeBuilder()
-        .input(item('tfc:ore/small/' + entry.key))
-        .output(item('tfcreborncore:ore/pile/' + entry.key) * 4)
-        .secondaryOutput(item('tfcreborncore:ore/pile/' + entry.value), 0.20)
-        .energy(200)
-        .register()
-
-    mods.immersiveengineering.crusher.recipeBuilder()
-        .input(item('tfc:ore/' + entry.key, 1))
-        .output(item('tfcreborncore:ore/pile/' + entry.key) * 6)
-        .secondaryOutput(item('tfcreborncore:ore/pile/' + entry.value), 0.30)
-        .energy(200)
-        .register()
-
-    mods.immersiveengineering.crusher.recipeBuilder()
-        .input(item('tfc:ore/' + entry.key))
-        .output(item('tfcreborncore:ore/pile/' + entry.key) * 10)
-        .secondaryOutput(item('tfcreborncore:ore/pile/' + entry.value), 0.50)
-        .energy(200)
-        .register()
-
-    mods.immersiveengineering.crusher.recipeBuilder()
-        .input(item('tfc:ore/' + entry.key, 2))
-        .output(item('tfcreborncore:ore/pile/' + entry.key) * 14)
-        .secondaryOutput(item('tfcreborncore:ore/pile/' + entry.value), 0.70)
-        .energy(200)
-        .register()
-}
-
-
 // Secondary Processing
 for (entry in oresInduction) {
     mods.immersiveengineering.arc_furnace.recipeBuilder()
