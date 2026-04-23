@@ -821,19 +821,3 @@ for (entry in postItems) {
         ])
         .register()
 }
-
-// crafting.shapedBuilder()
-//     .output(null)
-//     .shape([
-//         [null,null,null],
-//         [null,null,null],
-//         [null,null,null]
-//     ])
-//     .register()
-
-// crafting.shapelessBuilder()
-//     .output(null)
-//     .input([
-//          null
-//     ])
-//     .register()
