@@ -11,7 +11,7 @@ requiredMods=
 #
 # likelihood this template will be chosen relative to all others
 # e.g., a weight=6 template is chosen 3X as often as one with weight=2
-weight=1
+weight=35
 #
 # list of dimensions in which this template may spawn, even if generic
 # one or more dimension names, separated by commas (blank = all)
@@ -34,7 +34,7 @@ biomesToNotSpawnIn=
 #
 # depth template is pushed down into the surface when built
 # offset is min/max range of random additional bury depth
-embed_into_distance=1
+embed_into_distance=0
 random_height_offset=0,0
 #
 # whitelist/blacklist of block types on which template may be built
@@ -43,7 +43,7 @@ acceptable_target_blocks=
 unacceptable_target_blocks=tfc:fluid/flowing_salt_water,tfc:fluid/salt_water,tfc:fluid/flowing_fresh_water,tfc:fluid/fresh_water,flowing_lava,lava
 #
 # size of template (#layers, #rows per layer, #blocks per row)
-dimensions=7,9,9
+dimensions=8,9,9
 #
 # max number of missing blocks allowed in surface beneath template
 allowable_overhang=0
@@ -57,7 +57,7 @@ max_leveling=2
 leveling_buffer=0
 #
 # do not rotate template randomly when built (1 = no rotation)
-preventRotation=0
+preventRotation=1
 #
 # treat water/lava blocks as air and protect them from rule0 (1 = yes)
 preserve_water=0
@@ -76,98 +76,111 @@ spawnMaxDistance=0
 # may be used more than once to specify multiple neighbors
 adjoining_template=
 
-rule1=0,100,tfc:grass/claystone-0
-rule2=0,100,tfc_decoration:mud_bricks/foidolite-0
-rule3=0,100,tfc:cobble/basalt-0
-rule4=0,100,unlimitedchiselworks:chisel_stonebrick2_tfc_bricks_chert_0-0
-rule5=0,100,unlimitedchiselworks:chisel_stonebrick2_tfc_bricks_jaspillite_0-2
-rule6=0,100,teBlock;tfc:wood/chest/douglas_fir;{LootTable:"tfcreborncore:structures/chests/primitive_hut"}
-rule7=0,100,tfc:wood/workbench/acacia-0
-rule8=0,100,unlimitedchiselworks:chisel_planks_oak_tfc_wood_planks_willow_0-7
-rule9=0,100,unlimitedchiselworks:chisel_stonebrick_tfc_bricks_basalt_0-1
-rule10=0,100,unlimitedchiselworks:chisel_stonebrick_tfc_bricks_basalt_0-2
+rule1=0,100,tfc:grass/granite-0
+rule2=0,100,unlimitedchiselworks:chisel_cobblestone2_tfc_cobble_basalt_0-1
+rule3=0,100,tfc:dirt/granite-0
+rule4=0,100,tfc_decoration:pillar/granite-0
+rule5=0,100,tfc_decoration:mud_bricks/granite-0
+rule6=0,100,tfc:wood/door/sycamore-0
+rule7=0,100,teBlock;tfc:wood/chest/douglas_fir;{LootTable:"tfcreborncore:structures/chests/primitive_hut"}-4
+rule8=0,100,tfc:wood/door/sycamore-8
+rule9=0,100,minecraft:glass_pane-0
+rule10=0,100,tfc:thatch-0
+rule11=0,100,unlimitedchiselworks:chisel_planks_oak_tfc_wood_planks_oak_0-7
 
 layer
 1,1,1,1,1,1,1,1,1
-1,2,2,2,2,2,2,1,1
-1,2,3,3,3,3,3,2,1
-1,2,3,3,3,3,3,2,1
-1,2,3,3,3,3,3,2,1
-1,2,3,3,3,3,3,2,1
-1,2,3,3,3,3,3,2,1
-1,2,2,2,3,2,2,2,1
-1,1,1,1,1,1,1,1,1
+1,2,2,2,2,2,2,2,1
+3,2,2,2,2,2,2,2,1
+1,2,2,2,2,2,2,2,1
+1,2,2,2,2,2,2,2,1
+1,2,2,2,2,2,2,2,1
+1,2,2,2,2,2,2,2,1
+1,2,2,2,2,2,2,2,1
+1,1,1,1,1,1,1,1,3
 endlayer
 
 layer
 0,0,0,0,0,0,0,0,0
-0,5,4,4,4,4,4,0,0
-0,4,7,0,0,0,6,4,0
-0,4,0,0,0,0,0,4,0
-0,4,0,0,0,0,0,4,0
-0,4,0,0,0,0,0,4,0
-0,4,0,0,0,0,0,4,0
-0,5,4,4,0,4,4,5,0
+0,4,5,5,6,5,5,4,0
+0,5,0,0,0,0,0,5,0
+0,5,0,0,0,0,0,5,0
+0,5,0,0,0,0,0,5,0
+0,5,0,0,0,0,0,5,0
+0,5,0,0,7,0,0,5,0
+0,4,5,5,5,5,5,4,0
 0,0,0,0,0,0,0,0,0
 endlayer
 
 layer
 0,0,0,0,0,0,0,0,0
-0,5,4,4,4,4,4,0,0
-0,4,0,0,0,0,0,4,0
-0,4,0,0,0,0,0,4,0
-0,4,0,0,0,0,0,4,0
-0,4,0,0,0,0,0,4,0
-0,4,0,0,0,0,0,4,0
-0,5,4,4,0,4,4,5,0
+0,4,5,5,8,5,5,4,0
+0,5,0,0,0,0,0,5,0
+0,9,0,0,0,0,0,9,0
+0,5,0,0,0,0,0,5,0
+0,9,0,0,0,0,0,9,0
+0,5,0,0,0,0,0,5,0
+0,4,5,9,9,9,5,4,0
 0,0,0,0,0,0,0,0,0
 endlayer
 
 layer
-8,0,0,0,0,0,0,0,0
-8,5,4,4,4,4,0,0,0
-8,4,0,0,0,0,0,0,0
-8,4,0,0,0,0,0,4,0
-8,4,0,0,0,0,0,4,8
-8,4,0,0,0,0,0,4,8
-8,4,0,0,0,0,0,4,8
-8,5,4,4,4,4,4,5,8
-8,0,0,0,0,0,0,0,8
+0,0,0,0,0,0,0,0,0
+0,4,5,5,5,5,5,4,0
+0,5,0,0,0,0,0,5,0
+0,9,0,0,0,0,0,9,0
+0,5,0,0,0,0,0,5,0
+0,9,0,0,0,0,0,9,0
+0,5,0,0,0,0,0,5,0
+0,4,5,9,9,9,5,4,0
+0,0,0,0,0,0,0,0,0
 endlayer
 
 layer
-0,8,0,0,0,0,0,0,0
-0,8,4,4,4,0,0,0,0
-0,8,9,9,9,0,0,0,0
-0,8,9,10,9,0,0,0,0
-0,8,10,9,9,10,9,0,0
-0,8,9,9,10,9,10,8,0
-0,8,10,9,9,9,9,8,0
-0,0,4,4,4,4,4,8,0
-0,0,0,0,0,0,0,8,0
+0,0,0,0,0,0,0,0,0
+0,4,5,5,5,5,5,4,0
+0,5,0,0,0,0,0,5,0
+0,5,0,0,0,0,0,5,0
+0,5,0,0,0,0,0,5,0
+0,5,0,0,0,0,0,5,0
+0,5,0,0,0,0,0,5,0
+0,4,5,5,5,5,5,4,0
+0,0,0,0,0,0,0,0,0
 endlayer
 
 layer
-0,0,8,0,0,0,0,0,0
-0,0,8,4,4,0,0,0,0
-0,0,8,0,0,0,0,0,0
-0,0,8,0,0,0,0,0,0
-0,0,8,0,0,0,0,0,0
-0,0,0,0,0,0,8,0,0
-0,0,0,0,0,0,8,0,0
-0,0,0,0,4,4,8,0,0
-0,0,0,0,0,0,8,0,0
+0,10,10,10,10,10,10,10,0
+10,10,11,11,11,11,11,10,10
+10,11,11,11,11,11,11,11,10
+10,11,11,11,11,11,11,11,10
+10,11,11,11,11,11,11,11,10
+10,11,11,11,11,11,11,11,10
+10,11,11,11,11,11,11,11,10
+10,10,11,11,11,11,11,10,10
+0,10,10,10,10,10,10,10,0
 endlayer
 
 layer
-0,0,0,8,0,0,0,0,0
-0,0,0,8,8,0,0,0,0
-0,0,0,8,8,0,0,0,0
-0,0,0,8,8,8,0,0,0
-0,0,0,0,8,8,0,0,0
-0,0,0,0,8,8,0,0,0
-0,0,0,0,8,8,0,0,0
-0,0,0,0,8,8,0,0,0
-0,0,0,0,8,8,0,0,0
+0,0,0,0,0,0,0,0,0
+0,0,10,10,10,10,10,0,0
+0,10,10,0,0,0,10,10,0
+0,10,0,0,0,0,0,10,0
+0,10,0,0,0,0,0,10,0
+0,10,0,0,0,0,0,10,0
+0,10,10,0,0,0,10,10,0
+0,0,10,10,10,10,10,0,0
+0,0,0,0,0,0,0,0,0
+endlayer
+
+layer
+0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0
+0,0,0,10,10,10,0,0,0
+0,0,10,10,10,10,10,0,0
+0,0,10,10,10,10,10,0,0
+0,0,10,10,10,10,10,0,0
+0,0,0,10,10,10,0,0,0
+0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0
 endlayer
 
