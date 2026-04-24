@@ -77,7 +77,7 @@ spawnMaxDistance=0
 adjoining_template=
 
 rule1=0,100,tfc:grass/granite-0
-rule2=0,100,ChestGenHook:chests/simple_dungeon:5-2
+rule2=0,100,teBlock;tfc:wood/chest/douglas_fir;{LootTable:"tfcreborncore:structures/chests/infested_sequoia"}
 rule3=0,100,tfc:grass/granite-0
 rule4=0,100,MobSpawner:Spider
 rule5=0,100,tfc:wood/log/sequoia-1
