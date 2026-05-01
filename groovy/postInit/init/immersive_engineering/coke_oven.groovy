@@ -1,7 +1,7 @@
 // Coal Coke
 mods.immersiveengineering.coke_oven.recipeBuilder()
     .input(ore('gemLignite'))
-    .output(item('tfcreborncore:item/lignite_coke'))
+    .output(item('tfcreborncore:regular/lignite_coke'))
     .time(3200)
     .creosote(500)
     .register()
@@ -9,7 +9,7 @@ mods.immersiveengineering.coke_oven.recipeBuilder()
 // Bituminous Coal Coke
 mods.immersiveengineering.coke_oven.recipeBuilder()
     .input(ore('gemCoal'))
-    .output(item('tfcreborncore:item/bituminous_coal_coke'))
+    .output(item('tfcreborncore:regular/bituminous_coal_coke'))
     .time(1600)
     .creosote(500)
     .register()

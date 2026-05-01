@@ -59,7 +59,7 @@ mods.immersiveengineering.blueprint_crafting.recipeBuilder()
 // Metal Press Mold: Sleeve
 mods.immersiveengineering.blueprint_crafting.recipeBuilder()
     .input(ore('sheetSteel'), ore('sheetSteel'), item('immersiveengineering:tool', 1))
-    .output(item('tfcreborncore:item/metal_press_sleeve'))
+    .output(item('tfcreborncore:regular/metal_press_sleeve'))
     .category('molds')
     .register()
 
@@ -67,34 +67,34 @@ mods.immersiveengineering.blueprint_crafting.recipeBuilder()
 // Metal Press Mold: Rackwhell Piece
 mods.immersiveengineering.blueprint_crafting.recipeBuilder()
     .input(ore('sheetSteel'), ore('sheetSteel'), item('immersiveengineering:tool', 1))
-    .output(item('tfcreborncore:item/metal_press_rackwheel_piece'))
+    .output(item('tfcreborncore:regular/metal_press_rackwheel_piece'))
     .category('molds')
     .register()
 
 // Metal Press Mold: Rackwheel
 mods.immersiveengineering.blueprint_crafting.recipeBuilder()
     .input(ore('sheetSteel'), ore('sheetSteel'), item('immersiveengineering:tool', 1))
-    .output(item('tfcreborncore:item/metal_press_rackwheel'))
+    .output(item('tfcreborncore:regular/metal_press_rackwheel'))
     .category('molds')
     .register()
 
 // Metal Press Mold: Long Rod
 mods.immersiveengineering.blueprint_crafting.recipeBuilder()
     .input(ore('sheetSteel'), ore('sheetSteel'), item('immersiveengineering:tool', 1))
-    .output(item('tfcreborncore:item/metal_press_long_rod'))
+    .output(item('tfcreborncore:regular/metal_press_long_rod'))
     .category('molds')
     .register()
 
 // Metal Press Mold: Bolt
 mods.immersiveengineering.blueprint_crafting.recipeBuilder()
     .input(ore('sheetSteel'), ore('sheetSteel'), item('immersiveengineering:tool', 1))
-    .output(item('tfcreborncore:item/metal_press_bolt'))
+    .output(item('tfcreborncore:regular/metal_press_bolt'))
     .category('molds')
     .register()
 
 // Metal Press Mold: Screw
 mods.immersiveengineering.blueprint_crafting.recipeBuilder()
     .input(ore('sheetSteel'), ore('sheetSteel'), item('immersiveengineering:tool', 1))
-    .output(item('tfcreborncore:item/metal_press_screw'))
+    .output(item('tfcreborncore:regular/metal_press_screw'))
     .category('molds')
     .register()

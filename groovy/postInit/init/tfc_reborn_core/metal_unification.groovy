@@ -65,7 +65,7 @@ for (var in Utils.usableMetals) {
 
     // Rackwheel Piece
     mods.immersiveengineering.metal_press.recipeBuilder()
-        .mold(item('tfcreborncore:item/metal_press_rackwheel_piece'))
+        .mold(item('tfcreborncore:regular/metal_press_rackwheel_piece'))
         .input(ore('ingot' + Utils.toPascal(var)))
         .output(item('tfctech:metal/' + var + '_rackwheel_piece'))
         .energy(1000)
@@ -73,7 +73,7 @@ for (var in Utils.usableMetals) {
 
     // Rackwheel
     mods.immersiveengineering.metal_press.recipeBuilder()
-        .mold(item('tfcreborncore:item/metal_press_rackwheel'))
+        .mold(item('tfcreborncore:regular/metal_press_rackwheel'))
         .input(ore('ingot' + Utils.toPascal(var)) * 4)
         .output(item('tfctech:metal/' + var + '_rackwheel'))
         .energy(1000)
@@ -81,7 +81,7 @@ for (var in Utils.usableMetals) {
 
     // Long Rod
     mods.immersiveengineering.metal_press.recipeBuilder()
-        .mold(item('tfcreborncore:item/metal_press_long_rod'))
+        .mold(item('tfcreborncore:regular/metal_press_long_rod'))
         .input(ore('ingot' + Utils.toPascal(var)))
         .output(item('tfctech:metal/' + var + '_long_rod'))
         .energy(1000)
@@ -89,7 +89,7 @@ for (var in Utils.usableMetals) {
 
     // Bolt
     mods.immersiveengineering.metal_press.recipeBuilder()
-        .mold(item('tfcreborncore:item/metal_press_bolt'))
+        .mold(item('tfcreborncore:regular/metal_press_bolt'))
         .input(ore('ingot' + Utils.toPascal(var)))
         .output(item('tfctech:metal/' + var + '_bolt') * 4)
         .energy(1000)
@@ -97,7 +97,7 @@ for (var in Utils.usableMetals) {
 
     // Screw
     mods.immersiveengineering.metal_press.recipeBuilder()
-        .mold(item('tfcreborncore:item/metal_press_screw'))
+        .mold(item('tfcreborncore:regular/metal_press_screw'))
         .input(ore('ingot' + Utils.toPascal(var)))
         .output(item('tfctech:metal/' + var + '_screw') * 4)
         .energy(1000)
@@ -175,30 +175,3 @@ for (var in Utils.usableMetals) {
     ])
     .register()
 }
-
-// Redstone Dust
-mods.immersiveengineering.crusher.recipeBuilder()
-    .input(ore('ingotRedstone'))
-    .output(item('minecraft:redstone'))
-    .energy(2000)
-    .register()
-
-// Glowstone Dust
-mods.immersiveengineering.crusher.recipeBuilder()
-    .input(ore('ingotGlowstone'))
-    .output(item('minecraft:glowstone_dust'))
-    .energy(2000)
-    .register()
-
-// Ender Dust
-mods.immersiveengineering.crusher.recipeBuilder()
-    .input(ore('gemEnder'))
-    .output(item('appliedenergistics2:material', 46))
-    .energy(2000)
-    .register()
-    
-mods.immersiveengineering.crusher.recipeBuilder()
-    .input(ore('ingotEnder'))
-    .output(item('appliedenergistics2:material', 46))
-    .energy(2000)
-    .register()

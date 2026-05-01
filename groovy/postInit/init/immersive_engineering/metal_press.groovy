@@ -8,7 +8,7 @@ mods.immersiveengineering.metal_press.recipeBuilder()
 
 // Tin Sleve
 mods.immersiveengineering.metal_press.recipeBuilder()
-    .mold(item('tfcreborncore:item/metal_press_sleeve'))
+    .mold(item('tfcreborncore:regular/metal_press_sleeve'))
     .input(ore('ingotTin'))
     .output(item('tfctech:metal/tin_sleeve'))
     .energy(1000)
@@ -16,7 +16,7 @@ mods.immersiveengineering.metal_press.recipeBuilder()
 
 // Brass Sleve
 mods.immersiveengineering.metal_press.recipeBuilder()
-    .mold(item('tfcreborncore:item/metal_press_sleeve'))
+    .mold(item('tfcreborncore:regular/metal_press_sleeve'))
     .input(ore('ingotBrass'))
     .output(item('tfctech:metal/brass_sleeve'))
     .energy(1000)
@@ -24,7 +24,7 @@ mods.immersiveengineering.metal_press.recipeBuilder()
 
 // Steel Sleve
 mods.immersiveengineering.metal_press.recipeBuilder()
-    .mold(item('tfcreborncore:item/metal_press_sleeve'))
+    .mold(item('tfcreborncore:regular/metal_press_sleeve'))
     .input(ore('ingotSteel'))
     .output(item('tfctech:metal/steel_sleeve'))
     .energy(1000)

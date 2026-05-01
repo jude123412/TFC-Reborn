@@ -68,7 +68,7 @@ for (entry in oresInduction) {
         .output(item('tfc:metal/ingot/' + entry.value[0]) * 2)
         .time(80)
         .energyPerTick(1600)
-        .slag(item('tfcreborncore:item/rich_slag'))
+        .slag(item('tfcreborncore:regular/rich_slag'))
         .register()
 
     mods.immersiveengineering.arc_furnace.recipeBuilder()
@@ -77,7 +77,7 @@ for (entry in oresInduction) {
         .output(item('tfc:metal/ingot/' + entry.value[0]) * 2)
         .time(80)
         .energyPerTick(1600)
-        .slag(item('tfcreborncore:item/slag'))
+        .slag(item('tfcreborncore:regular/slag'))
         .register()
 
     mods.immersiveengineering.arc_furnace.recipeBuilder()

@@ -245,7 +245,7 @@ crafting.shapedBuilder()
     .output(item('immersiveengineering:metal_decoration0', 7) * 2)
     .shape([
         [ore('sheetSteel'),item('tfc:wooden_bucket').withNbt(['Fluid': ['FluidName': 'fresh_water', 'Amount': 1000]]).transform(Utils.transformerBucket),ore('sheetSteel')],
-        [ore('ingotCopper'),item('tfcreborncore:item/radiator_matrix'),ore('ingotCopper')],
+        [ore('ingotCopper'),item('tfcreborncore:regular/radiator_matrix'),ore('ingotCopper')],
         [ore('sheetSteel'),ore('ingotCopper'),ore('sheetSteel')]
     ])
     .register()
@@ -454,7 +454,7 @@ crafting.shapedBuilder()
     .output(item('immersiveengineering:connector'))
     .shape([
         [ore('stickLongCopper')],
-        [item('tfcreborncore:item/ceramic_insulator')],
+        [item('tfcreborncore:regular/ceramic_insulator')],
     ])
     .register()
 
@@ -463,7 +463,7 @@ crafting.shapedBuilder()
     .output(item('immersiveengineering:connector', 1))
     .shape([
         [ore('stickCopper')],
-        [item('tfcreborncore:item/ceramic_insulator')],
+        [item('tfcreborncore:regular/ceramic_insulator')],
     ])
     .register()
 
@@ -472,7 +472,7 @@ crafting.shapedBuilder()
     .output(item('immersiveengineering:connector', 2))
     .shape([
         [ore('stickLongIron')],
-        [item('tfcreborncore:item/ceramic_insulator')],
+        [item('tfcreborncore:regular/ceramic_insulator')],
     ])
     .register()
 
@@ -481,7 +481,7 @@ crafting.shapedBuilder()
     .output(item('immersiveengineering:connector', 3))
     .shape([
         [ore('stickIron')],
-        [item('tfcreborncore:item/ceramic_insulator')],
+        [item('tfcreborncore:regular/ceramic_insulator')],
     ])
     .register()
 
@@ -490,7 +490,7 @@ crafting.shapedBuilder()
     .output(item('immersiveengineering:connector', 4))
     .shape([
         [ore('stickLongAluminium')],
-        [item('tfcreborncore:item/ceramic_insulator')],
+        [item('tfcreborncore:regular/ceramic_insulator')],
     ])
     .register()
 
@@ -499,7 +499,7 @@ crafting.shapedBuilder()
     .output(item('immersiveengineering:connector', 5))
     .shape([
         [ore('stickAluminium')],
-        [item('tfcreborncore:item/glass_insulator')],
+        [item('tfcreborncore:regular/glass_insulator')],
     ])
     .register()
 
@@ -537,7 +537,7 @@ crafting.shapedBuilder()
     .output(item('immersiveengineering:connector', 9))
     .shape([
         [null,item('minecraft:lever'),null],
-        [item('immersiveengineering:connector'),item('tfcreborncore:item/rf_control_circuit'),item('immersiveengineering:connector')],
+        [item('immersiveengineering:connector'),item('tfcreborncore:regular/rf_control_circuit'),item('immersiveengineering:connector')],
         [ore('sheetIron'),ore('sheetIron'),ore('sheetIron')]
     ])
     .register()
@@ -557,7 +557,7 @@ crafting.shapedBuilder()
     .output(item('immersiveengineering:connector', 11))
     .shape([
         [null,item('immersiveengineering:tool', 2),null],
-        [item('tfcreborncore:item/ceramic_insulator'),item('immersiveengineering:metal_decoration0'),item('tfcreborncore:item/ceramic_insulator')],
+        [item('tfcreborncore:regular/ceramic_insulator'),item('immersiveengineering:metal_decoration0'),item('tfcreborncore:regular/ceramic_insulator')],
         [ore('sheetIron'),item('immersiveengineering:metal_decoration0'),ore('sheetIron')]
     ])
     .register()
@@ -568,7 +568,7 @@ crafting.shapedBuilder()
     .shape([
         [null,ore('stickElectrum'),null],
         [null,ore('dustRedstone'),null],
-        [null,item('tfcreborncore:item/ceramic_insulator'),null]
+        [null,item('tfcreborncore:regular/ceramic_insulator'),null]
     ])
     .register()
 
@@ -587,8 +587,8 @@ crafting.shapedBuilder()
     .output(item('immersiveengineering:metal_device0'))
     .shape([
         [ore('sheetIron'),ore('sheetIron'),ore('sheetIron')],
-        [ore('sheetCopper'),item('tfcreborncore:item/basic_capacitor_cell'),ore('sheetCopper')],
-        [ore('plankTreatedWood'),item('tfcreborncore:item/rf_control_circuit'),ore('plankTreatedWood')]
+        [ore('sheetCopper'),item('tfcreborncore:regular/basic_capacitor_cell'),ore('sheetCopper')],
+        [ore('plankTreatedWood'),item('tfcreborncore:regular/rf_control_circuit'),ore('plankTreatedWood')]
     ])
     .register()
 
@@ -597,8 +597,8 @@ crafting.shapedBuilder()
     .output(item('immersiveengineering:metal_device0', 1))
     .shape([
         [ore('sheetIron'),ore('sheetIron'),ore('sheetIron')],
-        [ore('sheetElectrum'),item('tfcreborncore:item/advanced_capacitor_cell'),ore('sheetElectrum')],
-        [ore('plankTreatedWood'),item('tfcreborncore:item/rf_control_circuit'),ore('plankTreatedWood')]
+        [ore('sheetElectrum'),item('tfcreborncore:regular/advanced_capacitor_cell'),ore('sheetElectrum')],
+        [ore('plankTreatedWood'),item('tfcreborncore:regular/rf_control_circuit'),ore('plankTreatedWood')]
     ])
     .register()
 
@@ -607,8 +607,8 @@ crafting.shapedBuilder()
     .output(item('immersiveengineering:metal_device0', 2))
     .shape([
         [ore('sheetSteel'),ore('sheetSteel'),ore('sheetSteel')],
-        [ore('sheetAluminium'),item('tfcreborncore:item/hi_tech_capacitor_cell'),ore('sheetAluminium')],
-        [ore('plankTreatedWood'),item('tfcreborncore:item/rf_control_circuit'),ore('plankTreatedWood')]
+        [ore('sheetAluminium'),item('tfcreborncore:regular/hi_tech_capacitor_cell'),ore('sheetAluminium')],
+        [ore('plankTreatedWood'),item('tfcreborncore:regular/rf_control_circuit'),ore('plankTreatedWood')]
     ])
     .register()
 
