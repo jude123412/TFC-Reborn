@@ -1,0 +1,18 @@
+{
+    "item.kubejs.metal.plate.copper":"Copper Plate",
+    "item.kubejs.metal.plate.aluminum":"Aluminium Plate",
+    "item.kubejs.metal.plate.lead":"Lead Plate",
+    "item.kubejs.metal.plate.silver":"Silver Plate",
+    "item.kubejs.metal.plate.nickel":"Nickel Plate",
+    "item.kubejs.metal.plate.uranium":"Uranium Plate",
+    "item.kubejs.metal.plate.constantan":"Constantan Plate",
+    "item.kubejs.metal.plate.electrum":"Electrum Plate",
+    "item.kubejs.metal.plate.steel":"Steel Plate",
+    "item.kubejs.metal.plate.wrought_iron":"Wrought Iron Plate",
+    "item.kubejs.metal.plate.gold":"Gold Plate",
+    "item.kubejs.metal.plate.tin":"Tin Plate",
+    "item.kubejs.metal.plate.zinc":"Zinc Plate",
+    "item.kubejs.metal.plate.brass":"Brass Plate",
+    "item.kubejs.metal.plate.bronze":"Bronze Plate",
+    "item.kubejs.metal.plate.invar":"Invar Plate"
+}
