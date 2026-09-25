@@ -1,2 +1,16 @@
 .probe/*
 !.probe/probe-settings.json
+WailaErrorOutput.txt
+usernamecache.json
+usercache.json
+/saves
+patchouli_data.json
+options.txt
+/mods
+minecraftinstance.json
+/logs
+local/kubejs/dev.properties
+/crash-reports
+/.vscode
+/.probe
+.curseclient
