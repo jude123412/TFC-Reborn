@@ -15,3 +15,4 @@ local/kubejs/dev.properties
 /.probe
 .curseclient
 /config/jei/world
+config/blazemap-client.toml
