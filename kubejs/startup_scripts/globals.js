@@ -6,7 +6,8 @@ global.metals = {
         capacity: 2.857,
         work: 648,
         weld: 864,
-        fluid: 'tfc:metal/copper'
+        fluid: 'tfc:metal/copper',
+        generate_plate: true
     },
     aluminum: {
         tier: 1,
@@ -14,7 +15,8 @@ global.metals = {
         capacity: 2.857,
         work: 390,
         weld: 520,
-        fluid: 'tfc_ie_addon:metal/aluminum'
+        fluid: 'tfc_ie_addon:metal/aluminum',
+        generate_plate: true
     },
     lead: {
         tier: 2,
@@ -22,7 +24,8 @@ global.metals = {
         capacity: 2.857,
         work: 300,
         weld: 400,
-        fluid: 'tfc_ie_addon:metal/lead'
+        fluid: 'tfc_ie_addon:metal/lead',
+        generate_plate: true
     },
     silver: {
         tier: 2,
@@ -30,7 +33,8 @@ global.metals = {
         capacity: 2.083,
         work: 577,
         weld: 769,
-        fluid: 'tfc:metal/silver'
+        fluid: 'tfc:metal/silver',
+        generate_plate: true
     },
     nickel: {
         tier: 1,
@@ -38,7 +42,8 @@ global.metals = {
         capacity: 2.083,
         work: 872,
         weld: 1162,
-        fluid: 'tfc:metal/nickel'
+        fluid: 'tfc:metal/nickel',
+        generate_plate: true
     },
     uranium: {
         tier: 3,
@@ -46,7 +51,8 @@ global.metals = {
         capacity: 2.857,
         work: 750,
         weld: 1000,
-        fluid: 'tfc_ie_addon:metal/uranium'
+        fluid: 'tfc_ie_addon:metal/uranium',
+        generate_plate: true
     },
     constantan: {
         tier: 2,
@@ -54,7 +60,8 @@ global.metals = {
         capacity: 2.857,
         work: 450,
         weld: 600,
-        fluid: 'tfc_ie_addon:metal/constantan'
+        fluid: 'tfc_ie_addon:metal/constantan',
+        generate_plate: true
     },
     electrum: {
         tier: 3,
@@ -62,7 +69,8 @@ global.metals = {
         capacity: 2.857,
         work: 540,
         weld: 720,
-        fluid: 'tfc_ie_addon:metal/electrum'
+        fluid: 'tfc_ie_addon:metal/electrum',
+        generate_plate: true
     },
     steel: {
         tier: 4,
@@ -70,7 +78,8 @@ global.metals = {
         capacity: 2.857,
         work: 924,
         weld: 1232,
-        fluid: 'tfc:metal/steel'
+        fluid: 'tfc:metal/steel',
+        generate_plate: true
     },
     wrought_iron: {
         tier: 3,
@@ -79,7 +88,8 @@ global.metals = {
         work: 921,
         weld: 1228,
         fluid: 'tfc:metal/cast_iron',
-        extra_tags: ['iron']
+        extra_tags: ['iron'],
+        generate_plate: true
     },
     gold: {
         tier: 1,
@@ -87,7 +97,8 @@ global.metals = {
         capacity: 1.667,
         work: 636,
         weld: 848,
-        fluid: 'tfc:metal/gold'
+        fluid: 'tfc:metal/gold',
+        generate_plate: true
     },
     tin: {
         tier: 1,
@@ -95,7 +106,8 @@ global.metals = {
         capacity: 7.143,
         work: 138,
         weld: 184,
-        fluid: 'tfc:metal/tin'
+        fluid: 'tfc:metal/tin',
+        generate_plate: true
     },
     zinc: {
         tier: 1,
@@ -103,7 +115,8 @@ global.metals = {
         capacity: 4.762,
         work: 252,
         weld: 336,
-        fluid: 'tfc:metal/zinc'
+        fluid: 'tfc:metal/zinc',
+        generate_plate: true
     },
     brass: {
         tier: 2,
@@ -111,7 +124,8 @@ global.metals = {
         capacity: 2.857,
         work: 558,
         weld: 744,
-        fluid: 'tfc:metal/brass'
+        fluid: 'tfc:metal/brass',
+        generate_plate: true
     },
     bronze: {
         tier: 2,
@@ -119,7 +133,8 @@ global.metals = {
         capacity: 2.857,
         work: 570,
         weld: 760,
-        fluid: 'tfc:metal/bronze'
+        fluid: 'tfc:metal/bronze',
+        generate_plate: true
     },
     invar: {
         tier: 3,
@@ -127,6 +142,7 @@ global.metals = {
         capacity: 2.083,
         work: 910,
         weld: 1200,
-        fluid: 'rosia:invar_fluid'
+        fluid: 'rosia:invar_fluid',
+        generate_plate: true
     },
 }
