@@ -3,6 +3,7 @@
   "apotheosis:adventure": null,
   "apotheosis:ench": null,
   "apotheosis:spawner": null,
+  "corpse:corpse": null,
   "firmalife:barrel_press": null,
   "firmalife:cheese": null,
   "firmalife:drying_mat": null,
@@ -135,5 +136,6 @@
   "tfc:water_wheel": null,
   "tfc:wet_concrete": null,
   "tfc:wild_animal": null,
-  "tfc:windmill": null
+  "tfc:windmill": null,
+  "tfcgroomer:grooming_station": null
 }

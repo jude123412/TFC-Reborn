@@ -51,6 +51,31 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
+  "railcraft": {
+    "signals": true,
+    "track_component": true,
+    "locomotive": true,
+    "switch_track": true
+  },
+  "tfcgroomer": {
+    "grooming_station": true
+  },
+  "immersiveengineering": {
+    "multiblock_icon": true
+  },
+  "jade": {
+    "coordinates.rel": false,
+    "distance": false,
+    "block_face": false,
+    "coordinates": false,
+    "registry_name": "OFF",
+    "mod_name": true
+  },
+  "apotheosis": {
+    "adventure": true,
+    "ench": true,
+    "spawner": true
+  },
   "firmalife": {
     "barrel_press": true,
     "string": true,
@@ -132,12 +157,6 @@
   "survivorsbutchercraft": {
     "meat_hook": true
   },
-  "railcraft": {
-    "signals": true,
-    "track_component": true,
-    "locomotive": true,
-    "switch_track": true
-  },
   "mekanism": {
     "infuse_type": true,
     "gas": true,
@@ -148,24 +167,11 @@
     "energy": true,
     "tooltip_renderer": true
   },
-  "immersiveengineering": {
-    "multiblock_icon": true
-  },
-  "jade": {
-    "coordinates.rel": false,
-    "distance": false,
-    "block_face": false,
-    "coordinates": false,
-    "registry_name": "OFF",
-    "mod_name": true
-  },
-  "apotheosis": {
-    "adventure": true,
-    "ench": true,
-    "spawner": true
-  },
   "survivorsdelight": {
     "feast_decay": true
+  },
+  "corpse": {
+    "corpse": true
   },
   "afc": {
     "tap": true
