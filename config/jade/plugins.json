@@ -76,6 +76,9 @@
     "ench": true,
     "spawner": true
   },
+  "functionalstorage": {
+    "armory": true
+  },
   "firmalife": {
     "barrel_press": true,
     "string": true,
