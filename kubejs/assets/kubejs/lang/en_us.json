@@ -14,5 +14,6 @@
     "item.kubejs.metal.plate.zinc":"Zinc Plate",
     "item.kubejs.metal.plate.brass":"Brass Plate",
     "item.kubejs.metal.plate.bronze":"Bronze Plate",
-    "item.kubejs.metal.plate.invar":"Invar Plate"
+    "item.kubejs.metal.plate.invar":"Invar Plate",
+    "item.kubejs.metal.plate.red_steel":"Red Steel Plate"
 }

@@ -11,5 +11,24 @@ StartupEvents.registry('item', event => {
 					.tag(`forge:plates/${metal}`)
 			}
 		}
+
+		// TFC Ore Additions
+		for (const ore in global.metal_ores) {
+			let o = global.metal_ores[ore]
+
+			if (o.generate_powder) {
+				event.create(`${o.mod_id}:powder/${ore}`)
+					.texture(`${o.mod_id}:item/powder/${ore}`)
+					.translationKey(`${o.mod_id}:item/powder/${ore}`)
+					.tag('forge:dusts/')
+			}
+
+			if (o.generate_pellet) {
+				event.create(`tfcoreprocessing:pellet/${ore}`)
+					.texture(`tfcoreprocessing:item/pellet/${ore}`)
+					.translationKey(`tfcoreprocessing:item/pellet/${ore}`)
+					.tag(`forge:pellets/${ore}`)
+			}
+		}
 	}
 )

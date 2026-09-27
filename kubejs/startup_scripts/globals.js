@@ -145,8 +145,45 @@ global.metals = {
         fluid: 'rosia:invar_fluid',
         generate_plate: true
     },
+    red_steel: {
+        tier: 3,
+        melt: 1540,
+        capacity: 2.857,
+        work: 924,
+        weld: 1232,
+        fluid: 'tfc:metal/red_steel',
+        generate_plate: true
+    },
+    chromium: {
+        tier: 4,
+        melt: 1250,
+        capacity: 2.857,
+        work: 750,
+        weld: 1000,
+        fluid: 'firmalife:metal/chromium',
+        generate_plate: false
+    },
+    cast_iron: {
+        tier: 1,
+        melt: 1535,
+        capacity: 2.857,
+        work: 921,
+        weld: 1228,
+        fluid: 'tfc:metal/cast_iron',
+        generate_plate: false
+    },
+    bismuth: {
+        tier: 1,
+        melt: 270,
+        capacity: 7.143,
+        work: 162,
+        weld: 216,
+        fluid: 'tfc:metal/bismuth',
+        generate_plate: false
+    }
 }
 
+// Trees/Woods
 global.trees = {
     ash: {
         mod_id: 'tfc',
@@ -227,5 +264,109 @@ global.trees = {
     willow: {
         mod_id: 'tfc',
         generate_bark: false
+    }
+}
+
+// Metallic ores
+global.metal_ores = {
+    chromite: {
+        mod_id: 'firmalife',
+        metal: 'chromium',
+        generate_powder: true,
+        generate_pellet: true,
+        should_melt: true
+    },
+    bauxite: {
+        mod_id: 'tfc_ie_addon',
+        metal: 'aluminum',
+        generate_pellet: true,
+        should_melt: true,
+        create_recipes: true
+    },
+    galena: {
+        mod_id: 'tfc_ie_addon',
+        metal: 'lead',
+        generate_pellet: true,
+        should_melt: true,
+        create_recipes: true
+    },
+    uraninite: {
+        mod_id: 'tfc_ie_addon',
+        metal: 'uranium',
+        generate_pellet: true,
+        should_melt: true,
+        create_recipes: true
+    },
+    native_copper: {
+        mod_id: 'tfc',
+        metal: 'copper',
+        generate_pellet: true,
+        create_recipes: true
+    },
+    native_gold: {
+        mod_id: 'tfc',
+        metal: 'gold',
+        generate_pellet: true,
+        create_recipes: true
+    },
+    hematite: {
+        mod_id: 'tfc',
+        metal: 'cast_iron',
+        generate_pellet: true,
+        create_recipes: true
+    },
+    native_silver: {
+        mod_id: 'tfc',
+        metal: 'silver',
+        generate_pellet: true,
+        create_recipes: true
+    },
+    cassiterite: {
+        mod_id: 'tfc',
+        metal: 'tin',
+        generate_pellet: true,
+        create_recipes: true
+    },
+    bismuthinite: {
+        mod_id: 'tfc',
+        metal: 'bismuth',
+        generate_pellet: true,
+        create_recipes: true
+    },
+    garnierite: {
+        mod_id: 'tfc',
+        metal: 'nickel',
+        generate_pellet: true,
+        create_recipes: true
+    },
+    malachite: {
+        mod_id: 'tfc',
+        metal: 'copper',
+        generate_pellet: true,
+        create_recipes: true
+    },
+    magnetite: {
+        mod_id: 'tfc',
+        metal: 'cast_iron',
+        generate_pellet: true,
+        create_recipes: true
+    },
+    limonite: {
+        mod_id: 'tfc',
+        metal: 'cast_iron',
+        generate_pellet: true,
+        create_recipes: true
+    },
+    sphalerite: {
+        mod_id: 'tfc',
+        metal: 'zinc',
+        generate_pellet: true,
+        create_recipes: true
+    },
+    tetrahedrite: {
+        mod_id: 'tfc',
+        metal: 'copper',
+        generate_pellet: true,
+        create_recipes: true
     }
 }
