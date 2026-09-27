@@ -17,7 +17,6 @@ local/kubejs/dev.properties
 /config/jei/world
 config/blazemap-client.toml
 /local/ftbchunks/data
-/local/ftbchunks
 local/ftblibrary-client.snbt
 defaultconfigs/ftblibrary/ftblibrary-client.snbt
 defaultconfigs/ftbessentials-server.snbt
