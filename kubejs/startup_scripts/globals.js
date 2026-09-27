@@ -146,3 +146,86 @@ global.metals = {
         generate_plate: true
     },
 }
+
+global.trees = {
+    ash: {
+        mod_id: 'tfc',
+        generate_bark: false
+    },
+    acacia: {
+        mod_id: 'tfc',
+        generate_bark: false
+    },
+    aspen: {
+        mod_id: 'tfc',
+        generate_bark: false
+    },
+    birch: {
+        mod_id: 'tfc',
+        generate_bark: false
+    },
+    blackwood: {
+        mod_id: 'tfc',
+        generate_bark: false
+    },
+    chestnut: {
+        mod_id: 'tfc',
+        generate_bark: false
+    },
+    douglas_fir: {
+        mod_id: 'tfc',
+        generate_bark: false
+    },
+    hickory: {
+        mod_id: 'tfc',
+        generate_bark: false
+    },
+    kapok: {
+        mod_id: 'tfc',
+        generate_bark: false
+    },
+    mangrove: {
+        mod_id: 'tfc',
+        generate_bark: false
+    },
+    maple: {
+        mod_id: 'tfc',
+        generate_bark: false
+    },
+    oak: {
+        mod_id: 'tfc',
+        generate_bark: false
+    },
+    palm: {
+        mod_id: 'tfc',
+        generate_bark: false
+    },
+    pine: {
+        mod_id: 'tfc',
+        generate_bark: false
+    },
+    rosewood: {
+        mod_id: 'tfc',
+        generate_bark: false
+    },
+    sequoia: {
+        mod_id: 'tfc',
+        generate_bark: false
+    },
+    sycamore: {
+        mod_id: 'tfc',
+        generate_bark: false
+    },
+    spruce: {
+        mod_id: 'tfc',
+        generate_bark: false
+    },
+    white_cedar: {
+        mod_id: 'tfc',
+        generate_bark: false
+    },
+    willow: {
+        mod_id: 'tfc',
+        generate_bark: false
+    }
+}
