@@ -7,6 +7,7 @@ TFCEvents.data(event => {
         // Plate Loop
         if (o.generate_pellet) {
             event.itemHeat(`tfcoreprocessing:pellet/${ore}`, m.capacity, m.work, m.weld)
+            event.itemSize(`tfcoreprocessing:pellet/${ore}`, 'small', 'medium')
         }
         if (o.generate_powder) {
             event.itemHeat(`${o.mod_id}:powder/${ore}`, m.capacity, m.work, m.weld)
