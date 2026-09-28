@@ -23,3 +23,5 @@ defaultconfigs/ftbessentials-server.snbt
 defaultconfigs/ftbchunks/ftbchunks-world.snbt
 defaultconfigs/ftbchunks/client-config.snbt
 /backups
+config/sodiumdynamiclights-client.toml
+config/embeddium-options.json
