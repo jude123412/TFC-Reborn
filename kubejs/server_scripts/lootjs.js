@@ -5,4 +5,5 @@ LootJS.modifiers((event) => {
         .replaceLoot('minecraft:iron_ingot', 'tfc:metal/ingot/cast_iron', true)
         .replaceLoot('minecraft:gold_ingot', 'tfc:metal/ingot/gold', true)
         .replaceLoot('minecraft:copper_ingot', 'tfc:metal/ingot/copper', true)
+        .replaceLoot('minecraft:bucket', 'tfc:wooden_bucket', true)
 });
