@@ -1,10 +1,18 @@
 ServerEvents.recipes(event => {
+    const lychee = event.recipes.lychee
 
     // Silt Mud bricks
     event.remove({id: 'tfc:crafting/soil/silt_drying_bricks'})
     event.shapeless(Item.of('tfc:drying_bricks/silt'), [
         'tfc:mud/silt',
         '#forge:straw'
+    ])
+    lychee.block_interacting(
+        '#forge:straw', 
+        BlockPredicate.of('tfc:mud/silt')
+    ).post([ 
+        Post.drop_item(Item.of('tfc:drying_bricks/silt')),
+        Post.place("minecraft:air")
     ])
     event.remove({id: 'tfc:crafting/soil/silt_mud_bricks'})
     event.shaped(Item.of('tfc:mud_bricks/silt', 4),
@@ -22,6 +30,13 @@ ServerEvents.recipes(event => {
         'tfc:mud/loam',
         '#forge:straw'
     ])
+    lychee.block_interacting(
+        '#forge:straw', 
+        BlockPredicate.of('tfc:mud/loam')
+    ).post([ 
+        Post.drop_item(Item.of('tfc:drying_bricks/loam')),
+        Post.place("minecraft:air")
+    ])
     event.remove({id: 'tfc:crafting/soil/loam_mud_bricks'})
     event.shaped(Item.of('tfc:mud_bricks/loam', 4),
     [
@@ -38,6 +53,13 @@ ServerEvents.recipes(event => {
         'tfc:mud/sandy_loam',
         '#forge:straw'
     ])
+    lychee.block_interacting(
+        '#forge:straw', 
+        BlockPredicate.of('tfc:mud/sandy_loam')
+    ).post([ 
+        Post.drop_item(Item.of('tfc:drying_bricks/sandy_loam')),
+        Post.place("minecraft:air")
+    ])
     event.remove({id: 'tfc:crafting/soil/sandy_loam_mud_bricks'})
     event.shaped(Item.of('tfc:mud_bricks/sandy_loam', 4),
     [
@@ -53,6 +75,13 @@ ServerEvents.recipes(event => {
     event.shapeless(Item.of('tfc:drying_bricks/silty_loam'), [
         'tfc:mud/silty_loam',
         '#forge:straw'
+    ])
+    lychee.block_interacting(
+        '#forge:straw', 
+        BlockPredicate.of('tfc:mud/silty_loam')
+    ).post([ 
+        Post.drop_item(Item.of('tfc:drying_bricks/silty_loam')),
+        Post.place("minecraft:air")
     ])
     event.remove({id: 'tfc:crafting/soil/silty_loam_mud_bricks'})
     event.shaped(Item.of('tfc:mud_bricks/silty_loam', 4),
