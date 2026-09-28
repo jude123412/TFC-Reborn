@@ -76,6 +76,10 @@
     "ench": true,
     "spawner": true
   },
+  "immersiveconvergence": {
+    "lines": true,
+    "status": true
+  },
   "functionalstorage": {
     "armory": true
   },
