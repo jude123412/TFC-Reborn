@@ -20,13 +20,15 @@ StartupEvents.registry('item', event => {
 				event.create(`${o.mod_id}:powder/${ore}`)
 					.texture(`${o.mod_id}:item/powder/${ore}`)
 					.translationKey(`${o.mod_id}:item/powder/${ore}`)
-					.tag('forge:dusts/')
+					.tag('forge:dusts')
+					.tag(`tfc:powders`)
 			}
 
 			if (o.generate_pellet) {
 				event.create(`tfcoreprocessing:pellet/${ore}`)
 					.texture(`tfcoreprocessing:item/pellet/${ore}`)
 					.translationKey(`tfcoreprocessing:item/pellet/${ore}`)
+					.tag('forge:pellets')
 					.tag(`forge:pellets/${ore}`)
 			}
 		}
