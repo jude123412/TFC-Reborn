@@ -9,8 +9,134 @@ ServerEvents.recipes(event => {
     const tfc = event.recipes.tfc
     const ie = event.recipes.immersiveengineering
 
-    // Crafting Table Removal
-    event.remove({id:"minecraft:crafting_table"})
+    // Recipe Removal
+    event.remove({id: 'minecraft:crafting_table'})
+    event.remove({id: 'minecraft:heavy_weighted_pressure_plate'})
+    event.remove({id: 'create:crafting/appliances/chain_from_zinc'})
+    event.remove({id: 'createdieselgenerators:compression_molding/chain'})
+    event.remove({id: 'minecraft:chain'})
+    event.remove({id: 'minecraft:iron_bars'})
+    event.remove({id: 'minecraft:dye_white_wool'})
+    event.remove({id: 'minecraft:dye_light_gray_wool'})
+    event.remove({id: 'minecraft:dye_gray_wool'})
+    event.remove({id: 'minecraft:dye_black_wool'})
+    event.remove({id: 'minecraft:dye_brown_wool'})
+    event.remove({id: 'minecraft:dye_red_wool'})
+    event.remove({id: 'minecraft:dye_orange_wool'})
+    event.remove({id: 'minecraft:dye_yellow_wool'})
+    event.remove({id: 'minecraft:dye_lime_wool'})
+    event.remove({id: 'minecraft:dye_green_wool'})
+    event.remove({id: 'minecraft:dye_cyan_wool'})
+    event.remove({id: 'minecraft:dye_light_blue_wool'})
+    event.remove({id: 'minecraft:dye_blue_wool'})
+    event.remove({id: 'minecraft:dye_purple_wool'})
+    event.remove({id: 'minecraft:dye_magenta_wool'})
+    event.remove({id: 'minecraft:dye_pink_wool'})
+    event.remove({id: 'minecraft:white_terracotta'})
+    event.remove({id: 'minecraft:light_gray_terracotta'})
+    event.remove({id: 'minecraft:gray_terracotta'})
+    event.remove({id: 'minecraft:black_terracotta'})
+    event.remove({id: 'minecraft:brown_terracotta'})
+    event.remove({id: 'minecraft:red_terracotta'})
+    event.remove({id: 'minecraft:orange_terracotta'})
+    event.remove({id: 'minecraft:yellow_terracotta'})
+    event.remove({id: 'minecraft:lime_terracotta'})
+    event.remove({id: 'minecraft:green_terracotta'})
+    event.remove({id: 'minecraft:cyan_terracotta'})
+    event.remove({id: 'minecraft:light_blue_terracotta'})
+    event.remove({id: 'minecraft:blue_terracotta'})
+    event.remove({id: 'minecraft:purple_terracotta'})
+    event.remove({id: 'minecraft:magenta_terracotta'})
+    event.remove({id: 'minecraft:pink_terracotta'})
+    event.remove({id: 'tfc:crafting/vanilla/color/white_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/light_gray_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/gray_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/black_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/brown_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/red_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/orange_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/yellow_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/lime_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/green_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/cyan_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/light_blue_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/blue_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/purple_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/magenta_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/pink_concrete_powder'})
+    event.remove({id: 'minecraft:jei.shulker.color.block.minecraft.white_shulker_box'})
+    event.remove({id: 'minecraft:jei.shulker.color.block.minecraft.light_gray_shulker_box'})
+    event.remove({id: 'minecraft:jei.shulker.color.block.minecraft.gray_shulker_box'})
+    event.remove({id: 'minecraft:jei.shulker.color.block.minecraft.black_shulker_box'})
+    event.remove({id: 'minecraft:jei.shulker.color.block.minecraft.brown_shulker_box'})
+    event.remove({id: 'minecraft:jei.shulker.color.block.minecraft.red_shulker_box'})
+    event.remove({id: 'minecraft:jei.shulker.color.block.minecraft.orange_shulker_box'})
+    event.remove({id: 'minecraft:jei.shulker.color.block.minecraft.yellow_shulker_box'})
+    event.remove({id: 'minecraft:jei.shulker.color.block.minecraft.lime_shulker_box'})
+    event.remove({id: 'minecraft:jei.shulker.color.block.minecraft.green_shulker_box'})
+    event.remove({id: 'minecraft:jei.shulker.color.block.minecraft.cyan_shulker_box'})
+    event.remove({id: 'minecraft:jei.shulker.color.block.minecraft.light_blue_shulker_box'})
+    event.remove({id: 'minecraft:jei.shulker.color.block.minecraft.blue_shulker_box'})
+    event.remove({id: 'minecraft:jei.shulker.color.block.minecraft.purple_shulker_box'})
+    event.remove({id: 'minecraft:jei.shulker.color.block.minecraft.magenta_shulker_box'})
+    event.remove({id: 'minecraft:jei.shulker.color.block.minecraft.pink_shulker_box'})
+    event.remove({id: 'minecraft:dye_white_bed'})
+    event.remove({id: 'minecraft:dye_light_gray_bed'})
+    event.remove({id: 'minecraft:dye_gray_bed'})
+    event.remove({id: 'minecraft:dye_black_bed'})
+    event.remove({id: 'minecraft:dye_brown_bed'})
+    event.remove({id: 'minecraft:dye_red_bed'})
+    event.remove({id: 'minecraft:dye_orange_bed'})
+    event.remove({id: 'minecraft:dye_yellow_bed'})
+    event.remove({id: 'minecraft:dye_lime_bed'})
+    event.remove({id: 'minecraft:dye_green_bed'})
+    event.remove({id: 'minecraft:dye_cyan_bed'})
+    event.remove({id: 'minecraft:dye_light_blue_bed'})
+    event.remove({id: 'minecraft:dye_blue_bed'})
+    event.remove({id: 'minecraft:dye_purple_bed'})
+    event.remove({id: 'minecraft:dye_magenta_bed'})
+    event.remove({id: 'minecraft:dye_pink_bed'})
+    event.remove({id: 'mekanism:processing/coal/to_ore'})
+    event.remove({id: 'mekanism:processing/coal/to_deepslate_ore'})
+    event.remove({id: 'mekanism:processing/iron/ore/from_raw'})
+    event.remove({id: 'mekanism:processing/iron/ore/deepslate_from_raw'})
+    event.remove({id: 'mekanism:processing/copper/ore/from_raw'})
+    event.remove({id: 'mekanism:processing/copper/ore/deepslate_from_raw'})
+    event.remove({id: 'mekanism:processing/gold/ore/from_raw'})
+    event.remove({id: 'mekanism:processing/gold/ore/deepslate_from_raw'})
+    event.remove({id: 'mekanism:processing/redstone/to_ore'})
+    event.remove({id: 'mekanism:processing/redstone/to_deepslate_ore'})
+    event.remove({id: 'mekanism:processing/emerald/to_ore'})
+    event.remove({id: 'mekanism:processing/emerald/to_deepslate_ore'})
+    event.remove({id: 'mekanism:processing/lapis_lazuli/to_ore'})
+    event.remove({id: 'mekanism:processing/lapis_lazuli/to_deepslate_ore'})
+    event.remove({id: 'mekanism:processing/diamond/to_ore'})
+    event.remove({id: 'mekanism:processing/diamond/to_deepslate_ore'})
+    event.remove({id: 'mekanism:processing/gold/ore/nether_from_raw'})
+    event.remove({id: 'mekanism:processing/quartz/to_ore'})
+    event.remove({id: 'mekanism:processing/netherite/dust_to_ancient_debris'})
+    event.remove({id: 'minecraft:raw_iron_block'})
+    event.remove({id: 'minecraft:raw_copper_block'})
+    event.remove({id: 'minecraft:raw_gold_block'})
+    event.remove({id: 'minecraft:smithing_table'})
+    event.remove({id: 'minecraft:blast_furnace'})
+    event.remove({id: 'create:haunting/soul_campfire'})
+    event.remove({id: 'minecraft:cauldron'})
+    event.remove({id: 'minecraft:beehive'})
+    event.remove({id: 'minecraft:armor_stand'})
+    event.remove({id: 'farmersdelight:painting_from_canvas'})
+    event.remove({id: 'minecraft:tripwire_hook'})
+    event.remove({id: 'minecraft:daylight_detector'})
+    event.remove({id: 'minecraft:piston'})
+    event.remove({id: 'minecraft:hopper'})
+    event.remove({id: 'minecraft:observer'})
+    event.remove({id: 'tfc:crafting/vanilla/redstone/steel_rail'})
+    event.remove({id: 'tfc:crafting/vanilla/redstone/rail'})
+    event.remove({id: 'mekanism:rails'})
+    event.remove({id: 'minecraft:minecart'})
+    event.remove({id: 'minecraft:furnace_minecart'})
+    event.remove({id: 'minecraft:shears'})
+    event.remove({id: 'minecraft:golden_carrot'})
 
     // Elytra
     event.shaped(
@@ -109,6 +235,268 @@ ServerEvents.recipes(event => {
         }
     )
 
+    // Stonecutter
+    event.remove({id: 'minecraft:stonecutter'})
+    event.shaped(
+        Item.of('minecraft:stonecutter'), 
+        [
+            ' P ',
+            'PIP',
+            'SSS'
+        ],
+        {
+            P: '#forge:plates/wrought_iron',
+            I: '#forge:ingots/wrought_iron',
+            S: '#tfc:rock/raw'
+        }
+    )
+
+    // Cartogrophy Table
+    event.remove({id: 'minecraft:cartography_table'})
+    event.shaped(
+        Item.of('minecraft:cartography_table'), 
+        [
+            'PP',
+            'CS'
+        ],
+        {
+            P: '#forge:paper',
+            C: '#tfc:workbenches',
+            S: '#forge:sheets/wrought_iron'
+        }
+    )
+
+    // Fletching Table
+    event.shaped(
+        Item.of('minecraft:fletching_table'), 
+        [
+            'BA',
+            'CS'
+        ],
+        {
+            B: '#forge:tools/bows',
+            A: '#minecraft:arrows',
+            C: '#tfc:workbenches',
+            S: '#forge:sheets/wrought_iron'
+        }
+    )
+
+    // Grindstone
+    event.replaceInput(
+        {id: 'minecraft:grindstone'},
+        'minecraft:stone_slab',
+        '#tfc:handstone'
+    )
+
+    // Banner Loom
+    event.remove({id: 'tfc:crafting/vanilla/loom'})
+    event.shaped(
+        Item.of('minecraft:loom'), 
+        [
+            'BB',
+            'CS'
+        ],
+        {
+            B: '#forge:string',
+            C: '#tfc:workbenches',
+            S: '#forge:sheets/wrought_iron'
+        }
+    )
+
+    // Anvil
+    event.shapeless(
+        Item.of('minecraft:anvil'),
+        [
+            'tfc:metal/anvil/wrought_iron'
+        ]
+    )
+
+    // Brewing Stand
+    event.remove({id: 'minecraft:brewing_stand'})
+    event.shaped(
+        Item.of('minecraft:brewing_stand'), 
+        [
+            'PBP',
+            ' B ',
+            'CCC'
+        ],
+        {
+            P: '#forge:plates/wrought_iron',
+            B: '#forge:rods/blaze',
+            C: '#forge:cobblestone'
+        }
+    )
+
+    
+    // Loadstone
+    event.remove({id: 'minecraft:lodestone'})
+    event.shaped(
+        Item.of('minecraft:lodestone'), 
+        [
+            'SPS',
+            'PIP',
+            'SPS'
+        ],
+        {
+            S: '#forge:stone_bricks',
+            P: '#forge:plates/steel',
+            I: '#forge:gems'
+        }
+    )
+
+    // Scaffolding
+    event.remove({id: 'farmersdelight:scaffolding_from_canvas'})
+    event.remove({id: 'mynethersdelight:crafting/scaffolding_alt'})
+    event.shaped(
+        Item.of('minecraft:scaffolding', 6), 
+        [
+            'BSB',
+            'B B',
+            'B B'
+        ],
+        {
+            B: 'mynethersdelight:powder_cannon',
+            S: '#forge:string'
+        }
+    )
+
+    // Calibrated Sculk Sensor
+    event.remove({id: 'minecraft:calibrated_sculk_sensor'})
+    event.shapeless(
+        Item.of('minecraft:calibrated_sculk_sensor'),
+        [
+            '#forge:gems/amethyst',
+            '#forge:gems/amethyst',
+            '#forge:gems/amethyst',
+            'minecraft:sculk_sensor'
+        ]
+    )
+
+    // Powered Rail
+    event.remove({id: 'tfc:crafting/vanilla/redstone/powered_rail'})
+    event.shapeless(
+        Item.of('minecraft:powered_rail'),
+        [
+            'railcraft:booster_track_kit',
+            'minecraft:rail'
+        ]
+    )
+
+    // Detector Rail
+    event.remove({id: 'minecraft:detector_rail'})
+    event.remove({id: 'tfc:crafting/vanilla/redstone/detector_rail'})
+    event.remove({id: 'tfc:crafting/vanilla/redstone/steel_detector_rail'})
+    event.shapeless(
+        Item.of('minecraft:detector_rail'),
+        [
+            'railcraft:detector_track_kit',
+            'minecraft:rail'
+        ]
+    )
+
+    // Activator Rail
+    event.remove({id: 'minecraft:activator_rail'})
+    event.remove({id: 'tfc:crafting/vanilla/redstone/activator_rail'})
+    event.remove({id: 'tfc:crafting/vanilla/redstone/steel_activator_rail'})
+    event.shapeless(
+        Item.of('minecraft:activator_rail'),
+        [
+            'railcraft:activator_track_kit',
+            'minecraft:rail'
+        ]
+    )
+
+    // Amethyst
+    event.shapeless(
+        Item.of('minecraft:amethyst_shard'),
+        [
+            'tfc:gem/amethyst',
+            '#forge:sandpaper'
+        ]
+    ).damageIngredient('#forge:sandpaper')
+
+    // Netherite Shovel
+    event.remove({id: 'minecraft:netherite_shovel_smithing'})
+    event.smithing(
+        'minecraft:netherite_shovel',
+        'minecraft:netherite_upgrade_smithing_template',
+        'tfc:metal/shovel/black_steel',
+        'minecraft:netherite_ingot'
+    )
+    
+
+    // Netherite Pickaxe
+    event.remove({id: 'minecraft:netherite_pickaxe_smithing'})
+    event.smithing(
+        'minecraft:netherite_pickaxe',
+        'minecraft:netherite_upgrade_smithing_template',
+        'tfc:metal/pickaxe/black_steel',
+        'minecraft:netherite_ingot'
+    )
+
+    // Netherite Axe
+    event.remove({id: 'minecraft:netherite_axe_smithing'})
+    event.smithing(
+        'minecraft:netherite_axe',
+        'minecraft:netherite_upgrade_smithing_template',
+        'tfc:metal/axe/black_steel',
+        'minecraft:netherite_ingot'
+    )
+
+    // Netherite Hoe
+    event.remove({id: 'minecraft:netherite_hoe_smithing'})
+    event.smithing(
+        'minecraft:netherite_hoe',
+        'minecraft:netherite_upgrade_smithing_template',
+        'tfc:metal/hoe/black_steel',
+        'minecraft:netherite_ingot'
+    )
+
+    // Netherite Sword
+    event.remove({id: 'minecraft:netherite_sword_smithing'})
+    event.smithing(
+        'minecraft:netherite_sword',
+        'minecraft:netherite_upgrade_smithing_template',
+        'tfc:metal/sword/black_steel',
+        'minecraft:netherite_ingot'
+    )
+
+    // Netherite Helmet
+    event.remove({id: 'minecraft:netherite_helmet_smithing'})
+    event.smithing(
+        'minecraft:netherite_helmet',
+        'minecraft:netherite_upgrade_smithing_template',
+        'tfc:metal/helmet/black_steel',
+        'minecraft:netherite_ingot'
+    )
+
+    // Netherite Chestplate
+    event.remove({id: 'minecraft:netherite_chestplate_smithing'})
+    event.smithing(
+        'minecraft:netherite_chestplate',
+        'minecraft:netherite_upgrade_smithing_template',
+        'tfc:metal/chestplate/black_steel',
+        'minecraft:netherite_ingot'
+    )
+
+    // Netherite Leggings
+    event.remove({id: 'minecraft:netherite_leggings_smithing'})
+    event.smithing(
+        'minecraft:netherite_leggings',
+        'minecraft:netherite_upgrade_smithing_template',
+        'tfc:metal/greaves/black_steel',
+        'minecraft:netherite_ingot'
+    )
+
+    // Netherite Boots
+    event.remove({id: 'minecraft:netherite_boots_smithing'})
+    event.smithing(
+        'minecraft:netherite_boots',
+        'minecraft:netherite_upgrade_smithing_template',
+        'tfc:metal/boots/black_steel',
+        'minecraft:netherite_ingot'
+    )
+
     // Block of Iron
     event.remove({id: 'minecraft:iron_block'})
     event.remove({id: 'minecraft:iron_ingot_from_iron_block'})
@@ -179,11 +567,29 @@ ServerEvents.recipes(event => {
         14400
     )
 
-    // Block of Gold
+    // Block of Quartz
     event.remove({id: 'minecraft:quartz_block'})
     ie.metal_press(
         'minecraft:quartz_block',
         Item.of('#forge:gems/quartz', 4),
+        'tfc_ie_addon:mold_block',
+        14400
+    )
+
+    // Block of Amethyst
+    event.remove({id: 'minecraft:amethyst_block'})
+    ie.metal_press(
+        'minecraft:amethyst_block',
+        Item.of('#forge:gems/amethyst', 4),
+        'tfc_ie_addon:mold_block',
+        14400
+    )
+
+    // Block of Copper
+    event.remove({id: 'minecraft:copper_block'})
+    ie.metal_press(
+        'minecraft:copper_block',
+        Item.of('#forge:ingots/copper', 9),
         'tfc_ie_addon:mold_block',
         14400
     )
