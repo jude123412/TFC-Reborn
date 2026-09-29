@@ -62,6 +62,7 @@ LootJS.modifiers((event) => {
         .replaceLoot('minecraft:potato', 'tfc:food/potato', true)
         .replaceLoot('minecraft:iron_shovel', 'tfc:metal/shovel/wrought_iron', true)
 
+    // Matches cat gift pool :D
     event.addLootTableModifier("minecraft:gameplay/cat_morning_gift")
         .replaceLoot("minecraft:chicken", "tfc:food/chichen")
 });
