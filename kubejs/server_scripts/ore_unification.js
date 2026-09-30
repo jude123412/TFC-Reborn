@@ -27,6 +27,8 @@ ServerEvents.recipes(event => {
         let o = global.metal_ores[ore]
         let m = global.metals[o.metal]
 
+        event.remove({type: 'immersiveengineering:arc_furnace'})
+
         // Pellet Recipes
         if (o.generate_pellet) {
             event.shaped(Item.of(`tfcoreprocessing:pellet/${ore}`),
@@ -40,7 +42,28 @@ ServerEvents.recipes(event => {
 
             tfc.heating(`tfcoreprocessing:pellet/${ore}`, m.melt)
                 .resultFluid(Fluid.of(m.fluid, 30))
+
+            event.custom({
+                'type': 'immersiveengineering:arc_furnace',
+                'energy': 51200,
+                'input': {
+                    'base_ingredient': {
+                        'tag': `forge:pellets/${ore}`,
+                    },
+                    'count': 10
+                },
+                "additives": [],
+                'results': [{
+                    'base_ingredient': {
+                        'item': `${o.ingot_mod_id}:${o.ingot_prefix}${o.metal}`
+                    },
+                    'count': 3
+                }],
+                secondaries: [],
+                'time': 100
+            })
         }
+
         if (o.generate_powder) {
             tfc.quern(Item.of(`${o.mod_id}:powder/${ore}`, 2), `${o.mod_id}:ore/small_${ore}`)
             tfc.quern(Item.of(`${o.mod_id}:powder/${ore}`, 3), `${o.mod_id}:ore/poor_${ore}`)
@@ -57,18 +80,72 @@ ServerEvents.recipes(event => {
             create.crushing(Item.of(`${o.mod_id}:powder/${ore}`, 8), `${o.mod_id}:ore/normal_${ore}`)
             create.crushing(Item.of(`${o.mod_id}:powder/${ore}`, 11), `${o.mod_id}:ore/rich_${ore}`)
 
-            ie.crusher(Item.of(`${o.mod_id}:powder/${ore}`, 4), InputItem.of(`${o.mod_id}:ore/small_${ore}`), [], 6000)
-            ie.crusher(Item.of(`${o.mod_id}:powder/${ore}`, 6), InputItem.of(`${o.mod_id}:ore/poor_${ore}`), [], 6000)
-            ie.crusher(Item.of(`${o.mod_id}:powder/${ore}`, 10), InputItem.of(`${o.mod_id}:ore/normal_${ore}`), [], 6000)
-            ie.crusher(Item.of(`${o.mod_id}:powder/${ore}`, 14), InputItem.of(`${o.mod_id}:ore/rich_${ore}`), [], 6000)
+            // Small Ore Crushing
+            event.custom({
+                type: "immersiveengineering:crusher",
+                energy: 6000,
+                input: {
+                    item: `${o.mod_id}:ore/small_${ore}`
+                },
+                result: {
+                    item: `${o.mod_id}:powder/${ore}`,
+                    count: 4
+                },
+                secondaries: []
+            })
+
+            // Poor Ore Crushing
+            event.custom({
+                type: "immersiveengineering:crusher",
+                energy: 6000,
+                input: {
+                    item: `${o.mod_id}:ore/poor_${ore}`
+                },
+                result: {
+                    item: `${o.mod_id}:powder/${ore}`,
+                    count: 6
+                },
+                secondaries: []
+            })
+
+            // Normal Ore Crushing
+            event.custom({
+                type: "immersiveengineering:crusher",
+                energy: 6000,
+                input: {
+                    item: `${o.mod_id}:ore/normal_${ore}`
+                },
+                result: {
+                    item: `${o.mod_id}:powder/${ore}`,
+                    count: 10
+                },
+                secondaries: []
+            })
+
+            // Rich Ore Crushing
+            event.custom({
+                type: "immersiveengineering:crusher",
+                energy: 6000,
+                input: {
+                    item: `${o.mod_id}:ore/rich_${ore}`
+                },
+                result: {
+                    item: `${o.mod_id}:powder/${ore}`,
+                    count: 14
+                },
+                secondaries: []
+            })
+
 
             tfc.heating(`${o.mod_id}:powder/${ore}`, m.melt)
                 .resultFluid(Fluid.of(m.fluid, 6))
         }
+
         if (o.should_melt) {
             tfc.heating(`${o.mod_id}:powder/${ore}`, m.melt)
                 .resultFluid(Fluid.of(m.fluid, 6))
         }
+
         if (o.create_recipes) {
             create.milling(Item.of(`${o.mod_id}:powder/${ore}`, 2), `${o.mod_id}:ore/small_${ore}`)
             create.milling(Item.of(`${o.mod_id}:powder/${ore}`, 3), `${o.mod_id}:ore/poor_${ore}`)
