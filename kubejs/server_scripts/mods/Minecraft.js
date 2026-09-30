@@ -304,11 +304,17 @@ ServerEvents.recipes(event => {
     )
 
     // Anvil
-    event.shapeless(
-        Item.of('minecraft:anvil'),
+    event.shaped(
+        Item.of('minecraft:anvil'), 
         [
-            'tfc:metal/anvil/wrought_iron'
-        ]
+            'DDD',
+            ' I ',
+            'III'
+        ],
+        {
+            D: '#forge:double_ingots/wrought_iron',
+            I: '#forge:ingots/wrought_iron'
+        }
     )
 
     // Brewing Stand
