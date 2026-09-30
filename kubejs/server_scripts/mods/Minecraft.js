@@ -7,7 +7,6 @@ TFCEvents.data(event => {
 
 ServerEvents.recipes(event => {
     const tfc = event.recipes.tfc
-    const ie = event.recipes.immersiveengineering
 
     // Recipe Removal
     event.remove({id: 'minecraft:crafting_table'})
@@ -417,7 +416,7 @@ ServerEvents.recipes(event => {
         Item.of('minecraft:amethyst_shard'),
         [
             'tfc:gem/amethyst',
-            '#forge:sandpaper'
+            '#create:sandpaper'
         ]
     ).damageIngredient('#forge:sandpaper')
 
@@ -503,102 +502,201 @@ ServerEvents.recipes(event => {
         'minecraft:netherite_ingot'
     )
 
+    // Block of Coal
+    event.remove({id: 'minecraft:coal_block'})
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:gems/coal',
+            },
+            count: 9
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'minecraft:coal_block'
+        }
+    })
+
     // Block of Iron
     event.remove({id: 'minecraft:iron_block'})
     event.remove({id: 'minecraft:iron_ingot_from_iron_block'})
-    ie.metal_press(
-        'minecraft:iron_block',
-        Item.of('#forge:ingots/iron', 9),
-        'tfc_ie_addon:mold_block',
-        14400
-    )
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:ingots/iron',
+            },
+            count: 9
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'minecraft:iron_block'
+        }
+    })
 
     // Block of Gold
     event.remove({id: 'minecraft:gold_block'})
     event.remove({id: 'minecraft:gold_ingot_from_gold_block'})
-    ie.metal_press(
-        'minecraft:gold_block',
-        Item.of('#forge:ingots/gold', 9),
-        'tfc_ie_addon:mold_block',
-        14400
-    )
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:ingots/gold',
+            },
+            count: 9
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'minecraft:gold_block'
+        }
+    })
 
     // Block of Redstone
     event.remove({id: 'minecraft:redstone_block'})
     event.remove({id: 'minecraft:redstone'})
-    ie.metal_press(
-        'minecraft:redstone_block',
-        Item.of('#forge:dusts/redstone', 9),
-        'tfc_ie_addon:mold_block',
-        14400
-    )
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:dusts/redstone',
+            },
+            count: 9
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'minecraft:redstone_block'
+        }
+    })
 
     // Block of Emerald
     event.remove({id: 'minecraft:emerald_block'})
     event.remove({id: 'minecraft:emerald'})
-    ie.metal_press(
-        'minecraft:emerald_block',
-        Item.of('#forge:gems/emerald', 9),
-        'tfc_ie_addon:mold_block',
-        14400
-    )
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:gems/emerald',
+            },
+            count: 9
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'minecraft:emerald_block'
+        }
+    })
 
     // Block of Lapis
     event.remove({id: 'tfc:crafting/vanilla/lapis_block'})
     event.remove({id: 'minecraft:lapis_block'})
-    ie.metal_press(
-        'minecraft:lapis_block',
-        Item.of('#forge:gems/lapis', 9),
-        'tfc_ie_addon:mold_block',
-        14400
-    )
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:gems/lapis',
+            },
+            count: 9
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'minecraft:lapis_block'
+        }
+    })
 
     // Block of Diamond
     event.remove({id: 'minecraft:diamond_block'})
     event.remove({id: 'minecraft:diamond'})
-    ie.metal_press(
-        'minecraft:diamond_block',
-        Item.of('#forge:gems/diamond', 9),
-        'tfc_ie_addon:mold_block',
-        14400
-    )
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:gems/diamond',
+            },
+            count: 9
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'minecraft:diamond_block'
+        }
+    })
 
     // Block of Netherite
     event.remove({id: 'minecraft:netherite_block'})
     event.remove({id: 'minecraft:netherite_ingot_from_netherite_block'})
-    ie.metal_press(
-        'minecraft:netherite_block',
-        Item.of('#forge:ingots/netherite', 9),
-        'tfc_ie_addon:mold_block',
-        14400
-    )
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:ingots/netherite',
+            },
+            count: 9
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'minecraft:netherite_block'
+        }
+    })
 
     // Block of Quartz
     event.remove({id: 'minecraft:quartz_block'})
-    ie.metal_press(
-        'minecraft:quartz_block',
-        Item.of('#forge:gems/quartz', 4),
-        'tfc_ie_addon:mold_block',
-        14400
-    )
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:gems/quartz',
+            },
+            count: 4
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'minecraft:quartz_block'
+        }
+    })
+
 
     // Block of Amethyst
     event.remove({id: 'minecraft:amethyst_block'})
-    ie.metal_press(
-        'minecraft:amethyst_block',
-        Item.of('#forge:gems/amethyst', 4),
-        'tfc_ie_addon:mold_block',
-        14400
-    )
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:gems/amethyst',
+            },
+            count: 4
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'minecraft:amethyst_block'
+        }
+    })
 
     // Block of Copper
     event.remove({id: 'minecraft:copper_block'})
-    ie.metal_press(
-        'minecraft:copper_block',
-        Item.of('#forge:ingots/copper', 9),
-        'tfc_ie_addon:mold_block',
-        14400
-    )
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:ingots/copper',
+            },
+            count: 9
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'minecraft:copper_block'
+        }
+    })
+
 
     // Prismarine Crystals
     tfc.barrel_sealed(8000)

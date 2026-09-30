@@ -101,7 +101,6 @@ ServerEvents.tags('fluid', event => {
 ServerEvents.recipes(event => {
     const tfc = event.recipes.tfc
     const create = event.recipes.create
-    const ie = event.recipes.immersiveengineering
 
     // New Metal Loop
     for (const metal in global.metals) {
@@ -206,12 +205,19 @@ ServerEvents.recipes(event => {
                     'hit_last'
                 ]).tier(m.tier)
             create.pressing(`kubejs:metal/plate/${metal}`, `#forge:ingots/${metal}`)
-            ie.metal_press(
-                `kubejs:metal/plate/${metal}`,
-                InputItem.of(`#forge:ingots/${metal}`),
-                'immersiveengineering:mold_plate',
-                1600
-            )
+            event.custom({
+                type: "immersiveengineering:metal_press",
+                energy: 1600,
+                input: {
+                    'base_ingredient': {
+                        tag: `forge:ingots/${metal}`,
+                    }
+                },
+                mold: "immersiveengineering:mold_plate",
+                result: {
+                    item: `kubejs:metal/plate/${metal}`
+                }
+            })
         }
 
         // Gear Loop
@@ -251,12 +257,20 @@ ServerEvents.recipes(event => {
                 m.tier
             )
 
-            ie.metal_press(
-                `kubejs:metal/gear/${metal}`,
-                InputItem.of(`#forge:ingots/${metal}`, 4),
-                'immersiveengineering:mold_gear',
-                6400
-            )
+            event.custom({
+                type: "immersiveengineering:metal_press",
+                energy: 6400,
+                input: {
+                    'base_ingredient': {
+                        tag: `forge:ingots/${metal}`,
+                    },
+                    count: 4
+                },
+                mold: "immersiveengineering:mold_gear",
+                result: {
+                    item: `kubejs:metal/gear/${metal}`
+                }
+            })
         }
 
         // Nugget Loop

@@ -18,11 +18,19 @@ TFCEvents.data(event => {
     }
 })
 
+ServerEvents.tags('item', event => {
+    // Add Coal gem tag
+    event.add('forge:gems/coal', 'tfc:ore/bituminous_coal')
+    event.add('forge:gems/coal', 'minecraft:coal')
+
+    // Add Amethyst gem tag
+    event.add('forge:gems/amethyst', 'tfc:gem/amethyst')
+})
+
 ServerEvents.recipes(event => {
     for (const ore in global.metal_ores) {
         const tfc = event.recipes.tfc
         const create = event.recipes.create
-        const ie = event.recipes.immersiveengineering
 
         let o = global.metal_ores[ore]
         let m = global.metals[o.metal]
