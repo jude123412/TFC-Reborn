@@ -153,22 +153,15 @@ ServerEvents.recipes(event => {
         // Nugget Loop
         if (m.generate_nugget) {
             // Remove ALL recipes that output any duplicate nugget
-            const prefixes = [
-                'nuggets',
-                'ingots'
-            ]
-            
-            for (let prefix of prefixes) {
-            let items = Ingredient.of(`#forge:${prefix}/${metal}`).getItemIds();
-                for (let id of items) {
-                    event.remove({output: id});
-                }
-                if (m.extra_tags) {
-                    for (let t of m.extra_tags) {
-                        let extraItems = Ingredient.of(`#forge:${prefix}/${t}`).getItemIds();
-                        for (let id of extraItems) {
-                            event.remove({output: id});
-                        }
+            let items = Ingredient.of(`#forge:nuggets/${metal}`).getItemIds();
+            for (let id of items) {
+                event.remove({output: id});
+            }
+            if (m.extra_tags) {
+                for (let t of m.extra_tags) {
+                    let extraItems = Ingredient.of(`#forge:${prefix}/${t}`).getItemIds();
+                    for (let id of extraItems) {
+                        event.remove({output: id});
                     }
                 }
             }
