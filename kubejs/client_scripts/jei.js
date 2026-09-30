@@ -1,7 +1,8 @@
 JEIEvents.hideItems(event => {
     const itemTypes = [
         'plates',
-        'gears'
+        'gears',
+        'nuggets'
     ];
 
     for (const metal in global.metals) {

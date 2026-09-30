@@ -13,6 +13,11 @@ TFCEvents.data(event => {
             event.itemHeat(`kubejs:metal/gear/${metal}`, m.capacity, m.work, m.weld)
             event.itemHeat(`kubejs:metal/gear/half/${metal}`, m.capacity, m.work, m.weld)
         }
+
+        // Nugget Loop
+        if (m.generate_nugget) {
+            event.itemHeat(`kubejs:metal/nugget/${metal}`, m.capacity, m.work, m.weld)
+        }
     }
 })
 
@@ -33,12 +38,22 @@ ServerEvents.tags('item', event => {
                 }
             }
         }
+
         // Gear Loop
         if (m.generate_gear) {
             if (m.extra_tags) {
                 for (const t of m.extra_tags) {
                     event.add(`forge:gears/${t}`, `kubejs:metal/gear/${metal}`)
                     event.add(`forge:gear_halfs/${t}`, `kubejs:metal/gear/half/${metal}`)
+                }
+            }
+        }
+
+        // Nugget Loop
+        if (m.generate_gear) {
+            if (m.extra_tags) {
+                for (const t of m.extra_tags) {
+                    event.add(`forge:nuggets/${t}`, `kubejs:metal/nugget/${metal}`)
                 }
             }
         }
@@ -55,15 +70,15 @@ ServerEvents.recipes(event => {
         let m = global.metals[metal]
 
         if (m.generate_plate) {
-            let plates = Ingredient.of(`#forge:plates/${metal}`).getItemIds();
+            let items = Ingredient.of(`#forge:plates/${metal}`).getItemIds();
             // Remove ALL recipes that output any duplicate plate
-            for (let id of plates) {
+            for (let id of items) {
                 event.remove({output: id});
             }
             if (m.extra_tags) {
                 for (let t of m.extra_tags) {
-                    let extraPlates = Ingredient.of(`#forge:plates/${t}`).getItemIds();
-                    for (let id of extraPlates) {
+                    let extraItems = Ingredient.of(`#forge:plates/${t}`).getItemIds();
+                    for (let id of extraItems) {
                         event.remove({output: id});
                     }
                 }
@@ -93,14 +108,14 @@ ServerEvents.recipes(event => {
         // Gear Loop
         if (m.generate_gear) {
             // Remove ALL recipes that output any duplicate gear
-            let plates = Ingredient.of(`#forge:gears/${metal}`).getItemIds();
-            for (let id of plates) {
+            let items = Ingredient.of(`#forge:gears/${metal}`).getItemIds();
+            for (let id of items) {
                 event.remove({output: id});
             }
             if (m.extra_tags) {
                 for (let t of m.extra_tags) {
-                    let extraPlates = Ingredient.of(`#forge:gears/${t}`).getItemIds();
-                    for (let id of extraPlates) {
+                    let extraItems = Ingredient.of(`#forge:gears/${t}`).getItemIds();
+                    for (let id of extraItems) {
                         event.remove({output: id});
                     }
                 }
@@ -133,6 +148,41 @@ ServerEvents.recipes(event => {
                 'immersiveengineering:mold_gear',
                 6400
             )
+        }
+
+        // Nugget Loop
+        if (m.generate_nugget) {
+            // Remove ALL recipes that output any duplicate nugget
+            const prefixes = [
+                'nuggets',
+                'ingots'
+            ]
+            
+            for (let prefix of prefixes) {
+            let items = Ingredient.of(`#forge:${prefix}/${metal}`).getItemIds();
+                for (let id of items) {
+                    event.remove({output: id});
+                }
+                if (m.extra_tags) {
+                    for (let t of m.extra_tags) {
+                        let extraItems = Ingredient.of(`#forge:${prefix}/${t}`).getItemIds();
+                        for (let id of extraItems) {
+                            event.remove({output: id});
+                        }
+                    }
+                }
+            }
+
+            tfc.heating(`kubejs:metal/nugget/${metal}`, m.melt)
+                .resultFluid(Fluid.of(m.fluid, 10))
+
+            event.shapeless(
+                Item.of(`kubejs:metal/nugget/${metal}`, 10),
+                [
+                    `#forge:ingots/${metal}`,
+                    '#tfc:hammers'
+                ]
+            ).damageIngredient('#tfc:hammers')
         }
     }
 })

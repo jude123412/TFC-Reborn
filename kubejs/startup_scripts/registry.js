@@ -26,6 +26,15 @@ StartupEvents.registry('item', event => {
 					.tag('forge:gear_halfs')
 					.tag(`forge:gear_halfs/${metal}`)
 			}
+
+			// Nugget Regsitry
+			if (m.generate_nugget) {
+				event.create(`kubejs:metal/nugget/${metal}`)
+					.texture(`kubejs:item/metal/nugget/${metal}`)
+					.translationKey(`kubejs:item/metal/nugget/${metal}`)
+					.tag('forge:nuggets')
+					.tag(`forge:nuggets/${metal}`)
+			}
 		}
 
 		// TFC Ore Additions

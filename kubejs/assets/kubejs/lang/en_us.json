@@ -29,6 +29,7 @@
     "item.kubejs.metal.gear.brass":"Brass Gear",
     "item.kubejs.metal.gear.bronze":"Bronze Gear",
     "item.kubejs.metal.gear.invar":"Invar Gear",
+
     "item.kubejs.metal.gear.half.copper":"Copper Gear Half",
     "item.kubejs.metal.gear.half.lead":"Lead Gear Half",
     "item.kubejs.metal.gear.half.silver":"Silver Gear Half",
@@ -40,5 +41,22 @@
     "item.kubejs.metal.gear.half.zinc":"Zinc Gear Half",
     "item.kubejs.metal.gear.half.brass":"Brass Gear Half",
     "item.kubejs.metal.gear.half.bronze":"Bronze Gear Half",
-    "item.kubejs.metal.gear.half.invar":"Invar Gear Half"
+    "item.kubejs.metal.gear.half.invar":"Invar Gear Half",
+
+    "item.kubejs.metal.nugget.copper":"Copper Nugget",
+    "item.kubejs.metal.nugget.aluminum":"Aluminium Nugget",
+    "item.kubejs.metal.nugget.lead":"Lead Nugget",
+    "item.kubejs.metal.nugget.silver":"Silver Nugget",
+    "item.kubejs.metal.nugget.nickel":"Nickel Nugget",
+    "item.kubejs.metal.nugget.uranium":"Uranium Nugget",
+    "item.kubejs.metal.nugget.constantan":"Constantan Nugget",
+    "item.kubejs.metal.nugget.electrum":"Electrum Nugget",
+    "item.kubejs.metal.nugget.steel":"Steel Nugget",
+    "item.kubejs.metal.nugget.wrought_iron":"Wrought Iron Nugget",
+    "item.kubejs.metal.nugget.gold":"Gold Nugget",
+    "item.kubejs.metal.nugget.tin":"Tin Nugget",
+    "item.kubejs.metal.nugget.zinc":"Zinc Nugget",
+    "item.kubejs.metal.nugget.brass":"Brass Nugget",
+    "item.kubejs.metal.nugget.bronze":"Bronze Nugget",
+    "item.kubejs.metal.nugget.invar":"Invar Nugget"
 }
