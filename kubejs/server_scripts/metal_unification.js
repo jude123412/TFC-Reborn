@@ -69,6 +69,20 @@ ServerEvents.recipes(event => {
     for (const metal in global.metals) {
         let m = global.metals[metal]
 
+        // Remove ONLY crafting table recipes that output any ingot
+        // defined in global.metals
+        let ingots = Ingredient.of(`#forge:ingots/${metal}`).getItemIds();
+        for (let item of ingots) {
+            const types = ['crafting_shaped', 'crafting_shapeless', 'blasting', 'smelting']
+            for (const t of types) {
+                event.remove({ 
+                    output: item,
+                    type: `minecraft:${t}`
+                })
+            }
+        }
+
+        // Plate Loop
         if (m.generate_plate) {
             let items = Ingredient.of(`#forge:plates/${metal}`).getItemIds();
             // Remove ALL recipes that output any duplicate plate
@@ -153,13 +167,14 @@ ServerEvents.recipes(event => {
         // Nugget Loop
         if (m.generate_nugget) {
             // Remove ALL recipes that output any duplicate nugget
-            let items = Ingredient.of(`#forge:nuggets/${metal}`).getItemIds();
-            for (let id of items) {
-                event.remove({output: id});
+            let nuggets = Ingredient.of(`#forge:nuggets/${metal}`).getItemIds();
+            for (let item of nuggets) {
+                event.remove({output: item});
             }
+
             if (m.extra_tags) {
                 for (let t of m.extra_tags) {
-                    let extraItems = Ingredient.of(`#forge:${prefix}/${t}`).getItemIds();
+                    let extraItems = Ingredient.of(`#forge:nuggets/${t}`).getItemIds();
                     for (let id of extraItems) {
                         event.remove({output: id});
                     }

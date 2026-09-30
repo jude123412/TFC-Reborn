@@ -3,29 +3,29 @@ JEIEvents.hideItems(event => {
         'plates',
         'gears',
         'nuggets'
-    ];
+    ]
 
     // Item type hiding
     for (const metal in global.metals) {
-        let m = global.metals[metal];
+        let m = global.metals[metal]
 
         for (const type of itemTypes) {
 
             // 1. Hide items under the metal’s own tag
-            let directTag = Ingredient.of(`#forge:${type}/${metal}`).getItemIds();
+            let directTag = Ingredient.of(`#forge:${type}/${metal}`).getItemIds()
             for (let id of directTag) {
                 if (!id.includes("kubejs")) {
-                    event.hide(id);
+                    event.hide(id)
                 }
             }
 
             // 2. Hide items under extra tags
             if (m.extra_tags) {
                 for (const t of m.extra_tags) {
-                    let extraTag = Ingredient.of(`#forge:${type}/${t}`).getItemIds();
+                    let extraTag = Ingredient.of(`#forge:${type}/${t}`).getItemIds()
                     for (let id of extraTag) {
                         if (!id.includes("kubejs")) {
-                            event.hide(id);
+                            event.hide(id)
                         }
                     }
                 }
@@ -35,6 +35,6 @@ JEIEvents.hideItems(event => {
 
     // Item Hiding
     for (const item of global.hidden_items) {
-        event.hide(item);
+        event.hide(item)
     }
-});
+})
