@@ -3,6 +3,31 @@ TFCEvents.data(event => {
     for (const metal in global.metals) {
         let m = global.metals[metal]
 
+        if (m.new_metal) {
+            event.metal(
+                m.fluid,
+                m.melt,
+                m.capacity,
+                m.ingot,
+                m.double_ingot,
+                m.sheet,
+                m.tier,
+                `kubejs:${metal}`
+            )
+
+            if (m.ingot != null) {
+                event.itemHeat(m.ingot, m.capacity, m.work, m.weld)
+            }
+
+            if (m.double_ingot != null) {
+                event.itemHeat(m.double_ingot, m.capacity, m.work, m.weld)
+            }
+
+            if (m.sheet != null) {
+                event.itemHeat(m.sheet, m.capacity, m.work, m.weld)
+            }
+        }
+
         // Plate Loop
         if (m.generate_plate) {
             event.itemHeat(`kubejs:metal/plate/${metal}`, m.capacity, m.work, m.weld)
@@ -60,10 +85,75 @@ ServerEvents.tags('item', event => {
     }
 })
 
+ServerEvents.tags('fluid', event => { 
+
+    // Metals need this tag to be castable
+    for (const metal in global.metals) {
+        let m = global.metals[metal]
+
+        if (m.new_metal){
+            event.add('tfc:molten_metals', m.fluid)
+            event.add('tfc:usable_in_ingot_mold', m.fluid)
+        }
+    }
+})
+
 ServerEvents.recipes(event => {
     const tfc = event.recipes.tfc
     const create = event.recipes.create
     const ie = event.recipes.immersiveengineering
+
+    // New Metal Loop
+    for (const metal in global.metals) {
+        let m = global.metals[metal]
+
+        if (m.new_metal){
+            if (m.ingot != null) {
+                event.recipes.tfc.casting(
+                    m.ingot,
+                    'tfc:ceramic/ingot_mold',
+                    TFC.fluidStackIngredient(m.fluid, 100),
+                    0.1
+                )
+
+                event.recipes.tfc.casting(
+                    m.ingot,
+                    'tfc:ceramic/fire_ingot_mold',
+                    TFC.fluidStackIngredient(m.fluid, 100),
+                    0.01
+                )
+
+                tfc.heating(m.ingot, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 100))
+            }
+
+            if (m.double_ingot != null) {
+                tfc.welding(
+                    TFC.itemStackProvider.of(m.double_ingot).copyHeat(),
+                    Ingredient.of(m.ingot),
+                    Ingredient.of(m.ingot),
+                    m.tier
+                )
+
+                tfc.heating(m.double_ingot, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 200))
+            }
+
+            if (m.sheet != null) {
+                tfc.anvil(
+                    TFC.itemStackProvider.of(m.sheet).copyHeat(),
+                    m.double_ingot,
+                    [
+                        'hit_third_last',
+                        'hit_second_last',
+                        'hit_last'
+                    ]).tier(m.tier)
+
+                tfc.heating(m.double_ingot, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 200))
+            }
+        }
+    }
 
     // Plate Loop
     for (const metal in global.metals) {
@@ -110,12 +200,11 @@ ServerEvents.recipes(event => {
             tfc.anvil(
                 TFC.itemStackProvider.of(`kubejs:metal/plate/${metal}`).copyHeat(),
                 `#forge:ingots/${metal}`,
-            [
-                'hit_third_last',
-                'hit_second_last',
-                'hit_last'
-            ]
-            ).tier(m.tier)
+                [
+                    'hit_third_last',
+                    'hit_second_last',
+                    'hit_last'
+                ]).tier(m.tier)
             create.pressing(`kubejs:metal/plate/${metal}`, `#forge:ingots/${metal}`)
             ie.metal_press(
                 `kubejs:metal/plate/${metal}`,
@@ -149,11 +238,11 @@ ServerEvents.recipes(event => {
             tfc.anvil(
                 TFC.itemStackProvider.of(`kubejs:metal/gear/half/${metal}`).copyHeat(),
                 `#forge:double_ingots/${metal}`,
-            [
-                'upset_any',
-                'draw_any',
-                'bend_not_last'
-            ])
+                [
+                    'upset_any',
+                    'draw_any',
+                    'bend_not_last'
+                ]).tier(m.tier)
 
             tfc.welding(
                 TFC.itemStackProvider.of(`kubejs:metal/gear/${metal}`).copyHeat(),

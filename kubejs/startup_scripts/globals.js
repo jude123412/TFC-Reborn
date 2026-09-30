@@ -220,6 +220,38 @@ global.metals = {
         generate_plate: false,
         generate_gear: false,
         generate_nugget: false
+    },
+    andesite_alloy: {
+        tier: 2,
+        melt: 1250,
+        capacity: 2.857,
+        work: 850,
+        weld: 1050,
+        color: 0x6C7C72,
+        fluid: 'kubejs:metal/andesite_alloy',
+        ingot: 'create:andesite_alloy',
+        double_ingot: null,
+        sheet: null,
+        new_metal: true,
+        generate_plate: false,
+        generate_gear: false,
+        generate_nugget: false,
+    },
+    andesite: {
+        tier: 2,
+        melt: 1350,
+        capacity: 2.857,
+        work: 900,
+        weld: 1100,
+        color: 0x787D7C,
+        fluid: 'kubejs:metal/andesite',
+        ingot: 'tfc:brick/andesite',
+        double_ingot: null,
+        sheet: null,
+        new_metal: true,
+        generate_plate: false,
+        generate_gear: false,
+        generate_nugget: false,
     }
 }
 

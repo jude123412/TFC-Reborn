@@ -53,5 +53,14 @@
     "item.kubejs.metal.nugget.gold":"Gold Nugget",
     "item.kubejs.metal.nugget.zinc":"Zinc Nugget",
     "item.kubejs.metal.nugget.brass":"Brass Nugget",
-    "item.kubejs.metal.nugget.bronze":"Bronze Nugget"
+    "item.kubejs.metal.nugget.bronze":"Bronze Nugget",
+
+    "item.kubejs.metal.andesite_alloy_bucket": "Andesite Alloy Bucket",
+    "item.kubejs.metal.andesite_bucket": "Andesite Bucket",
+
+    "fluid.kubejs.metal.andesite_alloy":"Andesite Alloy",
+    "fluid.kubejs.metal.andesite":"Andesite",
+
+    "metal.kubejs.andesite_alloy":"Andesite Alloy",
+    "metal.kubejs.andesite":"Andesite"
 }
