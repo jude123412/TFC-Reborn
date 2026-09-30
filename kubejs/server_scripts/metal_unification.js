@@ -82,6 +82,12 @@ ServerEvents.recipes(event => {
             }
         }
 
+        // Remove ALL recipes that output any duplicate dust
+        let dusts = Ingredient.of(`#forge:dusts/${metal}`).getItemIds();
+        for (let item of dusts) {
+            event.remove({output: item})
+        }
+
         // Plate Loop
         if (m.generate_plate) {
             let items = Ingredient.of(`#forge:plates/${metal}`).getItemIds();
