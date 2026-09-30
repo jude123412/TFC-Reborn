@@ -7,7 +7,8 @@ global.metals = {
         work: 648,
         weld: 864,
         fluid: 'tfc:metal/copper',
-        generate_plate: true
+        generate_plate: true,
+        generate_gear: true
     },
     aluminum: {
         tier: 1,
@@ -16,7 +17,8 @@ global.metals = {
         work: 390,
         weld: 520,
         fluid: 'tfc_ie_addon:metal/aluminum',
-        generate_plate: true
+        generate_plate: true,
+        generate_gear: false
     },
     lead: {
         tier: 2,
@@ -25,7 +27,8 @@ global.metals = {
         work: 300,
         weld: 400,
         fluid: 'tfc_ie_addon:metal/lead',
-        generate_plate: true
+        generate_plate: true,
+        generate_gear: true
     },
     silver: {
         tier: 2,
@@ -34,7 +37,8 @@ global.metals = {
         work: 577,
         weld: 769,
         fluid: 'tfc:metal/silver',
-        generate_plate: true
+        generate_plate: true,
+        generate_gear: true
     },
     nickel: {
         tier: 1,
@@ -43,7 +47,8 @@ global.metals = {
         work: 872,
         weld: 1162,
         fluid: 'tfc:metal/nickel',
-        generate_plate: true
+        generate_plate: true,
+        generate_gear: true
     },
     uranium: {
         tier: 3,
@@ -52,7 +57,8 @@ global.metals = {
         work: 750,
         weld: 1000,
         fluid: 'tfc_ie_addon:metal/uranium',
-        generate_plate: true
+        generate_plate: true,
+        generate_gear: false
     },
     constantan: {
         tier: 2,
@@ -61,7 +67,8 @@ global.metals = {
         work: 450,
         weld: 600,
         fluid: 'tfc_ie_addon:metal/constantan',
-        generate_plate: true
+        generate_plate: true,
+        generate_gear: false
     },
     electrum: {
         tier: 3,
@@ -70,7 +77,8 @@ global.metals = {
         work: 540,
         weld: 720,
         fluid: 'tfc_ie_addon:metal/electrum',
-        generate_plate: true
+        generate_plate: true,
+        generate_gear: false
     },
     steel: {
         tier: 4,
@@ -79,7 +87,8 @@ global.metals = {
         work: 924,
         weld: 1232,
         fluid: 'tfc:metal/steel',
-        generate_plate: true
+        generate_plate: true,
+        generate_gear: true
     },
     wrought_iron: {
         tier: 3,
@@ -89,7 +98,8 @@ global.metals = {
         weld: 1228,
         fluid: 'tfc:metal/cast_iron',
         extra_tags: ['iron'],
-        generate_plate: true
+        generate_plate: true,
+        generate_gear: true
     },
     gold: {
         tier: 1,
@@ -98,7 +108,8 @@ global.metals = {
         work: 636,
         weld: 848,
         fluid: 'tfc:metal/gold',
-        generate_plate: true
+        generate_plate: true,
+        generate_gear: true
     },
     tin: {
         tier: 1,
@@ -107,7 +118,8 @@ global.metals = {
         work: 138,
         weld: 184,
         fluid: 'tfc:metal/tin',
-        generate_plate: true
+        generate_plate: true,
+        generate_gear: true
     },
     zinc: {
         tier: 1,
@@ -116,7 +128,8 @@ global.metals = {
         work: 252,
         weld: 336,
         fluid: 'tfc:metal/zinc',
-        generate_plate: true
+        generate_plate: true,
+        generate_gear: true
     },
     brass: {
         tier: 2,
@@ -125,7 +138,8 @@ global.metals = {
         work: 558,
         weld: 744,
         fluid: 'tfc:metal/brass',
-        generate_plate: true
+        generate_plate: true,
+        generate_gear: true
     },
     bronze: {
         tier: 2,
@@ -134,7 +148,8 @@ global.metals = {
         work: 570,
         weld: 760,
         fluid: 'tfc:metal/bronze',
-        generate_plate: true
+        generate_plate: true,
+        generate_gear: true
     },
     invar: {
         tier: 3,
@@ -143,7 +158,8 @@ global.metals = {
         work: 910,
         weld: 1200,
         fluid: 'rosia:invar_fluid',
-        generate_plate: true
+        generate_plate: true,
+        generate_gear: true
     },
     red_steel: {
         tier: 3,
@@ -152,7 +168,8 @@ global.metals = {
         work: 924,
         weld: 1232,
         fluid: 'tfc:metal/red_steel',
-        generate_plate: true
+        generate_plate: true,
+        generate_gear: false
     },
     chromium: {
         tier: 4,
@@ -161,7 +178,8 @@ global.metals = {
         work: 750,
         weld: 1000,
         fluid: 'firmalife:metal/chromium',
-        generate_plate: false
+        generate_plate: false,
+        generate_gear: false
     },
     cast_iron: {
         tier: 1,
@@ -170,7 +188,8 @@ global.metals = {
         work: 921,
         weld: 1228,
         fluid: 'tfc:metal/cast_iron',
-        generate_plate: false
+        generate_plate: false,
+        generate_gear: false
     },
     bismuth: {
         tier: 1,
@@ -179,7 +198,8 @@ global.metals = {
         work: 162,
         weld: 216,
         fluid: 'tfc:metal/bismuth',
-        generate_plate: false
+        generate_plate: false,
+        generate_gear: false
     }
 }
 

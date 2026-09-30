@@ -1,25 +1,33 @@
 JEIEvents.hideItems(event => {
+    const itemTypes = [
+        'plates',
+        'gears'
+    ];
+
     for (const metal in global.metals) {
         let m = global.metals[metal];
 
-        // 1. Hide items under the metal’s own tag
-        let directPlateTag = Ingredient.of(`#forge:plates/${metal}`).getItemIds();
-        for (let id of directPlateTag) {
-            if (!id.includes("kubejs")) {
-                event.hide(id)
+        for (const type of itemTypes) {
+
+            // 1. Hide items under the metal’s own tag
+            let directTag = Ingredient.of(`#forge:${type}/${metal}`).getItemIds();
+            for (let id of directTag) {
+                if (!id.includes("kubejs")) {
+                    event.hide(id);
+                }
             }
-        }
-        
-        // 2. Hide items under extra tags (like iron for wrought iron)
-        if (m.extra_tags) {
-            for (const t of m.extra_tags) {
-                let extraTagItems = Ingredient.of(`#forge:plates/${t}`).getItemIds();
-                for (let id of extraTagItems) {
-                    if (!id.includes("kubejs")) {
-                        event.hide(id);
+
+            // 2. Hide items under extra tags
+            if (m.extra_tags) {
+                for (const t of m.extra_tags) {
+                    let extraTag = Ingredient.of(`#forge:${type}/${t}`).getItemIds();
+                    for (let id of extraTag) {
+                        if (!id.includes("kubejs")) {
+                            event.hide(id);
+                        }
                     }
                 }
             }
         }
     }
-})
+});

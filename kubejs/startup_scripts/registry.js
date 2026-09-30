@@ -8,7 +8,23 @@ StartupEvents.registry('item', event => {
 				event.create(`kubejs:metal/plate/${metal}`)
 					.texture(`kubejs:item/metal/plate/${metal}`)
 					.translationKey(`kubejs:item/metal/plate/${metal}`)
+					.tag('forge:plates')
 					.tag(`forge:plates/${metal}`)
+			}
+
+			// Gear Registry
+			if (m.generate_gear) {
+				event.create(`kubejs:metal/gear/${metal}`)
+					.texture(`kubejs:item/metal/gear/${metal}`)
+					.translationKey(`kubejs:item/metal/gear/${metal}`)
+					.tag('forge:gears')
+					.tag(`forge:gears/${metal}`)
+
+				event.create(`kubejs:metal/gear/half/${metal}`)
+					.texture(`kubejs:item/metal/gear/half/${metal}`)
+					.translationKey(`kubejs:item/metal/gear/half/${metal}`)
+					.tag('forge:gear_halfs')
+					.tag(`forge:gear_halfs/${metal}`)
 			}
 		}
 
