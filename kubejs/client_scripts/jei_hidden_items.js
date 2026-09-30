@@ -5,6 +5,7 @@ JEIEvents.hideItems(event => {
         'nuggets'
     ];
 
+    // Item type hiding
     for (const metal in global.metals) {
         let m = global.metals[metal];
 
@@ -30,5 +31,10 @@ JEIEvents.hideItems(event => {
                 }
             }
         }
+    }
+
+    // Item Hiding
+    for (const item of global.hidden_items) {
+        event.hide(item);
     }
 });
