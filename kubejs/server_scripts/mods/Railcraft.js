@@ -2,7 +2,7 @@ ServerEvents.recipes(event => {
     // Coke Oven Bricks
     event.remove({id: 'railcraft:coke_oven_bricks'})
     event.shaped(
-        Item.of('railcraft:coke_oven_bricks', 3),
+        Item.of('railcraft:coke_oven_bricks', 2),
         [
             'SBS',
             'BCB',
