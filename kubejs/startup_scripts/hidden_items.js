@@ -20,5 +20,7 @@ global.hidden_items = [
     'railcraft:steel_ingot',
     'railcraft:brass_ingot',
     'railcraft:bronze_ingot',
-    'railcraft:invar_ingot'
+    'railcraft:invar_ingot',
+    'create:empty_blaze_burner',
+    'create:blaze_burner'
 ]

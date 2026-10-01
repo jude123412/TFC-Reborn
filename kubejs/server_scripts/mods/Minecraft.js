@@ -136,6 +136,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'minecraft:furnace_minecart'})
     event.remove({id: 'minecraft:shears'})
     event.remove({id: 'minecraft:golden_carrot'})
+    event.remove({id: 'minecraft:dried_kelp'})
 
     // Elytra
     event.shaped(
@@ -733,4 +734,10 @@ ServerEvents.recipes(event => {
             ]
         ).tier(5)
 
+    // Dried Kelp Block
+    event.replaceInput(
+        {id: 'minecraft:dried_kelp_block'},
+        'minecraft:dried_kelp',
+        'tfc:food/dried_kelp'
+    )
 })

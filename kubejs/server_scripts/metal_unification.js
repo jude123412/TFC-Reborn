@@ -55,6 +55,17 @@ ServerEvents.tags('item', event => {
     for (const metal in global.metals) {
         let m = global.metals[metal]
 
+        if (m.new_metal) {
+            // If the item is NOT in #forge:ingots/<metal>, add it
+            if (!Ingredient.of(`#forge:ingots/${metal}`).test(m.ingot)) {
+                event.add(`forge:ingots/${metal}`, m.ingot)
+            }
+            // If the item is NOT in #forge:ingots, add it
+            if (!Ingredient.of(`#forge:ingots`).test(m.ingot)) {
+                event.add(`forge:ingots`, m.ingot)
+            }
+        }
+
         // Plate Loop
         if (m.generate_plate) {
             if (m.extra_tags) {
