@@ -10,6 +10,11 @@ ServerEvents.recipes(event => {
     event.remove({id: 'createdieselgenerators:compression_molding/bucket'})
     event.remove({id: 'create:crafting/kinetics/empty_blaze_burner'})
     event.remove({id: 'create:conversion_0'})
+    event.remove({id: 'create:crafting/materials/andesite_alloy'})
+    event.remove({id: 'create:crafting/materials/andesite_alloy_from_zinc'})
+    event.remove({id: 'create:crafting/materials/andesite_alloy_from_block'})
+    event.remove({id: 'create:mixing/andesite_alloy_from_zinc'})
+    event.remove({id: 'create:mixing/andesite_alloy'})
     
     // Copper Backtank
     event.replaceInput(
