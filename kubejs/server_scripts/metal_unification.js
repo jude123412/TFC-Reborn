@@ -31,17 +31,27 @@ TFCEvents.data(event => {
         // Plate Loop
         if (m.generate_plate) {
             event.itemHeat(`kubejs:metal/plate/${metal}`, m.capacity, m.work, m.weld)
+            event.itemSize(`kubejs:metal/plate/${metal}`, 'large', 'medium')
         }
 
         // Gear Loop
         if (m.generate_gear) {
             event.itemHeat(`kubejs:metal/gear/${metal}`, m.capacity, m.work, m.weld)
             event.itemHeat(`kubejs:metal/gear/half/${metal}`, m.capacity, m.work, m.weld)
+            event.itemSize(`kubejs:metal/gear/${metal}`, 'large', 'heavy')
+            event.itemSize(`kubejs:metal/gear/half/${metal}`, 'large', 'medium')
         }
 
         // Nugget Loop
         if (m.generate_nugget) {
             event.itemHeat(`kubejs:metal/nugget/${metal}`, m.capacity, m.work, m.weld)
+            event.itemSize(`kubejs:metal/nugget/${metal}`, 'small', 'light')
+        }
+
+        // Dust Loop
+        if (m.generate_dust) {
+            event.itemHeat(`kubejs:metal/powder/${metal}`, m.capacity, m.work, m.weld)
+            event.itemSize(`kubejs:metal/powder/${metal}`, 'normal', 'medium')
         }
     }
 })
@@ -341,6 +351,9 @@ ServerEvents.recipes(event => {
                 },
                 secondaries: []
             })
+
+            tfc.heating(`kubejs:metal/powder/${metal}`, m.melt)
+                .resultFluid(Fluid.of(m.fluid, 100))
         }
     }
 })
