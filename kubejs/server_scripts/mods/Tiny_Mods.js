@@ -13,4 +13,19 @@ ServerEvents.recipes(event => {
             C: '#forge:chests/wooden'
         }
     )
+
+    // Lunchbox fix?
+    event.remove({id: 'tfclunchbox:upgrade_to_cooling_lunchbox'})
+      event.shaped(
+        Item.of('tfclunchbox:cooling_lunchbox'),
+        [
+            ' H ',
+            'RLR'
+        ],
+        {
+            H: '#tfc:hammers',
+            R: '#forge:plates/red_steel',
+            L: 'tfclunchbox:lunchbox'
+        }
+    )
 })
