@@ -97,6 +97,15 @@ ServerEvents.tags('item', event => {
                 }
             }
         }
+
+        // Dust Loop
+        if (m.generate_dust) {
+            if (m.extra_tags) {
+                for (const t of m.extra_tags) {
+                    event.add(`forge:dusts/${t}`, `kubejs:metal/dusts/${metal}`)
+                }
+            }
+        }
     }
 })
 
@@ -184,12 +193,6 @@ ServerEvents.recipes(event => {
                     type: `minecraft:${t}`
                 })
             }
-        }
-
-        // Remove ALL recipes that output any duplicate dust
-        let dusts = Ingredient.of(`#forge:dusts/${metal}`).getItemIds();
-        for (let item of dusts) {
-            event.remove({output: item})
         }
 
         // Plate Loop
@@ -316,6 +319,28 @@ ServerEvents.recipes(event => {
                 ]
             ).damageIngredient('#tfc:hammers')
         }
+
+        if (m.generate_dust) {
+            // Remove ALL recipes that output any duplicate dust
+            let dusts = Ingredient.of(`#forge:dusts/${metal}`).getItemIds();
+            for (let item of dusts) {
+                event.remove({output: item})
+            }
+
+            create.milling(OutputItem.of(`kubejs:metal/powder/${metal}`), InputItem.of(`#forge:ingots/${metal}`))
+            create.crushing(OutputItem.of(`kubejs:metal/powder/${metal}`), InputItem.of(`#forge:ingots/${metal}`))
+
+            event.custom({
+                type: "immersiveengineering:crusher",
+                energy: 3000,
+                input: {
+                    tag: `forge:ingots/${metal}`
+                },
+                result: {
+                    item: `kubejs:metal/powder/${metal}`
+                },
+                secondaries: []
+            })
+        }
     }
 })
-

@@ -1,5 +1,12 @@
 ServerEvents.recipes(event => {
     const lychee = event.recipes.lychee
+    const create = event.recipes.create
+
+    event.remove({id: 'create:crushing/compat/immersiveengineering/coke_block'})
+    event.remove({id: 'create:crushing/compat/immersiveengineering/coal_coke'})
+    event.remove({id: 'immersiveengineering:crusher/coke'})
+    event.remove({id: 'immersiveengineering:crusher/coke_block'})
+    event.remove({id: 'railcraft:crusher/crushing_tags_coal_coke'})
 
     // Silt Mud bricks
     event.remove({id: 'tfc:crafting/soil/silt_drying_bricks'})
@@ -12,7 +19,7 @@ ServerEvents.recipes(event => {
         BlockPredicate.of('tfc:mud/silt')
     ).post([ 
         Post.drop_item(Item.of('tfc:drying_bricks/silt')),
-        Post.place("minecraft:air")
+        Post.place('minecraft:air')
     ])
     event.remove({id: 'tfc:crafting/soil/silt_mud_bricks'})
     event.shaped(Item.of('tfc:mud_bricks/silt', 4),
@@ -35,7 +42,7 @@ ServerEvents.recipes(event => {
         BlockPredicate.of('tfc:mud/loam')
     ).post([ 
         Post.drop_item(Item.of('tfc:drying_bricks/loam')),
-        Post.place("minecraft:air")
+        Post.place('minecraft:air')
     ])
     event.remove({id: 'tfc:crafting/soil/loam_mud_bricks'})
     event.shaped(Item.of('tfc:mud_bricks/loam', 4),
@@ -58,7 +65,7 @@ ServerEvents.recipes(event => {
         BlockPredicate.of('tfc:mud/sandy_loam')
     ).post([ 
         Post.drop_item(Item.of('tfc:drying_bricks/sandy_loam')),
-        Post.place("minecraft:air")
+        Post.place('minecraft:air')
     ])
     event.remove({id: 'tfc:crafting/soil/sandy_loam_mud_bricks'})
     event.shaped(Item.of('tfc:mud_bricks/sandy_loam', 4),
@@ -81,7 +88,7 @@ ServerEvents.recipes(event => {
         BlockPredicate.of('tfc:mud/silty_loam')
     ).post([ 
         Post.drop_item(Item.of('tfc:drying_bricks/silty_loam')),
-        Post.place("minecraft:air")
+        Post.place('minecraft:air')
     ])
     event.remove({id: 'tfc:crafting/soil/silty_loam_mud_bricks'})
     event.shaped(Item.of('tfc:mud_bricks/silty_loam', 4),
@@ -91,5 +98,62 @@ ServerEvents.recipes(event => {
     ],
     {
         B: 'tfc:mud_brick/silty_loam'
+    })
+
+
+
+    // Coke Powder
+    create.milling(Item.of('tfc:powder/coke'), InputItem.of('#forge:coal_coke'))
+    create.milling(Item.of('tfc:powder/coke', 9), InputItem.of(`#forge:storage_blocks/coal_coke`))
+    create.crushing(Item.of('tfc:powder/coke'), InputItem.of('#forge:coal_coke'))
+    create.crushing(Item.of('tfc:powder/coke', 9), InputItem.of('#forge:storage_blocks/coal_coke'))
+    event.custom({
+        type: 'immersiveengineering:crusher',
+        energy: 27000,
+        input: {
+            tag: 'forge:storage_blocks/coal_coke'
+        },
+        result: {
+            item: 'tfc:powder/coke',
+            count: 9
+        },
+        secondaries: []
+    })
+    event.custom({
+        type: 'immersiveengineering:crusher',
+        energy: 3000,
+        input: {
+            tag: 'forge:coal_coke'
+        },
+        result: {
+            item: 'tfc:powder/coke'
+        },
+        secondaries: []
+    })
+    event.custom({
+        type: 'railcraft:crusher',
+        energy: 27000,
+        input: {
+            tag: 'forge:storage_blocks/coal_coke'
+        },
+        result: {
+            item: 'tfc:powder/coke',
+            count: 9
+        },
+        secondaries: []
+    })
+
+    // Fireclay
+    event.remove({id: 'tfc:crafting/fire_clay'})
+    event.shaped(Item.of('tfc:fire_clay'),
+    [
+        'ACA',
+        'CBC',
+        'ACA'
+    ],
+    {
+        A: '#tfc:fireclay/alumina',
+        C: '#tfc:fireclay/carbon',
+        B: '#forge:clay'
     })
 })

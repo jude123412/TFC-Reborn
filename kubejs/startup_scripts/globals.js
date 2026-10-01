@@ -9,7 +9,8 @@ global.metals = {
         fluid: 'tfc:metal/copper',
         generate_plate: true,
         generate_gear: true,
-        generate_nugget: true
+        generate_nugget: true,
+        generate_dust: true
     },
     aluminum: {
         tier: 1,
@@ -20,7 +21,8 @@ global.metals = {
         fluid: 'tfc_ie_addon:metal/aluminum',
         generate_plate: true,
         generate_gear: false,
-        generate_nugget: false
+        generate_nugget: false,
+        generate_dust: true
     },
     lead: {
         tier: 2,
@@ -31,7 +33,8 @@ global.metals = {
         fluid: 'tfc_ie_addon:metal/lead',
         generate_plate: true,
         generate_gear: true,
-        generate_nugget: true
+        generate_nugget: true,
+        generate_dust: true
     },
     silver: {
         tier: 2,
@@ -42,7 +45,8 @@ global.metals = {
         fluid: 'tfc:metal/silver',
         generate_plate: true,
         generate_gear: true,
-        generate_nugget: true
+        generate_nugget: true,
+        generate_dust: true
     },
     nickel: {
         tier: 1,
@@ -53,7 +57,8 @@ global.metals = {
         fluid: 'tfc:metal/nickel',
         generate_plate: true,
         generate_gear: true,
-        generate_nugget: false
+        generate_nugget: false,
+        generate_dust: false
     },
     uranium: {
         tier: 3,
@@ -64,7 +69,8 @@ global.metals = {
         fluid: 'tfc_ie_addon:metal/uranium',
         generate_plate: true,
         generate_gear: false,
-        generate_nugget: false
+        generate_nugget: false,
+        generate_dust: false
     },
     constantan: {
         tier: 2,
@@ -75,7 +81,8 @@ global.metals = {
         fluid: 'tfc_ie_addon:metal/constantan',
         generate_plate: true,
         generate_gear: false,
-        generate_nugget: true
+        generate_nugget: true,
+        generate_dust: false
     },
     electrum: {
         tier: 3,
@@ -86,7 +93,8 @@ global.metals = {
         fluid: 'tfc_ie_addon:metal/electrum',
         generate_plate: true,
         generate_gear: false,
-        generate_nugget: true
+        generate_nugget: true,
+        generate_dust: false
     },
     steel: {
         tier: 4,
@@ -97,7 +105,8 @@ global.metals = {
         fluid: 'tfc:metal/steel',
         generate_plate: true,
         generate_gear: true,
-        generate_nugget: true
+        generate_nugget: true,
+        generate_dust: true
     },
     wrought_iron: {
         tier: 3,
@@ -109,7 +118,8 @@ global.metals = {
         extra_tags: ['iron'],
         generate_plate: true,
         generate_gear: true,
-        generate_nugget: true
+        generate_nugget: true,
+        generate_dust: true
     },
     gold: {
         tier: 1,
@@ -120,7 +130,8 @@ global.metals = {
         fluid: 'tfc:metal/gold',
         generate_plate: true,
         generate_gear: true,
-        generate_nugget: true
+        generate_nugget: true,
+        generate_dust: true
     },
     tin: {
         tier: 1,
@@ -131,7 +142,8 @@ global.metals = {
         fluid: 'tfc:metal/tin',
         generate_plate: true,
         generate_gear: true,
-        generate_nugget: false
+        generate_nugget: false,
+        generate_dust: false
     },
     zinc: {
         tier: 1,
@@ -142,7 +154,8 @@ global.metals = {
         fluid: 'tfc:metal/zinc',
         generate_plate: true,
         generate_gear: true,
-        generate_nugget: true
+        generate_nugget: true,
+        generate_dust: false
     },
     brass: {
         tier: 2,
@@ -153,7 +166,8 @@ global.metals = {
         fluid: 'tfc:metal/brass',
         generate_plate: true,
         generate_gear: true,
-        generate_nugget: true
+        generate_nugget: true,
+        generate_dust: false
     },
     bronze: {
         tier: 2,
@@ -164,7 +178,8 @@ global.metals = {
         fluid: 'tfc:metal/bronze',
         generate_plate: true,
         generate_gear: true,
-        generate_nugget: true
+        generate_nugget: true,
+        generate_dust: false
     },
     invar: {
         tier: 3,
@@ -175,7 +190,8 @@ global.metals = {
         fluid: 'rosia:invar_fluid',
         generate_plate: true,
         generate_gear: true,
-        generate_nugget: false
+        generate_nugget: false,
+        generate_dust: false
     },
     red_steel: {
         tier: 3,
@@ -186,7 +202,8 @@ global.metals = {
         fluid: 'tfc:metal/red_steel',
         generate_plate: true,
         generate_gear: false,
-        generate_nugget: false
+        generate_nugget: false,
+        generate_dust: false
     },
     chromium: {
         tier: 4,
@@ -197,7 +214,8 @@ global.metals = {
         fluid: 'firmalife:metal/chromium',
         generate_plate: false,
         generate_gear: false,
-        generate_nugget: false
+        generate_nugget: false,
+        generate_dust: false
     },
     cast_iron: {
         tier: 1,
@@ -208,7 +226,8 @@ global.metals = {
         fluid: 'tfc:metal/cast_iron',
         generate_plate: false,
         generate_gear: false,
-        generate_nugget: true
+        generate_nugget: true,
+        generate_dust: false
     },
     bismuth: {
         tier: 1,
@@ -219,7 +238,8 @@ global.metals = {
         fluid: 'tfc:metal/bismuth',
         generate_plate: false,
         generate_gear: false,
-        generate_nugget: false
+        generate_nugget: false,
+        generate_dust: false
     },
     andesite_alloy: {
         tier: 2,
@@ -236,6 +256,7 @@ global.metals = {
         generate_plate: false,
         generate_gear: false,
         generate_nugget: false,
+        generate_dust: false
     },
     andesite: {
         tier: 2,
@@ -252,6 +273,7 @@ global.metals = {
         generate_plate: false,
         generate_gear: false,
         generate_nugget: false,
+        generate_dust: false
     }
 }
 

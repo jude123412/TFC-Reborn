@@ -22,5 +22,7 @@ global.hidden_items = [
     'railcraft:bronze_ingot',
     'railcraft:invar_ingot',
     'create:empty_blaze_burner',
-    'create:blaze_burner'
+    'create:blaze_burner',
+    'immersiveengineering:dust_coke',
+    'tfcoreprocessing:kindle/coke_dust'
 ]

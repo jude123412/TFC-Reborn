@@ -56,6 +56,14 @@
     "item.kubejs.metal.nugget.bronze":"Bronze Nugget",
     "item.kubejs.metal.nugget.cast_iron":"Cast Iron Nugget",
 
+    "item.kubejs.metal.powder.copper":"Copper Powder",
+    "item.kubejs.metal.powder.aluminum":"Aluminium Powder",
+    "item.kubejs.metal.powder.lead":"Lead Powder",
+    "item.kubejs.metal.powder.silver":"Silver Powder",
+    "item.kubejs.metal.powder.steel":"Steel Powder",
+    "item.kubejs.metal.powder.wrought_iron":"Wrought Iron Powder",
+    "item.kubejs.metal.powder.gold":"Gold Powder",
+
     "item.kubejs.metal.andesite_alloy_bucket": "Andesite Alloy Bucket",
     "item.kubejs.metal.andesite_bucket": "Andesite Bucket",
 

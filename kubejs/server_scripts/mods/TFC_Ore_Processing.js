@@ -1,6 +1,8 @@
 ServerEvents.recipes(event => {
     const tfc = event.recipes.tfc
 
+    event.remove({id: 'tfcoreprocessing:heating/coke_baking'})
+
     // Bark Fire Pellets
     event.shapeless(Item.of('tfcoreprocessing:kindle/wood_pellets'), [
         '#forge:bark_powder',

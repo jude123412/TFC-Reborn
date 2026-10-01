@@ -53,6 +53,15 @@ StartupEvents.registry('item', event => {
 				.tag('forge:nuggets')
 				.tag(`forge:nuggets/${metal}`)
 		}
+
+		// Dust Registry
+		if (m.generate_dust) {
+			event.create(`kubejs:metal/powder/${metal}`)
+				.texture(`kubejs:item/metal/powder/${metal}`)
+				.translationKey(`kubejs:item/metal/powder/${metal}`)
+				.tag('forge:dusts')
+				.tag(`forge:dusts/${metal}`)
+		}
 	}
 
 	// TFC Ore Additions
