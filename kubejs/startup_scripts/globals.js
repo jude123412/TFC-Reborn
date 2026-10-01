@@ -208,7 +208,7 @@ global.metals = {
         fluid: 'tfc:metal/cast_iron',
         generate_plate: false,
         generate_gear: false,
-        generate_nugget: false
+        generate_nugget: true
     },
     bismuth: {
         tier: 1,

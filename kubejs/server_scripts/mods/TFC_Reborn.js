@@ -15,7 +15,7 @@ ServerEvents.recipes(event => {
         'kubejs:andesite_alloy',
         [
             TFC.alloyPart('kubejs:andesite', 0.95, 1.00),
-            TFC.alloyPart('tfc:wrought_iron', 0.01, 0.05)
+            TFC.alloyPart('tfc:cast_iron', 0.01, 0.05)
         ]
     )
     tfc.alloy(

@@ -64,6 +64,10 @@ ServerEvents.tags('item', event => {
             if (!Ingredient.of(`#forge:ingots`).test(m.ingot)) {
                 event.add(`forge:ingots`, m.ingot)
             }
+            // If the item is NOT in #tfc:pileable_ingots, add it
+            if (!Ingredient.of(`#tfc:pileable_ingots`).test(m.ingot)) {
+                event.add(`tfc:pileable_ingots`, m.ingot)
+            }
         }
 
         // Plate Loop
