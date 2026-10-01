@@ -14,7 +14,7 @@ ServerEvents.recipes(event => {
         }
     )
 
-    // Lunchbox fix?
+    // Cooling Lunch Box
     event.remove({id: 'tfclunchbox:upgrade_to_cooling_lunchbox'})
       event.shaped(
         Item.of('tfclunchbox:cooling_lunchbox'),
