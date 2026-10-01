@@ -19,7 +19,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'railcraft:coke_oven/coal_coke'})
     event.custom({
         'type': 'railcraft:coking',
-        'cookingTime': 400,
+        'cookingTime': 1200,
         'creosoteOutput': 500,
         'experience': 0.0,
         'ingredient': {
@@ -34,7 +34,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'railcraft:coke_oven/coal_coke_block'})
     event.custom({
         'type': 'railcraft:coking',
-        'cookingTime': 3600,
+        'cookingTime': 10800,
         'creosoteOutput': 4500,
         'experience': 0.0,
         'ingredient': {
@@ -42,6 +42,21 @@ ServerEvents.recipes(event => {
         },
         'result': {
             'item': 'immersiveengineering:coke'
+        }
+    })
+
+    // Coal Coke Block
+    event.remove({id: 'railcraft:coke_oven/charcoal'})
+    event.custom({
+        'type': 'railcraft:coking',
+        'cookingTime': 900,
+        'creosoteOutput': 256,
+        'experience': 0.0,
+        'ingredient': {
+            'tag': 'firmalife:smoking_fuel'
+        },
+        'result': {
+            'item': 'minecraft:charcoal'
         }
     })
 })
