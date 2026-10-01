@@ -10,7 +10,7 @@ ServerEvents.recipes(event => {
         ],
         {
             S: '#forge:sand',
-            B: '#forge:ingots/brick',
+            B: '#rnr:brick_road_items',
             C: 'minecraft:clay'
         }
     )
