@@ -112,7 +112,7 @@ ServerEvents.tags('item', event => {
         if (m.generate_dust) {
             if (m.extra_tags) {
                 for (const t of m.extra_tags) {
-                    event.add(`forge:dusts/${t}`, `kubejs:metal/dusts/${metal}`)
+                    event.add(`forge:dusts/${t}`, `kubejs:metal/powder/${metal}`)
                 }
             }
         }

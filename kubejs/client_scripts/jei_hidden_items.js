@@ -2,7 +2,8 @@ JEIEvents.hideItems(event => {
     const itemTypes = [
         'plates',
         'gears',
-        'nuggets'
+        'nuggets',
+        'dusts'
     ]
 
     // Item type hiding
