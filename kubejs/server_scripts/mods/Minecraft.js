@@ -138,6 +138,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'minecraft:golden_carrot'})
     event.remove({id: 'minecraft:dried_kelp'})
     event.remove({id: 'create:milling/saddle'})
+    event.remove({id: 'minecraft:brick'})
 
     // Elytra
     event.shaped(

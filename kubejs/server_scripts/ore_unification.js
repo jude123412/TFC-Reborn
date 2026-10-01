@@ -22,6 +22,7 @@ ServerEvents.tags('item', event => {
     // Add Coal gem tag
     event.add('forge:gems/coal', 'tfc:ore/bituminous_coal')
     event.add('forge:gems/coal', 'minecraft:coal')
+    event.add('forge:gems/coal', 'tfc:ore/lignite')
 
     // Add Amethyst gem tag
     event.add('forge:gems/amethyst', 'tfc:gem/amethyst')
