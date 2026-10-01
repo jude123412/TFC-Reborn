@@ -128,10 +128,26 @@ ServerEvents.recipes(event => {
         ],
         {
             G: '#forge:plates/gold',
-            C: '#forge:plates/copper',
+            C: '#forge:sheets/copper',
             A: '#forge:ingots/andesite_alloy',
             D: '#forge:double_ingots/copper',
-            P: '#forge:double_sheets/copper'
+            P: '#forge:gears/wrought_iron'
+        }
+    )
+
+    // Controller Rail
+    event.remove({id: 'create:crafting/kinetics/controller_rail'})
+    event.shaped(
+        Item.of('create:controller_rail', 8),
+        [
+            'R R',
+            'RSR',
+            'RTR'
+        ],
+        {
+            R: 'railcraft:advanced_rail',
+            S: 'railcraft:wooden_railbed',
+            T: 'create:electron_tube'
         }
     )
 })
