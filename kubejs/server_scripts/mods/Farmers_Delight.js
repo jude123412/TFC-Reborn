@@ -1,5 +1,7 @@
 ServerEvents.recipes(event => {
     const fd = event.recipes.farmersdelight
+
+    event.remove({id: 'farmersdelight:canvas'})
     
     //Fix Straw Recipes
     event.remove({output: 'farmersdelight:straw'})
@@ -24,6 +26,7 @@ ServerEvents.recipes(event => {
         ],
     )
 
+    // Magma Cake
     event.remove({id: 'beneathdelight:crafting/cake/magma_cake'})
     event.remove({id: 'mynethersdelight:crafting/magma_cake'})
     event.shaped(

@@ -155,4 +155,20 @@ ServerEvents.recipes(event => {
             T: 'create:electron_tube'
         }
     )
+
+    // Windmill Sail
+    event.remove({id: 'create:crafting/kinetics/white_sail'})
+    event.shaped(
+        Item.of('create:white_sail', 2),
+        [
+            'SRS',
+            'RCR',
+            'SRS'
+        ],
+        {
+            S: '#bsa:bindings/weak',
+            R: '#forge:rods/wooden',
+            C: 'farmersdelight:canvas'
+        }
+    )
 })
