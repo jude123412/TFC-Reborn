@@ -53,7 +53,7 @@ ServerEvents.recipes(event => {
         'creosoteOutput': 256,
         'experience': 0.0,
         'ingredient': {
-            'tag': 'firmalife:smoking_fuel'
+            'tag': 'tfc:pit_kiln_logs'
         },
         'result': {
             'item': 'minecraft:charcoal'
