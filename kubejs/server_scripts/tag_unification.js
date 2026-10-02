@@ -18,3 +18,15 @@ ServerEvents.tags('item', event => {
     event.add('tfc:fireclay/carbon', 'tfc:powder/graphite')
     event.add('tfc:fireclay/carbon', '#forge:dusts/coal_coke')
 })
+
+ServerEvents.tags('fluid', event => {
+    const red_steel_bucket = [
+        'railcraft:creosote'
+    ]
+
+    for (const fluid of red_steel_bucket) {
+        event.add('tfc:usable_in_wooden_bucket', fluid)
+        event.add('tfc:usable_in_red_steel_bucket', fluid)
+        event.add('tfc:usable_in_barrel', fluid)
+    }
+})
