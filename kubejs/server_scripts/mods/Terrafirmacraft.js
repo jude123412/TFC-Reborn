@@ -1,6 +1,7 @@
 ServerEvents.recipes(event => {
     const lychee = event.recipes.lychee
     const create = event.recipes.create
+    const tfc = event.recipes.tfc
 
     event.remove({id: 'create:crushing/compat/immersiveengineering/coke_block'})
     event.remove({id: 'create:crushing/compat/immersiveengineering/coal_coke'})
@@ -103,6 +104,8 @@ ServerEvents.recipes(event => {
 
 
     // Coke Powder
+    tfc.quern(Item.of('tfc:powder/coke'), '#forge:coal_coke')
+    tfc.quern(Item.of('tfc:powder/coke', 9), `#forge:storage_blocks/coal_coke`)
     create.milling(Item.of('tfc:powder/coke'), InputItem.of('#forge:coal_coke'))
     create.milling(Item.of('tfc:powder/coke', 9), InputItem.of(`#forge:storage_blocks/coal_coke`))
     create.crushing(Item.of('tfc:powder/coke'), InputItem.of('#forge:coal_coke'))

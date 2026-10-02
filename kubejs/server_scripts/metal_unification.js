@@ -337,6 +337,8 @@ ServerEvents.recipes(event => {
                 event.remove({output: item})
             }
 
+            tfc.quern(Item.of(`kubejs:metal/powder/${metal}`), `#forge:ingots/${metal}`)
+
             create.milling(OutputItem.of(`kubejs:metal/powder/${metal}`), InputItem.of(`#forge:ingots/${metal}`))
             create.crushing(OutputItem.of(`kubejs:metal/powder/${metal}`), InputItem.of(`#forge:ingots/${metal}`))
 
