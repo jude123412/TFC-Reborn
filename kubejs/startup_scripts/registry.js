@@ -57,8 +57,8 @@ StartupEvents.registry('item', event => {
 		// Dust Registry
 		if (m.generate_dust) {
 			event.create(`kubejs:metal/powder/${metal}`)
-				.texture(`kubejs:item/metal/powder/${metal}`)
-				.translationKey(`kubejs:item/metal/powder/${metal}`)
+				.texture(`kubejs:item/powder/${metal}`)
+				.translationKey(`kubejs:item/powder/${metal}`)
 				.tag('forge:dusts')
 				.tag(`forge:dusts/${metal}`)
 		}
@@ -83,6 +83,15 @@ StartupEvents.registry('item', event => {
 				.tag('forge:pellets')
 				.tag(`forge:pellets/${ore}`)
 		}
+	}
+
+	// TFC Reborn Powders 
+	for (const powder of global.powder) {
+		event.create(`kubejs:powder/${powder}`)
+			.texture(`kubejs:item/powder/${powder}`)
+			.translationKey(`kubejs:item/powder/${powder}`)
+			.tag('forge:dusts')
+			.tag(`forge:dusts/${powder}`)
 	}
 })
 

@@ -20,6 +20,19 @@ ServerEvents.tags('item', event => {
 
     // Sawdust
     event.add('forge:sawdust', '#forge:bark_powder')
+
+    // Berries
+    event.add('tfc:foods/berries', 'tfc:food/blackberry')
+    event.add('tfc:foods/berries', 'tfc:food/blueberry')
+    event.add('tfc:foods/berries', 'tfc:food/bunchberry')
+    event.add('tfc:foods/berries', 'tfc:food/cloudberry')
+    event.add('tfc:foods/berries', 'tfc:food/cranberry')
+    event.add('tfc:foods/berries', 'tfc:food/elderberry')
+    event.add('tfc:foods/berries', 'tfc:food/gooseberry')
+    event.add('tfc:foods/berries', 'tfc:food/raspberry')
+    event.add('tfc:foods/berries', 'tfc:food/snowberry')
+    event.add('tfc:foods/berries', 'tfc:food/strawberry')
+    event.add('tfc:foods/berries', 'tfc:food/wintergreen_berry')
 })
 
 ServerEvents.tags('fluid', event => {

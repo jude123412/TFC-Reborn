@@ -714,6 +714,13 @@ ServerEvents.recipes(event => {
         }
     })
 
+    // Dried Kelp Block
+    event.replaceInput(
+        {id: 'minecraft:dried_kelp_block'},
+        'minecraft:dried_kelp',
+        'tfc:food/dried_kelp'
+    )
+
     // Prismarine Crystals
     tfc.barrel_sealed(8000)
         .outputItem('minecraft:prismarine_crystals')
@@ -749,10 +756,8 @@ ServerEvents.recipes(event => {
             ]
         ).tier(5)
 
-    // Dried Kelp Block
-    event.replaceInput(
-        {id: 'minecraft:dried_kelp_block'},
-        'minecraft:dried_kelp',
-        'tfc:food/dried_kelp'
-    )
+    // Glass Bottle
+    event.shapeless('minecraft:glass_bottle', [
+        '#tfc:glass_bottles'
+    ])
 })

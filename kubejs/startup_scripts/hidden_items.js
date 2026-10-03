@@ -25,5 +25,20 @@ global.hidden_items = [
     'create:blaze_burner',
     'immersiveengineering:dust_coke',
     'tfcoreprocessing:kindle/coke_dust',
-    'minecraft:cake'
+    'minecraft:cake',
+    'create:powdered_obsidian',
+    'mekanism:dust_obsidian',
+    'railcraft:obsidian_dust',
+    'create:raw_zinc',
+    'create:crushed_raw_iron',
+    'create:crushed_raw_gold',
+    'create:crushed_raw_copper',
+    'create:crushed_raw_zinc',
+    'create:crushed_raw_osmium',
+    'create:crushed_raw_silver',
+    'create:crushed_raw_tin',
+    'create:crushed_raw_lead',
+    'create:crushed_raw_aluminum',
+    'create:crushed_raw_uranium',
+    'create:crushed_raw_nickel'
 ]

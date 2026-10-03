@@ -1,6 +1,42 @@
 TFCEvents.data(event => {
-    // Loose Andesite Rock
-    event.itemHeat('create:shaft', 0.71425, 850, 1050)
+    // Bar of Chocolate
+    event.foodItem('create:bar_of_chocolate', food => {
+        food.hunger(4)
+        food.dairy(0.5)
+        food.saturation(0.8)
+        food.decayModifier(0.5)
+    })
+
+    event.foodItem('create:sweet_roll', food => {
+        food.hunger(6)
+        food.grain(0.8)
+        food.dairy(0.5)
+        food.saturation(1.6)
+        food.decayModifier(3.0)
+    })
+
+    event.foodItem('create:chocolate_glazed_berries', food => {
+        food.hunger(2)
+        food.fruit(0.8)
+        food.dairy(0.5)
+        food.saturation(1.0)
+        food.decayModifier(1.5)
+    })
+
+    event.foodItem('create:honeyed_apple', food => {
+        food.hunger(4)
+        food.fruit(1.0)
+        food.saturation(0.8)
+        food.decayModifier(1.5)
+    })
+
+    event.foodItem('create:builders_tea', food => {
+        food.hunger(1)
+        food.fruit(0.2)
+        food.dairy(0.5)
+        food.saturation(0.8)
+        food.decayModifier(1.0)
+    })
 })
 
 ServerEvents.recipes(event => {
@@ -15,7 +51,40 @@ ServerEvents.recipes(event => {
     event.remove({id: 'create:crafting/materials/andesite_alloy_from_block'})
     event.remove({id: 'create:mixing/andesite_alloy_from_zinc'})
     event.remove({id: 'create:mixing/andesite_alloy'})
-    
+    event.remove({id: 'create:milling/wheat'})
+    event.remove({id: 'createdieselgenerators:basin_fermenting/dough'})
+    event.remove({id: 'create:crafting/appliances/dough'})
+    event.remove({id: 'create:splashing/wheat_flour'})
+    event.remove({id: 'create:mixing/dough_by_mixing'})
+    event.remove({id: 'create:crushing/raw_iron_block'})
+    event.remove({id: 'create:crushing/deepslate_iron_ore'})
+    event.remove({id: 'create:crushing/deepslate_zinc_ore'})
+    event.remove({id: 'create:crushing/raw_zinc_block'})
+    event.remove({id: 'create:crushing/raw_zinc'})
+    event.remove({id: 'create:crushing/zinc_ore'})
+    event.remove({id: 'create:crushing/raw_osmium_block'})
+    event.remove({id: 'create:crushing/osmium_ore'})
+    event.remove({id: 'create:crushing/raw_osmium'})
+    event.remove({id: 'create:crushing/raw_silver'})
+    event.remove({id: 'create:crushing/raw_silver_block'})
+    event.remove({id: 'create:crushing/silver_ore'})
+    event.remove({id: 'create:crushing/tin_ore'})
+    event.remove({id: 'create:crushing/raw_tin'})
+    event.remove({id: 'create:crushing/raw_tin_block'})
+    event.remove({id: 'create:crushing/raw_lead'})
+    event.remove({id: 'create:crushing/lead_ore'})
+    event.remove({id: 'create:crushing/raw_lead_block'})
+    event.remove({id: 'create:crushing/raw_aluminum_block'})
+    event.remove({id: 'create:crushing/raw_aluminum'})
+    event.remove({id: 'create:crushing/aluminum_ore'})
+    event.remove({id: 'create:crushing/raw_uranium'})
+    event.remove({id: 'create:crushing/uranium_ore'})
+    event.remove({id: 'create:crushing/raw_uranium_block'})
+    event.remove({id: 'create:crushing/raw_nickel'})
+    event.remove({id: 'create:crushing/nickel_ore'})
+    event.remove({id: 'create:crushing/raw_nickel_block'})
+    event.remove({id: 'create:compacting/chocolate'})
+
     // Copper Backtank
     event.replaceInput(
         {id: 'create:crafting/appliances/copper_backtank'},
@@ -156,6 +225,45 @@ ServerEvents.recipes(event => {
         }
     )
 
+    // Mechanical Drill
+    event.remove({id: 'create:crafting/kinetics/mechanical_drill'})
+    event.shaped(
+        Item.of('create:mechanical_drill'),
+        [
+            'D',
+            'A',
+            'C'
+        ],
+        {
+            D: 'immersiveengineering:drillhead_steel',
+            A: '#forge:ingots/andesite_alloy',
+            C: 'create:andesite_casing'
+        }
+    )
+
+    // Mechanical Saw
+    event.remove({id: 'create:crafting/kinetics/mechanical_saw'})
+    event.shaped(
+        Item.of('create:mechanical_saw'),
+        [
+            'D',
+            'A',
+            'C'
+        ],
+        {
+            D: 'immersiveengineering:sawblade',
+            A: '#forge:ingots/andesite_alloy',
+            C: 'create:andesite_casing'
+        }
+    )
+
+    // Redstone Contact
+    event.replaceInput(
+        {id: 'create:crafting/logistics/redstone_contact'},
+        'minecraft:cobblestone',
+        '#forge:cobblestone'
+    )
+
     // Windmill Sail
     event.remove({id: 'create:crafting/kinetics/white_sail'})
     event.shaped(
@@ -169,6 +277,204 @@ ServerEvents.recipes(event => {
             S: '#bsa:bindings/weak',
             R: '#forge:rods/wooden',
             C: 'farmersdelight:canvas'
+        }
+    )
+
+    // Mechanical Crafter
+    event.replaceInput(
+        {id: 'create:crafting/kinetics/mechanical_crafter'},
+        'minecraft:crafting_table',
+        '#tfc:workbenches'
+    )
+    
+    // Andesite Funnel
+    event.replaceInput(
+        {id: 'create:crafting/logistics/andesite_funnel'},
+        'minecraft:dried_kelp',
+        'tfc:food/dried_kelp'
+    )
+
+    // Brass Funnel
+    event.replaceInput(
+        {id: 'create:crafting/logistics/brass_funnel'},
+        'minecraft:dried_kelp',
+        'tfc:food/dried_kelp'
+    )
+
+    // Andesite Tunnel
+    event.replaceInput(
+        {id: 'create:crafting/logistics/andesite_tunnel'},
+        'minecraft:dried_kelp',
+        'tfc:food/dried_kelp'
+    )
+
+    // Brass Tunnel
+    event.replaceInput(
+        {id: 'create:crafting/logistics/brass_tunnel'},
+        'minecraft:dried_kelp',
+        'tfc:food/dried_kelp'
+    )
+
+    // Item Vault
+    event.replaceInput(
+        {id: 'create:crafting/kinetics/item_vault'},
+        'minecraft:barrel',
+        '#forge:chests'
+    )
+
+    // Item Hatch
+    event.replaceInput(
+        {id: 'create:crafting/logistics/item_hatch'},
+        'minecraft:iron_trapdoor',
+        'tfc:metal/trapdoor/wrought_iron'
+    )
+    
+    // Packager
+    event.replaceInput(
+        {id: 'create:crafting/logistics/packager'},
+        'minecraft:iron_ingot',
+        '#forge:ingots/wrought_iron'
+    )
+
+    // White Postbox
+    event.replaceInput(
+        {id: 'create:crafting/logistics/white_postbox'},
+        'minecraft:barrel',
+        '#forge:chests'
+    )
+
+    // Redstone Requester
+    event.replaceInput(
+        {id: 'create:crafting/logistics/redstone_requester'},
+        'minecraft:iron_ingot',
+        '#forge:ingots/wrought_iron'
+    )
+
+    // Pulse Timer
+    event.replaceInput(
+        {id: 'create:crafting/logistics/pulse_timer'},
+        'minecraft:amethyst_shard',
+        '#forge:gems/amethyst'
+    )
+
+    // Rose Quartz
+    event.remove({id: 'create:crafting/materials/rose_quartz'})
+    tfc.barrel_sealed(8000)
+        .outputItem('create:rose_quartz')
+        .inputs('#forge:gems/quartz', TFC.fluidStackIngredient('#forge:redstone_acid', 2000))
+
+
+    // Crafting Blueprint
+    event.replaceInput(
+        {id: 'create:crafting/appliances/crafting_blueprint'},
+        'minecraft:crafting_table',
+        '#tfc:workbench'
+    )
+       
+    // Chocolate
+    event.remove({id: 'create:mixing/chocolate'})
+    event.custom({
+            type: 'create:mixing',
+            heatRequirement: 'heated',
+            ingredients: [
+                {
+                    tag: 'tfc:sweetener'
+                },
+                {
+                    item: 'firmalife:food/cocoa_beans'
+                },
+                {
+                    amount: 250,
+                    fluidTag: 'tfc:milks'
+                }
+            ],
+            results: [
+                {
+                    amount: 250,
+                    fluid: 'create:chocolate'
+                }
+            ]
+        }
+    )
+
+    // Sweet Roll
+    event.remove({id: 'create:filling/sweet_roll'})
+    event.custom({
+            type: 'create:filling',
+            ingredients: [
+                {
+                    tag: 'tfc:foods/breads'
+                },
+                {
+                    amount: 250,
+                    fluidTag: 'tfc:milks'
+                }
+            ],
+            results: [
+                {
+                item: 'create:sweet_roll'
+                }
+            ]
+        }
+    )
+
+    // Chocolate Glazed Berries
+    event.replaceInput(
+        {id: 'create:filling/chocolate_glazed_berries'},
+        'minecraft:sweet_berries',
+        '#tfc:foods/berries'
+    )
+
+    // Chocolate Glazed Berries
+    event.replaceInput(
+        {id: 'create:filling/honeyed_apple'},
+        'minecraft:apple',
+        '#tfc:foods/apples'
+    )
+
+    // Builders Tea
+    event.remove({id: 'create:mixing/tea'})
+    event.custom({
+            type: 'create:mixing',
+            heatRequirement: 'heated',
+            ingredients: [
+                {
+                    tag: 'minecraft:leaves'
+                },
+                {
+                    amount: 250,
+                    fluidTag: 'tfc:hydrating'
+                },
+                {
+                    amount: 250,
+                    fluidTag: 'tfc:milks'
+                }
+            ],
+            results: [
+                {
+                    amount: 500,
+                    fluid: 'create:tea'
+                }
+            ]
+        }
+    )
+
+    // Honey
+    event.remove({id: 'create:mixing/honey'})
+    event.custom({
+            type: 'create:mixing',
+            heatRequirement: 'heated',
+            ingredients: [
+                {
+                    item: 'firmalife:raw_honey'
+                }
+            ],
+            results: [
+                {
+                    amount: 250,
+                    fluid: 'create:honey'
+                }
+            ]
         }
     )
 })
