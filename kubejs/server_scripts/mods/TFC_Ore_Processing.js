@@ -3,14 +3,6 @@ ServerEvents.recipes(event => {
 
     event.remove({id: 'tfcoreprocessing:heating/coke_baking'})
 
-    // Bark Fire Pellets
-    event.shapeless(Item.of('tfcoreprocessing:kindle/wood_pellets'), [
-        '#forge:bark_powder',
-        '#forge:bark_powder',
-        '#forge:bark_powder',
-        '#forge:bark_powder'
-    ])
-
     // Firelog
     event.remove({id: 'tfcoreprocessing:compress/firelog'})
     event.shapeless(Item.of('tfcoreprocessing:kindle/firelog'), [

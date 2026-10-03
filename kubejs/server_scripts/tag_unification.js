@@ -17,6 +17,9 @@ ServerEvents.tags('item', event => {
     // Carbon sources
     event.add('tfc:fireclay/carbon', 'tfc:powder/graphite')
     event.add('tfc:fireclay/carbon', '#forge:dusts/coal_coke')
+
+    // Sawdust
+    event.add('forge:sawdust', '#forge:bark_powder')
 })
 
 ServerEvents.tags('fluid', event => {
