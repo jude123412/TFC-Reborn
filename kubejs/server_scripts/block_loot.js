@@ -1,5 +1,42 @@
 LootJS.modifiers((event) => {
-    // Adds an approximetly 1/1111 chance for raw TFC rock blocks to drop an uncut gem.
+
+    // Sandy Shrub
+    event.addBlockLootModifier('farmersdelight:sandy_shrub')
+        .replaceLoot('minecraft:beetroot_seeds', 'tfc:seeds/beet', true)
+
+    // Wild Cabbage
+    event.addBlockLootModifier('farmersdelight:wild_cabbages')
+        .replaceLoot('farmersdelight:cabbage', 'tfc:food/cabbage', true)
+        .replaceLoot('farmersdelight:cabbage_seeds', 'tfc:seeds/cabbage', true)
+
+    // Wild Onion
+    event.addBlockLootModifier('farmersdelight:wild_onions')
+        .replaceLoot('farmersdelight:onion', 'tfc:food/onion', true)
+
+    // Tomato Shrub
+    event.addBlockLootModifier('farmersdelight:wild_tomatoes')
+        .replaceLoot('farmersdelight:tomato', 'tfc:food/tomato', true)
+        .replaceLoot('farmersdelight:tomato_seeds', 'tfc:seeds/tomato', true)
+
+    // Wild Carrot
+    event.addBlockLootModifier('farmersdelight:wild_carrots')
+        .replaceLoot('minecraft:carrot', 'tfc:food/carrot', true)
+
+    // Wild Potato
+    event.addBlockLootModifier('farmersdelight:wild_potatoes')
+        .replaceLoot('minecraft:potato', 'tfc:food/potato', true)
+
+    // Sea Beet
+    event.addBlockLootModifier('farmersdelight:wild_beetroots')
+        .replaceLoot('minecraft:beetroot', 'tfc:food/beet', true)
+        .replaceLoot('minecraft:beetroot_seeds', 'tfc:seeds/beet', true)
+
+    // Wild Rice
+    event.addBlockLootModifier('farmersdelight:wild_rice')
+        .replaceLoot('farmersdelight:rice', 'tfc:food/rice', true)
+
+    // Adds approximetly 1/1111 chance for raw 
+    // TFC rock blocks to drop an uncut gem.
     // Yes, I'm brining it back...
     event.addBlockLootModifier(/tfc:rock\/raw\/[^_]+$/)
         .addAlternativesLoot(
@@ -20,7 +57,7 @@ LootJS.modifiers((event) => {
         'rich'
     ]
 
-    // Allows tfc ores to drop experience
+    // Allows TFC ores to drop experience
     // and be affected by fortune
     for(const mineral in global.fortune_ores) {
         let m = global.fortune_ores[mineral]
