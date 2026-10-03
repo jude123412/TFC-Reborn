@@ -14,42 +14,49 @@ LootJS.modifiers((event) => {
             LootEntry.of('tfc:ore/topaz').when((c) => c.randomChance(0.0001))
         );
 
-    const ores = [
-        "poor",
-        "normal",
-        "rich",
-        "bituminous_coal",
-        "lignite",
-        "gypsum",
-        "graphite",
-        "sulfur",
-        "cinnabar",
-        "cryolite",
-        "saltpeter",
-        "sylvite",
-        "borax",
-        "halite",
-        "amethyst",
-        "diamond",
-        "emerald",
-        "lapis_lazuli",
-        "opal",
-        "pyrite",
-        "ruby",
-        "sapphire",
-        "topaz"
-    ];
+    const ore_grades = [
+        'poor',
+        'normal',
+        'rich'
+    ]
 
-    // Allows tfc ores to drop experience in a balanced way :~)
-    for(const mineral of ores) {
-        event.addBlockLootModifier(new RegExp(".*ore\/.*" + mineral))
-            .pool(p => {
-                p.randomChance(0.75);
-                p.dropExperience(1);
-            })
-            .pool(p => {
-                p.randomChance(0.25);
-                p.dropExperience(1);
-            })
+    // Allows tfc ores to drop experience
+    // and be affected by fortune
+    for(const mineral in global.fortune_ores) {
+        let m = global.fortune_ores[mineral]
+
+        if (m.is_graded) {
+            for (const grade of ore_grades) {
+                event.addBlockLootModifier(new RegExp(`${m.mod_id}:ore/${grade}_${mineral}.*`))
+                    .removeLoot(`${m.mod_id}:ore/${grade}_${mineral}`)
+                    .pool(p => {
+                        p.addLoot(`${m.mod_id}:ore/${grade}_${mineral}`)
+                        p.applyOreBonus('minecraft:fortune');
+                    })
+                    .pool(p => {
+                        p.randomChance(0.75);
+                        p.dropExperience(1);
+                    })
+                    .pool(p => {
+                        p.randomChance(0.25);
+                        p.dropExperience(1);
+                    });
+            }
+        } else {
+            event.addBlockLootModifier(new RegExp(`${m.mod_id}:ore/${mineral}.*`))
+                .removeLoot(`${m.mod_id}:ore/${mineral}`)
+                .pool(p => {
+                    p.addLoot(`${m.mod_id}:ore/${mineral}`)
+                    p.applyOreBonus('minecraft:fortune');
+                })
+                .pool(p => {
+                    p.randomChance(0.75);
+                    p.dropExperience(1);
+                })
+                .pool(p => {
+                    p.randomChance(0.25);
+                    p.dropExperience(1);
+                });
+        }
     }
 })
