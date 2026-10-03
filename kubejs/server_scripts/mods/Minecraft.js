@@ -1,7 +1,14 @@
 TFCEvents.data(event => {
+    // Cobblestone
     event.itemHeat('#forge:cobblestone', 2, null, null)
+
+    // Deepslate
     event.itemHeat('minecraft:deepslate', 2, null, null)
+
+    // Sculk
     event.itemHeat('minecraft:sculk', 2, 1000, 1400)
+
+    // Echo Shard
     event.itemHeat('minecraft:echo_shard', 2, 1000, 1400)
 })
 
@@ -139,6 +146,13 @@ ServerEvents.recipes(event => {
     event.remove({id: 'minecraft:dried_kelp'})
     event.remove({id: 'create:milling/saddle'})
     event.remove({id: 'minecraft:brick'})
+    event.remove({id: 'farmersdelight:pumpkin_pie_from_pie_crust'})
+    event.remove({id: 'farmersdelight:pumpkin_pie_from_slices'})
+    event.remove({id: 'farmersdelight:cake_from_slices'})
+    event.remove({id: 'farmersdelight:cake_from_milk_bottle'})
+    event.remove({id: 'minecraft:cake'})
+    event.remove({id: 'create:crafting/curiosities/cake'})
+    event.remove({id: 'farmersdelight:cooking/mushroom_stew'})
 
     // Elytra
     event.shaped(
@@ -699,7 +713,6 @@ ServerEvents.recipes(event => {
             item: 'minecraft:copper_block'
         }
     })
-
 
     // Prismarine Crystals
     tfc.barrel_sealed(8000)

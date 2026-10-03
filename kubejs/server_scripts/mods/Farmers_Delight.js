@@ -1,3 +1,22 @@
+TFCEvents.data(event => {
+    // Pumpkin Pie Slice
+    event.foodItem('farmersdelight:pumpkin_pie_slice', food => {
+        food.hunger(4)
+        food.fruit(0.4)
+        food.grain(0.1)
+        food.saturation(1.0)
+        food.decayModifier(3.0)
+    })
+
+    // Pumpkin Slice
+    event.foodItem('farmersdelight:pumpkin_slice', food => {
+        food.hunger(2)
+        food.fruit(0.4)
+        food.saturation(1.0)
+        food.decayModifier(1.5)
+    })
+})
+
 ServerEvents.recipes(event => {
     const fd = event.recipes.farmersdelight
 
@@ -43,4 +62,13 @@ ServerEvents.recipes(event => {
             S: 'tfc:straw'
         }
     )
+
+    // Pumpkin Pie Slice
+    event.shapeless(
+        Item.of('farmersdelight:pumpkin_pie_slice', 4),
+        [
+            'minecraft:pumpkin_pie',
+            '#forge:tools/knives'
+        ]
+    ).damageIngredient('#forge:tools/knives')
 })

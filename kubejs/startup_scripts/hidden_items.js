@@ -24,5 +24,6 @@ global.hidden_items = [
     'create:empty_blaze_burner',
     'create:blaze_burner',
     'immersiveengineering:dust_coke',
-    'tfcoreprocessing:kindle/coke_dust'
+    'tfcoreprocessing:kindle/coke_dust',
+    'minecraft:cake'
 ]
