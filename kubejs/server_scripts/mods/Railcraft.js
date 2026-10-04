@@ -19,7 +19,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'railcraft:coke_oven/coal_coke'})
     event.custom({
         'type': 'railcraft:coking',
-        'cookingTime': 1200,
+        'cookingTime': 3600,
         'creosoteOutput': 500,
         'experience': 0.0,
         'ingredient': {
@@ -34,7 +34,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'railcraft:coke_oven/coal_coke_block'})
     event.custom({
         'type': 'railcraft:coking',
-        'cookingTime': 10800,
+        'cookingTime': 32400,
         'creosoteOutput': 4500,
         'experience': 0.0,
         'ingredient': {
@@ -49,7 +49,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'railcraft:coke_oven/charcoal'})
     event.custom({
         'type': 'railcraft:coking',
-        'cookingTime': 900,
+        'cookingTime': 1800,
         'creosoteOutput': 256,
         'experience': 0.0,
         'ingredient': {
