@@ -46,7 +46,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'tfc_ie_addon:cokeoven/lignite'})
     event.custom({
         type: 'immersiveengineering:coke_oven',
-        creosote: 500,
+        creosote: 4500,
         input: {
             tag: 'forge:storage_blocks/coal'
         },
@@ -61,7 +61,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'immersiveengineering:crafting/coal_coke_to_coke'})
     event.custom({
         type: 'immersiveengineering:coke_oven',
-        creosote: 4500,
+        creosote: 500,
         input: {
             tag: 'forge:gems/coal'
         },
