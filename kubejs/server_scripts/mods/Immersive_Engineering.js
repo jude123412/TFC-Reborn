@@ -42,6 +42,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'immersivetechnology:advanced_coke_oven/coke_block'})
     event.remove({id: 'immersivetechnology:advanced_coke_oven/charcoal'})
     event.remove({id: 'immersivetechnology:advanced_coke_oven/coke'})
+    event.remove({id: 'immersiveengineering:crafting/coal_coke_to_coke'})
 
     // Coal Coke
     event.remove({id: 'tfc_ie_addon:cokeoven/bituminous_coal'})
@@ -61,7 +62,6 @@ ServerEvents.recipes(event => {
 
     // Block of Coal Coke
     event.remove({id: 'immersiveengineering:cokeoven/coke_block'})
-    event.remove({id: 'immersiveengineering:crafting/coal_coke_to_coke'})
     event.custom({
         type: 'immersiveengineering:coke_oven',
         creosote: 500,
