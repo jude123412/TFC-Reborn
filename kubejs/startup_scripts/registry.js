@@ -84,15 +84,6 @@ StartupEvents.registry('item', event => {
 				.tag(`forge:pellets/${ore}`)
 		}
 	}
-
-	// TFC Reborn Powders 
-	for (const powder of global.powder) {
-		event.create(`kubejs:powder/${powder}`)
-			.texture(`kubejs:item/powder/${powder}`)
-			.translationKey(`kubejs:item/powder/${powder}`)
-			.tag('forge:dusts')
-			.tag(`forge:dusts/${powder}`)
-	}
 })
 
 StartupEvents.registry('fluid', event => {

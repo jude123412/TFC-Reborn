@@ -46,5 +46,7 @@ global.hidden_items = [
     'create:dough',
     'create:zinc_ore',
     'create:deepslate_zinc_ore',
-    'create:raw_zinc_block'
+    'create:raw_zinc_block',
+    'immersiveengineering:coal_coke',
+    'railcraft:coal_coke'
 ]

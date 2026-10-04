@@ -1,6 +1,12 @@
 TFCEvents.data(event => {
     // Loose Andesite Rock
     event.itemHeat('tfc:rock/loose/andesite', 5.714, 900, 1100)
+
+    // Coal Coke
+    event.fuel('kubejs:coal_coke', 1550, 3300, null)
+
+    // Block of Coal Coke
+    event.fuel('kubejs:coal_coke_block', 1550, 33000, null)
 })
 
 ServerEvents.recipes(event => {
@@ -73,4 +79,23 @@ ServerEvents.recipes(event => {
         ]
     })
     mekanism.enriching(Item.of('kubejs:powder/obsidian', 4), Item.of('#forge:obsidian'))
+
+    // Block of Coal Coke
+    event.stonecutting('immersiveengineering:coke', '#forge:storage_blocks/coal_coke')
+    event.stonecutting('railcraft:coal_coke_block', '#forge:storage_blocks/coal_coke')
+    event.stonecutting('kubejs:coal_coke_block', '#forge:storage_blocks/coal_coke')
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:coal_coke',
+            },
+            count: 9
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'kubejs:coal_coke_block'
+        }
+    })
 })

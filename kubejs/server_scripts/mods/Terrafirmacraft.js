@@ -159,4 +159,12 @@ ServerEvents.recipes(event => {
         C: '#tfc:fireclay/carbon',
         B: '#forge:clay'
     })
+
+    // Wrought Iron 1:1
+    tfc.bloomery(
+        'tfc:raw_iron_bloom',
+        '#forge:coal_coke',
+        Fluid.of('tfc:metal/cast_iron', 100),
+        15000
+    )
 })

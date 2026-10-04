@@ -1,4 +1,9 @@
 ServerEvents.recipes(event => {
+
+    // Recipe Removal
+    event.remove({id: 'railcraft:coal_coke'})
+    event.remove({id: 'railcraft:coal_coke_block_from_coal_coke'})
+
     // Coke Oven Bricks
     event.remove({id: 'railcraft:coke_oven_bricks'})
     event.shaped(
@@ -18,45 +23,45 @@ ServerEvents.recipes(event => {
     // Coal Coke
     event.remove({id: 'railcraft:coke_oven/coal_coke'})
     event.custom({
-        'type': 'railcraft:coking',
-        'cookingTime': 3600,
-        'creosoteOutput': 500,
-        'experience': 0.0,
-        'ingredient': {
-            'tag': 'forge:gems/coal'
+        type: 'railcraft:coking',
+        cookingTime: 3600,
+        creosoteOutput: 500,
+        experience: 0.0,
+        ingredient: {
+            tag: 'forge:gems/coal'
         },
-        'result': {
-            'item': 'immersiveengineering:coal_coke'
+        result: {
+            item: 'kubejs:coal_coke'
         }
     })
 
-    // Coal Coke Block
+    // Block of Coal Coke
     event.remove({id: 'railcraft:coke_oven/coal_coke_block'})
     event.custom({
-        'type': 'railcraft:coking',
-        'cookingTime': 32400,
-        'creosoteOutput': 4500,
-        'experience': 0.0,
-        'ingredient': {
-            'item': 'minecraft:coal_block'
+        type: 'railcraft:coking',
+        cookingTime: 32400,
+        creosoteOutput: 4500,
+        experience: 0.0,
+        ingredient: {
+            item: 'minecraft:coal_block'
         },
-        'result': {
-            'item': 'immersiveengineering:coke'
+        result: {
+            item: 'kubejs:coal_coke_block'
         }
     })
 
-    // Coal Coke Block
+    // Charcoal
     event.remove({id: 'railcraft:coke_oven/charcoal'})
     event.custom({
-        'type': 'railcraft:coking',
-        'cookingTime': 1800,
-        'creosoteOutput': 256,
-        'experience': 0.0,
-        'ingredient': {
-            'tag': 'tfc:pit_kiln_logs'
+        type: 'railcraft:coking',
+        cookingTime: 1800,
+        creosoteOutput: 250,
+        experience: 0.0,
+        ingredient: {
+            tag: 'tfc:pit_kiln_logs'
         },
-        'result': {
-            'item': 'minecraft:charcoal'
+        result: {
+            item: 'minecraft:charcoal'
         }
     })
 })
