@@ -40,5 +40,11 @@ global.hidden_items = [
     'create:crushed_raw_lead',
     'create:crushed_raw_aluminum',
     'create:crushed_raw_uranium',
-    'create:crushed_raw_nickel'
+    'create:crushed_raw_nickel',
+    'create:blaze_cake_base',
+    'create:wheat_flour',
+    'create:dough',
+    'create:zinc_ore',
+    'create:deepslate_zinc_ore',
+    'create:raw_zinc_block'
 ]

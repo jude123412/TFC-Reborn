@@ -84,6 +84,30 @@ ServerEvents.recipes(event => {
     event.remove({id: 'create:crushing/nickel_ore'})
     event.remove({id: 'create:crushing/raw_nickel_block'})
     event.remove({id: 'create:compacting/chocolate'})
+    event.remove({id: 'create:crushing/deepslate_copper_ore'})
+    event.remove({id: 'create:crushing/diamond_ore'})
+    event.remove({id: 'create:crushing/raw_copper_block'})
+    event.remove({id: 'create:crushing/raw_gold'})
+    event.remove({id: 'create:crushing/deepslate_diamond_ore'})
+    event.remove({id: 'create:crushing/copper_ore'})
+    event.remove({id: 'create:crushing/coal_ore'})
+    event.remove({id: 'create:crushing/deepslate_emerald_ore'})
+    event.remove({id: 'create:crushing/raw_copper'})
+    event.remove({id: 'create:crushing/gold_ore'})
+    event.remove({id: 'create:crushing/redstone_ore'})
+    event.remove({id: 'create:crushing/deepslate_redstone_ore'})
+    event.remove({id: 'create:crushing/deepslate_lapis_ore'})
+    event.remove({id: 'create:crushing/raw_iron1'})
+    event.remove({id: 'create:crushing/emerald_ore'})
+    event.remove({id: 'create:crushing/nether_quartz_ore'})
+    event.remove({id: 'create:crushing/lapis_ore'})
+    event.remove({id: 'create:crushing/deepslate_gold_ore'})
+    event.remove({id: 'create:crushing/iron_ore'})
+    event.remove({id: 'create:crushing/raw_gold_block'})
+    event.remove({id: 'create:crushing/deepslate_coal_ore'})
+    event.remove({id: 'create:crushing/raw_iron'})
+    event.remove({id: 'create:compacting/blaze_cake'})
+    event.remove({id: 'create:crafting/materials/raw_zinc_block'})
 
     // Copper Backtank
     event.replaceInput(
@@ -362,14 +386,6 @@ ServerEvents.recipes(event => {
     tfc.barrel_sealed(8000)
         .outputItem('create:rose_quartz')
         .inputs('#forge:gems/quartz', TFC.fluidStackIngredient('#forge:redstone_acid', 2000))
-
-
-    // Crafting Blueprint
-    event.replaceInput(
-        {id: 'create:crafting/appliances/crafting_blueprint'},
-        'minecraft:crafting_table',
-        '#tfc:workbench'
-    )
        
     // Chocolate
     event.remove({id: 'create:mixing/chocolate'})
@@ -431,6 +447,126 @@ ServerEvents.recipes(event => {
         'minecraft:apple',
         '#tfc:foods/apples'
     )
+
+    // Crafting Blueprint
+    event.replaceInput(
+        {id: 'create:crafting/appliances/crafting_blueprint'},
+        'minecraft:crafting_table',
+        '#tfc:workbenches'
+    )
+
+    // Copper Diving Helmet
+    event.remove({id: 'create:crafting/appliances/copper_diving_helmet'})
+    event.shaped(
+        'create:copper_diving_helmet',
+        [
+            'H',
+            'G'
+        ],
+        {
+            H: 'tfc:metal/helmet/copper',
+            G: '#forge:glass'
+        }
+    )
+
+    // Copper Diving Boots
+    event.remove({id: 'create:crafting/appliances/copper_diving_boots'})
+    event.shaped(
+        'create:copper_diving_boots',
+        [
+            ' B ',
+            'A A'
+        ],
+        {
+            B: 'tfc:metal/boots/copper',
+            A: '#forge:ingots/andesite_alloy'
+        }
+    )
+
+    // Sand Paper
+    event.remove({id: 'create:crafting/materials/sand_paper'})
+    event.shapeless(
+        Item.of('create:sand_paper'),
+        [
+            '#forge:paper',
+            '#tfc:flux',
+            '#forge:slimeballs',
+            'tfc:sand/yellow',
+            '#tfc:gem_powders'
+        ]
+    )
+
+    // Red Sand Paper
+    event.remove({id: 'create:crafting/materials/red_sand_paper'})
+    event.shapeless(
+        Item.of('create:red_sand_paper'),
+        [
+            '#forge:paper',
+            '#tfc:flux',
+            '#forge:slimeballs',
+            'tfc:sand/red',
+            '#tfc:gem_powders'
+        ]
+    )
+
+    // Block of Industrial Iron
+    event.remove({id: 'create:industrial_iron_block_from_ingots_iron_stonecutting'})
+    event.stonecutting('2x create:industrial_iron_block', '#forge:ingots/wrought_iron')
+
+    // Block of Weathered Iron
+    event.remove({id: 'create:weathered_iron_block_from_ingots_iron_stonecutting'})
+    event.stonecutting('2x create:weathered_iron_block', '#forge:ingots/wrought_iron')
+
+    // Block of Zinc
+    event.remove({id: 'create:crafting/materials/zinc_block_from_compacting'})
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:ingots/zinc',
+            },
+            count: 9
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'create:zinc_block'
+        }
+    })
+
+    // Block of Zinc
+    event.remove({id: 'create:crafting/materials/andesite_alloy_block'})
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:ingots/andesite_alloy',
+            },
+            count: 9
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'create:andesite_alloy_block'
+        }
+    })
+
+    // Block of Brass
+    event.remove({id: 'create:crafting/materials/brass_block_from_compacting'})
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:ingots/brass',
+            },
+            count: 9
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'create:brass_block'
+        }
+    })
 
     // Builders Tea
     event.remove({id: 'create:mixing/tea'})
