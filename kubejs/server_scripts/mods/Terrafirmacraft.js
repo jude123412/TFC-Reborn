@@ -163,7 +163,7 @@ ServerEvents.recipes(event => {
     // Wrought Iron 1:1
     tfc.bloomery(
         'tfc:raw_iron_bloom',
-        '#forge:coal_coke',
+        'kubejs:coal_coke',
         Fluid.of('tfc:metal/cast_iron', 100),
         15000
     )
