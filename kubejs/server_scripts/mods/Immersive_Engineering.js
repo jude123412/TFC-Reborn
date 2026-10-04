@@ -39,6 +39,9 @@ ServerEvents.recipes(event => {
     event.remove({id: 'immersiveengineering:crusher/raw_ore_gold'})
     event.remove({id: 'createaddition:compat/immersiveengineering/crushing/coal_coke'})
     event.remove({id: 'immersiveengineering:crafting/coke_to_coal_coke'})
+    event.remove({id: 'immersivetechnology:advanced_coke_oven/coke_block'})
+    event.remove({id: 'immersivetechnology:advanced_coke_oven/charcoal'})
+    event.remove({id: 'immersivetechnology:advanced_coke_oven/coke'})
 
     // Coal Coke
     event.remove({id: 'tfc_ie_addon:cokeoven/bituminous_coal'})
