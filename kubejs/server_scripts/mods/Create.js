@@ -183,7 +183,7 @@ ServerEvents.recipes(event => {
     // Mechanical Press
     event.replaceInput(
         {id: 'create:crafting/kinetics/mechanical_press'},
-        'create:crafting/kinetics/mechanical_press',
+        'minecraft:iron_block',
         '#forge:double_ingots/wrought_iron'
     )
 
