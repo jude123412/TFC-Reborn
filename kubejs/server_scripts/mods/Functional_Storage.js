@@ -219,7 +219,7 @@ ServerEvents.recipes(event => {
             'SIS'
         ],
         {
-            S: '#forge:stone',
+            S: '#tfc:rock/bricks',
             P: 'minecraft:piston',
             D: '#functionalstorage:drawer',
             I: '#forge:ingots/wrought_iron'
@@ -242,10 +242,20 @@ ServerEvents.recipes(event => {
     )
 
     // Storage Controller
-    event.replaceInput(
-        {id: 'functionalstorage:storage_controller'},
-        'minecraft:quartz_block',
-        '#forge:gems/quartz'
+    event.remove({id: 'functionalstorage:storage_controller'})
+    event.shaped(
+        'functionalstorage:storage_controller', 
+        [
+            'SQS',
+            'DCD',
+            'SQS'
+        ],
+        {
+            S: '#tfc:rock/bricks',
+            Q: '#forge:gems/quartz',
+            D: '#functionalstorage:drawer',
+            C: 'minecraft:comparator'
+        }
     )
 
     // Framed Storage Controller
@@ -264,10 +274,20 @@ ServerEvents.recipes(event => {
     )
 
     // Controller Access Point
-    event.replaceInput(
-        {id: 'functionalstorage:controller_extension'},
-        'minecraft:quartz_block',
-        '#forge:gems/quartz'
+    event.remove({id: 'functionalstorage:controller_extension'})
+    event.shaped(
+        'functionalstorage:controller_extension', 
+        [
+            'SQS',
+            'DCD',
+            'SQS'
+        ],
+        {
+            S: '#tfc:rock/bricks',
+            Q: '#forge:gems/quartz',
+            D: '#functionalstorage:drawer',
+            C: 'minecraft:repeater'
+        }
     )
 
     // Framed Controller Access Point
@@ -357,7 +377,7 @@ ServerEvents.recipes(event => {
             'SIS'
         ],
         {
-            S: '#forge:stone',
+            S: '#tfc:rock/bricks',
             D: '#functionalstorage:drawer',
             P: 'minecraft:piston',
             I: '#forge:ingots/wrought_iron'
@@ -390,4 +410,21 @@ ServerEvents.recipes(event => {
             'punch_last'
         ]
     ).tier(2)
+
+    // Armory Cabinet
+    event.remove({id: 'functionalstorage:armory_cabinet'})
+    event.shaped(
+        'functionalstorage:armory_cabinet', 
+        [
+            'SDS',
+            'DCD',
+            'SNS'
+        ],
+        {
+            S: '#tfc:rock/bricks',
+            D: '#functionalstorage:drawer',
+            C: 'minecraft:comparator',
+            N: '#forge:ingots/netherite'
+        }
+    )
 })
