@@ -1,6 +1,124 @@
 ServerEvents.recipes(event => {
     const tfc = event.recipes.tfc
 
+    event.remove({id: 'functionalstorage:oak_drawer_alternate_x1'})
+    event.remove({id: 'functionalstorage:oak_drawer_alternate_x2'})
+    event.remove({id: 'functionalstorage:oak_drawer_alternate_x4'})
+    event.remove({id: 'functionalstorage:oak_1'})
+    event.remove({id: 'functionalstorage:spruce_1'})
+    event.remove({id: 'functionalstorage:birch_1'})
+    event.remove({id: 'functionalstorage:jungle_1'})
+    event.remove({id: 'functionalstorage:acacia_1'})
+    event.remove({id: 'functionalstorage:dark_oak_1'})
+    event.remove({id: 'functionalstorage:mangrove_1'})
+    event.remove({id: 'functionalstorage:cherry_1'})
+    event.remove({id: 'functionalstorage:oak_2'})
+    event.remove({id: 'functionalstorage:spruce_2'})
+    event.remove({id: 'functionalstorage:birch_2'})
+    event.remove({id: 'functionalstorage:jungle_2'})
+    event.remove({id: 'functionalstorage:acacia_2'})
+    event.remove({id: 'functionalstorage:dark_oak_2'})
+    event.remove({id: 'functionalstorage:mangrove_2'})
+    event.remove({id: 'functionalstorage:cherry_2'})
+    event.remove({id: 'functionalstorage:oak_4'})
+    event.remove({id: 'functionalstorage:spruce_4'})
+    event.remove({id: 'functionalstorage:birch_4'})
+    event.remove({id: 'functionalstorage:jungle_4'})
+    event.remove({id: 'functionalstorage:acacia_4'})
+    event.remove({id: 'functionalstorage:dark_oak_4'})
+    event.remove({id: 'functionalstorage:mangrove_4'})
+    event.remove({id: 'functionalstorage:cherry_4'})
+
+    // Crimson Drawer 1x1
+    event.remove({id: 'functionalstorage:crimson_1'})
+    event.shaped(
+        'functionalstorage:crimson_1', 
+        [
+            'LLL',
+            'LCL',
+            'LLL'
+        ],
+        {
+            L: 'beneath:wood/lumber/crimson',
+            C: '#forge:chests/wooden'
+        }
+    )
+
+    // Crimson Drawer 2x1
+    event.remove({id: 'functionalstorage:crimson_2'})
+    event.shaped(
+        'functionalstorage:crimson_2', 
+        [
+            'LCL',
+            'LLL',
+            'LCL'
+        ],
+        {
+            L: 'beneath:wood/lumber/crimson',
+            C: '#forge:chests/wooden'
+        }
+    )
+
+    // Crimson Drawer 2x2
+    event.remove({id: 'functionalstorage:crimson_4'})
+    event.shaped(
+        'functionalstorage:crimson_4', 
+        [
+            'CLC',
+            'LLL',
+            'CLC'
+        ],
+        {
+            L: 'beneath:wood/lumber/crimson',
+            C: '#forge:chests/wooden'
+        }
+    )
+
+    // Warped Drawer 1x1
+    event.remove({id: 'functionalstorage:warped_1'})
+    event.shaped(
+        'functionalstorage:warped_1', 
+        [
+            'LLL',
+            'LCL',
+            'LLL'
+        ],
+        {
+            L: 'beneath:wood/lumber/warped',
+            C: '#forge:chests/wooden'
+        }
+    )
+
+    // Warped Drawer 2x1
+    event.remove({id: 'functionalstorage:warped_2'})
+    event.shaped(
+        'functionalstorage:warped_2', 
+        [
+            'LCL',
+            'LLL',
+            'LCL'
+        ],
+        {
+            L: 'beneath:wood/lumber/warped',
+            C: '#forge:chests/wooden'
+        }
+    )
+
+    // Warped Drawer 2x2
+    event.remove({id: 'functionalstorage:warped_4'})
+    event.shaped(
+        'functionalstorage:warped_4', 
+        [
+            'CLC',
+            'LLL',
+            'CLC'
+        ],
+        {
+            L: 'beneath:wood/lumber/warped',
+            C: '#forge:chests/wooden'
+        }
+    )
+
     // Framed Drawer 1x1
     event.remove({id: 'functionalstorage:framed_1'})
     event.shaped(
