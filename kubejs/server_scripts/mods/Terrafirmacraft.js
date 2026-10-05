@@ -274,7 +274,6 @@ ServerEvents.recipes(event => {
         }
     })
 
-
     // Black Steel
     event.custom({
         type: 'create:sequenced_assembly',
@@ -431,7 +430,6 @@ ServerEvents.recipes(event => {
             item: 'tfc:metal/ingot/high_carbon_blue_steel'
         }
     })
-
 
     // Red Steel
     event.custom({
