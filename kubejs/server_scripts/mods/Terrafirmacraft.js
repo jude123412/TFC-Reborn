@@ -167,4 +167,356 @@ ServerEvents.recipes(event => {
         Fluid.of('tfc:metal/cast_iron', 100),
         15000
     )
+
+    // Wrought Iron
+    event.custom({
+        type: 'create:sequenced_assembly',
+        ingredient: {
+            item: 'tfc:raw_iron_bloom'
+        },
+        loops: 5,
+        results: [
+            {
+                item: 'tfc:metal/ingot/wrought_iron'
+            }
+        ],
+        sequence: [
+            {
+                type: 'create:deploying',
+                ingredients: [
+                    {
+                        item: 'tfc:refined_iron_bloom'
+                    },
+                    {
+                        tag: 'tfc:hammers'
+                    }
+                ],
+                keepHeldItem: true,
+                results: [
+                    {
+                        item: 'tfc:raw_iron_bloom'
+                    }
+                ]
+            },
+            {
+                type: 'create:deploying',
+                ingredients: [
+                    {
+                        item: 'tfc:refined_iron_bloom'
+                    },
+                    {
+                        tag: 'tfc:hammers'
+                    }
+                ],
+                keepHeldItem: true,
+                results: [
+                    {
+                        item: 'tfc:raw_iron_bloom'
+                    }
+                ]
+            }
+        ],
+        transitionalItem: {
+            item: 'tfc:refined_iron_bloom'
+        }
+    })
+
+    // Steel
+    event.custom({
+        type: 'create:sequenced_assembly',
+        ingredient: {
+            item: 'tfc:metal/ingot/pig_iron'
+        },
+        loops: 5,
+        results: [
+            {
+                item: 'tfc:metal/ingot/steel'
+            }
+        ],
+        sequence: [
+            {
+                type: 'create:deploying',
+                ingredients: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_steel'
+                    },
+                    {
+                        tag: 'tfc:hammers'
+                    }
+                ],
+                keepHeldItem: true,
+                results: [
+                    {
+                        item: 'tfc:metal/ingot/pig_iron'
+                    }
+                ]
+            },
+            {
+                type: 'create:deploying',
+                ingredients: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_steel'
+                    },
+                    {
+                        tag: 'tfc:hammers'
+                    }
+                ],
+                keepHeldItem: true,
+                results: [
+                    {
+                        item: 'tfc:metal/ingot/pig_iron'
+                    }
+                ]
+            }
+        ],
+        transitionalItem: {
+            item: 'tfc:metal/ingot/high_carbon_steel'
+        }
+    })
+
+
+    // Black Steel
+    event.custom({
+        type: 'create:sequenced_assembly',
+        ingredient: {
+            item: 'tfc:metal/ingot/high_carbon_black_steel'
+        },
+        loops: 5,
+        results: [
+            {
+                item: 'tfc:metal/ingot/black_steel'
+            }
+        ],
+        sequence: [
+            {
+                type: 'create:deploying',
+                ingredients: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_black_steel'
+                    },
+                    {
+                        tag: 'tfc:hammers'
+                    }
+                ],
+                keepHeldItem: true,
+                results: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_black_steel'
+                    }
+                ]
+            },
+            {
+                type: 'create:deploying',
+                ingredients: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_black_steel'
+                    },
+                    {
+                        tag: 'tfc:hammers'
+                    }
+                ],
+                keepHeldItem: true,
+                results: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_black_steel'
+                    }
+                ]
+            },
+            {
+                type: 'create:deploying',
+                ingredients: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_black_steel'
+                    },
+                    {
+                        tag: 'tfc:hammers'
+                    }
+                ],
+                keepHeldItem: true,
+                results: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_black_steel'
+                    }
+                ]
+            }
+        ],
+        transitionalItem: {
+            item: 'tfc:metal/ingot/high_carbon_black_steel'
+        }
+    })
+
+    // Blue Steel
+    event.custom({
+        type: 'create:sequenced_assembly',
+        ingredient: {
+            item: 'tfc:metal/ingot/high_carbon_blue_steel'
+        },
+        loops: 5,
+        results: [
+            {
+                item: 'tfc:metal/ingot/blue_steel'
+            }
+        ],
+        sequence: [
+            {
+                type: 'create:deploying',
+                ingredients: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_blue_steel'
+                    },
+                    {
+                        tag: 'tfc:hammers'
+                    }
+                ],
+                keepHeldItem: true,
+                results: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_blue_steel'
+                    }
+                ]
+            },
+            {
+                type: 'create:deploying',
+                ingredients: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_blue_steel'
+                    },
+                    {
+                        tag: 'tfc:hammers'
+                    }
+                ],
+                keepHeldItem: true,
+                results: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_blue_steel'
+                    }
+                ]
+            },
+            {
+                type: 'create:deploying',
+                ingredients: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_blue_steel'
+                    },
+                    {
+                        tag: 'tfc:hammers'
+                    }
+                ],
+                keepHeldItem: true,
+                results: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_blue_steel'
+                    }
+                ]
+            },
+            {
+                type: 'create:deploying',
+                ingredients: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_blue_steel'
+                    },
+                    {
+                        tag: 'tfc:hammers'
+                    }
+                ],
+                keepHeldItem: true,
+                results: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_blue_steel'
+                    }
+                ]
+            }
+        ],
+        transitionalItem: {
+            item: 'tfc:metal/ingot/high_carbon_blue_steel'
+        }
+    })
+
+
+    // Red Steel
+    event.custom({
+        type: 'create:sequenced_assembly',
+        ingredient: {
+            item: 'tfc:metal/ingot/high_carbon_red_steel'
+        },
+        loops: 5,
+        results: [
+            {
+                item: 'tfc:metal/ingot/red_steel'
+            }
+        ],
+        sequence: [
+            {
+                type: 'create:deploying',
+                ingredients: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_red_steel'
+                    },
+                    {
+                        tag: 'tfc:hammers'
+                    }
+                ],
+                keepHeldItem: true,
+                results: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_red_steel'
+                    }
+                ]
+            },
+            {
+                type: 'create:deploying',
+                ingredients: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_red_steel'
+                    },
+                    {
+                        tag: 'tfc:hammers'
+                    }
+                ],
+                keepHeldItem: true,
+                results: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_red_steel'
+                    }
+                ]
+            },
+            {
+                type: 'create:deploying',
+                ingredients: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_red_steel'
+                    },
+                    {
+                        tag: 'tfc:hammers'
+                    }
+                ],
+                keepHeldItem: true,
+                results: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_red_steel'
+                    }
+                ]
+            },
+            {
+                type: 'create:deploying',
+                ingredients: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_red_steel'
+                    },
+                    {
+                        tag: 'tfc:hammers'
+                    }
+                ],
+                keepHeldItem: true,
+                results: [
+                    {
+                        item: 'tfc:metal/ingot/high_carbon_red_steel'
+                    }
+                ]
+            }
+        ],
+        transitionalItem: {
+            item: 'tfc:metal/ingot/high_carbon_red_steel'
+        }
+    })
 })
