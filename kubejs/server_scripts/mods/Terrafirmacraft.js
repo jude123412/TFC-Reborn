@@ -135,15 +135,56 @@ ServerEvents.recipes(event => {
     })
     event.custom({
         type: 'railcraft:crusher',
-        energy: 27000,
-        input: {
+        ingredient: {
+            tag: 'forge:coal_coke'
+        },
+        outputs: [
+            {
+                probability: 1.0,
+                result: {
+                    item: 'tfc:powder/coke',
+                }
+            }
+        ]
+    })
+    event.custom({
+        type: 'railcraft:crusher',
+        ingredient: {
             tag: 'forge:storage_blocks/coal_coke'
         },
-        result: {
+        outputs: [
+            {
+                count: 9,
+                probability: 1.0,
+                result: {
+                    item: 'tfc:powder/coke',
+                }
+            }
+        ]
+    })
+    event.custom({
+        type: 'mekanism:crushing',
+        input:{
+            ingredient: {
+                tag: 'forge:coal_coke' 
+            }
+        },
+        output: {
+            item: 'tfc:powder/coke',
+            count: 1
+        }
+    })
+    event.custom({
+        type: 'mekanism:crushing',
+        input:{
+            ingredient: {
+                tag: 'forge:storage_blocks/coal_coke' 
+            }
+        },
+        output: {
             item: 'tfc:powder/coke',
             count: 9
-        },
-        secondaries: []
+        }
     })
 
     // Fireclay
@@ -515,6 +556,37 @@ ServerEvents.recipes(event => {
         ],
         transitionalItem: {
             item: 'tfc:metal/ingot/high_carbon_red_steel'
+        }
+    })
+
+    // Saltpeter Powder
+    create.milling(Item.of('tfc:powder/saltpeter', 4), InputItem.of('tfc:ore/saltpeter'))
+    create.crushing(Item.of('tfc:powder/saltpeter', 4), InputItem.of('tfc:ore/saltpeter'))
+    event.custom({
+        type: 'railcraft:crusher',
+        ingredient: {
+            item: 'tfc:ore/saltpeter'
+        },
+        outputs: [
+            {
+                count: 4,
+                probability: 1.0,
+                result: {
+                    item: 'tfc:powder/saltpeter',
+                }
+            }
+        ]
+    })
+    event.custom({
+        type: 'mekanism:crushing',
+        input:{
+            ingredient: {
+                item: 'tfc:ore/saltpeter' 
+            }
+        },
+        output: {
+            item: 'tfc:powder/saltpeter',
+            count: 4
         }
     })
 })
