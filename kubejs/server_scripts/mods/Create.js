@@ -613,4 +613,19 @@ ServerEvents.recipes(event => {
             ]
         }
     )
+
+    // Fluid Tank
+    event.remove({id: 'create:crafting/kinetics/fluid_tank'})
+    event.shaped(
+        'create:fluid_tank',
+        [
+            'P',
+            'G',
+            'P'
+        ],
+        {
+            P: '#forge:plates/copper',
+            G: '#forge:glass'
+        }
+    )
 })
