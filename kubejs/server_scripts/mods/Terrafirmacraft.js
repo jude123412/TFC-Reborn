@@ -589,4 +589,11 @@ ServerEvents.recipes(event => {
             count: 4
         }
     })
+
+    // Windmill Blade
+    event.replaceInput(
+        {id: 'tfc:crafting/windmill_blade'},
+        'tfc:wool_cloth',
+        '#tfc:high_quality_cloth'
+    )
 })
