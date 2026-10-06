@@ -260,7 +260,7 @@ ServerEvents.recipes(event => {
             'C'
         ],
         {
-            D: 'immersiveengineering:drillhead_steel',
+            D: 'immersiveengineering:drillhead_iron',
             A: '#forge:ingots/andesite_alloy',
             C: 'create:andesite_casing'
         }
@@ -276,7 +276,7 @@ ServerEvents.recipes(event => {
             'C'
         ],
         {
-            D: 'immersiveengineering:sawblade',
+            D: 'kubejs:iron_sawblade',
             A: '#forge:ingots/andesite_alloy',
             C: 'create:andesite_casing'
         }

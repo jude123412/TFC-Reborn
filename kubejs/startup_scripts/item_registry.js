@@ -13,4 +13,10 @@ StartupEvents.registry('item', event => {
         .tag('forge:coal_coke')
         .tag('tfc:forge_fuel')
         .tag('rosia:fire_box_fuel')
+
+    // Iron Sawblade
+    event.create(`kubejs:iron_sawblade`)
+        .texture(`kubejs:item/iron_sawblade`)
+        .translationKey(`kubejs:item/iron_sawblade`)
+        .tag('forge:sawblades')
 })

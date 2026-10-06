@@ -1,4 +1,6 @@
 ServerEvents.recipes(event => {
+    const tfc = event.recipes.tfc
+
     // Recipe Removal
     event.remove({id: 'immersiveengineering:crusher/raw_block_uranium'})
     event.remove({id: 'immersiveengineering:crusher/ore_redstone'})
@@ -87,4 +89,16 @@ ServerEvents.recipes(event => {
         },
         time: 900
     })
+
+    // Steel Sawblade
+    event.remove({id: 'immersiveengineering:crafting/sawblade'})
+    tfc.anvil(
+        TFC.itemStackProvider.of('immersiveengineering:sawblade'),
+        '#forge:gears/steel',
+        [
+            'punch_third_last',
+            'hit_second_last',
+            'upset_last'
+        ]
+    ).tier(4)
 })

@@ -98,4 +98,15 @@ ServerEvents.recipes(event => {
             item: 'kubejs:coal_coke_block'
         }
     })
+
+    // Iron Sawblade
+    tfc.anvil(
+        TFC.itemStackProvider.of('kubejs:iron_sawblade'),
+        '#forge:gears/wrought_iron',
+        [
+            'punch_third_last',
+            'hit_second_last',
+            'upset_last'
+        ]
+    ).tier(3)
 })
