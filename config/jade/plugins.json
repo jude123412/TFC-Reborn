@@ -63,9 +63,6 @@
   "tfcgroomer": {
     "grooming_station": true
   },
-  "specialmobs": {
-    "display_ninja_disguises": true
-  },
   "immersiveengineering": {
     "multiblock_icon": true
   },
