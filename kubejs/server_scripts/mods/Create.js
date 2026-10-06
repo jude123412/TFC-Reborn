@@ -108,6 +108,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'create:crushing/raw_iron'})
     event.remove({id: 'create:compacting/blaze_cake'})
     event.remove({id: 'create:crafting/materials/raw_zinc_block'})
+    event.remove({id: 'createaddition:compat/immersiveengineering/fabric_sail'})
 
     // Copper Backtank
     event.replaceInput(
