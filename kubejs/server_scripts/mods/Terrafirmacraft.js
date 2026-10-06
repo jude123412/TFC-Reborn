@@ -591,9 +591,29 @@ ServerEvents.recipes(event => {
     })
 
     // Windmill Blade
-    event.replaceInput(
-        {id: 'tfc:crafting/windmill_blade'},
-        'tfc:wool_cloth',
-        '#tfc:high_quality_cloth'
-    )
+    event.remove({id: 'tfc:crafting/windmill_blade'})
+    event.shapeless('tfc:windmill_blade', [
+        'tfc:lattice_windmill_blade',
+        '2x #tfc:high_quality_cloth'
+    ])
+
+    // Rustic Windmill Blade
+    event.remove({id: 'tfc:crafting/rustic_windmill_blade'})
+    event.shapeless('tfc:rustic_windmill_blade', [
+        'tfc:lattice_windmill_blade',
+        '2x #tfc:low_quality_cloth'
+    ])
+
+    // Lattice Windmill Blade
+    event.remove({id: 'tfc:crafting/lattice_windmill_blade'})
+    event.shaped('tfc:lattice_windmill_blade',
+    [
+        'SSS',
+        'S S',
+        'LLL'
+    ],
+    {
+        S: '#forge:rods/wooden',
+        L: '#tfc:lumber'
+    })
 })

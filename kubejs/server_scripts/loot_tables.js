@@ -68,5 +68,5 @@ LootJS.modifiers((event) => {
 
     // Matches cat gift pool :D
     event.addLootTableModifier("minecraft:gameplay/cat_morning_gift")
-        .replaceLoot("minecraft:chicken", "tfc:food/chichen")
+        .replaceLoot("minecraft:chicken", "tfc:food/chicken")
 });
