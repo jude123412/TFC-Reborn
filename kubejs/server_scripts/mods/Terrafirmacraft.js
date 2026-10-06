@@ -104,24 +104,9 @@ ServerEvents.recipes(event => {
 
 
     // Coke Powder
-    tfc.quern(Item.of('tfc:powder/coke'), '#forge:coal_coke')
-    tfc.quern(Item.of('tfc:powder/coke', 9), `#forge:storage_blocks/coal_coke`)
-    create.milling(Item.of('tfc:powder/coke'), InputItem.of('#forge:coal_coke'))
-    create.milling(Item.of('tfc:powder/coke', 9), InputItem.of(`#forge:storage_blocks/coal_coke`))
-    create.crushing(Item.of('tfc:powder/coke'), InputItem.of('#forge:coal_coke'))
-    create.crushing(Item.of('tfc:powder/coke', 9), InputItem.of('#forge:storage_blocks/coal_coke'))
-    event.custom({
-        type: 'immersiveengineering:crusher',
-        energy: 27000,
-        input: {
-            tag: 'forge:storage_blocks/coal_coke'
-        },
-        result: {
-            item: 'tfc:powder/coke',
-            count: 9
-        },
-        secondaries: []
-    })
+    tfc.quern(Item.of('tfc:powder/coke', 4), '#forge:coal_coke')
+    create.milling(Item.of('tfc:powder/coke', 4), InputItem.of('#forge:coal_coke'))
+    create.crushing(Item.of('tfc:powder/coke', 4), InputItem.of('#forge:coal_coke'))
     event.custom({
         type: 'immersiveengineering:crusher',
         energy: 3000,
@@ -129,7 +114,8 @@ ServerEvents.recipes(event => {
             tag: 'forge:coal_coke'
         },
         result: {
-            item: 'tfc:powder/coke'
+            item: 'tfc:powder/coke',
+            count: 4
         },
         secondaries: []
     })
@@ -141,21 +127,7 @@ ServerEvents.recipes(event => {
         outputs: [
             {
                 probability: 1.0,
-                result: {
-                    item: 'tfc:powder/coke',
-                }
-            }
-        ]
-    })
-    event.custom({
-        type: 'railcraft:crusher',
-        ingredient: {
-            tag: 'forge:storage_blocks/coal_coke'
-        },
-        outputs: [
-            {
-                count: 9,
-                probability: 1.0,
+                count: 4,
                 result: {
                     item: 'tfc:powder/coke',
                 }
@@ -171,19 +143,7 @@ ServerEvents.recipes(event => {
         },
         output: {
             item: 'tfc:powder/coke',
-            count: 1
-        }
-    })
-    event.custom({
-        type: 'mekanism:crushing',
-        input:{
-            ingredient: {
-                tag: 'forge:storage_blocks/coal_coke' 
-            }
-        },
-        output: {
-            item: 'tfc:powder/coke',
-            count: 9
+            count: 4
         }
     })
 
