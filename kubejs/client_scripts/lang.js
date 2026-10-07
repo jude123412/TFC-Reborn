@@ -99,4 +99,5 @@ ClientEvents.lang('en_us', event => {
     event.add('tfc.recipe.barrel.tfc.kjs.2ut6j6tcftqbirqn335umo0md', 'Prismarine Crystals')
     event.add('tfc.recipe.barrel.tfc.kjs.6m5qn53tdfzhtkceorstvktre', 'Prismarine Shard')
     event.add('tfc.recipe.barrel.tfc.kjs.8ci8xegfzh6z2wgu7qihkh156', 'Sculk Vein')
+    event.add('tfc.recipe.barrel.tfc.kjs.54hl16pm6j1wsbzyd73rcana3', 'Rose Quartz')
 })
