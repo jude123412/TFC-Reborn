@@ -631,10 +631,23 @@ ServerEvents.recipes(event => {
     )
 
     // Wood Pulp
-    tfc.barrel_sealed(8000)
-        .outputItem('create:pulp')
-        .inputItem(Item.of('#forge:dusts/wood', 4))
-        .inputFluid(Fluid.of('minecraft:water', 250))
+    event.custom({
+        type: 'tfc:barrel_sealed',
+        input_item: {
+            ingredient: {
+                tag: 'forge:dusts/wood',
+                count: 4
+            }
+        },
+        input_fluid: {
+            ingredient: 'minecraft:water',
+            amount: 250
+        },
+        output_item: {
+            item: 'create:pulp'
+        },
+        duration: 8000
+    })
     event.custom({
         type: 'create:mixing',
         ingredients: [
