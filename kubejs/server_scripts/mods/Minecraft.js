@@ -153,6 +153,11 @@ ServerEvents.recipes(event => {
     event.remove({id: 'minecraft:cake'})
     event.remove({id: 'create:crafting/curiosities/cake'})
     event.remove({id: 'farmersdelight:cooking/mushroom_stew'})
+    event.remove({id: 'minecraft:paper'})
+    event.remove({id: 'mekanism:paper'})
+    event.remove({id: 'immersiveengineering:crafting/paper_from_sawdust'})
+    event.remove({id: 'farmersdelight:paper_from_tree_bark'})
+    event.remove({id: 'create:pressing/sugar_cane'})
 
     // Elytra
     tfc.welding(
