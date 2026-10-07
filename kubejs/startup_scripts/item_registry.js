@@ -19,4 +19,14 @@ StartupEvents.registry('item', event => {
         .texture(`kubejs:item/iron_sawblade`)
         .translationKey(`kubejs:item/iron_sawblade`)
         .tag('forge:sawblades')
+
+    // Elytra Left
+    event.create(`kubejs:elytra/left_wing`)
+        .texture(`kubejs:item/elytra_left_wing`)
+        .translationKey(`kubejs:item/elytra_left_wing`)
+
+    // Elytra Right
+    event.create(`kubejs:elytra/right_wing`)
+        .texture(`kubejs:item/elytra_right_wing`)
+        .translationKey(`kubejs:item/elytra_right_wing`)
 })

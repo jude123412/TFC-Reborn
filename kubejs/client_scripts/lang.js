@@ -76,6 +76,8 @@ ClientEvents.lang('en_us', event => {
     // Misc Items
     event.add('item.kubejs.coal_coke', 'Coal Coke')
     event.add('item.kubejs.iron_sawblade', 'Iron Sawblade')
+    event.add('item.kubejs.elytra.left_wing', 'Left Elytra Wing')
+    event.add('item.kubejs.elytra.right_wing', 'Right Elytra Wing')
 
     // Metal Buckets
     event.add('item.kubejs.metal.andesite_alloy_bucket', 'Andesite Alloy Bucket')

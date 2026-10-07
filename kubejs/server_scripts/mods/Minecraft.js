@@ -155,18 +155,11 @@ ServerEvents.recipes(event => {
     event.remove({id: 'farmersdelight:cooking/mushroom_stew'})
 
     // Elytra
-    event.shaped(
-        Item.of('minecraft:elytra'),
-        [
-            ' R ',
-            'SGS',
-            'RSR'
-        ],
-        {
-            G: 'immersiveengineering:glider',
-            R: '#forge:double_sheets/steel',
-            S: '#forge:rods/steel'
-        }
+    tfc.welding(
+        TFC.itemStackProvider.of('minecraft:elytra'),
+        Ingredient.of('kubejs:elytra/left_wing'),
+        Ingredient.of('kubejs:elytra/right_wing'),
+        3
     )
 
     // Obsidian

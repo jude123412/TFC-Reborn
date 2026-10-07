@@ -2,6 +2,12 @@ TFCEvents.data(event => {
     // Loose Andesite Rock
     event.itemHeat('tfc:rock/loose/andesite', 5.714, 900, 1100)
 
+    // Left Elytra Wing
+    event.itemHeat('kubejs:elytra/left_wing', 8.332, 910, 1200)
+
+    // Right Elytra Wing
+    event.itemHeat('kubejs:elytra/right_wing', 8.332, 910, 1200)
+
     // Coal Coke
     event.fuel('kubejs:coal_coke', 1550, 3300, null)
 
@@ -109,4 +115,28 @@ ServerEvents.recipes(event => {
             'upset_last'
         ]
     ).tier(3)
+
+    // Left Elytra Wing
+    tfc.anvil(
+        TFC.itemStackProvider.of('kubejs:elytra/left_wing'),
+        '#forge:double_sheets/invar',
+        [
+            'bend_third_last',
+            'punch_any',
+            'hit_any'
+        ]
+    ).tier(3)
+    tfc.heating('kubejs:elytra/left_wing', 1535).resultFluid(Fluid.of('rosia:invar_fluid', 400))
+
+    // Right Elytra Wing
+    tfc.anvil(
+        TFC.itemStackProvider.of('kubejs:elytra/right_wing'),
+        '#forge:double_sheets/invar',
+        [
+            'bend_third_last',
+            'punch_any',
+            'hit_any'
+        ]
+    ).tier(3)
+    tfc.heating('kubejs:elytra/right_wing', 1535).resultFluid(Fluid.of('rosia:invar_fluid', 400))
 })
