@@ -154,13 +154,12 @@ ServerEvents.recipes(event => {
     event.shaped(
         Item.of('create:cogwheel'),
         [
-            'LPL',
-            'PSP',
-            'LPL'
+            ' L ',
+            'LSL',
+            ' L '
         ],
         {
             L: '#tfc:lumber',
-            P: '#minecraft:planks',
             S: 'create:shaft'
         }
     )
@@ -170,13 +169,12 @@ ServerEvents.recipes(event => {
     event.shaped(
         Item.of('create:large_cogwheel'),
         [
-            'LPL',
-            'PSP',
-            'LPL'
+            ' L ',
+            'LSL',
+            ' L '
         ],
         {
             L: '#tfc:lumber',
-            P: '#minecraft:planks',
             S: 'create:cogwheel'
         }
     )
