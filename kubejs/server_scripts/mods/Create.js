@@ -109,6 +109,8 @@ ServerEvents.recipes(event => {
     event.remove({id: 'create:compacting/blaze_cake'})
     event.remove({id: 'create:crafting/materials/raw_zinc_block'})
     event.remove({id: 'createaddition:compat/immersiveengineering/fabric_sail'})
+    event.remove({id: 'create:mixing/cardboard_pulp'})
+    event.remove({id: 'createdieselgenerators:bulk_fermenting/pulp'})
 
     // Copper Backtank
     event.replaceInput(
@@ -627,4 +629,33 @@ ServerEvents.recipes(event => {
             G: '#forge:glass'
         }
     )
+
+    // Wood Pulp
+    tfc.barrel_sealed(8000)
+        .outputItem('create:pulp')
+        .inputItem(Item.of('#forge:dusts/wood', 4))
+        .inputFluid(Fluid.of('minecraft:water', 250))
+    event.custom({
+        type: 'create:mixing',
+        ingredients: [
+            {
+            tag: 'forge:dusts/wood',
+            count: 4
+            },
+            {
+                fluidTag: 'tfc:any_fresh_water',
+                amount: 250,
+                nbt: {}
+            }
+        ],
+        results: [
+            {
+                item: 'create:pulp'
+            },
+            {
+                item: 'create:pulp',
+                chance: 0.25
+            }
+        ]
+    })
 })

@@ -576,4 +576,9 @@ ServerEvents.recipes(event => {
         S: '#forge:rods/wooden',
         L: '#tfc:lumber'
     })
+
+    // Unrefined Paper
+    event.shapeless('tfc:unrefined_paper', [
+        '2x create:pulp'
+    ])
 })
