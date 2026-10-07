@@ -635,9 +635,9 @@ ServerEvents.recipes(event => {
         type: 'tfc:barrel_sealed',
         input_item: {
             ingredient: {
-                tag: 'forge:dusts/wood',
-                count: 4
-            }
+                tag: 'forge:dusts/wood'
+            },
+            count: 4
         },
         input_fluid: {
             ingredient: 'minecraft:water',
