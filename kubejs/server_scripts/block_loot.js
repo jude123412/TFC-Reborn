@@ -35,6 +35,11 @@ LootJS.modifiers((event) => {
     event.addBlockLootModifier('farmersdelight:wild_rice')
         .replaceLoot('farmersdelight:rice', 'tfc:food/rice', true)
 
+    // Barrel
+    event.addBlockLootModifier('minecraft:barrel')
+        .removeLoot('tfc:wood/lumber/oak')
+        .addLoot('minecraft:barrel')
+
     // Adds approximetly 1/1111 chance for raw 
     // TFC rock blocks to drop an uncut gem.
     // Yes, I'm brining it back...

@@ -760,4 +760,19 @@ ServerEvents.recipes(event => {
     event.shapeless('minecraft:glass_bottle', [
         '#tfc:glass_bottles'
     ])
+
+    // Barrel
+    event.shaped(
+        Item.of('minecraft:barrel'), 
+        [
+            'PLP',
+            'S S',
+            'PLP'
+        ],
+        {
+            P: '#minecraft:planks',
+            L: '#tfc:lumber',
+            S: '#forge:plates/wrought_iron'
+        }
+    )
 })
