@@ -158,6 +158,8 @@ ServerEvents.recipes(event => {
     event.remove({id: 'immersiveengineering:crafting/paper_from_sawdust'})
     event.remove({id: 'farmersdelight:paper_from_tree_bark'})
     event.remove({id: 'create:pressing/sugar_cane'})
+    event.remove({id: 'vintage:curving/iron_sheet'})
+    event.remove({id: 'createdieselgenerators:compression_molding/bucket'})
 
     // Elytra
     tfc.welding(
