@@ -46,6 +46,9 @@ ServerEvents.recipes(event => {
     event.remove({id: 'immersivetechnology:advanced_coke_oven/coke'})
     event.remove({id: 'immersiveengineering:crafting/coal_coke_to_coke'})
 
+    // Recipe Removal by output
+    event.remove({output: 'immersiveengineering:dust_wood'})
+
     // Coal Coke
     event.remove({id: 'tfc_ie_addon:cokeoven/bituminous_coal'})
     event.remove({id: 'immersiveengineering:cokeoven/coke'})
