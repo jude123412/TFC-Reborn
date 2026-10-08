@@ -10,12 +10,48 @@ ServerEvents.tags('item', event => {
     event.remove('forge:dusts/coal_coke', 'tfc:powder/graphite')
     event.remove('minecraft:forgedusts/coke', 'tfc:powder/coke')
 
+    // Amethyst Dust
+    event.add('forge:dusts/amethyst', 'tfc:powder/amethyst')
+
+    // Diamond Dust
+    event.add('forge:dusts/diamond', 'tfc:powder/diamond')
+
+    // Emerald Dust
+    event.add('forge:dusts/emerald', 'tfc:powder/emerald')
+    
+    // Lapis Lazuli Dust
+    event.add('forge:dusts/lapis', 'tfc:powder/lapis_lazuli')
+
+    // Opal Dust
+    event.add('forge:dusts/opal', 'tfc:powder/opal')
+
+    // Pyrite Dust
+    event.add('forge:dusts/pyrite', 'tfc:powder/pyrite')
+
+    // Ruby Dust
+    event.add('forge:dusts/ruby', 'tfc:powder/ruby')
+
+    // Sapphire Dust
+    event.add('forge:dusts/sapphire', 'tfc:powder/sapphire')
+
+    // Topaz Dust
+    event.add('forge:dusts/topaz', 'tfc:powder/topaz')
+
+    // Kaolinite Dust
+    event.add('forge:dusts/kaolinite', 'tfc:powder/kaolinite')
+
+    // Bauxite Dust
+    event.add('forge:dusts/bauxite', 'tfc_ie_addon:powder/bauxite')
+
     // Alumina sources
-    event.add('tfc:fireclay/alumina', 'tfc:powder/kaolinite')
-    event.add('tfc:fireclay/alumina', '#forge:dusts/aluminum')
+    event.add('tfc:fireclay/alumina', '#forge:dusts/kaolinite')
+    event.add('tfc:fireclay/alumina', '#forge:dusts/bauxite')
+    event.add('tfc:fireclay/alumina', '#forge:dusts/sapphire')
+    event.add('tfc:fireclay/alumina', '#forge:dusts/ruby')
+    event.add('tfc:fireclay/alumina', '#forge:dusts/topaz')
     
     // Carbon sources
-    event.add('tfc:fireclay/carbon', 'tfc:powder/graphite')
+    event.add('tfc:fireclay/carbon', '#forge:dusts/graphite')
     event.add('tfc:fireclay/carbon', '#forge:dusts/coal_coke')
 
     // Sawdust
