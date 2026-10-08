@@ -27,3 +27,5 @@ config/sodiumdynamiclights-client.toml
 config/embeddium-options.json
 chiselsandbits/clipboard.dat
 /screenshots
+config/oculus.properties
+/shaderpacks
