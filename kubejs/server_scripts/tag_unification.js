@@ -121,7 +121,13 @@ ServerEvents.tags('item', event => {
 
 ServerEvents.tags('fluid', event => {
     const red_steel_bucket = [
-        'railcraft:creosote'
+        'railcraft:creosote',
+        'createdieselgenerators:biodiesel',
+        'createdieselgenerators:diesel',
+        'createdieselgenerators:crude_oil',
+        'createdieselgenerators:gasoline',
+        'createdieselgenerators:plant_oil',
+        'createdieselgenerators:ethanol'
     ]
 
     for (const fluid of red_steel_bucket) {

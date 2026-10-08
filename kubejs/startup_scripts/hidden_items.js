@@ -77,5 +77,6 @@ global.hidden_items = [
     'createdieselgenerators:hammer',
     'immersiveengineering:dust_wood',
     'mekanism:sawdust',
-    'tfc_lumberjack:sawdust'
+    'tfc_lumberjack:sawdust',
+    'createdieselgenerators:wood_chip'
 ]
