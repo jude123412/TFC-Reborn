@@ -72,6 +72,7 @@ ClientEvents.lang('en_us', event => {
 
     // Misc powders
     event.add('item.kubejs.powder.obsidian', 'Obsidian Powder')
+    event.add('item.kubejs.powder.wood', 'Sawdust')
 
     // Misc Items
     event.add('item.kubejs.coal_coke', 'Coal Coke')

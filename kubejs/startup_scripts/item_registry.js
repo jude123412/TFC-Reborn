@@ -5,6 +5,14 @@ StartupEvents.registry('item', event => {
         .translationKey(`kubejs:item/powder/obsidian`)
         .tag('forge:dusts')
         .tag(`forge:dusts/obsidian`)
+
+    // Sawdust
+    event.create(`kubejs:powder/wood`)
+        .texture(`kubejs:item/powder/wood`)
+        .translationKey(`kubejs:item/powder/wood`)
+        .tag('forge:dusts')
+        .tag(`forge:dusts/wood`)
+        .tag(`forge:sawdust`)
     
     // Coal Coke
     event.create(`kubejs:coal_coke`)

@@ -358,6 +358,54 @@ global.trees = {
     willow: {
         mod_id: 'tfc',
         generate_bark: false
+    },
+    baobab: {
+        mod_id: 'afc',
+        generate_bark: true
+    },
+    eucalyptus: {
+        mod_id: 'afc',
+        generate_bark: true
+    },
+    mahogany: {
+        mod_id: 'afc',
+        generate_bark: true
+    },
+    hevea: {
+        mod_id: 'afc',
+        generate_bark: true
+    },
+    tualang: {
+        mod_id: 'afc',
+        generate_bark: true
+    },
+    teak: {
+        mod_id: 'afc',
+        generate_bark: true
+    },
+    cypress: {
+        mod_id: 'afc',
+        generate_bark: true
+    },
+    fig: {
+        mod_id: 'afc',
+        generate_bark: true
+    },
+    ironwood: {
+        mod_id: 'afc',
+        generate_bark: true
+    },
+    ipe: {
+        mod_id: 'afc',
+        generate_bark: true
+    },
+    crimson: {
+        mod_id: 'beneath',
+        generate_bark: true
+    },
+    warped: {
+        mod_id: 'beneath',
+        generate_bark: true
     }
 }
 

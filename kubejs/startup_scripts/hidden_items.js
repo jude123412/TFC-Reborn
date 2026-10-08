@@ -72,5 +72,10 @@ global.hidden_items = [
     'functionalstorage:acacia_4',
     'functionalstorage:dark_oak_4',
     'functionalstorage:mangrove_4',
-    'functionalstorage:cherry_4'
+    'functionalstorage:cherry_4',
+    'createdieselgenerators:wire_cutters',
+    'createdieselgenerators:hammer',
+    'immersiveengineering:dust_wood',
+    'mekanism:sawdust',
+    'tfc_lumberjack:sawdust'
 ]
