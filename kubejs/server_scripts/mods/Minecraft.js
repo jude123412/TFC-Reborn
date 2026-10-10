@@ -1,10 +1,4 @@
 TFCEvents.data(event => {
-    // Cobblestone
-    event.itemHeat('#forge:cobblestone', 2, null, null)
-
-    // Deepslate
-    event.itemHeat('minecraft:deepslate', 2, null, null)
-
     // Sculk
     event.itemHeat('minecraft:sculk', 2, 1000, 1400)
 
@@ -777,12 +771,6 @@ ServerEvents.recipes(event => {
         .inputItem('#tfc:fallen_leaves')
         .inputFluid(Fluid.of('tfc:cyan_dye', 250))
 
-    // Deepslate
-    tfc.heating('#forge:cobblestone', 1400)
-        .resultItem(
-            TFC.itemStackProvider.of('minecraft:deepslate').copyHeat()
-        )
-
     // Echo Shard
     tfc.anvil(
                 TFC.itemStackProvider.of('minecraft:echo_shard').copyHeat(),
@@ -812,5 +800,35 @@ ServerEvents.recipes(event => {
             L: '#tfc:lumber',
             S: '#forge:plates/wrought_iron'
         }
+    )
+
+    // Granite
+    event.remove({id: 'minecraft:granite'})
+    event.shapeless(
+        Item.of('minecraft:granite'),
+        [
+            '#forge:gems/quartz',
+            'tfc:rock/cobble/granite'
+        ]
+    )
+
+    // Diorite
+    event.remove({id: 'minecraft:diorite'})
+    event.shapeless(
+        Item.of('minecraft:diorite'),
+        [
+            '#forge:gems/quartz',
+            'tfc:rock/cobble/diorite'
+        ]
+    )
+
+    // Andesite
+    event.remove({id: 'minecraft:andesite'})
+    event.shapeless(
+        Item.of('minecraft:andesite'),
+        [
+            '#forge:gems/quartz',
+            'tfc:rock/cobble/andesite'
+        ]
     )
 })

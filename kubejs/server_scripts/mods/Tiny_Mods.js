@@ -16,7 +16,7 @@ ServerEvents.recipes(event => {
 
     // Cooling Lunch Box
     event.remove({id: 'tfclunchbox:upgrade_to_cooling_lunchbox'})
-      event.shaped(
+    event.shaped(
         Item.of('tfclunchbox:cooling_lunchbox'),
         [
             ' H ',
@@ -27,5 +27,14 @@ ServerEvents.recipes(event => {
             R: '#forge:plates/red_steel',
             L: 'tfclunchbox:lunchbox'
         }
+    )
+
+    // Deepslate Rock
+    event.shapeless(
+        Item.of('tfc_loot:deepslate_rock'),
+        [
+            '#forge:dusts/charcoal',
+            'tfc:rock/loose/basalt'
+        ]
     )
 })
