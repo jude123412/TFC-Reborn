@@ -172,7 +172,7 @@ ServerEvents.recipes(event => {
     // Wrought Iron
     event.custom({
         type: 'vintage:hammering',
-        hammerBlows: 10,
+        hammerBlows: 5,
         ingredients: [
             {
                  item: 'tfc:raw_iron_bloom'
@@ -188,7 +188,7 @@ ServerEvents.recipes(event => {
     // Steel
     event.custom({
         type: 'vintage:hammering',
-        hammerBlows: 10,
+        hammerBlows: 5,
         ingredients: [
             {
                  tag: 'forge:ingots/pig_iron'
@@ -204,7 +204,7 @@ ServerEvents.recipes(event => {
     // Black Steel
     event.custom({
         type: 'vintage:hammering',
-        hammerBlows: 15,
+        hammerBlows: 10,
         ingredients: [
             {
                  item: 'tfc:metal/ingot/high_carbon_black_steel'
@@ -220,7 +220,7 @@ ServerEvents.recipes(event => {
     // Blue Steel
     event.custom({
         type: 'vintage:hammering',
-        hammerBlows: 20,
+        hammerBlows: 10,
         ingredients: [
             {
                  item: 'tfc:metal/ingot/high_carbon_blue_steel'
@@ -236,7 +236,7 @@ ServerEvents.recipes(event => {
     // Red Steel
     event.custom({
         type: 'vintage:hammering',
-        hammerBlows: 20,
+        hammerBlows: 10,
         ingredients: [
             {
                  item: 'tfc:metal/ingot/high_carbon_red_steel'

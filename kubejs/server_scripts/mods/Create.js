@@ -634,7 +634,7 @@ ServerEvents.recipes(event => {
         type: 'tfc:barrel_sealed',
         input_item: {
             ingredient: {
-                tag: 'forge:dusts/wood'
+                tag: 'forge:sawdust'
             },
             count: 4
         },
@@ -651,7 +651,7 @@ ServerEvents.recipes(event => {
         type: 'create:mixing',
         ingredients: [
             {
-            tag: 'forge:dusts/wood',
+            tag: 'forge:sawdust',
             count: 4
             },
             {
