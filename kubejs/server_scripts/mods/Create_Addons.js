@@ -7,6 +7,10 @@ ServerEvents.recipes(event => {
     // Recipe Removal by output
     event.remove({output: 'createdieselgenerators:wood_chip'})
 
+    // Recipe Removal by type
+    event.remove({ type: 'vintage:coiling' })
+    event.remove({ type: 'createaddition:rolling' })
+
     
     // Diesel Engine
     event.remove({id: 'createdieselgenerators:crafting/diesel_engine'})
@@ -143,4 +147,63 @@ ServerEvents.recipes(event => {
             A: '#forge:ingots/andesite_alloy'
         }
     )
+
+    // Oil Scanner
+    event.replaceInput(
+        {id: 'vintage:craft/spring_coiling_machine'},
+        'minecraft:iron_ingot',
+        '#forge:ingots/wrought_iron'
+    )
+
+    // Helve Hammer
+    event.replaceInput(
+        {id: 'vintage:mechanical_crafting/helve_hammer'},
+        'minecraft:iron_block',
+        '#forge:double_ingots/wrought_iron'
+    )
+
+    // Lathe
+    event.replaceInput(
+        {id: 'vintage:mechanical_crafting/lathe'},
+        'minecraft:iron_block',
+        '#forge:double_ingots/wrought_iron'
+    )
+
+    // Convex Curving Head
+    event.replaceInput(
+        {id: 'vintage:turning/convex_curving_head'},
+        'minecraft:iron_block',
+        '#forge:double_ingots/wrought_iron'
+    )
+
+    // Spring Coiling Machine Wheel
+    event.replaceInput(
+        {id: 'vintage:craft/spring_coiling_machine_wheel'},
+        'minecraft:iron_block',
+        '#forge:double_ingots/wrought_iron'
+    )
+
+    // Vibrating Table
+    event.replaceInput(
+        {id: 'vintage:craft/vibrating_table'},
+        '#vintage:springs',
+        '#vintage:springs/iron'
+    )
+
+    // Wrought Iron Spring
+    event.custom({
+        type: 'vintage:coiling',
+        springColor: '828282',
+        ingredients: [
+            {
+                tag: 'forge:rods/wrought_iron'
+            }
+        ],
+        results: [
+            {
+                item: 'vintage:iron_spring'
+            }
+        ],
+        processingTime: 120
+    })
 })

@@ -45,6 +45,16 @@ ServerEvents.recipes(event => {
     event.remove({id: 'immersivetechnology:advanced_coke_oven/charcoal'})
     event.remove({id: 'immersivetechnology:advanced_coke_oven/coke'})
     event.remove({id: 'immersiveengineering:crafting/coal_coke_to_coke'})
+    event.remove({id: 'immersiveengineering:metalpress/wire_brass'})
+    event.remove({id: 'immersiveengineering:metalpress/wire_zinc'})
+    event.remove({id: 'immersiveengineering:metalpress/wire_bronze'})
+    event.remove({id: 'immersiveengineering:metalpress/wire_tin'})
+    event.remove({id: 'immersiveengineering:metalpress/wire_uranium'})
+    event.remove({id: 'immersiveengineering:metalpress/wire_osmium'})
+    event.remove({id: 'immersiveengineering:metalpress/rod_bronze'})
+    event.remove({id: 'immersiveengineering:metalpress/rod_lead'})
+    event.remove({id: 'immersiveengineering:metalpress/rod_uranium'})
+    event.remove({id: 'immersiveengineering:metalpress/rod_osmium'})
 
     // Recipe Removal by output
     event.remove({output: 'immersiveengineering:dust_wood'})
