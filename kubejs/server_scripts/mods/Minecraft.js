@@ -754,22 +754,63 @@ ServerEvents.recipes(event => {
     )
 
     // Prismarine Crystals
-    tfc.barrel_sealed(8000)
-        .outputItem('minecraft:prismarine_crystals')
-        .inputItem('#forge:gems/quartz')
-        .inputFluid(Fluid.of('tfc:salt_water', 100))
+    event.custom({
+        type: 'tfc:barrel_sealed',
+        input_item: {
+            ingredient: {
+                tag: 'forge:gems/quartz'
+            },
+            count: 1
+        },
+        input_fluid: {
+            ingredient: 'tfc:salt_water',
+            amount: 100
+        },
+        output_item: {
+            item: 'minecraft:prismarine_crystals'
+        },
+        duration: 8000
+    }).id('prismarine_crystals')
+
 
     // Prismarine Shard
-    tfc.barrel_sealed(8000)
-        .outputItem('minecraft:prismarine_shard')
-        .inputItem('#forge:gems/prismarine')
-        .inputFluid(Fluid.of('minecraft:water', 100))
+    event.custom({
+        type: 'tfc:barrel_sealed',
+        input_item: {
+            ingredient: {
+                tag: 'forge:gems/prismarine'
+            },
+            count: 1
+        },
+        input_fluid: {
+            ingredient: 'minecraft:water',
+            amount: 100
+        },
+        output_item: {
+            item: 'minecraft:prismarine_shard'
+        },
+        duration: 8000
+    }).id('prismarine_shard')
+
 
     // Sculk Vein
-    tfc.barrel_sealed(32000)
-        .outputItem('minecraft:sculk_vein')
-        .inputItem('#tfc:fallen_leaves')
-        .inputFluid(Fluid.of('tfc:cyan_dye', 250))
+    event.custom({
+        type: 'tfc:barrel_sealed',
+        input_item: {
+            ingredient: {
+                tag: 'tfc:fallen_leaves'
+            },
+            count: 1
+        },
+        input_fluid: {
+            ingredient: 'tfc:cyan_dye',
+            amount: 250
+        },
+        output_item: {
+            item: 'minecraft:sculk_vein'
+        },
+        duration: 32000
+    }).id('sculk_vein')
 
     // Echo Shard
     tfc.anvil(

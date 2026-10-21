@@ -114,4 +114,25 @@ ServerEvents.recipes(event => {
             'upset_last'
         ]
     ).tier(4)
+
+    // Treated Wood Lumber
+    event.remove({id: 'tfc_ie_addon:barrel/treated_wood'})
+    event.custom({
+        type: 'tfc:barrel_sealed',
+        input_item: {
+            ingredient: {
+                tag: 'tfc:lumber'
+            }
+        },
+        input_fluid: {
+            ingredient: {
+                tag: 'forge:creosote'
+            },
+            amount: 50
+        },
+        output_item: {
+            item: 'tfc_ie_addon:treated_wood_lumber'
+        },
+        duration: 8000
+    }).id('treated_wood_lumber')
 })

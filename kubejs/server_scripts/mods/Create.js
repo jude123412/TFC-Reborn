@@ -383,9 +383,26 @@ ServerEvents.recipes(event => {
 
     // Rose Quartz
     event.remove({id: 'create:crafting/materials/rose_quartz'})
-    tfc.barrel_sealed(8000)
-        .outputItem('create:rose_quartz')
-        .inputs('#forge:gems/quartz', TFC.fluidStackIngredient('#forge:redstone_acid', 2000))
+    event.custom({
+        type: 'tfc:barrel_sealed',
+        input_item: {
+            ingredient: {
+                tag: 'forge:gems/quartz'
+            },
+            count: 1
+        },
+        input_fluid: {
+            ingredient: {
+                tag: 'forge:redstone_acid'
+            },
+            amount: 2000
+        },
+        output_item: {
+            item: 'create:rose_quartz'
+        },
+        duration: 8000
+    }).id('rose_quartz')
+
        
     // Chocolate
     event.remove({id: 'create:mixing/chocolate'})
@@ -639,6 +656,9 @@ ServerEvents.recipes(event => {
             count: 4
         },
         input_fluid: {
+            ingredient: {
+                tag: 'tfc:hydrating'
+            },
             ingredient: 'minecraft:water',
             amount: 250
         },
@@ -646,7 +666,7 @@ ServerEvents.recipes(event => {
             item: 'create:pulp'
         },
         duration: 8000
-    })
+    }).id('wood_pulp')
     event.custom({
         type: 'create:mixing',
         ingredients: [

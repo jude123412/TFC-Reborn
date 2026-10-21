@@ -96,9 +96,10 @@ ClientEvents.lang('en_us', event => {
     event.add('block.kubejs.coal_coke_block', 'Block of Coal Coke')
 
     // Barrel Recipes Names
-    event.add('tfc.recipe.barrel.tfc.kjs.9ju1u9d4uj0g36gzf7cjzo3ed', 'Wood Pulp')
-    event.add('tfc.recipe.barrel.tfc.kjs.2ut6j6tcftqbirqn335umo0md', 'Prismarine Crystals')
-    event.add('tfc.recipe.barrel.tfc.kjs.6m5qn53tdfzhtkceorstvktre', 'Prismarine Shard')
-    event.add('tfc.recipe.barrel.tfc.kjs.8ci8xegfzh6z2wgu7qihkh156', 'Sculk Vein')
-    event.add('tfc.recipe.barrel.tfc.kjs.54hl16pm6j1wsbzyd73rcana3', 'Rose Quartz')
+    event.add('tfc.recipe.barrel.minecraft.wood_pulp', 'Wood Pulp')
+    event.add('tfc.recipe.barrel.minecraft.prismarine_crystals', 'Prismarine Crystals')
+    event.add('tfc.recipe.barrel.minecraft.prismarine_shard', 'Prismarine Shard')
+    event.add('tfc.recipe.barrel.minecraft.sculk_vein', 'Sculk Vein')
+    event.add('tfc.recipe.barrel.minecraft.rose_quartz', 'Rose Quartz')
+    event.add('tfc.recipe.barrel.minecraft.treated_wood_lumber', 'Treated Wood Lumber')
 })
