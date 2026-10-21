@@ -65,45 +65,6 @@
 	#Range: 0.0 ~ 1.0
 	dashJumpBoost = 0.3
 
-[dragonsEye]
-	#最大渲染方块数量
-	#更大的数值可能会影响性能
-	#范围: 50-10000
-	#Range: 50 ~ 10000
-	max_render_blocks = 200
-	#渲染范围（以方块为单位）
-	#这个值会被平方来计算实际范围
-	#默认值12表示12*12的范围
-	#范围: 1-128
-	#Range: 1 ~ 128
-	render_range = 12
-
-	[dragonsEye.valuable]
-		#贵重矿物组 - 在这里添加要探测的额外贵重矿石
-		#添加方式示例：
-		#["minecraft:ancient_debris", "create:zinc_ore", "thermal:silver_ore"]
-		#或者每个矿石单独一行：
-		#[
-		#    "minecraft:ancient_debris",
-		#    "create:zinc_ore",
-		#    "thermal:silver_ore"
-		#]
-		ores = []
-
-	[dragonsEye.common]
-		#常见矿物组 - 在这里添加要探测的额外普通矿石
-		#添加方式示例：
-		#["create:copper_ore", "thermal:tin_ore", "mekanism:osmium_ore"]
-		#注意：每个矿石ID之间需要用逗号分隔，最后一个不需要加逗号
-		ores = []
-
-	[dragonsEye.redstone]
-		#红石矿物组 - 在这里添加要探测的额外红石类矿石
-		#添加方式示例：
-		#["thermal:cinnabar_ore", "projectred:electrotine_ore"]
-		#注意：矿石ID格式必须是 模组id:方块id
-		ores = []
-
 [enderCrown]
 	#末影人跟随范围
 	#Range: 8.0 ~ 32.0
@@ -199,6 +160,16 @@
 	#注意：此功能需要安装 First Aid 模组才能正常工作，如果没安装可以忽略此配置
 	#Range: 0.0 ~ 1.0
 	trigger_chance = 0.1
+	#荣誉之盾维持的抗性等级（0 = 抗性 I，1 = 抗性 II，以此类推）
+	#照原模组做法：盾牌不直接减免伤害，而是维持抗性效果由游戏结算
+	#Range: 0 ~ 4
+	resistanceLevel = 0
+	#抗性叠加的等级上限（amplifier 值）
+	#0 = 抗性 I，1 = 抗性 II，2 = 抗性 III，3 = 抗性 IV，以此类推
+	#再次获得同种效果时在现有等级上 +1 级，但不会超过此上限
+	#物品描述里的"最高 X 级"会跟随此值变化
+	#Range: 0 ~ 255
+	resistanceStackLimit = 3
 
 [greaterInertiaStone]
 	#击退抗性增加值
@@ -360,4 +331,32 @@
 	#针叶林村庄房屋配置
 	#格式：物品ID,权重,最小数量,最大数量（用分号分隔）
 	villageTaigaHouseLoot = ""
+
+#贪婪之眼配置
+[greedyEyes]
+	#寻宝目标列表。格式：方块 id、实体 id 或 #方块tag;#RRGGBB
+	targets = ["#forge:ores/coal;#464646", "#forge:ores/iron;#FFCC99", "#forge:ores/gold;#FFD700", "#forge:ores/lapis;#26619C", "#forge:ores/redstone;#B02E26", "#forge:ores/diamond;#00E6FF", "#forge:ores/emerald;#00FF4D", "#forge:ores/quartz;#EBEBEB", "minecraft:chest;#FFD700", "minecraft:chest_minecart;#FFD700"]
+	#垂直扫描范围（方块）
+	#Range: 0 ~ 32
+	rangeVertical = 6
+	#水平扫描范围（方块）
+	#Range: 0 ~ 32
+	rangeHorizontal = 12
+	#两次扫描间隔（tick）
+	#Range: 1 ~ 12000
+	frequency = 79
+	#非仅最近目标时每次扫描显示的最大粒子数
+	#Range: 0 ~ 4096
+	particles = 255
+	#只高亮最近的目标
+	closest = true
+	#每次扫描消耗的魔力
+	#Range: 0.0 ~ 10000.0
+	cost = 0.0
+	#龙吼提示触发条件（SNEAK/STAND/ALWAYS/NEVER）
+	#Allowed Values: SNEAK, STAND, ALWAYS, NEVER
+	growlActivation = "SNEAK"
+	#龙吼音量（百分比）
+	#Range: 0 ~ 100
+	volume = 100
 

@@ -279,7 +279,7 @@
 		jumpStrength = 0.6
 		#猫猫效果是否允许攀爬墙壁
 		fwallClimb = true
-		#猫猫效果爬墙速度（原版梯子速度约为0.11）
+		#猫猫效果爬墙速度（梯子速度约为0.11）
 		#Range: 0.05 ~ 0.3
 		climbSpeed = 0.11
 		#猫猫效果爬墙时的水平移动阻力
@@ -353,7 +353,7 @@
 		jumpStrength = -0.25
 		#仙女效果是否允许攀爬墙壁
 		wallClimb = true
-		#仙女效果爬墙速度（原版梯子速度约为0.11）
+		#仙女效果爬墙速度（梯子速度约为0.11）
 		#Range: 0.05 ~ 0.3
 		climbSpeed = 0.11
 		#仙女效果爬墙时的水平移动阻力
@@ -491,4 +491,79 @@
 		#泰坦族体型缩放 1 为正常体型
 		#Range: 0.1 ~ 10.0
 		scale = 3.0
+
+	#金牛族属性配置
+	[races.taurus]
+		#生命值倍率
+		#Range: -10.0 ~ 10.0
+		max_health = 0.5
+		#跟随范围倍率
+		#Range: -10.0 ~ 10.0
+		follow_range = 0.0
+		#击退抗性
+		#Range: -10.0 ~ 1.0
+		knockback_resistance = 0.5
+		#移动速度倍率
+		#Range: -10.0 ~ 10.0
+		movement_speed = -0.1
+		#飞行速度倍率
+		#Range: -10.0 ~ 10.0
+		flying_speed = 0.0
+		#攻击伤害倍率
+		#Range: -10.0 ~ 10.0
+		attack_damage = 0.2
+		#攻击击退力度
+		#Range: -10.0 ~ 10.0
+		attack_knockback = 0.0
+		#攻击速度倍率
+		#Range: -10.0 ~ 10.0
+		attack_speed = 0.0
+		#护甲值加成
+		#Range: -10.0 ~ 50.0
+		armor = 0.2
+		#护甲韧性加成
+		#Range: -10.0 ~ 50.0
+		armor_toughness = 0.3
+		#幸运值加成
+		#Range: -10.0 ~ 10.0
+		luck = 0.0
+		#游泳速度倍率
+		#Range: -10.0 ~ 10.0
+		swim_speed = -0.15
+		#名称标签显示距离倍率
+		#Range: -10.0 ~ 10.0
+		nametag_distance = 0.0
+		#重力影响倍率
+		#Range: -10.0 ~ 10.0
+		entity_gravity = 0.0
+		#步高增加值
+		#Range: -10.0 ~ 10.0
+		step_height = 1.0
+		#方块交互距离倍率
+		#Range: -10.0 ~ 10.0
+		block_reach = 1.0
+		#实体交互距离倍率
+		#Range: -10.0 ~ 10.0
+		entity_reach = 0.0
+		#魔力值增加量
+		#Range: 0.0 ~ 10000.0
+		manaBonus = 0.0
+		#金牛族体型缩放 1 为正常体型
+		#Range: 0.1 ~ 10.0
+		scale = 1.2
+		#踏击（冲撞）满蓄伤害
+		#Range: 0.0 ~ 10000.0
+		stampedeDamage = 10.0
+		#踏击（冲撞）满蓄魔力消耗
+		#Range: 0.0 ~ 10000.0
+		stampedeManaCost = 20.0
+		#踏击蓄满所需 tick 数
+		#Range: 1 ~ 1200
+		stampedeChargeTime = 40
+		#踏击最小冲刺速度（未蓄力）
+		#Range: 0.0 ~ 20.0
+		stampedeVelocityMin = 3.0
+		#踏击最大冲刺速度（满蓄力）
+		#Range: 0.0 ~ 20.0
+		stampedeVelocityMax = 6.0
 
