@@ -135,4 +135,24 @@ ServerEvents.recipes(event => {
         },
         duration: 8000
     }).id('treated_wood_lumber')
+
+    // Treated Stick 
+    event.custom({
+        type: 'tfc:barrel_sealed',
+        input_item: {
+            ingredient: {
+                tag: 'forge:rods/wooden'
+            }
+        },
+        input_fluid: {
+            ingredient: {
+                tag: 'forge:creosote'
+            },
+            amount: 100
+        },
+        output_item: {
+            item: 'immersiveengineering:stick_treated'
+        },
+        duration: 8000
+    }).id('treated_wood_stick')
 })

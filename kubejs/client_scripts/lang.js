@@ -102,4 +102,5 @@ ClientEvents.lang('en_us', event => {
     event.add('tfc.recipe.barrel.minecraft.sculk_vein', 'Sculk Vein')
     event.add('tfc.recipe.barrel.minecraft.rose_quartz', 'Rose Quartz')
     event.add('tfc.recipe.barrel.minecraft.treated_wood_lumber', 'Treated Wood Lumber')
+    event.add('tfc.recipe.barrel.minecraft.treated_wood_stick', 'Treated Wood Stick')
 })
