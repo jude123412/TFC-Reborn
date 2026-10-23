@@ -8,11 +8,28 @@ TFCEvents.data(event => {
     // Right Elytra Wing
     event.itemHeat('kubejs:elytra/right_wing', 8.332, 910, 1200)
 
+    // Unfired Refactory Brick
+    event.itemHeat('kubejs:unfired_refactory_brick', 2.332, null, null)
+
     // Coal Coke
     event.fuel('kubejs:coal_coke', 1550, 3300, null)
 
     // Block of Coal Coke
     event.fuel('kubejs:coal_coke_block', 1550, 33000, null)
+
+    // Refactory Bricks
+    // Used for RC and IE Coke/Blast Furnaces
+    event.knappingType(
+        'kubejs:refactory_clay',
+        5,
+        5,
+        'tfc:item.knapping.clay',
+        true,
+        true,
+        false,
+        'kubejs:refactory_clay',
+        'kubejs:refactory_clay'
+    )
 })
 
 ServerEvents.recipes(event => {
@@ -139,4 +156,50 @@ ServerEvents.recipes(event => {
         ]
     ).tier(3)
     tfc.heating('kubejs:elytra/right_wing', 1535).resultFluid(Fluid.of('rosia:invar_fluid', 400))
+
+
+    // Refactory Clay
+    event.shaped(
+        Item.of('kubejs:refactory_clay'), 
+        [
+            'SCS',
+            'DBD',
+            'SCS'
+        ],
+        {
+            S: '#minecraft:sand',
+            C: '#forge:dusts/charcoal',
+            D: '#forge:dusts/sylvite',
+            B: '#forge:clay'
+        }
+    )
+
+    // Unfired Refactory Brick
+    event.custom({
+        type: 'tfc:knapping',
+        knapping_type: 'kubejs:refactory_clay',
+        pattern: [
+            'XXXXX',
+            '     ',
+            'XXXXX',
+            '     ',
+            'XXXXX'
+        ],
+        result: {
+            item: 'kubejs:unfired_refactory_brick',
+            count: 3
+        }
+    })
+
+    // Refactory Brick
+    event.custom({
+        type: 'tfc:heating',
+        ingredient: {
+            item: 'kubejs:unfired_refactory_brick'
+        },
+        result_item: {
+            item: 'kubejs:refactory_brick'
+        },
+        temperature: 1399
+    })
 })

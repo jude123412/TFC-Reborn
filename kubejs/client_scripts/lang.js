@@ -79,6 +79,9 @@ ClientEvents.lang('en_us', event => {
     event.add('item.kubejs.iron_sawblade', 'Iron Sawblade')
     event.add('item.kubejs.elytra.left_wing', 'Left Elytra Wing')
     event.add('item.kubejs.elytra.right_wing', 'Right Elytra Wing')
+    event.add('item.kubejs.refactory_clay', 'Refactory Clay')
+    event.add('item.kubejs.unfired_refactory_brick', 'Unfired Refactory Brick')
+    event.add('item.kubejs.refactory_brick', 'Refactory Brick')
 
     // Metal Buckets
     event.add('item.kubejs.metal.andesite_alloy_bucket', 'Andesite Alloy Bucket')
@@ -103,4 +106,7 @@ ClientEvents.lang('en_us', event => {
     event.add('tfc.recipe.barrel.minecraft.rose_quartz', 'Rose Quartz')
     event.add('tfc.recipe.barrel.minecraft.treated_wood_lumber', 'Treated Wood Lumber')
     event.add('tfc.recipe.barrel.minecraft.treated_wood_stick', 'Treated Wood Stick')
+
+    // Knapping Recipe Names
+    event.add('tfc.jei.refactory_clay_knapping', 'Refactory Clay Knapping Recipe')
 })

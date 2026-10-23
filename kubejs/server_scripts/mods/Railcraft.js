@@ -9,14 +9,13 @@ ServerEvents.recipes(event => {
     event.shaped(
         Item.of('railcraft:coke_oven_bricks', 2),
         [
-            'SBS',
-            'BCB',
-            'SBS'
+            'BMB',
+            'MBM',
+            'BMB'
         ],
         {
-            S: '#forge:sand',
-            B: '#rnr:brick_road_items',
-            C: 'minecraft:clay'
+            B: 'kubejs:refactory_brick',
+            M: 'tfc:mortar',
         }
     )
 
