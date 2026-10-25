@@ -80,6 +80,7 @@
     "spawner": true
   },
   "immersiveconvergence": {
+    "multiblock_icon": true,
     "lines": true,
     "status": true
   },
