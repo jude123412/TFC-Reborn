@@ -63,6 +63,11 @@
   "tfcgroomer": {
     "grooming_station": true
   },
+  "avaritia": {
+    "extreme_smithing": true,
+    "crafting_table": true,
+    "compressor": true
+  },
   "immersiveengineering": {
     "multiblock_icon": true
   },
