@@ -6,39 +6,6 @@ ServerEvents.recipes(event => {
     for (const wood in global.trees) {
         let t = global.trees[wood]
 
-        if (t.mod_id === 'tfc') {
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/wood_furniture/${wood}_trapped_chest`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/hanging_sign/${wood}_steel`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/hanging_sign/${wood}_bronze`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/hanging_sign/${wood}_wrought_iron`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/hanging_sign/${wood}_blue_steel`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/wood_furniture/${wood}_sewing_table`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/wood_furniture/${wood}_axle`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/wood_furniture/${wood}_trapdoor`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/hanging_sign/${wood}_copper`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/wood_furniture/${wood}_barrel`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/hanging_sign/${wood}_bismuth_bronze`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/wood_furniture/${wood}_lectern`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/wood_furniture/${wood}_log_fence`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/wood_furniture/${wood}_sign`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/hanging_sign/${wood}_black_steel`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/wood_furniture/${wood}_encased_axle`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/hanging_sign/${wood}_black_bronze`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/wood_furniture/${wood}_workbench`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/wood_furniture/${wood}_button`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/wood_furniture/${wood}_bookshelf`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/wood_furniture/${wood}_loom`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/wood_furniture/${wood}_tool_rack`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/wood_furniture/${wood}_sluice`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/wood_furniture/${wood}_fence_gate`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/wood_furniture/${wood}_door`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/wood_furniture/${wood}_pressure_plate`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/wood_furniture/${wood}_scribing_table`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/wood_furniture/${wood}_fence`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/wood_furniture/${wood}_chest`})
-            event.remove({id: `survivorsdelight:cutting/tfc/salvage/hanging_sign/${wood}_red_steel`})
-        }
-
         if (t.generate_bark) {
             event.remove({id: `${t.mod_id}:crafting/wood/${wood}_lumber_log`})
             event.remove({id: `${t.mod_id}:crafting/wood/${wood}_support`})
@@ -85,30 +52,6 @@ ServerEvents.recipes(event => {
             Post.damage_item()
         ])
         
-        event.remove({id: `survivorsdelight:cutting/tfc/strip_wood/${wood}_log`})
-        event.remove({id: `survivorsdelight:cutting/tfc/strip_wood/${wood}_wood`})
-        event.remove({id: `tfc_debark:bark/compat/farmersdelight/${wood}_log`})
-        event.remove({id: `tfc_debark:bark/compat/farmersdelight/${wood}_wood`})
-        event.recipes.farmersdelight.cutting(
-            `${t.mod_id}:wood/log/${wood}`,
-            '#tfc:axes_that_log',
-            [
-                `${t.mod_id}:wood/stripped_log/${wood}`,
-                Item.of(`tfc_debark:${wood}_bark`)
-                    .withChance(0.5)
-            ],
-            'minecraft:item.axe.strip'
-        )
-        event.recipes.farmersdelight.cutting(
-            `${t.mod_id}:wood/wood/${wood}`,
-            '#tfc:axes_that_log',
-            [
-                `${t.mod_id}:wood/stripped_wood/${wood}`,
-                Item.of(`tfc_debark:${wood}_bark`)
-                    .withChance(0.5)
-            ],
-            'minecraft:item.axe.strip'
-        )
         event.custom({
             type: 'mekanism:sawing',
             input: {
@@ -166,22 +109,6 @@ ServerEvents.recipes(event => {
             Post.add_item_cooldown(1),
             Post.damage_item()
         ])
-        event.recipes.farmersdelight.cutting(
-            `${t.mod_id}:wood/stripped_log/${wood}`,
-            '#tfc:axes_that_log',
-            [
-                Item.of(`${t.mod_id}:wood/support/${wood}`, 2)
-            ],
-            'minecraft:block.wood.hit'
-        )
-        event.recipes.farmersdelight.cutting(
-            `${t.mod_id}:wood/stripped_wood/${wood}`,
-            '#tfc:axes_that_log',
-            [
-                Item.of(`${t.mod_id}:wood/support/${wood}`, 2)
-            ],
-            'minecraft:block.wood.hit'
-        )
         create.cutting(
             [
                 Item.of(`${t.mod_id}:wood/support/${wood}`, 3),
@@ -337,24 +264,6 @@ ServerEvents.recipes(event => {
             Post.add_item_cooldown(1),
             Post.damage_item()
         ])
-        event.recipes.farmersdelight.cutting(
-            `${t.mod_id}:wood/stripped_log/${wood}`,
-            '#tfc:saws',
-            [
-                Item.of(`${t.mod_id}:wood/lumber/${wood}`, 4),
-                Item.of('kubejs:powder/wood')
-            ],
-            'minecraft:block.wood.hit'
-        )
-        event.recipes.farmersdelight.cutting(
-            `${t.mod_id}:wood/stripped_wood/${wood}`,
-            '#tfc:saws',
-            [
-                Item.of(`${t.mod_id}:wood/lumber/${wood}`, 4),
-                Item.of('kubejs:powder/wood')
-            ],
-            'minecraft:block.wood.hit'
-        )
         create.cutting(
             [
                 Item.of(`${t.mod_id}:wood/lumber/${wood}`, 4),
