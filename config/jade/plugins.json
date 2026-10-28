@@ -173,6 +173,10 @@
   "survivorsbutchercraft": {
     "meat_hook": true
   },
+  "tfc_gourmet": {
+    "milkable_animal": true,
+    "brinza_wheel": true
+  },
   "mekanism": {
     "infuse_type": true,
     "gas": true,
