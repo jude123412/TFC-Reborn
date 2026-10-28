@@ -39,7 +39,6 @@ ServerEvents.recipes(event => {
         ).post([ 
             Post.drop_item(Item.of(`tfc_debark:${wood}_bark`)).withChance(0.5),
             Post.place(`${t.mod_id}:wood/stripped_log/${wood}`),
-            Post.add_item_cooldown(1),
             Post.damage_item()
         ])
         lychee.block_interacting(
@@ -48,7 +47,6 @@ ServerEvents.recipes(event => {
         ).post([ 
             Post.drop_item(Item.of(`tfc_debark:${wood}_bark`)).withChance(0.5),
             Post.place(`${t.mod_id}:wood/stripped_wood/${wood}`),
-            Post.add_item_cooldown(1),
             Post.damage_item()
         ])
         
@@ -97,7 +95,6 @@ ServerEvents.recipes(event => {
         ).post([ 
             Post.drop_item(Item.of(`${t.mod_id}:wood/support/${wood}`, 2)),
             Post.place('minecraft:air'),
-            Post.add_item_cooldown(1),
             Post.damage_item()
         ])
         lychee.block_interacting(
@@ -106,7 +103,6 @@ ServerEvents.recipes(event => {
         ).post([ 
             Post.drop_item(Item.of(`${t.mod_id}:wood/support/${wood}`, 2)),
             Post.place('minecraft:air'),
-            Post.add_item_cooldown(1),
             Post.damage_item()
         ])
         create.cutting(
@@ -251,7 +247,6 @@ ServerEvents.recipes(event => {
             Post.drop_item(Item.of(`${t.mod_id}:wood/lumber/${wood}`, 4)),
             Post.drop_item(Item.of('kubejs:powder/wood')),
             Post.place('minecraft:air'),
-            Post.add_item_cooldown(1),
             Post.damage_item()
         ])
         lychee.block_interacting(
@@ -261,7 +256,6 @@ ServerEvents.recipes(event => {
             Post.drop_item(Item.of(`${t.mod_id}:wood/lumber/${wood}`, 4)),
             Post.drop_item(Item.of('kubejs:powder/wood')),
             Post.place('minecraft:air'),
-            Post.add_item_cooldown(1),
             Post.damage_item()
         ])
         create.cutting(
