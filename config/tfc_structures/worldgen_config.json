@@ -1,0 +1,420 @@
+{
+  "biomeTags": [
+    {
+      "id": "tfc_structures:all_tfc_biomes",
+      "biomes": [
+        "tfc:mountains",
+        "tfc:badlands",
+        "tfc:ocean",
+        "tfc:salt_marsh",
+        "tfc:lowlands",
+        "tfc:oceanic_mountain_lake",
+        "tfc:hills",
+        "tfc:volcanic_mountain_lake",
+        "tfc:lake",
+        "tfc:volcanic_oceanic_mountain_lake",
+        "tfc:volcanic_oceanic_mountains",
+        "tfc:canyons",
+        "tfc:river",
+        "tfc:rolling_hills",
+        "tfc:inverted_badlands",
+        "tfc:plateau_lake",
+        "tfc:shore",
+        "tfc:ocean_reef",
+        "tfc:low_canyons",
+        "tfc:plateau",
+        "tfc:highlands",
+        "tfc:oceanic_mountains",
+        "tfc:deep_ocean_trench",
+        "tfc:deep_ocean",
+        "tfc:volcanic_mountains",
+        "tfc:tidal_flats",
+        "tfc:old_mountain_lake",
+        "tfc:plains",
+        "tfc:mountain_lake",
+        "tfc:old_mountains"
+      ],
+      "structures": []
+    },
+    {
+      "id": "tfc_structures:is_beach",
+      "biomes": [
+        "tfc:tidal_flats",
+        "tfc:shore"
+      ],
+      "structures": []
+    },
+    {
+      "id": "tfc_structures:is_oceanic_mountain_lake",
+      "biomes": [
+        "tfc:oceanic_mountain_lake",
+        "tfc:volcanic_oceanic_mountain_lake"
+      ],
+      "structures": []
+    },
+    {
+      "id": "tfc_structures:is_mountain_lake",
+      "biomes": [
+        "tfc:mountain_lake",
+        "tfc:old_mountain_lake",
+        "tfc:volcanic_mountain_lake"
+      ],
+      "structures": []
+    },
+    {
+      "id": "tfc_structures:is_common_lake",
+      "biomes": [
+        "tfc:lake",
+        "tfc:plateau_lake"
+      ],
+      "structures": []
+    },
+    {
+      "id": "tfc_structures:is_any_lake",
+      "biomes": [
+        "#tfc_structures:is_common_lake",
+        "#tfc_structures:is_mountain_lake",
+        "#tfc_structures:is_oceanic_mountain_lake"
+      ],
+      "structures": []
+    },
+    {
+      "id": "tfc_structures:is_river",
+      "biomes": [
+        "tfc:river"
+      ],
+      "structures": []
+    },
+    {
+      "id": "tfc_structures:is_highlands",
+      "biomes": [
+        "tfc:highlands"
+      ],
+      "structures": []
+    },
+    {
+      "id": "tfc_structures:is_any_badlands",
+      "biomes": [
+        "tfc:badlands",
+        "tfc:inverted_badlands"
+      ],
+      "structures": []
+    },
+    {
+      "id": "tfc_structures:is_hill",
+      "biomes": [
+        "tfc:rolling_hills",
+        "tfc:hills"
+      ],
+      "structures": []
+    },
+    {
+      "id": "tfc_structures:is_canyons",
+      "biomes": [
+        "tfc:low_canyons",
+        "tfc:canyons"
+      ],
+      "structures": []
+    },
+    {
+      "id": "tfc_structures:is_common_mountains",
+      "biomes": [
+        "tfc:mountains",
+        "tfc:old_mountains"
+      ],
+      "structures": []
+    },
+    {
+      "id": "tfc_structures:is_volcanic_mountains",
+      "biomes": [
+        "tfc:volcanic_mountains",
+        "tfc:volcanic_oceanic_mountains"
+      ],
+      "structures": []
+    },
+    {
+      "id": "tfc_structures:is_any_mountains",
+      "biomes": [
+        "#tfc_structures:is_common_mountains",
+        "#tfc_structures:is_volcanic_mountains"
+      ],
+      "structures": []
+    },
+    {
+      "id": "tfc_structures:is_deep_ocean",
+      "biomes": [
+        "tfc:deep_ocean",
+        "tfc:deep_ocean_trench"
+      ],
+      "structures": []
+    },
+    {
+      "id": "tfc_structures:is_common_ocean",
+      "biomes": [
+        "tfc:ocean",
+        "tfc:ocean_reef"
+      ],
+      "structures": []
+    },
+    {
+      "id": "tfc_structures:is_any_ocean",
+      "biomes": [
+        "#tfc_structures:is_deep_ocean",
+        "#tfc_structures:is_common_ocean"
+      ],
+      "structures": []
+    },
+    {
+      "id": "tfc_structures:is_swamp",
+      "biomes": [
+        "tfc:lowlands",
+        "tfc:salt_marsh"
+      ],
+      "structures": []
+    },
+    {
+      "id": "tfc_structures:is_plains",
+      "biomes": [
+        "tfc:plains",
+        "tfc:plateau"
+      ],
+      "structures": []
+    },
+    {
+      "id": "tfc_structures:buried_treasure",
+      "biomes": [
+        "#tfc_structures:is_beach",
+        "#tfc_structures:is_oceanic_mountain_lake"
+      ],
+      "structures": [
+        "minecraft:buried_treasure"
+      ]
+    },
+    {
+      "id": "tfc_structures:desert_pyramid",
+      "biomes": [
+        "#tfc_structures:is_any_badlands",
+        "#tfc_structures:is_hill",
+        "tfc:shore"
+      ],
+      "structures": [
+        "minecraft:desert_pyramid"
+      ]
+    },
+    {
+      "id": "tfc_structures:pillager_outpost",
+      "biomes": [
+        "#tfc_structures:is_canyons",
+        "#tfc_structures:is_any_badlands",
+        "#tfc_structures:is_any_mountains",
+        "#tfc_structures:is_highlands"
+      ],
+      "structures": [
+        "minecraft:pillager_outpost"
+      ]
+    },
+    {
+      "id": "tfc_structures:shipwreck",
+      "biomes": [
+        "#tfc_structures:is_any_ocean"
+      ],
+      "structures": [
+        "minecraft:shipwreck"
+      ]
+    },
+    {
+      "id": "tfc_structures:shipwreck_beached",
+      "biomes": [
+        "#tfc_structures:is_beach",
+        "#tfc_structures:is_swamp"
+      ],
+      "structures": [
+        "minecraft:shipwreck_beached"
+      ]
+    },
+    {
+      "id": "tfc_structures:stronghold",
+      "biomes": [
+        "#tfc_structures:is_any_mountains"
+      ],
+      "structures": [
+        "minecraft:stronghold"
+      ]
+    },
+    {
+      "id": "tfc_structures:swamp_hut",
+      "biomes": [
+        "#tfc_structures:is_swamp",
+        "#tfc_structures:is_any_lake",
+        "#tfc_structures:is_beach"
+      ],
+      "structures": [
+        "minecraft:swamp_hut"
+      ]
+    },
+    {
+      "id": "tfc_structures:trail_ruins",
+      "biomes": [
+        "#tfc_structures:is_highlands",
+        "tfc:old_mountains",
+        "tfc:low_canyons",
+        "tfc:hills",
+        "tfc:plateau"
+      ],
+      "structures": [
+        "minecraft:trail_ruins"
+      ]
+    },
+    {
+      "id": "tfc_structures:mansion",
+      "biomes": [
+        "#tfc_structures:is_any_badlands",
+        "#tfc_structures:is_plains"
+      ],
+      "structures": [
+        "minecraft:mansion"
+      ]
+    },
+    {
+      "id": "tfc_structures:jungle_pyramid",
+      "biomes": [
+        "#tfc_structures:is_any_badlands",
+        "#tfc_structures:is_canyons",
+        "#tfc_structures:is_highlands"
+      ],
+      "structures": [
+        "minecraft:jungle_pyramid"
+      ]
+    },
+    {
+      "id": "tfc_structures:ocean_ruin_cold",
+      "biomes": [
+        "#tfc_structures:is_deep_ocean"
+      ],
+      "structures": [
+        "minecraft:ocean_ruin_cold"
+      ]
+    },
+    {
+      "id": "tfc_structures:ocean_ruin_warm",
+      "biomes": [
+        "#tfc_structures:is_common_ocean"
+      ],
+      "structures": [
+        "minecraft:ocean_ruin_warm"
+      ]
+    },
+    {
+      "id": "tfc_structures:monument",
+      "biomes": [
+        "#tfc_structures:is_deep_ocean"
+      ],
+      "structures": [
+        "minecraft:monument"
+      ]
+    },
+    {
+      "id": "tfc_structures:ruined_portal",
+      "biomes": [
+        "#tfc_structures:is_hill",
+        "#tfc_structures:is_plains"
+      ],
+      "structures": [
+        "minecraft:ruined_portal"
+      ]
+    },
+    {
+      "id": "tfc_structures:ruined_portal_swamp",
+      "biomes": [
+        "#tfc_structures:is_swamp"
+      ],
+      "structures": [
+        "minecraft:ruined_portal_swamp"
+      ]
+    },
+    {
+      "id": "tfc_structures:ruined_portal_mountain",
+      "biomes": [
+        "#tfc_structures:is_any_mountains"
+      ],
+      "structures": [
+        "minecraft:ruined_portal_mountain"
+      ]
+    },
+    {
+      "id": "tfc_structures:ruined_portal_ocean",
+      "biomes": [
+        "#tfc_structures:is_any_ocean"
+      ],
+      "structures": [
+        "minecraft:ruined_portal_ocean"
+      ]
+    },
+    {
+      "id": "tfc_structures:ruined_portal_desert",
+      "biomes": [
+        "#tfc_structures:is_any_badlands"
+      ],
+      "structures": [
+        "minecraft:ruined_portal_desert"
+      ]
+    },
+    {
+      "id": "tfc_structures:ruined_portal_jungle",
+      "biomes": [
+        "#tfc_structures:is_highlands",
+        "#tfc_structures:is_hill",
+        "#tfc_structures:is_canyons"
+      ],
+      "structures": [
+        "minecraft:ruined_portal_jungle"
+      ]
+    },
+    {
+      "id": "tfc_structures:mineshaft",
+      "biomes": [
+        "#tfc_structures:is_any_mountains"
+      ],
+      "structures": [
+        "minecraft:mineshaft"
+      ]
+    },
+    {
+      "id": "tfc_structures:villages",
+      "biomes": [
+        "#tfc_structures:is_hill",
+        "#tfc_structures:is_plains"
+      ],
+      "structures": [
+        "minecraft:village_desert",
+        "minecraft:village_plains",
+        "minecraft:village_savanna",
+        "minecraft:village_taiga"
+      ]
+    }
+  ],
+  "disabledStructures": [
+    "minecraft:mineshaft_mesa",
+    "minecraft:igloo",
+    "minecraft:village_snowy"
+  ],
+  "defaultWorldgenStructures": [
+    "apotheosis:tower_leaf",
+    "apotheosis:tower_main",
+    "apotheosis:tower_sand",
+    "apotheosis:tower_spruce",
+    "dungeoncrawl:dungeon",
+    "minecraft:ancient_city",
+    "minecraft:bastion_remnant",
+    "minecraft:end_city",
+    "minecraft:fortress",
+    "minecraft:nether_fossil",
+    "minecraft:ruined_portal_nether",
+    "mythicbotany:andwari_cave",
+    "mythicbotany:elven_house",
+    "railcraft:geode",
+    "tfc_ruins:ruin_beach",
+    "tfc_ruins:ruin_rich",
+    "tfc_ruins:ruin_small"
+  ]
+}
