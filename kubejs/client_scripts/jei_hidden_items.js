@@ -1,41 +1,124 @@
 JEIEvents.hideItems(event => {
-    const itemTypes = [
-        'plates',
-        'gears',
-        'nuggets',
-        'dusts'
+    const toHide = [
+        'create:empty_blaze_burner',
+        'create:blaze_burner',
+        'immersiveengineering:dust_coke',
+        'tfcoreprocessing:kindle/coke_dust',
+        'minecraft:cake',
+        'create:powdered_obsidian',
+        'mekanism:dust_obsidian',
+        'railcraft:obsidian_dust',
+        'create:raw_zinc',
+        'create:crushed_raw_iron',
+        'create:crushed_raw_gold',
+        'create:crushed_raw_copper',
+        'create:crushed_raw_zinc',
+        'create:crushed_raw_osmium',
+        'create:crushed_raw_silver',
+        'create:crushed_raw_tin',
+        'create:crushed_raw_lead',
+        'create:crushed_raw_aluminum',
+        'create:crushed_raw_uranium',
+        'create:crushed_raw_nickel',
+        'create:blaze_cake_base',
+        'create:wheat_flour',
+        'create:dough',
+        'create:zinc_ore',
+        'create:deepslate_zinc_ore',
+        'create:raw_zinc_block',
+        'immersiveengineering:coal_coke',
+        'railcraft:coal_coke',
+        'functionalstorage:oak_1',
+        'functionalstorage:spruce_1',
+        'functionalstorage:birch_1',
+        'functionalstorage:jungle_1',
+        'functionalstorage:acacia_1',
+        'functionalstorage:dark_oak_1',
+        'functionalstorage:mangrove_1',
+        'functionalstorage:cherry_1',
+        'functionalstorage:oak_2',
+        'functionalstorage:spruce_2',
+        'functionalstorage:birch_2',
+        'functionalstorage:jungle_2',
+        'functionalstorage:acacia_2',
+        'functionalstorage:dark_oak_2',
+        'functionalstorage:mangrove_2',
+        'functionalstorage:cherry_2',
+        'functionalstorage:oak_4',
+        'functionalstorage:spruce_4',
+        'functionalstorage:birch_4',
+        'functionalstorage:jungle_4',
+        'functionalstorage:acacia_4',
+        'functionalstorage:dark_oak_4',
+        'functionalstorage:mangrove_4',
+        'functionalstorage:cherry_4',
+        'createdieselgenerators:wire_cutters',
+        'createdieselgenerators:hammer',
+        'immersiveengineering:dust_wood',
+        'mekanism:sawdust',
+        'tfc_lumberjack:sawdust',
+        'createdieselgenerators:wood_chip',
+        'vintage:andesite_rod',
+        'vintage:andesite_wire',
+        'vintage:andesite_spring',
+        'vintage:small_andesite_spring',
+        'vintage:blaze_spring',
+        'vintage:brass_wire',
+        'vintage:brass_spring',
+        'vintage:small_brass_spring',
+        'vintage:copper_spring',
+        'vintage:small_copper_spring',
+        'vintage:golden_spring',
+        'vintage:small_golden_spring',
+        'vintage:small_iron_spring',
+        'vintage:netherite_rod',
+        'vintage:netherite_wire',
+        'vintage:small_netherite_spring',
+        'vintage:vanadium_wire',
+        'vintage:vanadium_spring',
+        'vintage:small_vanadium_spring',
+        'vintage:zinc_rod',
+        'vintage:zinc_wire',
+        'vintage:zinc_spring',
+        'vintage:small_zinc_spring',
+        'vintage:bronze_rod',
+        'vintage:lead_rod',
+        'vintage:tin_rod',
+        'vintage:uranium_rod',
+        'vintage:osmium_rod',
+        'vintage:refined_glowstone_rod',
+        'vintage:refined_obsidian_rod',
+        'vintage:steel_rod',
+        'vintage:bronze_wire',
+        'vintage:lead_wire',
+        'vintage:tin_wire',
+        'vintage:uranium_wire',
+        'vintage:osmium_wire',
+        'vintage:refined_glowstone_wire',
+        'vintage:refined_obsidian_wire',
+        'vintage:steel_wire',
+        'vintage:electrum_spring',
+        'vintage:bronze_spring',
+        'vintage:lead_spring',
+        'vintage:tin_spring',
+        'vintage:uranium_spring',
+        'vintage:osmium_spring',
+        'vintage:refined_glowstone_spring',
+        'vintage:refined_obsidian_spring',
+        'vintage:steel_spring',
+        'vintage:small_electrum_spring',
+        'vintage:small_bronze_spring',
+        'vintage:small_lead_spring',
+        'vintage:small_tin_spring',
+        'vintage:small_uranium_spring',
+        'vintage:small_osmium_spring',
+        'vintage:small_refined_glowstone_spring',
+        'vintage:small_refined_obsidian_spring',
+        'vintage:small_steel_spring',
+        'railcraft:zinc_raw'
     ]
-
-    // Item type hiding
-    for (const metal in global.metals) {
-        let m = global.metals[metal]
-
-        for (const type of itemTypes) {
-
-            // 1. Hide items under the metal’s own tag
-            let directTag = Ingredient.of(`#forge:${type}/${metal}`).getItemIds()
-            for (let id of directTag) {
-                if (!id.includes("kubejs")) {
-                    event.hide(id)
-                }
-            }
-
-            // 2. Hide items under extra tags
-            if (m.extra_tags) {
-                for (const t of m.extra_tags) {
-                    let extraTag = Ingredient.of(`#forge:${type}/${t}`).getItemIds()
-                    for (let id of extraTag) {
-                        if (!id.includes("kubejs")) {
-                            event.hide(id)
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     // Item Hiding
-    for (const item of global.hidden_items) {
+    for (const item of toHide) {
         event.hide(item)
     }
 })

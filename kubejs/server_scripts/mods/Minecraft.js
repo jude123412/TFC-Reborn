@@ -1,9 +1,5 @@
 TFCEvents.data(event => {
-    // Sculk
-    event.itemHeat('minecraft:sculk', 2, 1000, 1400)
-
-    // Echo Shard
-    event.itemHeat('minecraft:echo_shard', 2, 1000, 1400)
+    
 })
 
 ServerEvents.recipes(event => {
@@ -250,36 +246,6 @@ ServerEvents.recipes(event => {
             H: 'tfc:ore/halite',
             M: 'tfc:groundcover/mollusk',
             R: '#forge:rods/bismuth'
-        }
-    )
-
-    // Sculk
-    event.shaped(
-        Item.of('minecraft:sculk'), 
-        [
-            'SSS',
-            'SDS',
-            'SSS'
-        ],
-        {
-            D: 'minecraft:deepslate',
-            S: 'minecraft:sculk_vein'
-        }
-    )
-
-    // Sculk Catalyst
-    event.shaped(
-        Item.of('minecraft:sculk_catalyst'), 
-        [
-            ' V ',
-            'STS',
-            'SDS'
-        ],
-        {
-            D: 'minecraft:deepslate',
-            S: 'minecraft:sculk',
-            T: 'apotheosis:warden_tendril',
-            V: 'minecraft:sculk_vein'
         }
     )
 
@@ -752,76 +718,6 @@ ServerEvents.recipes(event => {
         'minecraft:dried_kelp',
         'tfc:food/dried_kelp'
     )
-
-    // Prismarine Crystals
-    event.custom({
-        type: 'tfc:barrel_sealed',
-        input_item: {
-            ingredient: {
-                tag: 'forge:gems/quartz'
-            },
-            count: 1
-        },
-        input_fluid: {
-            ingredient: 'tfc:salt_water',
-            amount: 100
-        },
-        output_item: {
-            item: 'minecraft:prismarine_crystals'
-        },
-        duration: 8000
-    }).id('prismarine_crystals')
-
-
-    // Prismarine Shard
-    event.custom({
-        type: 'tfc:barrel_sealed',
-        input_item: {
-            ingredient: {
-                tag: 'forge:gems/prismarine'
-            },
-            count: 1
-        },
-        input_fluid: {
-            ingredient: 'minecraft:water',
-            amount: 100
-        },
-        output_item: {
-            item: 'minecraft:prismarine_shard'
-        },
-        duration: 8000
-    }).id('prismarine_shard')
-
-
-    // Sculk Vein
-    event.custom({
-        type: 'tfc:barrel_sealed',
-        input_item: {
-            ingredient: {
-                tag: 'tfc:fallen_leaves'
-            },
-            count: 1
-        },
-        input_fluid: {
-            ingredient: 'tfc:cyan_dye',
-            amount: 250
-        },
-        output_item: {
-            item: 'minecraft:sculk_vein'
-        },
-        duration: 32000
-    }).id('sculk_vein')
-
-    // Echo Shard
-    tfc.anvil(
-                TFC.itemStackProvider.of('minecraft:echo_shard').copyHeat(),
-                'minecraft:sculk',
-            [
-                'hit_third_last',
-                'punch_second_last',
-                'punch_not_last'
-            ]
-        ).tier(5)
 
     // Glass Bottle
     event.shapeless('minecraft:glass_bottle', [

@@ -176,7 +176,8 @@
     {
       "name": "minecraft:ancient_city",
       "whitelisted_biomes": [
-        "minecraft:deep_dark"
+        "minecraft:deep_dark",
+        "tfc:volcanic_mountains"
       ],
       "blacklisted_biomes": [],
       "step": "underground_decoration",

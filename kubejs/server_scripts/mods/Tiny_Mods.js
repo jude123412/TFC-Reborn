@@ -28,13 +28,4 @@ ServerEvents.recipes(event => {
             L: 'tfclunchbox:lunchbox'
         }
     )
-
-    // Deepslate Rock
-    event.shapeless(
-        Item.of('tfc_loot:deepslate_rock'),
-        [
-            '#forge:dusts/charcoal',
-            'tfc:rock/loose/basalt'
-        ]
-    )
 })
