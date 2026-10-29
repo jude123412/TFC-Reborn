@@ -1,3 +1,0 @@
-#This is a fallback option when some mods in your modpack override the effect of workhorse. It should be false if the effect works just fine.
-forceCancelOverburden = false
-
