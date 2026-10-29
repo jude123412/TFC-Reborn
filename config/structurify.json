@@ -1,0 +1,4101 @@
+{
+  "config_version": "2.0.43",
+  "config_datetime": "2026-10-29_21-50-48",
+  "general": {
+    "disable_all_structures": false,
+    "prevent_structure_overlap": false,
+    "overlap_padding": 0,
+    "enable_global_spacing_and_separation_modifier": false,
+    "global_spacing_and_separation_modifier": 1.0
+  },
+  "structure_namespaces": [
+    {
+      "name": "apotheosis",
+      "is_disabled": false,
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "global",
+      "is_disabled": false,
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft",
+      "is_disabled": false,
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "mythicbotany",
+      "is_disabled": false,
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "railcraft",
+      "is_disabled": false,
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "tfc_ruins",
+      "is_disabled": false,
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    }
+  ],
+  "structures": [
+    {
+      "name": "minecraft:ancient_city",
+      "whitelisted_biomes": [
+        "minecraft:deep_dark"
+      ],
+      "blacklisted_biomes": [],
+      "step": "underground_decoration",
+      "terrain_adaptation": "beard_box",
+      "size": 7,
+      "max_horizontal_distance_from_center": 116,
+      "max_vertical_distance_from_center": 116,
+      "start_height": {
+        "absolute": -27
+      },
+      "project_start_to_heightmap": "NONE",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": true,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": true,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:bastion_remnant",
+      "whitelisted_biomes": [
+        "minecraft:crimson_forest",
+        "minecraft:nether_wastes",
+        "minecraft:soul_sand_valley",
+        "minecraft:warped_forest"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "none",
+      "size": 6,
+      "max_horizontal_distance_from_center": 80,
+      "max_vertical_distance_from_center": 80,
+      "start_height": {
+        "absolute": 33
+      },
+      "project_start_to_heightmap": "NONE",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:buried_treasure",
+      "whitelisted_biomes": [
+        "minecraft:beach",
+        "minecraft:snowy_beach",
+        "tfc:shore"
+      ],
+      "blacklisted_biomes": [],
+      "step": "underground_structures",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": true,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": true,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:desert_pyramid",
+      "whitelisted_biomes": [
+        "minecraft:desert",
+        "tfc:badlands"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:end_city",
+      "whitelisted_biomes": [
+        "minecraft:end_highlands",
+        "minecraft:end_midlands"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:fortress",
+      "whitelisted_biomes": [
+        "minecraft:nether_wastes",
+        "minecraft:soul_sand_valley",
+        "minecraft:crimson_forest",
+        "minecraft:warped_forest",
+        "minecraft:basalt_deltas"
+      ],
+      "blacklisted_biomes": [],
+      "step": "underground_decoration",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": true,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": true,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:igloo",
+      "whitelisted_biomes": [
+        "minecraft:snowy_taiga",
+        "minecraft:snowy_plains",
+        "minecraft:snowy_slopes"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:jungle_pyramid",
+      "whitelisted_biomes": [
+        "minecraft:bamboo_jungle",
+        "minecraft:jungle",
+        "tfc:low_canyons"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:mansion",
+      "whitelisted_biomes": [
+        "minecraft:dark_forest"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:mineshaft",
+      "whitelisted_biomes": [
+        "minecraft:deep_frozen_ocean",
+        "minecraft:deep_cold_ocean",
+        "minecraft:deep_ocean",
+        "minecraft:deep_lukewarm_ocean",
+        "tfc:deep_ocean",
+        "tfc:deep_ocean_trench",
+        "minecraft:frozen_ocean",
+        "minecraft:ocean",
+        "minecraft:cold_ocean",
+        "minecraft:lukewarm_ocean",
+        "minecraft:warm_ocean",
+        "tfc:ocean",
+        "tfc:ocean_reef",
+        "minecraft:river",
+        "minecraft:frozen_river",
+        "tfc:river",
+        "minecraft:beach",
+        "minecraft:snowy_beach",
+        "tfc:shore",
+        "minecraft:meadow",
+        "minecraft:frozen_peaks",
+        "minecraft:jagged_peaks",
+        "minecraft:stony_peaks",
+        "minecraft:snowy_slopes",
+        "minecraft:cherry_grove",
+        "tfc:highlands",
+        "tfc:mountains",
+        "tfc:old_mountains",
+        "tfc:volcanic_mountains",
+        "minecraft:windswept_hills",
+        "minecraft:windswept_forest",
+        "minecraft:windswept_gravelly_hills",
+        "tfc:hills",
+        "tfc:rolling_hills",
+        "minecraft:taiga",
+        "minecraft:snowy_taiga",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:bamboo_jungle",
+        "minecraft:jungle",
+        "minecraft:sparse_jungle",
+        "tfc:low_canyons",
+        "minecraft:forest",
+        "minecraft:flower_forest",
+        "minecraft:birch_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:grove",
+        "tfc:canyons",
+        "minecraft:stony_shore",
+        "minecraft:mushroom_fields",
+        "minecraft:ice_spikes",
+        "minecraft:windswept_savanna",
+        "minecraft:desert",
+        "minecraft:savanna",
+        "minecraft:snowy_plains",
+        "minecraft:plains",
+        "minecraft:sunflower_plains",
+        "minecraft:swamp",
+        "minecraft:mangrove_swamp",
+        "minecraft:savanna_plateau",
+        "minecraft:dripstone_caves",
+        "minecraft:lush_caves"
+      ],
+      "blacklisted_biomes": [],
+      "step": "underground_structures",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": true,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": true,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:mineshaft_mesa",
+      "whitelisted_biomes": [
+        "minecraft:badlands",
+        "minecraft:eroded_badlands",
+        "minecraft:wooded_badlands",
+        "tfc:badlands",
+        "tfc:inverted_badlands"
+      ],
+      "blacklisted_biomes": [],
+      "step": "underground_structures",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": true,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": true,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:monument",
+      "whitelisted_biomes": [
+        "minecraft:deep_frozen_ocean",
+        "minecraft:deep_cold_ocean",
+        "minecraft:deep_ocean",
+        "minecraft:deep_lukewarm_ocean",
+        "tfc:deep_ocean",
+        "tfc:deep_ocean_trench"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": true,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": true,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:nether_fossil",
+      "whitelisted_biomes": [
+        "minecraft:soul_sand_valley"
+      ],
+      "blacklisted_biomes": [],
+      "step": "underground_decoration",
+      "terrain_adaptation": "beard_thin",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": true,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": true,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:ocean_ruin_cold",
+      "whitelisted_biomes": [
+        "minecraft:frozen_ocean",
+        "minecraft:cold_ocean",
+        "minecraft:ocean",
+        "minecraft:deep_frozen_ocean",
+        "minecraft:deep_cold_ocean",
+        "minecraft:deep_ocean"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": true,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": true,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:ocean_ruin_warm",
+      "whitelisted_biomes": [
+        "minecraft:lukewarm_ocean",
+        "minecraft:warm_ocean",
+        "minecraft:deep_lukewarm_ocean"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": true,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": true,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:pillager_outpost",
+      "whitelisted_biomes": [
+        "minecraft:desert",
+        "minecraft:plains",
+        "minecraft:savanna",
+        "minecraft:snowy_plains",
+        "minecraft:taiga",
+        "minecraft:meadow",
+        "minecraft:frozen_peaks",
+        "minecraft:jagged_peaks",
+        "minecraft:stony_peaks",
+        "minecraft:snowy_slopes",
+        "minecraft:cherry_grove",
+        "tfc:highlands",
+        "tfc:mountains",
+        "tfc:old_mountains",
+        "tfc:volcanic_mountains",
+        "minecraft:grove",
+        "tfc:plains"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "beard_thin",
+      "size": 7,
+      "max_horizontal_distance_from_center": 80,
+      "max_vertical_distance_from_center": 80,
+      "start_height": {
+        "absolute": 0
+      },
+      "project_start_to_heightmap": "WORLD_SURFACE_WG",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:ruined_portal",
+      "whitelisted_biomes": [
+        "minecraft:beach",
+        "minecraft:snowy_beach",
+        "tfc:shore",
+        "minecraft:river",
+        "minecraft:frozen_river",
+        "tfc:river",
+        "minecraft:taiga",
+        "minecraft:snowy_taiga",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "tfc:hills",
+        "minecraft:forest",
+        "minecraft:flower_forest",
+        "minecraft:birch_forest",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:dark_forest",
+        "minecraft:grove",
+        "tfc:canyons",
+        "tfc:low_canyons",
+        "minecraft:mushroom_fields",
+        "minecraft:ice_spikes",
+        "minecraft:dripstone_caves",
+        "minecraft:lush_caves",
+        "minecraft:savanna",
+        "minecraft:snowy_plains",
+        "minecraft:plains",
+        "minecraft:sunflower_plains",
+        "tfc:highlands"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:ruined_portal_desert",
+      "whitelisted_biomes": [
+        "minecraft:desert"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:ruined_portal_jungle",
+      "whitelisted_biomes": [
+        "minecraft:bamboo_jungle",
+        "minecraft:jungle",
+        "minecraft:sparse_jungle",
+        "tfc:low_canyons"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:ruined_portal_mountain",
+      "whitelisted_biomes": [
+        "minecraft:badlands",
+        "minecraft:eroded_badlands",
+        "minecraft:wooded_badlands",
+        "tfc:badlands",
+        "tfc:inverted_badlands",
+        "minecraft:windswept_hills",
+        "minecraft:windswept_forest",
+        "minecraft:windswept_gravelly_hills",
+        "tfc:hills",
+        "tfc:rolling_hills",
+        "minecraft:savanna_plateau",
+        "minecraft:windswept_savanna",
+        "minecraft:stony_shore",
+        "minecraft:meadow",
+        "minecraft:frozen_peaks",
+        "minecraft:jagged_peaks",
+        "minecraft:stony_peaks",
+        "minecraft:snowy_slopes",
+        "minecraft:cherry_grove",
+        "tfc:highlands",
+        "tfc:mountains",
+        "tfc:old_mountains",
+        "tfc:volcanic_mountains"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:ruined_portal_nether",
+      "whitelisted_biomes": [
+        "minecraft:nether_wastes",
+        "minecraft:soul_sand_valley",
+        "minecraft:crimson_forest",
+        "minecraft:warped_forest",
+        "minecraft:basalt_deltas"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:ruined_portal_ocean",
+      "whitelisted_biomes": [
+        "minecraft:deep_frozen_ocean",
+        "minecraft:deep_cold_ocean",
+        "minecraft:deep_ocean",
+        "minecraft:deep_lukewarm_ocean",
+        "tfc:deep_ocean",
+        "tfc:deep_ocean_trench",
+        "minecraft:frozen_ocean",
+        "minecraft:ocean",
+        "minecraft:cold_ocean",
+        "minecraft:lukewarm_ocean",
+        "minecraft:warm_ocean",
+        "tfc:ocean",
+        "tfc:ocean_reef"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": true,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": true,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:ruined_portal_swamp",
+      "whitelisted_biomes": [
+        "minecraft:swamp",
+        "minecraft:mangrove_swamp"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": true,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:shipwreck",
+      "whitelisted_biomes": [
+        "minecraft:deep_frozen_ocean",
+        "minecraft:deep_cold_ocean",
+        "minecraft:deep_ocean",
+        "minecraft:deep_lukewarm_ocean",
+        "tfc:deep_ocean",
+        "tfc:deep_ocean_trench",
+        "minecraft:frozen_ocean",
+        "minecraft:ocean",
+        "minecraft:cold_ocean",
+        "minecraft:lukewarm_ocean",
+        "minecraft:warm_ocean",
+        "tfc:ocean",
+        "tfc:ocean_reef"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": true,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": true,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:shipwreck_beached",
+      "whitelisted_biomes": [
+        "minecraft:beach",
+        "minecraft:snowy_beach",
+        "tfc:shore"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": true,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:stronghold",
+      "whitelisted_biomes": [
+        "tfc:volcanic_mountains",
+        "tfc:old_mountains"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "bury",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:swamp_hut",
+      "whitelisted_biomes": [
+        "minecraft:swamp",
+        "tfc:lowlands"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": true,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:trail_ruins",
+      "whitelisted_biomes": [
+        "minecraft:taiga",
+        "minecraft:snowy_taiga",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:jungle",
+        "tfc:hills"
+      ],
+      "blacklisted_biomes": [],
+      "step": "underground_structures",
+      "terrain_adaptation": "bury",
+      "size": 7,
+      "max_horizontal_distance_from_center": 80,
+      "max_vertical_distance_from_center": 80,
+      "start_height": {
+        "absolute": -15
+      },
+      "project_start_to_heightmap": "WORLD_SURFACE_WG",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": true,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": true,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:village_desert",
+      "whitelisted_biomes": [
+        "minecraft:desert",
+        "minecraft:beach",
+        "minecraft:snowy_beach",
+        "tfc:shore"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "beard_thin",
+      "size": 6,
+      "max_horizontal_distance_from_center": 80,
+      "max_vertical_distance_from_center": 80,
+      "start_height": {
+        "absolute": 0
+      },
+      "project_start_to_heightmap": "WORLD_SURFACE_WG",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:village_plains",
+      "whitelisted_biomes": [
+        "minecraft:plains",
+        "minecraft:meadow",
+        "tfc:plains"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "beard_thin",
+      "size": 6,
+      "max_horizontal_distance_from_center": 80,
+      "max_vertical_distance_from_center": 80,
+      "start_height": {
+        "absolute": 0
+      },
+      "project_start_to_heightmap": "WORLD_SURFACE_WG",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:village_savanna",
+      "whitelisted_biomes": [
+        "minecraft:savanna",
+        "minecraft:savanna_plateau",
+        "minecraft:windswept_savanna",
+        "tfc:plateau"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "beard_thin",
+      "size": 6,
+      "max_horizontal_distance_from_center": 80,
+      "max_vertical_distance_from_center": 80,
+      "start_height": {
+        "absolute": 0
+      },
+      "project_start_to_heightmap": "WORLD_SURFACE_WG",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:village_snowy",
+      "whitelisted_biomes": [
+        "minecraft:snowy_plains"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "beard_thin",
+      "size": 6,
+      "max_horizontal_distance_from_center": 80,
+      "max_vertical_distance_from_center": 80,
+      "start_height": {
+        "absolute": 0
+      },
+      "project_start_to_heightmap": "WORLD_SURFACE_WG",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "minecraft:village_taiga",
+      "whitelisted_biomes": [
+        "minecraft:taiga",
+        "minecraft:snowy_taiga",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:old_growth_spruce_taiga",
+        "tfc:hills"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "beard_thin",
+      "size": 6,
+      "max_horizontal_distance_from_center": 80,
+      "max_vertical_distance_from_center": 80,
+      "start_height": {
+        "absolute": 0
+      },
+      "project_start_to_heightmap": "WORLD_SURFACE_WG",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "apotheosis:tower_leaf",
+      "whitelisted_biomes": [
+        "tfc:low_canyons",
+        "minecraft:sparse_jungle",
+        "minecraft:jungle",
+        "minecraft:lush_caves",
+        "minecraft:swamp",
+        "minecraft:mangrove_swamp",
+        "minecraft:bamboo_jungle"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "beard_thin",
+      "size": 1,
+      "max_horizontal_distance_from_center": 80,
+      "max_vertical_distance_from_center": 80,
+      "start_height": {
+        "absolute": 0
+      },
+      "project_start_to_heightmap": "WORLD_SURFACE_WG",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "apotheosis:tower_main",
+      "whitelisted_biomes": [
+        "minecraft:dark_forest",
+        "tfc:old_mountains",
+        "tfc:canyons",
+        "minecraft:stony_peaks",
+        "minecraft:jagged_peaks",
+        "minecraft:snowy_plains",
+        "tfc:volcanic_mountains",
+        "minecraft:forest",
+        "minecraft:snowy_slopes",
+        "tfc:mountains",
+        "minecraft:sunflower_plains",
+        "minecraft:grove",
+        "minecraft:frozen_peaks",
+        "tfc:highlands",
+        "tfc:low_canyons",
+        "minecraft:old_growth_birch_forest",
+        "minecraft:cherry_grove",
+        "minecraft:plains",
+        "minecraft:flower_forest",
+        "minecraft:birch_forest",
+        "minecraft:meadow"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "beard_thin",
+      "size": 1,
+      "max_horizontal_distance_from_center": 80,
+      "max_vertical_distance_from_center": 80,
+      "start_height": {
+        "absolute": 0
+      },
+      "project_start_to_heightmap": "WORLD_SURFACE_WG",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "apotheosis:tower_sand",
+      "whitelisted_biomes": [
+        "minecraft:savanna",
+        "minecraft:windswept_savanna",
+        "minecraft:badlands",
+        "tfc:inverted_badlands",
+        "minecraft:desert",
+        "tfc:badlands",
+        "tfc:plateau",
+        "minecraft:eroded_badlands",
+        "minecraft:wooded_badlands",
+        "minecraft:savanna_plateau"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "beard_thin",
+      "size": 1,
+      "max_horizontal_distance_from_center": 80,
+      "max_vertical_distance_from_center": 80,
+      "start_height": {
+        "absolute": 0
+      },
+      "project_start_to_heightmap": "WORLD_SURFACE_WG",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "apotheosis:tower_spruce",
+      "whitelisted_biomes": [
+        "minecraft:frozen_river",
+        "minecraft:jagged_peaks",
+        "minecraft:snowy_plains",
+        "minecraft:old_growth_spruce_taiga",
+        "minecraft:snowy_slopes",
+        "minecraft:grove",
+        "minecraft:frozen_peaks",
+        "minecraft:taiga",
+        "minecraft:snowy_taiga",
+        "minecraft:old_growth_pine_taiga",
+        "minecraft:ice_spikes",
+        "minecraft:snowy_beach",
+        "tfc:hills"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "beard_thin",
+      "size": 1,
+      "max_horizontal_distance_from_center": 80,
+      "max_vertical_distance_from_center": 80,
+      "start_height": {
+        "absolute": 0
+      },
+      "project_start_to_heightmap": "WORLD_SURFACE_WG",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "mythicbotany:andwari_cave",
+      "whitelisted_biomes": [
+        "mythicbotany:golden_fields"
+      ],
+      "blacklisted_biomes": [],
+      "step": "underground_structures",
+      "terrain_adaptation": "none",
+      "size": 1,
+      "max_horizontal_distance_from_center": 80,
+      "max_vertical_distance_from_center": 80,
+      "start_height": {
+        "absolute": -6
+      },
+      "project_start_to_heightmap": "WORLD_SURFACE_WG",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": true,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": true,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "mythicbotany:elven_house",
+      "whitelisted_biomes": [
+        "mythicbotany:alfheim_plains",
+        "mythicbotany:dreamwood_forest"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "beard_thin",
+      "size": 5,
+      "max_horizontal_distance_from_center": 52,
+      "max_vertical_distance_from_center": 52,
+      "start_height": {
+        "absolute": -1
+      },
+      "project_start_to_heightmap": "WORLD_SURFACE_WG",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "railcraft:geode",
+      "whitelisted_biomes": [
+        "minecraft:deep_frozen_ocean",
+        "minecraft:deep_cold_ocean",
+        "minecraft:deep_ocean",
+        "minecraft:deep_lukewarm_ocean",
+        "tfc:deep_ocean",
+        "tfc:deep_ocean_trench"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "none",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": true,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": true,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "tfc_ruins:ruin_beach",
+      "whitelisted_biomes": [
+        "tfc:shore"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "beard_thin",
+      "size": 1,
+      "max_horizontal_distance_from_center": 100,
+      "max_vertical_distance_from_center": 100,
+      "start_height": {
+        "absolute": 0
+      },
+      "project_start_to_heightmap": "WORLD_SURFACE_WG",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "tfc_ruins:ruin_rich",
+      "whitelisted_biomes": [
+        "tfc:old_mountains",
+        "tfc:plateau",
+        "tfc:highlands",
+        "tfc:rolling_hills"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "beard_thin",
+      "size": 1,
+      "max_horizontal_distance_from_center": 100,
+      "max_vertical_distance_from_center": 100,
+      "start_height": {
+        "absolute": -1
+      },
+      "project_start_to_heightmap": "WORLD_SURFACE_WG",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    },
+    {
+      "name": "tfc_ruins:ruin_small",
+      "whitelisted_biomes": [
+        "tfc:badlands",
+        "tfc:hills",
+        "tfc:low_canyons",
+        "tfc:lowlands",
+        "tfc:plains",
+        "tfc:plateau",
+        "tfc:rolling_hills"
+      ],
+      "blacklisted_biomes": [],
+      "step": "surface_structures",
+      "terrain_adaptation": "beard_thin",
+      "size": 1,
+      "max_horizontal_distance_from_center": 100,
+      "max_vertical_distance_from_center": 100,
+      "start_height": {
+        "absolute": 0
+      },
+      "project_start_to_heightmap": "WORLD_SURFACE_WG",
+      "override_global_distance_from_world_center": false,
+      "distance_from_world_center_mode": "CIRCLE",
+      "enable_min_distance_from_world_center": false,
+      "min_distance_from_world_center": 0,
+      "enable_max_distance_from_world_center": false,
+      "max_distance_from_world_center": 0,
+      "exclude_from_overlap_prevention": false,
+      "override_global_overlap_padding": false,
+      "overlap_padding": 2,
+      "override_global_flatness_check": false,
+      "enable_flatness_check": false,
+      "flatness_check_allow_non_solid_blocks": false,
+      "flatness_check_mode": "AUTO",
+      "flatness_check_max_height_difference": 21,
+      "override_global_biome_check": false,
+      "enable_biome_check": false,
+      "biome_check_mode": "BLACKLIST",
+      "biome_check_blacklisted_biomes": [
+        "#minecraft:is_river",
+        "#c:river",
+        "#minecraft:is_ocean",
+        "#c:ocean"
+      ]
+    }
+  ],
+  "structure_sets": [
+    {
+      "name": "apotheosis:tower_leaf",
+      "spacing": 26,
+      "separation": 20,
+      "is_disabled": false,
+      "salt": 11114412,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "apotheosis:tower_leaf": 1
+      }
+    },
+    {
+      "name": "apotheosis:tower_main",
+      "spacing": 26,
+      "separation": 15,
+      "is_disabled": false,
+      "salt": 12121818,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "apotheosis:tower_main": 1
+      }
+    },
+    {
+      "name": "apotheosis:tower_sand",
+      "spacing": 26,
+      "separation": 20,
+      "is_disabled": false,
+      "salt": 15192020,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "apotheosis:tower_sand": 1
+      }
+    },
+    {
+      "name": "apotheosis:tower_spruce",
+      "spacing": 26,
+      "separation": 20,
+      "is_disabled": false,
+      "salt": 89021723,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "apotheosis:tower_spruce": 1
+      }
+    },
+    {
+      "name": "minecraft:ancient_cities",
+      "spacing": 24,
+      "separation": 8,
+      "is_disabled": false,
+      "salt": 20083232,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "minecraft:ancient_city": 1
+      }
+    },
+    {
+      "name": "minecraft:buried_treasures",
+      "is_disabled": false,
+      "salt": 0,
+      "frequency": 0.01,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "minecraft:buried_treasure": 1
+      }
+    },
+    {
+      "name": "minecraft:desert_pyramids",
+      "spacing": 32,
+      "separation": 8,
+      "is_disabled": false,
+      "salt": 14357617,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "minecraft:desert_pyramid": 1
+      }
+    },
+    {
+      "name": "minecraft:end_cities",
+      "spacing": 20,
+      "separation": 11,
+      "is_disabled": false,
+      "salt": 10387313,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "minecraft:end_city": 1
+      }
+    },
+    {
+      "name": "minecraft:igloos",
+      "spacing": 32,
+      "separation": 8,
+      "is_disabled": false,
+      "salt": 14357618,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "minecraft:igloo": 1
+      }
+    },
+    {
+      "name": "minecraft:jungle_temples",
+      "spacing": 32,
+      "separation": 8,
+      "is_disabled": false,
+      "salt": 14357619,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "minecraft:jungle_pyramid": 1
+      }
+    },
+    {
+      "name": "minecraft:mineshafts",
+      "is_disabled": false,
+      "salt": 0,
+      "frequency": 0.004,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "minecraft:mineshaft": 1,
+        "minecraft:mineshaft_mesa": 1
+      }
+    },
+    {
+      "name": "minecraft:nether_complexes",
+      "spacing": 27,
+      "separation": 4,
+      "is_disabled": false,
+      "salt": 30084232,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "minecraft:bastion_remnant": 3,
+        "minecraft:fortress": 2
+      }
+    },
+    {
+      "name": "minecraft:nether_fossils",
+      "spacing": 2,
+      "separation": 1,
+      "is_disabled": false,
+      "salt": 14357921,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "minecraft:nether_fossil": 1
+      }
+    },
+    {
+      "name": "minecraft:ocean_monuments",
+      "spacing": 32,
+      "separation": 5,
+      "is_disabled": false,
+      "salt": 10387313,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "minecraft:monument": 1
+      }
+    },
+    {
+      "name": "minecraft:ocean_ruins",
+      "spacing": 20,
+      "separation": 8,
+      "is_disabled": false,
+      "salt": 14357621,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "minecraft:ocean_ruin_warm": 1,
+        "minecraft:ocean_ruin_cold": 1
+      }
+    },
+    {
+      "name": "minecraft:pillager_outposts",
+      "spacing": 32,
+      "separation": 8,
+      "is_disabled": false,
+      "salt": 165745296,
+      "frequency": 0.2,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "minecraft:pillager_outpost": 1
+      }
+    },
+    {
+      "name": "minecraft:ruined_portals",
+      "spacing": 40,
+      "separation": 15,
+      "is_disabled": false,
+      "salt": 34222645,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "minecraft:ruined_portal": 1,
+        "minecraft:ruined_portal_nether": 1,
+        "minecraft:ruined_portal_swamp": 1,
+        "minecraft:ruined_portal_mountain": 1,
+        "minecraft:ruined_portal_jungle": 1,
+        "minecraft:ruined_portal_ocean": 1,
+        "minecraft:ruined_portal_desert": 1
+      }
+    },
+    {
+      "name": "minecraft:shipwrecks",
+      "spacing": 24,
+      "separation": 4,
+      "is_disabled": false,
+      "salt": 165745295,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "minecraft:shipwreck_beached": 1,
+        "minecraft:shipwreck": 1
+      }
+    },
+    {
+      "name": "minecraft:strongholds",
+      "is_disabled": true,
+      "salt": 0,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "minecraft:stronghold": 1
+      }
+    },
+    {
+      "name": "minecraft:swamp_huts",
+      "spacing": 32,
+      "separation": 8,
+      "is_disabled": false,
+      "salt": 14357620,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "minecraft:swamp_hut": 1
+      }
+    },
+    {
+      "name": "minecraft:trail_ruins",
+      "spacing": 34,
+      "separation": 8,
+      "is_disabled": false,
+      "salt": 83469867,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "minecraft:trail_ruins": 1
+      }
+    },
+    {
+      "name": "minecraft:villages",
+      "spacing": 34,
+      "separation": 8,
+      "is_disabled": true,
+      "salt": 10387312,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "minecraft:village_snowy": 1,
+        "minecraft:village_plains": 1,
+        "minecraft:village_taiga": 1,
+        "minecraft:village_savanna": 1,
+        "minecraft:village_desert": 1
+      }
+    },
+    {
+      "name": "minecraft:woodland_mansions",
+      "spacing": 80,
+      "separation": 20,
+      "is_disabled": true,
+      "salt": 10387319,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "minecraft:mansion": 1
+      }
+    },
+    {
+      "name": "mythicbotany:andwari_cave",
+      "spacing": 28,
+      "separation": 8,
+      "is_disabled": false,
+      "salt": 1328389907,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "mythicbotany:andwari_cave": 1
+      }
+    },
+    {
+      "name": "mythicbotany:elven_house",
+      "spacing": 24,
+      "separation": 6,
+      "is_disabled": false,
+      "salt": 411921816,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "mythicbotany:elven_house": 1
+      }
+    },
+    {
+      "name": "railcraft:geode",
+      "spacing": 16,
+      "separation": 4,
+      "is_disabled": false,
+      "salt": 73927265,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "railcraft:geode": 1
+      }
+    },
+    {
+      "name": "tfc_ruins:ruins",
+      "spacing": 20,
+      "separation": 3,
+      "is_disabled": false,
+      "salt": 544804645,
+      "frequency": 1.0,
+      "override_global_spacing_and_separation_modifier": false,
+      "placement_attempts": 1,
+      "structure_weights": {
+        "tfc_ruins:ruin_rich": 2,
+        "tfc_ruins:ruin_beach": 2,
+        "tfc_ruins:ruin_small": 3
+      }
+    }
+  ],
+  "structure_template_pools": [
+    {
+      "name": "apotheosis:tower_leaf",
+      "element_weights": {
+        "apotheosis:tower_leaf": 1
+      }
+    },
+    {
+      "name": "apotheosis:tower_main",
+      "element_weights": {
+        "apotheosis:tower_main": 1
+      }
+    },
+    {
+      "name": "apotheosis:tower_sand",
+      "element_weights": {
+        "apotheosis:tower_sand": 1
+      }
+    },
+    {
+      "name": "apotheosis:tower_spruce",
+      "element_weights": {
+        "apotheosis:tower_spruce": 1
+      }
+    },
+    {
+      "name": "minecraft:ancient_city/city/entrance",
+      "element_weights": {
+        "minecraft:ancient_city/city/entrance/entrance_path_4": 1,
+        "minecraft:ancient_city/city/entrance/entrance_path_5": 1,
+        "minecraft:ancient_city/city/entrance/entrance_path_2": 1,
+        "minecraft:ancient_city/city/entrance/entrance_path_3": 1,
+        "minecraft:ancient_city/city/entrance/entrance_connector": 1,
+        "minecraft:ancient_city/city/entrance/entrance_path_1": 1
+      }
+    },
+    {
+      "name": "minecraft:ancient_city/city_center",
+      "element_weights": {
+        "minecraft:ancient_city/city_center/city_center_1": 1,
+        "minecraft:ancient_city/city_center/city_center_2": 1,
+        "minecraft:ancient_city/city_center/city_center_3": 1
+      }
+    },
+    {
+      "name": "minecraft:ancient_city/city_center/walls",
+      "element_weights": {
+        "minecraft:ancient_city/city_center/walls/bottom_right_corner_1": 1,
+        "minecraft:ancient_city/city_center/walls/top": 1,
+        "minecraft:ancient_city/city_center/walls/bottom_right_corner_2": 1,
+        "minecraft:ancient_city/city_center/walls/left": 1,
+        "minecraft:ancient_city/city_center/walls/right": 1,
+        "minecraft:ancient_city/city_center/walls/bottom_2": 1,
+        "minecraft:ancient_city/city_center/walls/bottom_left_corner": 1,
+        "minecraft:ancient_city/city_center/walls/bottom_1": 1,
+        "minecraft:ancient_city/city_center/walls/top_left_corner": 1,
+        "minecraft:ancient_city/city_center/walls/top_right_corner": 1
+      }
+    },
+    {
+      "name": "minecraft:ancient_city/sculk",
+      "element_weights": {}
+    },
+    {
+      "name": "minecraft:ancient_city/structures",
+      "element_weights": {
+        "minecraft:ancient_city/structures/chamber_2": 4,
+        "minecraft:ancient_city/structures/chamber_3": 4,
+        "minecraft:ancient_city/structures/large_pillar_1": 1,
+        "minecraft:ancient_city/structures/chamber_1": 4,
+        "minecraft:ancient_city/structures/sauna_1": 4,
+        "minecraft:ancient_city/structures/medium_pillar_1": 1,
+        "minecraft:ancient_city/structures/large_ruin_1": 1,
+        "minecraft:ancient_city/structures/tall_ruin_2": 1,
+        "minecraft:ancient_city/structures/tall_ruin_3": 2,
+        "minecraft:ancient_city/structures/medium_ruin_1": 1,
+        "minecraft:ancient_city/structures/barracks": 4,
+        "minecraft:ancient_city/structures/medium_ruin_2": 1,
+        "minecraft:ancient_city/structures/tall_ruin_1": 1,
+        "minecraft:ancient_city/structures/small_ruin_2": 1,
+        "minecraft:ancient_city/structures/tall_ruin_4": 2,
+        "minecraft:ancient_city/structures/small_ruin_1": 1,
+        "minecraft:ancient_city/structures/small_statue": 4
+      }
+    },
+    {
+      "name": "minecraft:ancient_city/walls",
+      "element_weights": {
+        "minecraft:ancient_city/walls/intact_horizontal_wall_stairs_4": 4,
+        "minecraft:ancient_city/walls/ruined_horizontal_wall_stairs_3": 3,
+        "minecraft:ancient_city/walls/intact_horizontal_wall_stairs_3": 1,
+        "minecraft:ancient_city/walls/ruined_horizontal_wall_stairs_4": 3,
+        "minecraft:ancient_city/walls/intact_horizontal_wall_stairs_2": 1,
+        "minecraft:ancient_city/walls/ruined_horizontal_wall_stairs_1": 2,
+        "minecraft:ancient_city/walls/intact_horizontal_wall_stairs_1": 1,
+        "minecraft:ancient_city/walls/ruined_horizontal_wall_stairs_2": 2,
+        "minecraft:ancient_city/walls/intact_lshape_wall_1": 1,
+        "minecraft:ancient_city/walls/intact_horizontal_wall_2": 1,
+        "minecraft:ancient_city/walls/intact_horizontal_wall_1": 1,
+        "minecraft:ancient_city/walls/intact_corner_wall_1": 1,
+        "minecraft:ancient_city/walls/intact_horizontal_wall_passage_1": 3,
+        "minecraft:ancient_city/walls/intact_intersection_wall_1": 1,
+        "minecraft:ancient_city/walls/ruined_corner_wall_1": 1,
+        "minecraft:ancient_city/walls/ruined_corner_wall_2": 1
+      }
+    },
+    {
+      "name": "minecraft:ancient_city/walls/no_corners",
+      "element_weights": {
+        "minecraft:ancient_city/walls/intact_horizontal_wall_stairs_4": 1,
+        "minecraft:ancient_city/walls/intact_horizontal_wall_stairs_3": 1,
+        "minecraft:ancient_city/walls/intact_horizontal_wall_stairs_2": 1,
+        "minecraft:ancient_city/walls/intact_horizontal_wall_stairs_1": 1,
+        "minecraft:ancient_city/walls/intact_horizontal_wall_2": 1,
+        "minecraft:ancient_city/walls/intact_horizontal_wall_bridge": 1,
+        "minecraft:ancient_city/walls/intact_horizontal_wall_1": 1,
+        "minecraft:ancient_city/walls/intact_horizontal_wall_stairs_5": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/blocks/gold",
+      "element_weights": {
+        "minecraft:bastion/blocks/gold": 1,
+        "minecraft:bastion/blocks/air": 3
+      }
+    },
+    {
+      "name": "minecraft:bastion/bridge/bridge_pieces",
+      "element_weights": {
+        "minecraft:bastion/bridge/bridge_pieces/bridge": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/bridge/connectors",
+      "element_weights": {
+        "minecraft:bastion/bridge/connectors/back_bridge_bottom": 1,
+        "minecraft:bastion/bridge/connectors/back_bridge_top": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/bridge/legs",
+      "element_weights": {
+        "minecraft:bastion/bridge/legs/leg_1": 1,
+        "minecraft:bastion/bridge/legs/leg_0": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/bridge/rampart_plates",
+      "element_weights": {
+        "minecraft:bastion/bridge/rampart_plates/plate_0": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/bridge/ramparts",
+      "element_weights": {
+        "minecraft:bastion/bridge/ramparts/rampart_1": 1,
+        "minecraft:bastion/bridge/ramparts/rampart_0": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/bridge/starting_pieces",
+      "element_weights": {
+        "minecraft:bastion/bridge/starting_pieces/entrance_face": 1,
+        "minecraft:bastion/bridge/starting_pieces/entrance": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/bridge/walls",
+      "element_weights": {
+        "minecraft:bastion/bridge/walls/wall_base_1": 1,
+        "minecraft:bastion/bridge/walls/wall_base_0": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/hoglin_stable/connectors",
+      "element_weights": {
+        "minecraft:bastion/hoglin_stable/connectors/end_post_connector": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/hoglin_stable/large_stables/inner",
+      "element_weights": {
+        "minecraft:bastion/hoglin_stable/large_stables/inner_0": 1,
+        "minecraft:bastion/hoglin_stable/large_stables/inner_1": 1,
+        "minecraft:bastion/hoglin_stable/large_stables/inner_2": 1,
+        "minecraft:bastion/hoglin_stable/large_stables/inner_3": 1,
+        "minecraft:bastion/hoglin_stable/large_stables/inner_4": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/hoglin_stable/large_stables/outer",
+      "element_weights": {
+        "minecraft:bastion/hoglin_stable/large_stables/outer_0": 1,
+        "minecraft:bastion/hoglin_stable/large_stables/outer_1": 1,
+        "minecraft:bastion/hoglin_stable/large_stables/outer_2": 1,
+        "minecraft:bastion/hoglin_stable/large_stables/outer_3": 1,
+        "minecraft:bastion/hoglin_stable/large_stables/outer_4": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/hoglin_stable/mirrored_starting_pieces",
+      "element_weights": {
+        "minecraft:bastion/hoglin_stable/starting_pieces/stairs_2_mirrored": 1,
+        "minecraft:bastion/hoglin_stable/starting_pieces/stairs_4_mirrored": 1,
+        "minecraft:bastion/hoglin_stable/starting_pieces/stairs_0_mirrored": 1,
+        "minecraft:bastion/hoglin_stable/starting_pieces/stairs_1_mirrored": 1,
+        "minecraft:bastion/hoglin_stable/starting_pieces/stairs_3_mirrored": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/hoglin_stable/posts",
+      "element_weights": {
+        "minecraft:bastion/hoglin_stable/posts/stair_post": 1,
+        "minecraft:bastion/hoglin_stable/posts/end_post": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/hoglin_stable/rampart_plates",
+      "element_weights": {
+        "minecraft:bastion/hoglin_stable/rampart_plates/rampart_plate_1": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/hoglin_stable/ramparts",
+      "element_weights": {
+        "minecraft:bastion/hoglin_stable/ramparts/ramparts_3": 1,
+        "minecraft:bastion/hoglin_stable/ramparts/ramparts_2": 1,
+        "minecraft:bastion/hoglin_stable/ramparts/ramparts_1": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/hoglin_stable/small_stables/inner",
+      "element_weights": {
+        "minecraft:bastion/hoglin_stable/small_stables/inner_3": 1,
+        "minecraft:bastion/hoglin_stable/small_stables/inner_2": 1,
+        "minecraft:bastion/hoglin_stable/small_stables/inner_1": 1,
+        "minecraft:bastion/hoglin_stable/small_stables/inner_0": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/hoglin_stable/small_stables/outer",
+      "element_weights": {
+        "minecraft:bastion/hoglin_stable/small_stables/outer_3": 1,
+        "minecraft:bastion/hoglin_stable/small_stables/outer_2": 1,
+        "minecraft:bastion/hoglin_stable/small_stables/outer_1": 1,
+        "minecraft:bastion/hoglin_stable/small_stables/outer_0": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/hoglin_stable/stairs",
+      "element_weights": {
+        "minecraft:bastion/hoglin_stable/stairs/stairs_2_4": 1,
+        "minecraft:bastion/hoglin_stable/stairs/stairs_3_3": 1,
+        "minecraft:bastion/hoglin_stable/stairs/stairs_1_4": 1,
+        "minecraft:bastion/hoglin_stable/stairs/stairs_2_3": 1,
+        "minecraft:bastion/hoglin_stable/stairs/stairs_3_2": 1,
+        "minecraft:bastion/hoglin_stable/stairs/stairs_3_4": 1,
+        "minecraft:bastion/hoglin_stable/stairs/stairs_1_1": 1,
+        "minecraft:bastion/hoglin_stable/stairs/stairs_2_0": 1,
+        "minecraft:bastion/hoglin_stable/stairs/stairs_1_0": 1,
+        "minecraft:bastion/hoglin_stable/stairs/stairs_1_3": 1,
+        "minecraft:bastion/hoglin_stable/stairs/stairs_2_2": 1,
+        "minecraft:bastion/hoglin_stable/stairs/stairs_3_1": 1,
+        "minecraft:bastion/hoglin_stable/stairs/stairs_1_2": 1,
+        "minecraft:bastion/hoglin_stable/stairs/stairs_2_1": 1,
+        "minecraft:bastion/hoglin_stable/stairs/stairs_3_0": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/hoglin_stable/starting_pieces",
+      "element_weights": {
+        "minecraft:bastion/hoglin_stable/starting_pieces/starting_stairs_4": 1,
+        "minecraft:bastion/hoglin_stable/starting_pieces/starting_stairs_3": 1,
+        "minecraft:bastion/hoglin_stable/starting_pieces/starting_stairs_2": 1,
+        "minecraft:bastion/hoglin_stable/starting_pieces/starting_stairs_1": 1,
+        "minecraft:bastion/hoglin_stable/starting_pieces/starting_stairs_0": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/hoglin_stable/wall_bases",
+      "element_weights": {
+        "minecraft:bastion/hoglin_stable/walls/wall_base": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/hoglin_stable/walls",
+      "element_weights": {
+        "minecraft:bastion/hoglin_stable/walls/side_wall_1": 1,
+        "minecraft:bastion/hoglin_stable/walls/side_wall_0": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/mobs/hoglin",
+      "element_weights": {
+        "minecraft:bastion/mobs/hoglin": 2,
+        "minecraft:bastion/mobs/empty": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/mobs/piglin",
+      "element_weights": {
+        "minecraft:bastion/mobs/sword_piglin": 4,
+        "minecraft:bastion/mobs/empty": 1,
+        "minecraft:bastion/mobs/melee_piglin": 1,
+        "minecraft:bastion/mobs/crossbow_piglin": 4
+      }
+    },
+    {
+      "name": "minecraft:bastion/mobs/piglin_melee",
+      "element_weights": {
+        "minecraft:bastion/mobs/sword_piglin": 1,
+        "minecraft:bastion/mobs/melee_piglin_always": 1,
+        "minecraft:bastion/mobs/melee_piglin": 5
+      }
+    },
+    {
+      "name": "minecraft:bastion/starts",
+      "element_weights": {
+        "minecraft:bastion/bridge/starting_pieces/entrance_base": 1,
+        "minecraft:bastion/treasure/big_air_full": 1,
+        "minecraft:bastion/units/air_base": 1,
+        "minecraft:bastion/hoglin_stable/air_base": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/treasure/bases",
+      "element_weights": {
+        "minecraft:bastion/treasure/bases/lava_basin": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/treasure/bases/centers",
+      "element_weights": {
+        "minecraft:bastion/treasure/bases/centers/center_0": 1,
+        "minecraft:bastion/treasure/bases/centers/center_1": 1,
+        "minecraft:bastion/treasure/bases/centers/center_2": 1,
+        "minecraft:bastion/treasure/bases/centers/center_3": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/treasure/brains",
+      "element_weights": {
+        "minecraft:bastion/treasure/brains/center_brain": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/treasure/connectors",
+      "element_weights": {
+        "minecraft:bastion/treasure/connectors/center_to_wall_top": 1,
+        "minecraft:bastion/treasure/connectors/center_to_wall_middle": 1,
+        "minecraft:bastion/treasure/connectors/center_to_wall_top_entrance": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/treasure/corners/bottom",
+      "element_weights": {
+        "minecraft:bastion/treasure/corners/bottom/corner_0": 1,
+        "minecraft:bastion/treasure/corners/bottom/corner_1": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/treasure/corners/edges",
+      "element_weights": {
+        "minecraft:bastion/treasure/corners/edges/bottom": 1,
+        "minecraft:bastion/treasure/corners/edges/top": 1,
+        "minecraft:bastion/treasure/corners/edges/middle": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/treasure/corners/middle",
+      "element_weights": {
+        "minecraft:bastion/treasure/corners/middle/corner_0": 1,
+        "minecraft:bastion/treasure/corners/middle/corner_1": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/treasure/corners/top",
+      "element_weights": {
+        "minecraft:bastion/treasure/corners/top/corner_0": 1,
+        "minecraft:bastion/treasure/corners/top/corner_1": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/treasure/entrances",
+      "element_weights": {
+        "minecraft:bastion/treasure/entrances/entrance_0": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/treasure/extensions/houses",
+      "element_weights": {
+        "minecraft:bastion/treasure/extensions/house_0": 1,
+        "minecraft:bastion/treasure/extensions/house_1": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/treasure/extensions/large_pool",
+      "element_weights": {
+        "minecraft:bastion/treasure/extensions/roofed_bridge": 1,
+        "minecraft:bastion/treasure/extensions/large_bridge_3": 1,
+        "minecraft:bastion/treasure/extensions/fire_room": 1,
+        "minecraft:bastion/treasure/extensions/large_bridge_2": 1,
+        "minecraft:bastion/treasure/extensions/large_bridge_1": 1,
+        "minecraft:bastion/treasure/extensions/empty": 1,
+        "minecraft:bastion/treasure/extensions/large_bridge_0": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/treasure/extensions/small_pool",
+      "element_weights": {
+        "minecraft:bastion/treasure/extensions/small_bridge_3": 1,
+        "minecraft:bastion/treasure/extensions/small_bridge_0": 1,
+        "minecraft:bastion/treasure/extensions/small_bridge_2": 1,
+        "minecraft:bastion/treasure/extensions/small_bridge_1": 1,
+        "minecraft:bastion/treasure/extensions/fire_room": 1,
+        "minecraft:bastion/treasure/extensions/empty": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/treasure/ramparts",
+      "element_weights": {
+        "minecraft:bastion/treasure/ramparts/lava_basin_side": 1,
+        "minecraft:bastion/treasure/ramparts/mid_wall_side": 1,
+        "minecraft:bastion/treasure/ramparts/mid_wall_main": 1,
+        "minecraft:bastion/treasure/ramparts/lava_basin_main": 1,
+        "minecraft:bastion/treasure/ramparts/top_wall": 1,
+        "minecraft:bastion/treasure/ramparts/bottom_wall_0": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/treasure/roofs",
+      "element_weights": {
+        "minecraft:bastion/treasure/roofs/wall_roof": 1,
+        "minecraft:bastion/treasure/roofs/corner_roof": 1,
+        "minecraft:bastion/treasure/roofs/center_roof": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/treasure/stairs",
+      "element_weights": {
+        "minecraft:bastion/treasure/stairs/lower_stairs": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/treasure/walls",
+      "element_weights": {
+        "minecraft:bastion/treasure/walls/entrance_wall": 1,
+        "minecraft:bastion/treasure/walls/lava_wall": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/treasure/walls/bottom",
+      "element_weights": {
+        "minecraft:bastion/treasure/walls/bottom/wall_3": 1,
+        "minecraft:bastion/treasure/walls/bottom/wall_1": 1,
+        "minecraft:bastion/treasure/walls/bottom/wall_2": 1,
+        "minecraft:bastion/treasure/walls/bottom/wall_0": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/treasure/walls/mid",
+      "element_weights": {
+        "minecraft:bastion/treasure/walls/mid/wall_2": 1,
+        "minecraft:bastion/treasure/walls/mid/wall_1": 1,
+        "minecraft:bastion/treasure/walls/mid/wall_0": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/treasure/walls/outer",
+      "element_weights": {
+        "minecraft:bastion/treasure/walls/outer/bottom_corner": 1,
+        "minecraft:bastion/treasure/walls/outer/tall_outer_wall": 1,
+        "minecraft:bastion/treasure/walls/outer/mid_corner": 1,
+        "minecraft:bastion/treasure/walls/outer/outer_wall": 1,
+        "minecraft:bastion/treasure/walls/outer/top_corner": 1,
+        "minecraft:bastion/treasure/walls/outer/medium_outer_wall": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/treasure/walls/top",
+      "element_weights": {
+        "minecraft:bastion/treasure/walls/top/wall_1": 1,
+        "minecraft:bastion/treasure/walls/top/wall_0": 1,
+        "minecraft:bastion/treasure/walls/top/main_entrance": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/units/center_pieces",
+      "element_weights": {
+        "minecraft:bastion/units/center_pieces/center_2": 1,
+        "minecraft:bastion/units/center_pieces/center_0": 1,
+        "minecraft:bastion/units/center_pieces/center_1": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/units/edge_wall_units",
+      "element_weights": {
+        "minecraft:bastion/units/wall_units/edge_0_large": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/units/edges",
+      "element_weights": {
+        "minecraft:bastion/units/edges/edge_0": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/units/fillers/stage_0",
+      "element_weights": {
+        "minecraft:bastion/units/fillers/stage_0": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/units/large_ramparts",
+      "element_weights": {
+        "minecraft:bastion/units/ramparts/ramparts_0": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/units/pathways",
+      "element_weights": {
+        "minecraft:bastion/units/pathways/pathway_wall_0": 1,
+        "minecraft:bastion/units/pathways/pathway_0": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/units/rampart_plates",
+      "element_weights": {
+        "minecraft:bastion/units/rampart_plates/plate_0": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/units/ramparts",
+      "element_weights": {
+        "minecraft:bastion/units/ramparts/ramparts_2": 1,
+        "minecraft:bastion/units/ramparts/ramparts_0": 1,
+        "minecraft:bastion/units/ramparts/ramparts_1": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/units/stages/rot/stage_1",
+      "element_weights": {
+        "minecraft:bastion/units/stages/rot/stage_1_0": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/units/stages/stage_0",
+      "element_weights": {
+        "minecraft:bastion/units/stages/stage_0_0": 1,
+        "minecraft:bastion/units/stages/stage_0_1": 1,
+        "minecraft:bastion/units/stages/stage_0_2": 1,
+        "minecraft:bastion/units/stages/stage_0_3": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/units/stages/stage_1",
+      "element_weights": {
+        "minecraft:bastion/units/stages/stage_1_0": 1,
+        "minecraft:bastion/units/stages/stage_1_1": 1,
+        "minecraft:bastion/units/stages/stage_1_2": 1,
+        "minecraft:bastion/units/stages/stage_1_3": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/units/stages/stage_2",
+      "element_weights": {
+        "minecraft:bastion/units/stages/stage_2_0": 1,
+        "minecraft:bastion/units/stages/stage_2_1": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/units/stages/stage_3",
+      "element_weights": {
+        "minecraft:bastion/units/stages/stage_3_3": 1,
+        "minecraft:bastion/units/stages/stage_3_0": 1,
+        "minecraft:bastion/units/stages/stage_3_1": 1,
+        "minecraft:bastion/units/stages/stage_3_2": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/units/wall_units",
+      "element_weights": {
+        "minecraft:bastion/units/wall_units/unit_0": 1
+      }
+    },
+    {
+      "name": "minecraft:bastion/units/walls/wall_bases",
+      "element_weights": {
+        "minecraft:bastion/units/walls/wall_base": 1,
+        "minecraft:bastion/units/walls/connected_wall": 1
+      }
+    },
+    {
+      "name": "minecraft:empty",
+      "element_weights": {}
+    },
+    {
+      "name": "minecraft:pillager_outpost/base_plates",
+      "element_weights": {
+        "minecraft:pillager_outpost/base_plate": 1
+      }
+    },
+    {
+      "name": "minecraft:pillager_outpost/feature_plates",
+      "element_weights": {
+        "minecraft:pillager_outpost/feature_plate": 1
+      }
+    },
+    {
+      "name": "minecraft:pillager_outpost/features",
+      "element_weights": {
+        "minecraft:pillager_outpost/feature_cage1": 1,
+        "minecraft:pillager_outpost/feature_cage2": 1,
+        "minecraft:pillager_outpost/feature_cage_with_allays": 1,
+        "minecraft:pillager_outpost/feature_targets": 1,
+        "minecraft:pillager_outpost/feature_logs": 1,
+        "minecraft:pillager_outpost/feature_tent1": 1,
+        "minecraft:pillager_outpost/feature_tent2": 1
+      }
+    },
+    {
+      "name": "minecraft:pillager_outpost/towers",
+      "element_weights": {}
+    },
+    {
+      "name": "minecraft:trail_ruins/buildings",
+      "element_weights": {
+        "minecraft:trail_ruins/buildings/large_room_4": 1,
+        "minecraft:trail_ruins/buildings/large_room_5": 1,
+        "minecraft:trail_ruins/buildings/large_room_2": 1,
+        "minecraft:trail_ruins/buildings/large_room_3": 1,
+        "minecraft:trail_ruins/buildings/large_room_1": 1,
+        "minecraft:trail_ruins/buildings/group_hall_1": 1,
+        "minecraft:trail_ruins/buildings/group_hall_3": 1,
+        "minecraft:trail_ruins/buildings/group_hall_2": 1,
+        "minecraft:trail_ruins/buildings/one_room_5": 1,
+        "minecraft:trail_ruins/buildings/one_room_4": 1,
+        "minecraft:trail_ruins/buildings/one_room_3": 1,
+        "minecraft:trail_ruins/buildings/one_room_2": 1,
+        "minecraft:trail_ruins/buildings/one_room_1": 1,
+        "minecraft:trail_ruins/buildings/group_hall_5": 1,
+        "minecraft:trail_ruins/buildings/group_hall_4": 1
+      }
+    },
+    {
+      "name": "minecraft:trail_ruins/buildings/grouped",
+      "element_weights": {
+        "minecraft:trail_ruins/buildings/group_room_2": 1,
+        "minecraft:trail_ruins/buildings/group_room_3": 1,
+        "minecraft:trail_ruins/buildings/group_room_4": 1,
+        "minecraft:trail_ruins/buildings/group_room_5": 1,
+        "minecraft:trail_ruins/buildings/group_lower_4": 1,
+        "minecraft:trail_ruins/buildings/group_lower_5": 1,
+        "minecraft:trail_ruins/buildings/group_room_1": 1,
+        "minecraft:trail_ruins/buildings/group_lower_2": 1,
+        "minecraft:trail_ruins/buildings/group_lower_3": 1,
+        "minecraft:trail_ruins/buildings/group_lower_1": 1,
+        "minecraft:trail_ruins/buildings/group_full_3": 1,
+        "minecraft:trail_ruins/buildings/group_full_2": 1,
+        "minecraft:trail_ruins/buildings/group_full_5": 1,
+        "minecraft:trail_ruins/buildings/group_upper_1": 1,
+        "minecraft:trail_ruins/buildings/group_full_4": 1,
+        "minecraft:trail_ruins/buildings/group_upper_2": 1,
+        "minecraft:trail_ruins/buildings/group_upper_3": 1,
+        "minecraft:trail_ruins/buildings/group_upper_4": 1,
+        "minecraft:trail_ruins/buildings/group_full_1": 1,
+        "minecraft:trail_ruins/buildings/group_upper_5": 1
+      }
+    },
+    {
+      "name": "minecraft:trail_ruins/decor",
+      "element_weights": {
+        "minecraft:trail_ruins/decor/decor_7": 1,
+        "minecraft:trail_ruins/decor/decor_6": 1,
+        "minecraft:trail_ruins/decor/decor_1": 1,
+        "minecraft:trail_ruins/decor/decor_3": 1,
+        "minecraft:trail_ruins/decor/decor_2": 1,
+        "minecraft:trail_ruins/decor/decor_5": 1,
+        "minecraft:trail_ruins/decor/decor_4": 1
+      }
+    },
+    {
+      "name": "minecraft:trail_ruins/roads",
+      "element_weights": {
+        "minecraft:trail_ruins/roads/road_spacer_1": 1,
+        "minecraft:trail_ruins/roads/road_end_1": 1,
+        "minecraft:trail_ruins/roads/road_section_3": 1,
+        "minecraft:trail_ruins/roads/road_section_4": 1,
+        "minecraft:trail_ruins/roads/road_section_1": 1,
+        "minecraft:trail_ruins/roads/road_section_2": 1,
+        "minecraft:trail_ruins/roads/long_road_end": 1
+      }
+    },
+    {
+      "name": "minecraft:trail_ruins/tower",
+      "element_weights": {
+        "minecraft:trail_ruins/tower/tower_1": 1,
+        "minecraft:trail_ruins/tower/tower_5": 1,
+        "minecraft:trail_ruins/tower/tower_4": 1,
+        "minecraft:trail_ruins/tower/tower_3": 1,
+        "minecraft:trail_ruins/tower/tower_2": 1
+      }
+    },
+    {
+      "name": "minecraft:trail_ruins/tower/additions",
+      "element_weights": {
+        "minecraft:trail_ruins/tower/large_hall_2": 1,
+        "minecraft:trail_ruins/tower/large_hall_3": 1,
+        "minecraft:trail_ruins/tower/large_hall_4": 1,
+        "minecraft:trail_ruins/tower/large_hall_5": 1,
+        "minecraft:trail_ruins/tower/stable_3": 1,
+        "minecraft:trail_ruins/tower/stable_2": 1,
+        "minecraft:trail_ruins/tower/stable_1": 1,
+        "minecraft:trail_ruins/tower/one_room_2": 1,
+        "minecraft:trail_ruins/tower/platform_5": 1,
+        "minecraft:trail_ruins/tower/stable_5": 1,
+        "minecraft:trail_ruins/tower/one_room_1": 1,
+        "minecraft:trail_ruins/tower/platform_4": 1,
+        "minecraft:trail_ruins/tower/stable_4": 1,
+        "minecraft:trail_ruins/tower/one_room_4": 1,
+        "minecraft:trail_ruins/tower/platform_3": 1,
+        "minecraft:trail_ruins/tower/one_room_3": 1,
+        "minecraft:trail_ruins/tower/platform_2": 1,
+        "minecraft:trail_ruins/tower/platform_1": 1,
+        "minecraft:trail_ruins/tower/one_room_5": 1,
+        "minecraft:trail_ruins/tower/hall_1": 1,
+        "minecraft:trail_ruins/tower/hall_5": 1,
+        "minecraft:trail_ruins/tower/hall_4": 1,
+        "minecraft:trail_ruins/tower/hall_3": 1,
+        "minecraft:trail_ruins/tower/hall_2": 1,
+        "minecraft:trail_ruins/tower/large_hall_1": 1
+      }
+    },
+    {
+      "name": "minecraft:trail_ruins/tower/tower_top",
+      "element_weights": {
+        "minecraft:trail_ruins/tower/tower_top_5": 1,
+        "minecraft:trail_ruins/tower/tower_top_4": 1,
+        "minecraft:trail_ruins/tower/tower_top_1": 1,
+        "minecraft:trail_ruins/tower/tower_top_3": 1,
+        "minecraft:trail_ruins/tower/tower_top_2": 1
+      }
+    },
+    {
+      "name": "minecraft:village/common/animals",
+      "element_weights": {
+        "minecraft:village/common/animals/horses_5": 1,
+        "minecraft:village/common/animals/pigs_1": 7,
+        "minecraft:village/common/animals/cows_1": 7,
+        "minecraft:village/common/animals/sheep_2": 1,
+        "minecraft:village/common/animals/sheep_1": 1,
+        "minecraft:village/common/animals/horses_1": 1,
+        "minecraft:village/common/animals/horses_2": 1,
+        "minecraft:village/common/animals/horses_3": 1,
+        "minecraft:village/common/animals/horses_4": 1
+      }
+    },
+    {
+      "name": "minecraft:village/common/butcher_animals",
+      "element_weights": {
+        "minecraft:village/common/animals/cows_1": 3,
+        "minecraft:village/common/animals/sheep_2": 1,
+        "minecraft:village/common/animals/pigs_1": 3,
+        "minecraft:village/common/animals/sheep_1": 1
+      }
+    },
+    {
+      "name": "minecraft:village/common/cats",
+      "element_weights": {
+        "minecraft:village/common/animals/cat_tabby": 1,
+        "minecraft:village/common/animals/cat_british": 1,
+        "minecraft:village/common/animals/cat_siamese": 1,
+        "minecraft:village/common/animals/cat_black": 1,
+        "minecraft:village/common/animals/cat_ragdoll": 1,
+        "minecraft:village/common/animals/cat_white": 1,
+        "minecraft:village/common/animals/cat_persian": 1,
+        "minecraft:village/common/animals/cat_red": 1,
+        "minecraft:village/common/animals/cat_calico": 1,
+        "minecraft:village/common/animals/cat_jellie": 1
+      }
+    },
+    {
+      "name": "minecraft:village/common/iron_golem",
+      "element_weights": {
+        "minecraft:village/common/iron_golem": 1
+      }
+    },
+    {
+      "name": "minecraft:village/common/sheep",
+      "element_weights": {
+        "minecraft:village/common/animals/sheep_2": 1,
+        "minecraft:village/common/animals/sheep_1": 1
+      }
+    },
+    {
+      "name": "minecraft:village/common/well_bottoms",
+      "element_weights": {
+        "minecraft:village/common/well_bottom": 1
+      }
+    },
+    {
+      "name": "minecraft:village/desert/camel",
+      "element_weights": {
+        "minecraft:village/desert/camel_spawn": 1
+      }
+    },
+    {
+      "name": "minecraft:village/desert/decor",
+      "element_weights": {
+        "minecraft:village/desert/desert_lamp_1": 10
+      }
+    },
+    {
+      "name": "minecraft:village/desert/houses",
+      "element_weights": {
+        "minecraft:village/desert/houses/desert_temple_2": 2,
+        "minecraft:village/desert/houses/desert_tool_smith_1": 2,
+        "minecraft:village/desert/houses/desert_large_farm_1": 11,
+        "immersiveengineering:village/houses/desert_electrician": 1,
+        "minecraft:village/desert/houses/desert_weaponsmith_1": 2,
+        "minecraft:village/desert/houses/desert_temple_1": 2,
+        "immersiveengineering:village/houses/desert_machinist": 1,
+        "minecraft:village/desert/houses/desert_small_house_7": 2,
+        "minecraft:village/desert/houses/desert_small_house_8": 2,
+        "minecraft:village/desert/houses/desert_farm_2": 4,
+        "minecraft:village/desert/houses/desert_farm_1": 4,
+        "minecraft:village/desert/houses/desert_small_house_1": 2,
+        "minecraft:village/desert/houses/desert_mason_1": 2,
+        "minecraft:village/desert/houses/desert_small_house_2": 2,
+        "minecraft:village/desert/houses/desert_shepherd_house_1": 2,
+        "minecraft:village/desert/houses/desert_small_house_5": 2,
+        "immersiveengineering:village/houses/desert_gunsmith": 1,
+        "minecraft:village/desert/houses/desert_small_house_6": 1,
+        "minecraft:village/desert/houses/desert_small_house_3": 2,
+        "minecraft:village/desert/houses/desert_small_house_4": 2,
+        "immersiveengineering:village/houses/desert_outfitter": 1,
+        "minecraft:village/desert/houses/desert_armorer_1": 1,
+        "minecraft:village/desert/houses/desert_butcher_shop_1": 2,
+        "minecraft:village/desert/houses/desert_cartographer_house_1": 2,
+        "minecraft:village/desert/houses/desert_medium_house_1": 2,
+        "minecraft:village/desert/houses/desert_fisher_1": 2,
+        "minecraft:village/desert/houses/desert_medium_house_2": 2,
+        "minecraft:village/desert/houses/desert_library_1": 2,
+        "minecraft:village/desert/houses/desert_animal_pen_1": 2,
+        "minecraft:village/desert/houses/desert_animal_pen_2": 2,
+        "minecraft:village/desert/houses/desert_fletcher_house_1": 2,
+        "immersiveengineering:village/houses/desert_engineer": 1,
+        "minecraft:village/desert/houses/desert_tannery_1": 2
+      }
+    },
+    {
+      "name": "minecraft:village/desert/streets",
+      "element_weights": {
+        "minecraft:village/desert/streets/turn_01": 3,
+        "minecraft:village/desert/streets/corner_02": 3,
+        "minecraft:village/desert/streets/corner_01": 3,
+        "minecraft:village/desert/streets/square_02": 3,
+        "minecraft:village/desert/streets/square_01": 3,
+        "minecraft:village/desert/streets/straight_01": 4,
+        "minecraft:village/desert/streets/crossroad_03": 3,
+        "minecraft:village/desert/streets/crossroad_02": 3,
+        "minecraft:village/desert/streets/straight_03": 3,
+        "minecraft:village/desert/streets/crossroad_01": 3,
+        "minecraft:village/desert/streets/straight_02": 4
+      }
+    },
+    {
+      "name": "minecraft:village/desert/terminators",
+      "element_weights": {
+        "minecraft:village/desert/terminators/terminator_01": 1,
+        "minecraft:village/desert/terminators/terminator_02": 1
+      }
+    },
+    {
+      "name": "minecraft:village/desert/town_centers",
+      "element_weights": {
+        "minecraft:village/desert/zombie/town_centers/desert_meeting_point_3": 1,
+        "minecraft:village/desert/zombie/town_centers/desert_meeting_point_2": 2,
+        "minecraft:village/desert/zombie/town_centers/desert_meeting_point_1": 2,
+        "minecraft:village/desert/town_centers/desert_meeting_point_2": 98,
+        "minecraft:village/desert/town_centers/desert_meeting_point_1": 98,
+        "minecraft:village/desert/town_centers/desert_meeting_point_3": 49
+      }
+    },
+    {
+      "name": "minecraft:village/desert/villagers",
+      "element_weights": {
+        "minecraft:village/desert/villagers/unemployed": 10,
+        "minecraft:village/desert/villagers/baby": 1,
+        "minecraft:village/desert/villagers/nitwit": 1
+      }
+    },
+    {
+      "name": "minecraft:village/desert/zombie/decor",
+      "element_weights": {
+        "minecraft:village/desert/desert_lamp_1": 10
+      }
+    },
+    {
+      "name": "minecraft:village/desert/zombie/houses",
+      "element_weights": {
+        "minecraft:village/desert/houses/desert_temple_2": 2,
+        "minecraft:village/desert/houses/desert_tool_smith_1": 2,
+        "minecraft:village/desert/houses/desert_large_farm_1": 7,
+        "minecraft:village/desert/houses/desert_weaponsmith_1": 2,
+        "minecraft:village/desert/houses/desert_temple_1": 2,
+        "minecraft:village/desert/zombie/houses/desert_medium_house_1": 2,
+        "minecraft:village/desert/zombie/houses/desert_medium_house_2": 2,
+        "minecraft:village/desert/houses/desert_farm_2": 4,
+        "minecraft:village/desert/houses/desert_farm_1": 4,
+        "minecraft:village/desert/houses/desert_mason_1": 2,
+        "minecraft:village/desert/houses/desert_shepherd_house_1": 2,
+        "minecraft:village/desert/houses/desert_armorer_1": 1,
+        "minecraft:village/desert/houses/desert_butcher_shop_1": 2,
+        "minecraft:village/desert/houses/desert_cartographer_house_1": 2,
+        "minecraft:village/desert/houses/desert_fisher_1": 2,
+        "minecraft:village/desert/houses/desert_library_1": 2,
+        "minecraft:village/desert/zombie/houses/desert_small_house_1": 2,
+        "minecraft:village/desert/houses/desert_animal_pen_1": 2,
+        "minecraft:village/desert/houses/desert_animal_pen_2": 2,
+        "minecraft:village/desert/zombie/houses/desert_small_house_3": 2,
+        "minecraft:village/desert/zombie/houses/desert_small_house_2": 2,
+        "minecraft:village/desert/zombie/houses/desert_small_house_5": 2,
+        "minecraft:village/desert/zombie/houses/desert_small_house_4": 2,
+        "minecraft:village/desert/zombie/houses/desert_small_house_7": 2,
+        "minecraft:village/desert/zombie/houses/desert_small_house_6": 1,
+        "minecraft:village/desert/zombie/houses/desert_small_house_8": 2,
+        "minecraft:village/desert/houses/desert_fletcher_house_1": 2,
+        "minecraft:village/desert/houses/desert_tannery_1": 2
+      }
+    },
+    {
+      "name": "minecraft:village/desert/zombie/streets",
+      "element_weights": {
+        "minecraft:village/desert/zombie/streets/straight_02": 4,
+        "minecraft:village/desert/zombie/streets/corner_02": 3,
+        "minecraft:village/desert/zombie/streets/straight_01": 4,
+        "minecraft:village/desert/zombie/streets/corner_01": 3,
+        "minecraft:village/desert/zombie/streets/straight_03": 3,
+        "minecraft:village/desert/zombie/streets/turn_01": 3,
+        "minecraft:village/desert/zombie/streets/crossroad_02": 3,
+        "minecraft:village/desert/zombie/streets/crossroad_01": 3,
+        "minecraft:village/desert/zombie/streets/square_01": 3,
+        "minecraft:village/desert/zombie/streets/crossroad_03": 3,
+        "minecraft:village/desert/zombie/streets/square_02": 3
+      }
+    },
+    {
+      "name": "minecraft:village/desert/zombie/terminators",
+      "element_weights": {
+        "minecraft:village/desert/zombie/terminators/terminator_02": 1,
+        "minecraft:village/desert/terminators/terminator_01": 1
+      }
+    },
+    {
+      "name": "minecraft:village/desert/zombie/villagers",
+      "element_weights": {
+        "minecraft:village/desert/zombie/villagers/nitwit": 1,
+        "minecraft:village/desert/zombie/villagers/unemployed": 10
+      }
+    },
+    {
+      "name": "minecraft:village/plains/decor",
+      "element_weights": {
+        "minecraft:village/plains/plains_lamp_1": 2
+      }
+    },
+    {
+      "name": "minecraft:village/plains/houses",
+      "element_weights": {
+        "minecraft:village/plains/houses/plains_butcher_shop_2": 2,
+        "minecraft:village/plains/houses/plains_butcher_shop_1": 2,
+        "minecraft:village/plains/houses/plains_medium_house_2": 2,
+        "minecraft:village/plains/houses/plains_medium_house_1": 2,
+        "minecraft:village/plains/houses/plains_armorer_house_1": 2,
+        "minecraft:village/plains/houses/plains_tannery_1": 2,
+        "minecraft:village/plains/houses/plains_small_house_7": 2,
+        "immersiveengineering:village/houses/plains_machinist": 1,
+        "minecraft:village/plains/houses/plains_small_house_8": 3,
+        "minecraft:village/plains/houses/plains_cartographer_1": 1,
+        "minecraft:village/plains/houses/plains_small_house_1": 2,
+        "minecraft:village/plains/houses/plains_small_house_2": 2,
+        "minecraft:village/plains/houses/plains_small_house_5": 2,
+        "minecraft:village/plains/houses/plains_fletcher_house_1": 2,
+        "minecraft:village/plains/houses/plains_small_house_6": 1,
+        "immersiveengineering:village/houses/plains_gunsmith": 1,
+        "immersiveengineering:village/houses/plains_outfitter": 1,
+        "minecraft:village/plains/houses/plains_small_house_3": 2,
+        "minecraft:village/plains/houses/plains_small_house_4": 2,
+        "minecraft:village/plains/houses/plains_accessory_1": 1,
+        "minecraft:village/plains/houses/plains_weaponsmith_1": 2,
+        "minecraft:village/plains/houses/plains_meeting_point_5": 1,
+        "minecraft:village/plains/houses/plains_fisher_cottage_1": 2,
+        "minecraft:village/plains/houses/plains_meeting_point_4": 3,
+        "minecraft:village/plains/houses/plains_library_2": 1,
+        "minecraft:village/plains/houses/plains_tool_smith_1": 2,
+        "immersiveengineering:village/houses/plains_electrician": 1,
+        "minecraft:village/plains/houses/plains_library_1": 5,
+        "immersiveengineering:village/houses/plains_engineer": 1,
+        "minecraft:village/plains/houses/plains_large_farm_1": 4,
+        "minecraft:village/plains/houses/plains_masons_house_1": 2,
+        "minecraft:village/plains/houses/plains_big_house_1": 2,
+        "minecraft:village/plains/houses/plains_temple_4": 2,
+        "minecraft:village/plains/houses/plains_animal_pen_3": 5,
+        "minecraft:village/plains/houses/plains_stable_2": 2,
+        "minecraft:village/plains/houses/plains_stable_1": 2,
+        "minecraft:village/plains/houses/plains_animal_pen_1": 1,
+        "minecraft:village/plains/houses/plains_temple_3": 2,
+        "minecraft:village/plains/houses/plains_animal_pen_2": 1,
+        "minecraft:village/plains/houses/plains_small_farm_1": 4,
+        "minecraft:village/plains/houses/plains_shepherds_house_1": 2
+      }
+    },
+    {
+      "name": "minecraft:village/plains/streets",
+      "element_weights": {
+        "minecraft:village/plains/streets/crossroad_06": 2,
+        "minecraft:village/plains/streets/crossroad_04": 2,
+        "minecraft:village/plains/streets/crossroad_05": 2,
+        "minecraft:village/plains/streets/corner_03": 2,
+        "minecraft:village/plains/streets/corner_01": 2,
+        "minecraft:village/plains/streets/corner_02": 2,
+        "minecraft:village/plains/streets/crossroad_02": 1,
+        "minecraft:village/plains/streets/crossroad_03": 2,
+        "minecraft:village/plains/streets/crossroad_01": 2,
+        "minecraft:village/plains/streets/straight_05": 3,
+        "minecraft:village/plains/streets/turn_01": 3,
+        "minecraft:village/plains/streets/straight_04": 7,
+        "minecraft:village/plains/streets/straight_06": 4,
+        "minecraft:village/plains/streets/straight_01": 4,
+        "minecraft:village/plains/streets/straight_03": 7,
+        "minecraft:village/plains/streets/straight_02": 4
+      }
+    },
+    {
+      "name": "minecraft:village/plains/terminators",
+      "element_weights": {
+        "minecraft:village/plains/terminators/terminator_01": 1,
+        "minecraft:village/plains/terminators/terminator_02": 1,
+        "minecraft:village/plains/terminators/terminator_03": 1,
+        "minecraft:village/plains/terminators/terminator_04": 1
+      }
+    },
+    {
+      "name": "minecraft:village/plains/town_centers",
+      "element_weights": {
+        "minecraft:village/plains/zombie/town_centers/plains_meeting_point_3": 1,
+        "minecraft:village/plains/zombie/town_centers/plains_meeting_point_2": 1,
+        "minecraft:village/plains/town_centers/plains_meeting_point_3": 50,
+        "minecraft:village/plains/zombie/town_centers/plains_meeting_point_1": 1,
+        "minecraft:village/plains/town_centers/plains_fountain_01": 50,
+        "minecraft:village/plains/town_centers/plains_meeting_point_1": 50,
+        "minecraft:village/plains/zombie/town_centers/plains_fountain_01": 1,
+        "minecraft:village/plains/town_centers/plains_meeting_point_2": 50
+      }
+    },
+    {
+      "name": "minecraft:village/plains/trees",
+      "element_weights": {}
+    },
+    {
+      "name": "minecraft:village/plains/villagers",
+      "element_weights": {
+        "minecraft:village/plains/villagers/baby": 1,
+        "minecraft:village/plains/villagers/unemployed": 10,
+        "minecraft:village/plains/villagers/nitwit": 1
+      }
+    },
+    {
+      "name": "minecraft:village/plains/zombie/decor",
+      "element_weights": {
+        "minecraft:village/plains/plains_lamp_1": 1
+      }
+    },
+    {
+      "name": "minecraft:village/plains/zombie/houses",
+      "element_weights": {
+        "minecraft:village/plains/zombie/houses/plains_small_house_4": 2,
+        "minecraft:village/plains/zombie/houses/plains_small_house_5": 2,
+        "minecraft:village/plains/zombie/houses/plains_small_house_6": 1,
+        "minecraft:village/plains/zombie/houses/plains_small_house_7": 2,
+        "minecraft:village/plains/zombie/houses/plains_small_house_8": 2,
+        "minecraft:village/plains/houses/plains_butcher_shop_1": 2,
+        "minecraft:village/plains/houses/plains_armorer_house_1": 2,
+        "minecraft:village/plains/houses/plains_tannery_1": 2,
+        "minecraft:village/plains/zombie/houses/plains_stable_1": 2,
+        "minecraft:village/plains/houses/plains_cartographer_1": 1,
+        "minecraft:village/plains/zombie/houses/plains_medium_house_2": 2,
+        "minecraft:village/plains/zombie/houses/plains_medium_house_1": 2,
+        "minecraft:village/plains/zombie/houses/plains_animal_pen_3": 5,
+        "minecraft:village/plains/zombie/houses/plains_meeting_point_5": 1,
+        "minecraft:village/plains/zombie/houses/plains_meeting_point_4": 3,
+        "minecraft:village/plains/houses/plains_weaponsmith_1": 2,
+        "minecraft:village/plains/zombie/houses/plains_small_house_1": 2,
+        "minecraft:village/plains/houses/plains_fisher_cottage_1": 2,
+        "minecraft:village/plains/zombie/houses/plains_small_house_2": 2,
+        "minecraft:village/plains/zombie/houses/plains_small_house_3": 2,
+        "minecraft:village/plains/houses/plains_library_2": 1,
+        "minecraft:village/plains/houses/plains_tool_smith_1": 2,
+        "minecraft:village/plains/houses/plains_library_1": 3,
+        "minecraft:village/plains/houses/plains_large_farm_1": 4,
+        "minecraft:village/plains/houses/plains_masons_house_1": 2,
+        "minecraft:village/plains/zombie/houses/plains_butcher_shop_2": 2,
+        "minecraft:village/plains/zombie/houses/plains_shepherds_house_1": 2,
+        "minecraft:village/plains/houses/plains_temple_4": 2,
+        "minecraft:village/plains/houses/plains_stable_2": 2,
+        "minecraft:village/plains/houses/plains_animal_pen_1": 1,
+        "minecraft:village/plains/houses/plains_temple_3": 2,
+        "minecraft:village/plains/houses/plains_animal_pen_2": 1,
+        "minecraft:village/plains/zombie/houses/plains_big_house_1": 2,
+        "minecraft:village/plains/houses/plains_small_farm_1": 4,
+        "minecraft:village/plains/zombie/houses/plains_fletcher_house_1": 2
+      }
+    },
+    {
+      "name": "minecraft:village/plains/zombie/streets",
+      "element_weights": {
+        "minecraft:village/plains/zombie/streets/corner_01": 2,
+        "minecraft:village/plains/zombie/streets/corner_03": 2,
+        "minecraft:village/plains/zombie/streets/corner_02": 2,
+        "minecraft:village/plains/zombie/streets/crossroad_01": 2,
+        "minecraft:village/plains/zombie/streets/crossroad_02": 1,
+        "minecraft:village/plains/zombie/streets/crossroad_03": 2,
+        "minecraft:village/plains/zombie/streets/crossroad_04": 2,
+        "minecraft:village/plains/zombie/streets/crossroad_05": 2,
+        "minecraft:village/plains/zombie/streets/crossroad_06": 2,
+        "minecraft:village/plains/zombie/streets/straight_06": 4,
+        "minecraft:village/plains/zombie/streets/straight_05": 3,
+        "minecraft:village/plains/zombie/streets/turn_01": 3,
+        "minecraft:village/plains/zombie/streets/straight_04": 7,
+        "minecraft:village/plains/zombie/streets/straight_03": 7,
+        "minecraft:village/plains/zombie/streets/straight_02": 4,
+        "minecraft:village/plains/zombie/streets/straight_01": 4
+      }
+    },
+    {
+      "name": "minecraft:village/plains/zombie/villagers",
+      "element_weights": {
+        "minecraft:village/plains/zombie/villagers/unemployed": 10,
+        "minecraft:village/plains/zombie/villagers/nitwit": 1
+      }
+    },
+    {
+      "name": "minecraft:village/savanna/decor",
+      "element_weights": {
+        "minecraft:village/savanna/savanna_lamp_post_01": 4
+      }
+    },
+    {
+      "name": "minecraft:village/savanna/houses",
+      "element_weights": {
+        "minecraft:village/savanna/houses/savanna_butchers_shop_2": 2,
+        "minecraft:village/savanna/houses/savanna_medium_house_2": 2,
+        "minecraft:village/savanna/houses/savanna_medium_house_1": 2,
+        "minecraft:village/savanna/houses/savanna_mason_1": 2,
+        "immersiveengineering:village/houses/savanna_outfitter": 1,
+        "minecraft:village/savanna/houses/savanna_butchers_shop_1": 2,
+        "minecraft:village/savanna/houses/savanna_shepherd_1": 7,
+        "immersiveengineering:village/houses/savanna_engineer": 1,
+        "minecraft:village/savanna/houses/savanna_small_house_5": 2,
+        "minecraft:village/savanna/houses/savanna_small_house_6": 2,
+        "minecraft:village/savanna/houses/savanna_fisher_cottage_1": 3,
+        "minecraft:village/savanna/houses/savanna_small_house_3": 2,
+        "minecraft:village/savanna/houses/savanna_small_house_4": 2,
+        "minecraft:village/savanna/houses/savanna_tannery_1": 2,
+        "minecraft:village/savanna/houses/savanna_small_house_7": 2,
+        "minecraft:village/savanna/houses/savanna_small_house_8": 2,
+        "minecraft:village/savanna/houses/savanna_cartographer_1": 2,
+        "minecraft:village/savanna/houses/savanna_fletcher_house_1": 2,
+        "minecraft:village/savanna/houses/savanna_temple_2": 3,
+        "minecraft:village/savanna/houses/savanna_temple_1": 2,
+        "immersiveengineering:village/houses/savanna_gunsmith": 1,
+        "minecraft:village/savanna/houses/savanna_animal_pen_3": 2,
+        "minecraft:village/savanna/houses/savanna_armorer_1": 1,
+        "minecraft:village/savanna/houses/savanna_animal_pen_2": 2,
+        "minecraft:village/savanna/houses/savanna_animal_pen_1": 2,
+        "minecraft:village/savanna/houses/savanna_small_farm": 4,
+        "immersiveengineering:village/houses/savanna_electrician": 1,
+        "immersiveengineering:village/houses/savanna_machinist": 1,
+        "minecraft:village/savanna/houses/savanna_tool_smith_1": 2,
+        "minecraft:village/savanna/houses/savanna_small_house_1": 2,
+        "minecraft:village/savanna/houses/savanna_small_house_2": 2,
+        "minecraft:village/savanna/houses/savanna_weaponsmith_1": 2,
+        "minecraft:village/savanna/houses/savanna_weaponsmith_2": 2,
+        "minecraft:village/savanna/houses/savanna_large_farm_1": 4,
+        "minecraft:village/savanna/houses/savanna_library_1": 2,
+        "minecraft:village/savanna/houses/savanna_large_farm_2": 6
+      }
+    },
+    {
+      "name": "minecraft:village/savanna/streets",
+      "element_weights": {
+        "minecraft:village/savanna/streets/corner_01": 2,
+        "minecraft:village/savanna/streets/corner_03": 2,
+        "minecraft:village/savanna/streets/straight_11": 4,
+        "minecraft:village/savanna/streets/straight_10": 4,
+        "minecraft:village/savanna/streets/straight_02": 4,
+        "minecraft:village/savanna/streets/straight_04": 7,
+        "minecraft:village/savanna/streets/crossroad_07": 2,
+        "minecraft:village/savanna/streets/turn_01": 3,
+        "minecraft:village/savanna/streets/straight_06": 4,
+        "minecraft:village/savanna/streets/crossroad_06": 2,
+        "minecraft:village/savanna/streets/straight_05": 3,
+        "minecraft:village/savanna/streets/crossroad_05": 2,
+        "minecraft:village/savanna/streets/straight_08": 4,
+        "minecraft:village/savanna/streets/crossroad_04": 2,
+        "minecraft:village/savanna/streets/crossroad_03": 2,
+        "minecraft:village/savanna/streets/crossroad_02": 1,
+        "minecraft:village/savanna/streets/split_01": 2,
+        "minecraft:village/savanna/streets/straight_09": 4,
+        "minecraft:village/savanna/streets/split_02": 2
+      }
+    },
+    {
+      "name": "minecraft:village/savanna/terminators",
+      "element_weights": {
+        "minecraft:village/plains/terminators/terminator_01": 1,
+        "minecraft:village/plains/terminators/terminator_02": 1,
+        "minecraft:village/plains/terminators/terminator_03": 1,
+        "minecraft:village/plains/terminators/terminator_04": 1,
+        "minecraft:village/savanna/terminators/terminator_05": 1
+      }
+    },
+    {
+      "name": "minecraft:village/savanna/town_centers",
+      "element_weights": {
+        "minecraft:village/savanna/town_centers/savanna_meeting_point_1": 100,
+        "minecraft:village/savanna/town_centers/savanna_meeting_point_2": 50,
+        "minecraft:village/savanna/town_centers/savanna_meeting_point_3": 150,
+        "minecraft:village/savanna/town_centers/savanna_meeting_point_4": 150,
+        "minecraft:village/savanna/zombie/town_centers/savanna_meeting_point_3": 3,
+        "minecraft:village/savanna/zombie/town_centers/savanna_meeting_point_2": 1,
+        "minecraft:village/savanna/zombie/town_centers/savanna_meeting_point_4": 3,
+        "minecraft:village/savanna/zombie/town_centers/savanna_meeting_point_1": 2
+      }
+    },
+    {
+      "name": "minecraft:village/savanna/trees",
+      "element_weights": {}
+    },
+    {
+      "name": "minecraft:village/savanna/villagers",
+      "element_weights": {
+        "minecraft:village/savanna/villagers/baby": 1,
+        "minecraft:village/savanna/villagers/unemployed": 10,
+        "minecraft:village/savanna/villagers/nitwit": 1
+      }
+    },
+    {
+      "name": "minecraft:village/savanna/zombie/decor",
+      "element_weights": {
+        "minecraft:village/savanna/savanna_lamp_post_01": 4
+      }
+    },
+    {
+      "name": "minecraft:village/savanna/zombie/houses",
+      "element_weights": {
+        "minecraft:village/savanna/zombie/houses/savanna_animal_pen_2": 2,
+        "minecraft:village/savanna/houses/savanna_butchers_shop_2": 2,
+        "minecraft:village/savanna/zombie/houses/savanna_animal_pen_3": 2,
+        "minecraft:village/savanna/houses/savanna_mason_1": 2,
+        "minecraft:village/savanna/houses/savanna_butchers_shop_1": 2,
+        "minecraft:village/savanna/houses/savanna_shepherd_1": 2,
+        "minecraft:village/savanna/zombie/houses/savanna_medium_house_1": 2,
+        "minecraft:village/savanna/houses/savanna_fisher_cottage_1": 2,
+        "minecraft:village/savanna/zombie/houses/savanna_medium_house_2": 2,
+        "minecraft:village/savanna/houses/savanna_tannery_1": 2,
+        "minecraft:village/savanna/houses/savanna_cartographer_1": 2,
+        "minecraft:village/savanna/houses/savanna_fletcher_house_1": 2,
+        "minecraft:village/savanna/houses/savanna_temple_2": 3,
+        "minecraft:village/savanna/houses/savanna_temple_1": 1,
+        "minecraft:village/savanna/houses/savanna_armorer_1": 1,
+        "minecraft:village/savanna/zombie/houses/savanna_small_house_8": 2,
+        "minecraft:village/savanna/houses/savanna_animal_pen_1": 2,
+        "minecraft:village/savanna/zombie/houses/savanna_small_house_3": 2,
+        "minecraft:village/savanna/zombie/houses/savanna_small_house_2": 2,
+        "minecraft:village/savanna/zombie/houses/savanna_small_house_1": 2,
+        "minecraft:village/savanna/zombie/houses/savanna_small_house_7": 2,
+        "minecraft:village/savanna/zombie/houses/savanna_small_house_6": 2,
+        "minecraft:village/savanna/zombie/houses/savanna_small_house_5": 2,
+        "minecraft:village/savanna/houses/savanna_small_farm": 4,
+        "minecraft:village/savanna/zombie/houses/savanna_small_house_4": 2,
+        "minecraft:village/savanna/zombie/houses/savanna_large_farm_2": 4,
+        "minecraft:village/savanna/houses/savanna_tool_smith_1": 2,
+        "minecraft:village/savanna/houses/savanna_weaponsmith_1": 2,
+        "minecraft:village/savanna/houses/savanna_weaponsmith_2": 2,
+        "minecraft:village/savanna/houses/savanna_large_farm_1": 4,
+        "minecraft:village/savanna/houses/savanna_library_1": 2
+      }
+    },
+    {
+      "name": "minecraft:village/savanna/zombie/streets",
+      "element_weights": {
+        "minecraft:village/savanna/zombie/streets/split_01": 2,
+        "minecraft:village/savanna/zombie/streets/crossroad_03": 2,
+        "minecraft:village/savanna/zombie/streets/crossroad_02": 1,
+        "minecraft:village/savanna/zombie/streets/crossroad_05": 2,
+        "minecraft:village/savanna/zombie/streets/split_02": 2,
+        "minecraft:village/savanna/zombie/streets/crossroad_04": 2,
+        "minecraft:village/savanna/zombie/streets/crossroad_07": 2,
+        "minecraft:village/savanna/zombie/streets/crossroad_06": 2,
+        "minecraft:village/savanna/zombie/streets/straight_06": 4,
+        "minecraft:village/savanna/zombie/streets/corner_03": 2,
+        "minecraft:village/savanna/zombie/streets/straight_04": 7,
+        "minecraft:village/savanna/zombie/streets/straight_05": 3,
+        "minecraft:village/savanna/zombie/streets/straight_08": 4,
+        "minecraft:village/savanna/zombie/streets/corner_01": 2,
+        "minecraft:village/savanna/zombie/streets/straight_09": 4,
+        "minecraft:village/savanna/zombie/streets/straight_10": 4,
+        "minecraft:village/savanna/zombie/streets/turn_01": 3,
+        "minecraft:village/savanna/zombie/streets/straight_02": 4,
+        "minecraft:village/savanna/zombie/streets/straight_11": 4
+      }
+    },
+    {
+      "name": "minecraft:village/savanna/zombie/terminators",
+      "element_weights": {
+        "minecraft:village/plains/terminators/terminator_01": 1,
+        "minecraft:village/plains/terminators/terminator_02": 1,
+        "minecraft:village/plains/terminators/terminator_03": 1,
+        "minecraft:village/plains/terminators/terminator_04": 1,
+        "minecraft:village/savanna/zombie/terminators/terminator_05": 1
+      }
+    },
+    {
+      "name": "minecraft:village/savanna/zombie/villagers",
+      "element_weights": {
+        "minecraft:village/savanna/zombie/villagers/unemployed": 10,
+        "minecraft:village/savanna/zombie/villagers/nitwit": 1
+      }
+    },
+    {
+      "name": "minecraft:village/snowy/decor",
+      "element_weights": {
+        "minecraft:village/snowy/snowy_lamp_post_01": 4,
+        "minecraft:village/snowy/snowy_lamp_post_03": 1,
+        "minecraft:village/snowy/snowy_lamp_post_02": 4
+      }
+    },
+    {
+      "name": "minecraft:village/snowy/houses",
+      "element_weights": {
+        "minecraft:village/snowy/houses/snowy_farm_2": 3,
+        "minecraft:village/snowy/houses/snowy_farm_1": 3,
+        "minecraft:village/snowy/houses/snowy_tannery_1": 2,
+        "minecraft:village/snowy/houses/snowy_temple_1": 2,
+        "minecraft:village/snowy/houses/snowy_tool_smith_1": 2,
+        "minecraft:village/snowy/houses/snowy_cartographer_house_1": 2,
+        "minecraft:village/snowy/houses/snowy_masons_house_2": 2,
+        "minecraft:village/snowy/houses/snowy_masons_house_1": 2,
+        "minecraft:village/snowy/houses/snowy_armorer_house_1": 1,
+        "immersiveengineering:village/houses/snowy_gunsmith": 1,
+        "minecraft:village/snowy/houses/snowy_shepherds_house_1": 3,
+        "minecraft:village/snowy/houses/snowy_armorer_house_2": 1,
+        "immersiveengineering:village/houses/snowy_engineer": 1,
+        "minecraft:village/snowy/houses/snowy_fletcher_house_1": 2,
+        "minecraft:village/snowy/houses/snowy_small_house_5": 2,
+        "minecraft:village/snowy/houses/snowy_small_house_6": 2,
+        "minecraft:village/snowy/houses/snowy_small_house_3": 2,
+        "minecraft:village/snowy/houses/snowy_small_house_4": 3,
+        "minecraft:village/snowy/houses/snowy_small_house_7": 2,
+        "minecraft:village/snowy/houses/snowy_small_house_8": 2,
+        "immersiveengineering:village/houses/snowy_outfitter": 1,
+        "minecraft:village/snowy/houses/snowy_butchers_shop_1": 2,
+        "minecraft:village/snowy/houses/snowy_weapon_smith_1": 2,
+        "minecraft:village/snowy/houses/snowy_small_house_1": 2,
+        "minecraft:village/snowy/houses/snowy_small_house_2": 2,
+        "minecraft:village/snowy/houses/snowy_butchers_shop_2": 2,
+        "minecraft:village/snowy/houses/snowy_animal_pen_1": 2,
+        "minecraft:village/snowy/houses/snowy_animal_pen_2": 2,
+        "immersiveengineering:village/houses/snowy_machinist": 1,
+        "minecraft:village/snowy/houses/snowy_fisher_cottage": 2,
+        "immersiveengineering:village/houses/snowy_electrician": 1,
+        "minecraft:village/snowy/houses/snowy_library_1": 2,
+        "minecraft:village/snowy/houses/snowy_medium_house_3": 2,
+        "minecraft:village/snowy/houses/snowy_medium_house_2": 2,
+        "minecraft:village/snowy/houses/snowy_medium_house_1": 2
+      }
+    },
+    {
+      "name": "minecraft:village/snowy/streets",
+      "element_weights": {
+        "minecraft:village/snowy/streets/straight_02": 4,
+        "minecraft:village/snowy/streets/straight_01": 4,
+        "minecraft:village/snowy/streets/square_01": 2,
+        "minecraft:village/snowy/streets/crossroad_06": 2,
+        "minecraft:village/snowy/streets/crossroad_05": 2,
+        "minecraft:village/snowy/streets/crossroad_04": 2,
+        "minecraft:village/snowy/streets/crossroad_03": 2,
+        "minecraft:village/snowy/streets/crossroad_02": 1,
+        "minecraft:village/snowy/streets/turn_01": 3,
+        "minecraft:village/snowy/streets/corner_03": 2,
+        "minecraft:village/snowy/streets/straight_08": 4,
+        "minecraft:village/snowy/streets/corner_02": 2,
+        "minecraft:village/snowy/streets/corner_01": 2,
+        "minecraft:village/snowy/streets/straight_06": 4,
+        "minecraft:village/snowy/streets/straight_04": 7,
+        "minecraft:village/snowy/streets/straight_03": 4
+      }
+    },
+    {
+      "name": "minecraft:village/snowy/terminators",
+      "element_weights": {
+        "minecraft:village/plains/terminators/terminator_01": 1,
+        "minecraft:village/plains/terminators/terminator_02": 1,
+        "minecraft:village/plains/terminators/terminator_03": 1,
+        "minecraft:village/plains/terminators/terminator_04": 1
+      }
+    },
+    {
+      "name": "minecraft:village/snowy/town_centers",
+      "element_weights": {
+        "minecraft:village/snowy/zombie/town_centers/snowy_meeting_point_1": 2,
+        "minecraft:village/snowy/zombie/town_centers/snowy_meeting_point_3": 3,
+        "minecraft:village/snowy/zombie/town_centers/snowy_meeting_point_2": 1,
+        "minecraft:village/snowy/town_centers/snowy_meeting_point_2": 50,
+        "minecraft:village/snowy/town_centers/snowy_meeting_point_1": 100,
+        "minecraft:village/snowy/town_centers/snowy_meeting_point_3": 150
+      }
+    },
+    {
+      "name": "minecraft:village/snowy/trees",
+      "element_weights": {}
+    },
+    {
+      "name": "minecraft:village/snowy/villagers",
+      "element_weights": {
+        "minecraft:village/snowy/villagers/baby": 1,
+        "minecraft:village/snowy/villagers/unemployed": 10,
+        "minecraft:village/snowy/villagers/nitwit": 1
+      }
+    },
+    {
+      "name": "minecraft:village/snowy/zombie/decor",
+      "element_weights": {
+        "minecraft:village/snowy/snowy_lamp_post_01": 1,
+        "minecraft:village/snowy/snowy_lamp_post_03": 1,
+        "minecraft:village/snowy/snowy_lamp_post_02": 1
+      }
+    },
+    {
+      "name": "minecraft:village/snowy/zombie/houses",
+      "element_weights": {
+        "minecraft:village/snowy/houses/snowy_farm_2": 3,
+        "minecraft:village/snowy/houses/snowy_farm_1": 3,
+        "minecraft:village/snowy/houses/snowy_tannery_1": 2,
+        "minecraft:village/snowy/houses/snowy_temple_1": 2,
+        "minecraft:village/snowy/houses/snowy_tool_smith_1": 2,
+        "minecraft:village/snowy/houses/snowy_cartographer_house_1": 2,
+        "minecraft:village/snowy/houses/snowy_masons_house_2": 2,
+        "minecraft:village/snowy/houses/snowy_masons_house_1": 2,
+        "minecraft:village/snowy/houses/snowy_armorer_house_1": 1,
+        "minecraft:village/snowy/houses/snowy_shepherds_house_1": 2,
+        "minecraft:village/snowy/houses/snowy_armorer_house_2": 1,
+        "minecraft:village/snowy/houses/snowy_fletcher_house_1": 2,
+        "minecraft:village/snowy/houses/snowy_butchers_shop_1": 2,
+        "minecraft:village/snowy/houses/snowy_weapon_smith_1": 2,
+        "minecraft:village/snowy/houses/snowy_butchers_shop_2": 2,
+        "minecraft:village/snowy/zombie/houses/snowy_small_house_5": 2,
+        "minecraft:village/snowy/houses/snowy_animal_pen_1": 2,
+        "minecraft:village/snowy/zombie/houses/snowy_small_house_4": 2,
+        "minecraft:village/snowy/zombie/houses/snowy_medium_house_1": 2,
+        "minecraft:village/snowy/houses/snowy_animal_pen_2": 2,
+        "minecraft:village/snowy/zombie/houses/snowy_small_house_7": 2,
+        "minecraft:village/snowy/zombie/houses/snowy_medium_house_2": 2,
+        "minecraft:village/snowy/zombie/houses/snowy_small_house_6": 2,
+        "minecraft:village/snowy/zombie/houses/snowy_medium_house_3": 1,
+        "minecraft:village/snowy/zombie/houses/snowy_small_house_8": 2,
+        "minecraft:village/snowy/houses/snowy_fisher_cottage": 2,
+        "minecraft:village/snowy/zombie/houses/snowy_small_house_1": 2,
+        "minecraft:village/snowy/houses/snowy_library_1": 2,
+        "minecraft:village/snowy/zombie/houses/snowy_small_house_3": 2,
+        "minecraft:village/snowy/zombie/houses/snowy_small_house_2": 2
+      }
+    },
+    {
+      "name": "minecraft:village/snowy/zombie/streets",
+      "element_weights": {
+        "minecraft:village/snowy/zombie/streets/crossroad_06": 2,
+        "minecraft:village/snowy/zombie/streets/crossroad_02": 1,
+        "minecraft:village/snowy/zombie/streets/crossroad_03": 2,
+        "minecraft:village/snowy/zombie/streets/crossroad_04": 2,
+        "minecraft:village/snowy/zombie/streets/crossroad_05": 2,
+        "minecraft:village/snowy/zombie/streets/corner_02": 2,
+        "minecraft:village/snowy/zombie/streets/straight_02": 4,
+        "minecraft:village/snowy/zombie/streets/corner_01": 2,
+        "minecraft:village/snowy/zombie/streets/straight_03": 4,
+        "minecraft:village/snowy/zombie/streets/straight_04": 7,
+        "minecraft:village/snowy/zombie/streets/corner_03": 2,
+        "minecraft:village/snowy/zombie/streets/straight_06": 4,
+        "minecraft:village/snowy/zombie/streets/turn_01": 3,
+        "minecraft:village/snowy/zombie/streets/straight_08": 4,
+        "minecraft:village/snowy/zombie/streets/square_01": 2,
+        "minecraft:village/snowy/zombie/streets/straight_01": 4
+      }
+    },
+    {
+      "name": "minecraft:village/snowy/zombie/villagers",
+      "element_weights": {
+        "minecraft:village/snowy/zombie/villagers/unemployed": 10,
+        "minecraft:village/snowy/zombie/villagers/nitwit": 1
+      }
+    },
+    {
+      "name": "minecraft:village/taiga/decor",
+      "element_weights": {
+        "minecraft:village/taiga/taiga_decoration_6": 1,
+        "minecraft:village/taiga/taiga_decoration_5": 2,
+        "minecraft:village/taiga/taiga_lamp_post_1": 10,
+        "minecraft:village/taiga/taiga_decoration_4": 1,
+        "minecraft:village/taiga/taiga_decoration_3": 1,
+        "minecraft:village/taiga/taiga_decoration_2": 1,
+        "minecraft:village/taiga/taiga_decoration_1": 4
+      }
+    },
+    {
+      "name": "minecraft:village/taiga/houses",
+      "element_weights": {
+        "minecraft:village/taiga/houses/taiga_armorer_2": 1,
+        "minecraft:village/taiga/houses/taiga_fisher_cottage_1": 3,
+        "immersiveengineering:village/houses/taiga_gunsmith": 1,
+        "immersiveengineering:village/houses/taiga_outfitter": 1,
+        "minecraft:village/taiga/houses/taiga_library_1": 2,
+        "minecraft:village/taiga/houses/taiga_animal_pen_1": 2,
+        "minecraft:village/taiga/houses/taiga_small_house_1": 4,
+        "minecraft:village/taiga/houses/taiga_small_house_2": 4,
+        "minecraft:village/taiga/houses/taiga_shepherds_house_1": 2,
+        "immersiveengineering:village/houses/taiga_engineer": 1,
+        "minecraft:village/taiga/houses/taiga_tannery_1": 2,
+        "immersiveengineering:village/houses/taiga_machinist": 1,
+        "minecraft:village/taiga/houses/taiga_weaponsmith_2": 2,
+        "minecraft:village/taiga/houses/taiga_weaponsmith_1": 2,
+        "minecraft:village/taiga/houses/taiga_small_farm_1": 1,
+        "minecraft:village/taiga/houses/taiga_large_farm_2": 6,
+        "immersiveengineering:village/houses/taiga_electrician": 1,
+        "minecraft:village/taiga/houses/taiga_large_farm_1": 6,
+        "minecraft:village/taiga/houses/taiga_tool_smith_1": 2,
+        "minecraft:village/taiga/houses/taiga_small_house_3": 4,
+        "minecraft:village/taiga/houses/taiga_medium_house_1": 2,
+        "minecraft:village/taiga/houses/taiga_small_house_4": 4,
+        "minecraft:village/taiga/houses/taiga_medium_house_2": 2,
+        "minecraft:village/taiga/houses/taiga_fletcher_house_1": 2,
+        "minecraft:village/taiga/houses/taiga_armorer_house_1": 1,
+        "minecraft:village/taiga/houses/taiga_small_house_5": 4,
+        "minecraft:village/taiga/houses/taiga_medium_house_3": 2,
+        "minecraft:village/taiga/houses/taiga_medium_house_4": 2,
+        "minecraft:village/taiga/houses/taiga_cartographer_house_1": 2,
+        "minecraft:village/taiga/houses/taiga_temple_1": 2,
+        "minecraft:village/taiga/houses/taiga_butcher_shop_1": 2,
+        "minecraft:village/taiga/houses/taiga_masons_house_1": 2
+      }
+    },
+    {
+      "name": "minecraft:village/taiga/streets",
+      "element_weights": {
+        "minecraft:village/taiga/streets/straight_02": 4,
+        "minecraft:village/taiga/streets/straight_01": 4,
+        "minecraft:village/taiga/streets/crossroad_01": 1,
+        "minecraft:village/taiga/streets/crossroad_02": 1,
+        "minecraft:village/taiga/streets/crossroad_03": 2,
+        "minecraft:village/taiga/streets/crossroad_04": 2,
+        "minecraft:village/taiga/streets/crossroad_05": 2,
+        "minecraft:village/taiga/streets/crossroad_06": 2,
+        "minecraft:village/taiga/streets/corner_01": 2,
+        "minecraft:village/taiga/streets/corner_03": 2,
+        "minecraft:village/taiga/streets/straight_06": 4,
+        "minecraft:village/taiga/streets/corner_02": 2,
+        "minecraft:village/taiga/streets/straight_05": 7,
+        "minecraft:village/taiga/streets/straight_04": 7,
+        "minecraft:village/taiga/streets/straight_03": 4,
+        "minecraft:village/taiga/streets/turn_01": 3
+      }
+    },
+    {
+      "name": "minecraft:village/taiga/terminators",
+      "element_weights": {
+        "minecraft:village/plains/terminators/terminator_01": 1,
+        "minecraft:village/plains/terminators/terminator_02": 1,
+        "minecraft:village/plains/terminators/terminator_03": 1,
+        "minecraft:village/plains/terminators/terminator_04": 1
+      }
+    },
+    {
+      "name": "minecraft:village/taiga/town_centers",
+      "element_weights": {
+        "minecraft:village/taiga/zombie/town_centers/taiga_meeting_point_2": 1,
+        "minecraft:village/taiga/zombie/town_centers/taiga_meeting_point_1": 1,
+        "minecraft:village/taiga/town_centers/taiga_meeting_point_1": 49,
+        "minecraft:village/taiga/town_centers/taiga_meeting_point_2": 49
+      }
+    },
+    {
+      "name": "minecraft:village/taiga/villagers",
+      "element_weights": {
+        "minecraft:village/taiga/villagers/nitwit": 1,
+        "minecraft:village/taiga/villagers/unemployed": 10,
+        "minecraft:village/taiga/villagers/baby": 1
+      }
+    },
+    {
+      "name": "minecraft:village/taiga/zombie/decor",
+      "element_weights": {
+        "minecraft:village/taiga/taiga_decoration_4": 1,
+        "minecraft:village/taiga/taiga_decoration_3": 1,
+        "minecraft:village/taiga/taiga_decoration_2": 1,
+        "minecraft:village/taiga/taiga_decoration_1": 4
+      }
+    },
+    {
+      "name": "minecraft:village/taiga/zombie/houses",
+      "element_weights": {
+        "minecraft:village/taiga/zombie/houses/taiga_shepherds_house_1": 2,
+        "minecraft:village/taiga/zombie/houses/taiga_small_house_4": 4,
+        "minecraft:village/taiga/zombie/houses/taiga_small_house_5": 4,
+        "minecraft:village/taiga/zombie/houses/taiga_weaponsmith_2": 2,
+        "minecraft:village/taiga/zombie/houses/taiga_library_1": 2,
+        "minecraft:village/taiga/zombie/houses/taiga_small_house_2": 4,
+        "minecraft:village/taiga/zombie/houses/taiga_small_house_3": 4,
+        "minecraft:village/taiga/zombie/houses/taiga_small_house_1": 4,
+        "minecraft:village/taiga/houses/taiga_animal_pen_1": 2,
+        "minecraft:village/taiga/zombie/houses/taiga_temple_1": 2,
+        "minecraft:village/taiga/houses/taiga_tannery_1": 2,
+        "minecraft:village/taiga/zombie/houses/taiga_cartographer_house_1": 2,
+        "minecraft:village/taiga/houses/taiga_weaponsmith_1": 2,
+        "minecraft:village/taiga/zombie/houses/taiga_tool_smith_1": 2,
+        "minecraft:village/taiga/houses/taiga_small_farm_1": 1,
+        "minecraft:village/taiga/houses/taiga_large_farm_1": 6,
+        "minecraft:village/taiga/zombie/houses/taiga_large_farm_2": 6,
+        "minecraft:village/taiga/zombie/houses/taiga_medium_house_4": 2,
+        "minecraft:village/taiga/houses/taiga_fletcher_house_1": 2,
+        "minecraft:village/taiga/houses/taiga_armorer_house_1": 1,
+        "minecraft:village/taiga/zombie/houses/taiga_medium_house_1": 2,
+        "minecraft:village/taiga/zombie/houses/taiga_fisher_cottage_1": 2,
+        "minecraft:village/taiga/zombie/houses/taiga_medium_house_3": 2,
+        "minecraft:village/taiga/zombie/houses/taiga_medium_house_2": 2,
+        "minecraft:village/taiga/houses/taiga_butcher_shop_1": 2,
+        "minecraft:village/taiga/houses/taiga_masons_house_1": 2
+      }
+    },
+    {
+      "name": "minecraft:village/taiga/zombie/streets",
+      "element_weights": {
+        "minecraft:village/taiga/zombie/streets/turn_01": 3,
+        "minecraft:village/taiga/zombie/streets/corner_02": 2,
+        "minecraft:village/taiga/zombie/streets/crossroad_05": 2,
+        "minecraft:village/taiga/zombie/streets/corner_01": 2,
+        "minecraft:village/taiga/zombie/streets/crossroad_04": 2,
+        "minecraft:village/taiga/zombie/streets/crossroad_03": 2,
+        "minecraft:village/taiga/zombie/streets/corner_03": 2,
+        "minecraft:village/taiga/zombie/streets/crossroad_02": 1,
+        "minecraft:village/taiga/zombie/streets/crossroad_06": 2,
+        "minecraft:village/taiga/zombie/streets/straight_01": 4,
+        "minecraft:village/taiga/zombie/streets/crossroad_01": 1,
+        "minecraft:village/taiga/zombie/streets/straight_05": 7,
+        "minecraft:village/taiga/zombie/streets/straight_04": 7,
+        "minecraft:village/taiga/zombie/streets/straight_03": 4,
+        "minecraft:village/taiga/zombie/streets/straight_02": 4,
+        "minecraft:village/taiga/zombie/streets/straight_06": 4
+      }
+    },
+    {
+      "name": "minecraft:village/taiga/zombie/villagers",
+      "element_weights": {
+        "minecraft:village/taiga/zombie/villagers/nitwit": 1,
+        "minecraft:village/taiga/zombie/villagers/unemployed": 10
+      }
+    },
+    {
+      "name": "mythicbotany:andwari_cave",
+      "element_weights": {
+        "mythicbotany:andwari_cave": 1
+      }
+    },
+    {
+      "name": "mythicbotany:crops",
+      "element_weights": {
+        "mythicbotany:crops/carrots": 1,
+        "mythicbotany:crops/wheat": 1,
+        "mythicbotany:crops/potatoes": 1,
+        "mythicbotany:crops/beetroot": 1
+      }
+    },
+    {
+      "name": "mythicbotany:elven_houses/basement_entrances",
+      "element_weights": {}
+    },
+    {
+      "name": "mythicbotany:elven_houses/buildings",
+      "element_weights": {
+        "mythicbotany:elven_houses/buildings/shed": 1,
+        "mythicbotany:elven_houses/buildings/tower": 1,
+        "mythicbotany:elven_houses/buildings/house": 2
+      }
+    },
+    {
+      "name": "mythicbotany:elven_houses/gardens",
+      "element_weights": {
+        "mythicbotany:elven_houses/gardens/crop_garden": 2,
+        "mythicbotany:elven_houses/gardens/flower_garden": 2
+      }
+    },
+    {
+      "name": "mythicbotany:mystical_flowers",
+      "element_weights": {
+        "mythicbotany:mystical_flowers/pink": 1,
+        "mythicbotany:mystical_flowers/lime": 1,
+        "mythicbotany:mystical_flowers/green": 1,
+        "mythicbotany:mystical_flowers/light_blue": 1,
+        "mythicbotany:mystical_flowers/red": 1,
+        "mythicbotany:mystical_flowers/light_gray": 1,
+        "mythicbotany:mystical_flowers/white": 1,
+        "mythicbotany:mystical_flowers/purple": 1,
+        "mythicbotany:mystical_flowers/yellow": 1,
+        "mythicbotany:mystical_flowers/blue": 1,
+        "mythicbotany:mystical_flowers/black": 1,
+        "mythicbotany:mystical_flowers/cyan": 1,
+        "mythicbotany:mystical_flowers/gray": 1,
+        "mythicbotany:mystical_flowers/magenta": 1,
+        "mythicbotany:mystical_flowers/brown": 1,
+        "mythicbotany:mystical_flowers/orange": 1
+      }
+    },
+    {
+      "name": "mythicbotany:tall_mystical_flowers",
+      "element_weights": {
+        "mythicbotany:tall_mystical_flowers/brown": 1,
+        "mythicbotany:tall_mystical_flowers/green": 1,
+        "mythicbotany:tall_mystical_flowers/magenta": 1,
+        "mythicbotany:tall_mystical_flowers/cyan": 1,
+        "mythicbotany:tall_mystical_flowers/orange": 1,
+        "mythicbotany:tall_mystical_flowers/gray": 1,
+        "mythicbotany:tall_mystical_flowers/white": 1,
+        "mythicbotany:tall_mystical_flowers/light_blue": 1,
+        "mythicbotany:tall_mystical_flowers/yellow": 1,
+        "mythicbotany:tall_mystical_flowers/black": 1,
+        "mythicbotany:tall_mystical_flowers/light_gray": 1,
+        "mythicbotany:tall_mystical_flowers/red": 1,
+        "mythicbotany:tall_mystical_flowers/pink": 1,
+        "mythicbotany:tall_mystical_flowers/blue": 1,
+        "mythicbotany:tall_mystical_flowers/lime": 1,
+        "mythicbotany:tall_mystical_flowers/purple": 1
+      }
+    },
+    {
+      "name": "tfc_ruins:ruin_beach",
+      "element_weights": {
+        "tfc_ruins:ruin_beach/ruin_2": 1,
+        "tfc_ruins:ruin_beach/ruin_1": 1,
+        "tfc_ruins:ruin_beach/ruin_3": 1
+      }
+    },
+    {
+      "name": "tfc_ruins:ruin_rich",
+      "element_weights": {
+        "tfc_ruins:ruin_rich/ruin_1": 1,
+        "tfc_ruins:ruin_rich/ruin_2": 1,
+        "tfc_ruins:ruin_rich/ruin_3": 1
+      }
+    },
+    {
+      "name": "tfc_ruins:ruin_small",
+      "element_weights": {
+        "tfc_ruins:ruin_small/ruin_18": 1,
+        "tfc_ruins:ruin_small/ruin_19": 1,
+        "tfc_ruins:ruin_small/ruin_14": 1,
+        "tfc_ruins:ruin_small/ruin_15": 1,
+        "tfc_ruins:ruin_small/ruin_16": 1,
+        "tfc_ruins:ruin_small/ruin_17": 1,
+        "tfc_ruins:ruin_small/ruin_10": 1,
+        "tfc_ruins:ruin_small/ruin_11": 1,
+        "tfc_ruins:ruin_small/ruin_12": 1,
+        "tfc_ruins:ruin_small/ruin_9": 1,
+        "tfc_ruins:ruin_small/ruin_13": 1,
+        "tfc_ruins:ruin_small/ruin_8": 1,
+        "tfc_ruins:ruin_small/ruin_7": 1,
+        "tfc_ruins:ruin_small/ruin_6": 1,
+        "tfc_ruins:ruin_small/ruin_5": 1,
+        "tfc_ruins:ruin_small/ruin_20": 1,
+        "tfc_ruins:ruin_small/ruin_4": 1,
+        "tfc_ruins:ruin_small/ruin_3": 1,
+        "tfc_ruins:ruin_small/ruin_2": 1,
+        "tfc_ruins:ruin_small/ruin_1": 1
+      }
+    }
+  ]
+}
