@@ -10,7 +10,10 @@ global.metals = {
         generate_plate: true,
         generate_gear: true,
         generate_nugget: true,
-        generate_dust: true
+        generate_dust: true,
+        generate_basic_tools: false,
+        generate_shears: false,
+        generate_armor: false
     },
     aluminum: {
         tier: 1,
@@ -22,7 +25,10 @@ global.metals = {
         generate_plate: true,
         generate_gear: false,
         generate_nugget: false,
-        generate_dust: true
+        generate_dust: true,
+        generate_basic_tools: false,
+        generate_shears: false,
+        generate_armor: false
     },
     lead: {
         tier: 2,
@@ -34,7 +40,10 @@ global.metals = {
         generate_plate: true,
         generate_gear: true,
         generate_nugget: true,
-        generate_dust: true
+        generate_dust: true,
+        generate_basic_tools: false,
+        generate_shears: false,
+        generate_armor: false
     },
     silver: {
         tier: 2,
@@ -46,7 +55,10 @@ global.metals = {
         generate_plate: true,
         generate_gear: true,
         generate_nugget: true,
-        generate_dust: true
+        generate_dust: true,
+        generate_basic_tools: false,
+        generate_shears: false,
+        generate_armor: false
     },
     nickel: {
         tier: 1,
@@ -58,7 +70,10 @@ global.metals = {
         generate_plate: true,
         generate_gear: true,
         generate_nugget: false,
-        generate_dust: false
+        generate_dust: false,
+        generate_basic_tools: false,
+        generate_shears: false,
+        generate_armor: false
     },
     uranium: {
         tier: 3,
@@ -70,7 +85,10 @@ global.metals = {
         generate_plate: true,
         generate_gear: false,
         generate_nugget: false,
-        generate_dust: false
+        generate_dust: false,
+        generate_basic_tools: false,
+        generate_shears: false,
+        generate_armor: false
     },
     constantan: {
         tier: 2,
@@ -82,7 +100,10 @@ global.metals = {
         generate_plate: true,
         generate_gear: false,
         generate_nugget: true,
-        generate_dust: false
+        generate_dust: false,
+        generate_basic_tools: false,
+        generate_shears: false,
+        generate_armor: false
     },
     electrum: {
         tier: 3,
@@ -94,7 +115,10 @@ global.metals = {
         generate_plate: true,
         generate_gear: false,
         generate_nugget: true,
-        generate_dust: false
+        generate_dust: false,
+        generate_basic_tools: false,
+        generate_shears: false,
+        generate_armor: false
     },
     steel: {
         tier: 4,
@@ -106,7 +130,10 @@ global.metals = {
         generate_plate: true,
         generate_gear: true,
         generate_nugget: true,
-        generate_dust: true
+        generate_dust: true,
+        generate_basic_tools: false,
+        generate_shears: false,
+        generate_armor: false
     },
     wrought_iron: {
         tier: 3,
@@ -119,7 +146,10 @@ global.metals = {
         generate_plate: true,
         generate_gear: true,
         generate_nugget: true,
-        generate_dust: true
+        generate_dust: true,
+        generate_basic_tools: false,
+        generate_shears: false,
+        generate_armor: false
     },
     gold: {
         tier: 1,
@@ -143,7 +173,10 @@ global.metals = {
         generate_plate: true,
         generate_gear: true,
         generate_nugget: false,
-        generate_dust: false
+        generate_dust: false,
+        generate_basic_tools: false,
+        generate_shears: false,
+        generate_armor: false
     },
     zinc: {
         tier: 1,
@@ -155,7 +188,10 @@ global.metals = {
         generate_plate: true,
         generate_gear: true,
         generate_nugget: true,
-        generate_dust: false
+        generate_dust: false,
+        generate_basic_tools: false,
+        generate_shears: false,
+        generate_armor: false
     },
     brass: {
         tier: 2,
@@ -167,7 +203,10 @@ global.metals = {
         generate_plate: true,
         generate_gear: true,
         generate_nugget: true,
-        generate_dust: false
+        generate_dust: false,
+        generate_basic_tools: false,
+        generate_shears: false,
+        generate_armor: false
     },
     bronze: {
         tier: 2,
@@ -179,7 +218,10 @@ global.metals = {
         generate_plate: true,
         generate_gear: true,
         generate_nugget: true,
-        generate_dust: false
+        generate_dust: false,
+        generate_basic_tools: false,
+        generate_shears: false,
+        generate_armor: false
     },
     invar: {
         tier: 3,
@@ -191,7 +233,10 @@ global.metals = {
         generate_plate: true,
         generate_gear: true,
         generate_nugget: false,
-        generate_dust: false
+        generate_dust: false,
+        generate_basic_tools: false,
+        generate_shears: false,
+        generate_armor: false
     },
     red_steel: {
         tier: 3,
@@ -203,7 +248,10 @@ global.metals = {
         generate_plate: true,
         generate_gear: false,
         generate_nugget: false,
-        generate_dust: false
+        generate_dust: false,
+        generate_basic_tools: false,
+        generate_shears: false,
+        generate_armor: false
     },
     chromium: {
         tier: 4,
@@ -215,7 +263,10 @@ global.metals = {
         generate_plate: false,
         generate_gear: false,
         generate_nugget: false,
-        generate_dust: false
+        generate_dust: false,
+        generate_basic_tools: false,
+        generate_shears: false,
+        generate_armor: false
     },
     cast_iron: {
         tier: 1,
@@ -227,7 +278,10 @@ global.metals = {
         generate_plate: false,
         generate_gear: false,
         generate_nugget: true,
-        generate_dust: false
+        generate_dust: false,
+        generate_basic_tools: false,
+        generate_shears: false,
+        generate_armor: false
     },
     bismuth: {
         tier: 1,
@@ -239,7 +293,10 @@ global.metals = {
         generate_plate: false,
         generate_gear: false,
         generate_nugget: false,
-        generate_dust: false
+        generate_dust: false,
+        generate_basic_tools: false,
+        generate_shears: false,
+        generate_armor: false
     },
     andesite_alloy: {
         tier: 2,
@@ -250,13 +307,15 @@ global.metals = {
         color: 0x6C7C72,
         fluid: 'kubejs:metal/andesite_alloy',
         ingot: 'create:andesite_alloy',
-        double_ingot: null,
-        sheet: null,
         new_metal: true,
+        generate_sheet: false,
         generate_plate: false,
         generate_gear: false,
         generate_nugget: false,
-        generate_dust: false
+        generate_dust: false,
+        generate_basic_tools: false,
+        generate_shears: false,
+        generate_armor: false
     },
     andesite: {
         tier: 2,
@@ -267,13 +326,34 @@ global.metals = {
         color: 0x787D7C,
         fluid: 'kubejs:metal/andesite',
         ingot: 'tfc:brick/andesite',
-        double_ingot: null,
-        sheet: null,
         new_metal: true,
+        generate_sheet: false,
         generate_plate: false,
         generate_gear: false,
         generate_nugget: false,
-        generate_dust: false
+        generate_dust: false,
+        generate_basic_tools: false,
+        generate_shears: false,
+        generate_armor: false
+    },
+    manasteel: {
+        tier: 3,
+        melt: 1285,
+        capacity: 2.212,
+        work: 671,
+        weld: 978,
+        color: 0x66B7EB,
+        fluid: 'kubejs:metal/manasteel',
+        ingot: 'botania:manasteel_ingot',
+        new_metal: true,
+        generate_sheet: true,
+        generate_plate: false,
+        generate_gear: false,
+        generate_nugget: false,
+        generate_dust: false,
+        generate_basic_tool_heads: true,
+        generate_knife_blade: true,
+        generate_armor: true
     }
 }
 

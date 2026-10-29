@@ -38,6 +38,7 @@ StartupEvents.registry('item', event => {
         .texture('kubejs:item/elytra_right_wing')
         .translationKey('kubejs:item/elytra_right_wing')
 
+    // Refactory Clay
     event.create('kubejs:refactory_clay')
         .texture('kubejs:item/refactory_clay')
         .translationKey('kubejs:item/refactory_clay')
@@ -45,11 +46,13 @@ StartupEvents.registry('item', event => {
         .tag('tfc:any_knapping')
         .tag('forge:refactory_clay')
 
+    // Unfired Refactory Brick
     event.create('kubejs:unfired_refactory_brick')
         .texture('kubejs:item/unfired_refactory_brick')
         .translationKey('kubejs:item/unfired_refactory_brick')
         .tag('tfc:refactory_clay_recycle_1')
 
+    // Refactory Brick
     event.create('kubejs:refactory_brick')
         .texture('kubejs:item/refactory_brick')
         .translationKey('kubejs:item/refactory_brick')

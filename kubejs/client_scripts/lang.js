@@ -70,6 +70,45 @@ ClientEvents.lang('en_us', event => {
     event.add('item.kubejs.metal.powder.wrought_iron', 'Wrought Iron Powder')
     event.add('item.kubejs.metal.powder.gold', 'Gold Powder')
 
+    // Metal Double Ingots
+    event.add('item.kubejs.metal.double_ingot.manasteel', 'Manasteel Double Ingot')
+
+    // Metal Sheets
+    event.add('item.kubejs.metal.sheet.manasteel', 'Manasteel Sheet')
+
+    // Metal Double Sheets
+    event.add('item.kubejs.metal.double_sheet.manasteel', 'Manasteel Double Sheet')
+
+    // Metal Pickaxe Head
+    event.add('item.kubejs.metal.pickaxe_head.manasteel', 'Manasteel Pickaxe Head')
+
+    // Metal Axe Head
+    event.add('item.kubejs.metal.axe_head.manasteel', 'Manasteel Axe Head')
+
+    // Metal Shovel Head
+    event.add('item.kubejs.metal.shovel_head.manasteel', 'Manasteel Shovel Head')
+
+    // Metal Hoe Head
+    event.add('item.kubejs.metal.hoe_head.manasteel', 'Manasteel Hoe Head')
+
+    // Metal Sword Blade
+    event.add('item.kubejs.metal.sword_blade.manasteel', 'Manasteel Sword Blade')
+
+    // Metal Knife Blade
+    event.add('item.kubejs.metal.knife_blade.manasteel', 'Manasteel Knife Blade')
+
+    // Unfinished Helmet
+    event.add('item.kubejs.metal.unfinished_helmet.manasteel', 'Manasteel Unfinished Helmet')
+
+    // Unfinished Chestplate
+    event.add('item.kubejs.metal.unfinished_chestplate.manasteel', 'Manasteel Unfinished Chestplate')
+
+    // Unfinished Greaves
+    event.add('item.kubejs.metal.unfinished_greaves.manasteel', 'Manasteel Unfinished Greaves')
+
+    // Unfinished Boots
+    event.add('item.kubejs.metal.unfinished_boots.manasteel', 'Manasteel Unfinished Boots')
+
     // Misc powders
     event.add('item.kubejs.powder.obsidian', 'Obsidian Powder')
     event.add('item.kubejs.powder.wood', 'Sawdust')
@@ -86,14 +125,17 @@ ClientEvents.lang('en_us', event => {
     // Metal Buckets
     event.add('item.kubejs.metal.andesite_alloy_bucket', 'Andesite Alloy Bucket')
     event.add('item.kubejs.metal.andesite_bucket', 'Andesite Bucket')
+    event.add('item.kubejs.metal.manasteel_bucket', 'Manasteel Bucket')
 
     // Fluid Metals
     event.add('fluid.kubejs.metal.andesite_alloy', 'Andesite Alloy')
     event.add('fluid.kubejs.metal.andesite', 'Andesite')
+    event.add('fluid.kubejs.metal.manasteel', 'Manasteel')
 
     // Metals
     event.add('metal.kubejs.andesite_alloy', 'Andesite Alloy')
     event.add('metal.kubejs.andesite', 'Andesite')
+    event.add('metal.kubejs.manasteel', 'Manasteel')
     
     // Blocks
     event.add('block.kubejs.coal_coke_block', 'Block of Coal Coke')

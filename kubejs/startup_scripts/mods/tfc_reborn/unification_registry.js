@@ -5,17 +5,72 @@ StartupEvents.registry('item', event => {
 
 		// New Metal Registry
 		if (m.new_metal) {
-			if (m.double_ingot != null) {
+			if (m.generate_sheet || m.generate_armor || m.generate_basic_tool_heads) {
 				event.create(`kubejs:metal/double_ingot/${metal}`)
 					.texture(`kubejs:item/metal/double_ingot/${metal}`)
 					.tag('forge:double_ingots')
 					.tag(`forge:double_ingots/${metal}`)
-			}
-			if (m.sheet != null) {
+					.tag('tfc:pileable_double_ingots')
+					.tag(`tfc:metal_items/${metal}`)
+
 				event.create(`kubejs:metal/sheet/${metal}`)
 					.texture(`kubejs:item/metal/sheet/${metal}`)
 					.tag('forge:sheets')
 					.tag(`forge:sheets/${metal}`)
+					.tag('tfc:pileable_sheets')
+					.tag(`tfc:metal_items/${metal}`)
+
+				event.create(`kubejs:metal/double_sheet/${metal}`)
+					.texture(`kubejs:item/metal/double_sheet/${metal}`)
+					.tag('forge:double_sheets')
+					.tag(`forge:double_sheets/${metal}`)
+					.tag(`tfc:metal_items/${metal}`)
+			}
+
+			if(m.generate_basic_tool_heads) {
+				event.create(`kubejs:metal/pickaxe_head/${metal}`)
+					.texture(`kubejs:item/metal/pickaxe_head/${metal}`)
+					.tag(`tfc:metal_items/${metal}`)
+
+				event.create(`kubejs:metal/axe_head/${metal}`)
+					.texture(`kubejs:item/metal/axe_head/${metal}`)
+					.tag(`tfc:metal_items/${metal}`)
+
+				event.create(`kubejs:metal/shovel_head/${metal}`)
+					.texture(`kubejs:item/metal/shovel_head/${metal}`)
+					.tag(`tfc:metal_items/${metal}`)
+
+				event.create(`kubejs:metal/hoe_head/${metal}`)
+					.texture(`kubejs:item/metal/hoe_head/${metal}`)
+					.tag(`tfc:metal_items/${metal}`)
+
+				event.create(`kubejs:metal/sword_blade/${metal}`)
+					.texture(`kubejs:item/metal/sword_blade/${metal}`)
+					.tag(`tfc:metal_items/${metal}`)
+			}
+
+			if(m.generate_knife_blade) {
+				event.create(`kubejs:metal/knife_blade/${metal}`)
+					.texture(`kubejs:item/metal/knife_blade/${metal}`)
+					.tag(`tfc:metal_items/${metal}`)
+			}
+
+			if(m.generate_armor) {
+				event.create(`kubejs:metal/unfinished_helmet/${metal}`)
+					.texture(`kubejs:item/metal/unfinished_helmet/${metal}`)
+					.tag(`tfc:metal_items/${metal}`)
+
+				event.create(`kubejs:metal/unfinished_chestplate/${metal}`)
+					.texture(`kubejs:item/metal/unfinished_chestplate/${metal}`)
+					.tag(`tfc:metal_items/${metal}`)
+
+				event.create(`kubejs:metal/unfinished_greaves/${metal}`)
+					.texture(`kubejs:item/metal/unfinished_greaves/${metal}`)
+					.tag(`tfc:metal_items/${metal}`)
+					
+				event.create(`kubejs:metal/unfinished_boots/${metal}`)
+					.texture(`kubejs:item/metal/unfinished_boots/${metal}`)
+					.tag(`tfc:metal_items/${metal}`)
 			}
 		}
 

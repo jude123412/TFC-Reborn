@@ -9,8 +9,8 @@ TFCEvents.data(event => {
                 m.melt,
                 m.capacity,
                 m.ingot,
-                m.double_ingot,
-                m.sheet,
+                `kubejs:metal/double_ingot/${metal}`,
+                `kubejs:metal/sheet/${metal}`,
                 m.tier,
                 `kubejs:${metal}`
             )
@@ -19,12 +19,30 @@ TFCEvents.data(event => {
                 event.itemHeat(m.ingot, m.capacity, m.work, m.weld)
             }
 
-            if (m.double_ingot != null) {
-                event.itemHeat(m.double_ingot, m.capacity, m.work, m.weld)
+            if (m.generate_sheet) {
+                event.itemHeat(`kubejs:metal/double_ingot/${metal}`, m.capacity * 2, m.work, m.weld)
+                event.itemHeat(`kubejs:metal/sheet/${metal}`, m.capacity * 2, m.work, m.weld)
+                event.itemHeat(`kubejs:metal/double_sheet/${metal}`, m.capacity * 4, m.work, m.weld)
+                event.itemSize(`kubejs:metal/double_sheet/${metal}`, 'large', 'heavy')
             }
 
-            if (m.sheet != null) {
-                event.itemHeat(m.sheet, m.capacity, m.work, m.weld)
+            if (m.generate_basic_tool_heads) {
+                event.itemHeat(`kubejs:metal/pickaxe_head/${metal}`, m.capacity, m.work, m.weld)
+                event.itemHeat(`kubejs:metal/axe_head/${metal}`, m.capacity, m.work, m.weld)
+                event.itemHeat(`kubejs:metal/shovel_head/${metal}`, m.capacity, m.work, m.weld)
+                event.itemHeat(`kubejs:metal/hoe_head/${metal}`, m.capacity, m.work, m.weld)
+                event.itemHeat(`kubejs:metal/sword_blade/${metal}`, m.capacity * 2, m.work, m.weld)
+            }
+
+            if (m.generate_knife_blade) {
+                event.itemHeat(`kubejs:metal/knife_blade/${metal}`, m.capacity, m.work, m.weld)
+            }
+
+            if (m.generate_armor) {
+                event.itemHeat(`kubejs:metal/unfinished_helmet/${metal}`, m.capacity * 4, m.work, m.weld)
+                event.itemHeat(`kubejs:metal/unfinished_chestplate/${metal}`, m.capacity * 4, m.work, m.weld)
+                event.itemHeat(`kubejs:metal/unfinished_greaves/${metal}`, m.capacity * 4, m.work, m.weld)
+                event.itemHeat(`kubejs:metal/unfinished_boots/${metal}`, m.capacity * 2, m.work, m.weld)
             }
         }
 
@@ -141,16 +159,17 @@ ServerEvents.recipes(event => {
         let m = global.metals[metal]
 
         if (m.new_metal){
+            // Ingots
             if (m.ingot != null) {
                 event.recipes.tfc.casting(
-                    m.ingot,
+                    `#forge:ingots/${metal}`,
                     'tfc:ceramic/ingot_mold',
                     TFC.fluidStackIngredient(m.fluid, 100),
                     0.1
                 )
 
                 event.recipes.tfc.casting(
-                    m.ingot,
+                    `#forge:ingots/${metal}`,
                     'tfc:ceramic/fire_ingot_mold',
                     TFC.fluidStackIngredient(m.fluid, 100),
                     0.01
@@ -160,29 +179,191 @@ ServerEvents.recipes(event => {
                     .resultFluid(Fluid.of(m.fluid, 100))
             }
 
-            if (m.double_ingot != null) {
+            // Generates Sheets, Double Ingots and Double Sheets
+            if (m.generate_sheet || m.generate_armor || m.generate_basic_tool_heads) {
+                // Double Ingots
                 tfc.welding(
-                    TFC.itemStackProvider.of(m.double_ingot).copyHeat(),
-                    Ingredient.of(m.ingot),
-                    Ingredient.of(m.ingot),
+                    TFC.itemStackProvider.of(`kubejs:metal/double_ingot/${metal}`).copyHeat(),
+                    Ingredient.of(`#forge:ingots/${metal}`),
+                    Ingredient.of(`#forge:ingots/${metal}`),
                     m.tier
                 )
 
-                tfc.heating(m.double_ingot, m.melt)
+                tfc.heating(`kubejs:metal/sheet/${metal}`, m.melt)
                     .resultFluid(Fluid.of(m.fluid, 200))
-            }
 
-            if (m.sheet != null) {
+                // Double Sheets
+                tfc.welding(
+                    TFC.itemStackProvider.of(`kubejs:metal/double_sheet/${metal}`).copyHeat(),
+                    Ingredient.of(`kubejs:metal/sheet/${metal}`),
+                    Ingredient.of(`kubejs:metal/sheet/${metal}`),
+                    m.tier
+                )
+
+                tfc.heating(`kubejs:metal/double_ingot/${metal}`, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 200))
+
+                // Sheets
                 tfc.anvil(
-                    TFC.itemStackProvider.of(m.sheet).copyHeat(),
-                    m.double_ingot,
+                    TFC.itemStackProvider.of(`kubejs:metal/sheet/${metal}`).copyHeat(),
+                    `kubejs:metal/double_ingot/${metal}`,
                     [
                         'hit_third_last',
                         'hit_second_last',
                         'hit_last'
-                    ]).tier(m.tier)
+                    ]
+                ).tier(m.tier) 
 
-                tfc.heating(m.double_ingot, m.melt)
+                tfc.heating(`kubejs:metal/double_sheet/${metal}`, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 400))
+            }
+
+            // Generates basic tool heads
+            // (Pickaxe, Axe, Shovel, Hoe and Sword)
+            if (m.generate_basic_tool_heads) {
+                // Pickaxe Heads
+                tfc.anvil(
+                    TFC.itemStackProvider.of(`kubejs:metal/pickaxe_head/${metal}`).copyHeat(),
+                    `#forge:ingots/${metal}`,
+                    [
+                        'punch_last',
+                        'bend_not_last',
+                        'draw_not_last'
+                    ]
+                ).tier(m.tier)
+
+                tfc.heating(`kubejs:metal/pickaxe_head/${metal}`, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 100))
+
+                // Axe Heads
+                tfc.anvil(
+                    TFC.itemStackProvider.of(`kubejs:metal/axe_head/${metal}`).copyHeat(),
+                    `#forge:ingots/${metal}`,
+                    [
+                        'punch_last',
+                        'hit_second_last',
+                        'upset_third_last'
+                    ]
+                ).tier(m.tier)
+
+                tfc.heating(`kubejs:metal/axe_head/${metal}`, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 100))
+
+                // Shovel Heads
+                tfc.anvil(
+                    TFC.itemStackProvider.of(`kubejs:metal/shovel_head/${metal}`).copyHeat(),
+                    `#forge:ingots/${metal}`,
+                    [
+                        'punch_last',
+                        'hit_not_last'
+                    ]
+                ).tier(m.tier)
+
+                tfc.heating(`kubejs:metal/shovel_head/${metal}`, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 100))
+
+                // Hoe Heads
+                tfc.anvil(
+                    TFC.itemStackProvider.of(`kubejs:metal/hoe_head/${metal}`).copyHeat(),
+                    `#forge:ingots/${metal}`,
+                    [
+                        'punch_last',
+                        'hit_not_last',
+                        'bend_not_last'
+                    ]
+                ).tier(m.tier)
+
+                tfc.heating(`kubejs:metal/hoe_head/${metal}`, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 100))
+
+                // Sword Blades
+                tfc.anvil(
+                    TFC.itemStackProvider.of(`kubejs:metal/sword_blade/${metal}`).copyHeat(),
+                    `#forge:double_ingots/${metal}`,
+                    [
+                        'hit_last',
+                        'bend_second_last',
+                        'bend_third_last'
+                    ]
+                ).tier(m.tier)
+
+                tfc.heating(`kubejs:metal/sword_blade/${metal}`, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 200))
+            }
+
+            // Knife Blades
+            if (m.generate_knife_blade) {
+                tfc.anvil(
+                    TFC.itemStackProvider.of(`kubejs:metal/knife_blade/${metal}`).copyHeat(),
+                    `#forge:ingots/${metal}`,
+                    [
+                        'hit_last',
+                        'draw_second_last',
+                        'draw_third_last'
+                    ]
+                ).tier(m.tier)
+
+                tfc.heating(`kubejs:metal/knife_blade/${metal}`, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 100))
+            }
+
+            // Generates Unfinished Helmets,
+            // Chestplates, Greaves and Boots
+            if (m.generate_armor) {
+                // Unfinished Helmets
+                tfc.anvil(
+                    TFC.itemStackProvider.of(`kubejs:metal/unfinished_helmet/${metal}`).copyHeat(),
+                    `#forge:double_sheets/${metal}`,
+                    [
+                        'hit_last',
+                        'bend_second_last',
+                        'bend_third_last'
+                    ]
+                ).tier(m.tier)
+
+                tfc.heating(`kubejs:metal/unfinished_helmet/${metal}`, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 400))
+
+                // Unfinished Chestplates
+                tfc.anvil(
+                    TFC.itemStackProvider.of(`kubejs:metal/unfinished_chestplate/${metal}`).copyHeat(),
+                    `#forge:double_sheets/${metal}`,
+                    [
+                        'bend_any',
+                        'draw_any',
+                        'hit_any'
+                    ]
+                ).tier(m.tier)
+
+                tfc.heating(`kubejs:metal/unfinished_chestplate/${metal}`, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 400))
+
+                // Unfinished Greaves
+                tfc.anvil(
+                    TFC.itemStackProvider.of(`kubejs:metal/unfinished_greaves/${metal}`).copyHeat(),
+                    `#forge:double_sheets/${metal}`,
+                    [
+                        'hit_last',
+                        'hit_second_last',
+                        'upset_third_last'
+                    ]
+                ).tier(m.tier)
+
+                tfc.heating(`kubejs:metal/unfinished_greaves/${metal}`, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 400))
+
+                // Unfinished Boots
+                tfc.anvil(
+                    TFC.itemStackProvider.of(`kubejs:metal/unfinished_boots/${metal}`).copyHeat(),
+                    `#forge:sheets/${metal}`,
+                    [
+                        'bend_last',
+                        'bend_second_last',
+                        'shrink_third_last'
+                    ]
+                ).tier(m.tier)
+
+                tfc.heating(`kubejs:metal/unfinished_boots/${metal}`, m.melt)
                     .resultFluid(Fluid.of(m.fluid, 200))
             }
         }
