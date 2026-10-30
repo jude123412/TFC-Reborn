@@ -374,7 +374,6 @@ ServerEvents.recipes(event => {
 
     // Scaffolding
     event.remove({id: 'farmersdelight:scaffolding_from_canvas'})
-    event.remove({id: 'mynethersdelight:crafting/scaffolding_alt'})
     event.shaped(
         Item.of('minecraft:scaffolding', 6), 
         [
