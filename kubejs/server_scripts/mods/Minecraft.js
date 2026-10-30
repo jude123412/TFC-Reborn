@@ -196,6 +196,8 @@ ServerEvents.recipes(event => {
     event.remove({id: 'mekanism:sawing/log/mangrove'})
     event.remove({id: 'mekanism:sawing/planks'})
     event.remove({id: 'mekanism:sawing/hanging_sign/spruce'})
+    event.remove({id: 'immersiveengineering:crafting/torch'})
+    event.remove({id: 'railcraft:torch_creosote'})
 
     // Elytra
     tfc.welding(
