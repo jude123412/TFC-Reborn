@@ -49,6 +49,11 @@ LootJS.modifiers((event) => {
         .replaceLoot('railcraft:coal_coke', 'kubejs:coal_coke', true)
         .replaceLoot('immersiveengineering:coal_coke', 'kubejs:coal_coke', true)
         .replaceLoot('tfc:metal/ingot/wrought_iron', 'tfc:metal/ingot/cast_iron', true)
+        .replaceLoot('minecraft:melon_seeds', 'tfc:seeds/melon', true)
+        .replaceLoot('minecraft:pumpkin_seeds', 'tfc:seeds/pumpkin', true)
+        .replaceLoot('minecraft:beetroot_seeds', 'tfc:seeds/beet', true)
+        .replaceLoot('minecraft:torch', 'tfc:torch', true)
+        .replaceLoot('minecraft:pumpkin', 'tfc:pumpkin', true)
 
     // Matches any loot table that contains "archaeology" in its path (vanilla and modded)
     event.addLootTableModifier(/.*:archaeology\/.*/)
