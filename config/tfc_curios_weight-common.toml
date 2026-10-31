@@ -2,4 +2,7 @@
 enable_curios_slots_weight_check = true
 #WIP. A list of slots to check in weight calculation.
 curios_slots = []
+#Calculate weight every N ticks. Default: 20 ticks = 1 sec
+#Range: > 1
+calculate_weight_each_n_ticks = 20
 

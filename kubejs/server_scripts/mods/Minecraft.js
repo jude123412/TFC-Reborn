@@ -4,6 +4,7 @@ TFCEvents.data(event => {
 
 ServerEvents.recipes(event => {
     const tfc = event.recipes.tfc
+    const botania = event.recipes.botania
 
     // Recipe Removal
     event.remove({id: 'minecraft:crafting_table'})
@@ -742,31 +743,53 @@ ServerEvents.recipes(event => {
 
     // Granite
     event.remove({id: 'minecraft:granite'})
-    event.shapeless(
-        Item.of('minecraft:granite'),
-        [
-            '#forge:gems/quartz',
-            'tfc:rock/cobble/granite'
-        ]
-    )
+    event.custom({
+        type: 'botania:pure_daisy',
+        input: {
+            type: 'block',
+            block: 'tfc:rock/raw/granite'
+        },
+        output: {
+            name: 'minecraft:granite'
+        }
+    })
 
     // Diorite
     event.remove({id: 'minecraft:diorite'})
-    event.shapeless(
-        Item.of('minecraft:diorite'),
-        [
-            '#forge:gems/quartz',
-            'tfc:rock/cobble/diorite'
-        ]
-    )
+    event.custom({
+        type: 'botania:pure_daisy',
+        input: {
+            type: 'block',
+            block: 'tfc:rock/raw/diorite'
+        },
+        output: {
+            name: 'minecraft:diorite'
+        }
+    })
 
     // Andesite
     event.remove({id: 'minecraft:andesite'})
-    event.shapeless(
-        Item.of('minecraft:andesite'),
-        [
-            '#forge:gems/quartz',
-            'tfc:rock/cobble/andesite'
-        ]
-    )
+    event.custom({
+        type: 'botania:pure_daisy',
+        input: {
+            type: 'block',
+            block: 'tfc:rock/raw/andesite'
+        },
+        output: {
+            name: 'minecraft:andesite'
+        }
+    })
+
+    // Deepslate
+    event.remove({id: 'minecraft:andesite'})
+    event.custom({
+        type: 'botania:pure_daisy',
+        input: {
+            type: 'block',
+            block: 'tfc:rock/raw/basalt'
+        },
+        output: {
+            name: 'minecraft:deepslate'
+        }
+    })
 })
