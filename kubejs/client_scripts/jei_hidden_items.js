@@ -1,5 +1,27 @@
 JEIEvents.hideItems(event => {
     const toHide = [
+        'minecraft:iron_ingot',
+        'minecraft:copper_ingot',
+        'minecraft:gold_ingot',
+        'create:zinc_ingot',
+        'create:brass_ingot',
+        'immersiveengineering:ingot_silver',
+        'immersiveengineering:ingot_nickel',
+        'immersiveengineering:ingot_steel',
+        'mekanism:ingot_bronze',
+        'mekanism:ingot_steel',
+        'mekanism:ingot_tin',
+        'mekanism:ingot_lead',
+        'mekanism:ingot_uranium',
+        'railcraft:lead_ingot',
+        'railcraft:nickel_ingot',
+        'railcraft:silver_ingot',
+        'railcraft:tin_ingot',
+        'railcraft:zinc_ingot',
+        'railcraft:steel_ingot',
+        'railcraft:brass_ingot',
+        'railcraft:bronze_ingot',
+        'railcraft:invar_ingot',
         'create:empty_blaze_burner',
         'create:blaze_burner',
         'immersiveengineering:dust_coke',
@@ -117,8 +139,44 @@ JEIEvents.hideItems(event => {
         'vintage:small_steel_spring',
         'railcraft:zinc_raw'
     ]
+
     // Item Hiding
     for (const item of toHide) {
         event.hide(item)
+    }
+
+    const itemTypes = [
+        'plates',
+        'gears',
+        'nuggets',
+        'dusts'
+    ]
+    
+    // Duplicate Item hiding
+    for (const metal in global.metals) {
+        let m = global.metals[metal]
+
+        for (const type of itemTypes) {
+
+            // 1. Hide items under the metal’s own tag
+            let directTag = Ingredient.of(`#forge:${type}/${metal}`).getItemIds()
+            for (let id of directTag) {
+                if (!id.includes("kubejs")) {
+                    event.hide(id)
+                }
+            }
+
+            // 2. Hide items under extra tags
+            if (m.extra_tags) {
+                for (const t of m.extra_tags) {
+                    let extraTag = Ingredient.of(`#forge:${type}/${t}`).getItemIds()
+                    for (let id of extraTag) {
+                        if (!id.includes("kubejs")) {
+                            event.hide(id)
+                        }
+                    }
+                }
+            }
+        }
     }
 })

@@ -156,6 +156,12 @@ ServerEvents.tags('item', event => {
     event.add('tfc:usable_on_tool_rack', 'mekanism:meka_tool')
     event.add('tfc:usable_on_tool_rack', 'mekanism:configurator')
     event.add('tfc:usable_on_tool_rack', 'minecraft:trident')
+
+    // Remove these to stop them showing up
+    // in railcraft loot tables
+    event.removeAll('railcraft:ingot_chest_loot')
+    event.removeAll('railcraft:plate_chest_loot')
+    event.removeAll('railcraft:gear_chest_loot')
 })
 
 ServerEvents.tags('fluid', event => {

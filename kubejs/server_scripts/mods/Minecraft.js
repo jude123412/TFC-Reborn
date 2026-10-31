@@ -1,12 +1,4 @@
 TFCEvents.data(event => {
-    // Iron Ingot
-    event.itemHeat('minecraft:iron_ingot', 2.857, 921, 1228)
-
-    // Gold Ingot
-    event.itemHeat('minecraft:gold_ingot', 1.667, 636, 848)
-
-    // Copper Ingot
-    event.itemHeat('minecraft:copper_ingot', 2.857, 648, 864)
     
 })
 
@@ -777,17 +769,4 @@ ServerEvents.recipes(event => {
             'tfc:rock/cobble/andesite'
         ]
     )
-
-    // Iron Ingot
-    tfc.heating('minecraft:iron_ingot', 1535)
-        .resultFluid(Fluid.of('tfc:metal/cast_iron', 100))
-
-    // Gold Ingot
-    tfc.heating('minecraft:gold_ingot', 1060)
-        .resultFluid(Fluid.of('tfc:metal/gold', 100))
-
-    // Copper Ingot
-    tfc.heating('minecraft:copper_ingot', 1080)
-        .resultFluid(Fluid.of('tfc:metal/copper', 100))
-
 })
