@@ -161,8 +161,10 @@ JEIEvents.hideItems(event => {
             // 1. Hide items under the metal’s own tag
             let directTag = Ingredient.of(`#forge:${type}/${metal}`).getItemIds()
             for (let id of directTag) {
-                if (!id.includes("kubejs")) {
-                    event.hide(id)
+                if (m.nugget == null) {
+                    if (!id.includes("kubejs")) {
+                        event.hide(id)
+                    }
                 }
             }
 

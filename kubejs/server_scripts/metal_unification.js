@@ -61,9 +61,10 @@ TFCEvents.data(event => {
         }
 
         // Nugget Loop
-        if (m.generate_nugget) {
-            event.itemHeat(`kubejs:metal/nugget/${metal}`, m.capacity, m.work, m.weld)
-            event.itemSize(`kubejs:metal/nugget/${metal}`, 'small', 'light')
+        if (m.generate_nugget || m.nugget != null) {
+            let nugget = m.nugget == null ? `kubejs:metal/nugget/${metal}` : m.nugget
+            event.itemHeat(nugget, m.capacity, m.work, m.weld)
+            event.itemSize(nugget, 'small', 'light')
         }
 
         // Dust Loop
@@ -118,7 +119,7 @@ ServerEvents.tags('item', event => {
         }
 
         // Nugget Loop
-        if (m.generate_gear) {
+        if (m.generate_nugget) {
             if (m.extra_tags) {
                 for (const t of m.extra_tags) {
                     event.add(`forge:nuggets/${t}`, `kubejs:metal/nugget/${metal}`)
@@ -483,7 +484,7 @@ ServerEvents.recipes(event => {
         }
 
         // Nugget Loop
-        if (m.generate_nugget) {
+        if (m.generate_nugget || m.nugget != null) {
             // Remove ALL recipes that output any duplicate nugget
             let nuggets = Ingredient.of(`#forge:nuggets/${metal}`).getItemIds();
             for (let item of nuggets) {
@@ -499,11 +500,13 @@ ServerEvents.recipes(event => {
                 }
             }
 
-            tfc.heating(`kubejs:metal/nugget/${metal}`, m.melt)
+            let nugget = m.nugget == null ? `kubejs:metal/nugget/${metal}` : m.nugget
+
+            tfc.heating(nugget, m.melt)
                 .resultFluid(Fluid.of(m.fluid, 10))
 
             event.shapeless(
-                Item.of(`kubejs:metal/nugget/${metal}`, 10),
+                Item.of(nugget, 10),
                 [
                     `#forge:ingots/${metal}`,
                     '#tfc:hammers'
