@@ -1,3 +1,6 @@
+// Global list containing ores from various TFC add-ons.
+// These ores are used to enable Fortune compatibility
+// on ore blocks that do not support it by default.
 global.fortune_ores = {
     chromite: {
         mod_id: 'firmalife',
