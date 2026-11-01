@@ -54,6 +54,14 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
+  "buildcraftlib": {
+    "jade_block_details": true,
+    "jade_block": true,
+    "jade_pipe_details": true,
+    "jade_robot_details": true,
+    "jade_robot": true,
+    "jade_owner": false
+  },
   "railcraft": {
     "signals": true,
     "track_component": true,
@@ -170,9 +178,6 @@
     "wet_concrete": true,
     "ingot_pile": true
   },
-  "survivorsbutchercraft": {
-    "meat_hook": true
-  },
   "tfc_gourmet": {
     "milkable_animal": true,
     "brinza_wheel": true
@@ -186,9 +191,6 @@
     "slurry": true,
     "energy": true,
     "tooltip_renderer": true
-  },
-  "survivorsdelight": {
-    "feast_decay": true
   },
   "corpse": {
     "corpse": true
