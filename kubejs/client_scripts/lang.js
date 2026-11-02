@@ -151,6 +151,12 @@ ClientEvents.lang('en_us', event => {
     // Lumber
     event.add('item.kubejs.wood.lumber.livingwood', 'Livingwood Lumber')
 
+    // Bark
+    event.add("item.kubejs.wood.bark", "Livingwood Bark")
+
+    // Bark Powder
+    event.add("item.kubejs.wood.bark.powder", "Livingwood Bark Powder")
+
     // Metal Buckets
     event.add('item.kubejs.metal.andesite_alloy_bucket', 'Andesite Alloy Bucket')
     event.add('item.kubejs.metal.andesite_bucket', 'Andesite Bucket')

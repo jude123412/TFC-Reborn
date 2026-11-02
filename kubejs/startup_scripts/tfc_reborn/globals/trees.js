@@ -134,8 +134,7 @@ global.trees = {
 //
 // If you need to add an additional wood variant without generating
 // new lumber recipes, use livingwood and glimmering_livingwood as
-// examples. The order is important: the primary wood must come first,
-// followed by any variants.
+// examples.
 global.integration_trees = {
     livingwood: {
         mod_id: 'botania',
@@ -150,13 +149,12 @@ global.integration_trees = {
         fence_gate: 'botania:livingwood_fence_gate',
         support: 'kubejs:wood/support/livingwood',
         lumber: 'kubejs:wood/lumber/livingwood',
-        bark: 'tfc_debark:livingwood_bark',
-        bark_powder: 'tfc_debark:livingwood_bark_powder',
+        bark: 'kubejs:wood/bark/livingwood',
+        bark_powder: 'kubejs:wood/bark_powder/livingwood',
         plank_recipe_id: 'botania:livingwood_planks',
         stairs_recipe_id: 'botania:livingwood_planks_stairs',
         fence_recipe_id: 'botania:livingwood_fence',
-        fence_gate_recipe_id: 'botania:livingwood_fence_gate',
-        generate_components: true
+        fence_gate_recipe_id: 'botania:livingwood_fence_gate'
     },
     glimmering_livingwood: {
         mod_id: 'botania',
@@ -171,12 +169,11 @@ global.integration_trees = {
         fence_gate: null,
         support: 'kubejs:wood/support/livingwood',
         lumber: 'kubejs:wood/lumber/livingwood',
-        bark: 'tfc_debark:livingwood_bark',
-        bark_powder: 'tfc_debark:livingwood_bark_powder',
+        bark: 'kubejs:wood/bark/livingwood',
+        bark_powder: 'kubejs:wood/bark_powder/livingwood',
         plank_recipe_id: null,
         stairs_recipe_id: null,
         fence_recipe_id: null,
-        fence_gate_recipe_id: null,
-        generate_components: false
+        fence_gate_recipe_id: null
     }
 }

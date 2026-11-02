@@ -1,3 +1,5 @@
+
+
 StartupEvents.registry('item', event => {
     // TFC Debark Additions
 	for (const wood in global.trees) {
@@ -19,23 +21,27 @@ StartupEvents.registry('item', event => {
     for (const wood in global.integration_trees) {
         let t = global.integration_trees[wood]
 
-        if (t.generate_components) {
-            // Bark
-            event.create(`tfc_debark:${wood}_bark`)
-                .texture(`tfc_debark:item/${wood}_bark`)
+        // Bark
+        global.createIfNeeded(t.bark, () => {
+            event.create(t.bark)
+                .texture(`kubejs:item/wood/bark/${wood}`)
                 .tag('tfc:firepit_fuel')
                 .tag(`forge:bark`)
-
-            // Bark Powder
-            event.create(`tfc_debark:${wood}_bark_powder`)
-                .texture(`tfc_debark:item/${wood}_bark_dust`)
+        })
+        
+        // Bark Powder
+        global.createIfNeeded(t.bark_powder, () => {
+            event.create(t.bark_powder)
+                .texture(`kubejs:item/wood/bark_powder/${wood}`)
                 .tag('forge:bark_powder')
+        })
 
-            // Lumber
-            event.create(`kubejs:wood/lumber/${wood}`)
+        // Lumber
+        global.createIfNeeded(t.lumber, () => {
+            event.create(t.lumber)
                 .texture(`kubejs:item/wood/lumber/${wood}`)
                 .tag('tfc:lumber')
-        }
+        })
     }
 })
 
@@ -43,11 +49,11 @@ StartupEvents.registry('block', event => {
     for (const wood in global.integration_trees) {
         let t = global.integration_trees[wood]
 
-        if (t.generate_components) {
-            event.create(`kubejs:wood/support/${wood}`, 'tfc:support')
+        global.createIfNeeded(t.support, () => {
+            event.create(t.support, 'tfc:support')
                 .textureAll(`kubejs:block/wood/support/${wood}`)
                 .tagBlock('minecraft:mineable/axe')
                 .tagBoth('tfc:support_beams')
-        }
+        })
     }
 })
