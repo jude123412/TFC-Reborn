@@ -91,33 +91,6 @@
       ]
     },
     {
-      "name": "mythicbotany",
-      "is_disabled": false,
-      "override_global_distance_from_world_center": false,
-      "distance_from_world_center_mode": "CIRCLE",
-      "enable_min_distance_from_world_center": false,
-      "min_distance_from_world_center": 0,
-      "enable_max_distance_from_world_center": false,
-      "max_distance_from_world_center": 0,
-      "exclude_from_overlap_prevention": false,
-      "override_global_overlap_padding": false,
-      "overlap_padding": 2,
-      "override_global_flatness_check": false,
-      "enable_flatness_check": false,
-      "flatness_check_allow_non_solid_blocks": false,
-      "flatness_check_mode": "AUTO",
-      "flatness_check_max_height_difference": 21,
-      "override_global_biome_check": false,
-      "enable_biome_check": false,
-      "biome_check_mode": "BLACKLIST",
-      "biome_check_blacklisted_biomes": [
-        "#minecraft:is_river",
-        "#c:river",
-        "#minecraft:is_ocean",
-        "#c:ocean"
-      ]
-    },
-    {
       "name": "railcraft",
       "is_disabled": false,
       "override_global_distance_from_world_center": false,
@@ -1709,85 +1682,6 @@
       ]
     },
     {
-      "name": "mythicbotany:andwari_cave",
-      "whitelisted_biomes": [
-        "mythicbotany:golden_fields"
-      ],
-      "blacklisted_biomes": [],
-      "step": "underground_structures",
-      "terrain_adaptation": "none",
-      "size": 1,
-      "max_horizontal_distance_from_center": 80,
-      "max_vertical_distance_from_center": 80,
-      "start_height": {
-        "absolute": -6
-      },
-      "project_start_to_heightmap": "WORLD_SURFACE_WG",
-      "override_global_distance_from_world_center": false,
-      "distance_from_world_center_mode": "CIRCLE",
-      "enable_min_distance_from_world_center": false,
-      "min_distance_from_world_center": 0,
-      "enable_max_distance_from_world_center": false,
-      "max_distance_from_world_center": 0,
-      "exclude_from_overlap_prevention": false,
-      "override_global_overlap_padding": false,
-      "overlap_padding": 2,
-      "override_global_flatness_check": true,
-      "enable_flatness_check": false,
-      "flatness_check_allow_non_solid_blocks": false,
-      "flatness_check_mode": "AUTO",
-      "flatness_check_max_height_difference": 21,
-      "override_global_biome_check": true,
-      "enable_biome_check": false,
-      "biome_check_mode": "BLACKLIST",
-      "biome_check_blacklisted_biomes": [
-        "#minecraft:is_river",
-        "#c:river",
-        "#minecraft:is_ocean",
-        "#c:ocean"
-      ]
-    },
-    {
-      "name": "mythicbotany:elven_house",
-      "whitelisted_biomes": [
-        "mythicbotany:alfheim_plains",
-        "mythicbotany:dreamwood_forest"
-      ],
-      "blacklisted_biomes": [],
-      "step": "surface_structures",
-      "terrain_adaptation": "beard_thin",
-      "size": 5,
-      "max_horizontal_distance_from_center": 52,
-      "max_vertical_distance_from_center": 52,
-      "start_height": {
-        "absolute": -1
-      },
-      "project_start_to_heightmap": "WORLD_SURFACE_WG",
-      "override_global_distance_from_world_center": false,
-      "distance_from_world_center_mode": "CIRCLE",
-      "enable_min_distance_from_world_center": false,
-      "min_distance_from_world_center": 0,
-      "enable_max_distance_from_world_center": false,
-      "max_distance_from_world_center": 0,
-      "exclude_from_overlap_prevention": false,
-      "override_global_overlap_padding": false,
-      "overlap_padding": 2,
-      "override_global_flatness_check": false,
-      "enable_flatness_check": false,
-      "flatness_check_allow_non_solid_blocks": false,
-      "flatness_check_mode": "AUTO",
-      "flatness_check_max_height_difference": 21,
-      "override_global_biome_check": false,
-      "enable_biome_check": false,
-      "biome_check_mode": "BLACKLIST",
-      "biome_check_blacklisted_biomes": [
-        "#minecraft:is_river",
-        "#c:river",
-        "#minecraft:is_ocean",
-        "#c:ocean"
-      ]
-    },
-    {
       "name": "railcraft:geode",
       "whitelisted_biomes": [
         "minecraft:deep_frozen_ocean",
@@ -2257,32 +2151,6 @@
       "placement_attempts": 1,
       "structure_weights": {
         "minecraft:mansion": 1
-      }
-    },
-    {
-      "name": "mythicbotany:andwari_cave",
-      "spacing": 28,
-      "separation": 8,
-      "is_disabled": false,
-      "salt": 1328389907,
-      "frequency": 1.0,
-      "override_global_spacing_and_separation_modifier": false,
-      "placement_attempts": 1,
-      "structure_weights": {
-        "mythicbotany:andwari_cave": 1
-      }
-    },
-    {
-      "name": "mythicbotany:elven_house",
-      "spacing": 24,
-      "separation": 6,
-      "is_disabled": false,
-      "salt": 411921816,
-      "frequency": 1.0,
-      "override_global_spacing_and_separation_modifier": false,
-      "placement_attempts": 1,
-      "structure_weights": {
-        "mythicbotany:elven_house": 1
       }
     },
     {
@@ -3979,82 +3847,6 @@
       "element_weights": {
         "minecraft:village/taiga/zombie/villagers/nitwit": 1,
         "minecraft:village/taiga/zombie/villagers/unemployed": 10
-      }
-    },
-    {
-      "name": "mythicbotany:andwari_cave",
-      "element_weights": {
-        "mythicbotany:andwari_cave": 1
-      }
-    },
-    {
-      "name": "mythicbotany:crops",
-      "element_weights": {
-        "mythicbotany:crops/carrots": 1,
-        "mythicbotany:crops/wheat": 1,
-        "mythicbotany:crops/potatoes": 1,
-        "mythicbotany:crops/beetroot": 1
-      }
-    },
-    {
-      "name": "mythicbotany:elven_houses/basement_entrances",
-      "element_weights": {}
-    },
-    {
-      "name": "mythicbotany:elven_houses/buildings",
-      "element_weights": {
-        "mythicbotany:elven_houses/buildings/shed": 1,
-        "mythicbotany:elven_houses/buildings/tower": 1,
-        "mythicbotany:elven_houses/buildings/house": 2
-      }
-    },
-    {
-      "name": "mythicbotany:elven_houses/gardens",
-      "element_weights": {
-        "mythicbotany:elven_houses/gardens/crop_garden": 2,
-        "mythicbotany:elven_houses/gardens/flower_garden": 2
-      }
-    },
-    {
-      "name": "mythicbotany:mystical_flowers",
-      "element_weights": {
-        "mythicbotany:mystical_flowers/pink": 1,
-        "mythicbotany:mystical_flowers/lime": 1,
-        "mythicbotany:mystical_flowers/green": 1,
-        "mythicbotany:mystical_flowers/light_blue": 1,
-        "mythicbotany:mystical_flowers/red": 1,
-        "mythicbotany:mystical_flowers/light_gray": 1,
-        "mythicbotany:mystical_flowers/white": 1,
-        "mythicbotany:mystical_flowers/purple": 1,
-        "mythicbotany:mystical_flowers/yellow": 1,
-        "mythicbotany:mystical_flowers/blue": 1,
-        "mythicbotany:mystical_flowers/black": 1,
-        "mythicbotany:mystical_flowers/cyan": 1,
-        "mythicbotany:mystical_flowers/gray": 1,
-        "mythicbotany:mystical_flowers/magenta": 1,
-        "mythicbotany:mystical_flowers/brown": 1,
-        "mythicbotany:mystical_flowers/orange": 1
-      }
-    },
-    {
-      "name": "mythicbotany:tall_mystical_flowers",
-      "element_weights": {
-        "mythicbotany:tall_mystical_flowers/brown": 1,
-        "mythicbotany:tall_mystical_flowers/green": 1,
-        "mythicbotany:tall_mystical_flowers/magenta": 1,
-        "mythicbotany:tall_mystical_flowers/cyan": 1,
-        "mythicbotany:tall_mystical_flowers/orange": 1,
-        "mythicbotany:tall_mystical_flowers/gray": 1,
-        "mythicbotany:tall_mystical_flowers/white": 1,
-        "mythicbotany:tall_mystical_flowers/light_blue": 1,
-        "mythicbotany:tall_mystical_flowers/yellow": 1,
-        "mythicbotany:tall_mystical_flowers/black": 1,
-        "mythicbotany:tall_mystical_flowers/light_gray": 1,
-        "mythicbotany:tall_mystical_flowers/red": 1,
-        "mythicbotany:tall_mystical_flowers/pink": 1,
-        "mythicbotany:tall_mystical_flowers/blue": 1,
-        "mythicbotany:tall_mystical_flowers/lime": 1,
-        "mythicbotany:tall_mystical_flowers/purple": 1
       }
     },
     {
