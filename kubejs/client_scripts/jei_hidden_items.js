@@ -137,7 +137,21 @@ JEIEvents.hideItems(event => {
         'vintage:small_refined_glowstone_spring',
         'vintage:small_refined_obsidian_spring',
         'vintage:small_steel_spring',
-        'railcraft:zinc_raw'
+        'railcraft:zinc_raw',
+        'aiotbotania:livingrock_aiot',
+        'aiotbotania:livingrock_axe',
+        'aiotbotania:livingrock_hoe',
+        'aiotbotania:livingrock_pickaxe',
+        'aiotbotania:livingrock_shears',
+        'aiotbotania:livingrock_shovel',
+        'aiotbotania:livingrock_sword',
+        'aiotbotania:livingwood_aiot',
+        'aiotbotania:livingwood_axe',
+        'aiotbotania:livingwood_hoe',
+        'aiotbotania:livingwood_pickaxe',
+        'aiotbotania:livingwood_shears',
+        'aiotbotania:livingwood_shovel',
+        'aiotbotania:livingwood_sword'
     ]
 
     // Item Hiding
