@@ -157,4 +157,11 @@ ServerEvents.recipes(event => {
         'minecraft:dirt',
         '#minecraft:dirt'
     )
+
+    // Petal Apothecary
+    event.replaceInput(
+        {id: 'botania:apothecary_default'},
+        'minecraft:cobblestone',
+        '#forge:cobblestone'
+    )
 })
