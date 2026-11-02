@@ -307,7 +307,8 @@ ServerEvents.recipes(event => {
     
     for (const wood in global.integration_trees) {
         let t = global.integration_trees[wood]
-        if (t.generate_components) {
+
+        if (t.bark != null && t.bark_powder != null) {
             tfc.quern(t.bark_powder, t.bark)
             create.milling(t.bark_powder, t.bark)
             create.crushing(t.bark_powder, t.bark)
