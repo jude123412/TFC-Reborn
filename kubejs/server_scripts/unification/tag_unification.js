@@ -181,3 +181,9 @@ ServerEvents.tags('fluid', event => {
         event.add('tfc:usable_in_barrel', fluid)
     }
 })
+
+ServerEvents.tags('block', event => {
+
+    // Minecraft Dirt
+    event.add('minecraft:dirt', '#tfc:grass')
+})

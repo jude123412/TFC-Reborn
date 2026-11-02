@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "tfc:plains",
+    "tfc:plateau",
+    "tfc:lowlands",
+    "tfc:badlands",
+    "tfc:inverted_badlands",
+    "tfc:highlands"
+  ]
+}
