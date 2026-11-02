@@ -562,6 +562,91 @@ ServerEvents.recipes(event => {
                 item: 'kubejs:powder/wood'
             }
         })
+
+        if (t.lumber != null && t.planks != null && t.plank_recipe_id != null) {
+            event.remove({id: t.plank_recipe_id})
+            event.shaped(
+                Item.of(t.planks), 
+                [
+                    'LL',
+                    'LL'
+                ],
+                {
+                    L: t.lumber
+                }
+            )
+        }
+    
+        if (t.stairs != null && t.planks != null && t.stairs_recipe_id != null) {
+            event.remove({id: t.stairs_recipe_id})
+            event.shaped(
+                Item.of(t.stairs, 8), 
+                [
+                    'P  ',
+                    'PP ',
+                    'PPP'
+                ],
+                {
+                    P: t.planks
+                }
+            )
+        }
+
+        if (t.lumber != null && t.fence != null && t.planks != null && t.fence_recipe_id != null) {
+            event.remove({id: t.fence_recipe_id})
+            event.shaped(
+                Item.of(t.fence, 8), 
+                [
+                    'PLP',
+                    'PLP'
+                ],
+                {
+                    P: t.planks,
+                    L: t.lumber
+                }
+            )
+        }
+
+        if (t.lumber != null && t.fence_gate != null && t.planks != null && t.fence_gate_recipe_id != null) {
+            event.remove({id: t.fence_gate_recipe_id})
+            event.shaped(
+                Item.of(t.fence_gate, 2), 
+                [
+                    'LPL',
+                    'LPL'
+                ],
+                {
+                    L: t.lumber,
+                    P: t.planks
+                }
+            )
+        }
+
+        if (t.lumber != null && t.slab != null && t.stairs != null && t.planks != null) {
+            event.shapeless(
+                Item.of(t.lumber, 2),
+                [
+                    t.slab,
+                    '#tfc:saws'
+                ]
+            ).damageIngredient('#tfc:saws')
+
+            event.shapeless(
+                Item.of(t.lumber, 3),
+                [
+                    t.stairs,
+                    '#tfc:saws'
+                ]
+            ).damageIngredient('#tfc:saws')
+
+            event.shapeless(
+                Item.of(t.lumber, 4),
+                [
+                    t.planks,
+                    '#tfc:saws'
+                ]
+            ).damageIngredient('#tfc:saws')
+        }
     }
 })
 

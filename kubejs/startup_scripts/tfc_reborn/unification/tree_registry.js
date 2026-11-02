@@ -46,6 +46,7 @@ StartupEvents.registry('block', event => {
         if (t.generate_components) {
             event.create(`kubejs:wood/support/${wood}`, 'tfc:support')
                 .textureAll(`kubejs:block/wood/support/${wood}`)
+                .tagBlock('minecraft:mineable/axe')
                 .tagBoth('tfc:support_beams')
         }
     }

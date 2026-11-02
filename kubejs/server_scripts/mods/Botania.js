@@ -17,6 +17,14 @@ ServerEvents.recipes(event => {
     event.remove({id: 'aiotbotania:livingwood_shears'})
     event.remove({id: 'aiotbotania:livingwood_shovel'})
     event.remove({id: 'aiotbotania:livingwood_sword'})
+    event.remove({id: 'create:cutting/runtime_generated/compat/botania/livingwood_planks_to_livingwood_planks_stairs'})
+    event.remove({id: 'create:cutting/runtime_generated/compat/botania/livingwood_planks_to_livingwood_fence_gate'})
+    event.remove({id: 'create:cutting/runtime_generated/compat/botania/livingwood_planks_to_livingwood_fence'})
+    event.remove({id: 'create:cutting/runtime_generated/compat/botania/livingwood_planks_to_livingwood_planks_slab'})
+    event.remove({id: 'create:cutting/runtime_generated/compat/botania/glimmering_stripped_livingwood_log_to_livingwood_planks'})
+    event.remove({id: 'create:cutting/runtime_generated/compat/botania/glimmering_stripped_livingwood_to_livingwood_planks'})
+    event.remove({id: 'create:cutting/runtime_generated/compat/botania/stripped_livingwood_log_to_livingwood_planks'})
+    event.remove({id: 'create:cutting/runtime_generated/compat/botania/stripped_livingwood_to_livingwood_planks'})
 
     // Terra Hoe
     event.remove({id: 'aiotbotania:terra_hoe'})
