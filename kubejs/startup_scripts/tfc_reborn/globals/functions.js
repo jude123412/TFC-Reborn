@@ -4,6 +4,7 @@ const generatedItems = new Set()
 // have been generated.
 // Thanks Copilot <3
 global.createIfNeeded = (id, creator) => {
+    if (!id.startsWith('kubejs:')) return
     if (!generatedItems.has(id)) {
         generatedItems.add(id)
         creator()
