@@ -157,6 +157,10 @@ ServerEvents.tags('item', event => {
     event.add('tfc:usable_on_tool_rack', 'mekanism:configurator')
     event.add('tfc:usable_on_tool_rack', 'minecraft:trident')
 
+    // TFC Moss
+    event.add('tfc:moss', 'tfc:plant/moss')
+    event.add('tfc:moss', 'tfc:plant/spanish_moss')
+
     // Remove these to stop them showing up
     // in railcraft loot tables
     event.removeAll('railcraft:ingot_chest_loot')
