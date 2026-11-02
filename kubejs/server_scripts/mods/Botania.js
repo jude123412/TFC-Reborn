@@ -3,8 +3,20 @@ TFCEvents.data(event => { })
 ServerEvents.recipes(event => {
     const tfc = event.recipes.tfc
 
-    event.remove({id: /aiotbotania:livingrock\/.*/})
-    event.remove({id: /aiotbotania:livingwood\/.*/})
+    event.remove({id: 'aiotbotania:livingrock_aiot'})
+    event.remove({id: 'aiotbotania:livingrock_axe'})
+    event.remove({id: 'aiotbotania:livingrock_hoe'})
+    event.remove({id: 'aiotbotania:livingrock_pickaxe'})
+    event.remove({id: 'aiotbotania:livingrock_shears'})
+    event.remove({id: 'aiotbotania:livingrock_shovel'})
+    event.remove({id: 'aiotbotania:livingrock_sword'})
+    event.remove({id: 'aiotbotania:livingwood_aiot'})
+    event.remove({id: 'aiotbotania:livingwood_axe'})
+    event.remove({id: 'aiotbotania:livingwood_hoe'})
+    event.remove({id: 'aiotbotania:livingwood_pickaxe'})
+    event.remove({id: 'aiotbotania:livingwood_shears'})
+    event.remove({id: 'aiotbotania:livingwood_shovel'})
+    event.remove({id: 'aiotbotania:livingwood_sword'})
     event.remove({id: /create:cutting\/runtime_generated\/compat\/botania\/.*/})
 
     // Terra Hoe
