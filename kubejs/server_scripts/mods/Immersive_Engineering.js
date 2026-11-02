@@ -55,6 +55,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'immersiveengineering:metalpress/rod_lead'})
     event.remove({id: 'immersiveengineering:metalpress/rod_uranium'})
     event.remove({id: 'immersiveengineering:metalpress/rod_osmium'})
+    event.remove({id: /create:cutting\/compat\/immersiveengineering\/.*/})
 
     // Recipe Removal by output
     event.remove({output: 'immersiveengineering:dust_wood'})
