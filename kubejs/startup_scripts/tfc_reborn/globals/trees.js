@@ -128,3 +128,53 @@ global.trees = {
         generate_bark: true
     }
 }
+
+// This global is intended to make adding new wood types easier
+// by automatically generating recipes based on the supplied data.
+//
+// If you need to add an additional wood variant without generating
+// new lumber recipes, use livingwood and glimmering_livingwood as
+// examples. The order is important: the primary wood must come first,
+// followed by any variants.
+global.integration_trees = {
+    livingwood: {
+        mod_id: 'botania',
+        log: 'botania:livingwood_log',
+        wood: 'botania:livingwood',
+        stripped_log: 'botania:stripped_livingwood_log',
+        stripped_wood: 'botania:stripped_livingwood',
+        planks: 'botania:livingwood_planks',
+        stairs: 'botania:livingwood_planks_stairs',
+        fence: 'botania:livingwood_fence',
+        fence_gate: 'botania:livingwood_fence_gate',
+        support: 'kubejs:wood/support/livingwood',
+        lumber: 'kubejs:wood/lumber/livingwood',
+        bark: 'tfc_debark:livingwood_bark',
+        bark_powder: 'tfc_debark:livingwood_bark_powder',
+        plank_recipe_id: 'botania:livingwood_planks',
+        stairs_recipe_id: 'botania:livingwood_planks_stairs',
+        fence_recipe_id: 'botania:livingwood_planks_stairs',
+        fence_gate_recipe_id: 'botania:livingwood_fence_gate',
+        generate_components: true
+    },
+    glimmering_livingwood: {
+        mod_id: 'botania',
+        log: 'botania:glimmering_livingwood_log',
+        wood: 'botania:glimmering_livingwood',
+        stripped_log: 'botania:glimmering_stripped_livingwood_log',
+        stripped_wood: 'botania:glimmering_stripped_livingwood',
+        planks: null,
+        stairs: null,
+        fence: null,
+        fence_gate: null,
+        support: 'kubejs:wood/support/livingwood',
+        lumber: 'kubejs:wood/lumber/livingwood',
+        bark: 'tfc_debark:livingwood_bark',
+        bark_powder: 'tfc_debark:livingwood_bark_powder',
+        plank_recipe_id: null,
+        stairs_recipe_id: null,
+        fence_recipe_id: null,
+        fence_gate_recipe_id: null,
+        generate_components: false
+    }
+}

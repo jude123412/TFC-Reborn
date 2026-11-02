@@ -148,6 +148,9 @@ ClientEvents.lang('en_us', event => {
     event.add('item.kubejs.unfired_refactory_brick', 'Unfired Refactory Brick')
     event.add('item.kubejs.refactory_brick', 'Refactory Brick')
 
+    // Lumber
+    event.add('item.kubejs.wood.lumber.livingwood', 'Livingwood Lumber')
+
     // Metal Buckets
     event.add('item.kubejs.metal.andesite_alloy_bucket', 'Andesite Alloy Bucket')
     event.add('item.kubejs.metal.andesite_bucket', 'Andesite Bucket')
@@ -171,6 +174,9 @@ ClientEvents.lang('en_us', event => {
     
     // Blocks
     event.add('block.kubejs.coal_coke_block', 'Block of Coal Coke')
+
+    // Support
+    event.add('block.kubejs.wood.support.livingwood', 'Livingwood Support')
 
     // Barrel Recipes Names
     event.add('tfc.recipe.barrel.minecraft.wood_pulp', 'Wood Pulp')

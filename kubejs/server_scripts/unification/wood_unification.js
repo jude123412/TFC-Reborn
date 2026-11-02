@@ -303,4 +303,274 @@ ServerEvents.recipes(event => {
             }
         })
     }
+
+    
+    for (const wood in global.integration_trees) {
+        let t = global.integration_trees[wood]
+        if (t.generate_components) {
+            tfc.quern(t.bark_powder, t.bark)
+            create.milling(t.bark_powder, t.bark)
+            create.crushing(t.bark_powder, t.bark)
+        }
+        
+        // Stripped Log/Wood
+        lychee.block_interacting(
+            '#tfc:axes_that_log', 
+            BlockPredicate.of(t.log)
+        ).post([ 
+            Post.drop_item(Item.of(t.bark)).withChance(0.5),
+            Post.place(t.stripped_log),
+            Post.damage_item()
+        ])
+        lychee.block_interacting(
+            '#tfc:axes_that_log', 
+            BlockPredicate.of(t.wood)
+        ).post([ 
+            Post.drop_item(Item.of(t.bark)).withChance(0.5),
+            Post.place(t.stripped_wood),
+            Post.damage_item()
+        ])
+        create.cutting(
+            [
+                t.stripped_log,
+                t.bark
+            ],
+            t.log
+        )
+        create.cutting(
+            [
+                t.stripped_wood,
+                t.bark
+            ],
+            t.wood
+        )
+        event.custom({
+            type: 'mekanism:sawing',
+            input: {
+                ingredient: {
+                    item: t.log
+                }
+            },
+            mainOutput: {
+                item: t.stripped_log
+            },
+            secondaryChance: 1.0,
+            secondaryOutput: {
+                item: t.bark
+            }
+        })
+        event.custom({
+            type: 'mekanism:sawing',
+            input: {
+                ingredient: {
+                    item: t.wood
+                }
+            },
+            mainOutput: {
+                item: t.stripped_wood
+            },
+            secondaryChance: 1.0,
+            secondaryOutput: {
+                item: t.bark
+            }
+        })
+
+        // Support
+        lychee.block_interacting(
+            '#tfc:axes_that_log', 
+            BlockPredicate.of(t.stripped_log)
+        ).post([ 
+            Post.drop_item(Item.of(t.support, 2)),
+            Post.place('minecraft:air'),
+            Post.damage_item()
+        ])
+        lychee.block_interacting(
+            '#tfc:axes_that_log', 
+            BlockPredicate.of(t.stripped_wood)
+        ).post([ 
+            Post.drop_item(Item.of(t.support, 2)),
+            Post.place('minecraft:air'),
+            Post.damage_item()
+        ])
+        create.cutting(
+            [
+                Item.of(t.support, 3),
+                'kubejs:powder/wood'
+            ],
+            t.stripped_log
+        )
+        create.cutting(
+            [
+                Item.of(t.support, 3),
+                'kubejs:powder/wood'
+            ],
+            t.stripped_wood
+        )
+        event.custom({
+            type: 'immersiveengineering:sawmill',
+            secondaries: [
+                {
+                    output: {
+                        item: t.bark
+                    },
+                    stripping: true
+                },
+                {
+                    output: {
+                        item: 'kubejs:powder/wood'
+                    },
+                    stripping: false
+                }
+            ],
+            result: {
+                item: t.support,
+                count: 4
+            },
+            energy: 1600,
+            input: [
+                {
+                    item: t.log
+                }
+            ],
+            stripped: {
+                item: t.stripped_log
+            }
+        })
+        event.custom({
+            type: 'immersiveengineering:sawmill',
+            secondaries: [
+                {
+                    output: {
+                        item: t.bark
+                    },
+                    stripping: true
+                },
+                {
+                    output: {
+                        item: 'kubejs:powder/wood'
+                    },
+                    stripping: false
+                }
+            ],
+            result: {
+                item: t.support,
+                count: 4
+            },
+            energy: 1600,
+            input: [
+                {
+                    item: t.wood
+                }
+            ],
+            stripped: {
+                item: t.stripped_wood
+            }
+        })
+        event.custom({
+            type: 'mekanism:sawing',
+            input: {
+                ingredient: {
+                    item: t.stripped_log
+                }
+            },
+            mainOutput: {
+                item: t.support,
+                count: 5
+            },
+            secondaryChance: 1.0,
+            secondaryOutput: {
+                item: 'kubejs:powder/wood'
+            }
+        })
+        event.custom({
+            type: 'mekanism:sawing',
+            input: {
+                ingredient: {
+                    item: t.stripped_wood
+                }
+            },
+            mainOutput: {
+                item: t.support,
+                count: 5
+            },
+            secondaryChance: 1.0,
+            secondaryOutput: {
+                item: 'kubejs:powder/wood'
+            }
+        })
+
+        // Lumber
+        lychee.block_interacting(
+            '#tfc:saws', 
+            BlockPredicate.of(t.stripped_log)
+        ).post([ 
+            Post.drop_item(Item.of(t.lumber, 4)),
+            Post.drop_item(Item.of('kubejs:powder/wood')),
+            Post.place('minecraft:air'),
+            Post.damage_item()
+        ])
+        lychee.block_interacting(
+            '#tfc:saws', 
+            BlockPredicate.of(t.stripped_wood)
+        ).post([ 
+            Post.drop_item(Item.of(t.lumber, 4)),
+            Post.drop_item(Item.of('kubejs:powder/wood')),
+            Post.place('minecraft:air'),
+            Post.damage_item()
+        ])
+        create.cutting(
+            [
+                Item.of(t.lumber, 4),
+                'kubejs:powder/wood'
+            ],
+            t.support
+        )
+        event.custom({
+            type: 'immersiveengineering:sawmill',
+            secondaries: [
+                {
+                    output: {
+                        item: 'kubejs:powder/wood'
+                    },
+                    stripping: false
+                }
+            ],
+            result: {
+                item: t.lumber,
+                count: 4
+            },
+            energy: 1600,
+            input: [
+                {
+                    item: t.support
+                }
+            ]
+        })
+        event.custom({
+            type: 'mekanism:sawing',
+            input: {
+                ingredient: {
+                    item: t.support
+                }
+            },
+            mainOutput: {
+                item: t.lumber,
+                count: 4
+            },
+            secondaryChance: 1.0,
+            secondaryOutput: {
+                item: 'kubejs:powder/wood'
+            }
+        })
+    }
+})
+
+TFCEvents.data(event => {
+    for (const wood in global.integration_trees) {
+        let t = global.integration_trees[wood]
+
+        if (t.generate_components) {
+            event.support(t.support, 5, 5, 9)
+        }
+    }
 })
