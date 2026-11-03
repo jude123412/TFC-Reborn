@@ -511,7 +511,7 @@ ServerEvents.recipes(event => {
             '2x #tfc:compost_greens_high',
             '2x #tfc:compost_browns_high'
         ]
-    ).damageIngredient('#tfc:chisels')
+    )
 
     // Teru Teru Bozu
     event.replaceInput(
@@ -539,5 +539,67 @@ ServerEvents.recipes(event => {
         {
             P: 'botania:shimmerwood_planks'
         }
+    )
+
+    // White Portuguese Pavement
+    event.remove({id: 'botania:white_pavement'})
+    event.shapeless(
+        Item.of('botania:white_pavement', 3),
+        [
+            'botania:livingrock',
+            '#forge:cobblestone',
+            '#forge:gravel',
+            '#forge:clay'
+        ]
+    )
+
+    // Black Portuguese Pavement
+    event.remove({id: 'botania:black_pavement'})
+    event.shapeless(
+        Item.of('botania:black_pavement', 3),
+        [
+            '3x botania:white_pavement',
+            '#forge:dyes/black'
+        ]
+    )
+
+    // Blue Portuguese Pavement
+    event.remove({id: 'botania:blue_pavement'})
+    event.shapeless(
+        Item.of('botania:blue_pavement', 3),
+        [
+            '3x botania:white_pavement',
+            '#forge:dyes/blue'
+        ]
+    )
+
+    // Yellow Portuguese Pavement
+    event.remove({id: 'botania:yellow_pavement'})
+    event.shapeless(
+        Item.of('botania:yellow_pavement', 3),
+        [
+            '3x botania:white_pavement',
+            '#forge:dyes/yellow'
+        ]
+    )
+
+    // Red Portuguese Pavement
+    event.remove({id: 'botania:red_pavement'})
+    event.shapeless(
+        Item.of('botania:red_pavement', 3),
+        [
+            '3x botania:white_pavement',
+            '#forge:dyes/red'
+        ]
+    )
+
+    // Green Portuguese Pavement
+    event.remove({id: 'botania:green_pavement'})
+    event.shapeless(
+        Item.of('botania:green_pavement', 3),
+        [
+            '3x botania:white_pavement',
+            '#forge:dyes/green'
+        ]
     )
 })

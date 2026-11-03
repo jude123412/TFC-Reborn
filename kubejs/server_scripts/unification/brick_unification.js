@@ -82,6 +82,12 @@ ServerEvents.recipes(event => {
                     '#tfc:chisels'
                 ]
             ).damageIngredient('#tfc:chisels')
+
+            tfc.chisel(
+                b.chiseled,
+                b.primary,
+                'smooth'
+            )
         }
 
         if (b.primary != null && b.cracked != null) {
@@ -96,6 +102,23 @@ ServerEvents.recipes(event => {
                     '#tfc:hammers'
                 ]
             ).damageIngredient('#tfc:hammers')
+        }
+
+        if (b.primary != null && b.pillar != null) {
+            if (b.pillar_recipe != null) {
+                event.remove({id: b.pillar_recipe})
+                event.shaped(
+                    Item.of(b.pillar, 2), 
+                    [
+                        'BC',
+                        'B '
+                    ],
+                    {
+                        B: b.primary,
+                        C: '#tfc:chisels'
+                    }
+                ).damageIngredient('#tfc:chisels')
+            }
         }
     }
 })
