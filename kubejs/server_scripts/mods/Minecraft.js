@@ -519,23 +519,6 @@ ServerEvents.recipes(event => {
         'minecraft:netherite_ingot'
     )
 
-    // Block of Coal
-    event.remove({id: 'minecraft:coal_block'})
-    event.custom({
-        type: 'immersiveengineering:metal_press',
-        energy: 14400,
-        input: {
-            'base_ingredient': {
-                tag: 'forge:gems/coal',
-            },
-            count: 9
-        },
-        mold: 'tfc_ie_addon:mold_block',
-        result: {
-            item: 'minecraft:coal_block'
-        }
-    })
-
     // Block of Iron
     event.remove({id: 'minecraft:iron_block'})
     event.remove({id: 'minecraft:iron_ingot_from_iron_block'})
@@ -544,7 +527,7 @@ ServerEvents.recipes(event => {
         energy: 14400,
         input: {
             'base_ingredient': {
-                tag: 'forge:ingots/iron',
+                tag: 'forge:ingots/wrought_iron',
             },
             count: 9
         },
@@ -572,78 +555,6 @@ ServerEvents.recipes(event => {
         }
     })
 
-    // Block of Redstone
-    event.remove({id: 'minecraft:redstone_block'})
-    event.remove({id: 'minecraft:redstone'})
-    event.custom({
-        type: 'immersiveengineering:metal_press',
-        energy: 14400,
-        input: {
-            'base_ingredient': {
-                tag: 'forge:dusts/redstone',
-            },
-            count: 9
-        },
-        mold: 'tfc_ie_addon:mold_block',
-        result: {
-            item: 'minecraft:redstone_block'
-        }
-    })
-
-    // Block of Emerald
-    event.remove({id: 'minecraft:emerald_block'})
-    event.remove({id: 'minecraft:emerald'})
-    event.custom({
-        type: 'immersiveengineering:metal_press',
-        energy: 14400,
-        input: {
-            'base_ingredient': {
-                tag: 'forge:gems/emerald',
-            },
-            count: 9
-        },
-        mold: 'tfc_ie_addon:mold_block',
-        result: {
-            item: 'minecraft:emerald_block'
-        }
-    })
-
-    // Block of Lapis
-    event.remove({id: 'tfc:crafting/vanilla/lapis_block'})
-    event.remove({id: 'minecraft:lapis_block'})
-    event.custom({
-        type: 'immersiveengineering:metal_press',
-        energy: 14400,
-        input: {
-            'base_ingredient': {
-                tag: 'forge:gems/lapis',
-            },
-            count: 9
-        },
-        mold: 'tfc_ie_addon:mold_block',
-        result: {
-            item: 'minecraft:lapis_block'
-        }
-    })
-
-    // Block of Diamond
-    event.remove({id: 'minecraft:diamond_block'})
-    event.remove({id: 'minecraft:diamond'})
-    event.custom({
-        type: 'immersiveengineering:metal_press',
-        energy: 14400,
-        input: {
-            'base_ingredient': {
-                tag: 'forge:gems/diamond',
-            },
-            count: 9
-        },
-        mold: 'tfc_ie_addon:mold_block',
-        result: {
-            item: 'minecraft:diamond_block'
-        }
-    })
-
     // Block of Netherite
     event.remove({id: 'minecraft:netherite_block'})
     event.remove({id: 'minecraft:netherite_ingot_from_netherite_block'})
@@ -659,41 +570,6 @@ ServerEvents.recipes(event => {
         mold: 'tfc_ie_addon:mold_block',
         result: {
             item: 'minecraft:netherite_block'
-        }
-    })
-
-    // Block of Quartz
-    event.remove({id: 'minecraft:quartz_block'})
-    event.custom({
-        type: 'immersiveengineering:metal_press',
-        energy: 14400,
-        input: {
-            'base_ingredient': {
-                tag: 'forge:gems/quartz',
-            },
-            count: 4
-        },
-        mold: 'tfc_ie_addon:mold_block',
-        result: {
-            item: 'minecraft:quartz_block'
-        }
-    })
-
-
-    // Block of Amethyst
-    event.remove({id: 'minecraft:amethyst_block'})
-    event.custom({
-        type: 'immersiveengineering:metal_press',
-        energy: 14400,
-        input: {
-            'base_ingredient': {
-                tag: 'forge:gems/amethyst',
-            },
-            count: 4
-        },
-        mold: 'tfc_ie_addon:mold_block',
-        result: {
-            item: 'minecraft:amethyst_block'
         }
     })
 

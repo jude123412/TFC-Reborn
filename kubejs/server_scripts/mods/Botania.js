@@ -370,40 +370,6 @@ ServerEvents.recipes(event => {
         }
     })
 
-    // Block of Mana Diamond
-    event.remove({id: 'botania:mana_diamond_block'})
-    event.custom({
-        type: 'immersiveengineering:metal_press',
-        energy: 14400,
-        input: {
-            'base_ingredient': {
-                tag: 'forge:gems/mana_diamond',
-            },
-            count: 9
-        },
-        mold: 'tfc_ie_addon:mold_block',
-        result: {
-            item: 'botania:mana_diamond_block'
-        }
-    })
-
-    // Block of Dragonstone
-    event.remove({id: 'botania:dragonstone_block'})
-    event.custom({
-        type: 'immersiveengineering:metal_press',
-        energy: 14400,
-        input: {
-            'base_ingredient': {
-                tag: 'forge:gems/dragonstone',
-            },
-            count: 9
-        },
-        mold: 'tfc_ie_addon:mold_block',
-        result: {
-            item: 'botania:dragonstone_block'
-        }
-    })
-
     // Runic Altar
     event.remove({id: 'botania:runic_altar_alt'})
     event.remove({id: 'botania:runic_altar'})
@@ -561,20 +527,17 @@ ServerEvents.recipes(event => {
         '#bsa:bindings/strong'
     )
 
-    // Block of Dragonstone
-    event.remove({id: 'botania:blaze_block'})
-    event.custom({
-        type: 'immersiveengineering:metal_press',
-        energy: 14400,
-        input: {
-            'base_ingredient': {
-                tag: 'forge:rods/blaze',
-            },
-            count: 9
-        },
-        mold: 'tfc_ie_addon:mold_block',
-        result: {
-            item: 'botania:blaze_block'
+    // Runic Altar
+    event.remove({id: 'botania:shimmerwood_planks_stairs'})
+    event.shaped(
+        Item.of('botania:shimmerwood_planks_stairs', 8), 
+        [
+            'P  ',
+            'PP ',
+            'PPP'
+        ],
+        {
+            P: 'botania:shimmerwood_planks'
         }
-    })
+    )
 })
