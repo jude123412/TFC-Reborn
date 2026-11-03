@@ -3,6 +3,10 @@ ServerEvents.recipes(event => {
     const create = event.recipes.create
     const tfc = event.recipes.tfc
 
+    event.remove({id: /create:cutting\/runtime_generated\/compat\/minecraft\/.*/})
+    event.remove({id: /create:cutting\/compat\/immersiveengineering\/.*/})
+    event.remove({id: /create:cutting\/runtime_generated\/compat\/botania\/.*/})
+
     for (const wood in global.integration_trees) {
         let t = global.integration_trees[wood]
 

@@ -17,7 +17,6 @@ ServerEvents.recipes(event => {
     event.remove({id: 'aiotbotania:livingwood_shears'})
     event.remove({id: 'aiotbotania:livingwood_shovel'})
     event.remove({id: 'aiotbotania:livingwood_sword'})
-    event.remove({id: /create:cutting\/runtime_generated\/compat\/botania\/.*/})
 
     // Terra Hoe
     event.remove({id: 'aiotbotania:terra_hoe'})
