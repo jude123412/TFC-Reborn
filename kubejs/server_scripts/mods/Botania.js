@@ -602,4 +602,97 @@ ServerEvents.recipes(event => {
             '#forge:dyes/green'
         ]
     )
+
+    // Managlass Pane
+    event.remove({id: 'botania:mana_glass_pane'})
+        event.shapeless(
+        Item.of('botania:mana_glass_pane', 2),
+        [
+            'botania:mana_glass',
+            '#tfc:saws'
+        ]
+    ).damageIngredient('#tfc:saws')
+
+    // Alfglass Pane
+    event.remove({id: 'botania:elf_glass_pane'})
+        event.shapeless(
+        Item.of('botania:elf_glass_pane', 2),
+        [
+            'botania:elf_glass',
+            '#tfc:saws'
+        ]
+    ).damageIngredient('#tfc:saws')
+
+    // Bifrost Pane
+    event.remove({id: 'botania:bifrost_pane'})
+        event.shapeless(
+        Item.of('botania:bifrost_pane', 2),
+        [
+            'botania:bifrost_perm',
+            '#tfc:saws'
+        ]
+    ).damageIngredient('#tfc:saws')
+
+    // Manasteel
+    event.replaceInput(
+        {id: 'botania:mana_infusion/manasteel'},
+        'minecraft:iron_ingot',
+        '#forge:ingots/wrought_iron'
+    )
+
+    // Manasteel
+    event.replaceInput(
+        {id: 'botania:mana_infusion/mana_diamond'},
+        'minecraft:diamond',
+        '#forge:gems/diamond'
+    )
+
+    // Livingwood Twig
+    event.remove({id: 'botania:livingwood_twig'})
+    event.shapeless(
+        Item.of('botania:livingwood_twig'),
+        [
+            '2x botania:livingwood_planks',
+            '#tfc:saws'
+        ]
+    ).damageIngredient('#tfc:saws')
+
+    // Redstone Root
+    event.remove({id: 'botania:redstone_root'})
+        event.shapeless(
+        Item.of('botania:redstone_root'),
+        [
+            'tfc:straw',
+            '#forge:dusts/redstone'
+        ]
+    )
+
+    // Red String
+    event.replaceInput(
+        {id: 'botania:red_string'},
+        'minecraft:string',
+        '#forge:string'
+    )    
+    event.replaceInput(
+        {id: 'botania:red_string_alt'},
+        'minecraft:string',
+        '#forge:string'
+    )
+
+    // Dreamwood Twig
+    event.remove({id: 'botania:dreamwood_twig'})
+    event.shapeless(
+        Item.of('botania:dreamwood_twig'),
+        [
+            '2x botania:dreamwood_planks',
+            '#tfc:saws'
+        ]
+    ).damageIngredient('#tfc:saws')
+
+    // Mana Infused String
+    event.replaceInput(
+        {id: 'botania:mana_infusion/mana_string'},
+        'minecraft:string',
+        '#forge:string'
+    )
 })
