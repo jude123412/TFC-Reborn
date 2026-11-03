@@ -366,4 +366,65 @@ ServerEvents.recipes(event => {
             '#tfc:chisels'
         ]
     ).damageIngredient('#tfc:chisels')
+
+    // Mana Spreader
+    event.remove({id: 'botania:mana_spreader'})
+    event.shaped(
+        Item.of('botania:mana_spreader'), 
+        [
+            'LLL',
+            'LPG',
+            'LLL'
+        ],
+        {
+            L: 'kubejs:wood/lumber/livingwood',
+            P: '#forge:plates/gold',
+            G: 'tfc:lens'
+        }
+    )
+
+    // Elven Mana Spreader
+    event.remove({id: 'botania:elven_spreader'})
+    event.shaped(
+        Item.of('botania:elven_spreader'), 
+        [
+            'LLL',
+            'LPG',
+            'LLL'
+        ],
+        {
+            L: 'kubejs:wood/lumber/dreamwood',
+            P: '#forge:plates/elementium',
+            G: 'tfc:lens'
+        }
+    )
+    event.shaped(
+        Item.of('botania:elven_spreader'), 
+        [
+            'LLL',
+            'LPG',
+            'LLL'
+        ],
+        {
+            L: 'kubejs:wood/lumber/dreamwood',
+            P: '#forge:plates/elementium',
+            G: 'botania:mana_spreader'
+        }
+    )
+
+    // Elven Mana Spreader
+    event.remove({id: 'botania:mana_pool'})
+    event.shaped(
+        Item.of('botania:mana_pool'), 
+        [
+            'R R',
+            'RDR',
+            'RPR'
+        ],
+        {
+            R: 'botania:livingrock',
+            D: '#forge:double_ingots/manasteel',
+            P: 'botania:diluted_pool'
+        }
+    )
 })

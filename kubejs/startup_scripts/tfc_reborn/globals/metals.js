@@ -369,7 +369,7 @@ global.metals = {
         nugget: 'botania:elementium_nugget',
         new_metal: true,
         generate_sheet: true,
-        generate_plate: false,
+        generate_plate: true,
         generate_gear: false,
         generate_nugget: false,
         generate_dust: false,
