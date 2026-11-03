@@ -178,83 +178,6 @@ ServerEvents.recipes(event => {
         }
     })
 
-    // Livingrock Stairs
-    event.remove({id: 'botania:livingrock_stairs'})
-    tfc.chisel('botania:livingrock_stairs', 'botania:livingrock', 'stair')
-    event.shaped(
-        Item.of('botania:livingrock_stairs', 8), 
-        [
-            'B  ',
-            'BB ',
-            'BBB'
-        ],
-        {
-            B: 'botania:livingrock'
-        }
-    )
-
-    // Livingrock Slab
-    tfc.chisel('botania:livingrock_slab', 'botania:livingrock', 'slab')
-        .extraDrop('botania:livingrock_slab')
-
-    // Polished Livingrock
-    event.remove({id: 'botania:polished_livingrock'})
-    tfc.chisel('botania:polished_livingrock', 'botania:livingrock', 'smooth')
-    event.shapeless(
-        Item.of('botania:polished_livingrock'),
-        [
-            'botania:livingrock',
-            '#tfc:chisels'
-        ]
-    ).damageIngredient('#tfc:chisels')
-
-    // Polished Livingrock Stairs
-    event.remove({id: 'botania:polished_livingrock_stairs'})
-    tfc.chisel('botania:polished_livingrock_stairs', 'botania:polished_livingrock', 'smooth')
-    event.shaped(
-        Item.of('botania:polished_livingrock_stairs', 8), 
-        [
-            'B  ',
-            'BB ',
-            'BBB'
-        ],
-        {
-            B: 'botania:polished_livingrock'
-        }
-    )
-    // Polished Livingrock Slab
-    tfc.chisel('botania:polished_livingrock_slab', 'botania:polished_livingrock', 'slab')
-        .extraDrop('botania:polished_livingrock_slab')
-
-    // Livingrock Bricks
-    event.remove({id: 'botania:livingrock_bricks'})
-    event.shapeless(
-        Item.of('botania:livingrock_bricks'),
-        [
-            'botania:polished_livingrock',
-            '#tfc:chisels'
-        ]
-    ).damageIngredient('#tfc:chisels')
-
-    // Livingrock Brick Stairs
-    event.remove({id: 'botania:livingrock_bricks_stairs'})
-    tfc.chisel('botania:livingrock_bricks_stairs', 'botania:livingrock_bricks', 'smooth')
-    event.shaped(
-        Item.of('botania:livingrock_bricks_stairs', 8), 
-        [
-            'B  ',
-            'BB ',
-            'BBB'
-        ],
-        {
-            B: 'botania:livingrock_bricks'
-        }
-    )
-
-    // Livingrock Brick Slab
-    tfc.chisel('botania:livingrock_bricks_slab', 'botania:livingrock_bricks', 'slab')
-        .extraDrop('botania:livingrock_bricks_slab')
-    
     // Mossy Livingrock Bricks
     event.remove({id: 'botania:mossy_livingrock_bricks'})
     event.remove({id: 'botania:mossy_livingrock_bricks_vine'})
@@ -269,42 +192,6 @@ ServerEvents.recipes(event => {
     // Livingrock Brick Stairs
     event.remove({id: 'botania:mossy_livingrock_bricks_stairs'})
     tfc.chisel('botania:mossy_livingrock_bricks_stairs', 'botania:mossy_livingrock_bricks', 'smooth')
-    event.shaped(
-        Item.of('botania:mossy_livingrock_bricks_stairs', 8), 
-        [
-            'B  ',
-            'BB ',
-            'BBB'
-        ],
-        {
-            B: 'botania:mossy_livingrock_bricks'
-        }
-    )
-
-    // Livingrock Brick Slab
-    tfc.chisel('botania:mossy_livingrock_bricks_slab', 'botania:mossy_livingrock_bricks', 'slab')
-        .extraDrop('botania:mossy_livingrock_bricks_slab')
-
-    // Chiseled Livingrock Bricks
-    event.remove({id: 'botania:chiseled_livingrock_bricks'})
-    event.shapeless(
-        Item.of('botania:chiseled_livingrock_bricks'),
-        [
-            'botania:livingrock_bricks',
-            '#tfc:chisels'
-        ]
-    ).damageIngredient('#tfc:chisels')
-
-    // Cracked Livingrock Bricks
-    event.remove({id: 'botania:cracked_livingrock_bricks'})
-    event.shapeless(
-        Item.of('botania:cracked_livingrock_bricks'),
-        [
-            'botania:livingrock_bricks',
-            '#tfc:hammers'
-        ]
-    ).damageIngredient('#tfc:hammers')
-
     // Mossy Livingwood Planks
     event.remove({id: 'botania:mossy_livingwood_planks'})
     event.remove({id: 'botania:mossy_livingwood_planks_vine'})
@@ -645,4 +532,52 @@ ServerEvents.recipes(event => {
         'minecraft:redstone_block',
         '#forge:dusts/redstone'
     )
+
+    // Hour Glass
+    event.replaceInput(
+        {id: 'botania:hourglass'},
+        'minecraft:gold_ingot',
+        '#forge:plates/gold'
+    )
+
+    // Cellular Block
+    event.remove({id: 'botania:cell_block'})
+    event.shapeless(
+        Item.of('botania:cell_block', 8),
+        [
+            '2x #tfc:compost_greens_high',
+            '2x #tfc:compost_browns_high'
+        ]
+    ).damageIngredient('#tfc:chisels')
+
+    // Teru Teru Bozu
+    event.replaceInput(
+        {id: 'botania:teru_teru_bozu'},
+        'minecraft:sunflower',
+        '#tfc:makes_yellow_dye'
+    )
+
+    // Cocoon of Caprice
+    event.replaceInput(
+        {id: 'botania:cocoon'},
+        'minecraft:string',
+        '#bsa:bindings/strong'
+    )
+
+    // Block of Dragonstone
+    event.remove({id: 'botania:blaze_block'})
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:rods/blaze',
+            },
+            count: 9
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'botania:blaze_block'
+        }
+    })
 })
