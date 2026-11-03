@@ -150,12 +150,15 @@ ClientEvents.lang('en_us', event => {
 
     // Lumber
     event.add('item.kubejs.wood.lumber.livingwood', 'Livingwood Lumber')
+    event.add('item.kubejs.wood.lumber.dreamwood', 'Livingwood Lumber')
 
     // Bark
-    event.add("item.kubejs.wood.bark", "Livingwood Bark")
+    event.add("item.kubejs.wood.bark.livingwood", "Livingwood Bark")
+    event.add("item.kubejs.wood.bark.dreamwood", "Dreamwood Bark")
 
     // Bark Powder
-    event.add("item.kubejs.wood.bark.powder", "Livingwood Bark Powder")
+    event.add("item.kubejs.wood.bark_powder.livingwood", "Livingwood Bark Powder")
+    event.add("item.kubejs.wood.bark_powder.dreamwood", "Dreamwood Bark Powder")
 
     // Metal Buckets
     event.add('item.kubejs.metal.andesite_alloy_bucket', 'Andesite Alloy Bucket')
@@ -183,6 +186,7 @@ ClientEvents.lang('en_us', event => {
 
     // Support
     event.add('block.kubejs.wood.support.livingwood', 'Livingwood Support')
+    event.add('block.kubejs.wood.support.dreamwood', 'Dreamwood Support')
 
     // Barrel Recipes Names
     event.add('tfc.recipe.barrel.minecraft.wood_pulp', 'Wood Pulp')
