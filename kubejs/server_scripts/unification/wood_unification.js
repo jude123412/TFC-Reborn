@@ -7,12 +7,51 @@ ServerEvents.recipes(event => {
         let t = global.integration_trees[wood]
 
         if (t.bark != null && t.bark_powder != null) {
-                    event.remove({id: `${t.mod_id}:crafting/wood/${wood}_lumber_log`})
+            event.remove({id: `${t.mod_id}:crafting/wood/${wood}_lumber_log`})
             event.remove({id: `${t.mod_id}:crafting/wood/${wood}_support`})
 
             tfc.quern(t.bark_powder, t.bark)
             create.milling(t.bark_powder, t.bark)
             create.crushing(t.bark_powder, t.bark)
+
+            event.custom({
+                type: 'railcraft:crusher',
+                ingredient: {
+                    item: t.bark
+                },
+                outputs: [
+                    {
+                        probability: 1.0,
+                        result: {
+                            item: t.bark_powder
+                        }
+                    }
+                ]
+            })
+
+            event.custom({
+                type: "immersiveengineering:crusher",
+                energy: 3000,
+                input: {
+                    item: t.bark
+                },
+                result: {
+                    item: t.bark_powder
+                },
+                secondaries: []
+            })
+
+            event.custom({
+                type: 'mekanism:crushing',
+                input: {
+                    ingredient: {
+                        item: t.bark
+                    }
+                },
+                output: {
+                    item: t.bark_powder
+                }
+            })
         }
         
         // Stripped Log/Wood
