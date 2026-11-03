@@ -189,9 +189,6 @@ ServerEvents.recipes(event => {
         ]
     )
 
-    // Livingrock Brick Stairs
-    event.remove({id: 'botania:mossy_livingrock_bricks_stairs'})
-    tfc.chisel('botania:mossy_livingrock_bricks_stairs', 'botania:mossy_livingrock_bricks', 'smooth')
     // Mossy Livingwood Planks
     event.remove({id: 'botania:mossy_livingwood_planks'})
     event.remove({id: 'botania:mossy_livingwood_planks_vine'})
