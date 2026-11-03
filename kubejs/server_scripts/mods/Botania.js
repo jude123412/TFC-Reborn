@@ -519,4 +519,67 @@ ServerEvents.recipes(event => {
             item: 'botania:dragonstone_block'
         }
     })
+
+    // Runic Altar
+    event.remove({id: 'botania:runic_altar_alt'})
+    event.remove({id: 'botania:runic_altar'})
+    event.shaped(
+        Item.of('botania:runic_altar'), 
+        [
+            'P P',
+            'RGR',
+            ' R '
+        ],
+        {
+            P: '#forge:sheets/manasteel',
+            G: '#forge:gems/mana_diamond',
+            R: 'botania:livingrock'
+        }
+    )
+    event.shaped(
+        Item.of('botania:runic_altar'), 
+        [
+            'P P',
+            'RGR',
+            ' R '
+        ],
+        {
+            P: '#forge:sheets/manasteel',
+            G: 'botania:mana_pearl',
+            R: 'botania:livingrock'
+        }
+    )
+
+    // Botanical Brewery
+    event.replaceInput(
+        {id: 'botania:brewery'},
+        'botania:manasteel_block',
+        '#forge:double_ingots/manasteel'
+    )
+
+    // Terrestrial Agglomeration Plate
+    event.replaceInput(
+        {id: 'botania:terra_plate'},
+        'minecraft:lapis_block',
+        '#forge:gems/lapis'
+    )
+    event.replaceInput(
+        {id: 'botania:terra_plate'},
+        'botania:manasteel_block',
+        '#forge:double_sheets/manasteel'
+    )
+
+    // Elven Gateway Core
+    event.replaceInput(
+        {id: 'botania:alfheim_portal'},
+        '#botania:livingwood_logs',
+        'kubejs:wood/lumber/livingwood'
+    )
+
+    // Mana Pylon
+    event.replaceInput(
+        {id: 'botania:mana_pylon'},
+        'minecraft:gold_ingot',
+        '#forge:plates/gold'
+    )
 })
