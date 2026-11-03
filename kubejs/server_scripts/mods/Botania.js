@@ -305,4 +305,35 @@ ServerEvents.recipes(event => {
             '#tfc:hammers'
         ]
     ).damageIngredient('#tfc:hammers')
+
+    // Mossy Livingwood Planks
+    event.remove({id: 'botania:mossy_livingwood_planks'})
+    event.remove({id: 'botania:mossy_livingwood_planks_vine'})
+    event.shapeless(
+        Item.of('botania:mossy_livingwood_planks'),
+        [
+            'botania:livingwood_planks',
+            '#tfc:moss'
+        ]
+    )
+
+    // Framed Livingwood Planks
+    event.remove({id: 'botania:framed_livingwood'})
+    event.shapeless(
+        Item.of('botania:framed_livingwood'),
+        [
+            'botania:livingwood_planks',
+            '#tfc:chisels'
+        ]
+    ).damageIngredient('#tfc:chisels')
+
+    // Pattern Framed Livingwood Planks
+    event.remove({id: 'botania:pattern_framed_livingwood'})
+    event.shapeless(
+        Item.of('botania:pattern_framed_livingwood'),
+        [
+            'botania:framed_livingwood',
+            '#tfc:chisels'
+        ]
+    ).damageIngredient('#tfc:chisels')
 })
