@@ -695,4 +695,118 @@ ServerEvents.recipes(event => {
         'minecraft:string',
         '#forge:string'
     )
+
+    // Manaweave Cloth
+   event.remove({id: 'botania:manaweave_cloth'})
+    tfc.loom(
+        'botania:manaweave_cloth',
+        '12x botania:mana_string',
+        12,
+        'kubejs:block/manaweave_cloth'
+    )
+
+    // Smokey Quartz
+    event.remove({id: 'botania:quartz_dark'})
+    event.shaped(
+        Item.of('botania:quartz_dark', 8), 
+        [
+            'QQQ',
+            'QDQ',
+            'QQQ'
+        ],
+        {
+            Q: '#forge:gems/quartz',
+            D: '#forge:dyes/black'
+        }
+    )
+
+    // Mana Quartz
+    event.remove({id: 'botania:mana_infusion/mana_quartz'})
+    event.shaped(
+        Item.of('botania:quartz_mana', 8), 
+        [
+            'QQQ',
+            'QDQ',
+            'QQQ'
+        ],
+        {
+            Q: '#forge:gems/quartz',
+            D: '#forge:dyes/light_blue'
+        }
+    )
+
+    // Blaze Quartz
+    event.remove({id: 'botania:quartz_blaze'})
+    event.shaped(
+        Item.of('botania:quartz_blaze', 8), 
+        [
+            'QQQ',
+            'QDQ',
+            'QQQ'
+        ],
+        {
+            Q: '#forge:gems/quartz',
+            D: '#forge:dyes/orange'
+        }
+    )
+
+    // Lavender Quartz
+    event.remove({id: 'botania:quartz_lavender'})
+    event.shaped(
+        Item.of('botania:quartz_lavender', 8), 
+        [
+            'QQQ',
+            'QDQ',
+            'QQQ'
+        ],
+        {
+            Q: '#forge:gems/quartz',
+            D: '#forge:dyes/purple'
+        }
+    )
+
+    // Redquartz
+    event.remove({id: 'botania:quartz_red'})
+    event.shaped(
+        Item.of('botania:quartz_red', 8), 
+        [
+            'QQQ',
+            'QDQ',
+            'QQQ'
+        ],
+        {
+            Q: '#forge:gems/quartz',
+            D: '#forge:dyes/red'
+        }
+    )
+
+    // Elven Quartz
+    event.remove({id: 'botania:elven_trade/elf_quartz'})
+    event.shaped(
+        Item.of('botania:quartz_elven', 8), 
+        [
+            'QQQ',
+            'QDQ',
+            'QQQ'
+        ],
+        {
+            Q: '#forge:gems/quartz',
+            D: '#forge:dyes/lime'
+        }
+    )
+
+    // Sunny Quartz
+    event.remove({id: 'botania:quartz_sunny'})
+    event.shaped(
+        Item.of('botania:quartz_sunny', 8), 
+        [
+            'QQQ',
+            'QDQ',
+            'QQQ'
+        ],
+        {
+            Q: '#forge:gems/quartz',
+            D: '#forge:dyes/yellow'
+        }
+    )
 })
