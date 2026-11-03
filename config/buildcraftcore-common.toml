@@ -65,3 +65,8 @@
 	#Allowed Values: MJ_ONLY, MJ_AUTOCONVERT_FE, DISPLAY_FE
 	powerMode = "MJ_ONLY"
 
+[debug]
+	#Write detailed server-side robot state, AI decisions, docking and pathfinding to latest.log every tick.
+	#Very noisy and potentially expensive. Enable only temporarily when diagnosing robotics issues.
+	verboseRobotLogging = false
+
