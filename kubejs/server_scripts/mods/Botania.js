@@ -427,4 +427,96 @@ ServerEvents.recipes(event => {
             P: 'botania:diluted_pool'
         }
     )
+
+    // Alchemy Catalyst
+    event.replaceInput(
+        {id: 'botania:alchemy_catalyst'},
+        'minecraft:gold_ingot',
+        '#forge:ingots/gold'
+    )
+
+    // Block of Manasteel
+    event.remove({id: 'botania:manasteel_block'})
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:ingots/manasteel',
+            },
+            count: 9
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'botania:manasteel_block'
+        }
+    })
+
+    // Block of Terrasteel
+    event.remove({id: 'botania:terrasteel_block'})
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:ingots/terrasteel',
+            },
+            count: 9
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'botania:terrasteel_block'
+        }
+    })
+
+    // Block of Elementium
+    event.remove({id: 'botania:elementium_block'})
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:ingots/elementium',
+            },
+            count: 9
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'botania:elementium_block'
+        }
+    })
+
+    // Block of Mana Diamond
+    event.remove({id: 'botania:mana_diamond_block'})
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:gems/mana_diamond',
+            },
+            count: 9
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'botania:mana_diamond_block'
+        }
+    })
+
+    // Block of Dragonstone
+    event.remove({id: 'botania:dragonstone_block'})
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:gems/dragonstone',
+            },
+            count: 9
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'botania:dragonstone_block'
+        }
+    })
 })
