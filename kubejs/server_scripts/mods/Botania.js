@@ -377,7 +377,7 @@ ServerEvents.recipes(event => {
             'LLL'
         ],
         {
-            L: 'kubejs:wood/lumber/livingwood',
+            L: '#botania:livingwood_logs',
             P: '#forge:plates/gold',
             G: 'tfc:lens'
         }
@@ -393,7 +393,7 @@ ServerEvents.recipes(event => {
             'LLL'
         ],
         {
-            L: 'kubejs:wood/lumber/dreamwood',
+            L: '#botania:dreamwood_logs',
             P: '#forge:plates/elementium',
             G: 'tfc:lens'
         }
@@ -406,13 +406,13 @@ ServerEvents.recipes(event => {
             'LLL'
         ],
         {
-            L: 'kubejs:wood/lumber/dreamwood',
+            L: '#botania:dreamwood_logs',
             P: '#forge:plates/elementium',
             G: 'botania:mana_spreader'
         }
     )
 
-    // Elven Mana Spreader
+    // Mana Pool
     event.remove({id: 'botania:mana_pool'})
     event.shaped(
         Item.of('botania:mana_pool'), 
@@ -569,17 +569,80 @@ ServerEvents.recipes(event => {
         '#forge:double_sheets/manasteel'
     )
 
-    // Elven Gateway Core
-    event.replaceInput(
-        {id: 'botania:alfheim_portal'},
-        '#botania:livingwood_logs',
-        'kubejs:wood/lumber/livingwood'
-    )
-
     // Mana Pylon
     event.replaceInput(
         {id: 'botania:mana_pylon'},
         'minecraft:gold_ingot',
         '#forge:plates/gold'
+    )
+
+    // Tiny Planet
+    event.replaceInput(
+        {id: 'botania:tiny_planet_block'},
+        'minecraft:stone',
+        '#forge:stone'
+    )
+
+    // Drum of the Wild
+    event.replaceInput(
+        {id: 'botania:drum_wild'},
+        '#botania:livingwood_logs',
+        'kubejs:wood/lumber/livingwood'
+    )
+
+    // Drum of the Gathering
+    event.replaceInput(
+        {id: 'botania:drum_gathering'},
+        '#botania:dreamwood_logs',
+        'kubejs:wood/lumber/dreamwood'
+    )
+
+    // Drum of the Canopy
+    event.replaceInput(
+        {id: 'botania:drum_canopy'},
+        '#botania:livingwood_logs',
+        'kubejs:wood/lumber/livingwood'
+    )
+
+    // Mana Fluxfield
+    event.replaceInput(
+        {id: 'botania:mana_fluxfield'},
+        'minecraft:redstone_block',
+        '#forge:dusts/redstone'
+    )
+
+    // Mana Pump
+    event.replaceInput(
+        {id: 'botania:pump'},
+        'minecraft:bucket',
+        'tfc:wooden_bucket'
+    )
+
+    // Crafty Crate
+    event.replaceInput(
+        {id: 'botania:pump'},
+        'minecraft:crafting_table',
+        '#tfc:workbenches'
+    )
+
+    // Tiny Potato
+    event.replaceInput(
+        {id: 'botania:pump'},
+        'minecraft:potato',
+        'tfc:food/potato'
+    )
+
+    // Red Stringed Interceptor
+    event.replaceInput(
+        {id: 'botania:red_string_interceptor'},
+        'minecraft:stone_button',
+        '#minecraft:buttons'
+    )
+
+    // Mana Fluxfield
+    event.replaceInput(
+        {id: 'botania:corporea_interceptor'},
+        'minecraft:redstone_block',
+        '#forge:dusts/redstone'
     )
 })
