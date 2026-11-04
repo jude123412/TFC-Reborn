@@ -126,4 +126,6 @@ ServerEvents.recipes(event => {
     event.remove({id: 'mekanism:processing/copper/ingot/from_dust_smelting'})
     event.remove({id: 'mekanism:processing/gold/ingot/from_dust_blasting'})
     event.remove({id: 'mekanism:processing/gold/ingot/from_dust_smelting'})
+    event.remove({id: 'mekanism:processing/netherite/ingot_from_dust_blasting'})
+    event.remove({id: 'mekanism:processing/netherite/ingot_from_dust_smelting'})
 })

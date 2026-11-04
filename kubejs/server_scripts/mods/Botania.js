@@ -17,6 +17,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'aiotbotania:livingwood_shears'})
     event.remove({id: 'aiotbotania:livingwood_shovel'})
     event.remove({id: 'aiotbotania:livingwood_sword'})
+    event.remove({id: 'botania:mana_infusion/brick_deconstruct'})
 
     // Floating White Flower
     event.replaceInput(
