@@ -774,54 +774,56 @@ ServerEvents.recipes(event => {
                 item: 'kubejs:metal/nugget/brass'
             }
         ],
-          sequence: [{
-            type: 'create:deploying',
-            ingredients: [
-                {
-                item: 'create:incomplete_precision_mechanism'
-                },
-                {
-                item: 'create:cogwheel'
-                }
-            ],
-            results: [
-                {
-                item: 'create:incomplete_precision_mechanism'
-                }
-            ]
-            },
+          sequence: [
             {
-            type: 'create:deploying',
-            ingredients: [
-                {
-                item: 'create:incomplete_precision_mechanism'
+                type: 'create:deploying',
+                    ingredients: [
+                        {
+                        item: 'create:incomplete_precision_mechanism'
+                        },
+                        {
+                        item: 'create:cogwheel'
+                        }
+                    ],
+                    results: [
+                        {
+                        item: 'create:incomplete_precision_mechanism'
+                        }
+                    ]
                 },
                 {
-                item: 'tfc:metal/rod/gold'
-                }
-            ],
-            results: [
-                {
-                item: 'create:incomplete_precision_mechanism'
-                }
-            ]
-            },
-            {
-            type: 'create:deploying',
-            ingredients: [
-                {
-                item: 'create:incomplete_precision_mechanism'
+                    type: 'create:deploying',
+                    ingredients: [
+                        {
+                        item: 'create:incomplete_precision_mechanism'
+                        },
+                        {
+                        item: 'tfc:metal/rod/gold'
+                        }
+                    ],
+                    results: [
+                        {
+                        item: 'create:incomplete_precision_mechanism'
+                        }
+                    ]
                 },
                 {
-                item: 'tfc:brass_mechanisms'
-                }
-            ],
-            results: [
-                {
-                item: 'create:incomplete_precision_mechanism'
-                }
-            ]
-        }],
+                type: 'create:deploying',
+                ingredients: [
+                    {
+                    item: 'create:incomplete_precision_mechanism'
+                    },
+                    {
+                    item: 'tfc:brass_mechanisms'
+                    }
+                ],
+                results: [
+                    {
+                    item: 'create:incomplete_precision_mechanism'
+                    }
+                ]
+            }
+        ],
         transitionalItem: {
             item: 'create:incomplete_precision_mechanism'
         }
