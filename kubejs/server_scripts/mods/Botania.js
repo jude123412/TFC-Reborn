@@ -18,6 +18,12 @@ ServerEvents.recipes(event => {
     event.remove({id: 'aiotbotania:livingwood_shovel'})
     event.remove({id: 'aiotbotania:livingwood_sword'})
     event.remove({id: 'botania:mana_infusion/brick_deconstruct'})
+    event.remove({id: 'botania:conversions/manasteel_from_nuggets'})
+    event.remove({id: 'botania:conversions/manasteel_block_deconstruct'})
+    event.remove({id: 'botania:conversions/terrasteel_block_deconstruct'})
+    event.remove({id: 'botania:conversions/terrasteel_from_nugget'})
+    event.remove({id: 'botania:conversions/elementium_from_nuggets'})
+    event.remove({id: 'botania:conversions/elementium_block_deconstruct'})
 
     // Floating White Flower
     event.replaceInput(

@@ -13,6 +13,8 @@ ServerEvents.recipes(event => {
     event.remove({id: 'createaddition:crafting/electrum_ingot'})
     event.remove({id: 'createaddition:crafting/electrum'})
     event.remove({id: 'createaddition:mixing/electrum'})
+    event.remove({id: 'vintage:craft/vanadium_nuggets_to_ingot'})
+    event.remove({id: 'vintage:craft/vanadium_block_to_ingots'})
 
     // Recipe Removal by output
     event.remove({output: 'createdieselgenerators:wood_chip'})
