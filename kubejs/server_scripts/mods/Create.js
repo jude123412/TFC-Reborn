@@ -737,4 +737,93 @@ ServerEvents.recipes(event => {
             }
         ]
     })
+
+    // Precision Mechanism
+    event.custom({
+        type: 'create:sequenced_assembly',
+        ingredient: {
+            tag: 'forge:plates/gold'
+        },
+        loops: 5,
+        results: [
+            {
+                chance: 120.0,
+                item: 'create:precision_mechanism'
+            },
+            {
+                chance: 8.0,
+                item: 'tfc:metal/rod/gold'
+            },
+            {
+                chance: 8.0,
+                item: 'create:andesite_alloy'
+            },
+            {
+                chance: 5.0,
+                item: 'create:cogwheel'
+            },
+            {
+                chance: 3.0,
+                item: 'kubejs:metal/nugget/gold'
+            },
+            {
+                chance: 2.0,
+                item: 'create:shaft'
+            },
+            {
+                item: 'kubejs:metal/nugget/brass'
+            }
+        ],
+          sequence: [{
+            type: 'create:deploying',
+            ingredients: [
+                {
+                item: 'create:incomplete_precision_mechanism'
+                },
+                {
+                item: 'create:cogwheel'
+                }
+            ],
+            results: [
+                {
+                item: 'create:incomplete_precision_mechanism'
+                }
+            ]
+            },
+            {
+            type: 'create:deploying',
+            ingredients: [
+                {
+                item: 'create:incomplete_precision_mechanism'
+                },
+                {
+                item: 'tfc:metal/rod/gold'
+                }
+            ],
+            results: [
+                {
+                item: 'create:incomplete_precision_mechanism'
+                }
+            ]
+            },
+            {
+            type: 'create:deploying',
+            ingredients: [
+                {
+                item: 'create:incomplete_precision_mechanism'
+                },
+                {
+                item: 'tfc:brass_mechanisms'
+                }
+            ],
+            results: [
+                {
+                item: 'create:incomplete_precision_mechanism'
+                }
+            ]
+        }],
+        transitionalItem: {
+            item: 'create:incomplete_precision_mechanism'
+        }
+    })
 })
