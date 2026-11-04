@@ -89,6 +89,15 @@ ServerEvents.recipes(event => {
     event.remove({id: 'immersiveengineering:crafting/raw_hammercrushing_gold'})
     event.remove({id: 'immersiveengineering:crafting/hammercrushing_gold'})
     event.remove({id: 'immersiveengineering:crusher/ingot_gold'})
+    event.remove({id: 'immersiveengineering:crusher/ingot_bronze'})
+    event.remove({id: 'immersiveengineering:crafting/hammercrushing_osmium'})
+    event.remove({id: 'immersiveengineering:crafting/raw_hammercrushing_osmium'})
+    event.remove({id: 'immersiveengineering:crusher/raw_ore_osmium'})
+    event.remove({id: 'immersiveengineering:crafting/hammercrushing_tin'})
+    event.remove({id: 'immersiveengineering:crafting/raw_hammercrushing_tin'})
+    event.remove({id: 'immersiveengineering:crusher/ingot_tin'})
+    event.remove({id: 'immersiveengineering:crusher/coal_block'})
+    event.remove({id: 'immersiveengineering:crusher/coal'})
 
     // Recipe Removal by output
     event.remove({output: 'immersiveengineering:dust_wood'})

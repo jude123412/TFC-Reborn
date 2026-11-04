@@ -60,6 +60,9 @@ ServerEvents.tags('item', event => {
     // Syvite Dust
     event.add('forge:dusts/sylvite', 'tfc:powder/sylvite')
 
+    // Salt
+    event.add('forge:dusts/salt', 'tfc:powder/salt')
+
     // Berries
     event.add('tfc:foods/berries', 'tfc:food/blackberry')
     event.add('tfc:foods/berries', 'tfc:food/blueberry')
