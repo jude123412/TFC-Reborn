@@ -149,6 +149,14 @@ ServerEvents.recipes(event => {
     event.remove({id: 'create:blasting/ingot_uranium_compat_immersiveengineering'})
     event.remove({id: 'create:smelting/ingot_uranium_compat_immersiveengineering'})
     event.remove({id: 'createaddition:compat/immersiveengineering/constantan'})
+    event.remove({id: 'create:blasting/ingot_osmium_compat_mekanism'})
+    event.remove({id: 'create:smelting/ingot_osmium_compat_mekanism'})
+    event.remove({id: 'create:blasting/ingot_tin_compat_mekanism'})
+    event.remove({id: 'create:smelting/ingot_tin_compat_mekanism'})
+    event.remove({id: 'create:blasting/ingot_lead_compat_mekanism'})
+    event.remove({id: 'create:smelting/ingot_lead_compat_mekanism'})
+    event.remove({id: 'create:blasting/ingot_uranium_compat_mekanism'})
+    event.remove({id: 'create:smelting/ingot_uranium_compat_mekanism'})
 
     // Copper Backtank
     event.replaceInput(

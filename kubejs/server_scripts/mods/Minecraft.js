@@ -120,7 +120,6 @@ ServerEvents.recipes(event => {
     event.remove({id: 'minecraft:gold_ingot_from_smelting_raw_gold'})
     event.remove({id: 'minecraft:gold_ingot_from_smelting_gold_ore'})
     event.remove({id: 'minecraft:nether_brick'})
-    event.remove({id: ''})
 
     // Elytra
     tfc.welding(

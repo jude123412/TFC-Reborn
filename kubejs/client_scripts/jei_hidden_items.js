@@ -183,11 +183,11 @@ JEIEvents.hideItems(event => {
     event.hide('mekanism:dirty_dust_uranium')
 
     // Mekanism Ingots
-    // event.hide('mekanism:ingot_bronze')
-    // event.hide('mekanism:ingot_steel')
-    // event.hide('mekanism:ingot_tin')
-    // event.hide('mekanism:ingot_lead')
-    // event.hide('mekanism:ingot_uranium')
+    event.hide('mekanism:ingot_bronze')
+    event.hide('mekanism:ingot_steel')
+    event.hide('mekanism:ingot_tin')
+    event.hide('mekanism:ingot_lead')
+    event.hide('mekanism:ingot_uranium')
 
     // Railcraft Reborn Dusts
     event.hide('railcraft:saltpeter_dust')
