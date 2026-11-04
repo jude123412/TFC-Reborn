@@ -209,4 +209,7 @@ JEIEvents.hideItems(event => {
     // Create Ingots
     event.hide('create:zinc_ingot')
     event.hide('create:brass_ingot')
+
+    // Create Crafts & Additions Ingots
+    event.hide('createaddition:electrum_ingot')
 })

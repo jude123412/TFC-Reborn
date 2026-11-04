@@ -10,6 +10,9 @@ ServerEvents.recipes(event => {
     event.remove({id: 'createdieselgenerators:compression_molding/chain'})
     event.remove({id: 'vintage:curving/iron_sheet'})
     event.remove({id: 'createdieselgenerators:compression_molding/bucket'})
+    event.remove({id: 'createaddition:crafting/electrum_ingot'})
+    event.remove({id: 'createaddition:crafting/electrum'})
+    event.remove({id: 'createaddition:mixing/electrum'})
 
     // Recipe Removal by output
     event.remove({output: 'createdieselgenerators:wood_chip'})
