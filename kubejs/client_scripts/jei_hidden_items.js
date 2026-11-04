@@ -196,15 +196,15 @@ JEIEvents.hideItems(event => {
     event.hide('railcraft:sulfur_dust')
 
     // Railcraft Reborn Ingots
-    // event.hide('railcraft:lead_ingot')
-    // event.hide('railcraft:nickel_ingot')
-    // event.hide('railcraft:silver_ingot')
-    // event.hide('railcraft:tin_ingot')
-    // event.hide('railcraft:zinc_ingot')
-    // event.hide('railcraft:steel_ingot')
-    // event.hide('railcraft:brass_ingot')
-    // event.hide('railcraft:bronze_ingot')
-    // event.hide('railcraft:invar_ingot')
+    event.hide('railcraft:lead_ingot')
+    event.hide('railcraft:nickel_ingot')
+    event.hide('railcraft:silver_ingot')
+    event.hide('railcraft:tin_ingot')
+    event.hide('railcraft:zinc_ingot')
+    event.hide('railcraft:steel_ingot')
+    event.hide('railcraft:brass_ingot')
+    event.hide('railcraft:bronze_ingot')
+    event.hide('railcraft:invar_ingot')
 
     // Create Ingots
     event.hide('create:zinc_ingot')

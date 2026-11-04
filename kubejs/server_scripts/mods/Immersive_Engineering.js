@@ -182,6 +182,8 @@ ServerEvents.recipes(event => {
     event.remove({id: 'immersiveengineering:smelting/ingot_hop_graphite_from_blasting'})
     event.remove({id: 'immersiveengineering:smelting/ingot_hop_graphite'})
     event.remove({id: 'immersiveengineering:smelting/ingot_hop_graphite_from_blasting'})
+    event.remove({id: 'immersiveengineering:alloysmelter/bronze'})
+    event.remove({id: 'immersiveengineering:alloysmelter/invar'})
 
     // Recipe Removal by output
     event.remove({output: 'immersiveengineering:dust_wood'})
