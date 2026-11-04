@@ -153,9 +153,9 @@ JEIEvents.hideItems(event => {
     event.hide('immersiveengineering:dust_gold')
 
     // Immersive Engineering Ingots
-    // event.hide('immersiveengineering:ingot_silver')
-    // event.hide('immersiveengineering:ingot_nickel')
-    // event.hide('immersiveengineering:ingot_steel')
+    event.hide('immersiveengineering:ingot_silver')
+    event.hide('immersiveengineering:ingot_nickel')
+    event.hide('immersiveengineering:ingot_steel')
 
     // Mekanism Dusts
     event.hide('mekanism:salt')

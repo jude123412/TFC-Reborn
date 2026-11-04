@@ -136,6 +136,19 @@ ServerEvents.recipes(event => {
     event.remove({id: 'create:crafting/materials/brass_ingot_from_compacting'})
     event.remove({id: 'create:crafting/materials/brass_ingot_from_decompacting'})
     event.remove({id: 'create:mixing/brass_ingot'})
+    event.remove({id: 'create:blasting/ingot_silver_compat_immersiveengineering'})
+    event.remove({id: 'create:blasting/ingot_nickel_compat_immersiveengineering'})
+    event.remove({id: 'create:blasting/ingot_aluminum_compat_immersiveengineering'})
+    event.remove({id: 'create:smelting/ingot_aluminum_compat_immersiveengineering'})
+    event.remove({id: 'create:blasting/ingot_lead_compat_immersiveengineering'})
+    event.remove({id: 'create:smelting/ingot_lead_compat_immersiveengineering'})
+    event.remove({id: 'create:blasting/ingot_silver_compat_immersiveengineering'})
+    event.remove({id: 'create:smelting/ingot_silver_compat_immersiveengineering'})
+    event.remove({id: 'create:blasting/ingot_nickel_compat_immersiveengineering'})
+    event.remove({id: 'create:smelting/ingot_nickel_compat_immersiveengineering'})
+    event.remove({id: 'create:blasting/ingot_uranium_compat_immersiveengineering'})
+    event.remove({id: 'create:smelting/ingot_uranium_compat_immersiveengineering'})
+    event.remove({id: 'createaddition:compat/immersiveengineering/constantan'})
 
     // Copper Backtank
     event.replaceInput(
