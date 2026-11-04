@@ -125,6 +125,17 @@ ServerEvents.recipes(event => {
     event.remove({id: 'create:blasting/gold_ingot_from_crushed'})
     event.remove({id: 'create:smelting/gold_ingot_from_crushed'})
     event.remove({id: 'create:crushing/golden_horse_armor'})
+    event.remove({id: 'create:crafting/materials/zinc_ingot_from_decompacting'})
+    event.remove({id: 'create:crafting/materials/zinc_ingot_from_compacting'})
+    event.remove({id: 'create:blasting/zinc_ingot_from_ore'})
+    event.remove({id: 'create:blasting/zinc_ingot_from_raw_ore'})
+    event.remove({id: 'create:blasting/zinc_ingot_from_crushed'})
+    event.remove({id: 'create:smelting/zinc_ingot_from_crushed'})
+    event.remove({id: 'create:smelting/zinc_ingot_from_ore'})
+    event.remove({id: 'create:smelting/zinc_ingot_from_raw_ore'})
+    event.remove({id: 'create:crafting/materials/brass_ingot_from_compacting'})
+    event.remove({id: 'create:crafting/materials/brass_ingot_from_decompacting'})
+    event.remove({id: 'create:mixing/brass_ingot'})
 
     // Copper Backtank
     event.replaceInput(

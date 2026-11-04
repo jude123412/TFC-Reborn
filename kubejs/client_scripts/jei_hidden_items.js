@@ -207,6 +207,6 @@ JEIEvents.hideItems(event => {
     // event.hide('railcraft:invar_ingot')
 
     // Create Ingots
-    // event.hide('create:zinc_ingot')
-    // event.hide('create:brass_ingot')
+    event.hide('create:zinc_ingot')
+    event.hide('create:brass_ingot')
 })
