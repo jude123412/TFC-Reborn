@@ -7,6 +7,9 @@ ServerEvents.recipes(event => {
     event.remove({id: 'createaddition:compat/immersiveengineering/crushing/steel_ingot'})
     event.remove({id: 'createaddition:compat/immersiveengineering/crushing/coal_coke'})
     event.remove({id: 'createaddition:crushing/diamond'})
+    event.remove({id: 'createdieselgenerators:compression_molding/chain'})
+    event.remove({id: 'vintage:curving/iron_sheet'})
+    event.remove({id: 'createdieselgenerators:compression_molding/bucket'})
 
     // Recipe Removal by output
     event.remove({output: 'createdieselgenerators:wood_chip'})

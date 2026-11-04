@@ -98,6 +98,16 @@ ServerEvents.recipes(event => {
     event.remove({id: 'immersiveengineering:crusher/ingot_tin'})
     event.remove({id: 'immersiveengineering:crusher/coal_block'})
     event.remove({id: 'immersiveengineering:crusher/coal'})
+    event.remove({id: 'immersiveengineering:crusher/coke'})
+    event.remove({id: 'immersiveengineering:crusher/coke_block'})
+    event.remove({id: 'immersiveengineering:crafting/paper_from_sawdust'})
+    event.remove({id: 'immersiveengineering:crafting/torch'})
+    event.remove({id: 'immersiveengineering:smelting/iron_ingot_from_dust_from_blasting'})
+    event.remove({id: 'immersiveengineering:smelting/iron_ingot_from_dust'})
+    event.remove({id: 'immersiveengineering:smelting/copper_ingot_from_dust_from_blasting'})
+    event.remove({id: 'immersiveengineering:smelting/copper_ingot_from_dust'})
+    event.remove({id: 'immersiveengineering:smelting/gold_ingot_from_dust_from_blasting'})
+    event.remove({id: 'immersiveengineering:smelting/gold_ingot_from_dust'})
 
     // Recipe Removal by output
     event.remove({output: 'immersiveengineering:dust_wood'})

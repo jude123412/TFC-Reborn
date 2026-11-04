@@ -42,6 +42,8 @@ ServerEvents.recipes(event => {
     event.remove({id: 'railcraft:crusher/crushing_blaze_rod'})
     event.remove({id: 'railcraft:crusher/crushing_tags_ores_quartz'})
     event.remove({id: 'railcraft:crusher/crushing_tags_gems_diamond'})
+    event.remove({id: 'railcraft:crusher/crushing_tags_coal_coke'})
+    event.remove({id: 'railcraft:torch_creosote'})
 
     // Coke Oven Bricks
     event.remove({id: 'railcraft:coke_oven_bricks'})

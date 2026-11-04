@@ -1,28 +1,6 @@
 JEIEvents.hideItems(event => {
 
     // Item Hiding
-    event.hide('minecraft:iron_ingot')
-    event.hide('minecraft:copper_ingot')
-    event.hide('minecraft:gold_ingot')
-    event.hide('create:zinc_ingot')
-    event.hide('create:brass_ingot')
-    event.hide('immersiveengineering:ingot_silver')
-    event.hide('immersiveengineering:ingot_nickel')
-    event.hide('immersiveengineering:ingot_steel')
-    event.hide('mekanism:ingot_bronze')
-    event.hide('mekanism:ingot_steel')
-    event.hide('mekanism:ingot_tin')
-    event.hide('mekanism:ingot_lead')
-    event.hide('mekanism:ingot_uranium')
-    event.hide('railcraft:lead_ingot')
-    event.hide('railcraft:nickel_ingot')
-    event.hide('railcraft:silver_ingot')
-    event.hide('railcraft:tin_ingot')
-    event.hide('railcraft:zinc_ingot')
-    event.hide('railcraft:steel_ingot')
-    event.hide('railcraft:brass_ingot')
-    event.hide('railcraft:bronze_ingot')
-    event.hide('railcraft:invar_ingot')
     event.hide('create:empty_blaze_burner')
     event.hide('create:blaze_burner')
     event.hide('immersiveengineering:dust_coke')
@@ -154,6 +132,11 @@ JEIEvents.hideItems(event => {
     event.hide('aiotbotania:livingwood_shovel')
     event.hide('aiotbotania:livingwood_sword')
 
+    // Minecraft Ingots
+    event.hide('minecraft:iron_ingot')
+    event.hide('minecraft:copper_ingot')
+    event.hide('minecraft:gold_ingot')
+
     // Immersive Engineering Dusts
     event.hide('immersiveengineering:dust_saltpeter')
     event.hide('immersiveengineering:dust_sulfur')
@@ -168,6 +151,11 @@ JEIEvents.hideItems(event => {
     event.hide('immersiveengineering:dust_steel')
     event.hide('immersiveengineering:dust_iron')
     event.hide('immersiveengineering:dust_gold')
+
+    // Immersive Engineering Ingots
+    // event.hide('immersiveengineering:ingot_silver')
+    // event.hide('immersiveengineering:ingot_nickel')
+    // event.hide('immersiveengineering:ingot_steel')
 
     // Mekanism Dusts
     event.hide('mekanism:salt')
@@ -194,9 +182,31 @@ JEIEvents.hideItems(event => {
     event.hide('mekanism:dirty_dust_lead')
     event.hide('mekanism:dirty_dust_uranium')
 
+    // Mekanism Ingots
+    // event.hide('mekanism:ingot_bronze')
+    // event.hide('mekanism:ingot_steel')
+    // event.hide('mekanism:ingot_tin')
+    // event.hide('mekanism:ingot_lead')
+    // event.hide('mekanism:ingot_uranium')
+
     // Railcraft Reborn Dusts
     event.hide('railcraft:saltpeter_dust')
     event.hide('railcraft:coal_dust')
     event.hide('railcraft:charcoal_dust')
     event.hide('railcraft:sulfur_dust')
+
+    // Railcraft Reborn Ingots
+    // event.hide('railcraft:lead_ingot')
+    // event.hide('railcraft:nickel_ingot')
+    // event.hide('railcraft:silver_ingot')
+    // event.hide('railcraft:tin_ingot')
+    // event.hide('railcraft:zinc_ingot')
+    // event.hide('railcraft:steel_ingot')
+    // event.hide('railcraft:brass_ingot')
+    // event.hide('railcraft:bronze_ingot')
+    // event.hide('railcraft:invar_ingot')
+
+    // Create Ingots
+    // event.hide('create:zinc_ingot')
+    // event.hide('create:brass_ingot')
 })

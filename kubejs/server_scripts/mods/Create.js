@@ -110,6 +110,21 @@ ServerEvents.recipes(event => {
     event.remove({id: 'createaddition:compat/immersiveengineering/fabric_sail'})
     event.remove({id: 'create:mixing/cardboard_pulp'})
     event.remove({id: 'createdieselgenerators:bulk_fermenting/pulp'})
+    event.remove({id: 'create:haunting/soul_campfire'})
+    event.remove({id: 'create:crushing/compat/immersiveengineering/coke_block'})
+    event.remove({id: 'create:crushing/compat/immersiveengineering/coal_coke'})
+    event.remove({id: 'create:crafting/appliances/chain_from_zinc'})
+    event.remove({id: 'create:crafting/curiosities/cake'})
+    event.remove({id: 'create:pressing/sugar_cane'})
+    event.remove({id: 'create:blasting/iron_ingot_from_crushed'})
+    event.remove({id: 'create:smelting/iron_ingot_from_crushed'})
+    event.remove({id: 'create:crushing/iron_horse_armor'})
+    event.remove({id: 'create:crafting/materials/copper_ingot'})
+    event.remove({id: 'create:blasting/copper_ingot_from_crushed'})
+    event.remove({id: 'create:smelting/copper_ingot_from_crushed'})
+    event.remove({id: 'create:blasting/gold_ingot_from_crushed'})
+    event.remove({id: 'create:smelting/gold_ingot_from_crushed'})
+    event.remove({id: 'create:crushing/golden_horse_armor'})
 
     // Copper Backtank
     event.replaceInput(

@@ -2,12 +2,25 @@ ServerEvents.recipes(event => {
     const lychee = event.recipes.lychee
     const create = event.recipes.create
     const tfc = event.recipes.tfc
-
-    event.remove({id: 'create:crushing/compat/immersiveengineering/coke_block'})
-    event.remove({id: 'create:crushing/compat/immersiveengineering/coal_coke'})
-    event.remove({id: 'immersiveengineering:crusher/coke'})
-    event.remove({id: 'immersiveengineering:crusher/coke_block'})
-    event.remove({id: 'railcraft:crusher/crushing_tags_coal_coke'})
+    
+    event.remove({id: 'tfc:crafting/vanilla/color/white_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/light_gray_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/gray_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/black_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/brown_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/red_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/orange_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/yellow_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/lime_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/green_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/cyan_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/light_blue_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/blue_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/purple_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/magenta_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/pink_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/redstone/steel_rail'})
+    event.remove({id: 'tfc:crafting/vanilla/redstone/rail'})
 
     // Silt Mud bricks
     event.remove({id: 'tfc:crafting/soil/silt_drying_bricks'})
