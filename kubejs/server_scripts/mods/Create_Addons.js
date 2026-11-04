@@ -4,6 +4,8 @@ ServerEvents.recipes(event => {
     event.remove({id: 'createdieselgenerators:crafting/wire_cutters'})
     event.remove({id: 'createdieselgenerators:crafting/hammer'})
     event.remove({id: 'vintage:hammering/netherite_ingot'})
+    event.remove({id: 'createaddition:compat/immersiveengineering/crushing/steel_ingot'})
+    event.remove({id: 'createaddition:compat/immersiveengineering/crushing/coal_coke'})
 
     // Recipe Removal by output
     event.remove({output: 'createdieselgenerators:wood_chip'})
