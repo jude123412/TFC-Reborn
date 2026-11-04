@@ -1,76 +1,128 @@
 TFCEvents.data(event => {
-    // Plate Loop
+
     for (const metal in global.metals) {
         let m = global.metals[metal]
 
-        if (m.new_metal) {
+        if (m.is_custom) {
             event.metal(
                 m.fluid,
                 m.melt,
                 m.capacity,
                 m.ingot,
-                `kubejs:metal/double_ingot/${metal}`,
-                `kubejs:metal/sheet/${metal}`,
+                m.double_ingot,
+                m.sheet,
                 m.tier,
                 `kubejs:${metal}`
             )
-
-            if (m.ingot != null) {
-                event.itemHeat(m.ingot, m.capacity, m.work, m.weld)
-            }
-
-            if (m.generate_sheet) {
-                event.itemHeat(`kubejs:metal/double_ingot/${metal}`, m.capacity * 2, m.work, m.weld)
-                event.itemHeat(`kubejs:metal/sheet/${metal}`, m.capacity * 2, m.work, m.weld)
-                event.itemHeat(`kubejs:metal/double_sheet/${metal}`, m.capacity * 4, m.work, m.weld)
-                event.itemSize(`kubejs:metal/double_sheet/${metal}`, 'large', 'heavy')
-            }
-
-            if (m.generate_basic_tool_heads) {
-                event.itemHeat(`kubejs:metal/pickaxe_head/${metal}`, m.capacity, m.work, m.weld)
-                event.itemHeat(`kubejs:metal/axe_head/${metal}`, m.capacity, m.work, m.weld)
-                event.itemHeat(`kubejs:metal/shovel_head/${metal}`, m.capacity, m.work, m.weld)
-                event.itemHeat(`kubejs:metal/hoe_head/${metal}`, m.capacity, m.work, m.weld)
-                event.itemHeat(`kubejs:metal/sword_blade/${metal}`, m.capacity * 2, m.work, m.weld)
-            }
-
-            if (m.generate_knife_blade) {
-                event.itemHeat(`kubejs:metal/knife_blade/${metal}`, m.capacity, m.work, m.weld)
-            }
-
-            if (m.generate_armor) {
-                event.itemHeat(`kubejs:metal/unfinished_helmet/${metal}`, m.capacity * 4, m.work, m.weld)
-                event.itemHeat(`kubejs:metal/unfinished_chestplate/${metal}`, m.capacity * 4, m.work, m.weld)
-                event.itemHeat(`kubejs:metal/unfinished_greaves/${metal}`, m.capacity * 4, m.work, m.weld)
-                event.itemHeat(`kubejs:metal/unfinished_boots/${metal}`, m.capacity * 2, m.work, m.weld)
-            }
         }
 
-        // Plate Loop
-        if (m.generate_plate) {
-            event.itemHeat(`kubejs:metal/plate/${metal}`, m.capacity, m.work, m.weld)
-            event.itemSize(`kubejs:metal/plate/${metal}`, 'large', 'medium')
+        if (m.ingot != null && m.ingot.startsWith('kubejs:')) {
+            event.itemHeat(m.ingot, m.capacity, m.work, m.weld)
         }
 
-        // Gear Loop
-        if (m.generate_gear) {
-            event.itemHeat(`kubejs:metal/gear/${metal}`, m.capacity, m.work, m.weld)
-            event.itemHeat(`kubejs:metal/gear/half/${metal}`, m.capacity, m.work, m.weld)
-            event.itemSize(`kubejs:metal/gear/${metal}`, 'large', 'heavy')
-            event.itemSize(`kubejs:metal/gear/half/${metal}`, 'large', 'medium')
+        if (m.double_ingot != null && m.double_ingot.startsWith('kubejs:')) {
+            event.itemHeat(m.double_ingot, m.capacity * 2, m.work, m.weld)
         }
 
-        // Nugget Loop
-        if (m.generate_nugget || m.nugget != null) {
-            let nugget = m.nugget == null ? `kubejs:metal/nugget/${metal}` : m.nugget
-            event.itemHeat(nugget, m.capacity, m.work, m.weld)
-            event.itemSize(nugget, 'small', 'light')
+        if (m.sheet != null && m.sheet.startsWith('kubejs:')) {
+            event.itemHeat(m.sheet, m.capacity * 2, m.work, m.weld)
         }
 
-        // Dust Loop
-        if (m.generate_dust) {
-            event.itemHeat(`kubejs:metal/powder/${metal}`, m.capacity, m.work, m.weld)
-            event.itemSize(`kubejs:metal/powder/${metal}`, 'normal', 'medium')
+        if (m.double_sheet != null && m.double_sheet.startsWith('kubejs:')) {
+            event.itemHeat(m.double_sheet, m.capacity * 4, m.work, m.weld)
+            event.itemSize(m.double_sheet, 'large', 'heavy')
+        }
+            
+        // Plate
+        if (m.plate != null) {
+            event.itemHeat(m.plate, m.capacity, m.work, m.weld)
+            event.itemSize(m.plate, 'large', 'medium')
+        }
+
+        // Gear
+        if (m.gear != null && m.gear_half != null) {
+            event.itemHeat(m.gear, m.capacity, m.work, m.weld)
+            event.itemHeat(m.gear_half, m.capacity, m.work, m.weld)
+            event.itemSize(m.gear, 'large', 'heavy')
+            event.itemSize(m.gear_half, 'large', 'medium')
+        }
+
+        // Nugget
+        if (m.nugget != null && m.nugget.startsWith('kubejs:')) {
+            event.itemHeat(m.nugget, m.capacity, m.work, m.weld)
+            event.itemSize(m.nugget, 'small', 'light')
+        }
+
+        // Dust
+        if (m.dust != null && m.dust.startsWith('kubejs:')) {
+            event.itemHeat(m.dust, m.capacity, m.work, m.weld)
+            event.itemSize(m.dust, 'normal', 'medium')
+        }
+
+        if (m.aiot != null) {
+            event.itemHeat(m.aiot, m.capacity * 6, m.work, m.weld)
+        }
+
+        if (m.pickaxe != null) {
+            event.itemHeat(m.pickaxe, m.capacity, m.work, m.weld)
+        }
+
+        if (m.axe != null) {
+            event.itemHeat(m.axe, m.capacity, m.work, m.weld)
+        }
+
+        if (m.shovel != null) {
+            event.itemHeat(m.shovel, m.capacity, m.work, m.weld)
+        }
+
+        if (m.hoe != null) {
+            event.itemHeat(m.hoe, m.capacity, m.work, m.weld)
+        }
+
+        if (m.knife != null) {
+            event.itemHeat(m.knife, m.capacity, m.work, m.weld)
+        }
+
+        if (m.sword != null) {
+            event.itemHeat(m.sword, m.capacity * 2, m.work, m.weld)
+        }
+
+        if (m.helmet != null && m.chestplate != null && m.greaves != null && m.boots != null) {
+            event.itemHeat(m.helmet, m.capacity * 6, m.work, m.weld)
+            event.itemHeat(m.chestplate, m.capacity * 8, m.work, m.weld)
+            event.itemHeat(m.greaves, m.capacity * 6, m.work, m.weld)
+            event.itemHeat(m.boots, m.capacity * 4, m.work, m.weld)
+        }
+
+        if (m.pickaxe_head != null) {
+            event.itemHeat(m.pickaxe_head, m.capacity, m.work, m.weld)
+        }
+
+        if (m.axe_head != null) {
+            event.itemHeat(m.axe_head, m.capacity, m.work, m.weld)
+        }
+
+        if (m.shovel_head != null) {
+            event.itemHeat(m.shovel_head, m.capacity, m.work, m.weld)
+        }
+
+        if (m.hoe_head != null) {
+            event.itemHeat(m.hoe_head, m.capacity, m.work, m.weld)
+        }
+
+        if (m.knife_blade != null) {
+            event.itemHeat(m.knife_blade, m.capacity, m.work, m.weld)
+        }
+
+        if (m.sword_blade != null) {
+            event.itemHeat(m.sword_blade, m.capacity * 2, m.work, m.weld)
+        }
+
+        if (m.unfinished_helmet != null && m.unfinished_chestplate != null && m.unfinished_greaves != null && m.unfinished_boots != null) {
+            event.itemHeat(m.unfinished_helmet, m.capacity * 4, m.work, m.weld)
+            event.itemHeat(m.unfinished_chestplate, m.capacity * 4, m.work, m.weld)
+            event.itemHeat(m.unfinished_greaves, m.capacity * 4, m.work, m.weld)
+            event.itemHeat(m.unfinished_boots, m.capacity * 2, m.work, m.weld)
         }
     }
 })
@@ -84,69 +136,138 @@ ServerEvents.tags('item', event => {
     for (const metal in global.metals) {
         let m = global.metals[metal]
 
-        if (m.new_metal) {
+        
+        if (m.ingot != null) {
             // If the item is NOT in #forge:ingots/<metal>, add it
             if (!Ingredient.of(`#forge:ingots/${metal}`).test(m.ingot)) {
                 event.add(`forge:ingots/${metal}`, m.ingot)
             }
+
             // If the item is NOT in #forge:ingots, add it
             if (!Ingredient.of(`#forge:ingots`).test(m.ingot)) {
                 event.add(`forge:ingots`, m.ingot)
             }
+
             // If the item is NOT in #tfc:pileable_ingots, add it
             if (!Ingredient.of(`#tfc:pileable_ingots`).test(m.ingot)) {
                 event.add(`tfc:pileable_ingots`, m.ingot)
             }
-        }
 
-        // Plate Loop
-        if (m.generate_plate) {
-            if (m.extra_tags) {
-                for (const t of m.extra_tags) {
-                    event.add(`forge:plates/${t}`, `kubejs:metal/plate/${metal}`)
-                }
+            // If the item is NOT in #tfc:metal_item/${metal}, add it
+            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.ingot)) {
+                event.add(`tfc:metal_item/${metal}`, m.ingot)
             }
         }
 
-        // Gear Loop
-        if (m.generate_gear) {
-            if (m.extra_tags) {
-                for (const t of m.extra_tags) {
-                    event.add(`forge:gears/${t}`, `kubejs:metal/gear/${metal}`)
-                    event.add(`forge:gear_halfs/${t}`, `kubejs:metal/gear/half/${metal}`)
-                }
+        if (m.nugget != null) {
+            // If the item is NOT in #forge:nuggets/<metal>, add it
+            if (!Ingredient.of(`#forge:nuggets/${metal}`).test(m.nugget)) {
+                event.add(`forge:nuggets/${metal}`, m.nugget)
+            }
+
+            // If the item is NOT in #forge:nuggets, add it
+            if (!Ingredient.of(`#forge:nuggets`).test(m.nugget)) {
+                event.add(`forge:nuggets`, m.nugget)
+            }
+
+            // If the item is NOT in #tfc:metal_item/${metal}, add it
+            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.nugget)) {
+                event.add(`tfc:metal_item/${metal}`, m.nugget)
             }
         }
 
-        // Nugget Loop
-        if (m.generate_nugget) {
-            if (m.extra_tags) {
-                for (const t of m.extra_tags) {
-                    event.add(`forge:nuggets/${t}`, `kubejs:metal/nugget/${metal}`)
-                }
+        if (m.dust != null) {
+            // If the item is NOT in #forge:dusts/<metal>, add it
+            if (!Ingredient.of(`#forge:dusts/${metal}`).test(m.dust)) {
+                event.add(`forge:dusts/${metal}`, m.dust)
+            }
+
+            // If the item is NOT in #forge:dusts, add it
+            if (!Ingredient.of(`#forge:dusts`).test(m.dust)) {
+                event.add(`forge:dusts`, m.dust)
+            }
+
+            // If the item is NOT in #tfc:metal_item/${metal}, add it
+            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.dust)) {
+                event.add(`tfc:metal_item/${metal}`, m.dust)
             }
         }
 
-        // Dust Loop
-        if (m.generate_dust) {
-            if (m.extra_tags) {
-                for (const t of m.extra_tags) {
-                    event.add(`forge:dusts/${t}`, `kubejs:metal/powder/${metal}`)
-                }
+        if (m.aiot != null) {
+            // If the item is NOT in #tfc:metal_item/${metal}, add it
+            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.aiot)) {
+                event.add(`tfc:metal_item/${metal}`, m.aiot)
             }
         }
-    }
-})
 
-ServerEvents.tags('fluid', event => { 
+        if (m.pickaxe != null) {
+            // If the item is NOT in #tfc:metal_item/${metal}, add it
+            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.pickaxe)) {
+                event.add(`tfc:metal_item/${metal}`, m.pickaxe)
+            }
+        }
 
-    // Metals need this tag to be castable
-    for (const metal in global.metals) {
-        let m = global.metals[metal]
+        if (m.axe != null) {
+            // If the item is NOT in #tfc:metal_item/${metal}, add it
+            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.axe)) {
+                event.add(`tfc:metal_item/${metal}`, m.axe)
+            }
+        }
 
-        if (m.new_metal){
-            event.add('tfc:molten_metals', m.fluid)
-            event.add('tfc:usable_in_ingot_mold', m.fluid)
+        if (m.shovel != null) {
+            // If the item is NOT in #tfc:metal_item/${metal}, add it
+            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.shovel)) {
+                event.add(`tfc:metal_item/${metal}`, m.shovel)
+            }
+        }
+
+        if (m.hoe != null) {
+            // If the item is NOT in #tfc:metal_item/${metal}, add it
+            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.hoe)) {
+                event.add(`tfc:metal_item/${metal}`, m.hoe)
+            }
+        }
+
+        if (m.sword != null) {
+            // If the item is NOT in #tfc:metal_item/${metal}, add it
+            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.sword)) {
+                event.add(`tfc:metal_item/${metal}`, m.sword)
+            }
+        }
+
+        if (m.shears != null) {
+            // If the item is NOT in #tfc:metal_item/${metal}, add it
+            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.shears)) {
+                event.add(`tfc:metal_item/${metal}`, m.shears)
+            }
+        }
+
+        if (m.helmet != null) {
+            // If the item is NOT in #tfc:metal_item/${metal}, add it
+            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.helmet)) {
+                event.add(`tfc:metal_item/${metal}`, m.helmet)
+            }
+        }
+
+        if (m.chestplate != null) {
+            // If the item is NOT in #tfc:metal_item/${metal}, add it
+            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.chestplate)) {
+                event.add(`tfc:metal_item/${metal}`, m.chestplate)
+            }
+        }
+
+        if (m.greaves != null) {
+            // If the item is NOT in #tfc:metal_item/${metal}, add it
+            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.greaves)) {
+                event.add(`tfc:metal_item/${metal}`, m.greaves)
+            }
+        }
+
+        if (m.boots != null) {
+            // If the item is NOT in #tfc:metal_item/${metal}, add it
+            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.boots)) {
+                event.add(`tfc:metal_item/${metal}`, m.boots)
+            }
         }
     }
 })
@@ -155,22 +276,21 @@ ServerEvents.recipes(event => {
     const tfc = event.recipes.tfc
     const create = event.recipes.create
 
-    // New Metal Loop
     for (const metal in global.metals) {
         let m = global.metals[metal]
 
-        if (m.new_metal){
-            // Ingots
+        // New Metals
+        if (m.is_custom) {
             if (m.ingot != null) {
-                event.recipes.tfc.casting(
-                    `#forge:ingots/${metal}`,
+                tfc.casting(
+                    m.ingot,
                     'tfc:ceramic/ingot_mold',
                     TFC.fluidStackIngredient(m.fluid, 100),
                     0.1
                 )
 
-                event.recipes.tfc.casting(
-                    `#forge:ingots/${metal}`,
+                tfc.casting(
+                    m.ingot,
                     'tfc:ceramic/fire_ingot_mold',
                     TFC.fluidStackIngredient(m.fluid, 100),
                     0.01
@@ -180,52 +300,228 @@ ServerEvents.recipes(event => {
                     .resultFluid(Fluid.of(m.fluid, 100))
             }
 
-            // Generates Sheets, Double Ingots and Double Sheets
-            if (m.generate_sheet || m.generate_armor || m.generate_basic_tool_heads) {
-                // Double Ingots
+            if (m.double_ingot != null && m.ingot != null) {
                 tfc.welding(
-                    TFC.itemStackProvider.of(`kubejs:metal/double_ingot/${metal}`).copyHeat(),
-                    Ingredient.of(`#forge:ingots/${metal}`),
-                    Ingredient.of(`#forge:ingots/${metal}`),
+                    TFC.itemStackProvider.of(m.double_ingot).copyHeat(),
+                    Ingredient.of(m.ingot),
+                    Ingredient.of(m.ingot),
                     m.tier
                 )
 
-                tfc.heating(`kubejs:metal/sheet/${metal}`, m.melt)
+                tfc.heating(m.double_ingot , m.melt)
                     .resultFluid(Fluid.of(m.fluid, 200))
+            }
 
-                // Double Sheets
-                tfc.welding(
-                    TFC.itemStackProvider.of(`kubejs:metal/double_sheet/${metal}`).copyHeat(),
-                    Ingredient.of(`kubejs:metal/sheet/${metal}`),
-                    Ingredient.of(`kubejs:metal/sheet/${metal}`),
-                    m.tier
-                )
-
-                tfc.heating(`kubejs:metal/double_ingot/${metal}`, m.melt)
-                    .resultFluid(Fluid.of(m.fluid, 200))
-
-                // Sheets
+            if (m.sheet != null && m.double_ingot != null) {
                 tfc.anvil(
-                    TFC.itemStackProvider.of(`kubejs:metal/sheet/${metal}`).copyHeat(),
-                    `kubejs:metal/double_ingot/${metal}`,
+                    TFC.itemStackProvider.of(m.sheet).copyHeat(),
+                    m.double_ingot,
                     [
                         'hit_third_last',
                         'hit_second_last',
                         'hit_last'
                     ]
-                ).tier(m.tier) 
+                ).tier(m.tier)
+                
+                tfc.heating(m.sheet, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 200))
+            }
 
-                tfc.heating(`kubejs:metal/double_sheet/${metal}`, m.melt)
+            if (m.double_sheet != null && m.sheet != null) {
+               tfc.welding(
+                    TFC.itemStackProvider.of(m.double_sheet).copyHeat(),
+                    Ingredient.of(m.sheet),
+                    Ingredient.of(m.sheet),
+                    m.tier
+                )
+
+                tfc.heating(m.double_sheet, m.melt)
                     .resultFluid(Fluid.of(m.fluid, 400))
             }
 
-            // Generates basic tool heads
-            // (Pickaxe, Axe, Shovel, Hoe and Sword)
-            if (m.generate_basic_tool_heads) {
-                // Pickaxe Heads
+            if (m.aiot != null) {
+                tfc.heating(m.aiot, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 600))
+                    .useDurability(true)
+            }
+            
+            if (m.pickaxe != null && m.pickaxe_head != null && m.tool_rod != null) {
+                event.remove({output: m.pickaxe})
+
+                event.shaped(
+                    Item.of(m.pickaxe),
+                    [
+                        'H',
+                        'S'
+                    ],
+                    {
+                        H: m.pickaxe_head,
+                        S: m.tool_rod,
+                    }
+                )
+
+                tfc.heating(m.pickaxe, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 100))
+                    .useDurability(true)
+            }
+
+            if (m.axe != null && m.axe_head != null && m.tool_rod != null) {
+                event.remove({output: m.axe})
+
+                event.shaped(
+                    Item.of(m.axe),
+                    [
+                        'H',
+                        'S'
+                    ],
+                    {
+                        H: m.axe_head,
+                        S: m.tool_rod,
+                    }
+                )
+
+                tfc.heating(m.axe, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 100))
+                    .useDurability(true)
+            }
+
+            if (m.shovel != null && m.shovel_head != null && m.tool_rod != null) {
+                event.remove({output: m.shovel})
+
+                event.shaped(
+                    Item.of(m.shovel),
+                    [
+                        'H',
+                        'S'
+                    ],
+                    {
+                        H: m.shovel_head,
+                        S: m.tool_rod,
+                    }
+                )
+                tfc.heating(m.shovel, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 100))
+                    .useDurability(true)
+            }
+
+            if (m.hoe != null && m.hoe_head != null && m.tool_rod != null) {
+                event.remove({output: m.hoe})
+
+                event.shaped(
+                    Item.of(m.hoe),
+                    [
+                        'H',
+                        'S'
+                    ],
+                    {
+                        H: m.hoe_head,
+                        S: m.tool_rod,
+                    }
+                )
+
+                tfc.heating(m.hoe, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 100))
+                    .useDurability(true)
+            }
+
+            if (m.sword != null && m.sword_blade != null && m.tool_rod != null) {
+                event.remove({output: m.sword})
+
+                event.shaped(
+                    Item.of(m.sword),
+                    [
+                        'H',
+                        'S'
+                    ],
+                    {
+                        H: m.sword_blade,
+                        S: m.tool_rod,
+                    }
+                )
+
+                tfc.heating(m.sword, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 200))
+                    .useDurability(true)
+            }
+
+            if (m.shears != null && m.knife_blade != null) {
+                event.remove({output: m.shears})
+
+                tfc.welding(
+                    TFC.itemStackProvider.of(m.shears).copyHeat(),
+                    Ingredient.of(m.knife_blade),
+                    Ingredient.of(m.knife_blade),
+                    m.tier
+                )
+
+                tfc.heating(m.shears, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 100))
+                    .useDurability(true)
+            }
+
+            if (m.helmet != null && m.unfinished_helmet != null && m.sheet != null) {
+                event.remove({output: m.helmet})
+
+                tfc.welding(
+                    TFC.itemStackProvider.of(m.helmet).copyHeat(),
+                    Ingredient.of(m.unfinished_helmet),
+                    Ingredient.of(m.sheet),
+                    m.tier
+                )
+
+                tfc.heating(m.helmet, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 600))
+                    .useDurability(true)
+            }
+
+            if (m.chestplate != null && m.unfinished_chestplate != null && m.double_sheet != null) {
+                event.remove({output: m.chestplate})
+
+                tfc.welding(
+                    TFC.itemStackProvider.of(m.chestplate).copyHeat(),
+                    Ingredient.of(m.unfinished_chestplate),
+                    Ingredient.of(m.double_sheet),
+                    m.tier
+                )
+
+                tfc.heating(m.chestplate, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 800))
+                    .useDurability(true)
+            }
+
+            if (m.greaves != null && m.unfinished_greaves != null && m.sheet != null) {
+                event.remove({output: m.greaves})
+                tfc.welding(
+                    TFC.itemStackProvider.of(m.greaves).copyHeat(),
+                    Ingredient.of(m.unfinished_greaves),
+                    Ingredient.of(m.sheet),
+                    m.tier
+                )
+
+                tfc.heating(m.greaves, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 600))
+                    .useDurability(true)
+            }
+
+            if (m.boots != null && m.unfinished_boots != null && m.sheet != null) {
+                event.remove({output: m.boots})
+
+                tfc.welding(
+                    TFC.itemStackProvider.of(m.boots).copyHeat(),
+                    Ingredient.of(m.unfinished_boots),
+                    Ingredient.of(m.sheet),
+                    m.tier
+                )
+
+                tfc.heating(m.boots, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 400))
+                    .useDurability(true)
+            }
+
+            if (m.pickaxe_head != null && m.ingot != null) {
                 tfc.anvil(
-                    TFC.itemStackProvider.of(`kubejs:metal/pickaxe_head/${metal}`).copyHeat(),
-                    `#forge:ingots/${metal}`,
+                    TFC.itemStackProvider.of(m.pickaxe_head).copyHeat(),
+                    m.ingot,
                     [
                         'punch_last',
                         'bend_not_last',
@@ -233,13 +529,14 @@ ServerEvents.recipes(event => {
                     ]
                 ).tier(m.tier)
 
-                tfc.heating(`kubejs:metal/pickaxe_head/${metal}`, m.melt)
+                tfc.heating(m.pickaxe_head, m.melt)
                     .resultFluid(Fluid.of(m.fluid, 100))
+            }
 
-                // Axe Heads
+            if (m.axe_head != null && m.ingot != null) {
                 tfc.anvil(
-                    TFC.itemStackProvider.of(`kubejs:metal/axe_head/${metal}`).copyHeat(),
-                    `#forge:ingots/${metal}`,
+                    TFC.itemStackProvider.of(m.axe_head).copyHeat(),
+                    m.ingot,
                     [
                         'punch_last',
                         'hit_second_last',
@@ -247,26 +544,28 @@ ServerEvents.recipes(event => {
                     ]
                 ).tier(m.tier)
 
-                tfc.heating(`kubejs:metal/axe_head/${metal}`, m.melt)
+                tfc.heating(m.axe_head, m.melt)
                     .resultFluid(Fluid.of(m.fluid, 100))
+            }
 
-                // Shovel Heads
-                tfc.anvil(
-                    TFC.itemStackProvider.of(`kubejs:metal/shovel_head/${metal}`).copyHeat(),
-                    `#forge:ingots/${metal}`,
+            if (m.shovel_head != null && m.ingot != null) {
+               tfc.anvil(
+                    TFC.itemStackProvider.of(m.shovel_head).copyHeat(),
+                    m.ingot,
                     [
                         'punch_last',
                         'hit_not_last'
                     ]
                 ).tier(m.tier)
 
-                tfc.heating(`kubejs:metal/shovel_head/${metal}`, m.melt)
+                tfc.heating(m.shovel_head, m.melt)
                     .resultFluid(Fluid.of(m.fluid, 100))
+            }
 
-                // Hoe Heads
+            if (m.hoe_head != null && m.ingot != null) {
                 tfc.anvil(
-                    TFC.itemStackProvider.of(`kubejs:metal/hoe_head/${metal}`).copyHeat(),
-                    `#forge:ingots/${metal}`,
+                    TFC.itemStackProvider.of(m.hoe_head).copyHeat(),
+                    m.ingot,
                     [
                         'punch_last',
                         'hit_not_last',
@@ -274,13 +573,14 @@ ServerEvents.recipes(event => {
                     ]
                 ).tier(m.tier)
 
-                tfc.heating(`kubejs:metal/hoe_head/${metal}`, m.melt)
+                tfc.heating(m.hoe_head, m.melt)
                     .resultFluid(Fluid.of(m.fluid, 100))
+            }
 
-                // Sword Blades
+            if (m.sword_blade != null && m.double_ingot != null) {
                 tfc.anvil(
-                    TFC.itemStackProvider.of(`kubejs:metal/sword_blade/${metal}`).copyHeat(),
-                    `#forge:double_ingots/${metal}`,
+                    TFC.itemStackProvider.of(m.sword_blade).copyHeat(),
+                    m.double_ingot,
                     [
                         'hit_last',
                         'bend_second_last',
@@ -288,15 +588,14 @@ ServerEvents.recipes(event => {
                     ]
                 ).tier(m.tier)
 
-                tfc.heating(`kubejs:metal/sword_blade/${metal}`, m.melt)
+                tfc.heating(m.sword_blade, m.melt)
                     .resultFluid(Fluid.of(m.fluid, 200))
             }
 
-            // Knife Blades
-            if (m.generate_knife_blade) {
+            if (m.knife_blade != null && m.ingot != null) {
                 tfc.anvil(
-                    TFC.itemStackProvider.of(`kubejs:metal/knife_blade/${metal}`).copyHeat(),
-                    `#forge:ingots/${metal}`,
+                    TFC.itemStackProvider.of(m.knife_blade).copyHeat(),
+                    m.ingot,
                     [
                         'hit_last',
                         'draw_second_last',
@@ -304,17 +603,14 @@ ServerEvents.recipes(event => {
                     ]
                 ).tier(m.tier)
 
-                tfc.heating(`kubejs:metal/knife_blade/${metal}`, m.melt)
+                tfc.heating(m.knife_blade, m.melt)
                     .resultFluid(Fluid.of(m.fluid, 100))
             }
 
-            // Generates Unfinished Helmets,
-            // Chestplates, Greaves and Boots
-            if (m.generate_armor) {
-                // Unfinished Helmets
+            if (m.unfinished_helmet != null && m.double_sheet != null) {
                 tfc.anvil(
-                    TFC.itemStackProvider.of(`kubejs:metal/unfinished_helmet/${metal}`).copyHeat(),
-                    `#forge:double_sheets/${metal}`,
+                    TFC.itemStackProvider.of(m.unfinished_helmet).copyHeat(),
+                    m.double_sheet,
                     [
                         'hit_last',
                         'bend_second_last',
@@ -322,13 +618,14 @@ ServerEvents.recipes(event => {
                     ]
                 ).tier(m.tier)
 
-                tfc.heating(`kubejs:metal/unfinished_helmet/${metal}`, m.melt)
+                tfc.heating(m.unfinished_helmet, m.melt)
                     .resultFluid(Fluid.of(m.fluid, 400))
+            }
 
-                // Unfinished Chestplates
+            if (m.unfinished_chestplate != null && m.double_sheet != null) {
                 tfc.anvil(
-                    TFC.itemStackProvider.of(`kubejs:metal/unfinished_chestplate/${metal}`).copyHeat(),
-                    `#forge:double_sheets/${metal}`,
+                    TFC.itemStackProvider.of(m.unfinished_chestplate).copyHeat(),
+                    m.double_sheet,
                     [
                         'bend_any',
                         'draw_any',
@@ -336,13 +633,14 @@ ServerEvents.recipes(event => {
                     ]
                 ).tier(m.tier)
 
-                tfc.heating(`kubejs:metal/unfinished_chestplate/${metal}`, m.melt)
+                tfc.heating(m.unfinished_chestplate, m.melt)
                     .resultFluid(Fluid.of(m.fluid, 400))
+            }
 
-                // Unfinished Greaves
+            if (m.unfinished_greaves != null && m.double_sheet != null) {
                 tfc.anvil(
-                    TFC.itemStackProvider.of(`kubejs:metal/unfinished_greaves/${metal}`).copyHeat(),
-                    `#forge:double_sheets/${metal}`,
+                    TFC.itemStackProvider.of(m.unfinished_greaves).copyHeat(),
+                    m.double_sheet,
                     [
                         'hit_last',
                         'hit_second_last',
@@ -350,13 +648,14 @@ ServerEvents.recipes(event => {
                     ]
                 ).tier(m.tier)
 
-                tfc.heating(`kubejs:metal/unfinished_greaves/${metal}`, m.melt)
+                tfc.heating(m.unfinished_greaves, m.melt)
                     .resultFluid(Fluid.of(m.fluid, 400))
+            }
 
-                // Unfinished Boots
+            if (m.unfinished_boots != null && m.sheet != null) {
                 tfc.anvil(
-                    TFC.itemStackProvider.of(`kubejs:metal/unfinished_boots/${metal}`).copyHeat(),
-                    `#forge:sheets/${metal}`,
+                    TFC.itemStackProvider.of(m.unfinished_boots).copyHeat(),
+                    m.sheet,
                     [
                         'bend_last',
                         'bend_second_last',
@@ -364,96 +663,56 @@ ServerEvents.recipes(event => {
                     ]
                 ).tier(m.tier)
 
-                tfc.heating(`kubejs:metal/unfinished_boots/${metal}`, m.melt)
+                tfc.heating(m.unfinished_boots, m.melt)
                     .resultFluid(Fluid.of(m.fluid, 200))
             }
         }
     }
 
-    // Plate Loop
     for (const metal in global.metals) {
         let m = global.metals[metal]
-
-        // Remove ONLY crafting table recipes that output any ingot
-        // defined in global.metals
-        let ingots = Ingredient.of(`#forge:ingots/${metal}`).getItemIds();
-        for (let item of ingots) {
-            const types = ['crafting_shaped', 'crafting_shapeless', 'blasting', 'smelting']
-            for (const t of types) {
-                event.remove({ 
-                    output: item,
-                    type: `minecraft:${t}`
-                })
-            }
-        }
-
-        // Plate Loop
-        if (m.generate_plate) {
-            let items = Ingredient.of(`#forge:plates/${metal}`).getItemIds();
-            // Remove ALL recipes that output any duplicate plate
-            for (let id of items) {
-                event.remove({output: id});
-            }
-            if (m.extra_tags) {
-                for (let t of m.extra_tags) {
-                    let extraItems = Ingredient.of(`#forge:plates/${t}`).getItemIds();
-                    for (let id of extraItems) {
-                        event.remove({output: id});
-                    }
-                }
-            }
-
-            tfc.heating(`kubejs:metal/plate/${metal}`, m.melt)
+        
+        // Plates
+        if (m.plate != null && m.ingot != null && m.fluid != null) {
+            tfc.heating(m.plate, m.melt)
                 .resultFluid(Fluid.of(m.fluid, 100))
 
             tfc.anvil(
-                TFC.itemStackProvider.of(`kubejs:metal/plate/${metal}`).copyHeat(),
-                `#forge:ingots/${metal}`,
+                TFC.itemStackProvider.of(m.plate).copyHeat(),
+                m.ingot,
                 [
                     'hit_third_last',
                     'hit_second_last',
                     'hit_last'
                 ]).tier(m.tier)
-            create.pressing(`kubejs:metal/plate/${metal}`, `#forge:ingots/${metal}`)
+
+            create.pressing(m.plate, m.ingot)
+
             event.custom({
                 type: "immersiveengineering:metal_press",
                 energy: 1600,
                 input: {
-                    'base_ingredient': {
-                        tag: `forge:ingots/${metal}`,
+                    base_ingredient: {
+                        item: m.ingot,
                     }
                 },
                 mold: "immersiveengineering:mold_plate",
                 result: {
-                    item: `kubejs:metal/plate/${metal}`
+                    item: m.plate
                 }
             })
         }
 
-        // Gear Loop
-        if (m.generate_gear) {
-            // Remove ALL recipes that output any duplicate gear
-            let items = Ingredient.of(`#forge:gears/${metal}`).getItemIds();
-            for (let id of items) {
-                event.remove({output: id});
-            }
-            if (m.extra_tags) {
-                for (let t of m.extra_tags) {
-                    let extraItems = Ingredient.of(`#forge:gears/${t}`).getItemIds();
-                    for (let id of extraItems) {
-                        event.remove({output: id});
-                    }
-                }
-            }
-            
-            tfc.heating(`kubejs:metal/gear/${metal}`, m.melt)
+        // Gears
+        if (m.gear != null && m.gear_half != null && m.ingot != null && m.double_ingot != null && m.fluid != null) {       
+            tfc.heating(m.gear, m.melt)
                 .resultFluid(Fluid.of(m.fluid, 400))
-            tfc.heating(`kubejs:metal/gear/half/${metal}`, m.melt)
+            tfc.heating(m.gear_half, m.melt)
                 .resultFluid(Fluid.of(m.fluid, 200))
 
             tfc.anvil(
-                TFC.itemStackProvider.of(`kubejs:metal/gear/half/${metal}`).copyHeat(),
-                `#forge:double_ingots/${metal}`,
+                TFC.itemStackProvider.of(m.gear_half).copyHeat(),
+                m.double_ingot,
                 [
                     'upset_any',
                     'draw_any',
@@ -461,9 +720,9 @@ ServerEvents.recipes(event => {
                 ]).tier(m.tier)
 
             tfc.welding(
-                TFC.itemStackProvider.of(`kubejs:metal/gear/${metal}`).copyHeat(),
-                Ingredient.of(`#forge:gear_halfs/${metal}`),
-                Ingredient.of(`#forge:gear_halfs/${metal}`),
+                TFC.itemStackProvider.of(m.gear).copyHeat(),
+                Ingredient.of(m.gear_half),
+                Ingredient.of(m.gear_half),
                 m.tier
             )
 
@@ -472,73 +731,73 @@ ServerEvents.recipes(event => {
                 energy: 6400,
                 input: {
                     'base_ingredient': {
-                        tag: `forge:ingots/${metal}`,
+                        item: m.ingot,
                     },
                     count: 4
                 },
                 mold: "immersiveengineering:mold_gear",
                 result: {
-                    item: `kubejs:metal/gear/${metal}`
+                    item: m.gear
                 }
             })
         }
 
-        // Nugget Loop
-        if (m.generate_nugget || m.nugget != null) {
-            // Remove ALL recipes that output any duplicate nugget
-            let nuggets = Ingredient.of(`#forge:nuggets/${metal}`).getItemIds();
-            for (let item of nuggets) {
-                event.remove({output: item});
-            }
-
-            if (m.extra_tags) {
-                for (let t of m.extra_tags) {
-                    let extraItems = Ingredient.of(`#forge:nuggets/${t}`).getItemIds();
-                    for (let id of extraItems) {
-                        event.remove({output: id});
-                    }
-                }
-            }
-
-            let nugget = m.nugget == null ? `kubejs:metal/nugget/${metal}` : m.nugget
-
-            tfc.heating(nugget, m.melt)
+        // Nuggets
+        if (m.nugget != null && m.ingot != null  && m.fluid != null) {
+            tfc.heating(m.nugget, m.melt)
                 .resultFluid(Fluid.of(m.fluid, 10))
 
             event.shapeless(
-                Item.of(nugget, 10),
+                Item.of(m.nugget, 10),
                 [
-                    `#forge:ingots/${metal}`,
+                    m.ingot,
                     '#tfc:hammers'
                 ]
             ).damageIngredient('#tfc:hammers')
         }
 
-        if (m.generate_dust) {
-            // Remove ALL recipes that output any duplicate dust
-            let dusts = Ingredient.of(`#forge:dusts/${metal}`).getItemIds();
-            for (let item of dusts) {
-                event.remove({output: item})
-            }
-
-            tfc.quern(Item.of(`kubejs:metal/powder/${metal}`), `#forge:ingots/${metal}`)
-
-            create.milling(OutputItem.of(`kubejs:metal/powder/${metal}`), InputItem.of(`#forge:ingots/${metal}`))
-            create.crushing(OutputItem.of(`kubejs:metal/powder/${metal}`), InputItem.of(`#forge:ingots/${metal}`))
+        // Dusts
+        if (m.dust != null && m.ingot != null  && m.fluid != null) {
+            event.custom({
+                type: 'railcraft:crusher',
+                ingredient: {
+                    item: m.ingot
+                },
+                outputs: [
+                    {
+                        probability: 1.0,
+                        result: {
+                            item: m.dust
+                        }
+                    }
+                ]
+            })
 
             event.custom({
                 type: "immersiveengineering:crusher",
                 energy: 3000,
                 input: {
-                    tag: `forge:ingots/${metal}`
+                    item: m.ingot
                 },
                 result: {
-                    item: `kubejs:metal/powder/${metal}`
+                    item: m.dust
                 },
                 secondaries: []
             })
 
-            tfc.heating(`kubejs:metal/powder/${metal}`, m.melt)
+            event.custom({
+                type: 'mekanism:crushing',
+                input: {
+                    ingredient: {
+                        item: m.ingot
+                    }
+                },
+                output: {
+                    item: m.dust
+                }
+            })
+
+            tfc.heating(m.dust, m.melt)
                 .resultFluid(Fluid.of(m.fluid, 100))
         }
     }

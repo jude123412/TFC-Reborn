@@ -18,34 +18,6 @@ ServerEvents.recipes(event => {
     event.remove({id: 'aiotbotania:livingwood_shovel'})
     event.remove({id: 'aiotbotania:livingwood_sword'})
 
-    // Terra Hoe
-    event.remove({id: 'aiotbotania:terra_hoe'})
-    event.shaped(
-        Item.of('aiotbotania:terra_hoe'),
-        [
-            'H',
-            'S'
-        ],
-        {
-            H: 'kubejs:metal/hoe_head/terrasteel',
-            S: 'botania:livingwood_twig',
-        }
-    )
-
-    // Terra Spade
-    event.remove({id: 'aiotbotania:terra_shovel'})
-    event.shaped(
-        Item.of('aiotbotania:terra_shovel'),
-        [
-            'H',
-            'S'
-        ],
-        {
-            H: 'kubejs:metal/shovel_head/terrasteel',
-            S: 'botania:livingwood_twig',
-        }
-    )
-
     // Floating White Flower
     event.replaceInput(
         {id: 'botania:white_floating_flower'},
