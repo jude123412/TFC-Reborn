@@ -40,6 +40,14 @@ ServerEvents.recipes(event => {
     event.remove({id: 'vintage:pressing/refined_glowstone_ingot'})
     event.remove({id: 'vintage:pressing/refined_obsidian_ingot'})
     event.remove({id: 'vintage:pressing/osmium_ingot'})
+    event.remove({id: 'vintage:pressing/silver_ingot'})
+    event.remove({id: 'vintage:pressing/pig_iron_ingot'})
+    event.remove({id: 'vintage:pressing/invar_ingot'})
+    event.remove({id: 'vintage:pressing/rose_gold_ingot'})
+    event.remove({id: 'vintage:pressing/constantan_ingot'})
+    event.remove({id: 'vintage:pressing/nickel_ingot'})
+    event.remove({id: 'vintage:pressing/refined_radiance'})
+    event.remove({id: 'vintage:pressing/shadow_steel'})
 
     // Recipe Removal by output
     event.remove({output: 'createdieselgenerators:wood_chip'})

@@ -312,21 +312,6 @@ ServerEvents.recipes(event => {
                     .resultFluid(Fluid.of(m.fluid, 200))
             }
 
-            if (m.sheet != null && m.double_ingot != null) {
-                tfc.anvil(
-                    TFC.itemStackProvider.of(m.sheet).copyHeat(),
-                    m.double_ingot,
-                    [
-                        'hit_third_last',
-                        'hit_second_last',
-                        'hit_last'
-                    ]
-                ).tier(m.tier)
-                
-                tfc.heating(m.sheet, m.melt)
-                    .resultFluid(Fluid.of(m.fluid, 200))
-            }
-
             if (m.double_sheet != null && m.sheet != null) {
                tfc.welding(
                     TFC.itemStackProvider.of(m.double_sheet).copyHeat(),
@@ -671,12 +656,71 @@ ServerEvents.recipes(event => {
 
     for (const metal in global.metals) {
         let m = global.metals[metal]
+
+        // Sheets
+        if (m.sheet != null && m.double_ingot != null && m.fluid != null) {
+            event.remove({output: m.sheet})
+            
+            tfc.anvil(
+                TFC.itemStackProvider.of(m.sheet).copyHeat(),
+                m.double_ingot,
+                [
+                    'hit_third_last',
+                    'hit_second_last',
+                    'hit_last'
+                ]
+            ).tier(m.tier)
+
+            event.custom({
+                type: 'railcraft:rolling',
+                key: {
+                    A: {
+                        item: m.double_ingot
+                    }
+                },
+                pattern: [
+                    "AA"
+                ],
+                result: {
+                    count: 2,
+                    item: m.sheet
+                }
+            })
+
+            event.custom({
+                type: 'immersiveengineering:metal_press',
+                energy: 1600,
+                input: {
+                    'base_ingredient': {
+                        item: m.double_ingot,
+                    }
+                },
+                mold: 'tfc_ie_addon:mold_sheet',
+                result: {
+                    item: m.sheet
+                }
+            })
+
+            event.custom({
+                type: 'rosia:rolling_machine',
+                ingredients:[
+                    {
+                        item: m.double_ingot
+                    }
+                ],
+                output: {
+                    item: m.sheet
+                }
+            })
+            
+            if (m.sheet.startsWith('kubejs:')) {
+                tfc.heating(m.sheet, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 200))
+            }
+        }
         
         // Plates
         if (m.plate != null && m.ingot != null && m.fluid != null) {
-            tfc.heating(m.plate, m.melt)
-                .resultFluid(Fluid.of(m.fluid, 100))
-
             tfc.anvil(
                 TFC.itemStackProvider.of(m.plate).copyHeat(),
                 m.ingot,
@@ -687,6 +731,22 @@ ServerEvents.recipes(event => {
                 ]).tier(m.tier)
 
             create.pressing(m.plate, m.ingot)
+
+            event.custom({
+                type: 'railcraft:rolling',
+                key: {
+                    A: {
+                        item: m.ingot
+                    }
+                },
+                pattern: [
+                    "AA"
+                ],
+                result: {
+                    count: 2,
+                    item: m.plate
+                }
+            })
 
             event.custom({
                 type: "immersiveengineering:metal_press",
@@ -701,6 +761,21 @@ ServerEvents.recipes(event => {
                     item: m.plate
                 }
             })
+
+            event.custom({
+                type: 'rosia:rolling_machine',
+                ingredients:[
+                    {
+                        item: m.ingot
+                    }
+                ],
+                output: {
+                    item: m.plate
+                }
+            })
+
+            tfc.heating(m.plate, m.melt)
+                .resultFluid(Fluid.of(m.fluid, 100))
         }
 
         // Gears

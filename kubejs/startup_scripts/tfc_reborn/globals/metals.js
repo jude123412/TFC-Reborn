@@ -10,8 +10,8 @@ global.metals = {
         fluid: 'firmalife:metal/chromium',
 
         ingot: null,
-        double_ingot: null,
-        sheet: null,
+        double_ingot: 'firmalife:metal/double_ingot/chromium',
+        sheet: 'firmalife:metal/sheet/chromium',
         double_sheet: null,
         
         nugget: null,
@@ -57,8 +57,8 @@ global.metals = {
         fluid: 'firmalife:metal/stainless_steel',
 
         ingot: null,
-        double_ingot: null,
-        sheet: null,
+        double_ingot: 'firmalife:metal/double_ingot/stainless_steel',
+        sheet: 'firmalife:metal/sheet/stainless_steel',
         double_sheet: null,
         
         nugget: null,
@@ -104,8 +104,8 @@ global.metals = {
         fluid: 'tfc_ie_addon:metal/electrum',
 
         ingot: 'immersiveengineering:ingot_electrum',
-        double_ingot: null,
-        sheet: null,
+        double_ingot: 'tfc_ie_addon:metal/double_ingot/electrum',
+        sheet: 'tfc_ie_addon:metal/sheet/electrum',
         double_sheet: null,
 
         nugget: 'immersiveengineering:nugget_electrum',
@@ -151,8 +151,8 @@ global.metals = {
         fluid: 'tfc_ie_addon:metal/constantan',
 
         ingot: 'immersiveengineering:ingot_constantan',
-        double_ingot: null,
-        sheet: null,
+        double_ingot: 'tfc_ie_addon:metal/double_ingot/constantan',
+        sheet: 'tfc_ie_addon:metal/sheet/constantan',
         double_sheet: null,
 
         nugget: 'immersiveengineering:nugget_constantan',
@@ -198,8 +198,8 @@ global.metals = {
         fluid: 'tfc_ie_addon:metal/aluminum',
 
         ingot: 'immersiveengineering:ingot_aluminum',
-        double_ingot: null,
-        sheet: null,
+        double_ingot: 'tfc_ie_addon:metal/double_ingot/aluminum',
+        sheet: 'tfc_ie_addon:metal/sheet/aluminum',
         double_sheet: null,
 
         nugget: 'immersiveengineering:nugget_aluminum',
@@ -246,7 +246,7 @@ global.metals = {
 
         ingot: 'immersiveengineering:ingot_lead',
         double_ingot: 'tfc_ie_addon:metal/double_ingot/lead',
-        sheet: null,
+        sheet: 'tfc_ie_addon:metal/sheet/lead',
         double_sheet: null,
 
         nugget: 'immersiveengineering:nugget_lead',
@@ -292,8 +292,8 @@ global.metals = {
         fluid: 'tfc_ie_addon:metal/uranium',
 
         ingot: 'immersiveengineering:ingot_uranium',
-        double_ingot: null,
-        sheet: null,
+        double_ingot: 'tfc_ie_addon:metal/double_ingot/uranium',
+        sheet: 'tfc_ie_addon:metal/sheet/uranium',
         double_sheet: null,
 
         nugget: 'immersiveengineering:nugget_uranium',
@@ -339,8 +339,8 @@ global.metals = {
         fluid: 'tfc:metal/bismuth',
 
         ingot: null,
-        double_ingot: null,
-        sheet: null,
+        double_ingot: 'tfc:metal/double_ingot/bismuth',
+        sheet: 'tfc:metal/sheet/bismuth',
         double_sheet: null,
 
         nugget: null,
@@ -386,8 +386,8 @@ global.metals = {
         fluid: 'tfc:metal/bismuth',
 
         ingot: null,
-        double_ingot: null,
-        sheet: null,
+        double_ingot: 'tfc:metal/double_ingot/bismuth_bronze',
+        sheet: 'tfc:metal/sheet/bismuth_bronze',
         double_sheet: null,
 
         nugget: null,
@@ -433,8 +433,8 @@ global.metals = {
         fluid: 'tfc:metal/bismuth',
 
         ingot: null,
-        double_ingot: null,
-        sheet: null,
+        double_ingot: 'tfc:metal/double_ingot/black_bronze',
+        sheet: 'tfc:metal/sheet/black_bronze',
         double_sheet: null,
 
         nugget: null,
@@ -481,7 +481,7 @@ global.metals = {
 
         ingot: 'tfc:metal/ingot/bronze',
         double_ingot: 'tfc:metal/double_ingot/bronze',
-        sheet: null,
+        sheet: 'tfc:metal/sheet/bronze',
         double_sheet: null,
 
         nugget: 'mekanism:nugget_bronze',
@@ -528,7 +528,7 @@ global.metals = {
 
         ingot: 'tfc:metal/ingot/brass',
         double_ingot: 'tfc:metal/double_ingot/brass',
-        sheet: null,
+        sheet: 'tfc:metal/sheet/brass',
         double_sheet: null,
 
         nugget: 'create:brass_nugget',
@@ -575,7 +575,7 @@ global.metals = {
 
         ingot: 'tfc:metal/ingot/copper',
         double_ingot: 'tfc:metal/double_ingot/copper',
-        sheet: null,
+        sheet: 'tfc:metal/sheet/copper',
         double_sheet: null,
         
         nugget: 'immersiveengineering:nugget_copper',
@@ -622,7 +622,7 @@ global.metals = {
 
         ingot: 'tfc:metal/ingot/gold',
         double_ingot: 'tfc:metal/double_ingot/gold',
-        sheet: null,
+        sheet: 'tfc:metal/sheet/gold',
         double_sheet: null,
 
         nugget: 'minecraft:gold_nugget',
@@ -669,7 +669,7 @@ global.metals = {
 
         ingot: 'tfc:metal/ingot/nickel',
         double_ingot: 'tfc:metal/double_ingot/nickel',
-        sheet: null,
+        sheet: 'tfc:metal/sheet/nickel',
         double_sheet: null,
 
         nugget: 'immersiveengineering:nugget_nickel',
@@ -715,8 +715,8 @@ global.metals = {
         fluid: 'tfc:metal/rose_gold',
 
         ingot: null,
-        double_ingot: null,
-        sheet: null,
+        double_ingot: 'tfc:metal/double_ingot/rose_gold',
+        sheet: 'tfc:metal/sheet/rose_gold',
         double_sheet: null,
 
         nugget: null,
@@ -763,7 +763,7 @@ global.metals = {
 
         ingot: 'tfc:metal/ingot/silver',
         double_ingot: 'tfc:metal/double_ingot/silver',
-        sheet: null,
+        sheet: 'tfc:metal/sheet/silver',
         double_sheet: null,
 
         nugget: 'immersiveengineering:nugget_silver',
@@ -810,7 +810,7 @@ global.metals = {
 
         ingot: 'tfc:metal/ingot/tin',
         double_ingot: 'tfc:metal/double_ingot/tin',
-        sheet: null,
+        sheet: 'tfc:metal/sheet/tin',
         double_sheet: null,
 
         nugget: null,
@@ -857,7 +857,7 @@ global.metals = {
 
         ingot: 'tfc:metal/ingot/zinc',
         double_ingot: 'tfc:metal/double_ingot/zinc',
-        sheet: null,
+        sheet: 'tfc:metal/sheet/zinc',
         double_sheet: null,
 
         nugget: 'create:zinc_nugget',
@@ -903,8 +903,8 @@ global.metals = {
         fluid: 'tfc:metal/sterling_silver',
 
         ingot: null,
-        double_ingot: null,
-        sheet: null,
+        double_ingot: 'tfc:metal/double_ingot/sterling_silver',
+        sheet: 'tfc:metal/sheet/sterling_silver',
         double_sheet: null,
 
         nugget: null,
@@ -951,7 +951,7 @@ global.metals = {
 
         ingot: 'tfc:metal/ingot/wrought_iron',
         double_ingot: 'tfc:metal/double_ingot/wrought_iron',
-        sheet: null,
+        sheet: 'tfc:metal/sheet/wrought_iron',
         double_sheet: null,
 
         nugget: 'minecraft:iron_nugget',
@@ -997,8 +997,8 @@ global.metals = {
         fluid: 'tfc:metal/cast_iron',
 
         ingot: null,
-        double_ingot: null,
-        sheet: null,
+        double_ingot: 'tfc:metal/double_ingot/cast_iron',
+        sheet: 'tfc:metal/sheet/cast_iron',
         double_sheet: null,
 
         nugget: null,
@@ -1045,7 +1045,7 @@ global.metals = {
 
         ingot: 'tfc:metal/ingot/steel',
         double_ingot: 'tfc:metal/double_ingot/steel',
-        sheet: null,
+        sheet: 'tfc:metal/sheet/steel',
         double_sheet: null,
 
         nugget: 'immersiveengineering:nugget_steel',
@@ -1091,8 +1091,8 @@ global.metals = {
         fluid: 'tfc:metal/black_steel',
 
         ingot: null,
-        double_ingot: null,
-        sheet: null,
+        double_ingot: 'tfc:metal/double_ingot/black_steel',
+        sheet: 'tfc:metal/sheet/black_steel',
         double_sheet: null,
 
         nugget: null,
@@ -1138,8 +1138,8 @@ global.metals = {
         fluid: 'tfc:metal/blue_steel',
 
         ingot: null,
-        double_ingot: null,
-        sheet: null,
+        double_ingot: 'tfc:metal/double_ingot/blue_steel',
+        sheet: 'tfc:metal/sheet/blue_steel',
         double_sheet: null,
 
         nugget: null,
@@ -1185,8 +1185,8 @@ global.metals = {
         fluid: 'tfc:metal/red_steel',
 
         ingot: 'tfc:metal/ingot/red_steel',
-        double_ingot: null,
-        sheet: null,
+        double_ingot: 'tfc:metal/double_ingot/red_steel',
+        sheet: 'tfc:metal/sheet/red_steel',
         double_sheet: null,
 
         nugget: null,
@@ -1233,7 +1233,7 @@ global.metals = {
 
         ingot: 'rosia:invar_ingot',
         double_ingot: 'rosia:invar_double_ingot',
-        sheet: null,
+        sheet: 'rosia:invar_sheet',
         double_sheet: null,
 
         nugget: null,
@@ -1276,11 +1276,11 @@ global.metals = {
         weld: 1300,
         color: null,
         is_custom: false,
-        fluid: 'firmalife:metal/chromium',
+        fluid: 'rosia:purple_steel_fluid',
 
         ingot: null,
-        double_ingot: null,
-        sheet: null,
+        double_ingot: 'rosia:purple_steel_double_ingot',
+        sheet: 'rosia:purple_steel_sheet',
         double_sheet: null,
 
         nugget: null,

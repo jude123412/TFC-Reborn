@@ -287,4 +287,5 @@ JEIEvents.hideItems(event => {
     event.hide('vintage:refined_glowstone_sheet')
     event.hide('vintage:refined_obsidian_sheet')
     event.hide('vintage:osmium_sheet')
+    event.hide('steampowered:bronze_sheet')
 })
