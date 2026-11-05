@@ -107,20 +107,9 @@ ServerEvents.recipes(event => {
     event.stonecutting('immersiveengineering:coke', '#forge:storage_blocks/coal_coke')
     event.stonecutting('railcraft:coal_coke_block', '#forge:storage_blocks/coal_coke')
     event.stonecutting('kubejs:coal_coke_block', '#forge:storage_blocks/coal_coke')
-    event.custom({
-        type: 'immersiveengineering:metal_press',
-        energy: 14400,
-        input: {
-            'base_ingredient': {
-                tag: 'forge:coal_coke',
-            },
-            count: 9
-        },
-        mold: 'tfc_ie_addon:mold_block',
-        result: {
-            item: 'kubejs:coal_coke_block'
-        }
-    })
+    event.shapeless('kubejs:coal_coke_block', [
+        '9x #forge:coal_coke'
+    ])
 
     // Iron Sawblade
     tfc.anvil(
