@@ -209,6 +209,9 @@ ClientEvents.lang('en_us', event => {
     
     // Blocks
     event.add('block.kubejs.coal_coke_block', 'Block of Coal Coke')
+    event.add('block.kubejs.insulator.unfired_ceramic', 'Unfired Ceramic Insulator')
+    event.add('block.kubejs.insulator.ceramic', 'Ceramic Insulator')
+    event.add('block.kubejs.insulator.glass', 'Glass Insulator')
 
     // Support
     event.add('block.kubejs.wood.support.livingwood', 'Livingwood Support')
