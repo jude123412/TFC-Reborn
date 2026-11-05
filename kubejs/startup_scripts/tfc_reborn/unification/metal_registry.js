@@ -157,13 +157,14 @@ StartupEvents.registry('fluid', event => {
 	for(const metal in global.metals) {
 		let m = global.metals[metal]
 
-		
-		global.createIfNeeded(m.fluid, () => {
-			event.create(`metal/${metal}`)
-				.thickTexture(m.color)
-				.bucketColor(m.color)
-				.tag('tfc:molten_metals')
-				.tag('tfc:usable_in_ingot_mold')
-		})
+		if (m.fluid != null && m.color != null) {
+			global.createIfNeeded(m.fluid, () => {
+				event.create(`metal/${metal}`)
+					.thickTexture(m.color)
+					.bucketColor(m.color)
+					.tag('tfc:molten_metals')
+					.tag('tfc:usable_in_ingot_mold')
+			})
+		}
 	}
 })
