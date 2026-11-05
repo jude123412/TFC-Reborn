@@ -1,0 +1,11 @@
+{
+    "parent":"minecraft:block/block",
+    "automatic_culling":false,
+    "flip_v":true,
+    "loader":"forge:obj",
+    "model":"immersiveengineering:models/block/connector/connector_lv.obj",
+    "textures":{
+        "particle":"kubejs:block/insulator/unfired_ceramic",
+        "texture":"kubejs:block/insulator/unfired_ceramic"
+    }
+}

@@ -1,0 +1,50 @@
+StartupEvents.registry('block', event => {
+
+    // Block of Coal Coke
+    event.create('coal_coke_block')
+        .textureAll('kubejs:block/coal_coke')
+        .stoneSoundType()
+        .hardness(5)
+        .resistance(6)
+        .requiresTool(true)
+        .tagBlock('minecraft:mineable/pickaxe')
+        .tagItem('tfc:forge_fuel')
+        .tagItem('rosia:fire_box_fuel')
+        .tagItem('forge:storage_blocks')
+        .tagItem('forge:storage_blocks/coal_coke')
+
+    // Unfired Insulator
+    event.create('insulator/unfired_ceramic')
+        .gravelSoundType()
+        .hardness(0.6)
+        .resistance(0.5)
+        .fullBlock(false)
+        .notSolid()
+        .box(5, 0, 5, 11, 8, 11)
+        .tagBlock('minecraft:mineable/shovel')
+    
+    // Insulator
+    event.create('insulator/ceramic')
+        .stoneSoundType()
+        .hardness(1.5)
+        .resistance(6)
+        .requiresTool(true)
+        .fullBlock(false)
+        .notSolid()
+        .box(5, 0, 5, 11, 8, 11)
+        .requiresTool(true)
+        .tagBlock('minecraft:mineable/pickaxe')
+
+    // Glass Insulator
+    event.create('insulator/glass')
+        .glassSoundType()
+        .hardness(1.5)
+        .resistance(6)
+        .requiresTool(true)
+        .fullBlock(false)
+        .notSolid()
+        .renderType('translucent')
+        .box(5, 0, 5, 11, 14, 11)
+        .requiresTool(true)
+        .tagBlock('minecraft:mineable/pickaxe')
+})

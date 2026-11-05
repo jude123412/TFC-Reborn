@@ -1,0 +1,47 @@
+
+[engines]
+	#Whether Stirling Engines explode when they overheat.
+	stirlingExplosion = false
+
+[worldgen]
+
+	[worldgen.oil]
+		#Should oil lakes, wells and spouts generate naturally?
+		enable = true
+		#Can oil blocks burn?
+		can_burn = true
+		#Should oil slow entities moving through it?
+		oilIsDense = false
+		#Comma-separated biome registry names that must never generate oil.
+		#This blacklist has priority over biomeWhitelist and datapack settings.
+		biomeBlacklist = ""
+		#Comma-separated biome registry names that may generate oil.
+		#Leave empty to allow every biome that is not blacklisted.
+		biomeWhitelist = ""
+		#Comma-separated dimension registry names that must never generate oil.
+		#This blacklist has priority over dimensionWhitelist.
+		dimensionBlacklist = ""
+		#Optional hard allow-list applied after API 2 worldgen rule matching.
+		#Leave empty to let registered BuildCraft worldgen rules decide the dimensions. Blacklist entries always win.
+		dimensionWhitelist = ""
+
+	[worldgen.worldgen]
+
+		[worldgen.worldgen.oil]
+
+			[worldgen.worldgen.oil.spouts]
+				#Whether oil spouts are generated. The oil spring below a large deposit is unaffected.
+				enable = true
+				#The minimum height of a small oil spout.
+				#Range: 0 ~ 256
+				small_min_height = 6
+				#The maximum height of a small oil spout.
+				#Range: 0 ~ 256
+				small_max_height = 12
+				#The minimum height of a large oil spout.
+				#Range: 0 ~ 256
+				large_min_height = 10
+				#The maximum height of a large oil spout.
+				#Range: 0 ~ 256
+				large_max_height = 20
+

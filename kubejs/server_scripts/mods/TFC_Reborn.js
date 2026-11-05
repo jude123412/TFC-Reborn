@@ -1,0 +1,205 @@
+TFCEvents.data(event => {
+    // Loose Andesite Rock
+    event.itemHeat('tfc:rock/loose/andesite', 5.714, 900, 1100)
+
+    // Left Elytra Wing
+    event.itemHeat('kubejs:elytra/left_wing', 8.332, 910, 1200)
+
+    // Right Elytra Wing
+    event.itemHeat('kubejs:elytra/right_wing', 8.332, 910, 1200)
+
+    // Unfired Refactory Brick
+    event.itemHeat('kubejs:unfired_refactory_brick', 2.332, null, null)
+
+    // Coal Coke
+    event.fuel('kubejs:coal_coke', 1550, 3300, null)
+
+    // Block of Coal Coke
+    event.fuel('kubejs:coal_coke_block', 1550, 33000, null)
+
+    // Refactory Bricks
+    // Used for RC and IE Coke/Blast Furnaces
+    event.knappingType(
+        'kubejs:refactory_clay',
+        5,
+        5,
+        'tfc:item.knapping.clay',
+        true,
+        true,
+        false,
+        'kubejs:refactory_clay',
+        'kubejs:refactory_clay'
+    )
+})
+
+ServerEvents.recipes(event => {
+    const tfc = event.recipes.tfc
+    const mekanism = event.recipes.mekanism
+    const create = event.recipes.create
+
+    // Molten Andesite
+    tfc.heating('tfc:rock/loose/andesite', 1450)
+        .resultFluid(Fluid.of('kubejs:metal/andesite', 100))
+
+    // Andesite Alloy
+    tfc.alloy(
+        'kubejs:andesite_alloy',
+        [
+            TFC.alloyPart('kubejs:andesite', 0.95, 0.99),
+            TFC.alloyPart('tfc:cast_iron', 0.01, 0.05)
+        ]
+    )
+    tfc.alloy(
+        'kubejs:andesite_alloy',
+        [
+            TFC.alloyPart('kubejs:andesite', 0.95, 0.99),
+            TFC.alloyPart('tfc:zinc', 0.01, 0.05)
+        ]
+    )
+
+    // Obsidian Powder
+    event.remove({id: 'railcraft:crusher/crushing_obsidian'})
+    event.remove({id: 'railcraft:crusher/crushing_crushed_obsidian'})
+    event.remove({id: 'railcraft:crusher/crushing_personal_world_spike'})
+    event.remove({id: 'create:crushing/obsidian'})
+    event.remove({id: 'mekanism:enriching/conversion/obsidian_to_obsidian_dust'})
+    create.crushing(['railcraft:crushed_obsidian', Item.of('kubejs:powder/obsidian').withChance(0.25)], '#forge:obsidian')
+    create.crushing(['kubejs:powder/obsidian', Item.of('kubejs:powder/obsidian').withChance(0.25)], 'railcraft:crushed_obsidian')
+    event.custom({
+        type: "immersiveengineering:crusher",
+        energy: 6000,
+        input: {
+            tag: 'forge:obsidian'
+        },
+        result: {
+            item: 'railcraft:crushed_obsidian'
+        },
+        secondaries: [
+            {
+                chance: 0.50,
+                output: {
+                    item: 'kubejs:powder/obsidian'
+                }
+            }
+        ]
+    })
+    event.custom({
+        type: "immersiveengineering:crusher",
+        energy: 6000,
+        input: {
+            item: 'railcraft:crushed_obsidian'
+        },
+        result: {
+            item: 'kubejs:powder/obsidian'
+        },
+        secondaries: [
+            {
+                chance: 0.50,
+                output: {
+                    item: 'kubejs:powder/obsidian'
+                }
+            }
+        ]
+    })
+    mekanism.enriching(Item.of('kubejs:powder/obsidian', 4), Item.of('#forge:obsidian'))
+
+    // Block of Coal Coke
+    event.stonecutting('immersiveengineering:coke', '#forge:storage_blocks/coal_coke')
+    event.stonecutting('railcraft:coal_coke_block', '#forge:storage_blocks/coal_coke')
+    event.stonecutting('kubejs:coal_coke_block', '#forge:storage_blocks/coal_coke')
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:coal_coke',
+            },
+            count: 9
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'kubejs:coal_coke_block'
+        }
+    })
+
+    // Iron Sawblade
+    tfc.anvil(
+        TFC.itemStackProvider.of('kubejs:iron_sawblade'),
+        '#forge:gears/wrought_iron',
+        [
+            'punch_third_last',
+            'hit_second_last',
+            'upset_last'
+        ]
+    ).tier(3)
+
+    // Left Elytra Wing
+    tfc.anvil(
+        TFC.itemStackProvider.of('kubejs:elytra/left_wing'),
+        '#forge:double_sheets/invar',
+        [
+            'bend_third_last',
+            'punch_any',
+            'hit_any'
+        ]
+    ).tier(3)
+    tfc.heating('kubejs:elytra/left_wing', 1535).resultFluid(Fluid.of('rosia:invar_fluid', 400))
+
+    // Right Elytra Wing
+    tfc.anvil(
+        TFC.itemStackProvider.of('kubejs:elytra/right_wing'),
+        '#forge:double_sheets/invar',
+        [
+            'bend_third_last',
+            'punch_any',
+            'hit_any'
+        ]
+    ).tier(3)
+    tfc.heating('kubejs:elytra/right_wing', 1535).resultFluid(Fluid.of('rosia:invar_fluid', 400))
+
+
+    // Refactory Clay
+    event.shaped(
+        Item.of('kubejs:refactory_clay'), 
+        [
+            'SCS',
+            'DBD',
+            'SCS'
+        ],
+        {
+            S: '#minecraft:sand',
+            C: '#forge:dusts/charcoal',
+            D: '#forge:dusts/sylvite',
+            B: '#forge:clay'
+        }
+    )
+
+    // Unfired Refactory Brick
+    event.custom({
+        type: 'tfc:knapping',
+        knapping_type: 'kubejs:refactory_clay',
+        pattern: [
+            'XXXXX',
+            '     ',
+            'XXXXX',
+            '     ',
+            'XXXXX'
+        ],
+        result: {
+            item: 'kubejs:unfired_refactory_brick',
+            count: 3
+        }
+    })
+
+    // Refactory Brick
+    event.custom({
+        type: 'tfc:heating',
+        ingredient: {
+            item: 'kubejs:unfired_refactory_brick'
+        },
+        result_item: {
+            item: 'kubejs:refactory_brick'
+        },
+        temperature: 1399
+    })
+})

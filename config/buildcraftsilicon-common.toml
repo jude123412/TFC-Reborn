@@ -1,0 +1,6 @@
+
+[facades]
+	#Whether BuildCraft facades are enabled.
+	#When disabled, existing facades remain loaded, but new facades cannot be crafted or placed.
+	enable = true
+

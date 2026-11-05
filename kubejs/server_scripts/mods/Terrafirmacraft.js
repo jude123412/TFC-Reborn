@@ -1,0 +1,327 @@
+ServerEvents.recipes(event => {
+    const lychee = event.recipes.lychee
+    const create = event.recipes.create
+    const tfc = event.recipes.tfc
+    
+    event.remove({id: 'tfc:crafting/vanilla/color/white_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/light_gray_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/gray_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/black_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/brown_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/red_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/orange_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/yellow_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/lime_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/green_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/cyan_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/light_blue_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/blue_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/purple_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/magenta_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/color/pink_concrete_powder'})
+    event.remove({id: 'tfc:crafting/vanilla/redstone/steel_rail'})
+    event.remove({id: 'tfc:crafting/vanilla/redstone/rail'})
+
+    // Silt Mud bricks
+    event.remove({id: 'tfc:crafting/soil/silt_drying_bricks'})
+    event.shapeless(Item.of('tfc:drying_bricks/silt'), [
+        'tfc:mud/silt',
+        '#forge:straw'
+    ])
+    lychee.block_interacting(
+        '#forge:straw', 
+        BlockPredicate.of('tfc:mud/silt')
+    ).post([ 
+        Post.drop_item(Item.of('tfc:drying_bricks/silt')),
+        Post.place('minecraft:air')
+    ])
+    event.remove({id: 'tfc:crafting/soil/silt_mud_bricks'})
+    event.shaped(Item.of('tfc:mud_bricks/silt', 4),
+    [
+        'BB',
+        'BB'
+    ],
+    {
+        B: 'tfc:mud_brick/silt'
+    })
+
+    // Loam Mud bricks
+    event.remove({id: 'tfc:crafting/soil/loam_drying_bricks'})
+    event.shapeless(Item.of('tfc:drying_bricks/loam'), [
+        'tfc:mud/loam',
+        '#forge:straw'
+    ])
+    lychee.block_interacting(
+        '#forge:straw', 
+        BlockPredicate.of('tfc:mud/loam')
+    ).post([ 
+        Post.drop_item(Item.of('tfc:drying_bricks/loam')),
+        Post.place('minecraft:air')
+    ])
+    event.remove({id: 'tfc:crafting/soil/loam_mud_bricks'})
+    event.shaped(Item.of('tfc:mud_bricks/loam', 4),
+    [
+        'BB',
+        'BB'
+    ],
+    {
+        B: 'tfc:mud_brick/loam'
+    })
+
+    // Sandy Loam Mud bricks
+    event.remove({id: 'tfc:crafting/soil/sandy_loam_drying_bricks'})
+    event.shapeless(Item.of('tfc:drying_bricks/sandy_loam'), [
+        'tfc:mud/sandy_loam',
+        '#forge:straw'
+    ])
+    lychee.block_interacting(
+        '#forge:straw', 
+        BlockPredicate.of('tfc:mud/sandy_loam')
+    ).post([ 
+        Post.drop_item(Item.of('tfc:drying_bricks/sandy_loam')),
+        Post.place('minecraft:air')
+    ])
+    event.remove({id: 'tfc:crafting/soil/sandy_loam_mud_bricks'})
+    event.shaped(Item.of('tfc:mud_bricks/sandy_loam', 4),
+    [
+        'BB',
+        'BB'
+    ],
+    {
+        B: 'tfc:mud_brick/sandy_loam'
+    })
+
+    // Silty Loam Mud bricks
+    event.remove({id: 'tfc:crafting/soil/silty_loam_drying_bricks'})
+    event.shapeless(Item.of('tfc:drying_bricks/silty_loam'), [
+        'tfc:mud/silty_loam',
+        '#forge:straw'
+    ])
+    lychee.block_interacting(
+        '#forge:straw', 
+        BlockPredicate.of('tfc:mud/silty_loam')
+    ).post([ 
+        Post.drop_item(Item.of('tfc:drying_bricks/silty_loam')),
+        Post.place('minecraft:air')
+    ])
+    event.remove({id: 'tfc:crafting/soil/silty_loam_mud_bricks'})
+    event.shaped(Item.of('tfc:mud_bricks/silty_loam', 4),
+    [
+        'BB',
+        'BB'
+    ],
+    {
+        B: 'tfc:mud_brick/silty_loam'
+    })
+
+
+
+    // Coke Powder
+    tfc.quern(Item.of('tfc:powder/coke', 4), '#forge:coal_coke')
+    create.milling(Item.of('tfc:powder/coke', 4), InputItem.of('#forge:coal_coke'))
+    create.crushing(Item.of('tfc:powder/coke', 4), InputItem.of('#forge:coal_coke'))
+    event.custom({
+        type: 'immersiveengineering:crusher',
+        energy: 3000,
+        input: {
+            tag: 'forge:coal_coke'
+        },
+        result: {
+            item: 'tfc:powder/coke',
+            count: 4
+        },
+        secondaries: []
+    })
+    event.custom({
+        type: 'railcraft:crusher',
+        ingredient: {
+            tag: 'forge:coal_coke'
+        },
+        outputs: [
+            {
+                probability: 1.0,
+                count: 4,
+                result: {
+                    item: 'tfc:powder/coke',
+                }
+            }
+        ]
+    })
+    event.custom({
+        type: 'mekanism:crushing',
+        input:{
+            ingredient: {
+                tag: 'forge:coal_coke' 
+            }
+        },
+        output: {
+            item: 'tfc:powder/coke',
+            count: 4
+        }
+    })
+
+    // Fireclay
+    event.remove({id: 'tfc:crafting/fire_clay'})
+    event.shaped(Item.of('tfc:fire_clay'),
+    [
+        'ACA',
+        'CBC',
+        'ACA'
+    ],
+    {
+        A: '#tfc:fireclay/alumina',
+        C: '#tfc:fireclay/carbon',
+        B: '#forge:clay'
+    })
+
+    // Wrought Iron 1:1
+    tfc.bloomery(
+        'tfc:raw_iron_bloom',
+        'kubejs:coal_coke',
+        Fluid.of('tfc:metal/cast_iron', 100),
+        15000
+    )
+
+    // Wrought Iron
+    event.custom({
+        type: 'vintage:hammering',
+        hammerBlows: 5,
+        ingredients: [
+            {
+                 item: 'tfc:raw_iron_bloom'
+            }
+        ],
+        results: [
+            {
+                item: 'tfc:metal/ingot/wrought_iron'
+            }
+        ],
+    })
+
+    // Steel
+    event.custom({
+        type: 'vintage:hammering',
+        hammerBlows: 5,
+        ingredients: [
+            {
+                 tag: 'forge:ingots/pig_iron'
+            }
+        ],
+        results: [
+            {
+                item: 'tfc:metal/ingot/steel'
+            }
+        ],
+    })
+    
+    // Black Steel
+    event.custom({
+        type: 'vintage:hammering',
+        hammerBlows: 10,
+        ingredients: [
+            {
+                 item: 'tfc:metal/ingot/high_carbon_black_steel'
+            }
+        ],
+        results: [
+            {
+                item: 'tfc:metal/ingot/black_steel'
+            }
+        ],
+    })
+    
+    // Blue Steel
+    event.custom({
+        type: 'vintage:hammering',
+        hammerBlows: 10,
+        ingredients: [
+            {
+                 item: 'tfc:metal/ingot/high_carbon_blue_steel'
+            }
+        ],
+        results: [
+            {
+                item: 'tfc:metal/ingot/blue_steel'
+            }
+        ],
+    })
+
+    // Red Steel
+    event.custom({
+        type: 'vintage:hammering',
+        hammerBlows: 10,
+        ingredients: [
+            {
+                 item: 'tfc:metal/ingot/high_carbon_red_steel'
+            }
+        ],
+        results: [
+            {
+                item: 'tfc:metal/ingot/red_steel'
+            }
+        ],
+    })
+
+    // Saltpeter Powder
+    create.milling(Item.of('tfc:powder/saltpeter', 4), InputItem.of('tfc:ore/saltpeter'))
+    create.crushing(Item.of('tfc:powder/saltpeter', 4), InputItem.of('tfc:ore/saltpeter'))
+    event.custom({
+        type: 'railcraft:crusher',
+        ingredient: {
+            item: 'tfc:ore/saltpeter'
+        },
+        outputs: [
+            {
+                count: 4,
+                probability: 1.0,
+                result: {
+                    item: 'tfc:powder/saltpeter',
+                }
+            }
+        ]
+    })
+    event.custom({
+        type: 'mekanism:crushing',
+        input:{
+            ingredient: {
+                item: 'tfc:ore/saltpeter' 
+            }
+        },
+        output: {
+            item: 'tfc:powder/saltpeter',
+            count: 4
+        }
+    })
+
+    // Windmill Blade
+    event.remove({id: 'tfc:crafting/windmill_blade'})
+    event.shapeless('tfc:windmill_blade', [
+        'tfc:lattice_windmill_blade',
+        '2x #tfc:high_quality_cloth'
+    ])
+
+    // Rustic Windmill Blade
+    event.remove({id: 'tfc:crafting/rustic_windmill_blade'})
+    event.shapeless('tfc:rustic_windmill_blade', [
+        'tfc:lattice_windmill_blade',
+        '2x #tfc:low_quality_cloth'
+    ])
+
+    // Lattice Windmill Blade
+    event.remove({id: 'tfc:crafting/lattice_windmill_blade'})
+    event.shaped('tfc:lattice_windmill_blade',
+    [
+        'SSS',
+        'S S',
+        'LLL'
+    ],
+    {
+        S: '#forge:rods/wooden',
+        L: '#tfc:lumber'
+    })
+
+    // Unrefined Paper
+    event.shapeless('tfc:unrefined_paper', [
+        '2x create:pulp'
+    ])
+})

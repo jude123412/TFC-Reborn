@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "tfc:highlands",
+    "tfc:hills",
+    "tfc:mountains",
+    "tfc:old_mountains",
+    "tfc:old_mountain_lake"
+  ]
+}
