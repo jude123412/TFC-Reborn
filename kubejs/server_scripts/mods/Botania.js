@@ -881,10 +881,10 @@ ServerEvents.recipes(event => {
                 tag: 'forge:ingots/manasteel'
             },
             {
-                tag: '#forge:stone'
+                tag: 'forge:stone'
             },
             {
-                tag: '#forge:gems/coal'
+                tag: 'forge:gems/coal'
             },
             {
                 item: 'tfc:plant/artists_conk'
@@ -906,7 +906,7 @@ ServerEvents.recipes(event => {
 
     // Rune of Spring
     event.replaceInput(
-        {id: 'botania:runic_altar/air'},
+        {id: 'botania:runic_altar/spring'},
         'minecraft:wheat',
         'tfc:food/wheat'
     )
@@ -917,19 +917,19 @@ ServerEvents.recipes(event => {
         type: 'botania:runic_altar',
         ingredients: [
             {
-                tag: 'botania:rune_earth'
+                item: 'botania:rune_earth'
             },
             {
-                tag: 'botania:rune_air'
+                item: 'botania:rune_air'
             },
             {
-                tag: '#forge:sand'
+                tag: 'forge:sand'
             },
             {
-                tag: '#forge:sand'
+                tag: 'forge:sand'
             },
             {
-                tag: '#forge:slimeballs'
+                tag: 'forge:slimeballs'
             },
             {
                 item: 'tfc:food/melon_slice'
