@@ -188,6 +188,18 @@ ServerEvents.recipes(event => {
     event.remove({id: 'create:splashing/crushed_raw_gold'})
     event.remove({id: 'create:splashing/crushed_raw_copper'})
     event.remove({id: 'create:splashing/immersiveengineering/crushed_raw_aluminum'})
+    event.remove({id: 'create:pressing/copper_ingot'})
+    event.remove({id: 'create:pressing/brass_ingot'})
+    event.remove({id: 'create:pressing/iron_ingot'})
+    event.remove({id: 'create:pressing/gold_ingot'})
+    event.remove({id: 'create:pressing/compat/immersiveengineering/plate_aluminum'})
+    event.remove({id: 'create:pressing/compat/immersiveengineering/plate_lead'})
+    event.remove({id: 'create:pressing/compat/immersiveengineering/plate_silver'})
+    event.remove({id: 'create:pressing/compat/immersiveengineering/plate_nickel'})
+    event.remove({id: 'create:pressing/compat/immersiveengineering/plate_uranium'})
+    event.remove({id: 'create:pressing/compat/immersiveengineering/plate_constantan'})
+    event.remove({id: 'create:pressing/compat/immersiveengineering/plate_electrum'})
+    event.remove({id: 'create:pressing/compat/immersiveengineering/plate_steel'})
 
     // Copper Backtank
     event.replaceInput(
