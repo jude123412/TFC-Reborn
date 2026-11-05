@@ -807,13 +807,6 @@ ServerEvents.recipes(event => {
         }
     )
 
-    // Composite Lens
-    event.replaceInput(
-        {id: 'botania:dynamic/composite_lens'},
-        'minecraft:slime_ball',
-        '#botania:lens_glue'
-    )
-
     // Bore Lens
     event.remove({id: 'botania:lens_mine'})
     event.shaped(
