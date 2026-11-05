@@ -18,6 +18,7 @@ ClientEvents.lang('en_us', event => {
     event.add('item.kubejs.metal.plate.bronze', 'Bronze Plate')
     event.add('item.kubejs.metal.plate.invar', 'Invar Plate')
     event.add('item.kubejs.metal.plate.red_steel', 'Red Steel Plate')
+    event.add('item.kubejs.metal.plate.manasteel', 'Manasteel Plate')
     event.add('item.kubejs.metal.plate.elementium', 'Elementium Plate')
 
     // Metal Gears

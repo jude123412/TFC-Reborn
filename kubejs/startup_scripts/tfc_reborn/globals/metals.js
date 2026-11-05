@@ -1425,7 +1425,7 @@ global.metals = {
         double_sheet: 'kubejs:metal/double_sheet/manasteel',
 
         nugget: 'botania:manasteel_nugget',
-        plate: null,
+        plate: 'kubejs:metal/plate/manasteel',
         gear: null,
         gear_half: null,
         dust: null,

@@ -791,4 +791,160 @@ ServerEvents.recipes(event => {
             D: '#forge:dyes/yellow'
         }
     )
+
+    // Mana Lens
+    event.remove({id: 'botania:lens_normal'})
+    event.shaped(
+        Item.of('botania:lens_normal'), 
+        [
+            ' P ',
+            'PLP',
+            ' P '
+        ],
+        {
+            P: '#forge:plates/manasteel',
+            L: 'tfc:lens'
+        }
+    )
+
+    // Composite Lens
+    event.replaceInput(
+        {id: 'botania:dynamic/composite_lens'},
+        'minecraft:slime_ball',
+        '#botania:lens_glue'
+    )
+
+    // Bore Lens
+    event.remove({id: 'botania:lens_mine'})
+    event.shaped(
+        Item.of('botania:lens_mine'), 
+        [
+            ' P ',
+            'LML',
+            ' R '
+        ],
+        {
+            P: 'minecraft:piston',
+            L: '#forge:gems/lapis',
+            M: 'botania:lens_normal',
+            R: 'minecraft:redstone'
+        }
+    )
+
+    // Magnetizing Lens
+    event.remove({id: 'botania:lens_magnet'})
+    event.shapeless(
+        Item.of('botania:lens_magnet'),
+        [
+            'botania:lens_normal',
+            'rosia:magnet'
+        ]
+    )
+
+    // Rune of Water
+    event.remove({id: 'botania:runic_altar/water'})
+    event.custom({
+        type: 'botania:runic_altar',
+        ingredients: [
+            {
+                tag: 'forge:dusts/mana'
+            },
+            {
+                tag: 'forge:ingots/manasteel'
+            },
+            {
+                item: 'minecraft:bone_meal'
+            },
+            {
+                item: 'tfc:food/sugarcane'
+            },
+            {
+                tag: 'tfc:holds_small_fishing_bait'
+            }
+        ],
+        mana: 5200,
+        output: {
+            count: 2,
+            item: 'botania:rune_water'
+        }
+    })
+
+    // Rune of Earth
+    event.remove({id: 'botania:runic_altar/earth'})
+    event.custom({
+        type: 'botania:runic_altar',
+        ingredients: [
+            {
+                tag: 'forge:dusts/mana'
+            },
+            {
+                tag: 'forge:ingots/manasteel'
+            },
+            {
+                tag: '#forge:stone'
+            },
+            {
+                tag: '#forge:gems/coal'
+            },
+            {
+                item: 'tfc:plant/artists_conk'
+            }
+        ],
+        mana: 5200,
+        output: {
+            count: 2,
+            item: 'botania:rune_earth'
+        }
+    })
+
+    // Rune of Air
+    event.replaceInput(
+        {id: 'botania:runic_altar/air'},
+        'minecraft:string',
+        '#bsa:bindings/strong'
+    )
+
+    // Rune of Spring
+    event.replaceInput(
+        {id: 'botania:runic_altar/air'},
+        'minecraft:wheat',
+        'tfc:food/wheat'
+    )
+
+    // Rune of Summer
+    event.remove({id: 'botania:runic_altar/summer'})
+    event.custom({
+        type: 'botania:runic_altar',
+        ingredients: [
+            {
+                tag: 'botania:rune_earth'
+            },
+            {
+                tag: 'botania:rune_air'
+            },
+            {
+                tag: '#forge:sand'
+            },
+            {
+                tag: '#forge:sand'
+            },
+            {
+                tag: '#forge:slimeballs'
+            },
+            {
+                item: 'tfc:food/melon_slice'
+            }
+        ],
+        mana: 8000,
+        output: {
+            item: 'botania:rune_summer'
+        }
+    })
+
+    // Rune of Winter
+    event.replaceInput(
+        {id: 'botania:runic_altar/winter'},
+        'minecraft:cake',
+        'tfc:cake'
+    )
 })
