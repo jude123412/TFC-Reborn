@@ -212,4 +212,10 @@ JEIEvents.hideItems(event => {
 
     // Create Crafts & Additions Ingots
     event.hide('createaddition:electrum_ingot')
+
+    // Create Crafts & Additions Dusts
+    event.hide('createaddition:diamond_grit')
+
+    // Immersive Technology Dusts
+    event.hide('immersivetechnology:salt')
 })

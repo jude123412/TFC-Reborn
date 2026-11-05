@@ -97,6 +97,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'railcraft:invar_ingot'})
     event.remove({id: 'railcraft:invar_ingot_from_invar_nugget'})
     event.remove({id: 'railcraft:invar_ingot_crafted_with_ingots'})
+    event.remove({id: 'railcraft:crusher/crushing_netherite_ingot'})
 
     // Coke Oven Bricks
     event.remove({id: 'railcraft:coke_oven_bricks'})
