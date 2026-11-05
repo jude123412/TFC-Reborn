@@ -150,6 +150,13 @@ ServerEvents.recipes(event => {
     event.remove({id: 'minecraft:zinc_ingot_from_smelting_zinc_ore'})
     event.remove({id: 'minecraft:lead_ingot_from_smelting_lead_ore'})
     event.remove({id: 'minecraft:lead_ingot_from_smelting_lead_raw'})
+    event.remove({id: 'minecraft:iron_nugget'})
+    event.remove({id: 'minecraft:iron_nugget_from_blasting'})
+    event.remove({id: 'minecraft:iron_nugget_from_smelting'})
+    event.remove({id: 'minecraft:gold_nugget'})
+    event.remove({id: 'minecraft:gold_nugget_from_blasting'})
+    event.remove({id: 'minecraft:gold_nugget_from_smelting'})
+    event.remove({id: 'minecraft:neutron_nugget'})
 
     // Elytra
     tfc.welding(

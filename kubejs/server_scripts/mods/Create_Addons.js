@@ -15,6 +15,13 @@ ServerEvents.recipes(event => {
     event.remove({id: 'createaddition:mixing/electrum'})
     event.remove({id: 'vintage:craft/vanadium_nuggets_to_ingot'})
     event.remove({id: 'vintage:craft/vanadium_block_to_ingots'})
+    event.remove({id: 'vintage:crushing/basalt_recycling'})
+    event.remove({id: 'vintage:crushing/basalt'})
+    event.remove({id: 'vintage:craft/vanadium_ingot_to_nuggets'})
+    event.remove({id: 'vintage:craft/sulfur_item_to_nuggets'})
+    event.remove({id: 'vintage:crushing/scoria'})
+    event.remove({id: 'vintage:crushing/scoria_recycling'})
+    event.remove({id: 'createaddition:crafting/electrum_nugget'})
 
     // Recipe Removal by output
     event.remove({output: 'createdieselgenerators:wood_chip'})

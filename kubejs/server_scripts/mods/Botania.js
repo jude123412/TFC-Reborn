@@ -24,6 +24,9 @@ ServerEvents.recipes(event => {
     event.remove({id: 'botania:conversions/terrasteel_from_nugget'})
     event.remove({id: 'botania:conversions/elementium_from_nuggets'})
     event.remove({id: 'botania:conversions/elementium_block_deconstruct'})
+    event.remove({id: 'botania:conversions/manasteel_to_nuggets'})
+    event.remove({id: 'botania:conversions/terrasteel_to_nugget'})
+    event.remove({id: 'botania:conversions/elementium_to_nuggets'})
 
     // Floating White Flower
     event.replaceInput(

@@ -98,6 +98,16 @@ ServerEvents.recipes(event => {
     event.remove({id: 'railcraft:invar_ingot_from_invar_nugget'})
     event.remove({id: 'railcraft:invar_ingot_crafted_with_ingots'})
     event.remove({id: 'railcraft:crusher/crushing_netherite_ingot'})
+    event.remove({id: 'railcraft:crusher/crushing_gravel'})
+    event.remove({id: 'railcraft:lead_nugget'})
+    event.remove({id: 'railcraft:nickel_nugget'})
+    event.remove({id: 'railcraft:silver_nugget'})
+    event.remove({id: 'railcraft:tin_nugget'})
+    event.remove({id: 'railcraft:zinc_nugget'})
+    event.remove({id: 'railcraft:steel_nugget'})
+    event.remove({id: 'railcraft:brass_nugget'})
+    event.remove({id: 'railcraft:bronze_nugget'})
+    event.remove({id: 'railcraft:invar_nugget'})
 
     // Coke Oven Bricks
     event.remove({id: 'railcraft:coke_oven_bricks'})

@@ -189,11 +189,28 @@ JEIEvents.hideItems(event => {
     event.hide('mekanism:ingot_lead')
     event.hide('mekanism:ingot_uranium')
 
+    // Mekanism Ingots
+    event.hide('mekanism:nugget_steel')
+    event.hide('mekanism:nugget_tin')
+    event.hide('mekanism:nugget_lead')
+    event.hide('mekanism:nugget_uranium')
+
     // Railcraft Reborn Dusts
     event.hide('railcraft:saltpeter_dust')
     event.hide('railcraft:coal_dust')
     event.hide('railcraft:charcoal_dust')
     event.hide('railcraft:sulfur_dust')
+
+    // Railcraft Reborn Nuggets
+    event.hide('railcraft:lead_nugget')
+    event.hide('railcraft:nickel_nugget')
+    event.hide('railcraft:silver_nugget')
+    event.hide('railcraft:tin_nugget')
+    event.hide('railcraft:zinc_nugget')
+    event.hide('railcraft:steel_nugget')
+    event.hide('railcraft:brass_nugget')
+    event.hide('railcraft:bronze_nugget')
+    event.hide('railcraft:invar_nugget')
 
     // Railcraft Reborn Ingots
     event.hide('railcraft:lead_ingot')
@@ -210,11 +227,19 @@ JEIEvents.hideItems(event => {
     event.hide('create:zinc_ingot')
     event.hide('create:brass_ingot')
 
-    // Create Crafts & Additions Ingots
+    // Create Nuggets
+    event.hide('create:copper_nugget')
+
+    // Create Addons Ingots
     event.hide('createaddition:electrum_ingot')
 
-    // Create Crafts & Additions Dusts
+    // Create Addons Dusts
     event.hide('createaddition:diamond_grit')
+
+    // Create Addons Nuggets
+    event.hide('createaddition:diamond_grit')
+    event.hide('createaddition:electrum_nugget')
+    event.hide('vintage:sulfur_chunk')
 
     // Immersive Technology Dusts
     event.hide('immersivetechnology:salt')

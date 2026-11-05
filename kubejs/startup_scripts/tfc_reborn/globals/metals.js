@@ -13,7 +13,7 @@ global.metals = {
         sheet: null,
         double_sheet: null,
         
-        nugget: 'kubejs:metal/nugget/copper',
+        nugget: 'immersiveengineering:nugget_copper',
         plate: 'kubejs:metal/plate/copper',
         gear: 'kubejs:metal/gear/copper',
         gear_half: 'kubejs:metal/gear/half/copper',
@@ -59,7 +59,7 @@ global.metals = {
         sheet: null,
         double_sheet: null,
 
-        nugget: null,
+        nugget: 'immersiveengineering:nugget_aluminum',
         plate: 'kubejs:metal/plate/aluminum',
         gear: null,
         gear_half: null,
@@ -105,7 +105,7 @@ global.metals = {
         sheet: null,
         double_sheet: null,
 
-        nugget: 'kubejs:metal/nugget/lead',
+        nugget: 'immersiveengineering:nugget_lead',
         plate: 'kubejs:metal/plate/lead',
         gear: 'kubejs:metal/gear/lead',
         gear_half: 'kubejs:metal/gear/half/lead',
@@ -151,7 +151,7 @@ global.metals = {
         sheet: null,
         double_sheet: null,
 
-        nugget: 'kubejs:metal/nugget/silver',
+        nugget: 'immersiveengineering:nugget_silver',
         plate: 'kubejs:metal/plate/silver',
         gear: 'kubejs:metal/gear/silver',
         gear_half: 'kubejs:metal/gear/half/silver',
@@ -197,7 +197,7 @@ global.metals = {
         sheet: null,
         double_sheet: null,
 
-        nugget: null,
+        nugget: 'immersiveengineering:nugget_nickel',
         plate: 'kubejs:metal/plate/nickel',
         gear: 'kubejs:metal/gear/nickel',
         gear_half: 'kubejs:metal/gear/half/nickel',
@@ -243,7 +243,7 @@ global.metals = {
         sheet: null,
         double_sheet: null,
 
-        nugget: null,
+        nugget: 'immersiveengineering:nugget_uranium',
         plate: 'kubejs:metal/plate/uranium',
         gear: null,
         gear_half: null,
@@ -289,7 +289,7 @@ global.metals = {
         sheet: null,
         double_sheet: null,
 
-        nugget: 'kubejs:metal/nugget/constantan',
+        nugget: 'immersiveengineering:nugget_constantan',
         plate: 'kubejs:metal/plate/constantan',
         gear: null,
         gear_half: null,
@@ -335,7 +335,7 @@ global.metals = {
         sheet: null,
         double_sheet: null,
 
-        nugget: 'kubejs:metal/nugget/electrum',
+        nugget: 'immersiveengineering:nugget_electrum',
         plate: 'kubejs:metal/plate/electrum',
         gear: null,
         gear_half: null,
@@ -381,7 +381,7 @@ global.metals = {
         sheet: null,
         double_sheet: null,
 
-        nugget: 'kubejs:metal/nugget/steel',
+        nugget: 'immersiveengineering:nugget_steel',
         plate: 'kubejs:metal/plate/steel',
         gear: 'kubejs:metal/gear/steel',
         gear_half: 'kubejs:metal/gear/half/steel',
@@ -427,7 +427,7 @@ global.metals = {
         sheet: null,
         double_sheet: null,
 
-        nugget: 'kubejs:metal/nugget/wrought_iron',
+        nugget: 'minecraft:iron_nugget',
         plate: 'kubejs:metal/plate/wrought_iron',
         gear: 'kubejs:metal/gear/wrought_iron',
         gear_half: 'kubejs:metal/gear/half/wrought_iron',
@@ -473,7 +473,7 @@ global.metals = {
         sheet: null,
         double_sheet: null,
 
-        nugget: 'kubejs:metal/nugget/gold',
+        nugget: 'minecraft:gold_nugget',
         plate: 'kubejs:metal/plate/gold',
         gear: 'kubejs:metal/gear/gold',
         gear_half: 'kubejs:metal/gear/half/gold',
@@ -565,7 +565,7 @@ global.metals = {
         sheet: null,
         double_sheet: null,
 
-        nugget: 'kubejs:metal/nugget/zinc',
+        nugget: 'create:zinc_nugget',
         plate: 'kubejs:metal/plate/zinc',
         gear: 'kubejs:metal/gear/zinc',
         gear_half: 'kubejs:metal/gear/half/zinc',
@@ -611,7 +611,7 @@ global.metals = {
         sheet: null,
         double_sheet: null,
 
-        nugget: 'kubejs:metal/nugget/brass',
+        nugget: 'create:brass_nugget',
         plate: 'kubejs:metal/plate/brass',
         gear: 'kubejs:metal/gear/brass',
         gear_half: 'kubejs:metal/gear/half/brass',
@@ -657,7 +657,7 @@ global.metals = {
         sheet: null,
         double_sheet: null,
 
-        nugget: 'kubejs:metal/nugget/bronze',
+        nugget: 'mekanism:nugget_bronze',
         plate: 'kubejs:metal/plate/bronze',
         gear: 'kubejs:metal/gear/bronze',
         gear_half: 'kubejs:metal/gear/half/bronze',

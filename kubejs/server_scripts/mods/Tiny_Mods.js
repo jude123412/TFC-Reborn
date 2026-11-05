@@ -1,5 +1,8 @@
 ServerEvents.recipes(event => {
 
+    event.remove({id: 'musketmod:iron_nugget_from_blasting'})
+    event.remove({id: 'musketmod:iron_nugget_from_smelting'})
+
     // Golden Hopper
     event.remove({id: 'goldenhopper:golden_hopper'})
     event.shaped(
