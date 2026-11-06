@@ -11,6 +11,9 @@ TFCEvents.data(event => {
     // Unfired Refactory Brick
     event.itemHeat('kubejs:unfired_refactory_brick', 2.332, null, null)
 
+    // Unfired Ceramic Insulator
+    event.itemHeat('kubejs:insulator/unfired_ceramic', 2.332, null, null)
+
     // Coal Coke
     event.fuel('kubejs:coal_coke', 1550, 3300, null)
 
@@ -190,5 +193,52 @@ ServerEvents.recipes(event => {
             item: 'kubejs:refactory_brick'
         },
         temperature: 1399
+    })
+
+    // Unfired Ceramic Insulator
+    event.custom({
+        type: 'tfc:knapping',
+        knapping_type: 'tfc:clay',
+        pattern: [
+            ' XXX ',
+            'XXXXX',
+            ' XXX ',
+            'XXXXX',
+            ' XXX '
+        ],
+        result: {
+            item: 'kubejs:insulator/unfired_ceramic'
+        }
+    })
+
+    // Ceramic Insulator
+    event.custom({
+        type: 'tfc:heating',
+        ingredient: {
+            item: 'kubejs:insulator/unfired_ceramic'
+        },
+        result_item: {
+            item: 'kubejs:insulator/ceramic'
+        },
+        temperature: 1399
+    })
+
+    // Glass Insulator
+    event.custom({
+        type: 'tfc:glassworking',
+        operations: [
+            'iron',
+            'stretch',
+            'pinch',
+            'stretch',
+            'pinch',
+            'saw'
+        ],
+        batch: {
+            tag: 'tfc:glass_batches'
+        },
+        result: {
+            item: 'kubejs:insulator/glass'
+        }
     })
 })
