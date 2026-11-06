@@ -164,6 +164,27 @@ ServerEvents.tags('item', event => {
     event.add('tfc:moss', 'tfc:plant/moss')
     event.add('tfc:moss', 'tfc:plant/spanish_moss')
 
+    // TFC Grass
+    event.add('tfc:grass', 'firmalife:plant/butterfly_grass')
+    event.add('tfc:grass', 'tfc:groundcover/dead_grass')
+    event.add('tfc:grass', 'tfc:plant/pampas_grass')
+    event.add('tfc:grass', 'tfc:plant/beachgrass')
+    event.add('tfc:grass', 'tfc:plant/bluegrass')
+    event.add('tfc:grass', 'tfc:plant/bromegrass')
+    event.add('tfc:grass', 'tfc:plant/fountain_grass')
+    event.add('tfc:grass', 'tfc:plant/manatee_grass')
+    event.add('tfc:grass', 'tfc:plant/orchard_grass')
+    event.add('tfc:grass', 'tfc:plant/ryegrass')
+    event.add('tfc:grass', 'tfc:plant/scutch_grass')
+    event.add('tfc:grass', 'tfc:plant/star_grass')
+    event.add('tfc:grass', 'tfc:plant/timothy_grass')
+    event.add('tfc:grass', 'tfc:plant/raddia_grass')
+    event.add('tfc:grass', 'tfc:plant/cordgrass')
+    event.add('tfc:grass', 'tfc:plant/eel_grass')
+    event.add('tfc:grass', 'tfc:plant/switchgrass')
+    event.add('tfc:grass', 'tfc:plant/tall_fescue_grass')
+    event.add('tfc:grass', 'tfc:plant/turtle_grass')
+
     // Remove these to stop them showing up
     // in railcraft loot tables
     event.removeAll('railcraft:ingot_chest_loot')
