@@ -131,6 +131,7 @@ JEIEvents.hideItems(event => {
     event.hide('aiotbotania:livingwood_shears')
     event.hide('aiotbotania:livingwood_shovel')
     event.hide('aiotbotania:livingwood_sword')
+    event.hide('railcraft:bushing_gear')
 
     // Minecraft Ingots
     event.hide('minecraft:iron_ingot')
