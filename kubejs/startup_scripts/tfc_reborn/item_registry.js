@@ -56,4 +56,9 @@ StartupEvents.registry('item', event => {
     event.create('kubejs:refactory_brick')
         .texture('kubejs:item/refactory_brick')
         .translationKey('kubejs:item/refactory_brick')
+
+    // Quicklime
+    event.create('kubejs:quicklime')
+        .texture('kubejs:item/quicklime')
+        .translationKey('kubejs:item/quicklime')
 })

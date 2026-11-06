@@ -2,6 +2,9 @@ TFCEvents.data(event => {
     // Loose Andesite Rock
     event.itemHeat('tfc:rock/loose/andesite', 5.714, 900, 1100)
 
+    // Fluxstone
+    event.itemHeat('#tfc:fluxstone', 5.714, null, null)
+
     // Left Elytra Wing
     event.itemHeat('kubejs:elytra/left_wing', 8.332, 910, 1200)
 
@@ -13,6 +16,9 @@ TFCEvents.data(event => {
 
     // Unfired Ceramic Insulator
     event.itemHeat('kubejs:insulator/unfired_ceramic', 2.332, null, null)
+
+    // Quicklime
+    event.itemSize('kubejs:quicklime', 'small', 'light')
 
     // Coal Coke
     event.fuel('kubejs:coal_coke', 1550, 3300, null)
@@ -241,4 +247,8 @@ ServerEvents.recipes(event => {
             item: 'kubejs:insulator/glass'
         }
     })
+
+    // Quicklime
+    tfc.heating('#tfc:fluxstone', 900)
+        .resultItem('kubejs:quicklime')
 })

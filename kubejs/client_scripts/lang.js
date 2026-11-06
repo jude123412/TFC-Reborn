@@ -149,6 +149,7 @@ ClientEvents.lang('en_us', event => {
     event.add('item.kubejs.refactory_clay', 'Refactory Clay')
     event.add('item.kubejs.unfired_refactory_brick', 'Unfired Refactory Brick')
     event.add('item.kubejs.refactory_brick', 'Refactory Brick')
+    event.add('item.kubejs.quicklime', 'Quicklime')
 
     // Lumber
     event.add('item.kubejs.wood.lumber.livingwood', 'Livingwood Lumber')

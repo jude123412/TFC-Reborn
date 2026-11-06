@@ -324,4 +324,184 @@ ServerEvents.recipes(event => {
     event.shapeless('tfc:unrefined_paper', [
         '2x create:pulp'
     ])
+
+    // Flux
+    event.remove({id: 'tfc:quern/fluxstone'})
+    event.remove({id: 'tfc_ie_addon:crusher/fluxstone'})
+    event.remove({id: 'tfc:crafting/flux'})
+    event.shapeless(
+        Item.of('tfc:powder/flux', 2),
+        [
+            'kubejs:quicklime',
+            '#tfc:hammers'
+        ]
+    ).damageIngredient('#tfc:hammers')
+    tfc.quern(
+        Item.of('tfc:powder/flux', 2),
+        'kubejs:quicklime'
+    )
+    event.custom({
+        type: 'create:milling',
+        ingredients: [
+            {
+                item: 'tfc:ore/borax'
+            }
+        ],
+        processingTime: 200,
+        results: [
+            {
+                item: 'tfc:powder/flux',
+                count: 6
+            }
+        ]
+    })
+    event.custom({
+        type: 'create:milling',
+        ingredients: [
+            {
+                item: 'kubejs:quicklime'
+            }
+        ],
+        processingTime: 200,
+        results: [
+            {
+                item: 'tfc:powder/flux',
+                count: 2
+            }
+        ]
+    })
+    event.custom({
+        type: 'railcraft:crusher',
+        ingredient: {
+            item: 'tfc:ore/borax'
+        },
+        outputs: [
+            {
+                probability: 1.0,
+                result: {
+                    item: 'tfc:powder/flux'      
+                },
+                count: 6
+            }
+        ]
+    })
+    event.custom({
+        type: 'railcraft:crusher',
+        ingredient: {
+            item: 'kubejs:quicklime'
+        },
+        outputs: [
+            {
+                probability: 1.0,
+                result: {
+                    item: 'tfc:powder/flux'      
+                },
+                count: 2
+            }
+        ]
+    })
+    event.custom({
+        type: "immersiveengineering:crusher",
+        energy: 3000,
+        input: {
+            item: 'kubejs:quicklime'
+        },
+        result: {
+            item: 'tfc:powder/flux',
+            count: 2
+        },
+        secondaries: []
+    })
+    event.custom({
+        type: 'mekanism:crushing',
+        input: {
+            ingredient: {
+                item: 'tfc:ore/borax'
+            }
+        },
+        output: {
+            item: 'tfc:powder/flux',
+            count: 6
+        }
+    })
+    event.custom({
+        type: 'mekanism:crushing',
+        input: {
+            ingredient: {
+                item: 'kubejs:quicklime'
+            }
+        },
+        output: {
+            item: 'tfc:powder/flux',
+            count: 2
+        }
+    })
+
+    // Limestone
+    event.remove({id: 'tfc:heating/lime'})
+    event.shapeless(
+        Item.of('tfc:powder/lime', 2),
+        [
+            '#tfc:fluxstone',
+            '#tfc:hammers'
+        ]
+    ).damageIngredient('#tfc:hammers')
+    tfc.quern(
+        Item.of('tfc:powder/lime', 2),
+        '#tfc:fluxstone'
+    )
+    event.custom({
+        type: 'create:milling',
+        ingredients: [
+            {
+                tag: 'tfc:fluxstone'
+            }
+        ],
+        processingTime: 200,
+        results: [
+            {
+                item: 'tfc:powder/lime',
+                count: 2
+            }
+        ]
+    })
+    event.custom({
+        type: 'railcraft:crusher',
+        ingredient: {
+            tag: 'tfc:fluxstone'
+        },
+        outputs: [
+            {
+                probability: 1.0,
+                result: {
+                    item: 'tfc:powder/lime'      
+                },
+                count: 2
+            }
+        ]
+    })
+    event.custom({
+        type: "immersiveengineering:crusher",
+        energy: 3000,
+        input: {
+            tag: 'tfc:fluxstone'
+        },
+        result: {
+            item: 'tfc:powder/lime',
+            count: 2
+        },
+        secondaries: []
+    })
+    event.custom({
+        type: 'mekanism:crushing',
+        input: {
+            ingredient: {
+                tag: 'tfc:fluxstone'
+            }
+        },
+        output: {
+            item: 'tfc:powder/lime',
+            count: 2
+        }
+    })
 })
