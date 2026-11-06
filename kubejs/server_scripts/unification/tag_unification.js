@@ -185,6 +185,13 @@ ServerEvents.tags('item', event => {
     event.add('tfc:plants/grass', 'tfc:plant/tall_fescue_grass')
     event.add('tfc:plants/grass', 'tfc:plant/turtle_grass')
 
+    // TFC Vines
+    event.add('tfc:plants/vine', 'minecraft:weeping_vines')
+    event.add('tfc:plants/vine', 'minecraft:twisting_vines')
+    event.add('tfc:plants/vine', 'minecraft:vine')
+    event.add('tfc:plants/vine', 'tfc:plant/hanging_vines')
+    event.add('tfc:plants/vine', 'tfc:plant/jungle_vines')
+
     // Remove these to stop them showing up
     // in railcraft loot tables
     event.removeAll('railcraft:ingot_chest_loot')
