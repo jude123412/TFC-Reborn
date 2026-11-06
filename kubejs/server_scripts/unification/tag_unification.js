@@ -192,6 +192,12 @@ ServerEvents.tags('item', event => {
     event.add('tfc:plants/vine', 'tfc:plant/hanging_vines')
     event.add('tfc:plants/vine', 'tfc:plant/jungle_vines')
 
+    // TFC Kelp
+    event.add('tfc:plants/kelp', 'minecraft:kelp')
+    event.add('tfc:plants/kelp', 'tfc:plant/winged_kelp')
+    event.add('tfc:plants/kelp', 'tfc:plant/leafy_kelp')
+    event.add('tfc:plants/kelp', 'tfc:plant/giant_kelp_flower')
+
     // Remove these to stop them showing up
     // in railcraft loot tables
     event.removeAll('railcraft:ingot_chest_loot')

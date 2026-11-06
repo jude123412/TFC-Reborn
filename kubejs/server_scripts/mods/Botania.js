@@ -1,7 +1,16 @@
-TFCEvents.data(event => { })
+TFCEvents.data(event => {
+    // Thorn Chakram
+    event.itemHeat('botania:thorn_chakram', 2.857, 921, 1228)
+    event.itemSize('botania:thorn_chakram', 'large', 'medium')
+
+    // Flare Chakram
+    event.itemHeat('botania:flare_chakram', 2.857, 921, 1228)
+    event.itemSize('botania:flare_chakram', 'large', 'medium')
+})
 
 ServerEvents.recipes(event => {
     const tfc = event.recipes.tfc
+    const botania = event.recipes.botania
 
     event.remove({id: 'aiotbotania:livingrock_aiot'})
     event.remove({id: 'aiotbotania:livingrock_axe'})
@@ -408,7 +417,7 @@ ServerEvents.recipes(event => {
         '#forge:plates/gold'
     )
 
-    // Tiny Planet
+    // Tiny Planet Block
     event.replaceInput(
         {id: 'botania:tiny_planet_block'},
         'minecraft:stone',
@@ -591,9 +600,9 @@ ServerEvents.recipes(event => {
         Item.of('botania:mana_glass_pane', 2),
         [
             'botania:mana_glass',
-            '#tfc:saws'
+            'tfc:gem_saw'
         ]
-    ).damageIngredient('#tfc:saws')
+    ).damageIngredient('tfc:gem_saw')
 
     // Alfglass Pane
     event.remove({id: 'botania:elf_glass_pane'})
@@ -601,9 +610,9 @@ ServerEvents.recipes(event => {
         Item.of('botania:elf_glass_pane', 2),
         [
             'botania:elf_glass',
-            '#tfc:saws'
+            'tfc:gem_saw'
         ]
-    ).damageIngredient('#tfc:saws')
+    ).damageIngredient('tfc:gem_saw')
 
     // Bifrost Pane
     event.remove({id: 'botania:bifrost_pane'})
@@ -611,9 +620,9 @@ ServerEvents.recipes(event => {
         Item.of('botania:bifrost_pane', 2),
         [
             'botania:bifrost_perm',
-            '#tfc:saws'
+            'tfc:gem_saw'
         ]
-    ).damageIngredient('#tfc:saws')
+    ).damageIngredient('tfc:gem_saw')
 
     // Manasteel
     event.replaceInput(
@@ -940,4 +949,456 @@ ServerEvents.recipes(event => {
         'minecraft:cake',
         'tfc:cake'
     )
+
+    // Pasture Seeds
+    event.replaceInput(
+        {id: 'botania:mana_infusion/grass_seeds'},
+        'minecraft:grass',
+        '#tfc:plants/grass'
+    )
+
+    // Boreal Seeds
+    event.replaceInput(
+        {id: 'botania:mana_infusion/podzol_seeds'},
+        'minecraft:dead_bush',
+        'tfc:plant/dead_bush'
+    )
+
+    // Infestation Spores
+    event.replaceInput(
+        {id: 'botania:mana_infusion/mycel_seeds'},
+        '#forge:mushrooms',
+        'tfc:plant/artists_conk'
+    )
+
+    // Dry Pasture Seeds
+    event.replaceInput(
+        {id: 'botania:dry_seeds'},
+        'minecraft:dead_bush',
+        'tfc:plant/dead_bush'
+    )
+
+    // Golden Pasture Seeds
+    event.replaceInput(
+        {id: 'botania:golden_seeds'},
+        'minecraft:wheat',
+        '#forge:nuggets/gold'
+    )
+
+    // Rod of the Lands
+    event.replaceInput(
+        {id: 'botania:dirt_rod'},
+        'minecraft:dirt',
+        '#minecraft:dirt'
+    )
+
+    // Rod of the Depths
+    event.replaceInput(
+        {id: 'botania:cobble_rod'},
+        'minecraft:cobblestone',
+        '#forge:cobblestone'
+    )
+
+    // Rod of the Seas
+    event.replaceInput(
+        {id: 'botania:water_rod'},
+        'minecraft:potion',
+        'minecraft:prismarine_crystals'
+    )
+
+    // Rod of the Shifting Crust
+    event.replaceInput(
+        {id: 'botania:exchange_rod'},
+        'minecraft:stone',
+        '#forge:stone'
+    )
+
+    // Rod of the Shaded Mesa
+    event.replaceInput(
+        {id: 'botania:gravity_rod'},
+        'minecraft:wheat',
+        'tfc:food/wheat'
+    )
+
+    // Manaweave Cowl
+    event.remove({id: 'botania:manaweave_helmet'})
+    event.shaped(
+        Item.of('botania:manaweave_helmet'), 
+        [
+            'CCC',
+            'CNC',
+            'S S'
+        ],
+        {
+            C: 'botania:manaweave_cloth',
+            N: '#tfc:sewing_needles',
+            S: 'botania:mana_string'
+        }
+    ).damageIngredient('#tfc:sewing_needles')
+
+    // Manaweave Robe Top
+    event.remove({id: 'botania:manaweave_chestplate'})
+    event.shaped(
+        Item.of('botania:manaweave_chestplate'), 
+        [
+            'CNC',
+            'CCC',
+            'SCS'
+        ],
+        {
+            C: 'botania:manaweave_cloth',
+            N: '#tfc:sewing_needles',
+            S: 'botania:mana_string'
+        }
+    ).damageIngredient('#tfc:sewing_needles')
+
+    // Manaweave Robe Bottom
+    event.remove({id: 'botania:manaweave_leggings'})
+    event.shaped(
+        Item.of('botania:manaweave_leggings'), 
+        [
+            'CCC',
+            'CNC',
+            'CSC'
+        ],
+        {
+            C: 'botania:manaweave_cloth',
+            N: '#tfc:sewing_needles',
+            S: 'botania:mana_string'
+        }
+    ).damageIngredient('#tfc:sewing_needles')
+
+    // Manaweave Boots
+    event.remove({id: 'botania:manaweave_boots'})
+    event.shaped(
+        Item.of('botania:manaweave_boots'), 
+        [
+            'S S',
+            'CNC',
+            'C C'
+        ],
+        {
+            C: 'botania:manaweave_cloth',
+            N: '#tfc:sewing_needles',
+            S: 'botania:mana_string'
+        }
+    ).damageIngredient('#tfc:sewing_needles')
+
+    // Soulscribe
+    event.replaceInput(
+        {id: 'botania:ender_dagger'},
+        'botania:manasteel_ingot',
+        'kubejs:metal/knife_blade/manasteel'
+    )
+
+    // Vitreous Pickaxe
+    event.remove({id: 'botania:glass_pickaxe'})
+    event.shaped(
+        Item.of('botania:glass_pickaxe'), 
+        [
+            'GGG',
+            ' P ',
+            ' S '
+        ],
+        {
+            G: '#forge:glass/colorless',
+            P: 'botania:manasteel_pick',
+            S: 'botania:livingwood_twig'
+        }
+    )
+
+    // Crystal Bow
+    event.remove({id: 'botania:crystal_bow'})
+    event.shaped(
+        Item.of('botania:crystal_bow'), 
+        [
+            ' D ',
+            'DBD',
+            ' D '
+        ],
+        {
+            D: '#forge:gems/dragonstone',
+            B: 'botania:crystal_bow'
+        }
+    )
+
+    // Thorn Chakram
+    event.remove({id: 'botania:thorn_chakram'})
+    tfc.anvil(
+        TFC.itemStackProvider.of('botania:thorn_chakram'),
+        '#forge:ingots/terrasteel',
+        [
+            'draw_third_last',
+            'draw_second_last',
+            'bend_last'
+        ]
+    ).tier(4)
+    tfc.heating('botania:thorn_chakram', 1535).resultFluid(Fluid.of('kubejs:metal/terrasteel', 100))
+
+    // Flare Chakram
+    tfc.heating('botania:flare_chakram', 1535).resultFluid(Fluid.of('kubejs:metal/terrasteel', 100))
+
+    // Mana Mirror
+    event.remove({id: 'botania:mana_mirror'})
+    event.shaped(
+        Item.of('botania:mana_mirror'), 
+        [
+            'LTL',
+            'PTP',
+            ' S '
+        ],
+        {
+            L: 'botania:livingrock',
+            T: '#forge:double_ingots/terrasteel',
+            P: 'botania:mana_pearl',
+            T: 'botania:mana_tablet',
+            S: 'botania:livingwood_twig'
+        }
+    )
+
+    // Mana Blaster :D
+    event.replaceInput(
+        {id: 'botania:mana_gun'},
+        'minecraft:tnt',
+        '#forge:nuggets/terrasteel'
+    )
+
+    // Vine Ball
+    event.replaceInput(
+        {id: 'botania:vine_ball'},
+        'minecraft:vine',
+        '#tfc:plants/vine'
+    )
+
+    // Extrapolated Bucket
+    event.remove({id: 'botania:open_bucket'})
+    tfc.anvil(
+        TFC.itemStackProvider.of('botania:open_bucket'),
+        '#forge:sheets/elementium',
+        [
+            'bend_third_last',
+            'bend_second_last',
+            'bend_last'
+        ]
+    ).tier(4)
+
+    // Assembly Halo
+    event.replaceInput(
+        {id: 'botania:crafting_halo'},
+        'minecraft:crafting_table',
+        '#tfc:workbenches'
+    )
+
+    // Stone of Temperance
+    event.replaceInput(
+        {id: 'botania:temperance_stone'},
+        'minecraft:stone',
+        '#forge:stone'
+    )
+
+    // Cacophonium
+    event.remove({id: 'botania:cacophonium'})
+    event.shaped(
+        Item.of('botania:cacophonium'), 
+        [
+            ' SL',
+            'SNS',
+            ' SI'
+        ],
+        {
+            S: '#forge:sheets/gold',
+            L: 'botania:livingwood_twig',
+            N: 'minecraft:note_block',
+            I: '#forge:ingots/gold'
+        }
+    )
+
+    // Slime in a Bottle
+    event.remove({id: 'botania:slime_bottle'})
+    event.shaped(
+        Item.of('botania:slime_bottle'), 
+        [
+            'SGS',
+            'IBI',
+            ' S '
+        ],
+        {
+            S: '#forge:sheets/elementium',
+            G: 'botania:elf_glass',
+            I: '#forge:ingots/elementium',
+            B: 'minecraft:slime_ball'
+        }
+    )
+
+    // Worldshaper's Sextant
+    event.remove({id: 'botania:sextant'})
+    event.shaped(
+        Item.of('botania:sextant'), 
+        [
+            'IL ',
+            'LL ',
+            'ISI'
+        ],
+        {
+            I: '#forge:ingots/manasteel',
+            L: 'botania:livingwood_twig',
+            S: '#forge:sheets/manasteel'
+        }
+    )
+
+    // Worldshaper's Astrolabe
+    event.remove({id: 'botania:astrolabe'})
+    event.shaped(
+        Item.of('botania:astrolabe'), 
+        [
+            ' SG',
+            'SIS',
+            'GSL'
+        ],
+        {
+            S: '#forge:sheets/elementium',
+            G: 'botania:life_essence',
+            I: '#forge:ingots/elementium',
+            L: '#botania:dreamwood_logs'
+        }
+    )
+
+    // Trinket Case
+    event.remove({id: 'botania:bauble_box'})
+    event.shaped(
+        Item.of('botania:bauble_box'), 
+        [
+            ' M ',
+            'SCS',
+            ' G '
+        ],
+        {
+            M: '#forge:ingots/manasteel',
+            S: '#forge:plates/manasteel',
+            C: '#forge:chests/wooden',
+            G: '#forge:ingots/gold'
+        }
+    )
+
+    // Ring of Chordata
+    event.remove({id: 'botania:water_ring'})
+    event.shaped(
+        Item.of('botania:water_ring'), 
+        [
+            'RMF',
+            'MHM',
+            'FM '
+        ],
+        {
+            R: 'botania:rune_water',
+            M: '#forge:ingots/manasteel',
+            F: '#minecraft:fishes',
+            H: 'minecraft:heart_of_the_sea'
+        }
+    )
+
+    // Dexterous Motion
+    event.replaceInput(
+        {id: 'botania:dodge_ring'},
+        'minecraft:emerald',
+        '#forge:gems/emerald'
+    )
+
+    // Ring of the Mantle
+    event.replaceInput(
+        {id: 'botania:mining_ring'},
+        'minecraft:golden_pickaxe',
+        'tfc:metal/pickaxe/copper'
+    )
+
+    // Cloak of Balance
+    event.replaceInput(
+        {id: 'botania:balance_cloak'},
+        'minecraft:emerald',
+        '#forge:gems/emerald'
+    )
+
+    // Third Eye
+    event.replaceInput(
+        {id: 'botania:third_eye'},
+        'minecraft:golden_carrot',
+        '#forge:plates/copper'
+    )
+
+    // Tiny Planet Bauble
+    event.replaceInput(
+        {id: 'botania:tiny_planet'},
+        'minecraft:stone',
+        '#forge:stone'
+    )
+
+    // Charm of the Diva
+    event.replaceInput(
+        {id: 'botania:diva_charm'},
+        'minecraft:gold_ingot',
+        '#forge:ingots/gold'
+    )
+
+    // The Spectator
+    event.replaceInput(
+        {id: 'botania:itemfinder'},
+        'minecraft:iron_ingot',
+        '#forge:ingots/wrought_iron'
+    )
+    
+    // Frugel Tiara
+    event.replaceInput(
+        {id: 'botania:flighttiara_0'},
+        'botania:elementium_ingot',
+        '#forge:sheets/elementium'
+    )
+
+    // Biscuit of Totality
+    event.replaceInput(
+        {id: 'botania:mana_infusion/mana_cookie'},
+        'minecraft:cookie',
+        'firmalife:food/chocolate_chip_cookie'
+    )
+
+    // World Seed
+    event.replaceInput(
+        {id: 'botania:world_seed'},
+        'minecraft:grass_block',
+        '#minecraft:dirt'
+    )
+
+    // Resolute Ivy
+    event.replaceInput(
+        {id: 'botania:keep_ivy'},
+        'minecraft:vine',
+        '#tfc:plants/vine'
+    )
+
+    // Crafting Placeholder
+    event.replaceInput(
+        {id: 'botania:placeholder'},
+        'minecraft:crafting_table',
+        '#tfc:workbenches'
+    )
+
+    // Managlass Vial
+    event.remove({id: 'botania:vial'})
+    event.shapeless(
+        Item.of('botania:vial', 2),
+        [
+            '2x botania:mana_glass',
+            'tfc:gem_saw'
+        ]
+    ).damageIngredient('tfc:gem_saw')
+
+    // Managlass Vial
+    event.remove({id: 'botania:flask'})
+    event.shapeless(
+        Item.of('botania:flask', 2),
+        [
+            '2x botania:elf_glass',
+            'tfc:gem_saw'
+        ]
+    ).damageIngredient('tfc:gem_saw')
+
 })
