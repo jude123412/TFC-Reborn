@@ -215,8 +215,10 @@ ClientEvents.lang('en_us', event => {
     event.add('block.kubejs.insulator.glass', 'Glass Insulator')
 
     // Support
-    event.add('block.kubejs.wood.support.livingwood', 'Livingwood Support')
-    event.add('block.kubejs.wood.support.dreamwood', 'Dreamwood Support')
+    event.add('block.kubejs.wood.support.livingwood', 'Livingwood Vertical Support')
+    event.add('block.kubejs.wood.support.livingwood_horizontal', 'Livingwood Horizontal Support')
+    event.add('block.kubejs.wood.support.dreamwood', 'Dreamwood Vertical Support')
+    event.add('block.kubejs.wood.support.dreamwood_horizontal', 'Dreamwood Horizontal Support')
 
     // Barrel Recipes Names
     event.add('tfc.recipe.barrel.minecraft.wood_pulp', 'Wood Pulp')
