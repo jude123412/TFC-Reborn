@@ -223,6 +223,20 @@ JEIEvents.hideItems(event => {
     event.hide('railcraft:bronze_ingot')
     event.hide('railcraft:invar_ingot')
 
+    // Railcraft Reborn Gears
+    event.hide('railcraft:iron_gear')
+    event.hide('railcraft:copper_gear')
+    event.hide('railcraft:gold_gear')
+    event.hide('railcraft:lead_gear')
+    event.hide('railcraft:nickel_gear')
+    event.hide('railcraft:silver_gear')
+    event.hide('railcraft:tin_gear')
+    event.hide('railcraft:zinc_gear')
+    event.hide('railcraft:steel_gear')
+    event.hide('railcraft:brass_gear')
+    event.hide('railcraft:bronze_gear')
+    event.hide('railcraft:invar_gear')
+
     // Create Ingots
     event.hide('create:zinc_ingot')
     event.hide('create:brass_ingot')
@@ -288,4 +302,8 @@ JEIEvents.hideItems(event => {
     event.hide('vintage:refined_obsidian_sheet')
     event.hide('vintage:osmium_sheet')
     event.hide('steampowered:bronze_sheet')
+
+    // Buildcraft Gears
+    event.hide('buildcraftcore:gears/gear_iron')
+    event.hide('buildcraftcore:gears/gear_gold')
 })

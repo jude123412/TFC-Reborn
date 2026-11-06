@@ -235,6 +235,13 @@ ServerEvents.recipes(event => {
     event.remove({id: 'immersiveengineering:metalpress/plate_bronze'})
     event.remove({id: 'immersiveengineering:metalpress/plate_invar'})
     event.remove({id: 'immersiveengineering:metalpress/plate_osmium'})
+    event.remove({id: 'immersiveengineering:metalpress/gear_iron'})
+    event.remove({id: 'immersiveengineering:metalpress/gear_brass'})
+    event.remove({id: 'immersiveengineering:metalpress/gear_invar'})
+    event.remove({id: 'immersiveengineering:metalpress/gear_lead'})
+    event.remove({id: 'immersiveengineering:metalpress/gear_gold'})
+    event.remove({id: 'immersiveengineering:metalpress/gear_copper'})
+    event.remove({id: 'immersiveengineering:metalpress/gear_bronze'})
 
     // Recipe Removal by output
     event.remove({output: 'immersiveengineering:dust_wood'})

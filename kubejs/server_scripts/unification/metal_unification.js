@@ -779,11 +779,8 @@ ServerEvents.recipes(event => {
         }
 
         // Gears
-        if (m.gear != null && m.gear_half != null && m.ingot != null && m.double_ingot != null && m.fluid != null) {       
-            tfc.heating(m.gear, m.melt)
-                .resultFluid(Fluid.of(m.fluid, 400))
-            tfc.heating(m.gear_half, m.melt)
-                .resultFluid(Fluid.of(m.fluid, 200))
+        if (m.gear != null && m.gear_half != null && m.ingot != null && m.double_ingot != null && m.fluid != null) {
+            event.remove({output: m.gear})
 
             tfc.anvil(
                 TFC.itemStackProvider.of(m.gear_half).copyHeat(),
@@ -815,6 +812,11 @@ ServerEvents.recipes(event => {
                     item: m.gear
                 }
             })
+
+            tfc.heating(m.gear, m.melt)
+                .resultFluid(Fluid.of(m.fluid, 400))
+            tfc.heating(m.gear_half, m.melt)
+                .resultFluid(Fluid.of(m.fluid, 200))
         }
 
         // Nuggets
