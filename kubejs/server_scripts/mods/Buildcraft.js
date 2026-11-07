@@ -35,7 +35,7 @@ ServerEvents.recipes(event => {
             ' X X '
         ],
         ingredient: {
-            tag: 'tfc:rock_knapping'
+            tag: 'bsa:rock/loose'
         },
         result: {
             item: 'buildcraftcore:gears/gear_stone'

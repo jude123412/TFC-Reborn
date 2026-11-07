@@ -198,6 +198,21 @@ ServerEvents.tags('item', event => {
     event.add('tfc:plants/kelp', 'tfc:plant/leafy_kelp')
     event.add('tfc:plants/kelp', 'tfc:plant/giant_kelp_flower')
 
+    // Kubejs Knapping
+    event.add('kubejs:knapping/quartz', '#forge:gems/quartz')
+    event.add('kubejs:knapping/lapis', '#forge:gems/lapis')
+    event.add('kubejs:knapping/lapis', 'tfc:ore/lapis_lazuli')
+
+    // TFC Any Knapping
+    event.add('tfc:any_knapping', '#forge:gems/quartz')
+    event.add('tfc:any_knapping', '#forge:gems/lapis')
+    event.add('tfc:any_knapping', 'tfc:ore/lapis_lazuli')
+
+    // TFC Rock Knapping
+    event.add('tfc:rock_knapping', '#forge:gems/quartz')
+    event.add('tfc:rock_knapping', '#forge:gems/lapis')
+    event.add('tfc:rock_knapping', 'tfc:ore/lapis_lazuli')
+
     // Remove these to stop them showing up
     // in railcraft loot tables
     event.removeAll('railcraft:ingot_chest_loot')

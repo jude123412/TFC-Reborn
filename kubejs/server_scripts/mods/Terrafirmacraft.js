@@ -504,4 +504,88 @@ ServerEvents.recipes(event => {
             count: 2
         }
     })
+    
+    // Raw Brown Sandstone
+    event.shaped(
+        Item.of('tfc:raw_sandstone/brown'), 
+        [
+            'RR',
+            'RR'
+        ],
+        {
+            R: 'kubejs:sandstone/loose/brown'
+        }
+    )
+
+    // Raw White Sandstone
+    event.shaped(
+        Item.of('tfc:raw_sandstone/white'), 
+        [
+            'RR',
+            'RR'
+        ],
+        {
+            R: 'kubejs:sandstone/loose/white'
+        }
+    )
+
+    // Raw Black Sandstone
+    event.shaped(
+        Item.of('tfc:raw_sandstone/black'), 
+        [
+            'RR',
+            'RR'
+        ],
+        {
+            R: 'kubejs:sandstone/loose/black'
+        }
+    )
+
+    // Raw Red Sandstone
+    event.shaped(
+        Item.of('tfc:raw_sandstone/red'), 
+        [
+            'RR',
+            'RR'
+        ],
+        {
+            R: 'kubejs:sandstone/loose/red'
+        }
+    )
+
+    // Raw Yellow Sandstone
+    event.shaped(
+        Item.of('tfc:raw_sandstone/yellow'), 
+        [
+            'RR',
+            'RR'
+        ],
+        {
+            R: 'kubejs:sandstone/loose/yellow'
+        }
+    )
+
+    // Raw Green Sandstone
+    event.shaped(
+        Item.of('tfc:raw_sandstone/green'), 
+        [
+            'RR',
+            'RR'
+        ],
+        {
+            R: 'kubejs:sandstone/loose/green'
+        }
+    )
+
+    // Raw Pink Sandstone
+    event.shaped(
+        Item.of('tfc:raw_sandstone/pink'), 
+        [
+            'RR',
+            'RR'
+        ],
+        {
+            R: 'kubejs:sandstone/loose/pink'
+        }
+    )
 })

@@ -187,6 +187,28 @@ ClientEvents.lang('en_us', event => {
     event.add("item.kubejs.wood.bark_powder.livingwood", "Livingwood Bark Powder")
     event.add("item.kubejs.wood.bark_powder.dreamwood", "Dreamwood Bark Powder")
 
+    // Pipe Frames
+    event.add('item.kubejs.pipe_frame.wood', 'Wooden Pipe Frame')
+    event.add('item.kubejs.pipe_frame.cobblestone', 'Cobblestone Pipe Frame')
+    event.add('item.kubejs.pipe_frame.stone', 'Stone Pipe Frame')
+    event.add('item.kubejs.pipe_frame.quartz', 'Quartz Pipe Frame')
+    event.add('item.kubejs.pipe_frame.iron', 'Iron Pipe Frame')
+    event.add('item.kubejs.pipe_frame.gold', 'Golden Pipe Frame')
+    event.add('item.kubejs.pipe_frame.clay', 'Clay Pipe Frame')
+    event.add('item.kubejs.pipe_frame.sandstone', 'Sandstone Pipe Frame')
+    event.add('item.kubejs.pipe_frame.obsidian', 'Obsidian Pipe Frame')
+    event.add('item.kubejs.pipe_frame.diamond', 'Diamond Pipe Frame')
+    event.add('item.kubejs.pipe_frame.lapis', 'Lapis Pipe Frame')
+    event.add('item.kubejs.pipe_frame.emerald', 'Emerald Pipe Frame')
+
+    event.add('item.kubejs.sandstone.loose.brown', 'Loose Brown Sandstone')
+    event.add('item.kubejs.sandstone.loose.white', 'Loose White Sandstone')
+    event.add('item.kubejs.sandstone.loose.black', 'Loose Black Sandstone')
+    event.add('item.kubejs.sandstone.loose.red', 'Loose Red Sandstone')
+    event.add('item.kubejs.sandstone.loose.yellow', 'Loose Yellow Sandstone')
+    event.add('item.kubejs.sandstone.loose.green', 'Loose Green Sandstone')
+    event.add('item.kubejs.sandstone.loose.pink', 'Loose Pink Sandstone')
+
     // Metal Buckets
     event.add('item.kubejs.metal.andesite_alloy_bucket', 'Andesite Alloy Bucket')
     event.add('item.kubejs.metal.andesite_bucket', 'Andesite Bucket')
@@ -231,4 +253,7 @@ ClientEvents.lang('en_us', event => {
 
     // Knapping Recipe Names
     event.add('tfc.jei.refactory_clay_knapping', 'Refactory Clay Knapping Recipe')
+    event.add('tfc.jei.sandstone_knapping', 'Sandstone Knapping Recipe')
+    event.add('tfc.jei.quartz_knapping', 'Quartz Knapping Recipe')
+    event.add('tfc.jei.lapis_knapping', 'Lapis Knapping Recipe')
 })

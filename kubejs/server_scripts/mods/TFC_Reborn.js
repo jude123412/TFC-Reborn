@@ -17,6 +17,23 @@ TFCEvents.data(event => {
     // Unfired Ceramic Insulator
     event.itemHeat('kubejs:insulator/unfired_ceramic', 2.332, null, null)
 
+    // Pipe Frame
+    event.itemHeat('kubejs:pipe_frame/cobblestone', 5.714, null, null)
+    event.itemHeat('kubejs:pipe_frame/iron', 2.857 * 2, 921, 1228)
+    event.itemHeat('kubejs:pipe_frame/gold', 1.667 * 2, 636, 848)
+    event.itemSize('kubejs:pipe_frame/wood', 'large', 'light')
+    event.itemSize('kubejs:pipe_frame/cobblestone', 'large', 'light')
+    event.itemSize('kubejs:pipe_frame/stone', 'large', 'light')
+    event.itemSize('kubejs:pipe_frame/quartz', 'large', 'light')
+    event.itemSize('kubejs:pipe_frame/iron', 'large', 'light')
+    event.itemSize('kubejs:pipe_frame/gold', 'large', 'light')
+    event.itemSize('kubejs:pipe_frame/clay', 'large', 'light')
+    event.itemSize('kubejs:pipe_frame/sandstone', 'large', 'light')
+    event.itemSize('kubejs:pipe_frame/obsidian', 'large', 'light')
+    event.itemSize('kubejs:pipe_frame/diamond', 'large', 'light')
+    event.itemSize('kubejs:pipe_frame/lapis', 'large', 'light')
+    event.itemSize('kubejs:pipe_frame/emerald', 'large', 'light')
+
     // Quicklime
     event.itemSize('kubejs:quicklime', 'small', 'light')
 
@@ -26,8 +43,7 @@ TFCEvents.data(event => {
     // Block of Coal Coke
     event.fuel('kubejs:coal_coke_block', 1550, 33000, null)
 
-    // Refactory Bricks
-    // Used for RC and IE Coke/Blast Furnaces
+    // Refactory Clay Knapping
     event.knappingType(
         'kubejs:refactory_clay',
         5,
@@ -38,6 +54,45 @@ TFCEvents.data(event => {
         false,
         'kubejs:refactory_clay',
         'kubejs:refactory_clay'
+    )
+
+    // Sandstone Knapping
+    event.knappingType(
+        '#kubejs:knapping/sandstone',
+        2,
+        1,
+        'tfc:item.knapping.stone',
+        false,
+        false,
+        true,
+        'kubejs:sandstone/loose/yellow',
+        'kubejs:sandstone'
+    )
+
+    // Quartz Knapping
+    event.knappingType(
+        '#kubejs:knapping/quartz',
+        2,
+        1,
+        'tfc:item.knapping.stone',
+        false,
+        false,
+        true,
+        'minecraft:quartz',
+        'kubejs:quartz'
+    )
+
+    // Lapis Knapping
+    event.knappingType(
+        '#kubejs:knapping/lapis',
+        2,
+        1,
+        'tfc:item.knapping.stone',
+        false,
+        false,
+        true,
+        'tfc:gem/lapis_lazuli',
+        'kubejs:lapis'
     )
 })
 
@@ -249,6 +304,286 @@ ServerEvents.recipes(event => {
     })
 
     // Quicklime
-    tfc.heating('#tfc:fluxstone', 900)
-        .resultItem('kubejs:quicklime')
+    event.custom({
+        type: 'tfc:heating',
+        ingredient: {
+            tag: 'tfc:fluxstone'
+        },
+        result_item: {
+            item: 'kubejs:quicklime'
+        },
+        temperature: 900
+    })
+
+    // Wooden Pipe Frame
+    event.shaped(
+        Item.of('kubejs:pipe_frame/wood'), 
+        [
+            'S S',
+            ' G ',
+            'S S'
+        ],
+        {
+            S: '#forge:rods/wooden',
+            G: '#forge:slimeballs'
+        }
+    )
+
+    // Cobblestone Pipe Frame
+    event.custom({
+        type: 'tfc:knapping',
+        knapping_type: 'tfc:rock',
+        outside_slot_required: false,
+        pattern: [
+            ' X X ',
+            'X X X',
+            ' X X ',
+            'X X X',
+            ' X X '
+        ],
+        ingredient: {
+            tag: 'bsa:rock/loose'
+        },
+        result: {
+            item: 'kubejs:pipe_frame/cobblestone',
+            count: 8
+        }
+    })
+
+    // Stone Pipe Frame
+    event.custom({
+        type: 'tfc:heating',
+        ingredient: {
+            item: 'kubejs:pipe_frame/cobblestone'
+        },
+        result_item: {
+            item: 'kubejs:pipe_frame/stone'
+        },
+        temperature: 1399
+    })
+
+    // Quartz Pipe Frame
+    event.custom({
+        type: 'tfc:knapping',
+        knapping_type: 'kubejs:quartz',
+        outside_slot_required: false,
+        pattern: [
+            ' X X ',
+            'X X X',
+            ' X X ',
+            'X X X',
+            ' X X '
+        ],
+        ingredient: {
+            tag: 'kubejs:knapping/quartz'
+        },
+        result: {
+            item: 'kubejs:pipe_frame/quartz',
+            count: 8
+        }
+    })
+
+    // Iron Pipe Frame
+    tfc.anvil(
+        TFC.itemStackProvider.of('kubejs:pipe_frame/iron', 8).copyHeat(),
+        'tfc:metal/double_ingot/wrought_iron',
+        [
+            'draw_not_last',
+            'bend_not_last',
+            'hit_last'
+        ]
+    ).tier(3)
+    tfc.heating('kubejs:pipe_frame/iron', 1535)
+        .resultFluid(Fluid.of('tfc:metal/cast_iron', 25))
+
+    // Gold Pipe Frame
+    tfc.anvil(
+        TFC.itemStackProvider.of('kubejs:pipe_frame/gold', 8).copyHeat(),
+        'tfc:metal/double_ingot/gold',
+        [
+            'draw_not_last',
+            'bend_not_last',
+            'hit_last'
+        ]
+    ).tier(1)
+    tfc.heating('kubejs:pipe_frame/gold', 1060)
+        .resultFluid(Fluid.of('tfc:metal/gold', 25))
+
+    // Clay Pipe Frame
+    event.custom({
+        type: 'tfc:knapping',
+        knapping_type: 'tfc:clay',
+        pattern: [
+            ' X X ',
+            'X X X',
+            ' X X ',
+            'X X X',
+            ' X X '
+        ],
+        result: {
+            item: 'kubejs:pipe_frame/clay',
+            count: 8
+        }
+    })
+
+    // Sandstone Pipe Frame
+    event.custom({
+        type: 'tfc:knapping',
+        knapping_type: 'kubejs:sandstone',
+        outside_slot_required: false,
+        pattern: [
+            ' X X ',
+            'X X X',
+            ' X X ',
+            'X X X',
+            ' X X '
+        ],
+        ingredient: {
+            tag: 'kubejs:knapping/sandstone'
+        },
+        result: {
+            item: 'kubejs:pipe_frame/sandstone',
+            count: 8
+        }
+    })
+
+    // Obsidian Pipe Frame
+    event.custom({
+        type: 'tfc:knapping',
+        knapping_type: 'tfc:rock',
+        outside_slot_required: false,
+        pattern: [
+            ' X X ',
+            'X X X',
+            ' X X ',
+            'X X X',
+            ' X X '
+        ],
+        ingredient: {
+            tag: 'bsa:knapping/obsidian'
+        },
+        result: {
+            item: 'kubejs:pipe_frame/obsidian',
+            count: 8
+        }
+    })
+
+    // Diamond Pipe Frame
+    event.custom({
+        type: 'tfc:knapping',
+        knapping_type: 'tfc:rock',
+        outside_slot_required: false,
+        pattern: [
+            ' X X ',
+            'X X X',
+            ' X X ',
+            'X X X',
+            ' X X '
+        ],
+        ingredient: {
+            tag: 'bsa:knapping/diamond'
+        },
+        result: {
+            item: 'kubejs:pipe_frame/diamond',
+            count: 8
+        }
+    })
+
+    // Lapis Pipe Frame
+    event.custom({
+        type: 'tfc:knapping',
+        knapping_type: 'kubejs:lapis',
+        outside_slot_required: false,
+        pattern: [
+            ' X X ',
+            'X X X',
+            ' X X ',
+            'X X X',
+            ' X X '
+        ],
+        ingredient: {
+            tag: 'kubejs:knapping/lapis'
+        },
+        result: {
+            item: 'kubejs:pipe_frame/lapis',
+            count: 8
+        }
+    })
+
+    // Emerald Pipe Frame
+    event.custom({
+        type: 'tfc:knapping',
+        knapping_type: 'tfc:rock',
+        outside_slot_required: false,
+        pattern: [
+            ' X X ',
+            'X X X',
+            ' X X ',
+            'X X X',
+            ' X X '
+        ],
+        ingredient: {
+            tag: 'bsa:knapping/emerald'
+        },
+        result: {
+            item: 'kubejs:pipe_frame/emerald',
+            count: 8
+        }
+    })
+
+    // Loose Brown Sandstone
+    event.shapeless(
+        Item.of('kubejs:sandstone/loose/brown', 4),
+        [
+            'tfc:raw_sandstone/brown'
+        ]
+    )
+
+    // Loose White Sandstone
+    event.shapeless(
+        Item.of('kubejs:sandstone/loose/white', 4),
+        [
+            'tfc:raw_sandstone/white'
+        ]
+    )
+
+    // Loose Black Sandstone
+    event.shapeless(
+        Item.of('kubejs:sandstone/loose/black', 4),
+        [
+            'tfc:raw_sandstone/black'
+        ]
+    )
+
+    // Loose Red Sandstone
+    event.shapeless(
+        Item.of('kubejs:sandstone/loose/red', 4),
+        [
+            'tfc:raw_sandstone/red'
+        ]
+    )
+
+    // Loose Yellow Sandstone
+    event.shapeless(
+        Item.of('kubejs:sandstone/loose/yellow', 4),
+        [
+            'tfc:raw_sandstone/yellow'
+        ]
+    )
+
+    // Loose Green Sandstone
+    event.shapeless(
+        Item.of('kubejs:sandstone/loose/green', 4),
+        [
+            'tfc:raw_sandstone/green'
+        ]
+    )
+
+    // Loose Pink Sandstone
+    event.shapeless(
+        Item.of('kubejs:sandstone/loose/pink', 4),
+        [
+            'tfc:raw_sandstone/pink'
+        ]
+    )
 })
