@@ -5,10 +5,6 @@
 	showBackpackIconInInventory = true
 	#Sends a message to the player on death with backpack coordinates
 	sendBackpackCoordinatesMessage = true
-	#Enables tool cycling via keybind (Default Z) + scroll combination, while backpack is worn
-	enableToolCycling = true
-	#Allows tool cycling using keybinding only (Default Z)
-	disableScrollWheel = false
 	#Enables tip, how to obtain a backpack, if there's no crafting recipe for it
 	obtainTips = true
 	#Render tools in tool slots on the backpack, while worn
@@ -26,4 +22,26 @@
 		#Offsets to up
 		#Range: > -2147483648
 		offsetY = 30
+
+	#The position of the Tools Overlay on the screen
+	[client.toolsOverlay]
+		#If true, the currently held item will be swapped with the selected tool belt slot when closing the tool belt GUI
+		swapOnClose = true
+		#Displays the full tooltip when hovering over an item in the tool belt. If false, only the item name is shown
+		showTooltip = false
+		#The tool belt GUI will always display all the slots, even when empty
+		displayEmptySlots = false
+		#Allows to scroll through hotbar slots while the tool belt GUI is open
+		allowHotbarScrolling = false
+		#Render backpack icon in the center of the tools overlay
+		renderBackpackIconInCenter = true
+		#Overlay opacity
+		#Range: 0.0 ~ 1.0
+		opacity = 0.75
+		#X offset
+		#Range: > -2147483648
+		offsetX = 0
+		#Y offset
+		#Range: > -2147483648
+		offsetY = 0
 
