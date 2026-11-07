@@ -345,28 +345,44 @@ ServerEvents.recipes(event => {
     })
 
     // Iron Pipe Frame
-    tfc.anvil(
-        TFC.itemStackProvider.of('kubejs:pipe_frame/iron', 8).copyHeat(),
-        'tfc:metal/double_ingot/wrought_iron',
-        [
+    event.custom({
+        type: 'tfc:anvil',
+        input: {
+            item: 'tfc:metal/double_ingot/wrought_iron'
+        },
+        result: {
+            item: 'kubejs:pipe_frame/iron',
+            count: 8
+        },
+        tier: 3,
+        rules: [
             'draw_not_last',
             'bend_not_last',
             'hit_last'
-        ]
-    ).tier(3)
+        ],
+        "apply_forging_bonus": false
+    })
     tfc.heating('kubejs:pipe_frame/iron', 1535)
         .resultFluid(Fluid.of('tfc:metal/cast_iron', 25))
 
     // Gold Pipe Frame
-    tfc.anvil(
-        TFC.itemStackProvider.of('kubejs:pipe_frame/gold', 8).copyHeat(),
-        'tfc:metal/double_ingot/gold',
-        [
+    event.custom({
+        type: 'tfc:anvil',
+        input: {
+            item: 'tfc:metal/double_ingot/gold'
+        },
+        result: {
+            item: 'kubejs:pipe_frame/gold',
+            count: 8
+        },
+        tier: 1,
+        rules: [
             'draw_not_last',
             'bend_not_last',
             'hit_last'
-        ]
-    ).tier(1)
+        ],
+        "apply_forging_bonus": false
+    })
     tfc.heating('kubejs:pipe_frame/gold', 1060)
         .resultFluid(Fluid.of('tfc:metal/gold', 25))
 
