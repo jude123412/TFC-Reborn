@@ -64,7 +64,7 @@ ServerEvents.recipes(event => {
             event.remove({id: `tfc_debark:bark/${wood}_wood`})
 
             lychee.block_interacting(
-                '#tfc:axes_that_log', 
+                '#minecraft:axes', 
                 BlockPredicate.of(t.log)
             ).post([ 
                 Post.drop_item(Item.of(t.bark)).withChance(0.5),
@@ -72,7 +72,7 @@ ServerEvents.recipes(event => {
                 Post.damage_item()
             ])
             lychee.block_interacting(
-                '#tfc:axes_that_log', 
+                '#minecraft:axes', 
                 BlockPredicate.of(t.wood)
             ).post([ 
                 Post.drop_item(Item.of(t.bark)).withChance(0.5),
@@ -151,7 +151,7 @@ ServerEvents.recipes(event => {
             event.remove({id: `tfc_lumberjack:compat/immersiveengineering/sawmill/support/${wood}_wood`})
 
             lychee.block_interacting(
-                '#tfc:axes_that_log', 
+                '#minecraft:axes', 
                 BlockPredicate.of(t.stripped_log)
             ).post([ 
                 Post.drop_item(Item.of(t.support, 2)),
@@ -159,7 +159,7 @@ ServerEvents.recipes(event => {
                 Post.damage_item()
             ])
             lychee.block_interacting(
-                '#tfc:axes_that_log', 
+                '#minecraft:axes', 
                 BlockPredicate.of(t.stripped_wood)
             ).post([ 
                 Post.drop_item(Item.of(t.support, 2)),
