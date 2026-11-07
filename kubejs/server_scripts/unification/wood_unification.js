@@ -79,6 +79,22 @@ ServerEvents.recipes(event => {
                 Post.place(t.stripped_wood),
                 Post.damage_item()
             ])
+            lychee.block_interacting(
+                '#tfc:saws', 
+                BlockPredicate.of(t.log)
+            ).post([ 
+                Post.drop_item(Item.of(t.bark)).withChance(0.5),
+                Post.place(t.stripped_log),
+                Post.damage_item()
+            ])
+            lychee.block_interacting(
+                '#tfc:saws', 
+                BlockPredicate.of(t.wood)
+            ).post([ 
+                Post.drop_item(Item.of(t.bark)).withChance(0.5),
+                Post.place(t.stripped_wood),
+                Post.damage_item()
+            ])
             create.cutting(
                 [
                     t.stripped_log,
