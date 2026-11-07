@@ -55,45 +55,6 @@ TFCEvents.data(event => {
         'kubejs:refactory_clay',
         'kubejs:refactory_clay'
     )
-
-    // Sandstone Knapping
-    event.knappingType(
-        '#kubejs:knapping/sandstone',
-        2,
-        1,
-        'tfc:item.knapping.stone',
-        false,
-        false,
-        true,
-        'kubejs:sandstone/loose/yellow',
-        'kubejs:sandstone'
-    )
-
-    // Quartz Knapping
-    event.knappingType(
-        '#kubejs:knapping/quartz',
-        2,
-        1,
-        'tfc:item.knapping.stone',
-        false,
-        false,
-        true,
-        'minecraft:quartz',
-        'kubejs:quartz'
-    )
-
-    // Lapis Knapping
-    event.knappingType(
-        '#kubejs:knapping/lapis',
-        2,
-        1,
-        'tfc:item.knapping.stone',
-        false,
-        false,
-        true,
-        'tfc:gem/lapis_lazuli',
-        'kubejs:lapis'
-    )
 })
 
 ServerEvents.recipes(event => {
@@ -365,7 +326,7 @@ ServerEvents.recipes(event => {
     // Quartz Pipe Frame
     event.custom({
         type: 'tfc:knapping',
-        knapping_type: 'kubejs:quartz',
+        knapping_type: 'tfc:rock',
         outside_slot_required: false,
         pattern: [
             ' X X ',
@@ -429,7 +390,7 @@ ServerEvents.recipes(event => {
     // Sandstone Pipe Frame
     event.custom({
         type: 'tfc:knapping',
-        knapping_type: 'kubejs:sandstone',
+        knapping_type: 'tfc:rock',
         outside_slot_required: false,
         pattern: [
             ' X X ',
@@ -492,7 +453,7 @@ ServerEvents.recipes(event => {
     // Lapis Pipe Frame
     event.custom({
         type: 'tfc:knapping',
-        knapping_type: 'kubejs:lapis',
+        knapping_type: 'tfc:rock',
         outside_slot_required: false,
         pattern: [
             ' X X ',
