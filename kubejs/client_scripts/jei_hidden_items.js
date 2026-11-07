@@ -303,8 +303,4 @@ JEIEvents.hideItems(event => {
     event.hide('vintage:refined_obsidian_sheet')
     event.hide('vintage:osmium_sheet')
     event.hide('steampowered:bronze_sheet')
-
-    // Buildcraft Gears
-    event.hide('buildcraftcore:gears/gear_iron')
-    event.hide('buildcraftcore:gears/gear_gold')
 })
