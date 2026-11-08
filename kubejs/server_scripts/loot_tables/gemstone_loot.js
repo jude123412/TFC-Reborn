@@ -111,20 +111,29 @@ LootJS.modifiers((event) => {
         ],
     }
 
-    for (const rock in rockGems) {
-        let gems = rockGems[rock]
-        let chance = 0.0009 / gems.length
+    const rockVariants = {
+        raw: 0.0009,
+        hardened: 0.0027
+    }
 
-        let modifier = event.addBlockLootModifier(`tfc:rock/raw/${rock}`)
+    for (const variant in rockVariants) {
+        let totalChance = rockVariants[variant]
 
-        let entries = []
+        for (const rock in rockGems) {
+            let gems = rockGems[rock]
+            let chance = totalChance / gems.length
 
-        for (let gem of gems) {
-            entries.push(
-                LootEntry.of(gem).when(c => c.randomChance(chance))
-            )
+            let modifier = event.addBlockLootModifier(`tfc:rock/${variant}/${rock}`)
+
+            let entries = []
+
+            for (const gem of gems) {
+                entries.push(
+                    LootEntry.of(gem).when(c => c.randomChance(chance))
+                )
+            }
+
+            modifier.addAlternativesLoot(entries)
         }
-
-        modifier.addAlternativesLoot(entries)
     }
 })
