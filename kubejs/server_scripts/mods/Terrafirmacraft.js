@@ -588,4 +588,25 @@ ServerEvents.recipes(event => {
             R: 'kubejs:sandstone/loose/pink'
         }
     )
+
+    // Wooden Bucket
+    event.remove({id: 'tfc:crafting/wooden_bucket'})
+    event.custom({
+        type: 'tfc:knapping',
+        knapping_type: 'kubejs:lumber',
+        outside_slot_required: false,
+        pattern: [
+            'X   X',
+            'X   X',
+            'X   X',
+            'XX XX',
+            ' XXX '
+        ],
+        ingredient: {
+            tag: 'tfc:lumber'
+        },
+        result: {
+            item: 'tfc:wooden_bucket'
+        }
+    })
 })

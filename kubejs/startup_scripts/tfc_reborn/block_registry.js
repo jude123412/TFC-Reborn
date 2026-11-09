@@ -47,4 +47,13 @@ StartupEvents.registry('block', event => {
         .box(5, 0, 5, 11, 14, 11)
         .requiresTool(true)
         .tagBlock('minecraft:mineable/pickaxe')
+    
+    // Precision Machine Frame
+    event.create('precision_machine_frame')
+        .textureAll('kubejs:block/precision_machine_frame')
+        .soundType(SoundType.METAL)
+        .hardness(5)
+        .resistance(12)
+        .requiresTool(true)
+        .tagBlock('minecraft:mineable/pickaxe')
 })

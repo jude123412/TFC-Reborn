@@ -37,6 +37,9 @@ TFCEvents.data(event => {
     // Quicklime
     event.itemSize('kubejs:quicklime', 'small', 'light')
 
+    // Engine Core
+    event.itemSize('kubejs:engine_core', 'large', 'heavy')
+
     // Coal Coke
     event.fuel('kubejs:coal_coke', 1550, 3300, null)
 
@@ -54,6 +57,19 @@ TFCEvents.data(event => {
         false,
         'kubejs:refactory_clay',
         'kubejs:refactory_clay'
+    )
+
+    // Lumber Knapping
+    event.knappingType(
+        '#tfc:lumber',
+        16,
+        16,
+        'minecraft:block.wood.break',
+        false,
+        false,
+        true,
+        'tfc:wood/lumber/oak',
+        'kubejs:lumber'
     )
 })
 
@@ -277,18 +293,25 @@ ServerEvents.recipes(event => {
     })
 
     // Wooden Pipe Frame
-    event.shaped(
-        Item.of('kubejs:pipe_frame/wood'), 
-        [
-            'S S',
-            ' G ',
-            'S S'
+    event.custom({
+        type: 'tfc:knapping',
+        knapping_type: 'kubejs:lumber',
+        outside_slot_required: false,
+        pattern: [
+            ' X X ',
+            'X X X',
+            ' X X ',
+            'X X X',
+            ' X X '
         ],
-        {
-            S: '#forge:rods/wooden',
-            G: '#forge:slimeballs'
+        ingredient: {
+            tag: 'tfc:lumber'
+        },
+        result: {
+            item: 'kubejs:pipe_frame/wood',
+            count: 8
         }
-    )
+    })
 
     // Cobblestone Pipe Frame
     event.custom({
@@ -589,5 +612,41 @@ ServerEvents.recipes(event => {
                 item: 'kubejs:alf_glass_batch'
             }
         ]
+    })
+
+    // Refactory Clay
+    event.shaped(
+        Item.of('kubejs:precision_machine_frame'), 
+        [
+            'SBS',
+            'GPG',
+            'SBS'
+        ],
+        {
+            S: '#forge:sheets/wrought_iron',
+            B: 'minecraft:piston',
+            G: '#forge:gears/wrought_iron',
+            P: 'create:precision_mechanism'
+        }
+    )
+
+    // Engine Core
+    event.custom({
+        type: 'tfc:knapping',
+        knapping_type: 'tfc:rock',
+        outside_slot_required: false,
+        pattern: [
+            ' XXX ',
+            ' XXX ',
+            ' XXX ',
+            ' XXX ',
+            ' XXX '
+        ],
+        ingredient: {
+            tag: 'kubejs:knapping/lapis'
+        },
+        result: {
+            item: 'kubejs:engine_core'
+        }
     })
 })

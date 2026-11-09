@@ -184,4 +184,9 @@ StartupEvents.registry('item', event => {
         .translationKey('kubejs:item/alf_glass_batch')
         .tag('tfc:glass_batches')
         .tag('tfc:glass_batches_tier_3')
+
+    // Engine Core
+    event.create('kubejs:engine_core')
+        .texture('kubejs:item/engine_core')
+        .translationKey('kubejs:item/engine_core')
 })

@@ -206,12 +206,16 @@ ServerEvents.tags('item', event => {
     // TFC Any Knapping
     event.add('tfc:any_knapping', '#forge:gems/quartz')
     event.add('tfc:any_knapping', '#forge:gems/lapis')
+    event.add('tfc:any_knapping', '#tfc:lumber')
     event.add('tfc:any_knapping', 'tfc:ore/lapis_lazuli')
 
     // TFC Rock Knapping
     event.add('tfc:rock_knapping', '#forge:gems/quartz')
     event.add('tfc:rock_knapping', '#forge:gems/lapis')
     event.add('tfc:rock_knapping', 'tfc:ore/lapis_lazuli')
+
+    // TFC Wood Knapping
+    event.add('tfc:wood_knapping', '#tfc:lumber')
 
     // Remove these to stop them showing up
     // in railcraft loot tables

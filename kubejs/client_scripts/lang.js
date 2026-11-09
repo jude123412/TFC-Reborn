@@ -150,10 +150,11 @@ ClientEvents.lang('en_us', event => {
     event.add('item.kubejs.unfired_refactory_brick', 'Unfired Refactory Brick')
     event.add('item.kubejs.refactory_brick', 'Refactory Brick')
     event.add('item.kubejs.quicklime', 'Quicklime')
+    event.add('item.kubejs.engine_core', 'Engine Core')
 
     // Lumber
     event.add('item.kubejs.wood.lumber.livingwood', 'Livingwood Lumber')
-    event.add('item.kubejs.wood.lumber.dreamwood', 'Livingwood Lumber')
+    event.add('item.kubejs.wood.lumber.dreamwood', 'Dreamwood Lumber')
 
     // Bark
     event.add("item.kubejs.wood.bark.baobab", "Baobab Bark")
@@ -240,6 +241,7 @@ ClientEvents.lang('en_us', event => {
     event.add('block.kubejs.insulator.unfired_ceramic', 'Unfired Ceramic Insulator')
     event.add('block.kubejs.insulator.ceramic', 'Ceramic Insulator')
     event.add('block.kubejs.insulator.glass', 'Glass Insulator')
+    event.add('block.kubejs.precision_machine_frame', 'Precision Machine Frame')
 
     // Support
     event.add('block.kubejs.wood.support.livingwood', 'Livingwood Vertical Support')
@@ -258,7 +260,5 @@ ClientEvents.lang('en_us', event => {
 
     // Knapping Recipe Names
     event.add('tfc.jei.refactory_clay_knapping', 'Refactory Clay Knapping Recipe')
-    event.add('tfc.jei.sandstone_knapping', 'Sandstone Knapping Recipe')
-    event.add('tfc.jei.quartz_knapping', 'Quartz Knapping Recipe')
-    event.add('tfc.jei.lapis_knapping', 'Lapis Knapping Recipe')
+    event.add('tfc.jei.lumber_knapping', 'Lumber Knapping Recipe')
 })
