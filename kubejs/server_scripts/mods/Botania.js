@@ -596,23 +596,33 @@ ServerEvents.recipes(event => {
 
     // Managlass Pane
     event.remove({id: 'botania:mana_glass_pane'})
-        event.shapeless(
-        Item.of('botania:mana_glass_pane', 2),
-        [
-            'botania:mana_glass',
-            'tfc:gem_saw'
-        ]
-    ).damageIngredient('tfc:gem_saw')
+    event.custom({
+        type: 'tfc:glassworking',
+        operations: [
+            'table_pour'
+        ],
+        batch: {
+            item: 'kubejs:mana_glass_batch'
+        },
+        result: {
+            item: 'botania:mana_glass_pane'
+        }
+    })
 
     // Alfglass Pane
     event.remove({id: 'botania:elf_glass_pane'})
-        event.shapeless(
-        Item.of('botania:elf_glass_pane', 2),
-        [
-            'botania:elf_glass',
-            'tfc:gem_saw'
-        ]
-    ).damageIngredient('tfc:gem_saw')
+    event.custom({
+        type: 'tfc:glassworking',
+        operations: [
+            'table_pour'
+        ],
+        batch: {
+            item: 'kubejs:alf_glass_batch'
+        },
+        result: {
+            item: 'botania:elf_glass_pane'
+        }
+    })
 
     // Bifrost Pane
     event.remove({id: 'botania:bifrost_pane'})
@@ -1383,22 +1393,69 @@ ServerEvents.recipes(event => {
 
     // Managlass Vial
     event.remove({id: 'botania:vial'})
-    event.shapeless(
-        Item.of('botania:vial', 2),
-        [
-            '2x botania:mana_glass',
-            'tfc:gem_saw'
-        ]
-    ).damageIngredient('tfc:gem_saw')
+    event.custom({
+        type: 'tfc:glassworking',
+        operations: [
+            'blow',
+            'stretch',
+            'pinch',
+            'saw'
+        ],
+        batch: {
+            item: 'kubejs:mana_glass_batch'
+        },
+        result: {
+            item: 'botania:vial'
+        }
+    })
 
     // Managlass Vial
     event.remove({id: 'botania:flask'})
-    event.shapeless(
-        Item.of('botania:flask', 2),
-        [
-            '2x botania:elf_glass',
-            'tfc:gem_saw'
-        ]
-    ).damageIngredient('tfc:gem_saw')
+    event.custom({
+        type: 'tfc:glassworking',
+        operations: [
+            'blow',
+            'blow',
+            'pinch',
+            'roll',
+            'saw'
+        ],
+        batch: {
+            item: 'kubejs:alf_glass_batch'
+        },
+        result: {
+            item: 'botania:flask'
+        }
+    })
+
+    // Managlass 
+    event.remove({id: 'botania:mana_infusion/mana_glass'})
+    event.custom({
+        type: 'tfc:glassworking',
+        operations: [
+            'basin_pour'
+        ],
+        batch: {
+            item: 'kubejs:mana_glass_batch'
+        },
+        result: {
+            item: 'botania:mana_glass'
+        }
+    })
+
+    // Alfglass Pane
+    event.remove({id: 'botania:elven_trade/elf_glass'})
+    event.custom({
+        type: 'tfc:glassworking',
+        operations: [
+            'basin_pour'
+        ],
+        batch: {
+            item: 'kubejs:alf_glass_batch'
+        },
+        result: {
+            item: 'botania:elf_glass'
+        }
+    })
 
 })

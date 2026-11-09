@@ -201,6 +201,7 @@ ClientEvents.lang('en_us', event => {
     event.add('item.kubejs.pipe_frame.lapis', 'Lapis Pipe Frame')
     event.add('item.kubejs.pipe_frame.emerald', 'Emerald Pipe Frame')
 
+    // Loose Sandstone
     event.add('item.kubejs.sandstone.loose.brown', 'Loose Brown Sandstone')
     event.add('item.kubejs.sandstone.loose.white', 'Loose White Sandstone')
     event.add('item.kubejs.sandstone.loose.black', 'Loose Black Sandstone')
@@ -209,6 +210,10 @@ ClientEvents.lang('en_us', event => {
     event.add('item.kubejs.sandstone.loose.green', 'Loose Green Sandstone')
     event.add('item.kubejs.sandstone.loose.pink', 'Loose Pink Sandstone')
 
+    // Glass Batches
+    event.add('item.kubejs.mana_glass_batch', 'Managlass Batch')
+    event.add('item.kubejs.alf_glass_batch', 'Alfglass Batch')
+    
     // Metal Buckets
     event.add('item.kubejs.metal.andesite_alloy_bucket', 'Andesite Alloy Bucket')
     event.add('item.kubejs.metal.andesite_bucket', 'Andesite Bucket')

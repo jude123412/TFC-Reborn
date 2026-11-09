@@ -170,4 +170,18 @@ StartupEvents.registry('item', event => {
     event.create('kubejs:pipe_frame/emerald')
         .texture('kubejs:item/pipe_frame/emerald')
         .translationKey('kubejs:item/pipe_frame/emerald')
+
+    // Mana Glass Batch
+    event.create('kubejs:mana_glass_batch')
+        .texture('kubejs:item/mana_glass_batch')
+        .translationKey('kubejs:item/mana_glass_batch')
+        .tag('tfc:glass_batches')
+        .tag('tfc:glass_batches_tier_2')
+
+    // Alf Glass Batch
+    event.create('kubejs:alf_glass_batch')
+        .texture('kubejs:item/alf_glass_batch')
+        .translationKey('kubejs:item/alf_glass_batch')
+        .tag('tfc:glass_batches')
+        .tag('tfc:glass_batches_tier_3')
 })

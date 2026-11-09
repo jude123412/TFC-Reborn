@@ -563,4 +563,31 @@ ServerEvents.recipes(event => {
             'tfc:raw_sandstone/pink'
         ]
     )
+
+    // Managlass Batch
+    event.custom({
+        type: 'botania:mana_infusion',
+        input: {
+            tag: 'tfc:glass_batches'
+        },
+        mana: 150,
+        output: {
+            item: 'kubejs:mana_glass_batch'
+        }
+    })
+
+    // Alfglass Batch
+    event.custom({
+        type: 'botania:elven_trade',
+        ingredients: [
+            {
+                item: 'kubejs:mana_glass_batch'
+            }
+        ],
+        output: [
+            {
+                item: 'kubejs:alf_glass_batch'
+            }
+        ]
+    })
 })
