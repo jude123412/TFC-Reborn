@@ -134,10 +134,16 @@ JEIEvents.hideItems(event => {
     event.hide('railcraft:bushing_gear')
     event.hide('buildcraftfactory:distiller')
     event.hide('buildcraftfactory:heat_exchange')
+    event.hide('buildcraftfactory:tank')
+    event.hide('buildcraftcore:engine_redstone')
+    event.hide('buildcraftenergy:engine_stone')
+    event.hide('buildcraftenergy:engine_iron')
+    event.hide('buildcraftenergy:mj_dynamo')
 
     // Hidden Buckets
     event.hide('buildcraftenergy:oil/hot_bucket')
     event.hide('buildcraftenergy:oil/searing_bucket')
+    event.hide('buildcraftenergy:oil_residue/cool_bucket')
     event.hide('buildcraftenergy:oil_residue/hot_bucket')
     event.hide('buildcraftenergy:oil_residue/searing_bucket')
     event.hide('buildcraftenergy:oil_heavy/cool_bucket')

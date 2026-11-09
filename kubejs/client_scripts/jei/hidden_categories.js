@@ -7,4 +7,5 @@ JEIEvents.removeCategories(event => {
     // Hidden Buildcraft Recipe Categories
     event.remove('buildcraftfactory:distillation')
     event.remove('buildcraftfactory:heat_exchange')
+    event.remove('buildcraftenergy:combustion_fuel')
 })

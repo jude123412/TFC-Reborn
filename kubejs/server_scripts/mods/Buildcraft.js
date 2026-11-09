@@ -4,6 +4,11 @@ ServerEvents.recipes(event => {
     // Recipe Removal
     event.remove({id: 'buildcraftfactory:distiller'})
     event.remove({id: 'buildcraftfactory:heat_exchange'})
+    event.remove({id: 'buildcraftcore:engine_redstone'})
+    event.remove({id: 'buildcraftenergy:stirling_engine'})
+    event.remove({id: 'buildcraftenergy:combustion_engine'})
+    event.remove({id: 'buildcraftenergy:mj_dynamo'})
+    event.remove({id: 'buildcraftfactory:tank'})
     
     // Construction Marker
     event.replaceInput(
@@ -185,34 +190,16 @@ ServerEvents.recipes(event => {
 
     // Land Mark
     event.replaceInput(
-        {id: 'buildcraftbuilders:marker_construction'},
+        {id: 'buildcraftcore:marker_volume'},
         'minecraft:lapis_lazuli',
         '#forge:dyes/blue'
     )
 
     // Path Mark
     event.replaceInput(
-        {id: 'buildcraftbuilders:marker_construction'},
+        {id: 'buildcraftcore:marker_path'},
         'minecraft:green_dye',
         '#forge:dyes/green'
-    )
-
-    // Redstone Engine
-    event.remove({id: 'buildcraftcore:engine_redstone'})
-    event.shaped(
-        Item.of('buildcraftcore:engine_redstone'),
-        [
-            'WWW',
-            'BCB',
-            'GPG'
-        ],
-        {
-            W: '#minecraft:planks',
-            B: 'buildcraftrobotics:redstone_board',
-            C: 'kubejs:engine_core',
-            G: 'buildcraftcore:gears/gear_wood',
-            P: 'minecraft:piston'
-        }
     )
 
     // Wrench
@@ -329,42 +316,6 @@ ServerEvents.recipes(event => {
         '#forge:glass/colorless'
     )
 
-    // Stirling Engine
-    event.remove({id: 'buildcraftenergy:stirling_engine'})
-    event.shaped(
-        Item.of('buildcraftenergy:engine_stone'),
-        [
-            'WWW',
-            'BCB',
-            'GPG'
-        ],
-        {
-            W: '#forge:smooth_stone',
-            B: 'buildcraftsilicon:redstone_chipset/red',
-            C: 'kubejs:engine_core',
-            G: 'buildcraftcore:gears/gear_stone',
-            P: 'minecraft:piston'
-        }
-    )
-
-    // Combustion Engine
-    event.remove({id: 'buildcraftenergy:combustion_engine'})
-    event.shaped(
-        Item.of('buildcraftenergy:engine_iron'),
-        [
-            'WWW',
-            'BCB',
-            'GPG'
-        ],
-        {
-            W: '#forge:sheets/wrought_iron',
-            B: 'buildcraftsilicon:redstone_chipset/gold',
-            C: 'kubejs:engine_core',
-            G: '#forge:gears/wrought_iron',
-            P: 'minecraft:piston'
-        }
-    )
-
     // FE Engine
     event.remove({id: 'buildcraftenergy:fe_engine'})
     event.shaped(
@@ -382,13 +333,4 @@ ServerEvents.recipes(event => {
             P: 'minecraft:piston'
         }
     )
-    event.shapeless('buildcraftenergy:engine_fe', [
-        'buildcraftenergy:mj_dynamo'
-    ])
-
-    // MJ Dynamo
-    event.remove({id: 'buildcraftenergy:mj_dynamo'})
-    event.shapeless('buildcraftenergy:mj_dynamo', [
-        'buildcraftenergy:engine_fe'
-    ])
 })
