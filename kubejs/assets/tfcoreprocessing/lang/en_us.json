@@ -14,5 +14,7 @@
     "item.tfcoreprocessing.pellet.magnetite":"Magnetite Pellet",
     "item.tfcoreprocessing.pellet.limonite":"Limonite Pellet",
     "item.tfcoreprocessing.pellet.sphalerite":"Sphalerite Pellet",
-    "item.tfcoreprocessing.pellet.tetrahedrite":"Tetrahedrite Pellet"
+    "item.tfcoreprocessing.kindle.bamboo_fiber":"Plant Fibers",
+    "item.tfcoreprocessing.kindle.bamboo_pellets":"Biofuel Pellets",
+    "item.tfcoreprocessing.kindle.bamboo_firelog":"Biofuel Firelog"
 }
