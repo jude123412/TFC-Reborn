@@ -15,6 +15,7 @@ TFCEvents.data(event => {
     // Diamond Gear
     event.itemSize('buildcraftcore:gears/gear_diamond', 'large', 'heavy')
 })
+
 ServerEvents.recipes(event => {
     const tfc = event.recipes.tfc
 
