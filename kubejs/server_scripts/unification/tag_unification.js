@@ -247,6 +247,18 @@ ServerEvents.tags('fluid', event => {
     event.add('forge:crude_oil', 'buildcraftenergy:oil')
     event.add('forge:crude_oil', 'buildcraftenergy:spout_oil')
     event.add('forge:crude_oil', 'artisanal:sour_crude_oil')
+
+    // Kerosene
+    event.add('forge:kerosene', 'artisanal:kerosene')
+
+    // Sulfuric Acid
+    event.add('forge:sulfuric_acid', 'artisanal:sulfuric_acid')
+
+    // Artisanal Acids
+    event.add('artisanal:acids', 'immersiveengineering:redstone_acid')
+    event.add('artisanal:acids', 'mekanism:hydrofluoric_acid')
+    event.add('artisanal:acids', 'mekanism:sulfuric_acid')
+    event.add('artisanal:acids', 'vintage:sulfuric_acid')
 })
 
 ServerEvents.tags('block', event => {
