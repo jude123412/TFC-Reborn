@@ -243,10 +243,41 @@ ServerEvents.tags('fluid', event => {
         event.add('tfc:usable_in_barrel', fluid)
     }
 
-    // Oil
+    // Crude Oil
     event.add('forge:crude_oil', 'buildcraftenergy:oil')
     event.add('forge:crude_oil', 'buildcraftenergy:spout_oil')
     event.add('forge:crude_oil', 'artisanal:sour_crude_oil')
+
+    // Oil
+    event.add('forge:oil', 'createdieselgenerators:crude_oil')
+    event.add('forge:oil', 'immersivepetroleum:crudeoil')
+    event.add('forge:oil', 'artisanal:sour_crude_oil')
+
+    // Dense Fuel
+    event.add('forge:fuel_dense', '#forge:diesel')
+    event.add('forge:fuel_dense', '#forge:biodiesel')
+
+    // Mixed Heavy Fuel
+    event.add('forge:fuel_mixed_heavy', '#forge:kerosene')
+
+    // Light Fuel
+    event.add('forge:fuel_light', '#forge:gasoline')
+
+    // Heavy Oil
+    event.add('forge:oil_heavy', '#forge:benzol')
+
+    // Distilled Oil
+    event.add('forge:oil_distilled', '#forge:lubricant')
+
+    // Dense Oil
+    event.add('forge:oil_dense', '#forge:ethanol')
+    event.add('forge:oil_dense', '#forge:bioethanol')
+
+    // Mixed Light Fuel
+    event.add('forge:fuel_mixed_light', '#forge:naphtha')
+
+    // Gaseous Fuel
+    event.add('forge:fuel_gaseous', '#forge:petroleum_gas')
 
     // Kerosene
     event.add('forge:kerosene', 'artisanal:kerosene')

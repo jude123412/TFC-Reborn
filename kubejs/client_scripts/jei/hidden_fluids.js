@@ -3,7 +3,6 @@ JEIEvents.hideFluids(event => {
     // Fluid Hiding
     event.hide('buildcraftenergy:oil_heat_1')
     event.hide('buildcraftenergy:oil_heat_2')
-    event.hide('buildcraftenergy:oil_residue')
     event.hide('buildcraftenergy:oil_residue_heat_1')
     event.hide('buildcraftenergy:oil_residue_heat_2')
     event.hide('buildcraftenergy:oil_heavy')
