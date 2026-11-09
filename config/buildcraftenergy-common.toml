@@ -11,7 +11,7 @@
 		#Can oil blocks burn?
 		can_burn = true
 		#Should oil slow entities moving through it?
-		oilIsDense = false
+		oilIsDense = true
 		#Comma-separated biome registry names that must never generate oil.
 		#This blacklist has priority over biomeWhitelist and datapack settings.
 		biomeBlacklist = ""
