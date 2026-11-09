@@ -246,6 +246,7 @@ ServerEvents.tags('fluid', event => {
     // Oil
     event.add('forge:crude_oil', 'buildcraftenergy:oil')
     event.add('forge:crude_oil', 'buildcraftenergy:spout_oil')
+    event.add('forge:crude_oil', 'artisanal:sour_crude_oil')
 
     // Kerosene
     event.add('forge:kerosene', 'artisanal:kerosene')
