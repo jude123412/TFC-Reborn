@@ -232,7 +232,9 @@ ServerEvents.tags('fluid', event => {
         'createdieselgenerators:crude_oil',
         'createdieselgenerators:gasoline',
         'createdieselgenerators:plant_oil',
-        'createdieselgenerators:ethanol'
+        'createdieselgenerators:ethanol',
+        'buildcraftenergy:oil',
+        'buildcraftenergy:spout_oil'
     ]
 
     for (const fluid of red_steel_bucket) {
@@ -240,6 +242,11 @@ ServerEvents.tags('fluid', event => {
         event.add('tfc:usable_in_red_steel_bucket', fluid)
         event.add('tfc:usable_in_barrel', fluid)
     }
+
+    // Oil
+    event.add('forge:crude_oil', 'buildcraftenergy:oil')
+    event.add('forge:crude_oil', 'buildcraftenergy:spout_oil')
+    event.add('forge:crude_oil', 'artisanal:sour_crude_oil')
 })
 
 ServerEvents.tags('block', event => {

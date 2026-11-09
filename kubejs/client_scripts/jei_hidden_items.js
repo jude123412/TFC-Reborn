@@ -132,13 +132,39 @@ JEIEvents.hideItems(event => {
     event.hide('aiotbotania:livingwood_shovel')
     event.hide('aiotbotania:livingwood_sword')
     event.hide('railcraft:bushing_gear')
+    event.hide('buildcraftfactory:distiller')
+    event.hide('buildcraftfactory:heat_exchange')
 
-    // Minecraft Ingots
+    // Hidden Ingots
+    event.hide('immersiveengineering:ingot_silver')
+    event.hide('immersiveengineering:ingot_nickel')
+    event.hide('immersiveengineering:ingot_steel')
+    event.hide('mekanism:ingot_bronze')
+    event.hide('mekanism:ingot_steel')
+    event.hide('mekanism:ingot_tin')
+    event.hide('mekanism:ingot_lead')
+    event.hide('mekanism:ingot_uranium')
+    event.hide('mekanism:nugget_steel')
+    event.hide('mekanism:nugget_tin')
+    event.hide('mekanism:nugget_lead')
+    event.hide('mekanism:nugget_uranium')
+    event.hide('railcraft:lead_ingot')
+    event.hide('railcraft:nickel_ingot')
+    event.hide('railcraft:silver_ingot')
+    event.hide('railcraft:tin_ingot')
+    event.hide('railcraft:zinc_ingot')
+    event.hide('railcraft:steel_ingot')
+    event.hide('railcraft:brass_ingot')
+    event.hide('railcraft:bronze_ingot')
+    event.hide('railcraft:invar_ingot')
+    event.hide('create:zinc_ingot')
+    event.hide('create:brass_ingot')
+    event.hide('createaddition:electrum_ingot')
     event.hide('minecraft:iron_ingot')
     event.hide('minecraft:copper_ingot')
     event.hide('minecraft:gold_ingot')
 
-    // Immersive Engineering Dusts
+    // Hidden Dusts
     event.hide('immersiveengineering:dust_saltpeter')
     event.hide('immersiveengineering:dust_sulfur')
     event.hide('immersiveengineering:dust_copper')
@@ -152,13 +178,6 @@ JEIEvents.hideItems(event => {
     event.hide('immersiveengineering:dust_steel')
     event.hide('immersiveengineering:dust_iron')
     event.hide('immersiveengineering:dust_gold')
-
-    // Immersive Engineering Ingots
-    event.hide('immersiveengineering:ingot_silver')
-    event.hide('immersiveengineering:ingot_nickel')
-    event.hide('immersiveengineering:ingot_steel')
-
-    // Mekanism Dusts
     event.hide('mekanism:salt')
     event.hide('mekanism:dust_charcoal')
     event.hide('mekanism:dust_coal')
@@ -182,27 +201,14 @@ JEIEvents.hideItems(event => {
     event.hide('mekanism:dirty_dust_tin')
     event.hide('mekanism:dirty_dust_lead')
     event.hide('mekanism:dirty_dust_uranium')
-
-    // Mekanism Ingots
-    event.hide('mekanism:ingot_bronze')
-    event.hide('mekanism:ingot_steel')
-    event.hide('mekanism:ingot_tin')
-    event.hide('mekanism:ingot_lead')
-    event.hide('mekanism:ingot_uranium')
-
-    // Mekanism Ingots
-    event.hide('mekanism:nugget_steel')
-    event.hide('mekanism:nugget_tin')
-    event.hide('mekanism:nugget_lead')
-    event.hide('mekanism:nugget_uranium')
-
-    // Railcraft Reborn Dusts
     event.hide('railcraft:saltpeter_dust')
     event.hide('railcraft:coal_dust')
     event.hide('railcraft:charcoal_dust')
     event.hide('railcraft:sulfur_dust')
+    event.hide('createaddition:diamond_grit')
+    event.hide('immersivetechnology:salt')
 
-    // Railcraft Reborn Nuggets
+    // Hidden Nuggets
     event.hide('railcraft:lead_nugget')
     event.hide('railcraft:nickel_nugget')
     event.hide('railcraft:silver_nugget')
@@ -212,19 +218,16 @@ JEIEvents.hideItems(event => {
     event.hide('railcraft:brass_nugget')
     event.hide('railcraft:bronze_nugget')
     event.hide('railcraft:invar_nugget')
+    event.hide('create:copper_nugget')
+    event.hide('createaddition:diamond_grit')
+    event.hide('createaddition:electrum_nugget')
+    event.hide('vintage:sulfur_chunk')
+    event.hide('mekanism:nugget_steel')
+    event.hide('mekanism:nugget_tin')
+    event.hide('mekanism:nugget_lead')
+    event.hide('mekanism:nugget_uranium')
 
-    // Railcraft Reborn Ingots
-    event.hide('railcraft:lead_ingot')
-    event.hide('railcraft:nickel_ingot')
-    event.hide('railcraft:silver_ingot')
-    event.hide('railcraft:tin_ingot')
-    event.hide('railcraft:zinc_ingot')
-    event.hide('railcraft:steel_ingot')
-    event.hide('railcraft:brass_ingot')
-    event.hide('railcraft:bronze_ingot')
-    event.hide('railcraft:invar_ingot')
-
-    // Railcraft Reborn Gears
+    // Hidden Gears
     event.hide('railcraft:iron_gear')
     event.hide('railcraft:copper_gear')
     event.hide('railcraft:gold_gear')
@@ -237,27 +240,6 @@ JEIEvents.hideItems(event => {
     event.hide('railcraft:brass_gear')
     event.hide('railcraft:bronze_gear')
     event.hide('railcraft:invar_gear')
-
-    // Create Ingots
-    event.hide('create:zinc_ingot')
-    event.hide('create:brass_ingot')
-
-    // Create Nuggets
-    event.hide('create:copper_nugget')
-
-    // Create Addons Ingots
-    event.hide('createaddition:electrum_ingot')
-
-    // Create Addons Dusts
-    event.hide('createaddition:diamond_grit')
-
-    // Create Addons Nuggets
-    event.hide('createaddition:diamond_grit')
-    event.hide('createaddition:electrum_nugget')
-    event.hide('vintage:sulfur_chunk')
-
-    // Immersive Technology Dusts
-    event.hide('immersivetechnology:salt')
 
     // Hidden Plates
     event.hide('create:copper_sheet')

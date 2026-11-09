@@ -2,8 +2,8 @@ ServerEvents.recipes(event => {
     const tfc = event.recipes.tfc
 
     // Recipe Removal
-    event.remove({id: 'buildcraftcore:gears/gear_iron'})
-    event.remove({id: 'buildcraftcore:gears/gear_gold'})
+    event.remove({id: 'buildcraftfactory:distiller'})
+    event.remove({id: 'buildcraftfactory:heat_exchange'})
     
     // Construction Marker
     event.replaceInput(
