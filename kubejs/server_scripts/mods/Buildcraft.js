@@ -1,3 +1,20 @@
+TFCEvents.data(event => {
+
+    // Wooden Gear
+    event.itemSize('buildcraftcore:gears/gear_wood', 'large', 'heavy')
+
+    // Stone Gear
+    event.itemSize('buildcraftcore:gears/gear_stone', 'large', 'heavy')
+
+    // Iron Gear
+    event.itemSize('buildcraftcore:gears/gear_iron', 'large', 'heavy')
+
+    // Gold Gear
+    event.itemSize('buildcraftcore:gears/gear_gold', 'large', 'heavy')
+
+    // Diamond Gear
+    event.itemSize('buildcraftcore:gears/gear_diamond', 'large', 'heavy')
+})
 ServerEvents.recipes(event => {
     const tfc = event.recipes.tfc
 
