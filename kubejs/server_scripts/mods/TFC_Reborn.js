@@ -649,4 +649,25 @@ ServerEvents.recipes(event => {
             item: 'kubejs:engine_core'
         }
     })
+
+    // Wooden Board
+    event.custom({
+        type: 'tfc:knapping',
+        knapping_type: 'kubejs:lumber',
+        outside_slot_required: false,
+        pattern: [
+            'XXX  ',
+            'XX   ',
+            '     ',
+            'XXX  ',
+            'XX   '
+        ],
+        ingredient: {
+            tag: 'tfc:lumber'
+        },
+        result: {
+            item: 'kubejs:wooden_board',
+            count: 4
+        }
+    })
 })

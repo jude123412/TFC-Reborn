@@ -189,4 +189,9 @@ StartupEvents.registry('item', event => {
     event.create('kubejs:engine_core')
         .texture('kubejs:item/engine_core')
         .translationKey('kubejs:item/engine_core')
+
+    // Wooden Board
+    event.create('kubejs:wooden_board')
+        .texture('kubejs:item/wooden_board')
+        .translationKey('kubejs:item/wooden_board')
 })

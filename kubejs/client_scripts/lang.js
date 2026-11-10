@@ -151,6 +151,7 @@ ClientEvents.lang('en_us', event => {
     event.add('item.kubejs.refactory_brick', 'Refactory Brick')
     event.add('item.kubejs.quicklime', 'Quicklime')
     event.add('item.kubejs.engine_core', 'Engine Core')
+    event.add('item.kubejs.wooden_board', 'Wooden Board')
 
     // Lumber
     event.add('item.kubejs.wood.lumber.livingwood', 'Livingwood Lumber')
@@ -257,6 +258,8 @@ ClientEvents.lang('en_us', event => {
     event.add('tfc.recipe.barrel.minecraft.rose_quartz', 'Rose Quartz')
     event.add('tfc.recipe.barrel.minecraft.treated_wood_lumber', 'Treated Wood Lumber')
     event.add('tfc.recipe.barrel.minecraft.treated_wood_stick', 'Treated Wood Stick')
+    event.add('tfc.recipe.barrel.minecraft.redstone_board_etching', 'Redstone Board Etching')
+    event.add('tfc.recipe.barrel.minecraft.pipe_sealant', 'Pipe Sealant')
 
     // Knapping Recipe Names
     event.add('tfc.jei.refactory_clay_knapping', 'Refactory Clay Knapping Recipe')

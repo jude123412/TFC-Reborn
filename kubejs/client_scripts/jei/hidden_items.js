@@ -135,10 +135,13 @@ JEIEvents.hideItems(event => {
     event.hide('buildcraftfactory:distiller')
     event.hide('buildcraftfactory:heat_exchange')
     event.hide('buildcraftfactory:tank')
-    event.hide('buildcraftcore:engine_redstone')
     event.hide('buildcraftenergy:engine_stone')
     event.hide('buildcraftenergy:engine_iron')
     event.hide('buildcraftenergy:mj_dynamo')
+    event.hide('buildcraftfactory:pump')
+    event.hide('buildcraftfactory:flood_gate')
+    event.hide('buildcraftfactory:water_gel')
+    event.hide('buildcraftfactory:gel')
 
     // Hidden Buckets
     event.hide('buildcraftenergy:oil/hot_bucket')

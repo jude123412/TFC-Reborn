@@ -22,11 +22,16 @@ ServerEvents.recipes(event => {
     // Recipe Removal
     event.remove({id: 'buildcraftfactory:distiller'})
     event.remove({id: 'buildcraftfactory:heat_exchange'})
-    event.remove({id: 'buildcraftcore:engine_redstone'})
     event.remove({id: 'buildcraftenergy:stirling_engine'})
     event.remove({id: 'buildcraftenergy:combustion_engine'})
     event.remove({id: 'buildcraftenergy:mj_dynamo'})
     event.remove({id: 'buildcraftfactory:tank'})
+    event.remove({id: 'buildcraftfactory:pump'})
+    event.remove({id: 'buildcraftfactory:flood_gate'})
+    event.remove({id: 'buildcraftfactory:water_gel'})
+    event.remove({id: 'buildcraftfactory:gel'})
+    event.remove({id: 'buildcraftsilicon:plug_gate_create/iron_no_modifier'})
+    event.remove({id: 'buildcraftsilicon:plug_gate_create/nether_brick_no_modifier'})
     
     // Construction Marker
     event.replaceInput(
@@ -49,8 +54,7 @@ ServerEvents.recipes(event => {
             amount: 250
         },
         output_item: {
-            item: 'buildcraftbuilders:blueprint'
-            
+            item: 'buildcraftbuilders:blueprint'  
         }
     })
 
@@ -69,7 +73,6 @@ ServerEvents.recipes(event => {
         },
         output_item: {
             item: 'buildcraftbuilders:template'
-            
         }
     })
 
@@ -220,6 +223,24 @@ ServerEvents.recipes(event => {
         '#forge:dyes/green'
     )
 
+    // Redstone Engine
+    event.remove({id: 'buildcraftcore:engine_redstone'})
+    event.shaped(
+        Item.of('buildcraftcore:engine_redstone'),
+        [
+            'WWW',
+            'BCB',
+            'GPG'
+        ],
+        {
+            W: '#minecraft:planks',
+            B: 'buildcraftrobotics:redstone_board',
+            C: 'kubejs:engine_core',
+            G: 'buildcraftcore:gears/gear_wood',
+            P: 'minecraft:piston'
+        }
+    )
+
     // Wrench
     event.remove({id: 'buildcraftcore:wrench'})
     tfc.anvil(
@@ -323,14 +344,14 @@ ServerEvents.recipes(event => {
     // Paintbrush
     event.replaceInput(
         {id: 'buildcraftcore:paintbrush/clean'},
-        'buildcraftcore:paintbrush/clean',
+        'minecraft:string',
         '#bsa:bindings/strong'
     )
 
     // Volume Box
     event.replaceInput(
         {id: 'buildcraftcore:volume_box'},
-        'buildcraftcore:volume_box',
+        'minecraft:glass',
         '#forge:glass/colorless'
     )
 
@@ -351,4 +372,386 @@ ServerEvents.recipes(event => {
             P: 'minecraft:piston'
         }
     )
+
+    // FE Engine
+    event.remove({id: 'buildcraftfactory:autowork_bench_1'})
+    event.remove({id: 'buildcraftfactory:autowork_bench_2'})
+    event.shaped(
+        Item.of('buildcraftfactory:autoworkbench_item'),
+        [
+            'GPG',
+            'SCS',
+            'GPG'
+        ],
+        {
+            G: 'buildcraftcore:gears/gear_stone',
+            P: 'create:precision_mechanism',
+            S: 'buildcraftcore:gears/gear_wood',
+            C: '#tfc:workbenches'
+        }
+    )
+
+    // Mining Well
+    event.remove({id: 'buildcraftfactory:mining_well'})
+    event.shaped(
+        Item.of('buildcraftfactory:mining_well'),
+        [
+            'GRG',
+            'CPC',
+            'GDG'
+        ],
+        {
+            G: 'buildcraftcore:gears/gear_iron',
+            R: '#forge:storage_blocks/redstone',
+            C: 'buildcraftsilicon:redstone_chipset/iron',
+            P: 'kubejs:precision_machine_frame',
+            D: 'immersiveengineering:drillhead_steel'
+        }
+    )
+
+    // Chute
+    event.remove({id: 'buildcraftfactory:chute'})
+    event.shaped(
+        Item.of('buildcraftfactory:chute'),
+        [
+            'SGS',
+            ' H '
+        ],
+        {
+            S: '#forge:sheets/wrought_iron',
+            G: 'buildcraftcore:gears/gear_stone',
+            H: 'minecraft:hopper'
+        }
+    )
+
+    // Zone Planner
+    event.remove({id: 'buildcraftrobotics:zone_planner'})
+    event.shaped(
+        Item.of('buildcraftrobotics:zone_planner'),
+        [
+            'ICI',
+            'BFB',
+            'IGI'
+        ],
+        {
+            I: '#forge:ingots/wrought_iron',
+            G: 'buildcraftcore:gears/gear_diamond',
+            B: '#forge:gears/gold',
+            F: 'kubejs:precision_machine_frame',
+            C: 'minecraft:map'
+        }
+    )
+
+    // Requester
+    event.remove({id: 'buildcraftrobotics:requester'})
+    event.shaped(
+        Item.of('buildcraftrobotics:requester'),
+        [
+            'ICI',
+            'BFB',
+            'IGI'
+        ],
+        {
+            I: '#forge:ingots/wrought_iron',
+            C: '#tfc:workbenches',
+            B: '#forge:gears/gold',
+            F: 'kubejs:precision_machine_frame',
+            G: '#forge:chests/wooden'
+        }
+    )
+
+    // Construction Marker
+    event.replaceInput(
+        {id: 'buildcraftrobotics:robot'},
+        'minecraft:iron_ingot',
+        '#forge:plates/wrought_iron'
+    )
+
+    // Redstone Board
+    event.remove({id: 'buildcraftrobotics:redstone_board'})
+    event.custom({
+        type: 'tfc:barrel_sealed',
+        input_item: {
+            ingredient: {
+                item: 'kubejs:wooden_board'
+            }
+        },
+        input_fluid: {
+            ingredient: {
+                tag: 'forge:redstone_acid'
+            },
+            amount: 250
+        },
+        output_item: {
+            item: 'buildcraftrobotics:redstone_board'
+        },
+        duration: 8000
+    }).id('redstone_board_etching')
+
+    // Docking Station
+    event.remove({id: 'buildcraftrobotics:robot_station'})
+    event.shaped(
+        Item.of('buildcraftrobotics:robot_station'),
+        [
+            ' G ',
+            'PSP'
+        ],
+        {
+            G: 'buildcraftsilicon:redstone_chipset/gold',
+            P: '#forge:plates/wrought_iron',
+            S: '#forge:sheets/wrought_iron'
+        }
+    )
+
+    // Laser
+    event.remove({id: 'buildcraftsilicon:laser'})
+    event.shaped(
+        Item.of('buildcraftsilicon:laser'),
+        [
+            'RRR',
+            'RCR',
+            'OCO'
+        ],
+        {
+            R: '#forge:dusts/redstone',
+            C: 'kubejs:engine_core',
+            O: '#forge:obsidian'
+        }
+    )
+
+    // Assembly Table
+    event.remove({id: 'buildcraftsilicon:assembly_table'})
+    event.shaped(
+        Item.of('buildcraftsilicon:assembly_table'),
+        [
+            'RRR',
+            'OCO',
+            'OGO'
+        ],
+        {
+            R: '#forge:dusts/redstone',
+            C: '#tfc:workbenches',
+            O: '#forge:obsidian',
+            G: 'buildcraftcore:gears/gear_diamond'
+        }
+    )
+
+    // Advanced Crafting Table
+    event.remove({id: 'buildcraftsilicon:advanced_crafting_table'})
+    event.shaped(
+        Item.of('buildcraftsilicon:advanced_crafting_table'),
+        [
+            'OCO',
+            'ORO',
+            'OSO'
+        ],
+        {
+            O: '#forge:obsidian',
+            C: '#tfc:workbenches',
+            R: 'buildcraftsilicon:redstone_chipset/red',
+            S: '#forge:chests/wooden'
+        }
+    )
+
+    // Construction Marker
+    event.replaceInput(
+        {id: 'buildcraftsilicon:integration_table'},
+        'minecraft:gold_ingot',
+        '#forge:plates/gold'
+    )
+
+    // Charging Table
+    event.remove({id: 'buildcraftsilicon:charging_table'})
+    event.shaped(
+        Item.of('buildcraftsilicon:charging_table'),
+        [
+            'OCO',
+            'ORO',
+            'OSO'
+        ],
+        {
+            O: '#forge:obsidian',
+            C: 'buildcraftsilicon:redstone_chipset/red',
+            R: '#forge:plates/wrought_iron',
+            S: '#forge:gears/gold'
+        }
+    )
+
+    // Programming Table
+    event.remove({id: 'buildcraftsilicon:programming_table'})
+    event.shaped(
+        Item.of('buildcraftsilicon:programming_table'),
+        [
+            'OCO',
+            'ORO',
+            'OSO'
+        ],
+        {
+            O: '#forge:obsidian',
+            C: '#forge:glass/colorless',
+            R: 'buildcraftcore:list',
+            S: '#forge:gears/gold'
+        }
+    )
+
+    // Redstone Chipset
+    event.remove({id: 'buildcraftsilicon:assembly/redstone_chipset'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(10000),
+        group: 'buildcraftsilicon:chipsets',
+        ingredient_counts: [
+            1,
+            1
+        ],
+        ingredients: [
+            {
+                item: 'buildcraftrobotics:redstone_board'
+            },
+            {
+                tag: 'forge:dusts/redstone'
+            }
+        ],
+        result: {
+            item: 'buildcraftsilicon:redstone_chipset/red'
+        }
+    })
+
+    // Iron Chipset
+    event.remove({id: 'buildcraftsilicon:assembly/iron_chipset'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(20000),
+        group: 'buildcraftsilicon:chipsets',
+        ingredient_counts: [
+            1,
+            1
+        ],
+        ingredients: [
+            {
+                item: 'buildcraftrobotics:redstone_board'
+            },
+            {
+                tag: 'forge:dusts/wrought_iron'
+            }
+        ],
+        result: {
+            item: 'buildcraftsilicon:redstone_chipset/iron'
+        }
+    })
+
+    // Gold Chipset
+    event.remove({id: 'buildcraftsilicon:assembly/gold_chipset'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(40000),
+        group: 'buildcraftsilicon:chipsets',
+        ingredient_counts: [
+            1,
+            1
+        ],
+        ingredients: [
+            {
+                item: 'buildcraftrobotics:redstone_board'
+            },
+            {
+                tag: 'forge:dusts/gold'
+            }
+        ],
+        result: {
+            item: 'buildcraftsilicon:redstone_chipset/gold'
+        }
+    })
+
+    // Quartz Chipset
+    event.remove({id: 'buildcraftsilicon:assembly/quartz_chipset'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(60000),
+        group: 'buildcraftsilicon:chipsets',
+        ingredient_counts: [
+            1,
+            1
+        ],
+        ingredients: [
+            {
+                item: 'buildcraftrobotics:redstone_board'
+            },
+            {
+                tag: 'forge:gems/quartz'
+            }
+        ],
+        result: {
+            item: 'buildcraftsilicon:redstone_chipset/quartz'
+        }
+    })
+
+    // Diamond Chipset
+    event.remove({id: 'buildcraftsilicon:assembly/diamond_chipset'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(80000),
+        group: 'buildcraftsilicon:chipsets',
+        ingredient_counts: [
+            1,
+            1
+        ],
+        ingredients: [
+            {
+                item: 'buildcraftrobotics:redstone_board'
+            },
+            {
+                tag: 'forge:gems/diamond'
+            }
+        ],
+        result: {
+            item: 'buildcraftsilicon:redstone_chipset/diamond'
+        }
+    })
+
+    // Pipe Pulsar
+    event.remove({id: 'buildcraftsilicon:assembly/plug_pulsar'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(1000),
+        ingredient_counts: [
+            1,
+            2
+        ],
+        ingredients: [
+            {
+                item: 'buildcraftcore:engine_redstone'
+            },
+            {
+                tag: 'forge:plates/wrought_iron'
+            }
+        ],
+        result: {
+            item: 'buildcraftsilicon:plug/pulsar'
+        }
+    })
+
+    // Pipe Sealant
+    event.remove({id: 'buildcraftenergy:residue_to_pipe_sealant'})
+    event.remove({id: 'buildcrafttransport:waterproof'})
+    event.remove({id: 'buildcrafttransport:residue_to_waterproof'})
+    event.custom({
+        type: 'tfc:barrel_sealed',
+        input_item: {
+            ingredient: {
+                tag: 'forge:slimeballs'
+            }
+        },
+        input_fluid: {
+            ingredient: {
+                tag: 'tfc:green_dye'
+            },
+            amount: 50
+        },
+        output_item: {
+            item: 'buildcrafttransport:waterproof',
+            count: 4
+        },
+        duration: 8000
+    }).id('pipe_sealant')
 })

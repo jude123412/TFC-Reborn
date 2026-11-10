@@ -10,3 +10,11 @@ global.createIfNeeded = (id, creator) => {
         creator()
     }
 }
+
+// BuildCraft Assembly recipes have
+// a strange energy format. This function should
+// make the MJ requirement easier to read
+// when creating recipe JSONs.
+global.mj = (num) => {
+    return num * 1000000
+}
