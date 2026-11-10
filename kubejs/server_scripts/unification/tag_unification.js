@@ -224,6 +224,15 @@ ServerEvents.tags('item', event => {
     event.add('forge:dusts/iron', '#forge:dusts/wrought_iron')
     event.add('forge:plates/iron', '#forge:plates/wrought_iron')
 
+    // Straw
+    event.add('forge:straw', 'beneath:crimson_straw')
+    event.add('forge:straw', 'beneath:warped_straw')
+    event.add('forge:straw', 'tfc:straw')
+
+    // BSA Weak Bindings
+    event.add('bsa:bindings/weak', 'beneath:crimson_straw')
+    event.add('bsa:bindings/weak', 'beneath:warped_straw')
+
     // Remove these to stop them showing up
     // in railcraft loot tables
     event.removeAll('railcraft:ingot_chest_loot')
