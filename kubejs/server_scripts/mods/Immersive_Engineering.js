@@ -242,6 +242,10 @@ ServerEvents.recipes(event => {
     event.remove({id: 'immersiveengineering:metalpress/gear_gold'})
     event.remove({id: 'immersiveengineering:metalpress/gear_copper'})
     event.remove({id: 'immersiveengineering:metalpress/gear_bronze'})
+    event.remove({id: 'immersiveengineering:crafting/nugget_copper_to_copper_ingot'})
+    event.remove({id: 'immersiveengineering:crafting/nugget_silver_to_ingot_silver'})
+    event.remove({id: 'immersiveengineering:crafting/nugget_nickel_to_ingot_nickel'})
+    event.remove({id: 'immersiveengineering:crafting/nugget_steel_to_ingot_steel'})
 
     // Recipe Removal by output
     event.remove({output: 'immersiveengineering:dust_wood'})

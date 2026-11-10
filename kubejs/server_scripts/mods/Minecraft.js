@@ -159,6 +159,10 @@ ServerEvents.recipes(event => {
     event.remove({id: 'minecraft:gold_nugget_from_blasting'})
     event.remove({id: 'minecraft:gold_nugget_from_smelting'})
     event.remove({id: 'minecraft:neutron_nugget'})
+    event.remove({id: 'minecraft:iron_ingot_from_nuggets'})
+    event.remove({id: 'minecraft:gold_ingot_from_nuggets'})
+    event.remove({id: 'minecraft:neutron_ingot_from_nuggets'})
+    event.remove({id: 'minecraft:infinity_ingot_from_infinity_nugget'})
 
     // Elytra
     tfc.welding(
