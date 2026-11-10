@@ -217,6 +217,13 @@ ServerEvents.tags('item', event => {
     // TFC Wood Knapping
     event.add('tfc:wood_knapping', '#tfc:lumber')
 
+    // Iron Tags
+    event.add('forge:ingots/iron', '#forge:ingots/wrought_iron')
+    event.add('forge:rods/iron', '#forge:rods/wrought_iron')
+    event.add('forge:gears/iron', '#forge:gears/wrought_iron')
+    event.add('forge:dusts/iron', '#forge:dusts/wrought_iron')
+    event.add('forge:plates/iron', '#forge:plates/wrought_iron')
+
     // Remove these to stop them showing up
     // in railcraft loot tables
     event.removeAll('railcraft:ingot_chest_loot')
