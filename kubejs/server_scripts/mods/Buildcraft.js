@@ -22,7 +22,6 @@ ServerEvents.recipes(event => {
     // Recipe Removal
     event.remove({id: 'buildcraftfactory:distiller'})
     event.remove({id: 'buildcraftfactory:heat_exchange'})
-    event.remove({id: 'buildcraftenergy:stirling_engine'})
     event.remove({id: 'buildcraftenergy:combustion_engine'})
     event.remove({id: 'buildcraftenergy:mj_dynamo'})
     event.remove({id: 'buildcraftfactory:tank'})
@@ -237,6 +236,24 @@ ServerEvents.recipes(event => {
             B: 'buildcraftrobotics:redstone_board',
             C: 'kubejs:engine_core',
             G: 'buildcraftcore:gears/gear_wood',
+            P: 'minecraft:piston'
+        }
+    )
+
+    // Stirling Engine
+    event.remove({id: 'buildcraftenergy:stirling_engine'})
+    event.shaped(
+        Item.of('buildcraftenergy:engine_stone'),
+        [
+            'WWW',
+            'BCB',
+            'GPG'
+        ],
+        {
+            W: '#forge:smooth_stone',
+            B: 'buildcraftsilicon:redstone_chipset/red',
+            C: 'kubejs:engine_core',
+            G: 'buildcraftcore:gears/gear_stone',
             P: 'minecraft:piston'
         }
     )
@@ -754,4 +771,442 @@ ServerEvents.recipes(event => {
         },
         duration: 8000
     }).id('pipe_sealant')
+
+    // Cobblestone Structure Pipe
+    event.remove({id: 'buildcrafttransport:structure'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(1000),
+        ingredient_counts: [
+            4,
+            1,
+        ],
+        ingredients: [
+            {
+                item: 'kubejs:pipe_frame/cobblestone'
+            },
+            {
+                tag: 'forge:cobblestone'
+            }
+        ],
+        result: {
+            item: 'buildcrafttransport:structure',
+            count: 8
+        }
+    })
+
+    // Wooden Pipe
+    event.remove({id: 'buildcrafttransport:wood_item'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(1000),
+        ingredient_counts: [
+            4,
+            1
+        ],
+        ingredients: [
+            {
+                item: 'kubejs:pipe_frame/wood'
+            },
+            {
+                tag: 'forge:glass/colorless'
+            }
+        ],
+        result: {
+            item: 'buildcrafttransport:wood_item',
+            count: 8
+        }
+    })
+    event.shaped(
+        Item.of('buildcrafttransport:wood_item'),
+        [
+            'FGF',
+        ],
+        {
+            F: 'kubejs:pipe_frame/wood',
+            G: '#forge:glass/colorless'
+        }
+    )
+
+    // Cobblestone Pipe
+    event.remove({id: 'buildcrafttransport:cobblestone_item'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(1000),
+        ingredient_counts: [
+            4,
+            1
+        ],
+        ingredients: [
+            {
+                item: 'kubejs:pipe_frame/cobblestone'
+            },
+            {
+                tag: 'forge:glass/colorless'
+            }
+        ],
+        result: {
+            item: 'buildcrafttransport:cobblestone_item',
+            count: 8
+        }
+    })
+    event.shaped(
+        Item.of('buildcrafttransport:cobblestone_item'),
+        [
+            'FGF',
+        ],
+        {
+            F: 'kubejs:pipe_frame/cobblestone',
+            G: '#forge:glass/colorless'
+        }
+    )
+
+    // Stone Pipe
+    event.remove({id: 'buildcrafttransport:stone_item'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(1000),
+        ingredient_counts: [
+            4,
+            1
+        ],
+        ingredients: [
+            {
+                item: 'kubejs:pipe_frame/stone'
+            },
+            {
+                tag: 'forge:glass/colorless'
+            }
+        ],
+        result: {
+            item: 'buildcrafttransport:stone_item',
+            count: 8
+        }
+    })
+
+    // Quartz Pipe
+    event.remove({id: 'buildcrafttransport:quartz_item'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(1000),
+        ingredient_counts: [
+            4,
+            1
+        ],
+        ingredients: [
+            {
+                item: 'kubejs:pipe_frame/quartz'
+            },
+            {
+                tag: 'forge:glass/colorless'
+            }
+        ],
+        result: {
+            item: 'buildcrafttransport:quartz_item',
+            count: 8
+        }
+    })
+
+    // Iron Pipe
+    event.remove({id: 'buildcrafttransport:iron_item'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(1000),
+        ingredient_counts: [
+            4,
+            1
+        ],
+        ingredients: [
+            {
+                item: 'kubejs:pipe_frame/iron'
+            },
+            {
+                tag: 'forge:glass/colorless'
+            }
+        ],
+        result: {
+            item: 'buildcrafttransport:iron_item',
+            count: 8
+        }
+    })
+
+    // Gold Pipe
+    event.remove({id: 'buildcrafttransport:gold_item'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(1000),
+        ingredient_counts: [
+            4,
+            1
+        ],
+        ingredients: [
+            {
+                item: 'kubejs:pipe_frame/gold'
+            },
+            {
+                tag: 'forge:glass/colorless'
+            }
+        ],
+        result: {
+            item: 'buildcrafttransport:gold_item',
+            count: 8
+        }
+    })
+
+    // Clay Pipe
+    event.remove({id: 'buildcrafttransport:clay_item'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(1000),
+        ingredient_counts: [
+            4,
+            1
+        ],
+        ingredients: [
+            {
+                item: 'kubejs:pipe_frame/clay'
+            },
+            {
+                tag: 'forge:glass/colorless'
+            }
+        ],
+        result: {
+            item: 'buildcrafttransport:clay_item',
+            count: 8
+        }
+    })
+
+    // Sandstone Pipe
+    event.remove({id: 'buildcrafttransport:sandstone_item'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(1000),
+        ingredient_counts: [
+            4,
+            1
+        ],
+        ingredients: [
+            {
+                item: 'kubejs:pipe_frame/sandstone'
+            },
+            {
+                tag: 'forge:glass/colorless'
+            }
+        ],
+        result: {
+            item: 'buildcrafttransport:sandstone_item',
+            count: 8
+        }
+    })
+
+    // Void Pipe
+    event.remove({id: 'buildcrafttransport:void_item'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(1000),
+        ingredient_counts: [
+            2,
+            2,
+            1
+        ],
+        ingredients: [
+            {
+                item: 'kubejs:pipe_frame/obsidian'
+            },
+            {
+                item: 'kubejs:pipe_frame/cobblestone'
+            },
+            {
+                tag: 'forge:glass/colorless'
+            }
+        ],
+        result: {
+            item: 'buildcrafttransport:void_item',
+            count: 8
+        }
+    })
+
+    // Obsidian Pipe
+    event.remove({id: 'buildcrafttransport:obsidian_item'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(1000),
+        ingredient_counts: [
+            4,
+            1
+        ],
+        ingredients: [
+            {
+                item: 'kubejs:pipe_frame/obsidian'
+            },
+            {
+                tag: 'forge:glass/colorless'
+            }
+        ],
+        result: {
+            item: 'buildcrafttransport:obsidian_item',
+            count: 8
+        }
+    })
+
+    // Diamond Pipe
+    event.remove({id: 'buildcrafttransport:diamond_item'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(1000),
+        ingredient_counts: [
+            4,
+            1
+        ],
+        ingredients: [
+            {
+                item: 'kubejs:pipe_frame/diamond'
+            },
+            {
+                tag: 'forge:glass/colorless'
+            }
+        ],
+        result: {
+            item: 'buildcrafttransport:diamond_item',
+            count: 8
+        }
+    })
+
+    // Wooden Diamond Pipe
+    event.remove({id: 'buildcrafttransport:diamond_wood_item'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(1000),
+        ingredient_counts: [
+            2,
+            2,
+            1
+        ],
+        ingredients: [
+            {
+                item: 'kubejs:pipe_frame/diamond'
+            },
+            {
+                item: 'kubejs:pipe_frame/wood'
+            },
+            {
+                tag: 'forge:glass/colorless'
+            }
+        ],
+        result: {
+            item: 'buildcrafttransport:diamond_wood_item',
+            count: 8
+        }
+    })
+
+    // Lazuli Pipe
+    event.remove({id: 'buildcrafttransport:lapis_item'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(1000),
+        ingredient_counts: [
+            4,
+            1
+        ],
+        ingredients: [
+            {
+                item: 'kubejs:pipe_frame/lapis'
+            },
+            {
+                tag: 'forge:glass/colorless'
+            }
+        ],
+        result: {
+            item: 'buildcrafttransport:lapis_item',
+            count: 8
+        }
+    })
+
+    // Daizuli Pipe
+    event.remove({id: 'buildcrafttransport:daizuli_item'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(1000),
+        ingredient_counts: [
+            2,
+            2,
+            1
+        ],
+        ingredients: [
+            {
+                item: 'kubejs:pipe_frame/diamond'
+            },
+            {
+                item: 'kubejs:pipe_frame/lapis'
+            },
+            {
+                tag: 'forge:glass/colorless'
+            }
+        ],
+        result: {
+            item: 'buildcrafttransport:daizuli_item',
+            count: 8
+        }
+    })
+
+    // Emzuli Pipe
+    event.remove({id: 'buildcrafttransport:emzuli_item'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(1000),
+        ingredient_counts: [
+            2,
+            2,
+            1
+        ],
+        ingredients: [
+            {
+                item: 'kubejs:pipe_frame/emerald'
+            },
+            {
+                item: 'kubejs:pipe_frame/lapis'
+            },
+            {
+                tag: 'forge:glass/colorless'
+            }
+        ],
+        result: {
+            item: 'buildcrafttransport:emzuli_item',
+            count: 8
+        }
+    })
+
+    // Stripes Pipe
+    event.remove({id: 'buildcrafttransport:stripes_item'})
+    event.custom({
+        type: 'buildcraftsilicon:assembly',
+        MJ: global.mj(1000),
+        ingredient_counts: [
+            2,
+            2,
+            1
+        ],
+        ingredients: [
+            {
+                item: 'kubejs:pipe_frame/gold'
+            },
+            {
+                item: 'kubejs:pipe_frame/cobblestone'
+            },
+            {
+                tag: 'forge:glass/colorless'
+            }
+        ],
+        result: {
+            item: 'buildcrafttransport:stripes_item',
+            count: 8
+        }
+    })
+
+    // Power Adaptor
+    event.replaceInput(
+        {id: 'buildcrafttransport:plug_power_adaptor'},
+        'minecraft:gold_ingot',
+        '#forge:plates/gold'
+    )
 })

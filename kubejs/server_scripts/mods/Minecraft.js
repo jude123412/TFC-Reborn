@@ -1,5 +1,7 @@
 TFCEvents.data(event => {
-    
+
+    // Iron Bars
+    event.itemHeat('minecraft:iron_bars', 2.857 / 4, 921, 1228)
 })
 
 ServerEvents.recipes(event => {
@@ -619,4 +621,43 @@ ServerEvents.recipes(event => {
             name: 'minecraft:deepslate'
         }
     })
+
+    // Iron Bars
+    event.custom({
+        type: 'tfc:anvil',
+        input: {
+            item: 'tfc:metal/sheet/cast_iron'
+        },
+        result: {
+            item: 'minecraft:iron_bars',
+            count: 8
+        },
+        tier: 3,
+        rules: [
+            'upset_last',
+            'punch_second_last',
+            'punch_third_last'
+        ],
+        "apply_forging_bonus": false
+    })
+    event.custom({
+        type: 'tfc:anvil',
+        input: {
+            item: 'tfc:metal/double_sheet/cast_iron'
+        },
+        result: {
+            item: 'minecraft:iron_bars',
+            count: 16
+        },
+        tier: 3,
+        rules: [
+            'upset_last',
+            'punch_second_last',
+            'punch_third_last'
+        ],
+        "apply_forging_bonus": false
+    })
+    // Molten Andesite
+    tfc.heating('minecraft:iron_bars', 1535)
+        .resultFluid(Fluid.of('tfc:metal/cast_iron', 25))
 })
