@@ -133,12 +133,6 @@
 		#龙息基础伤害
 		#Range: 0.0 ~ 100.0
 		BreathBaseDamage = 4.0
-		#龙息最小伤害
-		#Range: 0.0 ~ 100.0
-		BreathMinDamage = 2.0
-		#龙息伤害衰减率
-		#Range: 0.0 ~ 1.0
-		BreathDecayRate = 0.7
 		#龙族体型缩放 1 为正常体型
 		#Range: 0.1 ~ 10.0
 		scale = 1.2
