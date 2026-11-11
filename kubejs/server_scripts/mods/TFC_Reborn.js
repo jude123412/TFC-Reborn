@@ -40,6 +40,12 @@ TFCEvents.data(event => {
     // Engine Core
     event.itemSize('kubejs:engine_core', 'large', 'heavy')
 
+    // Laser Core
+    event.itemSize('kubejs:laser_core', 'large', 'heavy')
+
+    // Wood Board
+    event.itemSize('kubejs:wooden_board', 'small', 'medium')
+
     // Coal Coke
     event.fuel('kubejs:coal_coke', 1550, 3300, null)
 
@@ -668,6 +674,25 @@ ServerEvents.recipes(event => {
         result: {
             item: 'kubejs:wooden_board',
             count: 4
+        }
+    })
+
+    // Laser Core
+    event.custom({
+        type: 'tfc:knapping',
+        knapping_type: 'tfc:rock',
+        outside_slot_required: false,
+        pattern: [
+            ' XXX ',
+            ' XXX ',
+            ' XXX ',
+            'XXXXX'
+        ],
+        ingredient: {
+            tag: 'kubejs:knapping/lapis'
+        },
+        result: {
+            item: 'kubejs:laser_core'
         }
     })
 })

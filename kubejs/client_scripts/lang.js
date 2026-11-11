@@ -152,6 +152,7 @@ ClientEvents.lang('en_us', event => {
     event.add('item.kubejs.quicklime', 'Quicklime')
     event.add('item.kubejs.engine_core', 'Engine Core')
     event.add('item.kubejs.wooden_board', 'Wooden Board')
+    event.add('item.kubejs.laser_core', 'Laser Core')
 
     // Lumber
     event.add('item.kubejs.wood.lumber.livingwood', 'Livingwood Lumber')

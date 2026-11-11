@@ -14,6 +14,9 @@ TFCEvents.data(event => {
 
     // Diamond Gear
     event.itemSize('buildcraftcore:gears/gear_diamond', 'large', 'heavy')
+
+    // Redstone Board
+    event.itemSize('buildcraftrobotics:redstone_board', 'small', 'medium')
 })
 
 ServerEvents.recipes(event => {
@@ -543,11 +546,11 @@ ServerEvents.recipes(event => {
         [
             'RRR',
             'RCR',
-            'OCO'
+            'OOO'
         ],
         {
             R: '#forge:dusts/redstone',
-            C: 'kubejs:engine_core',
+            C: 'kubejs:laser_core',
             O: '#forge:obsidian'
         }
     )
