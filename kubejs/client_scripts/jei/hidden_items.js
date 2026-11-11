@@ -136,7 +136,6 @@ JEIEvents.hideItems(event => {
     event.hide('buildcraftfactory:heat_exchange')
     event.hide('buildcraftfactory:tank')
     event.hide('buildcraftenergy:engine_iron')
-    event.hide('buildcraftenergy:mj_dynamo')
     event.hide('buildcraftfactory:pump')
     event.hide('buildcraftfactory:flood_gate')
     event.hide('buildcraftfactory:water_gel')

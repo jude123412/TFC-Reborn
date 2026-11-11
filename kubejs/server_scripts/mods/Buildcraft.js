@@ -23,7 +23,6 @@ ServerEvents.recipes(event => {
     event.remove({id: 'buildcraftfactory:distiller'})
     event.remove({id: 'buildcraftfactory:heat_exchange'})
     event.remove({id: 'buildcraftenergy:combustion_engine'})
-    event.remove({id: 'buildcraftenergy:mj_dynamo'})
     event.remove({id: 'buildcraftfactory:tank'})
     event.remove({id: 'buildcraftfactory:pump'})
     event.remove({id: 'buildcraftfactory:flood_gate'})
@@ -96,7 +95,7 @@ ServerEvents.recipes(event => {
             L: 'buildcraftcore:marker_volume',
             R: 'buildcraftsilicon:redstone_chipset/iron',
             F: 'kubejs:precision_machine_frame',
-            G: '#forge:gears/gold',
+            G: 'buildcraftcore:gears/gear_gold',
             T: '#tfc:workbenches'
             
         }
@@ -151,7 +150,7 @@ ServerEvents.recipes(event => {
         ],
         {
             I: '#forge:ingots/wrought_iron',
-            G: '#forge:gears/wrought_iron',
+            G: 'buildcraftcore:gears/gear_iron',
             B: '#tfc:bookshelves',
             F: 'kubejs:precision_machine_frame'
         }
@@ -168,7 +167,7 @@ ServerEvents.recipes(event => {
         ],
         {
             I: '#forge:ingots/wrought_iron',
-            G: '#forge:gears/wrought_iron',
+            G: 'buildcraftcore:gears/gear_iron',
             B: '#forge:ingots/brick',
             F: 'kubejs:precision_machine_frame'
         }
@@ -185,7 +184,7 @@ ServerEvents.recipes(event => {
         ],
         {
             I: 'buildcraftcore:gears/gear_diamond',
-            G: '#forge:gears/gold',
+            G: 'buildcraftcore:gears/gear_gold',
             B: 'tfc_ie_addon:drillhead_black_steel',
             F: 'buildcraftbuilders:filler'
         }
@@ -202,7 +201,7 @@ ServerEvents.recipes(event => {
         ],
         {
             I: '#forge:ingots/wrought_iron',
-            G: '#forge:gears/gold',
+            G: 'buildcraftcore:gears/gear_gold',
             B: '#forge:paper',
             F: '#forge:dusts/redstone'
         }
@@ -251,7 +250,7 @@ ServerEvents.recipes(event => {
         ],
         {
             W: '#forge:smooth_stone',
-            B: 'buildcraftsilicon:redstone_chipset/red',
+            B: 'buildcraftrobotics:redstone_board',
             C: 'kubejs:engine_core',
             G: 'buildcraftcore:gears/gear_stone',
             P: 'minecraft:piston'
@@ -269,7 +268,6 @@ ServerEvents.recipes(event => {
             'hit_last'
         ]
     ).tier(3)
-
 
     // Wooden Gear
     event.remove({id: 'buildcraftcore:gears/gear_wood'})
@@ -390,7 +388,25 @@ ServerEvents.recipes(event => {
         }
     )
 
-    // FE Engine
+    // MJ Dynamo
+    event.remove({id: 'buildcraftenergy:mj_dynamo'})
+    event.shaped(
+        Item.of('buildcraftenergy:mj_dynamo'),
+        [
+            'WWW',
+            'BCB',
+            'GPG'
+        ],
+        {
+            W: '#forge:sheets/bismuth',
+            B: 'buildcraftsilicon:redstone_chipset/iron',
+            C: 'kubejs:engine_core',
+            G: 'buildcraftcore:gears/gear_iron',
+            P: 'minecraft:piston'
+        }
+    )
+
+    // Auto Workbench
     event.remove({id: 'buildcraftfactory:autowork_bench_1'})
     event.remove({id: 'buildcraftfactory:autowork_bench_2'})
     event.shaped(
@@ -453,7 +469,7 @@ ServerEvents.recipes(event => {
         {
             I: '#forge:ingots/wrought_iron',
             G: 'buildcraftcore:gears/gear_diamond',
-            B: '#forge:gears/gold',
+            B: 'buildcraftcore:gears/gear_gold',
             F: 'kubejs:precision_machine_frame',
             C: 'minecraft:map'
         }
@@ -471,7 +487,7 @@ ServerEvents.recipes(event => {
         {
             I: '#forge:ingots/wrought_iron',
             C: '#tfc:workbenches',
-            B: '#forge:gears/gold',
+            B: 'buildcraftcore:gears/gear_gold',
             F: 'kubejs:precision_machine_frame',
             G: '#forge:chests/wooden'
         }
@@ -590,7 +606,7 @@ ServerEvents.recipes(event => {
             O: '#forge:obsidian',
             C: 'buildcraftsilicon:redstone_chipset/red',
             R: '#forge:plates/wrought_iron',
-            S: '#forge:gears/gold'
+            S: 'buildcraftcore:gears/gear_gold'
         }
     )
 
@@ -607,7 +623,7 @@ ServerEvents.recipes(event => {
             O: '#forge:obsidian',
             C: '#forge:glass/colorless',
             R: 'buildcraftcore:list',
-            S: '#forge:gears/gold'
+            S: 'buildcraftcore:gears/gear_gold'
         }
     )
 
