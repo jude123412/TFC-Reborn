@@ -140,6 +140,17 @@ JEIEvents.hideItems(event => {
     event.hide('buildcraftfactory:flood_gate')
     event.hide('buildcraftfactory:water_gel')
     event.hide('buildcraftfactory:gel')
+    event.hide('immersiveengineering:wire_copper')
+    event.hide('immersiveengineering:wire_electrum')
+    event.hide('immersiveengineering:wire_aluminum')
+    event.hide('immersiveengineering:wire_steel')
+    event.hide('immersiveengineering:wire_lead')
+    event.hide('rosia:copper_wire')
+    event.hide('rosia:purple_steel_wire')
+    event.hide('createaddition:copper_wire')
+    event.hide('createaddition:iron_wire')
+    event.hide('createaddition:gold_wire')
+    event.hide('createaddition:electrum_wire')
 
     // Hidden Buckets
     event.hide('buildcraftenergy:oil/hot_bucket')

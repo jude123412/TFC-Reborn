@@ -72,6 +72,16 @@ ClientEvents.lang('en_us', event => {
     event.add('item.kubejs.metal.powder.wrought_iron', 'Wrought Iron Powder')
     event.add('item.kubejs.metal.powder.gold', 'Gold Powder')
 
+    // Metal Wires
+    event.add('item.kubejs.metal.wire.electrum', 'Electrum Wire')
+    event.add('item.kubejs.metal.wire.aluminum', 'Aluminium Wire')
+    event.add('item.kubejs.metal.wire.lead', 'Lead Wire')
+    event.add('item.kubejs.metal.wire.copper', 'Copper Wire')
+    event.add('item.kubejs.metal.wire.wrought_iron', 'Wrought Iron Wire')
+    event.add('item.kubejs.metal.wire.steel', 'Steel Wire')
+    event.add('item.kubejs.metal.wire.purple_steel', 'Purple Steel Wire')
+    event.add('item.kubejs.metal.wire.gold', 'Gold Wire')
+
     // Metal Double Ingots
     event.add('item.kubejs.metal.double_ingot.manasteel', 'Manasteel Double Ingot')
     event.add('item.kubejs.metal.double_ingot.elementium', 'Elementium Double Ingot')

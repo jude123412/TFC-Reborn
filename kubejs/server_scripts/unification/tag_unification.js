@@ -223,6 +223,7 @@ ServerEvents.tags('item', event => {
     event.add('forge:gears/iron', '#forge:gears/wrought_iron')
     event.add('forge:dusts/iron', '#forge:dusts/wrought_iron')
     event.add('forge:plates/iron', '#forge:plates/wrought_iron')
+    event.add('forge:wires/iron', '#forge:wires/wrought_iron')
 
     // Straw
     event.add('forge:straw', 'beneath:crimson_straw')

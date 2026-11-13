@@ -41,10 +41,16 @@ TFCEvents.data(event => {
 
         // Gear
         if (m.gear != null && m.gear_half != null) {
-            event.itemHeat(m.gear, m.capacity, m.work, m.weld)
-            event.itemHeat(m.gear_half, m.capacity, m.work, m.weld)
+            event.itemHeat(m.gear, m.capacity * 4, m.work, m.weld)
+            event.itemHeat(m.gear_half, m.capacity * 2, m.work, m.weld)
             event.itemSize(m.gear, 'large', 'heavy')
             event.itemSize(m.gear_half, 'large', 'medium')
+        }
+
+        // Wire
+        if (m.wire != null) {
+            event.itemHeat(m.wire, m.capacity / 4, m.work, m.weld)
+            event.itemSize(m.wire, 'small', 'light')
         }
 
         // Nugget
@@ -817,6 +823,45 @@ ServerEvents.recipes(event => {
                 .resultFluid(Fluid.of(m.fluid, 400))
             tfc.heating(m.gear_half, m.melt)
                 .resultFluid(Fluid.of(m.fluid, 200))
+        }
+
+        if(m.wire != null && m.ingot != null && m.fluid != null) {
+
+            event.custom({
+                type: 'tfc:anvil',
+                input: {
+                    item: m.ingot
+                },
+                result: {
+                    item: m.wire,
+                    count: 4
+                },
+                tier: m.tier,
+                rules: [
+                    'draw_third_last',
+                    'draw_second_last',
+                    'hit_last'
+                ],
+                "apply_forging_bonus": false
+            })
+
+            event.custom({
+                type: "immersiveengineering:metal_press",
+                energy: 6400,
+                input: {
+                    'base_ingredient': {
+                        item: m.ingot,
+                    }
+                },
+                mold: "immersiveengineering:mold_wire",
+                result: {
+                    item: m.wire,
+                    count: 4
+                }
+            })
+
+            tfc.heating(m.wire, m.melt)
+                .resultFluid(Fluid.of(m.fluid, 25))
         }
 
         // Nuggets
