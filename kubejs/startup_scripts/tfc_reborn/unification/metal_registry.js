@@ -149,6 +149,15 @@ StartupEvents.registry('item', event => {
 				.tag(`tfc:metal_item/${metal}`)
 		})
 
+		// Rod
+		global.createIfNeeded(m.rod, () => {
+			event.create(m.rod)
+				.texture(`kubejs:item/metal/rod/${metal}`)
+				.tag('forge:rods')
+				.tag(`forge:rods/${metal}`)
+				.tag(`tfc:metal_item/${metal}`)
+		})
+
 		// Dust
 		global.createIfNeeded(m.dust, () => {
 			event.create(m.dust)

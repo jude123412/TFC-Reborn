@@ -53,6 +53,12 @@ TFCEvents.data(event => {
             event.itemSize(m.wire, 'small', 'light')
         }
 
+        // Rod
+        if (m.rod != null && m.rod.startsWith('kubejs:')) {
+            event.itemHeat(m.rod, m.capacity / 2, m.work, m.weld)
+            event.itemSize(m.rod, 'normal', 'light')
+        }
+
         // Nugget
         if (m.nugget != null && m.nugget.startsWith('kubejs:')) {
             event.itemHeat(m.nugget, m.capacity, m.work, m.weld)
@@ -826,7 +832,6 @@ ServerEvents.recipes(event => {
         }
 
         if(m.wire != null && m.ingot != null && m.fluid != null) {
-
             event.custom({
                 type: 'tfc:anvil',
                 input: {
@@ -862,6 +867,72 @@ ServerEvents.recipes(event => {
 
             tfc.heating(m.wire, m.melt)
                 .resultFluid(Fluid.of(m.fluid, 25))
+        }
+
+        if (m.rod != null && m.ingot != null && m.fluid != null) {
+            event.remove({output: m.rod})
+
+            event.custom({
+                type: 'createaddition:rolling',
+                input: {
+                    item: m.ingot
+                },
+                result: {
+                    item: m.rod,
+                    count: 2
+                }
+            })
+
+            event.custom({
+                type: "immersiveengineering:metal_press",
+                energy: 6400,
+                input: {
+                    'base_ingredient': {
+                        item: m.ingot,
+                    }
+                },
+                mold: "immersiveengineering:mold_rod",
+                result: {
+                    item: m.rod,
+                    count: 2
+                }
+            })
+
+            event.custom({
+                type: 'rosia:extruding_machine',
+                ingredients: [
+                    {
+                        item: m.ingot,
+                    }
+                ],
+                output: {
+                    item: m.rod,
+                    count: 2
+                }
+            })
+
+            event.custom({
+                type: 'tfc:anvil',
+                input: {
+                    item: m.ingot
+                },
+                result: {
+                    item: m.rod,
+                    count: 2
+                },
+                tier: m.tier,
+                rules: [
+                    'bend_last',
+                    'draw_second_last',
+                    'draw_third_last'
+                ],
+                "apply_forging_bonus": false
+            })
+
+            if (m.sheet.startsWith('kubejs:')) {
+                tfc.heating(m.rod, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 50))
+            }
         }
 
         // Nuggets

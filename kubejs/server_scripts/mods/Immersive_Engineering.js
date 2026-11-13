@@ -263,6 +263,12 @@ ServerEvents.recipes(event => {
     event.remove({id: 'immersiveengineering:metalpress/wire_invar'})
     event.remove({id: 'immersiveengineering:metalpress/wire_copper'})
     event.remove({id: 'immersiveengineering:metalpress/wire_electrum'})
+    event.remove({id: 'immersiveengineering:metalpress/rod_copper'})
+    event.remove({id: 'immersiveengineering:metalpress/rod_gold'})
+    event.remove({id: 'immersiveengineering:metalpress/rod_electrum'})
+    event.remove({id: 'immersiveengineering:metalpress/rod_brass'})
+    event.remove({id: 'immersiveengineering:metalpress/rod_iron'})
+    event.remove({id: 'immersiveengineering:metalpress/rod_aluminum'})
 
     // Recipe Removal by output
     event.remove({output: 'immersiveengineering:dust_wood'})

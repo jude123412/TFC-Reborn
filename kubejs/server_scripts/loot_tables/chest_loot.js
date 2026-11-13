@@ -54,4 +54,7 @@ LootJS.modifiers((event) => {
         .replaceLoot('minecraft:beetroot_seeds', 'tfc:seeds/beet', true)
         .replaceLoot('minecraft:torch', 'tfc:torch', true)
         .replaceLoot('minecraft:pumpkin', 'tfc:pumpkin', true)
+        .replaceLoot('immersiveengineering:stick_iron', 'tfc:metal/rod/wrought_iron', true)
+        .replaceLoot('immersiveengineering:stick_steel', 'tfc:metal/rod/steel', true)
+        .replaceLoot('immersiveengineering:stick_aluminum', 'kubejs:metal/rod/aluminum', true)
 })

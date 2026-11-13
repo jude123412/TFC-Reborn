@@ -12,6 +12,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'tfc_ie_addon:crafting/wrought_iron_sheet_to_plate'})
     event.remove({id: 'tfc_ie_addon:metalpress/plate_wrought_iron'})
     event.remove({id: 'tfc_ie_addon:crafting/gold_sheet_to_plate'})
+    event.remove({id: 'tfc_ie_addon:anvil/aluminum_rod'})
 
     // Distilled Water
     event.remove({id: 'immersivetechnology:distiller/water'})

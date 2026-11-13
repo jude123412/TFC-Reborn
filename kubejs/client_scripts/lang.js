@@ -82,6 +82,9 @@ ClientEvents.lang('en_us', event => {
     event.add('item.kubejs.metal.wire.purple_steel', 'Purple Steel Wire')
     event.add('item.kubejs.metal.wire.gold', 'Gold Wire')
 
+    // Metal Rods
+    event.add('item.kubejs.metal.rod.aluminum', 'Aluminium Rod')
+
     // Metal Double Ingots
     event.add('item.kubejs.metal.double_ingot.manasteel', 'Manasteel Double Ingot')
     event.add('item.kubejs.metal.double_ingot.elementium', 'Elementium Double Ingot')

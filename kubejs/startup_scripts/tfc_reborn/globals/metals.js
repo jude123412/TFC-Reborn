@@ -9,7 +9,7 @@ global.metals = {
         is_custom: false,
         fluid: 'firmalife:metal/chromium',
 
-        ingot: null,
+        ingot: 'firmalife:metal/ingot/chromium',
         double_ingot: 'firmalife:metal/double_ingot/chromium',
         sheet: 'firmalife:metal/sheet/chromium',
         double_sheet: null,
@@ -19,6 +19,7 @@ global.metals = {
         gear: null,
         gear_half: null,
         wire: null,
+        rod: 'firmalife:metal/rod/chromium',
         dust: null,
 
         aiot: null,
@@ -57,7 +58,7 @@ global.metals = {
         is_custom: false,
         fluid: 'firmalife:metal/stainless_steel',
 
-        ingot: null,
+        ingot: 'firmalife:metal/rod/stainless_steel',
         double_ingot: 'firmalife:metal/double_ingot/stainless_steel',
         sheet: 'firmalife:metal/sheet/stainless_steel',
         double_sheet: null,
@@ -67,6 +68,7 @@ global.metals = {
         gear: null,
         gear_half: null,
         wire: null,
+        rod: 'firmalife:metal/rod/stainless_steel',
         dust: null,
 
         aiot: null,
@@ -115,6 +117,7 @@ global.metals = {
         gear: null,
         gear_half: null,
         wire: 'kubejs:metal/wire/electrum',
+        rod: null,
         dust: null,
 
         aiot: null,
@@ -163,6 +166,7 @@ global.metals = {
         gear: null,
         gear_half: null,
         wire: null,
+        rod: null,
         dust: null,
 
         aiot: null,
@@ -211,6 +215,7 @@ global.metals = {
         gear: null,
         gear_half: null,
         wire: 'kubejs:metal/wire/aluminum',
+        rod: 'kubejs:metal/rod/aluminum',
         dust: 'kubejs:metal/powder/aluminum',
 
         aiot: null,
@@ -259,6 +264,7 @@ global.metals = {
         gear: 'kubejs:metal/gear/lead',
         gear_half: 'kubejs:metal/gear/half/lead',
         wire: 'kubejs:metal/wire/lead',
+        rod: null,
         dust: 'kubejs:metal/powder/lead',
 
         aiot: null,
@@ -307,6 +313,7 @@ global.metals = {
         gear: null,
         gear_half: null,
         wire: null,
+        rod: null,
         dust: null,
 
         aiot: null,
@@ -345,7 +352,7 @@ global.metals = {
         is_custom: false,
         fluid: 'tfc:metal/bismuth',
 
-        ingot: null,
+        ingot: 'tfc:metal/ingot/bismuth',
         double_ingot: 'tfc:metal/double_ingot/bismuth',
         sheet: 'tfc:metal/sheet/bismuth',
         double_sheet: null,
@@ -355,6 +362,7 @@ global.metals = {
         gear: null,
         gear_half: null,
         wire: null,
+        rod: 'tfc:metal/rod/bismuth',
         dust: null,
 
         aiot: null,
@@ -393,7 +401,7 @@ global.metals = {
         is_custom: false,
         fluid: 'tfc:metal/bismuth',
 
-        ingot: null,
+        ingot: 'tfc:metal/ingot/bismuth_bronze',
         double_ingot: 'tfc:metal/double_ingot/bismuth_bronze',
         sheet: 'tfc:metal/sheet/bismuth_bronze',
         double_sheet: null,
@@ -403,6 +411,7 @@ global.metals = {
         gear: null,
         gear_half: null,
         wire: null,
+        rod: 'tfc:metal/rod/bismuth_bronze',
         dust: null,
 
         aiot: null,
@@ -441,7 +450,7 @@ global.metals = {
         is_custom: false,
         fluid: 'tfc:metal/bismuth',
 
-        ingot: null,
+        ingot: 'tfc:metal/ingot/black_bronze',
         double_ingot: 'tfc:metal/double_ingot/black_bronze',
         sheet: 'tfc:metal/sheet/black_bronze',
         double_sheet: null,
@@ -451,6 +460,7 @@ global.metals = {
         gear: null,
         gear_half: null,
         wire: null,
+        rod: 'tfc:metal/rod/black_bronze',
         dust: null,
 
         aiot: null,
@@ -499,6 +509,7 @@ global.metals = {
         gear: 'kubejs:metal/gear/bronze',
         gear_half: 'kubejs:metal/gear/half/bronze',
         wire: null,
+        rod: 'tfc:metal/rod/bronze',
         dust: null,
 
         aiot: null,
@@ -547,6 +558,7 @@ global.metals = {
         gear: 'kubejs:metal/gear/brass',
         gear_half: 'kubejs:metal/gear/half/brass',
         wire: null,
+        rod: 'tfc:metal/rod/brass',
         dust: null,
 
         aiot: null,
@@ -595,6 +607,7 @@ global.metals = {
         gear: 'kubejs:metal/gear/copper',
         gear_half: 'kubejs:metal/gear/half/copper',
         wire: 'kubejs:metal/wire/copper',
+        rod: 'tfc:metal/rod/copper',
         dust: 'kubejs:metal/powder/copper',
 
         aiot: null,
@@ -643,6 +656,7 @@ global.metals = {
         gear: 'kubejs:metal/gear/gold',
         gear_half: 'kubejs:metal/gear/half/gold',
         wire: 'kubejs:metal/wire/gold',
+        rod: 'tfc:metal/rod/gold',
         dust: 'kubejs:metal/powder/gold',
 
         aiot: null,
@@ -691,6 +705,7 @@ global.metals = {
         gear: 'kubejs:metal/gear/nickel',
         gear_half: 'kubejs:metal/gear/half/nickel',
         wire: null,
+        rod: 'tfc:metal/rod/nickel',
         dust: null,
 
         aiot: null,
@@ -729,7 +744,7 @@ global.metals = {
         is_custom: false,
         fluid: 'tfc:metal/rose_gold',
 
-        ingot: null,
+        ingot: 'tfc:metal/ingot/rose_gold',
         double_ingot: 'tfc:metal/double_ingot/rose_gold',
         sheet: 'tfc:metal/sheet/rose_gold',
         double_sheet: null,
@@ -739,6 +754,7 @@ global.metals = {
         gear: null,
         gear_half: null,
         wire: null,
+        rod: 'tfc:metal/rod/rose_gold',
         dust: null,
 
         aiot: null,
@@ -787,6 +803,7 @@ global.metals = {
         gear: 'kubejs:metal/gear/silver',
         gear_half: 'kubejs:metal/gear/half/silver',
         wire: null,
+        rod: 'tfc:metal/rod/silver',
         dust: 'kubejs:metal/powder/silver',
 
         aiot: null,
@@ -835,6 +852,7 @@ global.metals = {
         gear: 'kubejs:metal/gear/tin',
         gear_half: 'kubejs:metal/gear/half/tin',
         wire: null,
+        rod: 'tfc:metal/rod/tin',
         dust: null,
 
         aiot: null,
@@ -883,6 +901,7 @@ global.metals = {
         gear: 'kubejs:metal/gear/zinc',
         gear_half: 'kubejs:metal/gear/half/zinc',
         wire: null,
+        rod: 'tfc:metal/rod/zinc',
         dust: null,
 
         aiot: null,
@@ -921,7 +940,7 @@ global.metals = {
         is_custom: false,
         fluid: 'tfc:metal/sterling_silver',
 
-        ingot: null,
+        ingot: 'tfc:metal/ingot/sterling_silver',
         double_ingot: 'tfc:metal/double_ingot/sterling_silver',
         sheet: 'tfc:metal/sheet/sterling_silver',
         double_sheet: null,
@@ -931,6 +950,7 @@ global.metals = {
         gear: null,
         gear_half: null,
         wire: null,
+        rod: 'tfc:metal/rod/sterling_silver',
         dust: null,
 
         aiot: null,
@@ -979,6 +999,7 @@ global.metals = {
         gear: 'kubejs:metal/gear/wrought_iron',
         gear_half: 'kubejs:metal/gear/half/wrought_iron',
         wire: 'kubejs:metal/wire/wrought_iron',
+        rod: 'tfc:metal/rod/wrought_iron',
         dust: 'kubejs:metal/powder/wrought_iron',
 
         aiot: null,
@@ -1017,7 +1038,7 @@ global.metals = {
         is_custom: false,
         fluid: 'tfc:metal/cast_iron',
 
-        ingot: null,
+        ingot: 'tfc:metal/ingot/cast_iron',
         double_ingot: 'tfc:metal/double_ingot/cast_iron',
         sheet: 'tfc:metal/sheet/cast_iron',
         double_sheet: null,
@@ -1027,6 +1048,7 @@ global.metals = {
         gear: null,
         gear_half: null,
         wire: null,
+        rod: 'tfc:metal/rod/cast_iron',
         dust: null,
 
         aiot: null,
@@ -1075,6 +1097,7 @@ global.metals = {
         gear: 'kubejs:metal/gear/steel',
         gear_half: 'kubejs:metal/gear/half/steel',
         wire: 'kubejs:metal/wire/steel',
+        rod: 'tfc:metal/rod/steel',
         dust: 'kubejs:metal/powder/steel',
 
         aiot: null,
@@ -1113,7 +1136,7 @@ global.metals = {
         is_custom: false,
         fluid: 'tfc:metal/black_steel',
 
-        ingot: null,
+        ingot: 'tfc:metal/ingot/black_steel',
         double_ingot: 'tfc:metal/double_ingot/black_steel',
         sheet: 'tfc:metal/sheet/black_steel',
         double_sheet: null,
@@ -1123,6 +1146,7 @@ global.metals = {
         gear: null,
         gear_half: null,
         wire: null,
+        rod: 'tfc:metal/rod/black_steel',
         dust: null,
 
         aiot: null,
@@ -1161,7 +1185,7 @@ global.metals = {
         is_custom: false,
         fluid: 'tfc:metal/blue_steel',
 
-        ingot: null,
+        ingot: 'tfc:metal/ingot/blue_steel',
         double_ingot: 'tfc:metal/double_ingot/blue_steel',
         sheet: 'tfc:metal/sheet/blue_steel',
         double_sheet: null,
@@ -1171,6 +1195,7 @@ global.metals = {
         gear: null,
         gear_half: null,
         wire: null,
+        rod: 'tfc:metal/rod/blue_steel',
         dust: null,
 
         aiot: null,
@@ -1219,6 +1244,7 @@ global.metals = {
         gear: null,
         gear_half: null,
         wire: null,
+        rod: 'tfc:metal/rod/red_steel',
         dust: null,
 
         aiot: null,
@@ -1267,6 +1293,7 @@ global.metals = {
         gear: 'kubejs:metal/gear/invar',
         gear_half: 'kubejs:metal/gear/half/invar',
         wire: null,
+        rod: 'rosia:invar_rod',
         dust: null,
 
         aiot: null,
@@ -1315,6 +1342,7 @@ global.metals = {
         gear: null,
         gear_half: null,
         wire: 'kubejs:metal/wire/purple_steel',
+        rod: 'rosia:purple_steel_rod',
         dust: null,
 
         aiot: null,
@@ -1363,6 +1391,7 @@ global.metals = {
         gear: null,
         gear_half: null,
         wire: null,
+        rod: null,
         dust: null,
 
         aiot: null,
@@ -1411,6 +1440,7 @@ global.metals = {
         gear: null,
         gear_half: null,
         wire: null,
+        rod: null,
         dust: null,
 
         aiot: null,
@@ -1459,6 +1489,7 @@ global.metals = {
         gear: null,
         gear_half: null,
         wire: null,
+        rod: null,
         dust: null,
 
         aiot: 'aiotbotania:manasteel_aiot',
@@ -1507,6 +1538,7 @@ global.metals = {
         gear: null,
         gear_half: null,
         wire: null,
+        rod: null,
         dust: null,
 
         aiot: 'aiotbotania:elementium_aiot',
@@ -1555,6 +1587,7 @@ global.metals = {
         gear: null,
         gear_half: null,
         wire: null,
+        rod: null,
         dust: null,
 
         aiot: 'aiotbotania:terra_aiot',
