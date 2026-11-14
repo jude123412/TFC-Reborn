@@ -84,6 +84,7 @@ ClientEvents.lang('en_us', event => {
 
     // Metal Rods
     event.add('item.kubejs.metal.rod.aluminum', 'Aluminium Rod')
+    event.add('item.kubejs.metal.rod.electrum', 'Electrum Rod')
 
     // Metal Double Ingots
     event.add('item.kubejs.metal.double_ingot.manasteel', 'Manasteel Double Ingot')

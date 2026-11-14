@@ -117,7 +117,7 @@ global.metals = {
         gear: null,
         gear_half: null,
         wire: 'kubejs:metal/wire/electrum',
-        rod: null,
+        rod: 'kubejs:metal/rod/electrum',
         dust: null,
 
         aiot: null,

@@ -390,4 +390,107 @@ ServerEvents.recipes(event => {
             }
         ]
     })
+
+    // Redstone Wire Connector
+    event.remove({id: 'immersiveengineering:crafting/connector_redstone'})
+    event.shaped(
+        Item.of('immersiveengineering:connector_redstone', 4),
+        [
+            ' S ',
+            'CRC'
+        ],
+        {
+            R: '#forge:dusts/redstone',
+            S: '#forge:rods/electrum',
+            C: 'kubejs:insulator/ceramic'
+        }
+    )
+
+    // LV Wire Connector
+    event.remove({id: 'immersiveengineering:crafting/connector_lv'})
+    event.shaped(
+        Item.of('immersiveengineering:connector_lv', 4),
+        [
+            ' S ',
+            'CSC',
+            'CSC'
+        ],
+        {
+            S: '#forge:rods/copper',
+            C: 'kubejs:insulator/ceramic'
+        }
+    )
+
+    // LV Wire Relay
+    event.remove({id: 'immersiveengineering:crafting/connector_lv_relay'})
+    event.shaped(
+        Item.of('immersiveengineering:connector_lv_relay', 8),
+        [
+            ' S ',
+            'CSC'
+        ],
+        {
+            S: '#forge:rods/copper',
+            C: 'kubejs:insulator/ceramic'
+        }
+    )
+
+    // MV Wire Connector
+    event.remove({id: 'immersiveengineering:crafting/connector_mv'})
+    event.shaped(
+        Item.of('immersiveengineering:connector_mv', 4),
+        [
+            ' S ',
+            'CSC',
+            'CSC'
+        ],
+        {
+            S: '#forge:rods/electrum',
+            C: 'kubejs:insulator/ceramic'
+        }
+    )
+
+    // MV Wire Relay
+    event.remove({id: 'immersiveengineering:crafting/connector_mv_relay'})
+    event.shaped(
+        Item.of('immersiveengineering:connector_mv_relay', 8),
+        [
+            ' S ',
+            'CSC'
+        ],
+        {
+            S: '#forge:rods/electrum',
+            C: 'kubejs:insulator/ceramic'
+        }
+    )
+
+    // MV Wire Connector
+    event.remove({id: 'immersiveengineering:crafting/connector_hv'})
+    event.shaped(
+        Item.of('immersiveengineering:connector_hv', 4),
+        [
+            ' S ',
+            'CSC',
+            'CSC'
+        ],
+        {
+            S: '#forge:rods/aluminum',
+            C: 'kubejs:insulator/ceramic'
+        }
+    )
+
+    // MV Wire Relay
+    event.remove({id: 'immersiveengineering:crafting/connector_hv_relay'})
+    event.shaped(
+        Item.of('immersiveengineering:connector_hv_relay', 8),
+        [
+            ' S ',
+            'CSC',
+            'CSC'
+        ],
+        {
+            S: '#forge:rods/aluminum',
+            C: 'kubejs:insulator/glass'
+        }
+    )
 })
