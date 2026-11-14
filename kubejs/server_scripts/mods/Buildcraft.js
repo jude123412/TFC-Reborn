@@ -33,6 +33,8 @@ ServerEvents.recipes(event => {
     event.remove({id: 'buildcraftfactory:gel'})
     event.remove({id: 'buildcraftsilicon:plug_gate_create/iron_no_modifier'})
     event.remove({id: 'buildcraftsilicon:plug_gate_create/nether_brick_no_modifier'})
+    event.remove({id: 'buildcraftenergy:fe_engine'})
+    event.remove({id: 'buildcraftenergy:mj_dynamo'})
     
     // Construction Marker
     event.replaceInput(
@@ -371,42 +373,6 @@ ServerEvents.recipes(event => {
         {id: 'buildcraftcore:volume_box'},
         'minecraft:glass',
         '#forge:glass/colorless'
-    )
-
-    // FE Engine
-    event.remove({id: 'buildcraftenergy:fe_engine'})
-    event.shaped(
-        Item.of('buildcraftenergy:engine_fe'),
-        [
-            'WWW',
-            'BCB',
-            'GPG'
-        ],
-        {
-            W: '#forge:sheets/bismuth',
-            B: 'buildcraftsilicon:redstone_chipset/diamond',
-            C: 'kubejs:engine_core',
-            G: 'buildcraftcore:gears/gear_diamond',
-            P: 'minecraft:piston'
-        }
-    )
-
-    // MJ Dynamo
-    event.remove({id: 'buildcraftenergy:mj_dynamo'})
-    event.shaped(
-        Item.of('buildcraftenergy:mj_dynamo'),
-        [
-            'WWW',
-            'BCB',
-            'GPG'
-        ],
-        {
-            W: '#forge:sheets/bismuth',
-            B: 'buildcraftsilicon:redstone_chipset/iron',
-            C: 'kubejs:engine_core',
-            G: 'buildcraftcore:gears/gear_iron',
-            P: 'minecraft:piston'
-        }
     )
 
     // Auto Workbench

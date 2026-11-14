@@ -114,6 +114,8 @@ JEIEvents.hideItems(event => {
     event.hide('buildcraftfactory:flood_gate')
     event.hide('buildcraftfactory:water_gel')
     event.hide('buildcraftfactory:gel')
+    event.hide('buildcraftenergy:engine_fe')
+    event.hide('buildcraftenergy:mj_dynamo')
 
     // Hidden Buckets
     event.hide('buildcraftenergy:oil/hot_bucket')
