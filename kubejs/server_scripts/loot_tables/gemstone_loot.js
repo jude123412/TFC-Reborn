@@ -7,16 +7,19 @@ LootJS.modifiers((event) => {
     const rockGems = {
         granite: [
             'tfc:ore/emerald',
-            'tfc:ore/sapphire'
+            'tfc:ore/sapphire',
+            'tfc:ore/pyrite'
         ],
         diorite: [
             'tfc:ore/emerald',
-            'tfc:ore/sapphire'
+            'tfc:ore/sapphire',
+            'tfc:ore/pyrite'
         ],
         gabbro: [
             'tfc:ore/emerald',
             'tfc:ore/diamond',
-            'tfc:ore/sapphire'
+            'tfc:ore/sapphire',
+            'tfc:ore/pyrite'
         ],
         shale: [
             'tfc:ore/amethyst',
@@ -63,19 +66,23 @@ LootJS.modifiers((event) => {
         ],
         rhyolite: [
             'tfc:ore/opal',
-            'tfc:ore/sapphire'
+            'tfc:ore/sapphire',
+            'tfc:ore/pyrite'
         ],
         basalt: [
             'tfc:ore/opal',
-            'tfc:ore/sapphire'
+            'tfc:ore/sapphire',
+            'tfc:ore/pyrite'
         ],
         andesite: [
             'tfc:ore/opal',
-            'tfc:ore/sapphire'
+            'tfc:ore/sapphire',
+            'tfc:ore/pyrite'
         ],
         dacite: [
             'tfc:ore/opal',
-            'tfc:ore/sapphire'
+            'tfc:ore/sapphire',
+            'tfc:ore/pyrite'
         ],
         quartzite: [
             'tfc:ore/amethyst',
