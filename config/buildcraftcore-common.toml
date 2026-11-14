@@ -20,7 +20,7 @@
 	#Flow-rate display unit for BuildCraft energy values.
 	#TICKS displays values as unit/t; SECONDS displays values as unit/s.
 	#Allowed Values: TICKS, SECONDS
-	timeGap = "SECONDS"
+	timeGap = "TICKS"
 	#Disable this if you get texture errors with optifine. Disables some texture switching functionality
 	#when changing config options such as colour blind mode.
 	useSwappableSprites = true
@@ -63,7 +63,7 @@
 	mjPerFe = 0.1
 	#MJ_ONLY, MJ_AUTOCONVERT_FE, or DISPLAY_FE
 	#Allowed Values: MJ_ONLY, MJ_AUTOCONVERT_FE, DISPLAY_FE
-	powerMode = "MJ_ONLY"
+	powerMode = "DISPLAY_FE"
 
 [debug]
 	#Write detailed server-side robot state, AI decisions, docking and pathfinding to latest.log every tick.
