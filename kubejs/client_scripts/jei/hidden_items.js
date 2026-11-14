@@ -116,6 +116,15 @@ JEIEvents.hideItems(event => {
     event.hide('buildcraftfactory:gel')
     event.hide('buildcraftenergy:engine_fe')
     event.hide('buildcraftenergy:mj_dynamo')
+    event.hide('buildcrafttransport:wood_fe')
+    event.hide('buildcrafttransport:cobblestone_fe')
+    event.hide('buildcrafttransport:stone_fe')
+    event.hide('buildcrafttransport:quartz_fe')
+    event.hide('buildcrafttransport:iron_fe')
+    event.hide('buildcrafttransport:gold_fe')
+    event.hide('buildcrafttransport:sandstone_fe')
+    event.hide('buildcrafttransport:diamond_fe')
+    event.hide('buildcrafttransport:diamond_wood_fe')
 
     // Hidden Buckets
     event.hide('buildcraftenergy:oil/hot_bucket')
