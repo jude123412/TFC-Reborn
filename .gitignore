@@ -35,3 +35,4 @@ config/oculus.properties
 config/trinketsandbaubles_mana_hud.json
 /modernfix/structureCacheV1
 /local
+config/buildcraft-update-checker.json
