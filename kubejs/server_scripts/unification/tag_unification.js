@@ -225,6 +225,9 @@ ServerEvents.tags('item', event => {
     event.add('forge:plates/iron', '#forge:plates/wrought_iron')
     event.add('forge:wires/iron', '#forge:wires/wrought_iron')
 
+    // Create Crafts & Additions Plants
+    event.add('createaddition:plants', '#tfc:plants')
+
     // Straw
     event.add('forge:straw', 'beneath:crimson_straw')
     event.add('forge:straw', 'beneath:warped_straw')

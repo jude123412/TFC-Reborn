@@ -1,4 +1,14 @@
+TFCEvents.data(event => {
+
+    // Cake Base
+    event.itemHeat('createaddition:cake_base', 1.0, null, null)
+
+    // Baked Cake Base
+    event.itemHeat('createaddition:cake_base_baked', 1.0, null, null)
+})
+
 ServerEvents.recipes(event => {
+
     // Recipe Removal
     event.remove({id: 'createdieselgenerators:crafting/engine_piston'})
     event.remove({id: 'createdieselgenerators:crafting/wire_cutters'})
@@ -48,6 +58,23 @@ ServerEvents.recipes(event => {
     event.remove({id: 'vintage:pressing/nickel_ingot'})
     event.remove({id: 'vintage:pressing/refined_radiance'})
     event.remove({id: 'vintage:pressing/shadow_steel'})
+    event.remove({id: 'createaddition:crafting/small_connector_copper'})
+    event.remove({id: 'createaddition:crafting/small_light_connector'})
+    event.remove({id: 'createaddition:crafting/large_connector_gold'})
+    event.remove({id: 'createaddition:crafting/large_connector_electrum'})
+    event.remove({id: 'createaddition:crafting/redstone_relay'})
+    event.remove({id: 'createaddition:filling/cake'})
+    event.remove({id: 'createaddition:crafting/electrum_block'})
+    event.remove({id: 'createaddition:mixing/biomass_from_crops'})
+    event.remove({id: 'createaddition:mixing/biomass_from_honeycomb'})
+    event.remove({id: 'createaddition:mixing/biomass_from_plant_foods'})
+    event.remove({id: 'createaddition:crafting/spool'})
+    event.remove({id: 'createaddition:crafting/copper_spool'})
+    event.remove({id: 'createaddition:crafting/gold_spool'})
+    event.remove({id: 'createaddition:crafting/electrum_spool'})
+    event.remove({id: 'createaddition:crafting/festive_spool'})
+    event.remove({id: 'createaddition:compacting/seed_oil'})
+    event.remove({id: 'createdieselgenerators:compacting/plant_oil'})
 
     // Recipe Removal by output
     event.remove({output: 'createdieselgenerators:wood_chip'})
@@ -124,20 +151,21 @@ ServerEvents.recipes(event => {
 
     // Chip Wood Block
     event.remove({id: 'createdieselgenerators:crafting/chip_wood_block'})
-    event.custom({
-        type: 'immersiveengineering:metal_press',
-        energy: 14400,
-        input: {
-            'base_ingredient': {
-                tag: 'forge:dusts/wood',
-            },
-            count: 4
-        },
-        mold: 'tfc_ie_addon:mold_block',
-        result: {
-            item: 'createdieselgenerators:chip_wood_block'
-        }
-    })
+    event.shapeless(
+        Item.of('createdieselgenerators:chip_wood_block'),
+        [
+            '9x kubejs:powder/wood'
+        ]
+    )
+
+    // Chip Wood to Sawdust
+        event.shapeless(
+        Item.of('createdieselgenerators:chip_wood_block'),
+        [
+            'createdieselgenerators:chip_wood_block',
+            '#tfc:hammers'
+        ]
+    ).damageIngredient('#tfc:hammers')
 
     // Burner
     event.replaceInput(
@@ -250,5 +278,200 @@ ServerEvents.recipes(event => {
             }
         ],
         processingTime: 120
+    })
+
+    // Electric Motor
+    event.remove({id: 'createaddition:mechanical_crafting/electric_motor'})
+    event.custom({
+        type: 'create:mechanical_crafting',
+        pattern: [
+            '  S  ',
+            ' PCP ',
+            'PCRCP',
+            ' PCP ',
+            '  F  '
+        ],
+        key: {
+            S: {
+                item: 'create:shaft'
+            },
+            P: {
+                tag: 'forge:plates/brass'
+            },
+            C: {
+                item: 'rosia:copper_coil'
+            },
+            R: {
+                item: 'rosia:motor'
+            },
+            F: {
+                item: 'createaddition:capacitor'
+            }
+        },
+        result: {
+            item: 'createaddition:electric_motor'
+        }
+    })
+
+    // Alternator
+    event.remove({id: 'createaddition:mechanical_crafting/alternator'})
+    event.custom({
+        type: 'create:mechanical_crafting',
+        pattern: [
+            '  F  ',
+            ' PCP ',
+            'PCRCP',
+            ' PCP ',
+            '  S  '
+        ],
+        key: {
+            F: {
+                item: 'createaddition:capacitor'
+            },
+            P: {
+                tag: 'forge:plates/wrought_iron'
+            },
+            C: {
+                item: 'rosia:copper_coil'
+            },
+            R: {
+                item: 'rosia:motor'
+            },
+            S: {
+                item: 'create:shaft'
+            }
+        },
+        result: {
+            item: 'createaddition:alternator'
+        }
+    })
+
+    // Cake Base
+    event.remove({id: 'createaddition:compacting/cake_base'})
+    event.custom({
+        type: 'create:compacting',
+        ingredients: [
+            {
+                tag: 'forge:eggs'
+            },
+            {
+                tag: 'tfc:sweetener',
+                count: 2
+            },
+            {
+                tag: 'tfc:cow_food'
+            }
+        ],
+        results: [
+            {
+                item: 'createaddition:cake_base'
+            }
+        ]
+    })
+
+    // Baked Cake Base
+    event.remove({id: 'createaddition:smoking/cake_base_baked'})
+    event.custom({
+        type: 'tfc:heating',
+        ingredient: {
+            item: 'createaddition:cake_base'
+        },
+        result_item: {
+            item: 'createaddition:cake_base_baked'
+        },
+        temperature: 200
+    })
+
+    // Tesla Coil
+    event.replaceInput(
+        {id: 'createaddition:mechanical_crafting/tesla_coil'},
+        'createaddition:copper_spool',
+        'rosia:copper_coil'
+    )
+
+    // Portable Energy Interface
+    event.replaceInput(
+        {id: 'createaddition:crafting/portable_energy_interface'},
+        'createaddition:copper_spool',
+        'rosia:copper_coil'
+    )
+
+    // Capacitor
+    event.remove({id: 'createaddition:crafting/capacitor_1'})
+    event.remove({id: 'createaddition:crafting/capacitor_2'})
+    event.custom({
+        type: 'minecraft:crafting_shaped',
+        key: {
+            G: {
+                tag: 'tfc:fireclay/carbon'
+            },
+            R: {
+                type: 'immersiveengineering:fluid',
+                amount: 1000,
+                tag: 'forge:redstone_acid'
+            },
+            P: {
+                tag: 'forge:plates/aluminum'
+            },
+            J: {
+                item: 'tfc:empty_jar'
+            },
+            S: {
+                tag: 'forge:rods/zinc'
+            }
+        },
+        pattern: [
+            'GRG',
+            'PJP',
+            'SGS'
+        ],
+        result: {
+            item: 'createaddition:capacitor'
+        }
+    })
+
+    // Diamond Grit Sandpaper
+    event.remove({id: 'createaddition:crafting/diamond_grit_sandpaper'})
+    event.shapeless(
+        Item.of('createaddition:diamond_grit_sandpaper'),
+        [
+            '#forge:paper',
+            '#tfc:flux',
+            '#forge:slimeballs',
+            '2x #forge:dusts/diamond'
+        ]
+    )
+
+    // Straw
+    event.custom({
+        type: 'createaddition:rolling',
+        input: {
+            tag: 'forge:paper'
+        },
+        result: {
+            item: 'createaddition:straw'
+        }
+    })
+
+    // Biofuel
+    event.custom({
+        type: 'create:mixing',
+        ingredients: [
+            {
+                tag: 'tfc:sweetener'
+            },
+            {
+                item: 'create:cinder_flour'
+            },
+            {
+                item: 'createaddition:biomass'
+            }
+        ],
+        results:[
+            {
+                fluid: 'createaddition:bioethanol',
+                amount: 125
+            }
+        ]
     })
 })

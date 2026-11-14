@@ -392,7 +392,7 @@ ServerEvents.recipes(event => {
             'tfc:gem/amethyst',
             '#create:sandpaper'
         ]
-    ).damageIngredient('#forge:sandpaper')
+    ).damageIngredient('#create:sandpaper')
 
     // Netherite Shovel
     event.remove({id: 'minecraft:netherite_shovel_smithing'})

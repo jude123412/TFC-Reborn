@@ -58,7 +58,7 @@ global.metals = {
         is_custom: false,
         fluid: 'firmalife:metal/stainless_steel',
 
-        ingot: 'firmalife:metal/rod/stainless_steel',
+        ingot: 'firmalife:metal/ingot/stainless_steel',
         double_ingot: 'firmalife:metal/double_ingot/stainless_steel',
         sheet: 'firmalife:metal/sheet/stainless_steel',
         double_sheet: null,

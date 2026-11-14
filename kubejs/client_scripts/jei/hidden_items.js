@@ -145,6 +145,8 @@ JEIEvents.hideItems(event => {
     event.hide('buildcraftenergy:fuel_gaseous/cool_bucket')
     event.hide('buildcraftenergy:fuel_gaseous/hot_bucket')
     event.hide('buildcraftenergy:fuel_gaseous/searing_bucket')
+    event.hide('createaddition:seed_oil_bucket')
+    event.hide('createdieselgenerators:plant_oil_bucket')
 
     // Hidden Ingots
     event.hide('immersiveengineering:ingot_silver')

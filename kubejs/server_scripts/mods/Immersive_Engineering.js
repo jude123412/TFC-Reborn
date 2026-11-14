@@ -269,6 +269,11 @@ ServerEvents.recipes(event => {
     event.remove({id: 'immersiveengineering:metalpress/rod_brass'})
     event.remove({id: 'immersiveengineering:metalpress/rod_iron'})
     event.remove({id: 'immersiveengineering:metalpress/rod_aluminum'})
+    event.remove({id: 'immersiveengineering:squeezer/melon_seeds'})
+    event.remove({id: 'immersiveengineering:squeezer/beetroot_seeds'})
+    event.remove({id: 'immersiveengineering:squeezer/pumpkin_seeds'})
+    event.remove({id: 'immersiveengineering:squeezer/wheat_seeds'})
+    event.remove({id: 'immersiveengineering:squeezer/hemp_seeds'})
 
     // Recipe Removal by output
     event.remove({output: 'immersiveengineering:dust_wood'})
@@ -369,4 +374,20 @@ ServerEvents.recipes(event => {
         },
         duration: 8000
     }).id('treated_wood_stick')
+
+    // Seed Oil
+    event.custom({
+        type: 'create:compacting',
+        ingredients: [
+            {
+                tag: 'forge:seeds'
+            }
+        ],
+        results: [
+            {
+                fluid: 'immersiveengineering:plantoil',
+                amount: 10
+            }
+        ]
+    })
 })

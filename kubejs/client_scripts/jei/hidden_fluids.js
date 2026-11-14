@@ -30,4 +30,6 @@ JEIEvents.hideFluids(event => {
     event.hide('buildcraftenergy:fuel_mixed_light')
     event.hide('buildcraftenergy:fuel_mixed_light_heat_1')
     event.hide('buildcraftenergy:fuel_mixed_light_heat_2')
+    event.hide('createaddition:seed_oil')
+    event.hide('createdieselgenerators:plant_oil')
 })
