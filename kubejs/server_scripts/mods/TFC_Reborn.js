@@ -1,9 +1,9 @@
 TFCEvents.data(event => {
     // Loose Andesite Rock
-    event.itemHeat('tfc:rock/loose/andesite', 5.714, 900, 1100)
+    event.itemHeat('tfc:rock/loose/andesite', 2.857, 900, 1100)
 
     // Fluxstone
-    event.itemHeat('#tfc:fluxstone', 5.714, null, null)
+    event.itemHeat('#tfc:fluxstone', 2.857, null, null)
 
     // Left Elytra Wing
     event.itemHeat('kubejs:elytra/left_wing', 8.332, 910, 1200)
@@ -18,7 +18,7 @@ TFCEvents.data(event => {
     event.itemHeat('kubejs:insulator/unfired_ceramic', 2.332, null, null)
 
     // Pipe Frame
-    event.itemHeat('kubejs:pipe_frame/cobblestone', 5.714, null, null)
+    event.itemHeat('kubejs:pipe_frame/cobblestone', 2.857, null, null)
     event.itemHeat('kubejs:pipe_frame/iron', 2.857 * 2, 921, 1228)
     event.itemHeat('kubejs:pipe_frame/gold', 1.667 * 2, 636, 848)
     event.itemSize('kubejs:pipe_frame/wood', 'large', 'light')
