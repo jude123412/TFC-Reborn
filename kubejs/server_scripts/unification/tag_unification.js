@@ -237,6 +237,11 @@ ServerEvents.tags('item', event => {
     event.add('bsa:bindings/weak', 'beneath:crimson_straw')
     event.add('bsa:bindings/weak', 'beneath:warped_straw')
 
+    // Any Bronze Ingots
+    event.add('forge:ingots/any_bronze', 'tfc:metal/ingot/bismuth_bronze')
+    event.add('forge:ingots/any_bronze', 'tfc:metal/ingot/black_bronze')
+    event.add('forge:ingots/any_bronze', 'tfc:metal/ingot/bronze')
+
     // Remove these to stop them showing up
     // in railcraft loot tables
     event.removeAll('railcraft:ingot_chest_loot')

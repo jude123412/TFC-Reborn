@@ -405,7 +405,7 @@ ServerEvents.recipes(event => {
         ],
         {
             G: 'buildcraftcore:gears/gear_stone',
-            P: 'create:precision_mechanism',
+            P: 'tfc:brass_mechanisms',
             S: 'buildcraftcore:gears/gear_wood',
             C: '#tfc:workbenches'
         }

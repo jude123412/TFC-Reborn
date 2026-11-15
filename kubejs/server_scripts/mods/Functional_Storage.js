@@ -219,10 +219,10 @@ ServerEvents.recipes(event => {
             'SIS'
         ],
         {
-            S: '#tfc:rock/bricks',
-            P: 'minecraft:piston',
+            S: '#tfc:rock/smooth',
+            P: 'buildcraftfactory:autoworkbench_item',
             D: '#functionalstorage:drawer',
-            I: '#forge:ingots/wrought_iron'
+            I: '#forge:ingots/any_bronze'
         }
     )
 
@@ -372,15 +372,15 @@ ServerEvents.recipes(event => {
     event.shaped(
         'functionalstorage:simple_compacting_drawer', 
         [
-            'SSS',
-            'SDP',
+            'SPS',
+            'SDS',
             'SIS'
         ],
         {
             S: '#tfc:rock/bricks',
             D: '#functionalstorage:drawer',
-            P: 'minecraft:piston',
-            I: '#forge:ingots/wrought_iron'
+            P: 'buildcraftfactory:autoworkbench_item',
+            I: '#forge:ingots/any_bronze'
         }
     )
 
