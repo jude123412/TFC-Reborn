@@ -661,7 +661,32 @@ ServerEvents.recipes(event => {
         ],
         "apply_forging_bonus": false
     })
+
     // Molten Andesite
     tfc.heating('minecraft:iron_bars', 1535)
         .resultFluid(Fluid.of('tfc:metal/cast_iron', 25))
+
+    // Fermented Spider Eye
+    event.custom({
+        type: 'createdieselgenerators:basin_fermenting',
+        ingredients: [
+            {
+                item: 'minecraft:spider_eye'
+            },
+            {
+                tag: 'tfc:sweetener'
+            },
+            {
+                fluidTag: 'tfc:any_fresh_water',
+                amount: 50
+            }
+        ],
+        processingTime: 400,
+        results: [
+            {
+                fluid: 'immersiveengineering:ethanol',
+                amount: 50
+            }
+        ]
+    })
 })

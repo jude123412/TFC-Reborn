@@ -274,6 +274,14 @@ ServerEvents.recipes(event => {
     event.remove({id: 'immersiveengineering:squeezer/pumpkin_seeds'})
     event.remove({id: 'immersiveengineering:squeezer/wheat_seeds'})
     event.remove({id: 'immersiveengineering:squeezer/hemp_seeds'})
+    event.remove({id: 'immersiveengineering:fermenter/glow_berries'})
+    event.remove({id: 'immersiveengineering:fermenter/honey'})
+    event.remove({id: 'immersiveengineering:fermenter/apple'})
+    event.remove({id: 'immersiveengineering:fermenter/sweet_berries'})
+    event.remove({id: 'immersiveengineering:fermenter/beetroot'})
+    event.remove({id: 'immersiveengineering:fermenter/melon_slice'})
+    event.remove({id: 'immersiveengineering:fermenter/potato'})
+    event.remove({id: 'immersiveengineering:fermenter/sugar_cane'})
 
     // Recipe Removal by output
     event.remove({output: 'immersiveengineering:dust_wood'})
@@ -493,4 +501,206 @@ ServerEvents.recipes(event => {
             C: 'kubejs:insulator/glass'
         }
     )
+
+    // Ethanol
+    event.custom({
+        type: 'createdieselgenerators:basin_fermenting',
+        ingredients: [
+            {
+                tag: 'tfc:foods/vegetables'
+            }
+        ],
+        processingTime: 400,
+        results: [
+            {
+                fluid: 'immersiveengineering:ethanol',
+                amount: 8
+            }
+        ]
+    })
+    event.custom({
+        type: 'createdieselgenerators:basin_fermenting',
+        ingredients: [
+            {
+                tag: 'tfc:foods/fruits'
+            }
+        ],
+        processingTime: 400,
+        results: [
+            {
+                fluid: 'immersiveengineering:ethanol',
+                amount: 12
+            }
+        ]
+    })
+    event.custom({
+        type: 'createdieselgenerators:basin_fermenting',
+        ingredients: [
+            {
+                tag: 'tfc:foods/grains'
+            }
+        ],
+        processingTime: 400,
+        results: [
+            {
+                fluid: 'immersiveengineering:ethanol',
+                amount: 15
+            }
+        ]
+    })
+    event.custom({
+        type: 'createdieselgenerators:basin_fermenting',
+        ingredients: [
+            {
+                tag: 'tfc:sweetener'
+            }
+        ],
+        processingTime: 400,
+        results: [
+            {
+                fluid: 'immersiveengineering:ethanol',
+                amount: 60
+            }
+        ]
+    })
+    event.custom({
+        type: 'createdieselgenerators:bulk_fermenting',
+        ingredients: [
+            {
+                tag: 'tfc:foods/vegetables'
+            }
+        ],
+        processingTime: 400,
+        results: [
+            {
+                fluid: 'immersiveengineering:ethanol',
+                amount: 20
+            }
+        ]
+    })
+    event.custom({
+        type: 'createdieselgenerators:bulk_fermenting',
+        ingredients: [
+            {
+                tag: 'tfc:foods/fruits'
+            }
+        ],
+        processingTime: 400,
+        results: [
+            {
+                fluid: 'immersiveengineering:ethanol',
+                amount: 25
+            }
+        ]
+    })
+    event.custom({
+        type: 'createdieselgenerators:bulk_fermenting',
+        ingredients: [
+            {
+                tag: 'tfc:foods/grains'
+            }
+        ],
+        processingTime: 400,
+        results: [
+            {
+                fluid: 'immersiveengineering:ethanol',
+                amount: 30
+            }
+        ]
+    })
+    event.custom({
+        type: 'createdieselgenerators:bulk_fermenting',
+        ingredients: [
+            {
+                tag: 'tfc:sweetener'
+            }
+        ],
+        processingTime: 400,
+        results: [
+            {
+                fluid: 'immersiveengineering:ethanol',
+                amount: 80
+            }
+        ]
+    })
+    event.custom({
+        type: 'immersiveengineering:fermenter',
+        energy: 6400,
+        input: {
+            tag: 'tfc:foods/vegetables'
+        },
+        fluid: {
+            fluid: 'immersiveengineering:ethanol',
+            amount: 40
+        },
+        result: {
+            item: 'createaddition:biomass'
+        }
+    })
+    event.custom({
+        type: 'immersiveengineering:fermenter',
+        energy: 6400,
+        input: {
+            tag: 'tfc:foods/fruits'
+        },
+        fluid: {
+            fluid: 'immersiveengineering:ethanol',
+            amount: 50
+        },
+       result: {
+            item: 'createaddition:biomass'
+        }   
+    })
+    event.custom({
+        type: 'immersiveengineering:fermenter',
+        energy: 6400,
+        input: {
+            tag: 'tfc:foods/grains'
+        },
+        fluid: {
+            fluid: 'immersiveengineering:ethanol',
+            amount: 60
+        },
+        result: {
+            item: 'createaddition:biomass'
+        }
+    })
+    event.custom({
+        type: 'immersiveengineering:fermenter',
+        energy: 6400,
+        input: {
+            tag: 'tfc:sweetener'
+        },
+        fluid: {
+            fluid: 'immersiveengineering:ethanol',
+            amount: 100
+        },
+        result: {
+            item: 'createaddition:biomass'
+        }
+    })
+
+    // Biodiesel
+    event.custom({
+        type: 'create:mixing',
+        ingredients: [
+            {
+                fluidTag: 'forge:plantoil',
+                amount: 8
+            },
+            {
+                fluidTag: 'forge:ethanol',
+                amount: 8
+            },
+            {
+                tag: 'forge:dusts/saltpeter'
+            }
+        ],
+        results: [
+            {
+                fluid: 'immersiveengineering:biodiesel',
+                amount: 16
+            }
+        ]
+    })
 })

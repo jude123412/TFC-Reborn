@@ -75,6 +75,12 @@ ServerEvents.recipes(event => {
     event.remove({id: 'createaddition:crafting/festive_spool'})
     event.remove({id: 'createaddition:compacting/seed_oil'})
     event.remove({id: 'createdieselgenerators:compacting/plant_oil'})
+    event.remove({id: 'createdieselgenerators:basin_fermenting/fermentable'})
+    event.remove({id: 'createdieselgenerators:basin_fermenting/fermented_spider_eye'})
+    event.remove({id: 'createdieselgenerators:bulk_fermenting/fermentable'})
+    event.remove({id: 'createdieselgenerators:mixing/biodiesel'})
+    event.remove({id: 'createdieselgenerators:distillation/superheated_crude_oil'})
+    event.remove({id: 'createdieselgenerators:distillation/crude_oil'})
 
     // Recipe Removal by output
     event.remove({output: 'createdieselgenerators:wood_chip'})
