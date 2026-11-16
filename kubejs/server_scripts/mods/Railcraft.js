@@ -137,6 +137,11 @@ ServerEvents.recipes(event => {
     event.remove({id: 'railcraft:brass_gear'})
     event.remove({id: 'railcraft:bronze_gear'})
     event.remove({id: 'railcraft:invar_gear'})
+    event.remove({id: 'railcraft:steel_shovel'})
+    event.remove({id: 'railcraft:steel_pickaxe'})
+    event.remove({id: 'railcraft:steel_axe'})
+    event.remove({id: 'railcraft:steel_hoe'})
+    event.remove({id: 'railcraft:steel_shears'})
 
     // Coke Oven Bricks
     event.remove({id: 'railcraft:coke_oven_bricks'})
@@ -197,4 +202,39 @@ ServerEvents.recipes(event => {
             item: 'minecraft:charcoal'
         }
     })
+
+    // Locking Track Kit
+    event.replaceInput(
+        {id: 'railcraft:locking_track_kit'},
+        'minecraft:stone_pressure_plate',
+        '#minecraft:stone_pressure_plates'
+    )
+
+    // Detector Track Kit
+    event.replaceInput(
+        {id: 'railcraft:detector_track_kit'},
+        'minecraft:stone_pressure_plate',
+        '#minecraft:stone_pressure_plates'
+    )
+
+    // Disembarking Track Kit
+    event.replaceInput(
+        {id: 'railcraft:disembarking_track_kit'},
+        'minecraft:stone_pressure_plate',
+        '#minecraft:stone_pressure_plates'
+    )
+
+    // Launcher Track Kit
+    event.replaceInput(
+        {id: 'railcraft:launcher_track_kit'},
+        '#forge:storage_blocks/steel',
+        '#forge:double_ingots/steel'
+    )
+
+    // One-Way Track Kit
+    event.replaceInput(
+        {id: 'railcraft:one_way_track_kit'},
+        'minecraft:stone_pressure_plate',
+        '#minecraft:stone_pressure_plates'
+    )
 })
