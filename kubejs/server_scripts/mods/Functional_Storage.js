@@ -372,8 +372,8 @@ ServerEvents.recipes(event => {
     event.shaped(
         'functionalstorage:simple_compacting_drawer', 
         [
-            'SPS',
-            'SDS',
+            'SSS',
+            'SDP',
             'SIS'
         ],
         {
