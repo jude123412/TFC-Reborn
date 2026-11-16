@@ -31,4 +31,37 @@ ServerEvents.recipes(event => {
             L: 'tfclunchbox:lunchbox'
         }
     )
+
+    // Scanner Module: Common Ores
+    event.replaceInput(
+        {id: 'scannable:common_ores_module'},
+        'minecraft:coal',
+        '#forge:gems/coal'
+    )
+
+    // Scanner Module: Fluids
+    event.remove({id: 'scannable:fluid_module'})
+    event.custom({
+        type: 'minecraft:crafting_shapeless',
+        ingredients: [
+            {
+                item: 'scannable:blank_module',
+            },
+            {
+                type: 'immersiveengineering:fluid',
+                tag: 'tfc:any_fresh_water',
+                amount: 100
+            }
+        ],
+        result: {
+            item: 'scannable:fluid_module'
+        }
+    })
+
+    // Scanner Module: Chests
+    event.replaceInput(
+        {id: 'scannable:chest_module'},
+        'minecraft:chest',
+        '#forge:chests/wooden'
+    )
 })
