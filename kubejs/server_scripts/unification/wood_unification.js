@@ -14,9 +14,10 @@ ServerEvents.recipes(event => {
             event.remove({id: `${t.mod_id}:crafting/wood/${wood}_lumber_log`})
             event.remove({id: `${t.mod_id}:crafting/wood/${wood}_support`})
 
-            tfc.quern(t.bark_powder, t.bark)
-            create.milling(t.bark_powder, t.bark)
-            create.crushing(t.bark_powder, t.bark)
+            if (t.bark.startsWith('kubejs:') || t.bark_powder.startsWith('kubejs:')) {
+                tfc.quern(t.bark_powder, t.bark)
+                create.milling(t.bark_powder, t.bark)
+            }
 
             event.custom({
                 type: 'railcraft:crusher',
