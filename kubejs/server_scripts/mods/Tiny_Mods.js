@@ -32,6 +32,45 @@ ServerEvents.recipes(event => {
         }
     )
 
+    // Scanner
+    event.remove({id: 'scannable:scanner'})
+    event.shaped(
+        Item.of('scannable:scanner'),
+        [
+            'RPR',
+            'BCB',
+            'SQS'
+
+        ],
+        {
+            R: '#forge:rods/wrought_iron',
+            P: '#forge:glass_panes/colorless',
+            B: 'minecraft:iron_bars',
+            C: 'buildcraftsilicon:redstone_chipset/red',
+            S: '#forge:sheets/gold',
+            Q: '#forge:gems/quartz'
+        }
+    )
+
+    // Blank Scanner Module
+    event.remove({id: 'scannable:blank_module'})
+    event.custom({
+        type: 'tfc:anvil',
+        input: {
+            item: 'tfc:metal/sheet/bismuth_bronze'
+        },
+        result: {
+            item: 'scannable:blank_module'
+        },
+        tier: 2,
+        rules: [
+            'bend_third_last',
+            'bend_second_last',
+            'upset_last'
+        ],
+        "apply_forging_bonus": false
+    })
+
     // Scanner Module: Common Ores
     event.replaceInput(
         {id: 'scannable:common_ores_module'},
