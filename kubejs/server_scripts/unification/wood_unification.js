@@ -6,6 +6,7 @@ ServerEvents.recipes(event => {
     event.remove({id: /create:cutting\/runtime_generated\/compat\/minecraft\/.*/})
     event.remove({id: /create:cutting\/compat\/immersiveengineering\/.*/})
     event.remove({id: /create:cutting\/runtime_generated\/compat\/botania\/.*/})
+    event.remove({ id: /^dtafc:/ })
 
     for (const wood in global.integration_trees) {
         let t = global.integration_trees[wood]

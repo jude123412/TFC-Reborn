@@ -363,4 +363,9 @@ JEIEvents.hideItems(event => {
     event.hide('createaddition:iron_wire')
     event.hide('createaddition:gold_wire')
     event.hide('createaddition:electrum_wire')
+
+    // Hidden Dyanimc Trees AFC Bark
+    // Im feeling too lazy to add them :D
+    event.hide(/dtafc:.*_bark$/)
+    event.hide(/dtafc:.*_bark_powder$/)
 })
