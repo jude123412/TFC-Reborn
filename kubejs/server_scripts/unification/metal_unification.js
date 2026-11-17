@@ -16,7 +16,7 @@ TFCEvents.data(event => {
             )
         }
 
-        if (m.ingot != null && m.ingot.startsWith('kubejs:')) {
+        if (m.ingot != null && (m.ingot.startsWith('kubejs:') || !m.ingot.startsWith('terrafirmacraft:') && !m.ingot.startsWith('firmalife:') && !m.ingot.startsWith('rosia:'))) {
             event.itemHeat(m.ingot, m.capacity, m.work, m.weld)
         }
 
@@ -60,7 +60,7 @@ TFCEvents.data(event => {
         }
 
         // Nugget
-        if (m.nugget != null && m.nugget.startsWith('kubejs:')) {
+        if (m.nugget != null && (m.nugget.startsWith('kubejs:') ||!m.nugget.startsWith('terrafirmacraft:') && !m.nugget.startsWith('firmalife:') && !m.nugget.startsWith('rosia:'))) {
             event.itemHeat(m.nugget, m.capacity, m.work, m.weld)
             event.itemSize(m.nugget, 'small', 'light')
         }
