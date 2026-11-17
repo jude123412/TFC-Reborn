@@ -70,8 +70,7 @@ ServerEvents.recipes(event => {
             ).post([ 
                 Post.drop_item(Item.of(t.bark)).withChance(0.5),
                 Post.place(t.stripped_log),
-                Post.damage_item(),
-                Post.execute('playsound minecraft:item.axe.strip master @a ~ ~ ~ 0.8 1')
+                Post.damage_item()
             ])
             lychee.block_interacting(
                 '#minecraft:axes', 
@@ -79,8 +78,7 @@ ServerEvents.recipes(event => {
             ).post([ 
                 Post.drop_item(Item.of(t.bark)).withChance(0.5),
                 Post.place(t.stripped_wood),
-                Post.damage_item(),
-                Post.execute('playsound minecraft:item.axe.strip master @a ~ ~ ~ 0.8 1')
+                Post.damage_item()
             ])
             lychee.block_interacting(
                 '#tfc:saws', 
@@ -88,8 +86,7 @@ ServerEvents.recipes(event => {
             ).post([ 
                 Post.drop_item(Item.of(t.bark)).withChance(0.5),
                 Post.place(t.stripped_log),
-                Post.damage_item(),
-                Post.execute('playsound minecraft:item.axe.strip master @a ~ ~ ~ 0.8 1')
+                Post.damage_item()
             ])
             lychee.block_interacting(
                 '#tfc:saws', 
@@ -97,8 +94,7 @@ ServerEvents.recipes(event => {
             ).post([ 
                 Post.drop_item(Item.of(t.bark)).withChance(0.5),
                 Post.place(t.stripped_wood),
-                Post.damage_item(),
-                Post.execute('playsound minecraft:item.axe.strip master @a ~ ~ ~ 0.8 1')
+                Post.damage_item()
             ])
             create.cutting(
                 [
