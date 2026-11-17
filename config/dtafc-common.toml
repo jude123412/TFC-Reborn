@@ -1,0 +1,6 @@
+
+#Worldgen options
+[worldgen]
+	#Whether coast redwood trees can spawn during world generation.
+	coastRedwoodEnabled = true
+
