@@ -237,4 +237,116 @@ ServerEvents.recipes(event => {
         'minecraft:stone_pressure_plate',
         '#minecraft:stone_pressure_plates'
     )
+
+    // Switch Track Lever
+    event.replaceInput(
+        {id: 'railcraft:switch_track_lever'},
+        'minecraft:iron_ingot',
+        '#forge:plates/wrought_iron'
+    )
+
+    // Switch Track Motor
+    event.replaceInput(
+        {id: 'railcraft:switch_track_motor'},
+        'minecraft:iron_ingot',
+        '#forge:plates/wrought_iron'
+    )
+
+    // Analog Signal Controller Box
+    event.replaceInput(
+        {id: 'railcraft:analog_signal_controller_box'},
+        'minecraft:iron_ingot',
+        '#forge:plates/wrought_iron'
+    )
+
+    // Signal Sequencer Box
+    event.replaceInput(
+        {id: 'railcraft:signal_sequencer_box'},
+        'minecraft:iron_ingot',
+        '#forge:plates/wrought_iron'
+    )
+
+    // Signal Capacitor Box
+    event.replaceInput(
+        {id: 'railcraft:signal_capacitor_box'},
+        'minecraft:iron_ingot',
+        '#forge:plates/wrought_iron'
+    )
+
+    // Signal Interlock Box
+    event.replaceInput(
+        {id: 'railcraft:signal_interlock_box'},
+        'minecraft:iron_ingot',
+        '#forge:plates/wrought_iron'
+    )
+
+    // Signal Block Relay Box
+    event.replaceInput(
+        {id: 'railcraft:signal_block_relay_box'},
+        'minecraft:iron_ingot',
+        '#forge:plates/wrought_iron'
+    )
+
+    // Signal Receiver Box
+    event.replaceInput(
+        {id: 'railcraft:signal_receiver_box'},
+        'minecraft:iron_ingot',
+        '#forge:plates/wrought_iron'
+    )
+
+    // Signal Controller Box
+    event.replaceInput(
+        {id: 'railcraft:signal_controller_box'},
+        'minecraft:iron_ingot',
+        '#forge:plates/wrought_iron'
+    )
+
+    // Token Signal Box
+    event.replaceInput(
+        {id: 'railcraft:token_signal_box'},
+        'minecraft:iron_ingot',
+        '#forge:plates/wrought_iron'
+    )
+
+    // Block Signal
+    event.replaceInput(
+        {id: 'railcraft:block_signal'},
+        'minecraft:iron_ingot',
+        '#forge:plates/wrought_iron'
+    )
+
+    // Distant Signal
+    event.replaceInput(
+        {id: 'railcraft:distant_signal'},
+        'minecraft:iron_ingot',
+        '#forge:plates/wrought_iron'
+    )
+
+    // Token Signal
+    event.replaceInput(
+        {id: 'railcraft:token_signal'},
+        'minecraft:iron_ingot',
+        '#forge:plates/wrought_iron'
+    )
+
+    // Dual-Head Block Signal
+    event.replaceInput(
+        {id: 'railcraft:dual_block_signal'},
+        'minecraft:iron_ingot',
+        '#forge:plates/wrought_iron'
+    )
+
+    // Dual-Head Distant Signal
+    event.replaceInput(
+        {id: 'railcraft:dual_distant_signal'},
+        'minecraft:iron_ingot',
+        '#forge:plates/wrought_iron'
+    )
+
+    // Dual-Head Token Signal
+    event.replaceInput(
+        {id: 'railcraft:dual_token_signal'},
+        'minecraft:iron_ingot',
+        '#forge:plates/wrought_iron'
+    )
 })
