@@ -235,6 +235,10 @@ JEIEvents.hideItems(event => {
     event.hide('railcraft:sulfur_dust')
     event.hide('createaddition:diamond_grit')
     event.hide('immersivetechnology:salt')
+    event.hide('railcraft:lead_raw')
+    event.hide('railcraft:nickel_raw')
+    event.hide('railcraft:silver_raw')
+    event.hide('railcraft:tin_raw')
 
     // Hidden Nuggets
     event.hide('railcraft:lead_nugget')
@@ -312,6 +316,9 @@ JEIEvents.hideItems(event => {
     event.hide('vintage:refined_glowstone_sheet')
     event.hide('vintage:refined_obsidian_sheet')
     event.hide('vintage:osmium_sheet')
+    event.hide('vintage:invar_sheet')
+    event.hide('vintage:nickel_sheet')
+    event.hide('vintage:silver_sheet')
     event.hide('steampowered:bronze_sheet')
 
     // Hidden Rods
@@ -363,6 +370,21 @@ JEIEvents.hideItems(event => {
     event.hide('createaddition:iron_wire')
     event.hide('createaddition:gold_wire')
     event.hide('createaddition:electrum_wire')
+
+    // Hidden Ores
+    event.hide('railcraft:sulfur_ore')
+    event.hide('railcraft:deepslate_sulfur_ore')
+    event.hide('railcraft:saltpeter_ore')
+    event.hide('railcraft:lead_ore')
+    event.hide('railcraft:deepslate_lead_ore')
+    event.hide('railcraft:nickel_ore')
+    event.hide('railcraft:deepslate_nickel_ore')
+    event.hide('railcraft:silver_ore')
+    event.hide('railcraft:deepslate_silver_ore')
+    event.hide('railcraft:tin_ore')
+    event.hide('railcraft:deepslate_tin_ore')
+    event.hide('railcraft:zinc_ore')
+    event.hide('railcraft:deepslate_zinc_ore')
 
     // Hidden Dyanimc Trees AFC Bark
     // Im feeling too lazy to add them :D

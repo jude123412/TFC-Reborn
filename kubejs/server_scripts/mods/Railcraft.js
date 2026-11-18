@@ -149,6 +149,22 @@ ServerEvents.recipes(event => {
     event.remove({id: 'railcraft:steel_chestplate'})
     event.remove({id: 'railcraft:steel_leggings'})
     event.remove({id: 'railcraft:steel_boots'})
+    event.remove({id: 'railcraft:steam_oven'})
+    event.remove({id: 'railcraft:manual_rolling_machine'})
+    event.remove({id: 'railcraft:blast_furnace_bricks'})
+    event.remove({id: 'railcraft:feed_station'})
+    event.remove({id: 'railcraft:worldspike_minecart_disassembly'})
+    event.remove({id: 'railcraft:world_spike'})
+    event.remove({id: 'railcraft:personal_world_spike'})
+    event.remove({id: 'railcraft:lead_block_from_lead_ingot'})
+    event.remove({id: 'railcraft:nickel_block_from_nickel_ingot'})
+    event.remove({id: 'railcraft:silver_block_from_silver_ingot'})
+    event.remove({id: 'railcraft:tin_block_from_tin_ingot'})
+    event.remove({id: 'railcraft:zinc_block_from_zinc_ingot'})
+    event.remove({id: 'railcraft:steel_block_from_steel_ingot'})
+    event.remove({id: 'railcraft:steel_block_from_steel_ingot'})
+    event.remove({id: 'railcraft:blast_furnace/blasting_steel_block'})
+    event.remove({id: 'railcraft:brass_block_from_brass_ingot'})
 
     // Coke Oven Bricks
     event.remove({id: 'railcraft:coke_oven_bricks'})
@@ -415,30 +431,12 @@ ServerEvents.recipes(event => {
     )
 
     // Steam Locomotive
-    event.remove({id: 'railcraft:track_undercutter'})
-    event.shaped(
-        Item.of('railcraft:track_undercutter'), 
-        [
-            'DLD',
-            'BSB',
-            'TCT'
-        ],
-        {
-            D: '#forge:dyes/yellow',
-            L: 'minecraft:redstone_lamp',
-            B: '#forge:rods/blaze',
-            T: '#minecraft:shovels',
-            C: 'minecraft:minecart'
-        }
-    )
-    
-    // Electric Locomotive
     event.remove({id: 'railcraft:steam_locomotive'})
     event.shaped(
         Item.of('railcraft:steam_locomotive'), 
         [
             ' BS',
-            'FFS',
+            'SFF',
             'GCG'
         ],
         {
@@ -449,4 +447,323 @@ ServerEvents.recipes(event => {
             C: 'minecraft:minecart'
         }
     )
+
+    // Electric Locomotive
+    event.replaceInput(
+        {id: 'railcraft:electric_locomotive'},
+        'railcraft:charge_motor',
+        '#forge:any_motor_rf'
+    )
+
+    // Solid Fueled Firebox
+    event.remove({id: 'railcraft:solid_fueled_firebox'})
+    event.shaped(
+        Item.of('railcraft:solid_fueled_firebox'), 
+        [
+            'CBC',
+            'BFB',
+            'CBC'
+        ],
+        {
+            C: '#tfc:fireclay/carbon',
+            B: 'kubejs:refactory_brick',
+            F: '#tfc:starts_fires_with_durability'
+        }
+    )
+
+    // Liquid Fueled Firebox
+    event.remove({id: 'railcraft:fluid_fueled_firebox'})
+    event.shaped(
+        Item.of('railcraft:fluid_fueled_firebox'), 
+        [
+            'PSP',
+            'CFC',
+            'PSP'
+        ],
+        {
+            P: '#forge:plates/invar',
+            S: '#railcraft:strengthened_glass',
+            C: 'minecraft:iron_bars',
+            F: 'railcraft:solid_fueled_firebox'
+        }
+    )
+
+    // Steam Turbine Housing
+    event.remove({id: 'railcraft:steam_turbine'})
+    event.shaped(
+        Item.of('railcraft:steam_turbine'), 
+        [
+            'SCS',
+            'PMP',
+            'SCS'
+        ],
+        {
+            S: '#forge:double_sheets/steel',
+            C: 'buildcraftsilicon:redstone_chipset/iron',
+            P: '#forge:ingots/steel',
+            M: '#forge:any_motor_rf'
+        }
+    )
+
+    // Powered Rolling Machine
+    event.remove({id: 'railcraft:powered_rolling_machine'})
+    event.shaped(
+        Item.of('railcraft:powered_rolling_machine'), 
+        [
+            'SCS',
+            'PDP',
+            'SMS'
+        ],
+        {
+            S: '#forge:sheets/wrought_iron',
+            C: 'buildcraftsilicon:redstone_chipset/diamond',
+            P: 'minecraft:piston',
+            D: '#forge:double_ingots/wrought_iron',
+            M: '#forge:any_motor_rf'
+        }
+    )
+
+    // Crusher
+    event.remove({id: 'railcraft:crusher'})
+    event.shaped(
+        Item.of('railcraft:crusher', 4), 
+        [
+            'SMS',
+            'WCW',
+            'SMS'
+        ],
+        {
+            S: '#forge:sheets/wrought_iron',
+            M: '#forge:any_motor_rf',
+            W: 'create:crushing_wheel',
+            C: 'buildcraftsilicon:redstone_chipset/diamond'
+        }
+    )
+
+    // Water Tank Siding
+    event.remove({id: 'railcraft:water_tank_siding'})
+    event.shaped(
+        Item.of('railcraft:water_tank_siding', 4), 
+        [
+            'WWW',
+            'CGC',
+            'WWW'
+        ],
+        {
+            W: '#minecraft:planks',
+            C: '#forge:plates/copper',
+            G: '#forge:slimeballs'
+        }
+    )
+
+    // Charge Meter
+    event.replaceInput(
+        {id: 'railcraft:charge_meter'},
+        'minecraft:stone_button',
+        '#minecraft:buttons'
+    )
+
+    // Nickel-Zinc Battery
+    event.remove({id: 'railcraft:nickel_zinc_battery'})
+    event.custom({
+        type: 'minecraft:crafting_shaped',
+        result: {
+            item: 'railcraft:nickel_zinc_battery'
+        },
+        pattern: [
+            'TCT',
+            'ASB',
+            'ALB'
+        ],
+        key: {
+            T: {
+                item: 'railcraft:charge_terminal'
+            },
+            C: {
+                item: 'railcraft:charge_spool_medium'
+            },
+            A: {
+                item: 'railcraft:nickel_electrode'
+            },
+            S: {
+                tag: 'forge:dusts/saltpeter'
+            },
+            B: {
+                item: 'railcraft:zinc_electrode'
+            },
+            L: {
+                type: 'immersiveengineering:fluid',
+                amount: 1000,
+                tag: 'tfc:any_fresh_water'
+            }
+        }
+    })
+
+    // Nickel-Iron Battery
+    event.remove({id: 'railcraft:nickel_iron_battery'})
+    event.custom({
+        type: 'minecraft:crafting_shaped',
+        result: {
+            item: 'railcraft:nickel_iron_battery'
+        },
+        pattern: [
+            'TCT',
+            'ASB',
+            'ALB'
+        ],
+        key: {
+            T: {
+                item: 'railcraft:charge_terminal'
+            },
+            C: {
+                item: 'railcraft:charge_spool_medium'
+            },
+            A: {
+                item: 'railcraft:nickel_electrode'
+            },
+            S: {
+                tag: 'forge:dusts/saltpeter'
+            },
+            B: {
+                item: 'railcraft:iron_electrode'
+            },
+            L: {
+                type: 'immersiveengineering:fluid',
+                amount: 1000,
+                tag: 'tfc:any_fresh_water'
+            }
+        }
+    })
+
+    // Zinc-Carbon Battery
+    event.remove({id: 'railcraft:zinc_carbon_battery'})
+    event.custom({
+        type: 'minecraft:crafting_shaped',
+        result: {
+            item: 'railcraft:zinc_carbon_battery'
+        },
+        pattern: [
+            'TCT',
+            'ASB',
+            'ALB'
+        ],
+        key: {
+            T: {
+                item: 'railcraft:charge_terminal'
+            },
+            C: {
+                item: 'railcraft:charge_spool_medium'
+            },
+            A: {
+                item: 'railcraft:nickel_electrode'
+            },
+            S: {
+                tag: 'forge:dusts/saltpeter'
+            },
+            B: {
+                item: 'railcraft:carbon_electrode'
+            },
+            L: {
+                type: 'immersiveengineering:fluid',
+                amount: 1000,
+                tag: 'tfc:any_fresh_water'
+            }
+        }
+    })
+
+    // Zinc-Silver Battery
+    event.remove({id: 'railcraft:zinc_silver_battery'})
+    event.custom({
+        type: 'minecraft:crafting_shaped',
+        result: {
+            item: 'railcraft:zinc_silver_battery'
+        },
+        pattern: [
+            'TCT',
+            'ASB',
+            'ALB'
+        ],
+        key: {
+            T: {
+                item: 'railcraft:charge_terminal'
+            },
+            C: {
+                item: 'railcraft:charge_spool_medium'
+            },
+            A: {
+                item: 'railcraft:nickel_electrode'
+            },
+            S: {
+                tag: 'forge:dusts/saltpeter'
+            },
+            B: {
+                item: 'railcraft:silver_electrode'
+            },
+            L: {
+                type: 'immersiveengineering:fluid',
+                amount: 1000,
+                tag: 'tfc:any_fresh_water'
+            }
+        }
+    })
+
+    // Electric Locomotive
+    event.replaceInput(
+        {id: 'railcraft:steel_anvil'},
+        '#forge:storage_blocks/steel',
+        '#forge:double_ingots/steel'
+    )
+
+    // Bronze Block
+    event.remove({id: 'railcraft:bronze_block_from_bronze_ingot'})
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:ingots/bronze',
+            },
+            count: 9
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'railcraft:bronze_block'
+        }
+    })
+
+    // Invar Block
+    event.remove({id: 'railcraft:invar_block_from_invar_ingot'})
+    event.custom({
+        type: 'immersiveengineering:metal_press',
+        energy: 14400,
+        input: {
+            'base_ingredient': {
+                tag: 'forge:ingots/invar',
+            },
+            count: 9
+        },
+        mold: 'tfc_ie_addon:mold_block',
+        result: {
+            item: 'railcraft:invar_block'
+        }
+    })
+
+    // Carbon Electrode
+    event.remove({id: 'railcraft:rolling/carbon_electrode'})
+    event.custom({
+        type: 'railcraft:rolling',
+        key: {
+            A: {
+                tag: 'minecraft:coals'
+            }
+        },
+        pattern: [
+            'A',
+            'A',
+            'A'
+        ],
+        result: {
+            item: 'railcraft:carbon_electrode'
+        }
+    })
 })

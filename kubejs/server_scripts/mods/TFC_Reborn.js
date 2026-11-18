@@ -113,6 +113,46 @@ ServerEvents.recipes(event => {
     create.crushing(['railcraft:crushed_obsidian', Item.of('kubejs:powder/obsidian').withChance(0.25)], '#forge:obsidian')
     create.crushing(['kubejs:powder/obsidian', Item.of('kubejs:powder/obsidian').withChance(0.25)], 'railcraft:crushed_obsidian')
     event.custom({
+        type: 'railcraft:crusher',
+        ingredient: {
+            tag: 'forge:obsidian'
+        },
+        outputs: [
+            {
+                probability: 1.0,
+                result: {
+                    item: 'railcraft:crushed_obsidian'
+                }
+            },
+            {
+                probability: 0.50,
+                result: {
+                    item: 'kubejs:powder/obsidian'
+                }
+            }
+        ]
+    })
+    event.custom({
+        type: 'railcraft:crusher',
+        ingredient: {
+            item: 'railcraft:crushed_obsidian'
+        },
+        outputs: [
+            {
+                probability: 1.0,
+                result: {
+                    item: 'kubejs:powder/obsidian'
+                }
+            },
+            {
+                probability: 0.50,
+                result: {
+                    item: 'kubejs:powder/obsidian'
+                }
+            }
+        ]
+    })
+    event.custom({
         type: "immersiveengineering:crusher",
         energy: 6000,
         input: {
@@ -123,7 +163,7 @@ ServerEvents.recipes(event => {
         },
         secondaries: [
             {
-                chance: 0.50,
+                chance: 0.75,
                 output: {
                     item: 'kubejs:powder/obsidian'
                 }
@@ -141,7 +181,7 @@ ServerEvents.recipes(event => {
         },
         secondaries: [
             {
-                chance: 0.50,
+                chance: 0.75,
                 output: {
                     item: 'kubejs:powder/obsidian'
                 }
@@ -151,9 +191,6 @@ ServerEvents.recipes(event => {
     mekanism.enriching(Item.of('kubejs:powder/obsidian', 4), Item.of('#forge:obsidian'))
 
     // Block of Coal Coke
-    event.stonecutting('immersiveengineering:coke', '#forge:storage_blocks/coal_coke')
-    event.stonecutting('railcraft:coal_coke_block', '#forge:storage_blocks/coal_coke')
-    event.stonecutting('kubejs:coal_coke_block', '#forge:storage_blocks/coal_coke')
     event.shapeless('kubejs:coal_coke_block', [
         '9x #forge:coal_coke'
     ])

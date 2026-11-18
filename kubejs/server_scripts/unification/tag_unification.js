@@ -215,6 +215,10 @@ ServerEvents.tags('item', event => {
     event.add('forge:ingots/any_bronze', 'tfc:metal/ingot/black_bronze')
     event.add('forge:ingots/any_bronze', 'tfc:metal/ingot/bronze')
 
+    // Any RF Motor
+    event.add('forge:any_motor_rf', 'rosia:motor')
+    event.add('forge:any_motor_rf', 'railcraft:charge_motor')
+
     // Remove these to stop them showing up
     // in railcraft loot tables
     event.removeAll('railcraft:ingot_chest_loot')
