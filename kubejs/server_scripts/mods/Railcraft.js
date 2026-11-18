@@ -142,6 +142,13 @@ ServerEvents.recipes(event => {
     event.remove({id: 'railcraft:steel_axe'})
     event.remove({id: 'railcraft:steel_hoe'})
     event.remove({id: 'railcraft:steel_shears'})
+    event.remove({id: 'railcraft:world_spike_minecart'})
+    event.remove({id: 'railcraft:tunnel_bore'})
+    event.remove({id: 'railcraft:steel_sword'})
+    event.remove({id: 'railcraft:steel_helmet'})
+    event.remove({id: 'railcraft:steel_chestplate'})
+    event.remove({id: 'railcraft:steel_leggings'})
+    event.remove({id: 'railcraft:steel_boots'})
 
     // Coke Oven Bricks
     event.remove({id: 'railcraft:coke_oven_bricks'})
@@ -348,5 +355,98 @@ ServerEvents.recipes(event => {
         {id: 'railcraft:dual_token_signal'},
         'minecraft:iron_ingot',
         '#forge:plates/wrought_iron'
+    )
+
+    // Minecart with Energy Cell
+    event.replaceInput(
+        {id: 'railcraft:energy_minecart'},
+        'immersiveengineering:ingot_lead',
+        '#forge:plates/lead'
+    )
+
+    // Track Layer Cart
+    event.replaceInput(
+        {id: 'railcraft:track_layer'},
+        '#forge:storage_blocks/steel',
+        '#forge:double_ingots/steel'
+    )
+
+    // Track Relayer Cart
+    event.remove({id: 'railcraft:track_relayer'})
+    event.shaped(
+        Item.of('railcraft:track_relayer'), 
+        [
+            'DLD',
+            'BSB',
+            'TCT'
+        ],
+        {
+            D: '#forge:dyes/yellow',
+            L: 'minecraft:redstone_lamp',
+            B: '#forge:rods/blaze',
+            T: '#minecraft:pickaxes',
+            C: 'minecraft:minecart'
+        }
+    )
+
+    // Track Layer Cart
+    event.replaceInput(
+        {id: 'railcraft:track_remover'},
+        '#forge:storage_blocks/steel',
+        '#forge:double_ingots/steel'
+    )
+
+    // Track Undercutter Cart
+    event.remove({id: 'railcraft:track_undercutter'})
+    event.shaped(
+        Item.of('railcraft:track_undercutter'), 
+        [
+            'DLD',
+            'BSB',
+            'TCT'
+        ],
+        {
+            D: '#forge:dyes/yellow',
+            L: 'minecraft:redstone_lamp',
+            B: '#forge:rods/blaze',
+            T: '#minecraft:shovels',
+            C: 'minecraft:minecart'
+        }
+    )
+
+    // Steam Locomotive
+    event.remove({id: 'railcraft:track_undercutter'})
+    event.shaped(
+        Item.of('railcraft:track_undercutter'), 
+        [
+            'DLD',
+            'BSB',
+            'TCT'
+        ],
+        {
+            D: '#forge:dyes/yellow',
+            L: 'minecraft:redstone_lamp',
+            B: '#forge:rods/blaze',
+            T: '#minecraft:shovels',
+            C: 'minecraft:minecart'
+        }
+    )
+    
+    // Electric Locomotive
+    event.remove({id: 'railcraft:steam_locomotive'})
+    event.shaped(
+        Item.of('railcraft:steam_locomotive'), 
+        [
+            ' BS',
+            'FFS',
+            'GCG'
+        ],
+        {
+            B: 'railcraft:low_pressure_steam_boiler_tank',
+            S: '#forge:plates/wrought_iron',
+            F: 'railcraft:solid_fueled_firebox',
+            G: '#forge:gears/wrought_iron',
+            C: 'minecraft:minecart'
+        }
     )
 })
