@@ -242,7 +242,7 @@ ServerEvents.recipes(event => {
         {
             S: '#minecraft:sand',
             C: '#forge:dusts/charcoal',
-            D: '#forge:dusts/sylvite',
+            D: '#tfc:fireclay/alumina',
             B: '#forge:clay'
         }
     )
