@@ -49,6 +49,28 @@ StartupEvents.registry('item', event => {
 	}
 })
 
+StartupEvents.registry('block', event => {
+
+	// TFC Ore Additions 
+	// Block Registry
+	for (const ore in global.metal_ores) {
+		let o = global.metal_ores[ore]
+
+		// Ore Sand
+		if (o.ore_sand != null) {
+			global.createIfNeeded(o.ore_sand, () => {
+				event.create(o.ore_sand.replace('kubejs:', ''), 'falling')
+					.textureAll(`kubejs:block/ore_sand/${ore}`)
+					.sandSoundType()
+					.hardness(1)
+					.resistance(1)
+					.requiresTool(true)
+					.tagBlock('minecraft:mineable/shovel')
+			})
+		}
+	}
+})
+
 
 StartupEvents.registry('fluid', event => {
 
@@ -57,6 +79,7 @@ StartupEvents.registry('fluid', event => {
 	for (const ore in global.metal_ores) {
 		let o = global.metal_ores[ore]
 
+		// Slurry
 		if (o.ore_slurry_color != null) {
 			global.createIfNeeded(o.ore_slurry, () => {
 				event.create(o.ore_slurry.replace('kubejs:', ''))

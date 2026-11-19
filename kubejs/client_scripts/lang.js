@@ -378,6 +378,24 @@ ClientEvents.lang('en_us', event => {
     event.add('block.kubejs.insulator.glass', 'Glass Insulator')
     event.add('block.kubejs.precision_machine_frame', 'Precision Machine Frame')
 
+    // Ore Sand
+    event.add('block.kubejs.ore_sand.chromite', 'Chromite Ore Sand')
+    event.add('block.kubejs.ore_sand.bauxite', 'Bauxite Ore Sand')
+    event.add('block.kubejs.ore_sand.galena', 'Galena Ore Sand')
+    event.add('block.kubejs.ore_sand.uraninite', 'Uraninite Ore Sand')
+    event.add('block.kubejs.ore_sand.native_copper', 'Native Copper Ore Sand')
+    event.add('block.kubejs.ore_sand.native_gold', 'Native Gold Ore Sand')
+    event.add('block.kubejs.ore_sand.hematite', 'Hematite Ore Sand')
+    event.add('block.kubejs.ore_sand.native_silver', 'Native Silver Ore Sand')
+    event.add('block.kubejs.ore_sand.cassiterite', 'Cassiterite Ore Sand')
+    event.add('block.kubejs.ore_sand.bismuthinite', 'Bismuthinite Ore Sand')
+    event.add('block.kubejs.ore_sand.garnierite', 'Garnierite Ore Sand')
+    event.add('block.kubejs.ore_sand.malachite', 'Malachite Ore Sand')
+    event.add('block.kubejs.ore_sand.magnetite', 'Magnetite Ore Sand')
+    event.add('block.kubejs.ore_sand.limonite', 'Limonite Ore Sand')
+    event.add('block.kubejs.ore_sand.sphalerite', 'Sphalerite Ore Sand')
+    event.add('block.kubejs.ore_sand.tetrahedrite', 'Tetrahedrite Ore Sand')
+
     // Support
     event.add('block.kubejs.wood.support.livingwood', 'Livingwood Vertical Support')
     event.add('block.kubejs.wood.support.livingwood_horizontal', 'Livingwood Horizontal Support')

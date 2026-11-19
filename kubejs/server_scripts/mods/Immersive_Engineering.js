@@ -282,6 +282,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'immersiveengineering:fermenter/melon_slice'})
     event.remove({id: 'immersiveengineering:fermenter/potato'})
     event.remove({id: 'immersiveengineering:fermenter/sugar_cane'})
+    event.remove({id: 'immersiveengineering:blastfurnace/steel_block'})
 
     // Recipe Removal by output
     event.remove({output: 'immersiveengineering:dust_wood'})

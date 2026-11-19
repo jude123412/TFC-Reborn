@@ -16,7 +16,9 @@ global.metal_ores = {
         ore_slurry_color: 0xB4B0A7,
         ore_slurry: 'kubejs:slurry/chromite',
         ore_metal: 'chromium',
-        ore_secondary_powder: 'tfc:powder/sphalerite'
+
+        ore_secondary_powder: 'tfc:powder/sphalerite',
+        ore_sand: 'kubejs:ore_sand/chromite'
     },
     bauxite: {
         small_ore_piece: 'tfc_ie_addon:ore/small_bauxite',
@@ -32,10 +34,11 @@ global.metal_ores = {
         ore_roasted_brick: 'kubejs:roasted_brick/bauxite',
         
         ore_slurry_color: 0xCF6659,
-        ore_slurry: 'kubejs:slurry/chromite',
+        ore_slurry: 'kubejs:slurry/bauxite',
         ore_metal: 'aluminum',
 
-        ore_secondary_powder: 'tfc:powder/hematite'
+        ore_secondary_powder: 'tfc:powder/hematite',
+        ore_sand: 'kubejs:ore_sand/bauxite'
     },
     galena: {
         small_ore_piece: 'tfc_ie_addon:ore/small_galena',
@@ -54,7 +57,8 @@ global.metal_ores = {
         ore_slurry: 'kubejs:slurry/galena',
         ore_metal: 'lead',
 
-        ore_secondary_powder: 'tfc:powder/native_silver'
+        ore_secondary_powder: 'tfc:powder/native_silver',
+        ore_sand: 'kubejs:ore_sand/galena'
     },
     uraninite: {
         small_ore_piece: 'tfc_ie_addon:ore/small_uraninite',
@@ -73,7 +77,8 @@ global.metal_ores = {
         ore_slurry: 'kubejs:slurry/uraninite',
         ore_metal: 'uranium',
 
-        ore_secondary_powder: 'tfc_ie_addon:powder/galena'
+        ore_secondary_powder: 'tfc_ie_addon:powder/galena',
+        ore_sand: 'kubejs:ore_sand/uraninite'
     },
     native_copper: {
         small_ore_piece: 'tfc:ore/small_native_copper',
@@ -92,7 +97,8 @@ global.metal_ores = {
         ore_slurry: 'kubejs:slurry/native_copper',
         ore_metal: 'copper',
 
-        ore_secondary_powder: 'tfc:powder/native_gold'
+        ore_secondary_powder: 'tfc:powder/native_gold',
+        ore_sand: 'kubejs:ore_sand/native_copper'
     },
     native_gold: {
         small_ore_piece: 'tfc:ore/small_native_gold',
@@ -111,7 +117,8 @@ global.metal_ores = {
         ore_slurry: 'kubejs:slurry/native_gold',
         ore_metal: 'gold',
 
-        ore_secondary_powder: 'tfc:powder/native_silver'
+        ore_secondary_powder: 'tfc:powder/native_silver',
+        ore_sand: 'kubejs:ore_sand/native_gold'
     },
     hematite: {
         small_ore_piece: 'tfc:ore/small_hematite',
@@ -130,7 +137,8 @@ global.metal_ores = {
         ore_slurry: 'kubejs:slurry/hematite',
         ore_metal: 'cast_iron',
 
-        ore_secondary_powder: 'tfc:powder/garnierite'
+        ore_secondary_powder: 'tfc:powder/garnierite',
+        ore_sand: 'kubejs:ore_sand/hematite'
     },
     native_silver: {
         small_ore_piece: 'tfc:ore/small_native_silver',
@@ -149,7 +157,8 @@ global.metal_ores = {
         ore_slurry: 'kubejs:slurry/native_silver',
         ore_metal: 'silver',
 
-        ore_secondary_powder: 'tfc:powder/native_gold'
+        ore_secondary_powder: 'tfc:powder/native_gold',
+        ore_sand: 'kubejs:ore_sand/native_silver'
     },
     cassiterite: {
         small_ore_piece: 'tfc:ore/small_cassiterite',
@@ -168,7 +177,8 @@ global.metal_ores = {
         ore_slurry: 'kubejs:slurry/cassiterite',
         ore_metal: 'tin',
 
-        ore_secondary_powder: 'tfc:powder/hematite'
+        ore_secondary_powder: 'tfc:powder/hematite',
+        ore_sand: 'kubejs:ore_sand/cassiterite'
     },
     bismuthinite: {
         small_ore_piece: 'tfc:ore/small_bismuthinite',
@@ -187,7 +197,8 @@ global.metal_ores = {
         ore_slurry: 'kubejs:slurry/bismuthinite',
         ore_metal: 'bismuth',
 
-        ore_secondary_powder: 'tfc:powder/native_silver'
+        ore_secondary_powder: 'tfc:powder/native_silver',
+        ore_sand: 'kubejs:ore_sand/bismuthinite'
     },
     garnierite: {
         small_ore_piece: 'tfc:ore/small_garnierite',
@@ -206,7 +217,8 @@ global.metal_ores = {
         ore_slurry: 'kubejs:slurry/garnierite',
         ore_metal: 'nickel',
 
-        ore_secondary_powder: 'tfc:powder/magnetite'
+        ore_secondary_powder: 'tfc:powder/magnetite',
+        ore_sand: 'kubejs:ore_sand/garnierite'
     },
     malachite: {
         small_ore_piece: 'tfc:ore/small_malachite',
@@ -225,7 +237,8 @@ global.metal_ores = {
         ore_slurry: 'kubejs:slurry/malachite',
         ore_metal: 'copper',
 
-        ore_secondary_powder: 'tfc:powder/native_gold'
+        ore_secondary_powder: 'tfc:powder/native_gold',
+        ore_sand: 'kubejs:ore_sand/malachite'
     },
     magnetite: {
         small_ore_piece: 'tfc:ore/small_magnetite',
@@ -244,7 +257,8 @@ global.metal_ores = {
         ore_slurry: 'kubejs:slurry/magnetite',
         ore_metal: 'cast_iron',
 
-        ore_secondary_powder: 'tfc:powder/garnierite'
+        ore_secondary_powder: 'tfc:powder/garnierite',
+        ore_sand: 'kubejs:ore_sand/magnetite'
     },
     limonite: {
         small_ore_piece: 'tfc:ore/small_limonite',
@@ -263,7 +277,8 @@ global.metal_ores = {
         ore_slurry: 'kubejs:slurry/limonite',
         ore_metal: 'cast_iron',
 
-        ore_secondary_powder: 'tfc:powder/garnierite'
+        ore_secondary_powder: 'tfc:powder/garnierite',
+        ore_sand: 'kubejs:ore_sand/limonite'
     },
     sphalerite: {
         small_ore_piece: 'tfc:ore/small_sphalerite',
@@ -282,7 +297,8 @@ global.metal_ores = {
         ore_slurry: 'kubejs:slurry/sphalerite',
         ore_metal: 'zinc',
 
-        ore_secondary_powder: 'tfc:powder/hematite'
+        ore_secondary_powder: 'tfc:powder/hematite',
+        ore_sand: 'kubejs:ore_sand/sphalerite'
     },
     tetrahedrite: {
         small_ore_piece: 'tfc:ore/small_tetrahedrite',
@@ -301,6 +317,7 @@ global.metal_ores = {
         ore_slurry: 'kubejs:slurry/tetrahedrite',
         ore_metal: 'copper',
 
-        ore_secondary_powder: 'tfc:powder/native_silver'
+        ore_secondary_powder: 'tfc:powder/native_silver',
+        ore_sand: 'kubejs:ore_sand/tetrahedrite'
     }
 }

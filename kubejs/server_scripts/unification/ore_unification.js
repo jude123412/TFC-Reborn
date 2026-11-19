@@ -35,6 +35,10 @@ TFCEvents.data(event => {
         if (o.ore_roasted_brick != null && o.ore_roasted_brick.startsWith('kubejs:')) {
             event.itemHeat(o.ore_roasted_brick, m.capacity / 2, m.work, m.weld)
         }
+
+        if (o.ore_sand != null && o.ore_sand.startsWith('kubejs:')) {
+            event.itemHeat(o.ore_sand, m.capacity / 2, m.work, m.weld)
+        }
     }
 })
 
@@ -523,32 +527,6 @@ ServerEvents.recipes(event => {
                 ]
             })
 
-            // Pellet Arc Melting
-            event.custom({
-                type: 'immersiveengineering:arc_furnace',
-                energy: 51200,
-                input: {
-                    base_ingredient: {
-                        item: o.ore_pellet,
-                    },
-                    count: 10
-                },
-                additives: [],
-                results: [
-                    {
-                        base_ingredient: {
-                            item: m.ingot
-                        },
-                        count: 3
-                    }
-                ],
-                slag: {
-                    item: 'kubejs:slag'
-                },
-                secondaries: [],
-                time: 100
-            })
-
             // Pellet Heating
             event.custom({
                 type: 'tfc:heating',
@@ -603,32 +581,6 @@ ServerEvents.recipes(event => {
                         amount: 4
                     }
                 ]
-            })
-
-            // Compressed Powder Arc Melting
-            event.custom({
-                type: 'immersiveengineering:arc_furnace',
-                energy: 51200,
-                input: {
-                    base_ingredient: {
-                        item: o.ore_compressed_powder,
-                    },
-                    count: 5
-                },
-                additives: [],
-                results: [
-                    {
-                        base_ingredient: {
-                            item: m.ingot
-                        },
-                        count: 3
-                    }
-                ],
-                slag: {
-                    item: 'kubejs:slag'
-                },
-                secondaries: [],
-                time: 100
             })
 
             // Refined Powder Heating
@@ -707,32 +659,6 @@ ServerEvents.recipes(event => {
                 ]
             })
 
-            // Roasted Brick Arc Melting
-            event.custom({
-                type: 'immersiveengineering:arc_furnace',
-                energy: 51200,
-                input: {
-                    base_ingredient: {
-                        item: o.ore_roasted_brick,
-                    },
-                    count: 2
-                },
-                additives: [],
-                results: [
-                    {
-                        base_ingredient: {
-                            item: m.ingot
-                        },
-                        count: 1
-                    }
-                ],
-                slag: {
-                    item: 'kubejs:slag'
-                },
-                secondaries: [],
-                time: 100
-            })
-
             // Roasted Powder Heating
             if (o.ore_roasted_powder.startsWith('kubejs:')) {
                 event.custom({
@@ -758,6 +684,115 @@ ServerEvents.recipes(event => {
                     result_fluid: {
                         fluid: m.fluid,
                         amount: 50
+                    },
+                    temperature: m.melt
+                })
+            } 
+        }
+
+        // Ore Sand Processing
+        if(o.ore_sand != null && o.ore_pellet != null && o.ore_compressed_powder != null && o.ore_roasted_brick != null && m.ingot != null) {
+            
+            // Pellet Compacting
+            event.custom({
+                type: 'create:compacting',
+                ingredients: [
+                    {
+                        item: o.ore_pellet,
+                        count: 10
+                    }
+                ],
+                results: [
+                    {
+                        item: o.ore_sand,
+                        count: 3
+                    }
+                ]
+            })
+
+            // Compressed Powder Compacting
+            event.custom({
+                type: 'create:compacting',
+                ingredients: [
+                    {
+                        item: o.ore_compressed_powder,
+                        count: 5
+                    }
+                ],
+                results: [
+                    {
+                        item: o.ore_sand,
+                        count: 2
+                    }
+                ]
+            })
+
+            // Roasted Brick Compacting
+            event.custom({
+                type: 'create:compacting',
+                ingredients: [
+                    {
+                        item: o.ore_roasted_brick,
+                        count: 2
+                    }
+                ],
+                results: [
+                    {
+                        item: o.ore_sand
+                    }
+                ]
+            })
+
+            // Ore Sand Blasting
+            event.custom({
+                type: 'immersiveengineering:blast_furnace',
+                input: {
+                    item: o.ore_sand
+                },
+                result: {
+                    item: m.ingot
+                },
+                slag: {
+                    item: 'kubejs:slag'
+                },
+                time: 1200
+            })
+
+            // Ore Sand Arc Melting
+            event.custom({
+                type: 'immersiveengineering:arc_furnace',
+                energy: 51200,
+                input: {
+                    base_ingredient: {
+                        item: o.ore_sand,
+                    }
+                },
+                additives: [],
+                results: [
+                    {
+                        base_ingredient: {
+                            item: m.ingot
+                        },
+                        count: 1
+                    }
+                ],
+                slag: {
+                    item: 'kubejs:slag'
+                },
+                secondaries: [],
+                time: 100
+            })
+
+            // Ore Sand Heating
+            if (o.ore_sand.startsWith('kubejs:')) {
+                event.custom({
+                    type: 'tfc:heating',
+                    ingredient: {
+                        item: o.ore_sand
+                    },
+                    result_fluid: {
+                        fluid: m.fluid,
+                        amount: 100
                     },
                     temperature: m.melt
                 })
