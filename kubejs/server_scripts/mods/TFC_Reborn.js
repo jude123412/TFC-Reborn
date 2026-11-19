@@ -233,11 +233,11 @@ ServerEvents.recipes(event => {
 
     // Refactory Clay
     event.shaped(
-        Item.of('kubejs:refactory_clay'), 
+        Item.of('kubejs:refactory_clay', 3), 
         [
-            'SCS',
-            'DBD',
-            'SCS'
+            'CBC',
+            'SBS',
+            'DBD'
         ],
         {
             S: '#minecraft:sand',
