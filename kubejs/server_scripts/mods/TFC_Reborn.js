@@ -232,14 +232,19 @@ ServerEvents.recipes(event => {
 
 
     // Refactory Clay
-    event.shapeless(
-        Item.of('kubejs:refactory_clay', 3),
+    event.shaped(
+        Item.of('kubejs:refactory_clay', 5), 
         [
-            '2x #minecraft:sand',
-            '2x #forge:dusts/charcoal',
-            '2x #tfc:fireclay/alumina',
-            '3x #forge:clay'
-        ]
+            'SCS',
+            'DBD',
+            'SCS'
+        ],
+        {
+            S: '#minecraft:sand',
+            C: '#forge:dusts/charcoal',
+            D: '#tfc:fireclay/alumina',
+            B: '#forge:clay'
+        }
     )
 
     // Unfired Refactory Brick
