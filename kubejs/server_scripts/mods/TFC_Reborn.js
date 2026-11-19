@@ -232,19 +232,14 @@ ServerEvents.recipes(event => {
 
 
     // Refactory Clay
-    event.shaped(
-        Item.of('kubejs:refactory_clay', 3), 
+    event.shapeless(
+        Item.of('kubejs:refactory_clay', 3),
         [
-            'CBC',
-            'SBS',
-            'DBD'
-        ],
-        {
-            S: '#minecraft:sand',
-            C: '#forge:dusts/charcoal',
-            D: '#tfc:fireclay/alumina',
-            B: '#forge:clay'
-        }
+            '2x #minecraft:sand',
+            '2x #forge:dusts/charcoal',
+            '2x #tfc:fireclay/alumina',
+            '3x #forge:clay'
+        ]
     )
 
     // Unfired Refactory Brick
@@ -657,7 +652,7 @@ ServerEvents.recipes(event => {
         ]
     })
 
-    // Refactory Clay
+    // Precision Machine Frame
     event.shaped(
         Item.of('kubejs:precision_machine_frame'), 
         [
