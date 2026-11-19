@@ -302,6 +302,24 @@ ClientEvents.lang('en_us', event => {
     event.add('fluid.kubejs.metal.elementium', 'Elementium')
     event.add('fluid.kubejs.metal.terrasteel', 'Terrasteel')
 
+    // Slurry Buckets
+    event.add('item.kubejs.slurry.chromite_bucket', 'Chromite Slurry Bucket')
+    event.add('item.kubejs.slurry.bauxite_bucket', 'Bauxite Slurry Bucket')
+    event.add('item.kubejs.slurry.galena_bucket', 'Galena Slurry Bucket')
+    event.add('item.kubejs.slurry.uraninite_bucket', 'Uraninite Slurry Bucket')
+    event.add('item.kubejs.slurry.native_copper_bucket', 'Native Copper Slurry Bucket')
+    event.add('item.kubejs.slurry.native_gold_bucket', 'Native Gold Slurry Bucket')
+    event.add('item.kubejs.slurry.hematite_bucket', 'Hematite Slurry Bucket')
+    event.add('item.kubejs.slurry.native_silver_bucket', 'Native Silver Slurry Bucket')
+    event.add('item.kubejs.slurry.cassiterite_bucket', 'Cassiterite Slurry Bucket')
+    event.add('item.kubejs.slurry.bismuthinite_bucket', 'Bismuthinite Slurry Bucket')
+    event.add('item.kubejs.slurry.garnierite_bucket', 'Garnierite Slurry Bucket')
+    event.add('item.kubejs.slurry.malachite_bucket', 'Malachite Slurry Bucket')
+    event.add('item.kubejs.slurry.magnetite_bucket', 'Magnetite Slurry Bucket')
+    event.add('item.kubejs.slurry.limonite_bucket', 'Limonite Slurry Bucket')
+    event.add('item.kubejs.slurry.sphalerite_bucket', 'Sphalerite Slurry Bucket')
+    event.add('item.kubejs.slurry.tetrahedrite_bucket', 'Tetrahedrite Slurry Bucket')
+
     // Fluid Slurries
     event.add('fluid.kubejs.slurry.chromite', 'Chromite Slurry')
     event.add('fluid.kubejs.slurry.bauxite', 'Bauxite Slurry')
@@ -327,6 +345,31 @@ ClientEvents.lang('en_us', event => {
     event.add('metal.kubejs.elementium', 'Elementium')
     event.add('metal.kubejs.terrasteel', 'Terrasteel')
     
+    // Liquid Metal Blocks
+    event.add('block.kubejs.metal.andesite_alloy', 'Andesite Alloy')
+    event.add('block.kubejs.metal.andesite', 'Andesite')
+    event.add('block.kubejs.metal.manasteel', 'Manasteel')
+    event.add('block.kubejs.metal.elementium', 'Elementium')
+    event.add('block.kubejs.metal.terrasteel', 'Terrasteel')
+
+    // Fluid Slurries
+    event.add('block.kubejs.slurry.chromite', 'Chromite Slurry')
+    event.add('block.kubejs.slurry.bauxite', 'Bauxite Slurry')
+    event.add('block.kubejs.slurry.galena', 'Galena Slurry')
+    event.add('block.kubejs.slurry.uraninite', 'Uraninite Slurry')
+    event.add('block.kubejs.slurry.native_copper', 'Native Copper Slurry')
+    event.add('block.kubejs.slurry.native_gold', 'Native Gold Slurry')
+    event.add('block.kubejs.slurry.hematite', 'Hematite Slurry')
+    event.add('block.kubejs.slurry.native_silver', 'Native Silver Slurry')
+    event.add('block.kubejs.slurry.cassiterite', 'Cassiterite Slurry')
+    event.add('block.kubejs.slurry.bismuthinite', 'Bismuthinite Slurry')
+    event.add('block.kubejs.slurry.garnierite', 'Garnierite Slurry')
+    event.add('block.kubejs.slurry.malachite', 'Malachite Slurry')
+    event.add('block.kubejs.slurry.magnetite', 'Magnetite Slurry')
+    event.add('block.kubejs.slurry.limonite', 'Limonite Slurry')
+    event.add('block.kubejs.slurry.sphalerite', 'Sphalerite Slurry')
+    event.add('block.kubejs.slurry.tetrahedrite', 'Tetrahedrite Slurry')
+
     // Blocks
     event.add('block.kubejs.coal_coke_block', 'Block of Coal Coke')
     event.add('block.kubejs.insulator.unfired_ceramic', 'Unfired Ceramic Insulator')

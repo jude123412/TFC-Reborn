@@ -29,7 +29,7 @@ StartupEvents.registry('item', event => {
 		// Ore Compressed Powder 
 		global.createIfNeeded(o.ore_compressed_powder, () => {
 			event.create(o.ore_compressed_powder)
-				.texture(`kubejs:item/roasted/${ore}`)
+				.texture(`kubejs:item/compressed/${ore}`)
 				.tag('tfcoreprocessing:compressed')
 		})
 

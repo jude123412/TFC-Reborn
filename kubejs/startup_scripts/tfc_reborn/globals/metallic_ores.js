@@ -31,7 +31,7 @@ global.metal_ores = {
         ore_roasted_powder: 'kubejs:roasted/bauxite',
         ore_pellet: 'kubejs:pellet/bauxite',
         ore_compressed_powder: 'kubejs:compressed/bauxite',
-        ore_roasted_powder_brick: 'kubejs:compressed_brick/bauxite',
+        ore_roasted_brick: 'kubejs:roasted_brick/bauxite',
         
         ore_slurry_color: 0xCF6659,
         ore_slurry: 'kubejs:slurry/chromite',
@@ -51,7 +51,7 @@ global.metal_ores = {
         ore_roasted_powder: 'kubejs:roasted/galena',
         ore_pellet: 'kubejs:pellet/galena',
         ore_compressed_powder: 'kubejs:compressed/galena',
-        ore_roasted_powder_brick: 'kubejs:compressed_brick/galena',
+        ore_roasted_brick: 'kubejs:roasted_brick/galena',
         
         ore_slurry_color: 0x756B7B,
         ore_slurry: 'kubejs:slurry/galena',
@@ -71,7 +71,7 @@ global.metal_ores = {
         ore_roasted_powder: 'kubejs:roasted/uraninite',
         ore_pellet: 'kubejs:pellet/uraninite',
         ore_compressed_powder: 'kubejs:compressed/uraninite',
-        ore_roasted_powder_brick: 'kubejs:compressed_brick/uraninite',
+        ore_roasted_brick: 'kubejs:roasted_brick/uraninite',
         
         ore_slurry_color: 0x719059,
         ore_slurry: 'kubejs:slurry/uraninite',
@@ -91,7 +91,7 @@ global.metal_ores = {
         ore_roasted_powder: 'tfcoreprocessing:roasted/native_copper',
         ore_pellet: 'kubejs:pellet/native_copper',
         ore_compressed_powder: 'tfcoreprocessing:compressed/native_copper',
-        ore_roasted_powder_brick: 'tfcoreprocessing:roasted_brick/native_copper',
+        ore_roasted_brick: 'tfcoreprocessing:roasted_brick/native_copper',
         
         ore_slurry_color: 0xD98050,
         ore_slurry: 'kubejs:slurry/native_copper',
@@ -111,7 +111,7 @@ global.metal_ores = {
         ore_roasted_powder: 'tfcoreprocessing:roasted/native_gold',
         ore_pellet: 'kubejs:pellet/native_gold',
         ore_compressed_powder: 'tfcoreprocessing:compressed/native_gold',
-        ore_roasted_powder_brick: 'tfcoreprocessing:roasted_brick/native_gold',
+        ore_roasted_brick: 'tfcoreprocessing:roasted_brick/native_gold',
         
         ore_slurry_color: 0xDBA81D,
         ore_slurry: 'kubejs:slurry/native_gold',
@@ -131,7 +131,7 @@ global.metal_ores = {
         ore_roasted_powder: 'tfcoreprocessing:roasted/hematite',
         ore_pellet: 'kubejs:pellet/hematite',
         ore_compressed_powder: 'tfcoreprocessing:compressed/hematite',
-        ore_roasted_powder_brick: 'tfcoreprocessing:roasted_brick/hematite',
+        ore_roasted_brick: 'tfcoreprocessing:roasted_brick/hematite',
         
         ore_slurry_color: 0x974E50,
         ore_slurry: 'kubejs:slurry/hematite',
@@ -151,7 +151,7 @@ global.metal_ores = {
         ore_roasted_powder: 'tfcoreprocessing:roasted/native_silver',
         ore_pellet: 'kubejs:pellet/native_silver',
         ore_compressed_powder: 'tfcoreprocessing:compressed/native_silver',
-        ore_roasted_powder_brick: 'tfcoreprocessing:roasted_brick/native_silver',
+        ore_roasted_brick: 'tfcoreprocessing:roasted_brick/native_silver',
         
         ore_slurry_color: 0xBEC3D3,
         ore_slurry: 'kubejs:slurry/native_silver',
@@ -171,7 +171,7 @@ global.metal_ores = {
         ore_roasted_powder: 'tfcoreprocessing:roasted/cassiterite',
         ore_pellet: 'kubejs:pellet/cassiterite',
         ore_compressed_powder: 'tfcoreprocessing:compressed/cassiterite',
-        ore_roasted_powder_brick: 'tfcoreprocessing:roasted_brick/cassiterite',
+        ore_roasted_brick: 'tfcoreprocessing:roasted_brick/cassiterite',
         
         ore_slurry_color: 0x837D69,
         ore_slurry: 'kubejs:slurry/cassiterite',
@@ -191,7 +191,7 @@ global.metal_ores = {
         ore_roasted_powder: 'tfcoreprocessing:roasted/bismuthinite',
         ore_pellet: 'kubejs:pellet/bismuthinite',
         ore_compressed_powder: 'tfcoreprocessing:compressed/bismuthinite',
-        ore_roasted_powder_brick: 'tfcoreprocessing:roasted_brick/bismuthinite',
+        ore_roasted_brick: 'tfcoreprocessing:roasted_brick/bismuthinite',
         
         ore_slurry_color: 0x407D41,
         ore_slurry: 'kubejs:slurry/bismuthinite',
@@ -211,7 +211,7 @@ global.metal_ores = {
         ore_roasted_powder: 'tfcoreprocessing:roasted/garnierite',
         ore_pellet: 'kubejs:pellet/garnierite',
         ore_compressed_powder: 'tfcoreprocessing:compressed/garnierite',
-        ore_roasted_powder_brick: 'tfcoreprocessing:roasted_brick/garnierite',
+        ore_roasted_brick: 'tfcoreprocessing:roasted_brick/garnierite',
         
         ore_slurry_color: 0x254B2B,
         ore_slurry: 'kubejs:slurry/garnierite',
@@ -231,7 +231,7 @@ global.metal_ores = {
         ore_roasted_powder: 'tfcoreprocessing:roasted/malachite',
         ore_pellet: 'kubejs:pellet/malachite',
         ore_compressed_powder: 'tfcoreprocessing:compressed/malachite',
-        ore_roasted_powder_brick: 'tfcoreprocessing:roasted_brick/malachite',
+        ore_roasted_brick: 'tfcoreprocessing:roasted_brick/malachite',
         
         ore_slurry_color: 0x4B756F,
         ore_slurry: 'kubejs:slurry/malachite',
@@ -251,7 +251,7 @@ global.metal_ores = {
         ore_roasted_powder: 'tfcoreprocessing:roasted/magnetite',
         ore_pellet: 'kubejs:pellet/magnetite',
         ore_compressed_powder: 'tfcoreprocessing:compressed/magnetite',
-        ore_roasted_powder_brick: 'tfcoreprocessing:roasted_brick/magnetite',
+        ore_roasted_brick: 'tfcoreprocessing:roasted_brick/magnetite',
         
         ore_slurry_color: 0x7D8080,
         ore_slurry: 'kubejs:slurry/magnetite',
@@ -271,7 +271,7 @@ global.metal_ores = {
         ore_roasted_powder: 'tfcoreprocessing:roasted/limonite',
         ore_pellet: 'kubejs:pellet/limonite',
         ore_compressed_powder: 'tfcoreprocessing:compressed/limonite',
-        ore_roasted_powder_brick: 'tfcoreprocessing:roasted_brick/limonite',
+        ore_roasted_brick: 'tfcoreprocessing:roasted_brick/limonite',
         
         ore_slurry_color: 0x8D6737,
         ore_slurry: 'kubejs:slurry/limonite',
@@ -291,7 +291,7 @@ global.metal_ores = {
         ore_roasted_powder: 'tfcoreprocessing:roasted/sphalerite',
         ore_pellet: 'kubejs:pellet/sphalerite',
         ore_compressed_powder: 'tfcoreprocessing:compressed/sphalerite',
-        ore_roasted_powder_brick: 'tfcoreprocessing:roasted_brick/sphalerite',
+        ore_roasted_brick: 'tfcoreprocessing:roasted_brick/sphalerite',
         
         ore_slurry_color: 0x706F6C,
         ore_slurry: 'kubejs:slurry/sphalerite',
@@ -311,7 +311,7 @@ global.metal_ores = {
         ore_roasted_powder: 'tfcoreprocessing:roasted/tetrahedrite',
         ore_pellet: 'kubejs:pellet/tetrahedrite',
         ore_compressed_powder: 'tfcoreprocessing:compressed/tetrahedrite',
-        ore_roasted_powder_brick: 'tfcoreprocessing:roasted_brick/tetrahedrite',
+        ore_roasted_brick: 'tfcoreprocessing:roasted_brick/tetrahedrite',
         
         ore_slurry_color: 0x838482,
         ore_slurry: 'kubejs:slurry/tetrahedrite',
