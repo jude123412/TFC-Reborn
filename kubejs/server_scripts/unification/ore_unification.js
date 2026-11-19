@@ -41,18 +41,22 @@ TFCEvents.data(event => {
 ServerEvents.recipes(event => {
 
     // Recipe Removal
-    event.remove({ id: /tfc:quern\/small_.*/ })
-    event.remove({ id: /tfc:quern\/poor_.*/ })
-    event.remove({ id: /tfc:quern\/normal_.*/ })
-    event.remove({ id: /tfc:quern\/rich_.*/ })
-    event.remove({ id: /tfc_ie_addon:quern\/small_.*/ })
-    event.remove({ id: /tfc_ie_addon:quern\/poor_.*/ })
-    event.remove({ id: /tfc_ie_addon:quern\/normal_.*/ })
-    event.remove({ id: /tfc_ie_addon:quern\/rich_.*/ })
-    event.remove({ id: /tfc_ie_addon:crusher\/ore\/small_.*/ })
-    event.remove({ id: /tfc_ie_addon:crusher\/ore\/poor_.*/ })
-    event.remove({ id: /tfc_ie_addon:crusher\/ore\/normal_.*/ })
-    event.remove({ id: /tfc_ie_addon:crusher\/ore\/rich_.*/ })
+    event.remove({id: /tfc:quern\/small_.*/})
+    event.remove({id: /tfc:quern\/poor_.*/})
+    event.remove({id: /tfc:quern\/normal_.*/})
+    event.remove({id: /tfc:quern\/rich_.*/})
+    event.remove({id: /tfc_ie_addon:quern\/small_.*/})
+    event.remove({id: /tfc_ie_addon:quern\/poor_.*/})
+    event.remove({id: /tfc_ie_addon:quern\/normal_.*/})
+    event.remove({id: /tfc_ie_addon:quern\/rich_.*/})
+    event.remove({id: /tfc_ie_addon:crusher\/ore\/small_.*/})
+    event.remove({id: /tfc_ie_addon:crusher\/ore\/poor_.*/})
+    event.remove({id: /tfc_ie_addon:crusher\/ore\/normal_.*/})
+    event.remove({id: /tfc_ie_addon:crusher\/ore\/rich_.*/})
+    event.remove({id: /tfcoreprocessing:uncompress\/uncompress_refined.*/})
+    event.remove({id: /tfcoreprocessing:uncompress\/uncompress_roasted.*/})
+    event.remove({id: /tfcoreprocessing:compress\/compress_refined.*/})
+    event.remove({id: /tfcoreprocessing:compress\/compress_roasted.*/})
 
     // Begin...
     for (const ore in global.metal_ores) {
@@ -471,146 +475,290 @@ ServerEvents.recipes(event => {
                 ]
             })
         }
+
+        // Pellet Processing
+        if (o.ore_pellet != null && m.ingot != null && o.ore_powder != null && o.ore_slurry != null) {
+
+            // Pellet
+            event.shaped(Item.of(o.ore_pellet),
+                [
+                    'PP',
+                    'PP'
+                ],
+                {
+                    P: o.ore_powder
+                }
+            )
+
+            // Uncompress Pellet
+            event.shapeless(
+                Item.of(o.ore_powder, 4),
+                [
+                    o.ore_pellet,
+                    '#tfc:hammers'
+                ]
+            ).damageIngredient('#tfc:hammers')
+
+            // Slurry
+            event.custom({
+                type: 'createdieselgenerators:bulk_fermenting',
+                ingredients: [
+                    {
+                        fluidTag: 'tfc:any_fresh_water',
+                        amount: 1000
+                    },
+                    {
+                        item: o.ore_pellet
+                    }
+                ],
+                processingTime: 600,
+                results: [
+                    {
+                        fluid: o.ore_slurry,
+                        amount: 1000
+                    }
+                ]
+            })
+
+            // Pellet Arc Melting
+            event.custom({
+                type: 'immersiveengineering:arc_furnace',
+                energy: 51200,
+                input: {
+                    base_ingredient: {
+                        item: o.ore_pellet,
+                    },
+                    count: 10
+                },
+                additives: [],
+                results: [
+                    {
+                        base_ingredient: {
+                            item: m.ingot
+                        },
+                        count: 3
+                    }
+                ],
+                slag: {
+                    item: 'kubejs:slag'
+                },
+                secondaries: [],
+                time: 100
+            })
+
+            // Pellet Heating
+            event.custom({
+                type: 'tfc:heating',
+                ingredient: {
+                    item: o.ore_pellet
+                },
+                result_fluid: {
+                    fluid: m.fluid,
+                    amount: 30
+                },
+                temperature: m.melt
+            })
+        }
+
+        // Compressed Powder Processing
+        if (o.ore_compressed_powder != null && m.ingot != null && o.ore_refined_powder != null && o.ore_slurry != null) {
+
+            // Compressed Powder
+            event.shaped(Item.of(o.ore_compressed_powder),
+                [
+                    'PP',
+                    'PP'
+                ],
+                {
+                    P: o.ore_refined_powder
+                }
+            )
+
+            // Uncompress Compressed Powder
+            event.shapeless(
+                Item.of(o.ore_refined_powder, 4),
+                [
+                    o.ore_compressed_powder,
+                    '#tfc:hammers'
+                ]
+            ).damageIngredient('#tfc:hammers')
+
+            // Slurry Evaporation
+            event.custom({
+                type: 'createdieselgenerators:basin_fermenting',
+                ingredients: [
+                    {
+                        fluid: o.ore_slurry,
+                        amount: 1000
+                    }
+                ],
+                heatRequirement: 'heated',
+                processingTime: 600,
+                results: [
+                    {
+                        item: o.ore_refined_powder,
+                        amount: 4
+                    }
+                ]
+            })
+
+            // Compressed Powder Arc Melting
+            event.custom({
+                type: 'immersiveengineering:arc_furnace',
+                energy: 51200,
+                input: {
+                    base_ingredient: {
+                        item: o.ore_compressed_powder,
+                    },
+                    count: 5
+                },
+                additives: [],
+                results: [
+                    {
+                        base_ingredient: {
+                            item: m.ingot
+                        },
+                        count: 3
+                    }
+                ],
+                slag: {
+                    item: 'kubejs:slag'
+                },
+                secondaries: [],
+                time: 100
+            })
+
+            // Refined Powder Heating
+            if (o.ore_refined_powder.startsWith('kubejs:')) {
+                event.custom({
+                    type: 'tfc:heating',
+                    ingredient: {
+                        item: o.ore_refined_powder
+                    },
+                    result_fluid: {
+                        fluid: m.fluid,
+                        amount: 8
+                    },
+                    temperature: m.melt
+                })
+            } 
+
+            // Compressed Powder Heating
+            if (o.ore_compressed_powder.startsWith('kubejs:')) {
+                event.custom({
+                    type: 'tfc:heating',
+                    ingredient: {
+                        item: o.ore_compressed_powder
+                    },
+                    result_fluid: {
+                        fluid: m.fluid,
+                        amount: 40
+                    },
+                    temperature: m.melt
+                })
+            } 
+        }
+
+        // Roasted Brick Processing
+        if (o.ore_roasted_brick != null && m.ingot != null && o.ore_roasted_powder != null && o.ore_compressed_powder != null) {
+
+            // Roasted Brick
+            event.shaped(Item.of(o.ore_roasted_brick),
+                [
+                    'PP',
+                    'PP'
+                ],
+                {
+                    P: o.ore_roasted_powder
+                }
+            )
+
+            // Uncompress Roasted Brick
+            event.shapeless(
+                Item.of(o.ore_roasted_powder, 4),
+                [
+                    o.ore_roasted_brick,
+                    '#tfc:hammers'
+                ]
+            ).damageIngredient('#tfc:hammers')
+
+            // Compressed Bar Roasting
+            event.custom({
+                type: 'createdieselgenerators:basin_fermenting',
+                ingredients: [
+                    {
+                        item: o.ore_compressed_powder
+                    },
+                    {
+                        fluidTag: 'tfc:any_fresh_water',
+                        amount: 20
+                    }
+                ],
+                heatRequirement: 'heated',
+                processingTime: 600,
+                results: [
+                    {
+                        item: o.ore_roasted_powder,
+                        amount: 4
+                    }
+                ]
+            })
+
+            // Roasted Brick Arc Melting
+            event.custom({
+                type: 'immersiveengineering:arc_furnace',
+                energy: 51200,
+                input: {
+                    base_ingredient: {
+                        item: o.ore_roasted_brick,
+                    },
+                    count: 2
+                },
+                additives: [],
+                results: [
+                    {
+                        base_ingredient: {
+                            item: m.ingot
+                        },
+                        count: 1
+                    }
+                ],
+                slag: {
+                    item: 'kubejs:slag'
+                },
+                secondaries: [],
+                time: 100
+            })
+
+            // Roasted Powder Heating
+            if (o.ore_roasted_powder.startsWith('kubejs:')) {
+                event.custom({
+                    type: 'tfc:heating',
+                    ingredient: {
+                        item: o.ore_roasted_powder
+                    },
+                    result_fluid: {
+                        fluid: m.fluid,
+                        amount: 10
+                    },
+                    temperature: m.melt
+                })
+            } 
+
+            // Roasted Brick Heating
+            if (o.ore_roasted_brick.startsWith('kubejs:')) {
+                event.custom({
+                    type: 'tfc:heating',
+                    ingredient: {
+                        item: o.ore_roasted_brick
+                    },
+                    result_fluid: {
+                        fluid: m.fluid,
+                        amount: 50
+                    },
+                    temperature: m.melt
+                })
+            } 
+        }
     }
 })
-
-// ServerEvents.recipes(event => {
-//     for (const ore in global.metal_ores) {
-//         const tfc = event.recipes.tfc
-//         const create = event.recipes.create
-
-//         let o = global.metal_ores[ore]
-//         let m = global.metals[o.metal]
-
-//         event.remove({type: 'immersiveengineering:arc_furnace'})
-
-//         // Pellet Recipes
-//         if (o.generate_pellet) {
-//             event.shaped(Item.of(`tfcoreprocessing:pellet/${ore}`),
-//             [
-//                 'PP',
-//                 'PP'
-//             ],
-//             {
-//                 P: `${o.mod_id}:powder/${ore}`
-//             })
-
-//             tfc.heating(`tfcoreprocessing:pellet/${ore}`, m.melt)
-//                 .resultFluid(Fluid.of(m.fluid, 30))
-
-//             event.custom({
-//                 'type': 'immersiveengineering:arc_furnace',
-//                 'energy': 51200,
-//                 'input': {
-//                     'base_ingredient': {
-//                         'tag': `forge:pellets/${ore}`,
-//                     },
-//                     'count': 10
-//                 },
-//                 "additives": [],
-//                 'results': [{
-//                     'base_ingredient': {
-//                         'item': `${o.ingot_mod_id}:${o.ingot_prefix}${o.metal}`
-//                     },
-//                     'count': 3
-//                 }],
-//                 secondaries: [],
-//                 'time': 100
-//             })
-//         }
-
-//         if (o.generate_powder) {
-//             tfc.quern(Item.of(`${o.mod_id}:powder/${ore}`, 2), `${o.mod_id}:ore/small_${ore}`)
-//             tfc.quern(Item.of(`${o.mod_id}:powder/${ore}`, 3), `${o.mod_id}:ore/poor_${ore}`)
-//             tfc.quern(Item.of(`${o.mod_id}:powder/${ore}`, 5), `${o.mod_id}:ore/normal_${ore}`)
-//             tfc.quern(Item.of(`${o.mod_id}:powder/${ore}`, 7), `${o.mod_id}:ore/rich_${ore}`)
-
-//             create.milling(Item.of(`${o.mod_id}:powder/${ore}`, 2), `${o.mod_id}:ore/small_${ore}`)
-//             create.milling(Item.of(`${o.mod_id}:powder/${ore}`, 3), `${o.mod_id}:ore/poor_${ore}`)
-//             create.milling(Item.of(`${o.mod_id}:powder/${ore}`, 5), `${o.mod_id}:ore/normal_${ore}`)
-//             create.milling(Item.of(`${o.mod_id}:powder/${ore}`, 7), `${o.mod_id}:ore/rich_${ore}`)
-
-//             create.crushing(Item.of(`${o.mod_id}:powder/${ore}`, 3), `${o.mod_id}:ore/small_${ore}`)
-//             create.crushing(Item.of(`${o.mod_id}:powder/${ore}`, 5), `${o.mod_id}:ore/poor_${ore}`)
-//             create.crushing(Item.of(`${o.mod_id}:powder/${ore}`, 8), `${o.mod_id}:ore/normal_${ore}`)
-//             create.crushing(Item.of(`${o.mod_id}:powder/${ore}`, 11), `${o.mod_id}:ore/rich_${ore}`)
-
-//             // Small Ore Crushing
-//             event.custom({
-//                 type: "immersiveengineering:crusher",
-//                 energy: 6000,
-//                 input: {
-//                     item: `${o.mod_id}:ore/small_${ore}`
-//                 },
-//                 result: {
-//                     item: `${o.mod_id}:powder/${ore}`,
-//                     count: 4
-//                 },
-//                 secondaries: []
-//             })
-
-//             // Poor Ore Crushing
-//             event.custom({
-//                 type: "immersiveengineering:crusher",
-//                 energy: 6000,
-//                 input: {
-//                     item: `${o.mod_id}:ore/poor_${ore}`
-//                 },
-//                 result: {
-//                     item: `${o.mod_id}:powder/${ore}`,
-//                     count: 6
-//                 },
-//                 secondaries: []
-//             })
-
-//             // Normal Ore Crushing
-//             event.custom({
-//                 type: "immersiveengineering:crusher",
-//                 energy: 6000,
-//                 input: {
-//                     item: `${o.mod_id}:ore/normal_${ore}`
-//                 },
-//                 result: {
-//                     item: `${o.mod_id}:powder/${ore}`,
-//                     count: 10
-//                 },
-//                 secondaries: []
-//             })
-
-//             // Rich Ore Crushing
-//             event.custom({
-//                 type: "immersiveengineering:crusher",
-//                 energy: 6000,
-//                 input: {
-//                     item: `${o.mod_id}:ore/rich_${ore}`
-//                 },
-//                 result: {
-//                     item: `${o.mod_id}:powder/${ore}`,
-//                     count: 14
-//                 },
-//                 secondaries: []
-//             })
-
-
-//             tfc.heating(`${o.mod_id}:powder/${ore}`, m.melt)
-//                 .resultFluid(Fluid.of(m.fluid, 6))
-//         }
-
-//         if (o.should_melt) {
-//             tfc.heating(`${o.mod_id}:powder/${ore}`, m.melt)
-//                 .resultFluid(Fluid.of(m.fluid, 6))
-//         }
-
-//         if (o.create_recipes) {
-//             create.milling(Item.of(`${o.mod_id}:powder/${ore}`, 2), `${o.mod_id}:ore/small_${ore}`)
-//             create.milling(Item.of(`${o.mod_id}:powder/${ore}`, 3), `${o.mod_id}:ore/poor_${ore}`)
-//             create.milling(Item.of(`${o.mod_id}:powder/${ore}`, 5), `${o.mod_id}:ore/normal_${ore}`)
-//             create.milling(Item.of(`${o.mod_id}:powder/${ore}`, 7), `${o.mod_id}:ore/rich_${ore}`)
-
-//             create.crushing(Item.of(`${o.mod_id}:powder/${ore}`, 3), `${o.mod_id}:ore/small_${ore}`)
-//             create.crushing(Item.of(`${o.mod_id}:powder/${ore}`, 5), `${o.mod_id}:ore/poor_${ore}`)
-//             create.crushing(Item.of(`${o.mod_id}:powder/${ore}`, 8), `${o.mod_id}:ore/normal_${ore}`)
-//             create.crushing(Item.of(`${o.mod_id}:powder/${ore}`, 11), `${o.mod_id}:ore/rich_${ore}`)
-//         }
-//     }
-// })

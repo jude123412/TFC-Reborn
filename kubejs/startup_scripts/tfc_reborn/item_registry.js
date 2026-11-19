@@ -199,4 +199,10 @@ StartupEvents.registry('item', event => {
     event.create('kubejs:laser_core')
         .texture('kubejs:item/laser_core')
         .translationKey('kubejs:item/laser_core')
+
+    // Slag
+    event.create('kubejs:slag')
+        .texture('kubejs:item/slag')
+        .translationKey('kubejs:item/slag')
+        .tag('forge:slag')
 })

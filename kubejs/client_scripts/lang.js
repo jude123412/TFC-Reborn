@@ -167,6 +167,7 @@ ClientEvents.lang('en_us', event => {
     event.add('item.kubejs.engine_core', 'Engine Core')
     event.add('item.kubejs.wooden_board', 'Wooden Board')
     event.add('item.kubejs.laser_core', 'Laser Core')
+    event.add('item.kubejs.slag', 'Slag')
 
     // Ore Powders
     event.add('item.kubejs.powder.chromite', 'Chromite Powder')
