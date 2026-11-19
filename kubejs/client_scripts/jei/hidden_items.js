@@ -162,6 +162,18 @@ JEIEvents.hideItems(event => {
     event.hide('createdieselgenerators:diesel_bucket')
     event.hide('createdieselgenerators:gasoline_bucket')
     event.hide('createdieselgenerators:ethanol_bucket')
+    event.hide('tfcoreprocessing:bucket/slurry_bismuthinite')
+    event.hide('tfcoreprocessing:bucket/slurry_native_copper')
+    event.hide('tfcoreprocessing:bucket/slurry_tetrahedrite')
+    event.hide('tfcoreprocessing:bucket/slurry_malachite')
+    event.hide('tfcoreprocessing:bucket/slurry_native_gold')
+    event.hide('tfcoreprocessing:bucket/slurry_native_silver')
+    event.hide('tfcoreprocessing:bucket/slurry_garnierite')
+    event.hide('tfcoreprocessing:bucket/slurry_cassiterite')
+    event.hide('tfcoreprocessing:bucket/slurry_sphalerite')
+    event.hide('tfcoreprocessing:bucket/slurry_hematite')
+    event.hide('tfcoreprocessing:bucket/slurry_limonite')
+    event.hide('tfcoreprocessing:bucket/slurry_magnetite')
 
     // Hidden Ingots
     event.hide('immersiveengineering:ingot_silver')

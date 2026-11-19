@@ -36,4 +36,18 @@ JEIEvents.hideFluids(event => {
     event.hide('createdieselgenerators:diesel')
     event.hide('createdieselgenerators:gasoline')
     event.hide('createdieselgenerators:ethanol')
+
+    // Hide Ore Processing for TFC Slurries
+    event.hide('tfcoreprocessing:slurry_bismuthinite')
+    event.hide('tfcoreprocessing:slurry_native_copper')
+    event.hide('tfcoreprocessing:slurry_tetrahedrite')
+    event.hide('tfcoreprocessing:slurry_malachite')
+    event.hide('tfcoreprocessing:slurry_native_gold')
+    event.hide('tfcoreprocessing:slurry_native_silver')
+    event.hide('tfcoreprocessing:slurry_garnierite')
+    event.hide('tfcoreprocessing:slurry_cassiterite')
+    event.hide('tfcoreprocessing:slurry_sphalerite')
+    event.hide('tfcoreprocessing:slurry_hematite')
+    event.hide('tfcoreprocessing:slurry_limonite')
+    event.hide('tfcoreprocessing:slurry_magnetite')
 })
