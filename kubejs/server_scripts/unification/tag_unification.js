@@ -49,6 +49,14 @@ ServerEvents.tags('item', event => {
     event.add('tfc:fireclay/alumina', '#forge:dusts/sapphire')
     event.add('tfc:fireclay/alumina', '#forge:dusts/ruby')
     event.add('tfc:fireclay/alumina', '#forge:dusts/topaz')
+
+    // Coal Gems
+    event.add('forge:gems/coal', 'tfc:ore/bituminous_coal')
+    event.add('forge:gems/coal', 'minecraft:coal')
+    event.add('forge:gems/coal', 'tfc:ore/lignite')
+
+    // Amethyst Gems
+    event.add('forge:gems/amethyst', 'tfc:gem/amethyst')
     
     // Carbon sources
     event.add('tfc:fireclay/carbon', '#forge:dusts/graphite')
