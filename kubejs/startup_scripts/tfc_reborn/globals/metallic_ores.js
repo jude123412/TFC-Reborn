@@ -1,10 +1,10 @@
 // Metallic ores
 global.metal_ores = {
     chromite: {
-        small_piece: 'firmalife:ore/small_chromite',
-        poor_piece: 'firmalife:ore/poor_chromite',
-        normal_piece: 'firmalife:ore/normal_chromite',
-        rich_piece: 'firmalife:ore/rich_chromite',
+        small_ore_piece: 'firmalife:ore/small_chromite',
+        poor_ore_piece: 'firmalife:ore/poor_chromite',
+        normal_ore_piece: 'firmalife:ore/normal_chromite',
+        rich_ore_piece: 'firmalife:ore/rich_chromite',
 
         ore_powder: 'kubejs:powder/chromite',
         ore_refined_powder: 'kubejs:refined/chromite',
@@ -15,16 +15,14 @@ global.metal_ores = {
         
         ore_slurry_color: 0xB4B0A7,
         ore_slurry: 'kubejs:slurry/chromite',
-        ore_metal: 'firmalife:metal/chromium',
-
-        ore_primary_ingot: 'firmalife:metal/ingot/chromium',
+        ore_metal: 'chromium',
         ore_secondary_powder: 'tfc:powder/sphalerite'
     },
     bauxite: {
-        small_piece: 'tfc_ie_addon:ore/small_bauxite',
-        poor_piece: 'tfc_ie_addon:ore/poor_bauxite',
-        normal_piece: 'tfc_ie_addon:ore/normal_bauxite',
-        rich_piece: 'tfc_ie_addon:ore/rich_bauxite',
+        small_ore_piece: 'tfc_ie_addon:ore/small_bauxite',
+        poor_ore_piece: 'tfc_ie_addon:ore/poor_bauxite',
+        normal_ore_piece: 'tfc_ie_addon:ore/normal_bauxite',
+        rich_ore_piece: 'tfc_ie_addon:ore/rich_bauxite',
 
         ore_powder: 'tfc_ie_addon:powder/bauxite',
         ore_refined_powder: 'kubejs:refined/bauxite',
@@ -35,16 +33,15 @@ global.metal_ores = {
         
         ore_slurry_color: 0xCF6659,
         ore_slurry: 'kubejs:slurry/chromite',
-        ore_metal: 'tfc_ie_addon:metal/aluminum',
+        ore_metal: 'aluminum',
 
-        ore_primary_ingot: 'immersiveengineering:ingot_aluminum',
         ore_secondary_powder: 'tfc:powder/hematite'
     },
     galena: {
-        small_piece: 'tfc_ie_addon:ore/small_galena',
-        poor_piece: 'tfc_ie_addon:ore/poor_galena',
-        normal_piece: 'tfc_ie_addon:ore/normal_galena',
-        rich_piece: 'tfc_ie_addon:ore/rich_galena',
+        small_ore_piece: 'tfc_ie_addon:ore/small_galena',
+        poor_ore_piece: 'tfc_ie_addon:ore/poor_galena',
+        normal_ore_piece: 'tfc_ie_addon:ore/normal_galena',
+        rich_ore_piece: 'tfc_ie_addon:ore/rich_galena',
 
         ore_powder: 'tfc_ie_addon:powder/galena',
         ore_refined_powder: 'kubejs:refined/galena',
@@ -55,16 +52,15 @@ global.metal_ores = {
         
         ore_slurry_color: 0x756B7B,
         ore_slurry: 'kubejs:slurry/galena',
-        ore_metal: 'tfc_ie_addon:metal/lead',
+        ore_metal: 'lead',
 
-        ore_primary_ingot: 'immersiveengineering:ingot_lead',
         ore_secondary_powder: 'tfc:powder/native_silver'
     },
     uraninite: {
-        small_piece: 'tfc_ie_addon:ore/small_uraninite',
-        poor_piece: 'tfc_ie_addon:ore/poor_uraninite',
-        normal_piece: 'tfc_ie_addon:ore/normal_uraninite',
-        rich_piece: 'tfc_ie_addon:ore/rich_uraninite',
+        small_ore_piece: 'tfc_ie_addon:ore/small_uraninite',
+        poor_ore_piece: 'tfc_ie_addon:ore/poor_uraninite',
+        normal_ore_piece: 'tfc_ie_addon:ore/normal_uraninite',
+        rich_ore_piece: 'tfc_ie_addon:ore/rich_uraninite',
 
         ore_powder: 'tfc_ie_addon:powder/uraninite',
         ore_refined_powder: 'kubejs:refined/uraninite',
@@ -75,16 +71,15 @@ global.metal_ores = {
         
         ore_slurry_color: 0x719059,
         ore_slurry: 'kubejs:slurry/uraninite',
-        ore_metal: 'tfc_ie_addon:metal/uranium',
+        ore_metal: 'uranium',
 
-        ore_primary_ingot: 'immersiveengineering:ingot_uranium',
         ore_secondary_powder: 'tfc_ie_addon:powder/galena'
     },
     native_copper: {
-        small_piece: 'tfc:ore/small_native_copper',
-        poor_piece: 'tfc:ore/poor_native_copper',
-        normal_piece: 'tfc:ore/normal_native_copper',
-        rich_piece: 'tfc:ore/rich_native_copper',
+        small_ore_piece: 'tfc:ore/small_native_copper',
+        poor_ore_piece: 'tfc:ore/poor_native_copper',
+        normal_ore_piece: 'tfc:ore/normal_native_copper',
+        rich_ore_piece: 'tfc:ore/rich_native_copper',
 
         ore_powder: 'tfc:powder/native_copper',
         ore_refined_powder: 'tfcoreprocessing:refined/native_copper',
@@ -95,16 +90,15 @@ global.metal_ores = {
         
         ore_slurry_color: 0xD98050,
         ore_slurry: 'kubejs:slurry/native_copper',
-        ore_metal: 'tfc:metal/copper',
+        ore_metal: 'copper',
 
-        ore_primary_ingot: 'tfc:metal/ingot/copper',
         ore_secondary_powder: 'tfc:powder/native_gold'
     },
     native_gold: {
-        small_piece: 'tfc:ore/small_native_gold',
-        poor_piece: 'tfc:ore/poor_native_gold',
-        normal_piece: 'tfc:ore/normal_native_gold',
-        rich_piece: 'tfc:ore/rich_native_gold',
+        small_ore_piece: 'tfc:ore/small_native_gold',
+        poor_ore_piece: 'tfc:ore/poor_native_gold',
+        normal_ore_piece: 'tfc:ore/normal_native_gold',
+        rich_ore_piece: 'tfc:ore/rich_native_gold',
 
         ore_powder: 'tfc:powder/native_gold',
         ore_refined_powder: 'tfcoreprocessing:refined/native_gold',
@@ -115,16 +109,15 @@ global.metal_ores = {
         
         ore_slurry_color: 0xDBA81D,
         ore_slurry: 'kubejs:slurry/native_gold',
-        ore_metal: 'tfc:metal/gold',
+        ore_metal: 'gold',
 
-        ore_primary_ingot: 'tfc:metal/ingot/gold',
         ore_secondary_powder: 'tfc:powder/native_silver'
     },
     hematite: {
-        small_piece: 'tfc:ore/small_hematite',
-        poor_piece: 'tfc:ore/poor_hematite',
-        normal_piece: 'tfc:ore/normal_hematite',
-        rich_piece: 'tfc:ore/rich_hematite',
+        small_ore_piece: 'tfc:ore/small_hematite',
+        poor_ore_piece: 'tfc:ore/poor_hematite',
+        normal_ore_piece: 'tfc:ore/normal_hematite',
+        rich_ore_piece: 'tfc:ore/rich_hematite',
 
         ore_powder: 'tfc:powder/hematite',
         ore_refined_powder: 'tfcoreprocessing:refined/hematite',
@@ -135,16 +128,15 @@ global.metal_ores = {
         
         ore_slurry_color: 0x974E50,
         ore_slurry: 'kubejs:slurry/hematite',
-        ore_metal: 'tfc:metal/cast_iron',
+        ore_metal: 'cast_iron',
 
-        ore_primary_ingot: 'tfc:metal/ingot/cast_iron',
         ore_secondary_powder: 'tfc:powder/garnierite'
     },
     native_silver: {
-        small_piece: 'tfc:ore/small_native_silver',
-        poor_piece: 'tfc:ore/poor_native_silver',
-        normal_piece: 'tfc:ore/normal_native_silver',
-        rich_piece: 'tfc:ore/rich_native_silver',
+        small_ore_piece: 'tfc:ore/small_native_silver',
+        poor_ore_piece: 'tfc:ore/poor_native_silver',
+        normal_ore_piece: 'tfc:ore/normal_native_silver',
+        rich_ore_piece: 'tfc:ore/rich_native_silver',
 
         ore_powder: 'tfc:powder/native_silver',
         ore_refined_powder: 'tfcoreprocessing:refined/native_silver',
@@ -155,16 +147,15 @@ global.metal_ores = {
         
         ore_slurry_color: 0xBEC3D3,
         ore_slurry: 'kubejs:slurry/native_silver',
-        ore_metal: 'tfc:metal/silver',
+        ore_metal: 'silver',
 
-        ore_primary_ingot: 'tfc:metal/ingot/silver',
         ore_secondary_powder: 'tfc:powder/native_gold'
     },
     cassiterite: {
-        small_piece: 'tfc:ore/small_cassiterite',
-        poor_piece: 'tfc:ore/poor_cassiterite',
-        normal_piece: 'tfc:ore/normal_cassiterite',
-        rich_piece: 'tfc:ore/rich_cassiterite',
+        small_ore_piece: 'tfc:ore/small_cassiterite',
+        poor_ore_piece: 'tfc:ore/poor_cassiterite',
+        normal_ore_piece: 'tfc:ore/normal_cassiterite',
+        rich_ore_piece: 'tfc:ore/rich_cassiterite',
 
         ore_powder: 'tfc:powder/cassiterite',
         ore_refined_powder: 'tfcoreprocessing:refined/cassiterite',
@@ -175,16 +166,15 @@ global.metal_ores = {
         
         ore_slurry_color: 0x837D69,
         ore_slurry: 'kubejs:slurry/cassiterite',
-        ore_metal: 'tfc:metal/tin',
+        ore_metal: 'tin',
 
-        ore_primary_ingot: 'tfc:metal/ingot/tin',
         ore_secondary_powder: 'tfc:powder/hematite'
     },
     bismuthinite: {
-        small_piece: 'tfc:ore/small_bismuthinite',
-        poor_piece: 'tfc:ore/poor_bismuthinite',
-        normal_piece: 'tfc:ore/normal_bismuthinite',
-        rich_piece: 'tfc:ore/rich_bismuthinite',
+        small_ore_piece: 'tfc:ore/small_bismuthinite',
+        poor_ore_piece: 'tfc:ore/poor_bismuthinite',
+        normal_ore_piece: 'tfc:ore/normal_bismuthinite',
+        rich_ore_piece: 'tfc:ore/rich_bismuthinite',
 
         ore_powder: 'tfc:powder/bismuthinite',
         ore_refined_powder: 'tfcoreprocessing:refined/bismuthinite',
@@ -195,16 +185,15 @@ global.metal_ores = {
         
         ore_slurry_color: 0x407D41,
         ore_slurry: 'kubejs:slurry/bismuthinite',
-        ore_metal: 'tfc:metal/bismuth',
+        ore_metal: 'bismuth',
 
-        ore_primary_ingot: 'tfc:metal/ingot/bismuth',
         ore_secondary_powder: 'tfc:powder/native_silver'
     },
     garnierite: {
-        small_piece: 'tfc:ore/small_garnierite',
-        poor_piece: 'tfc:ore/poor_garnierite',
-        normal_piece: 'tfc:ore/normal_garnierite',
-        rich_piece: 'tfc:ore/rich_garnierite',
+        small_ore_piece: 'tfc:ore/small_garnierite',
+        poor_ore_piece: 'tfc:ore/poor_garnierite',
+        normal_ore_piece: 'tfc:ore/normal_garnierite',
+        rich_ore_piece: 'tfc:ore/rich_garnierite',
 
         ore_powder: 'tfc:powder/garnierite',
         ore_refined_powder: 'tfcoreprocessing:refined/garnierite',
@@ -215,16 +204,15 @@ global.metal_ores = {
         
         ore_slurry_color: 0x254B2B,
         ore_slurry: 'kubejs:slurry/garnierite',
-        ore_metal: 'tfc:metal/nickel',
+        ore_metal: 'nickel',
 
-        ore_primary_ingot: 'tfc:metal/ingot/nickel',
         ore_secondary_powder: 'tfc:powder/magnetite'
     },
     malachite: {
-        small_piece: 'tfc:ore/small_malachite',
-        poor_piece: 'tfc:ore/poor_malachite',
-        normal_piece: 'tfc:ore/normal_malachite',
-        rich_piece: 'tfc:ore/rich_malachite',
+        small_ore_piece: 'tfc:ore/small_malachite',
+        poor_ore_piece: 'tfc:ore/poor_malachite',
+        normal_ore_piece: 'tfc:ore/normal_malachite',
+        rich_ore_piece: 'tfc:ore/rich_malachite',
 
         ore_powder: 'tfc:powder/malachite',
         ore_refined_powder: 'tfcoreprocessing:refined/malachite',
@@ -235,16 +223,15 @@ global.metal_ores = {
         
         ore_slurry_color: 0x4B756F,
         ore_slurry: 'kubejs:slurry/malachite',
-        ore_metal: 'tfc:metal/copper',
+        ore_metal: 'copper',
 
-        ore_primary_ingot: 'tfc:metal/ingot/copper',
         ore_secondary_powder: 'tfc:powder/native_gold'
     },
     magnetite: {
-        small_piece: 'tfc:ore/small_magnetite',
-        poor_piece: 'tfc:ore/poor_magnetite',
-        normal_piece: 'tfc:ore/normal_magnetite',
-        rich_piece: 'tfc:ore/rich_magnetite',
+        small_ore_piece: 'tfc:ore/small_magnetite',
+        poor_ore_piece: 'tfc:ore/poor_magnetite',
+        normal_ore_piece: 'tfc:ore/normal_magnetite',
+        rich_ore_piece: 'tfc:ore/rich_magnetite',
 
         ore_powder: 'tfc:powder/magnetite',
         ore_refined_powder: 'tfcoreprocessing:refined/magnetite',
@@ -255,16 +242,15 @@ global.metal_ores = {
         
         ore_slurry_color: 0x7D8080,
         ore_slurry: 'kubejs:slurry/magnetite',
-        ore_metal: 'tfc:metal/cast_iron',
+        ore_metal: 'cast_iron',
 
-        ore_primary_ingot: 'tfc:metal/ingot/cast_iron',
         ore_secondary_powder: 'tfc:powder/garnierite'
     },
     limonite: {
-        small_piece: 'tfc:ore/small_limonite',
-        poor_piece: 'tfc:ore/poor_limonite',
-        normal_piece: 'tfc:ore/normal_limonite',
-        rich_piece: 'tfc:ore/rich_limonite',
+        small_ore_piece: 'tfc:ore/small_limonite',
+        poor_ore_piece: 'tfc:ore/poor_limonite',
+        normal_ore_piece: 'tfc:ore/normal_limonite',
+        rich_ore_piece: 'tfc:ore/rich_limonite',
 
         ore_powder: 'tfc:powder/limonite',
         ore_refined_powder: 'tfcoreprocessing:refined/limonite',
@@ -275,16 +261,15 @@ global.metal_ores = {
         
         ore_slurry_color: 0x8D6737,
         ore_slurry: 'kubejs:slurry/limonite',
-        ore_metal: 'tfc:metal/cast_iron',
+        ore_metal: 'cast_iron',
 
-        ore_primary_ingot: 'tfc:metal/ingot/cast_iron',
         ore_secondary_powder: 'tfc:powder/garnierite'
     },
     sphalerite: {
-        small_piece: 'tfc:ore/small_sphalerite',
-        poor_piece: 'tfc:ore/poor_sphalerite',
-        normal_piece: 'tfc:ore/normal_sphalerite',
-        rich_piece: 'tfc:ore/rich_sphalerite',
+        small_ore_piece: 'tfc:ore/small_sphalerite',
+        poor_ore_piece: 'tfc:ore/poor_sphalerite',
+        normal_ore_piece: 'tfc:ore/normal_sphalerite',
+        rich_ore_piece: 'tfc:ore/rich_sphalerite',
 
         ore_powder: 'tfc:powder/sphalerite',
         ore_refined_powder: 'tfcoreprocessing:refined/sphalerite',
@@ -295,16 +280,15 @@ global.metal_ores = {
         
         ore_slurry_color: 0x706F6C,
         ore_slurry: 'kubejs:slurry/sphalerite',
-        ore_metal: 'tfc:metal/zinc',
+        ore_metal: 'zinc',
 
-        ore_primary_ingot: 'tfc:metal/ingot/zinc',
         ore_secondary_powder: 'tfc:powder/hematite'
     },
     tetrahedrite: {
-        small_piece: 'tfc:ore/small_tetrahedrite',
-        poor_piece: 'tfc:ore/poor_tetrahedrite',
-        normal_piece: 'tfc:ore/normal_tetrahedrite',
-        rich_piece: 'tfc:ore/rich_tetrahedrite',
+        small_ore_piece: 'tfc:ore/small_tetrahedrite',
+        poor_ore_piece: 'tfc:ore/poor_tetrahedrite',
+        normal_ore_piece: 'tfc:ore/normal_tetrahedrite',
+        rich_ore_piece: 'tfc:ore/rich_tetrahedrite',
 
         ore_powder: 'tfc:powder/tetrahedrite',
         ore_refined_powder: 'tfcoreprocessing:refined/tetrahedrite',
@@ -315,9 +299,8 @@ global.metal_ores = {
         
         ore_slurry_color: 0x838482,
         ore_slurry: 'kubejs:slurry/tetrahedrite',
-        ore_metal: 'tfc:metal/copper',
+        ore_metal: 'copper',
 
-        ore_primary_ingot: 'tfc:metal/ingot/copper',
         ore_secondary_powder: 'tfc:powder/native_silver'
     }
 }
