@@ -57,6 +57,9 @@ ServerEvents.recipes(event => {
     event.remove({id: /tfcoreprocessing:uncompress\/uncompress_roasted.*/})
     event.remove({id: /tfcoreprocessing:compress\/compress_refined.*/})
     event.remove({id: /tfcoreprocessing:compress\/compress_roasted.*/})
+    event.remove({id: /tfcoreprocessing:barrel\/slurry\/slurry_.*/})
+    event.remove({id: /tfcoreprocessing:pot\/slurry\/slurry_.*/})
+    event.remove({id: /tfcoreprocessing:pot\/slurry\/roast_.*/})
 
     // Begin...
     for (const ore in global.metal_ores) {
