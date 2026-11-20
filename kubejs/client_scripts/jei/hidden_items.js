@@ -125,6 +125,8 @@ JEIEvents.hideItems(event => {
     event.hide('buildcrafttransport:sandstone_fe')
     event.hide('buildcrafttransport:diamond_fe')
     event.hide('buildcrafttransport:diamond_wood_fe')
+    event.hide('railcraft:slag')
+    event.hide('immersiveengineering:slag')
 
     // Hidden Buckets
     event.hide('buildcraftenergy:oil/hot_bucket')
@@ -268,6 +270,11 @@ JEIEvents.hideItems(event => {
     event.hide('railcraft:feed_station')
     event.hide('railcraft:world_spike')
     event.hide('railcraft:personal_world_spike')
+    event.hide('railcraft:ender_dust')
+    event.hide('railcraft:iron_tunnel_bore_head')
+    event.hide('railcraft:bronze_tunnel_bore_head')
+    event.hide('railcraft:steel_tunnel_bore_head')
+    event.hide('railcraft:diamond_tunnel_bore_head')
 
     // Hidden Nuggets
     event.hide('railcraft:lead_nugget')

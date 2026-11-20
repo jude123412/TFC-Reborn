@@ -205,4 +205,11 @@ StartupEvents.registry('item', event => {
         .texture('kubejs:item/slag')
         .translationKey('kubejs:item/slag')
         .tag('forge:slag')
+
+    // Ender Pearl Powder
+    event.create('kubejs:powder/ender')
+        .texture('kubejs:item/powder/ender')
+        .translationKey('kubejs:item/powder/ender')
+        .tag('forge:dusts')
+        .tag('forge:dusts/ender')
 })

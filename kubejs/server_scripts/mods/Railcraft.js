@@ -165,6 +165,11 @@ ServerEvents.recipes(event => {
     event.remove({id: 'railcraft:steel_block_from_steel_ingot'})
     event.remove({id: 'railcraft:blast_furnace/blasting_steel_block'})
     event.remove({id: 'railcraft:brass_block_from_brass_ingot'})
+    event.remove({id: 'railcraft:crusher/crushing_zinc_silver_battery_empty'})
+    event.remove({id: 'railcraft:iron_tunnel_bore_head'})
+    event.remove({id: 'railcraft:bronze_tunnel_bore_head'})
+    event.remove({id: 'railcraft:steel_tunnel_bore_head'})
+    event.remove({id: 'railcraft:diamond_tunnel_bore_head'})
 
     // Coke Oven Bricks
     event.remove({id: 'railcraft:coke_oven_bricks'})
@@ -707,6 +712,80 @@ ServerEvents.recipes(event => {
         }
     })
 
+    // Zinc-Carbon Battery Recycling
+    event.custom({
+        type: 'railcraft:crusher',
+        ingredient: {
+            item: 'railcraft:zinc_carbon_battery_empty'
+        },
+        outputs: [
+            {
+                probability: 1.00,
+                result: {
+                    item: 'railcraft:charge_terminal'
+                },
+                count: 2
+            },
+            {
+                probability: 1.00,
+                result: {
+                    item: 'railcraft:charge_spool_medium'
+                }
+            },
+            {
+                probability: 1.00,
+                result: {
+                    item: 'kubejs:slag'
+                },
+                count: 4
+            },
+            {
+                probability: 0.50,
+                result: {
+                    item: 'kubejs:slag'
+                },
+                count: 2
+            }
+        ]
+    })
+
+    // Zinc-Silver Battery Recycling
+    event.custom({
+        type: 'railcraft:crusher',
+        ingredient: {
+            item: 'railcraft:zinc_silver_battery_empty'
+        },
+        outputs: [
+            {
+                probability: 1.00,
+                result: {
+                    item: 'railcraft:charge_terminal'
+                },
+                count: 2
+            },
+            {
+                probability: 1.00,
+                result: {
+                    item: 'railcraft:charge_spool_medium'
+                }
+            },
+            {
+                probability: 1.00,
+                result: {
+                    item: 'kubejs:slag'
+                },
+                count: 4
+            },
+            {
+                probability: 0.50,
+                result: {
+                    item: 'kubejs:slag'
+                },
+                count: 2
+            }
+        ]
+    })
+
     // Electric Locomotive
     event.replaceInput(
         {id: 'railcraft:steel_anvil'},
@@ -766,4 +845,121 @@ ServerEvents.recipes(event => {
             item: 'railcraft:carbon_electrode'
         }
     })
+
+    // Item Loader
+    event.replaceInput(
+        {id: 'railcraft:item_loader'},
+        'minecraft:cobblestone',
+        '#forge:cobblestone'
+    )
+
+    // Advanced Item Loader
+    event.replaceInput(
+        {id: 'railcraft:advanced_item_loader'},
+        'railcraft:steel_shovel',
+        '#forge:dusts/redstone'
+    )
+
+    // Item Unloader
+    event.replaceInput(
+        {id: 'railcraft:item_unloader'},
+        'minecraft:cobblestone',
+        '#forge:cobblestone'
+    )
+
+    // Advanced Item Unloader
+    event.replaceInput(
+        {id: 'railcraft:advanced_item_unloader'},
+        'railcraft:steel_shovel',
+        '#forge:dusts/redstone'
+    )
+
+    // Fluid Loader
+    event.replaceInput(
+        {id: 'railcraft:fluid_loader'},
+        'minecraft:glass',
+        '#forge:glass/colorless'
+    )
+
+    // Fluid Unloader
+    event.replaceInput(
+        {id: 'railcraft:fluid_unloader'},
+        'minecraft:glass',
+        '#forge:glass/colorless'
+    )
+
+    // Advanced Cart Detector
+    event.remove({id: 'railcraft:advanced_detector'})
+    event.shaped(
+        Item.of('railcraft:advanced_detector'),
+        [
+            'BBB',
+            'BPB',
+            'BBB'
+        ],
+        {
+            B: '#forge:plates/steel',
+            P: '#minecraft:stone_pressure_plates',
+        }
+    )
+
+    // Age Cart Detector
+    event.remove({id: 'railcraft:age_detector'})
+    event.shaped(
+        Item.of('railcraft:age_detector'),
+        [
+            'BBB',
+            'BPB',
+            'BBB'
+        ],
+        {
+            B: 'afc:wood/log/black_oak',
+            P: '#minecraft:stone_pressure_plates',
+        }
+    )
+
+    // Animal Cart Detector
+    event.remove({id: 'railcraft:animal_detector'})
+    event.shaped(
+        Item.of('railcraft:animal_detector'),
+        [
+            'BBB',
+            'BPB',
+            'BBB'
+        ],
+        {
+            B: 'tfc:wood/log/oak',
+            P: '#minecraft:stone_pressure_plates',
+        }
+    )
+
+    // Any Cart Detector
+    event.remove({id: 'railcraft:any_detector'})
+    event.shaped(
+        Item.of('railcraft:any_detector'),
+        [
+            'BBB',
+            'BPB',
+            'BBB'
+        ],
+        {
+            B: '#forge:stone',
+            P: '#minecraft:stone_pressure_plates',
+        }
+    )
+
+    // Empty Cart Detector
+    event.remove({id: 'railcraft:empty_detector'})
+    event.shaped(
+        Item.of('railcraft:empty_detector'),
+        [
+            'BBB',
+            'BPB',
+            'BBB'
+        ],
+        {
+            B: '#minecraft:stone_bricks',
+            P: '#minecraft:stone_pressure_plates',
+        }
+    )
 })

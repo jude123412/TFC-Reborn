@@ -732,4 +732,54 @@ ServerEvents.recipes(event => {
             item: 'kubejs:laser_core'
         }
     })
+
+    // Ender Pearl Powder
+    event.custom({
+        type: 'tfc:quern',
+        ingredient: {
+            item: 'minecraft:ender_pearl'
+        },
+        result: {
+            item: 'kubejs:powder/ender'
+        }
+    })
+    event.custom({
+        type: 'create:milling',
+        ingredients: [
+            {
+                item: 'minecraft:ender_pearl'
+            }
+        ],
+        processingTime: 400,
+        results: [
+            {
+                item: 'kubejs:powder/ender'
+            }
+        ]
+    })
+    event.custom({
+        type: 'railcraft:crusher',
+        ingredient: {
+            item: 'minecraft:ender_pearl'
+        },
+        outputs: [
+            {
+                probability: 1.00,
+                result: {
+                    item: 'kubejs:powder/ender'
+                }
+            }
+        ]
+    })
+    event.custom({
+        type: "immersiveengineering:crusher",
+        energy: 6000,
+        input: {
+            item: 'minecraft:ender_pearl'
+        },
+        result: {
+            item: 'kubejs:powder/ender'
+        },
+        secondaries: []
+    })
 })
