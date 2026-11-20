@@ -224,8 +224,8 @@ ServerEvents.tags('item', event => {
     event.add('forge:ingots/any_bronze', 'tfc:metal/ingot/bronze')
 
     // Any RF Motor
-    event.add('forge:any_motor_rf', 'rosia:motor')
-    event.add('forge:any_motor_rf', 'railcraft:charge_motor')
+    event.add('forge:motor_rf', 'rosia:motor')
+    event.add('forge:motor_rf', 'railcraft:charge_motor')
 
     // Mossy Cobblestone
     event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/granite')

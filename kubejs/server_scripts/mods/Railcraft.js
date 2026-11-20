@@ -457,7 +457,7 @@ ServerEvents.recipes(event => {
     event.replaceInput(
         {id: 'railcraft:electric_locomotive'},
         'railcraft:charge_motor',
-        '#forge:any_motor_rf'
+        '#forge:motor_rf'
     )
 
     // Solid Fueled Firebox
@@ -506,7 +506,7 @@ ServerEvents.recipes(event => {
             S: '#forge:double_sheets/steel',
             C: 'buildcraftsilicon:redstone_chipset/iron',
             P: '#forge:ingots/steel',
-            M: '#forge:any_motor_rf'
+            M: '#forge:motor_rf'
         }
     )
 
@@ -524,7 +524,7 @@ ServerEvents.recipes(event => {
             C: 'buildcraftsilicon:redstone_chipset/diamond',
             P: 'minecraft:piston',
             D: '#forge:double_ingots/wrought_iron',
-            M: '#forge:any_motor_rf'
+            M: '#forge:motor_rf'
         }
     )
 
@@ -539,7 +539,7 @@ ServerEvents.recipes(event => {
         ],
         {
             S: '#forge:sheets/wrought_iron',
-            M: '#forge:any_motor_rf',
+            M: '#forge:motor_rf',
             W: 'create:crushing_wheel',
             C: 'buildcraftsilicon:redstone_chipset/diamond'
         }

@@ -308,7 +308,7 @@ ServerEvents.recipes(event => {
                 item: 'rosia:copper_coil'
             },
             R: {
-                item: 'rosia:motor'
+                tag: 'forge:motor_rf'
             },
             F: {
                 item: 'createaddition:capacitor'
@@ -341,7 +341,7 @@ ServerEvents.recipes(event => {
                 item: 'rosia:copper_coil'
             },
             R: {
-                item: 'rosia:motor'
+                tag: 'forge:motor_rf'
             },
             S: {
                 item: 'create:shaft'
