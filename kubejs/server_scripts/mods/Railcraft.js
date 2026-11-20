@@ -962,4 +962,99 @@ ServerEvents.recipes(event => {
             P: '#minecraft:stone_pressure_plates',
         }
     )
+
+    // Item Cart Detector
+    event.remove({id: 'railcraft:item_detector'})
+    event.shaped(
+        Item.of('railcraft:item_detector'),
+        [
+            'BBB',
+            'BPB',
+            'BBB'
+        ],
+        {
+            B: 'tfc:wood/stripped_wood/acacia',
+            P: '#minecraft:stone_pressure_plates',
+        }
+    )
+
+    // Locomotive Cart Detector
+    event.remove({id: 'railcraft:locomotive_detector'})
+    event.shaped(
+        Item.of('railcraft:locomotive_detector'),
+        [
+            'BBB',
+            'BPB',
+            'BBB'
+        ],
+        {
+            B: 'immersiveengineering:cokebrick',
+            P: '#minecraft:stone_pressure_plates',
+        }
+    )
+
+    // Mob Cart Detector
+    event.remove({id: 'railcraft:mob_detector'})
+    event.shaped(
+        Item.of('railcraft:mob_detector'),
+        [
+            'BBB',
+            'BPB',
+            'BBB'
+        ],
+        {
+            B: '#forge:cobblestone/mossy',
+            P: '#minecraft:stone_pressure_plates',
+        }
+    )
+
+    // Mob Cart Detector
+    event.remove({id: 'railcraft:player_detector'})
+    event.shaped(
+        Item.of('railcraft:player_detector'),
+        [
+            'BBB',
+            'BPB',
+            'BBB'
+        ],
+        {
+            B: '#minecraft:slabs',
+            P: '#minecraft:stone_pressure_plates',
+        }
+    )
+
+    // Routing Cart Detector
+    event.replaceInput(
+        {id: 'railcraft:routing_detector'},
+        'minecraft:stone_pressure_plate',
+        '#minecraft:stone_pressure_plates'
+    )
+
+    // Sheep Cart Detector
+    event.replaceInput(
+        {id: 'railcraft:sheep_detector'},
+        'minecraft:stone_pressure_plate',
+        '#minecraft:stone_pressure_plates'
+    )
+
+    // Tank Cart Detector
+    event.replaceInput(
+        {id: 'railcraft:tank_detector'},
+        'minecraft:stone_pressure_plate',
+        '#minecraft:stone_pressure_plates'
+    )
+
+    // Train Cart Detector
+    event.replaceInput(
+        {id: 'railcraft:train_detector'},
+        'minecraft:stone_pressure_plate',
+        '#minecraft:stone_pressure_plates'
+    )
+
+    // Villager Cart Detector
+    event.replaceInput(
+        {id: 'railcraft:villager_detector'},
+        'minecraft:stone_pressure_plate',
+        '#minecraft:stone_pressure_plates'
+    )
 })

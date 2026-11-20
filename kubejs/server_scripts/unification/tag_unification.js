@@ -227,6 +227,28 @@ ServerEvents.tags('item', event => {
     event.add('forge:any_motor_rf', 'rosia:motor')
     event.add('forge:any_motor_rf', 'railcraft:charge_motor')
 
+    // Mossy Cobblestone
+    event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/granite')
+    event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/diorite')
+    event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/gabbro')
+    event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/shale')
+    event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/claystone')
+    event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/limestone')
+    event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/conglomerate')
+    event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/dolomite')
+    event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/chert')
+    event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/chalk')
+    event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/rhyolite')
+    event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/basalt')
+    event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/andesite')
+    event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/dacite')
+    event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/quartzite')
+    event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/slate')
+    event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/phyllite')
+    event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/schist')
+    event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/gneiss')
+    event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/marble')
+
     // Remove these to stop them showing up
     // in railcraft loot tables
     event.removeAll('railcraft:ingot_chest_loot')
