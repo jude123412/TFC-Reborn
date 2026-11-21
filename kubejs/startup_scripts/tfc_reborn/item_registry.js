@@ -212,4 +212,38 @@ StartupEvents.registry('item', event => {
         .translationKey('kubejs:item/powder/ender')
         .tag('forge:dusts')
         .tag('forge:dusts/ender')
+
+    // Iron Spike Maul Head
+    event.create('kubejs:metal/spike_maul_head/iron')
+        .texture('kubejs:item/metal/spike_maul_head/iron')
+        .translationKey('kubejs:item/metal/spike_maul_head/iron')
+        .tag('tfc:metal_item/wrought_iron')
+
+    // Steel Spike Maul Head
+    event.create('kubejs:metal/spike_maul_head/steel')
+        .texture('kubejs:item/metal/spike_maul_head/steel')
+        .translationKey('kubejs:item/metal/spike_maul_head/steel')
+        .tag('tfc:metal_item/steel')
+
+    // Diamond Spike Maul Head
+    event.create('kubejs:metal/spike_maul_head/diamond')
+        .texture('kubejs:item/metal/spike_maul_head/diamond')
+        .translationKey('kubejs:item/metal/spike_maul_head/diamond')
+
+    // Unfinished Iron Crowbar
+    event.create('kubejs:metal/unfinished_crowbar/iron')
+        .texture('kubejs:item/metal/unfinished_crowbar/iron')
+        .translationKey('kubejs:item/metal/unfinished_crowbar/iron')
+        .tag('tfc:metal_item/wrought_iron')
+
+    // Unfinished Steel Crowbar
+    event.create('kubejs:metal/unfinished_crowbar/steel')
+        .texture('kubejs:item/metal/unfinished_crowbar/steel')
+        .translationKey('kubejs:item/metal/unfinished_crowbar/steel')
+        .tag('tfc:metal_item/steel')
+
+    // Unfinished Diamond Crowbar
+    event.create('kubejs:metal/unfinished_crowbar/diamond')
+        .texture('kubejs:item/metal/unfinished_crowbar/diamond')
+        .translationKey('kubejs:item/metal/unfinished_crowbar/diamond')
 })

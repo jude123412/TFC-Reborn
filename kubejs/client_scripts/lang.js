@@ -131,6 +131,11 @@ ClientEvents.lang('en_us', event => {
     event.add('item.kubejs.metal.knife_blade.elementium', 'Elementium Knife Blade')
     event.add('item.kubejs.metal.knife_blade.terrasteel', 'Terrasteel Knife Blade')
 
+    // Metal Spike Maul Head
+    event.add('item.kubejs.metal.spike_maul_head.iron', 'Iron Spike Maul Head')
+    event.add('item.kubejs.metal.spike_maul_head.steel', 'Steel Spike Maul Head')
+    event.add('item.kubejs.metal.spike_maul_head.diamond', 'Diamond Spike Maul Head')
+
     // Unfinished Helmet
     event.add('item.kubejs.metal.unfinished_helmet.manasteel', 'Manasteel Unfinished Helmet')
     event.add('item.kubejs.metal.unfinished_helmet.elementium', 'Elementium Unfinished Helmet')
@@ -150,6 +155,11 @@ ClientEvents.lang('en_us', event => {
     event.add('item.kubejs.metal.unfinished_boots.manasteel', 'Manasteel Unfinished Boots')
     event.add('item.kubejs.metal.unfinished_boots.elementium', 'Elementium Unfinished Boots')
     event.add('item.kubejs.metal.unfinished_boots.terrasteel', 'Terrasteel Unfinished Boots')
+
+    // Unfinished Crowbars
+    event.add('item.kubejs.metal.unfinished_crowbar.iron', 'Iron Unfinished Crowbar')
+    event.add('item.kubejs.metal.unfinished_crowbar.steel', 'Steel Unfinished Crowbar')
+    event.add('item.kubejs.metal.unfinished_crowbar.diamond', 'Diamond Unfinished Crowbar')
 
     // Misc Powders
     event.add('item.kubejs.powder.obsidian', 'Obsidian Powder')
