@@ -1,4 +1,18 @@
+TFCEvents.data(event => {
+    // Crowbars
+    event.itemHeat('railcraft:iron_crowbar', 2.857 * 2, 921, 1228)
+    event.itemHeat('railcraft:steel_crowbar', 2.857 * 2, 924, 1232)
+    event.itemHeat('railcraft:diamond_crowbar', 2.857 * 2, 924, 1232)
+
+    // Spike Mauls
+    event.itemHeat('railcraft:iron_spike_maul', 2.857 * 2, 921, 1228)
+    event.itemHeat('railcraft:steel_spike_maul', 2.857 * 2, 924, 1232)
+    event.itemHeat('railcraft:diamond_spike_maul', 2.857 * 2, 924, 1232)
+})
+
 ServerEvents.recipes(event => {
+
+    const tfc = event.recipes.tfc
 
     // Recipe Removal
     event.remove({id: 'railcraft:coal_coke'})
@@ -1057,4 +1071,106 @@ ServerEvents.recipes(event => {
         'minecraft:stone_pressure_plate',
         '#minecraft:stone_pressure_plates'
     )
+
+    // Iron Spike Maul
+    event.remove({id: 'railcraft:iron_spike_maul'})
+    event.shaped(
+        Item.of('railcraft:iron_spike_maul'),
+        [
+            'H',
+            'S'
+        ],
+        {
+            H: 'kubejs:metal/spike_maul_head/iron',
+            S: '#forge:rods/wooden',
+        }
+    )
+    tfc.heating('railcraft:iron_spike_maul', 1535)
+        .resultFluid(Fluid.of('tfc:metal/cast_iron', 200))
+        .useDurability(true)
+
+    // Steel Spike Maul
+    event.remove({id: 'railcraft:steel_spike_maul'})
+    event.shaped(
+        Item.of('railcraft:steel_spike_maul'),
+        [
+            'H',
+            'S'
+        ],
+        {
+            H: 'kubejs:metal/spike_maul_head/steel',
+            S: '#forge:rods/wooden',
+        }
+    )
+    tfc.heating('railcraft:steel_spike_maul', 1540)
+        .resultFluid(Fluid.of('tfc:metal/steel', 200))
+        .useDurability(true)
+
+    // Diamond Spike Maul
+    event.remove({id: 'railcraft:diamond_spike_maul'})
+    event.shaped(
+        Item.of('railcraft:diamond_spike_maul'),
+        [
+            'H',
+            'S'
+        ],
+        {
+            H: 'kubejs:metal/spike_maul_head/diamond',
+            S: '#forge:rods/wooden',
+        }
+    )
+    tfc.heating('railcraft:diamond_spike_maul', 1540)
+        .resultFluid(Fluid.of('tfc:metal/unknown', 200))
+        .useDurability(true)
+
+    // Iron Crowbar
+    event.remove({id: 'railcraft:iron_crowbar'})
+    event.shaped(
+        Item.of('railcraft:iron_crowbar'),
+        [
+            'H',
+            'S'
+        ],
+        {
+            H: 'kubejs:metal/unfinished_crowbar/iron',
+            S: '#forge:dyes/red',
+        }
+    )
+    tfc.heating('railcraft:iron_crowbar', 1535)
+        .resultFluid(Fluid.of('tfc:metal/cast_iron', 200))
+        .useDurability(true)
+
+    // Steel Crowbar
+    event.remove({id: 'railcraft:steel_crowbar'})
+    event.shaped(
+        Item.of('railcraft:steel_crowbar'),
+        [
+            'H',
+            'S'
+        ],
+        {
+            H: 'kubejs:metal/unfinished_crowbar/steel',
+            S: '#forge:dyes/red',
+        }
+    )
+    tfc.heating('railcraft:steel_crowbar', 1540)
+        .resultFluid(Fluid.of('tfc:metal/steel', 200))
+        .useDurability(true)
+
+    // Diamond Crowbar
+    event.remove({id: 'railcraft:diamond_crowbar'})
+    event.shaped(
+        Item.of('railcraft:diamond_crowbar'),
+        [
+            'H',
+            'S'
+        ],
+        {
+            H: 'kubejs:metal/unfinished_crowbar/diamond',
+            S: '#forge:dyes/blue',
+        }
+    )
+    tfc.heating('railcraft:diamond_crowbar', 1540)
+        .resultFluid(Fluid.of('tfc:metal/unknown', 200))
+        .useDurability(true)
 })

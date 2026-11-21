@@ -34,6 +34,16 @@ TFCEvents.data(event => {
     event.itemSize('kubejs:pipe_frame/lapis', 'large', 'light')
     event.itemSize('kubejs:pipe_frame/emerald', 'large', 'light')
 
+    // Unfinished Crowbars
+    event.itemHeat('kubejs:metal/unfinished_crowbar/iron', 2.857 * 2, 921, 1228)
+    event.itemHeat('kubejs:metal/unfinished_crowbar/steel', 2.857 * 2, 924, 1232)
+    event.itemHeat('kubejs:metal/unfinished_crowbar/diamond', 2.857 * 2, 924, 1232)
+
+    // Spike Maul Heads
+    event.itemHeat('kubejs:metal/spike_maul_head/iron', 2.857 * 2, 921, 1228)
+    event.itemHeat('kubejs:metal/spike_maul_head/steel', 2.857 * 2, 924, 1232)
+    event.itemHeat('kubejs:metal/spike_maul_head/diamond', 2.857 * 2, 924, 1232)
+
     // Quicklime
     event.itemSize('kubejs:quicklime', 'small', 'light')
 
@@ -782,4 +792,116 @@ ServerEvents.recipes(event => {
         },
         secondaries: []
     })
+
+    // Iron Spike Maul head
+    event.custom({
+        type: 'tfc:anvil',
+        input: {
+            item: 'tfc:metal/double_ingot/wrought_iron'
+        },
+        result: {
+            item: 'kubejs:metal/spike_maul_head/iron'
+        },
+        tier: 3,
+        rules: [
+            'upset_any',
+            'upset_any'
+        ],
+        "apply_forging_bonus": false
+    })
+    tfc.heating('kubejs:metal/spike_maul_head/iron', 1535)
+        .resultFluid(Fluid.of('tfc:metal/cast_iron', 200))
+
+    // Steel Spike Maul head
+    event.custom({
+        type: 'tfc:anvil',
+        input: {
+            item: 'tfc:metal/double_ingot/steel'
+        },
+        result: {
+            item: 'kubejs:metal/spike_maul_head/steel'
+        },
+        tier: 3,
+        rules: [
+            'upset_any',
+            'upset_any'
+        ],
+        "apply_forging_bonus": false
+    })
+    tfc.heating('kubejs:metal/spike_maul_head/steel', 1540)
+        .resultFluid(Fluid.of('tfc:metal/steel', 200))
+
+    // Diamond Spike Maul head
+    event.custom({
+        type: 'tfc:welding',
+        first_input: {
+            item: 'tfc:metal/double_ingot/wrought_iron'
+        },
+        second_input: {
+            tag: 'forge:dusts/diamond'
+        },
+        tier: 3,
+        result: {
+            item: 'kubejs:metal/spike_maul_head/diamond'
+        }
+    })
+    tfc.heating('kubejs:metal/spike_maul_head/diamond', 1540)
+        .resultFluid(Fluid.of('tfc:metal/unknown', 200))
+
+    // Iron Unfinished Crowbar
+    event.custom({
+        type: 'tfc:anvil',
+        input: {
+            item: 'tfc:metal/double_ingot/wrought_iron'
+        },
+        result: {
+            item: 'kubejs:metal/unfinished_crowbar/iron'
+        },
+        tier: 3,
+        rules: [
+            'draw_third_last',
+            'draw_second_last',
+            'bend_last'
+        ],
+        "apply_forging_bonus": false
+    })
+    tfc.heating('kubejs:metal/unfinished_crowbar/iron', 1535)
+        .resultFluid(Fluid.of('tfc:metal/cast_iron', 200))
+
+    // Steel Unfinished Crowbar
+    event.custom({
+        type: 'tfc:anvil',
+        input: {
+            item: 'tfc:metal/double_ingot/steel'
+        },
+        result: {
+            item: 'kubejs:metal/unfinished_crowbar/steel'
+        },
+        tier: 3,
+        rules: [
+            'draw_third_last',
+            'draw_second_last',
+            'bend_last'
+        ],
+        "apply_forging_bonus": false
+    })
+    tfc.heating('kubejs:metal/unfinished_crowbar/steel', 1540)
+        .resultFluid(Fluid.of('tfc:metal/steel', 200))
+
+    // Diamond Unfinished Crowbar
+    event.custom({
+        type: 'tfc:welding',
+        first_input: {
+            item: 'tfc:metal/double_ingot/wrought_iron'
+        },
+        second_input: {
+            tag: 'forge:dusts/diamond'
+        },
+        tier: 3,
+        result: {
+            item: 'kubejs:metal/unfinished_crowbar/diamond'
+        }
+    })
+    tfc.heating('kubejs:metal/unfinished_crowbar/diamond', 1540)
+        .resultFluid(Fluid.of('tfc:metal/unknown', 200))
 })
