@@ -71,6 +71,9 @@ ServerEvents.tags('item', event => {
     // Salt
     event.add('forge:dusts/salt', 'tfc:powder/salt')
 
+    // Lime
+    event.add('forge:dusts/lime', 'tfc:powder/lime')
+
     // Berries
     event.add('tfc:foods/berries', 'tfc:food/blackberry')
     event.add('tfc:foods/berries', 'tfc:food/blueberry')
@@ -254,6 +257,10 @@ ServerEvents.tags('item', event => {
     event.removeAll('railcraft:ingot_chest_loot')
     event.removeAll('railcraft:plate_chest_loot')
     event.removeAll('railcraft:gear_chest_loot')
+
+    // Railcraft Cut Firestone
+    event.add('railcraft:cut_firestone', 'railcraft:cracked_firestone')
+    event.add('railcraft:cut_firestone', 'railcraft:cut_firestone')
 })
 
 ServerEvents.tags('fluid', event => {

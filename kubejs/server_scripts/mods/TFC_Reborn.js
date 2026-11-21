@@ -821,7 +821,7 @@ ServerEvents.recipes(event => {
         result: {
             item: 'kubejs:metal/spike_maul_head/steel'
         },
-        tier: 3,
+        tier: 4,
         rules: [
             'upset_any',
             'upset_any'
@@ -877,7 +877,7 @@ ServerEvents.recipes(event => {
         result: {
             item: 'kubejs:metal/unfinished_crowbar/steel'
         },
-        tier: 3,
+        tier: 4,
         rules: [
             'draw_third_last',
             'draw_second_last',

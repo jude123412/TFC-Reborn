@@ -8,6 +8,12 @@ TFCEvents.data(event => {
     event.itemHeat('railcraft:iron_spike_maul', 2.857 * 2, 921, 1228)
     event.itemHeat('railcraft:steel_spike_maul', 2.857 * 2, 924, 1232)
     event.itemHeat('railcraft:diamond_spike_maul', 2.857 * 2, 924, 1232)
+
+    // Whistle Tuner
+    event.itemHeat('railcraft:whistle_tuner', 2.857, 924, 1232)
+
+    // Charge Terminal
+    event.itemHeat('railcraft:charge_terminal', 2.857 * 2, 558, 744)
 })
 
 ServerEvents.recipes(event => {
@@ -1173,4 +1179,318 @@ ServerEvents.recipes(event => {
     tfc.heating('railcraft:diamond_crowbar', 1540)
         .resultFluid(Fluid.of('tfc:metal/unknown', 200))
         .useDurability(true)
+
+    // Whistle Tuner
+    event.remove({id: 'railcraft:whistle_tuner'})
+    event.custom({
+        type: 'tfc:anvil',
+        input: {
+            item: 'tfc:metal/ingot/steel'
+        },
+        result: {
+            item: 'railcraft:whistle_tuner'
+        },
+        tier: 4,
+        rules: [
+            'draw_third_last',
+            'draw_second_last',
+            'draw_last'
+        ],
+        "apply_forging_bonus": false
+    })
+    tfc.heating('railcraft:whistle_tuner', 1540)
+        .resultFluid(Fluid.of('tfc:metal/steel', 100))
+        .useDurability(true)
+
+    // Signal Tuner
+    event.replaceInput(
+        {id: 'railcraft:signal_tuner'},
+        'minecraft:stone_button',
+        '#minecraft:buttons'
+    )
+
+    // Signal Block Surveyor
+    event.replaceInput(
+        {id: 'railcraft:signal_block_surveyor'},
+        'minecraft:stone_button',
+        '#minecraft:buttons'
+    )
+
+    // Logbook
+    event.replaceInput(
+        {id: 'railcraft:logbook'},
+        'minecraft:gold_ingot',
+        '#forge:ingots/gold'
+    )
+
+    // Overalls
+    event.remove({id: 'railcraft:overalls'})
+    event.shaped(
+        Item.of('railcraft:overalls'), 
+        [
+            'SCS',
+            'CNC',
+            'CDC'
+        ],
+        {
+            S: '#bsa:bindings/strong',
+            C: '#tfc:high_quality_cloth',
+            N: '#tfc:sewing_needles',
+            D: '#forge:dyes/cyan'
+        }
+    ).damageIngredient('#tfc:sewing_needles')
+
+    // Refined Firestone
+    event.remove({id: 'railcraft:firestone_cracked_fixing'})
+    event.remove({id: 'railcraft:firestone_lava_refinement'})
+    event.custom({
+        type: 'minecraft:crafting_shaped',
+        result: {
+            item: 'railcraft:refined_firestone'
+        },
+        pattern: [
+            'LRL',
+            'RFR',
+            'LRL'
+        ],
+        key: {
+            R: {
+                tag: 'forge:storage_blocks/redstone'
+            },
+            F: {
+                tag: 'railcraft:cut_firestone'
+            },
+            L: {
+                type: 'immersiveengineering:fluid',
+                amount: 1000,
+                tag: 'minecraft:lava'
+            }
+        }
+    })
+
+    // Bag of Cement
+    event.remove({id: 'railcraft:bag_of_cement'})
+    event.remove({id: 'railcraft:bag_of_cement_slag'})
+    event.shaped(
+        Item.of('railcraft:bag_of_cement', 8), 
+        [
+            'PGP',
+            'CLC',
+            'PGP'
+        ],
+        {
+            P: '#forge:paper',
+            G: '#forge:gravel',
+            C: '#forge:clay',
+            L: '#forge:dusts/lime'
+        }
+    )
+
+    // Wooden Tie
+    event.remove({id: 'railcraft:wooden_tie'})
+    event.remove({id: 'railcraft:wooden_tie_bottle'})
+    event.custom({
+        type: 'minecraft:crafting_shaped',
+        result: {
+            item: 'railcraft:wooden_tie',
+            count: 3
+        },
+        pattern: [
+            ' B ',
+            'SSS',
+        ],
+        key: {
+            B: {
+                type: 'immersiveengineering:fluid',
+                amount: 1000,
+                tag: 'forge:creosote'
+            },
+            S: {
+                tag: 'minecraft:wooden_slabs'
+            }
+            
+        }
+    })
+
+    // Stone Tie
+    event.remove({id: 'railcraft:stone_tie'})
+    event.custom({
+        type: 'minecraft:crafting_shaped',
+        result: {
+            item: 'railcraft:stone_tie'
+        },
+        pattern: [
+            ' B ',
+            'SRS',
+        ],
+        key: {
+            B: {
+                type: 'immersiveengineering:fluid',
+                amount: 1000,
+                tag: 'tfc:any_fresh_water'
+            },
+            S: {
+                item: 'railcraft:bag_of_cement'
+            },
+            R: {
+                item: 'railcraft:rebar'
+            }
+        }
+    })
+
+    // Force Track Emitter
+    event.remove({id: 'railcraft:force_track_emitter'})
+    event.shaped(
+        Item.of('railcraft:force_track_emitter'), 
+        [
+            'PEP',
+            'CGC',
+            'PEP'
+        ],
+        {
+            P: '#forge:plates/tin',
+            E: '#forge:dusts/ender',
+            C: 'railcraft:charge_coil',
+            G: 'buildcraftcore:gears/gear_diamond'
+        }
+    )
+
+    // Signal Lamp
+    event.remove({id: 'railcraft:signal_lamp'})
+    event.shaped(
+        Item.of('railcraft:signal_lamp'), 
+        [
+            'GLR',
+            'DPA',
+            'RYG'
+        ],
+        {
+            G: '#forge:dusts/glowstone',
+            L: 'tfc:metal/unfinished_lamp/wrought_iron',
+            R: '#forge:dusts/redstone',
+            D: '#forge:dyes/lime',
+            P: 'tfc:lamp_glass',
+            A: '#forge:dyes/red',
+            Y: '#forge:dyes/yellow'
+        }
+    )
+
+    // Small Charge Wire Spool
+    event.remove({id: 'railcraft:rolling/charge_spool_small'})
+    event.remove({id: 'railcraft:charge_spool_small_from_medium'})
+    event.custom({
+        type: 'railcraft:rolling',
+        key: {
+            A: {
+                tag: 'forge:wires/copper'
+            }
+        },
+        pattern: [
+            'A'
+        ],
+        result: {
+            item: 'railcraft:charge_spool_small'
+        }
+    })
+
+    // Medium Charge Wire Spool
+    event.remove({id: 'railcraft:charge_spool_medium_from_large'})
+    event.custom({
+        type: 'railcraft:rolling',
+        key: {
+            A: {
+                tag: 'forge:wires/copper'
+            }
+        },
+        pattern: [
+            'A',
+            'A'
+        ],
+        result: {
+            item: 'railcraft:charge_spool_medium'
+        }
+    })
+
+    // Large Charge Wire Spool
+    event.remove({id: 'railcraft:rolling/charge_spool_large'})
+    event.custom({
+        type: 'railcraft:rolling',
+        key: {
+            A: {
+                tag: 'forge:wires/copper'
+            }
+        },
+        pattern: [
+            'A',
+            'A',
+            'A'
+        ],
+        result: {
+            item: 'railcraft:charge_spool_large'
+        }
+    })
+
+    // Charge Coil
+    event.remove({id: 'railcraft:charge_coil'})
+    event.shaped(
+        Item.of('railcraft:charge_coil', 2), 
+        [
+            'SSS',
+            'PPP',
+            'SSS'
+        ],
+        {
+            S: 'railcraft:charge_spool_small',
+            P: '#forge:plates/wrought_iron'
+        }
+    )
+
+    // Charge Terminal
+    event.remove({id: 'railcraft:charge_terminal'})
+    event.custom({
+        type: 'tfc:anvil',
+        input: {
+            item: 'tfc:metal/double_ingot/brass'
+        },
+        result: {
+            item: 'railcraft:charge_terminal'
+        },
+        tier: 2,
+        rules: [
+            'upset_third_last',
+            'hit_second_last',
+            'upset_last'
+        ],
+        "apply_forging_bonus": false
+    })
+    event.custom({
+        type: 'railcraft:rolling',
+        key: {
+            A: {
+                tag: 'forge:ingots/brass'
+            }
+        },
+        pattern: [
+            'A'
+        ],
+        result: {
+            item: 'railcraft:charge_terminal'
+        }
+    })
+    tfc.heating('railcraft:charge_terminal', 930)
+        .resultFluid(Fluid.of('tfc:metal/brass', 200))
+
+    // White Iron Tank Gauge
+    event.replaceInput(
+        {id: 'railcraft:iron_tank_gauge'},
+        'minecraft:glass_pane',
+        '#forge:glass_panes/colorless'
+    )
+
+    // White Steel Tank Gauge
+    event.replaceInput(
+        {id: 'railcraft:steel_tank_gauge'},
+        'minecraft:glass_pane',
+        '#forge:glass_panes/colorless'
+    )
 })
