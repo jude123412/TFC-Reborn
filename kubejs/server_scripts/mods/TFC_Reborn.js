@@ -835,7 +835,7 @@ ServerEvents.recipes(event => {
     event.custom({
         type: 'tfc:welding',
         first_input: {
-            item: 'tfc:metal/double_ingot/wrought_iron'
+            item: 'kubejs:metal/spike_maul_head/iron'
         },
         second_input: {
             tag: 'forge:dusts/diamond'
@@ -892,7 +892,7 @@ ServerEvents.recipes(event => {
     event.custom({
         type: 'tfc:welding',
         first_input: {
-            item: 'tfc:metal/double_ingot/wrought_iron'
+            item: 'kubejs:metal/unfinished_crowbar/iron'
         },
         second_input: {
             tag: 'forge:dusts/diamond'
