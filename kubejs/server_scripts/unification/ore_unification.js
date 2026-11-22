@@ -64,6 +64,11 @@ ServerEvents.recipes(event => {
     event.remove({id: /tfcoreprocessing:barrel\/slurry\/slurry_.*/})
     event.remove({id: /tfcoreprocessing:pot\/slurry\/slurry_.*/})
     event.remove({id: /tfcoreprocessing:pot\/slurry\/roast_.*/})
+    event.remove({id: /tfcoreprocessing:heating\/powder\/.*/})
+    event.remove({id: /tfcoreprocessing:heating\/refined\/.*/})
+    event.remove({id: /tfcoreprocessing:heating\/compressed\/.*/})
+    event.remove({id: /tfcoreprocessing:heating\/roasted\/.*/})
+    event.remove({id: /tfcoreprocessing:heating\/roasted_brick\/.*/})
 
     // Begin...
     for (const ore in global.metal_ores) {
@@ -71,7 +76,7 @@ ServerEvents.recipes(event => {
         let m = global.metals[o.ore_metal]
 
         // Ore Powder Melting
-        if (o.ore_powder != null && (o.ore_powder.startsWith('kubejs:') || o.ore_powder.startsWith('tfc_ie_addon:'))) {
+        if (o.ore_powder != null) {
             event.custom({
                 type: 'tfc:heating',
                 ingredient: {
@@ -79,7 +84,7 @@ ServerEvents.recipes(event => {
                 },
                 result_fluid: {
                     fluid: m.fluid,
-                    amount: 6
+                    amount: 5
                 },
                 temperature: m.melt
             })
@@ -512,17 +517,17 @@ ServerEvents.recipes(event => {
                 ingredients: [
                     {
                         fluidTag: 'tfc:any_fresh_water',
-                        amount: 1000
+                        amount: 250
                     },
                     {
-                        item: o.ore_pellet
+                        item: o.ore_powder
                     }
                 ],
                 processingTime: 600,
                 results: [
                     {
                         fluid: o.ore_slurry,
-                        amount: 1000
+                        amount: 250
                     }
                 ]
             })
@@ -535,7 +540,7 @@ ServerEvents.recipes(event => {
                 },
                 result_fluid: {
                     fluid: m.fluid,
-                    amount: 30
+                    amount: 20
                 },
                 temperature: m.melt
             })
@@ -570,52 +575,47 @@ ServerEvents.recipes(event => {
                 ingredients: [
                     {
                         fluid: o.ore_slurry,
-                        amount: 1000
+                        amount: 250
                     }
                 ],
                 heatRequirement: 'heated',
                 processingTime: 600,
                 results: [
                     {
-                        item: o.ore_refined_powder,
-                        amount: 4
+                        item: o.ore_refined_powder
                     }
                 ]
             })
 
             // Refined Powder Heating
-            if (o.ore_refined_powder.startsWith('kubejs:')) {
-                event.custom({
-                    type: 'tfc:heating',
-                    ingredient: {
-                        item: o.ore_refined_powder
-                    },
-                    result_fluid: {
-                        fluid: m.fluid,
-                        amount: 8
-                    },
-                    temperature: m.melt
-                })
-            } 
+            event.custom({
+                type: 'tfc:heating',
+                ingredient: {
+                    item: o.ore_refined_powder
+                },
+                result_fluid: {
+                    fluid: m.fluid,
+                    amount: 10
+                },
+                temperature: m.melt
+            })
 
             // Compressed Powder Heating
-            if (o.ore_compressed_powder.startsWith('kubejs:')) {
-                event.custom({
-                    type: 'tfc:heating',
-                    ingredient: {
-                        item: o.ore_compressed_powder
-                    },
-                    result_fluid: {
-                        fluid: m.fluid,
-                        amount: 40
-                    },
-                    temperature: m.melt
-                })
-            } 
+            event.custom({
+                type: 'tfc:heating',
+                ingredient: {
+                    item: o.ore_compressed_powder
+                },
+                result_fluid: {
+                    fluid: m.fluid,
+                    amount: 40
+                },
+                temperature: m.melt
+            })
         }
 
         // Roasted Brick Processing
-        if (o.ore_roasted_brick != null && m.ingot != null && o.ore_roasted_powder != null && o.ore_compressed_powder != null) {
+        if (o.ore_roasted_brick != null && m.ingot != null && o.ore_roasted_powder != null && o.ore_refined_powder != null) {
 
             // Roasted Brick
             event.shaped(Item.of(o.ore_roasted_brick),
@@ -637,12 +637,12 @@ ServerEvents.recipes(event => {
                 ]
             ).damageIngredient('#tfc:hammers')
 
-            // Compressed Bar Roasting
+            // Refined Powder Roasting
             event.custom({
                 type: 'createdieselgenerators:basin_fermenting',
                 ingredients: [
                     {
-                        item: o.ore_compressed_powder
+                        item: o.ore_refined_powder
                     },
                     {
                         fluidTag: 'tfc:any_fresh_water',
@@ -653,95 +653,64 @@ ServerEvents.recipes(event => {
                 processingTime: 600,
                 results: [
                     {
-                        item: o.ore_roasted_powder,
-                        amount: 4
+                        item: o.ore_roasted_powder
                     }
                 ]
             })
 
             // Roasted Powder Heating
-            if (o.ore_roasted_powder.startsWith('kubejs:')) {
-                event.custom({
-                    type: 'tfc:heating',
-                    ingredient: {
-                        item: o.ore_roasted_powder
-                    },
-                    result_fluid: {
-                        fluid: m.fluid,
-                        amount: 10
-                    },
-                    temperature: m.melt
-                })
-            } 
+            event.custom({
+                type: 'tfc:heating',
+                ingredient: {
+                    item: o.ore_roasted_powder
+                },
+                result_fluid: {
+                    fluid: m.fluid,
+                    amount: 15
+                },
+                temperature: m.melt
+            })
 
             // Roasted Brick Heating
-            if (o.ore_roasted_brick.startsWith('kubejs:')) {
-                event.custom({
-                    type: 'tfc:heating',
-                    ingredient: {
-                        item: o.ore_roasted_brick
-                    },
-                    result_fluid: {
-                        fluid: m.fluid,
-                        amount: 50
-                    },
-                    temperature: m.melt
-                })
-            } 
+            event.custom({
+                type: 'tfc:heating',
+                ingredient: {
+                    item: o.ore_roasted_brick
+                },
+                result_fluid: {
+                    fluid: m.fluid,
+                    amount: 60
+                },
+                temperature: m.melt
+            })
         }
 
         // Ore Sand Processing
         if(o.ore_sand != null && o.ore_pellet != null && o.ore_compressed_powder != null && o.ore_roasted_brick != null && m.ingot != null) {
             
-            // Pellet Compacting
-            event.custom({
-                type: 'create:compacting',
-                ingredients: [
-                    {
-                        item: o.ore_pellet,
-                        count: 10
-                    }
-                ],
-                results: [
-                    {
-                        item: o.ore_sand,
-                        count: 3
-                    }
+            // Pellet -> Ore Sand
+            event.shapeless(
+                Item.of(o.ore_sand),
+                [
+                    `5x ${o.ore_pellet}`
                 ]
-            })
+            )
 
-            // Compressed Powder Compacting
-            event.custom({
-                type: 'create:compacting',
-                ingredients: [
-                    {
-                        item: o.ore_compressed_powder,
-                        count: 5
-                    }
-                ],
-                results: [
-                    {
-                        item: o.ore_sand,
-                        count: 2
-                    }
+            // Compressed Powder -> Ore Sand
+            event.shapeless(
+                Item.of(o.ore_sand, 2),
+                [
+                    `5x ${o.ore_compressed_powder}`
                 ]
-            })
+            )
 
-            // Roasted Brick Compacting
-            event.custom({
-                type: 'create:compacting',
-                ingredients: [
-                    {
-                        item: o.ore_roasted_brick,
-                        count: 2
-                    }
-                ],
-                results: [
-                    {
-                        item: o.ore_sand
-                    }
+            // Roasted Brick -> Ore Sand
+                event.shapeless(
+                Item.of(o.ore_sand, 3),
+                [
+                    `5x ${o.ore_roasted_brick}`
                 ]
-            })
+            )
 
             // Ore Sand Blasting
             event.custom({
