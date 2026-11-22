@@ -239,6 +239,23 @@ ServerEvents.recipes(event => {
             'upset_last'
         ]
     ).tier(2)
+    event.custom({
+        type: 'railcraft:rolling',
+        key: {
+            A: {
+                tag: 'forge:ingots/andesite_alloy'
+            }
+        },
+        pattern: [
+            'A',
+            'A',
+            'A'
+        ],
+        result: {
+            item: 'create:shaft',
+            count: 12
+        }
+    })
 
     // Cogwheel
     event.remove({output: 'create:cogwheel'})
