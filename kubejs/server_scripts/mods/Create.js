@@ -253,7 +253,7 @@ ServerEvents.recipes(event => {
         ],
         result: {
             item: 'create:shaft',
-            count: 12
+            count: 24
         }
     })
 
