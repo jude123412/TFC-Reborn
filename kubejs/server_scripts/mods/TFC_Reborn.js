@@ -12,7 +12,7 @@ TFCEvents.data(event => {
     event.itemHeat('kubejs:elytra/right_wing', 8.332, 910, 1200)
 
     // Unfired Refactory Brick
-    event.itemHeat('kubejs:unfired_refactory_brick', 2.332, null, null)
+    event.itemHeat('kubejs:unfired_refactory_brick', 0.8, null, null)
 
     // Unfired Ceramic Insulator
     event.itemHeat('kubejs:insulator/unfired_ceramic', 2.332, null, null)
