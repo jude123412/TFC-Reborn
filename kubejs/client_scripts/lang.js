@@ -399,10 +399,10 @@ ClientEvents.lang('en_us', event => {
     event.add('block.kubejs.insulator.ceramic', 'Ceramic Insulator')
     event.add('block.kubejs.insulator.glass', 'Glass Insulator')
     event.add('block.kubejs.precision_machine_frame', 'Precision Machine Frame')
-    event.add('block.kubejs.refactory_clay_block', 'Precision Machine Frame')
-    event.add('block.kubejs.refactory_bricks', 'Precision Machine Frame')
-    event.add('block.kubejs.iron_reinforced_fire_bricks', 'Precision Machine Frame')
-    event.add('block.kubejs.steel_reinforced_fire_bricks', 'Precision Machine Frame')
+    event.add('block.kubejs.refactory_clay_block', 'Refactory Clay Block')
+    event.add('block.kubejs.refactory_bricks', 'Refactory Bricks')
+    event.add('block.kubejs.iron_reinforced_fire_bricks', 'Wrought Iron Reinforced Fire Bricks')
+    event.add('block.kubejs.steel_reinforced_fire_bricks', 'Steel Reinforced Fire Bricks')
 
     // Ore Sand
     event.add('block.kubejs.ore_sand.chromite', 'Chromite Ore Sand')

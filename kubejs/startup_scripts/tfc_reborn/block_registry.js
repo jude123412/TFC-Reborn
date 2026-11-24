@@ -60,7 +60,7 @@ StartupEvents.registry('block', event => {
     // Refactory Clay Block
     event.create('refactory_clay_block')
         .textureAll('kubejs:block/refactory_clay_block')
-        .soundType(SoundType.SAND)
+        .soundType(SoundType.GRAVEL)
         .hardness(0.6)
         .resistance(1.2)
         .requiresTool(false)
