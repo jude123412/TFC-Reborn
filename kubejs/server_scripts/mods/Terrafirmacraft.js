@@ -321,9 +321,22 @@ ServerEvents.recipes(event => {
     })
 
     // Unrefined Paper
-    event.shapeless('tfc:unrefined_paper', [
-        '2x create:pulp'
-    ])
+    event.custom({
+        type: 'tfc:anvil',
+        input: {
+            item: 'create:pulp'
+        },
+        result: {
+            item: 'tfc:unrefined_paper'
+        },
+        tier: 0,
+        rules: [
+            'hit_any',
+            'hit_any',
+            'hit_any'
+        ],
+        "apply_forging_bonus": false
+    })
 
     // Flux
     event.remove({id: 'tfc:quern/fluxstone'})
