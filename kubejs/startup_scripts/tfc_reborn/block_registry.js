@@ -56,4 +56,40 @@ StartupEvents.registry('block', event => {
         .resistance(12)
         .requiresTool(true)
         .tagBlock('minecraft:mineable/pickaxe')
+
+    // Refactory Clay Block
+    event.create('refactory_clay_block')
+        .textureAll('kubejs:block/refactory_clay_block')
+        .soundType(SoundType.SAND)
+        .hardness(0.6)
+        .resistance(1.2)
+        .requiresTool(false)
+        .tagBlock('minecraft:mineable/shovel')
+
+    // Refactory Bricks
+    event.create('refactory_bricks')
+        .textureAll('kubejs:block/refactory_bricks')
+        .soundType(SoundType.STONE)
+        .hardness(5)
+        .resistance(12)
+        .requiresTool(true)
+        .tagBlock('minecraft:mineable/pickaxe')
+
+    // Wrought Iron Reinforced Fire Bricks
+    event.create('iron_reinforced_fire_bricks')
+        .textureAll('kubejs:block/iron_reinforced_fire_bricks')
+        .soundType(SoundType.DEEPSLATE_BRICKS)
+        .hardness(5)
+        .resistance(12)
+        .requiresTool(true)
+        .tagBlock('minecraft:mineable/pickaxe')
+
+    // Steel Reinforced Fire Bricks
+    event.create('steel_reinforced_fire_bricks')
+        .textureAll('kubejs:block/steel_reinforced_fire_bricks')
+        .soundType(SoundType.NETHER_BRICKS)
+        .hardness(6)
+        .resistance(20)
+        .requiresTool(true)
+        .tagBlock('minecraft:mineable/pickaxe')
 })
