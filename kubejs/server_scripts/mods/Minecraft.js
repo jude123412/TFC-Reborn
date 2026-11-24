@@ -689,4 +689,20 @@ ServerEvents.recipes(event => {
             }
         ]
     })
+
+    // TNT
+    event.remove({id: 'minecraft:tnt'})
+    event.shaped(
+        Item.of('minecraft:tnt', 4),
+        [
+            'NSN',
+            'PNP',
+            'NPN'
+        ],
+        {
+            N: 'kubejs:powder/nitrated_blasting_mixture',
+            S: '#bsa:bindings/strong',
+            P: '#forge:paper'
+        }
+    )
 })

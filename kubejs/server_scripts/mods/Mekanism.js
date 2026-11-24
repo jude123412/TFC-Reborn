@@ -201,10 +201,19 @@ ServerEvents.recipes(event => {
     event.remove({id: 'mekanism:processing/lead/nugget/from_ingot'})
     event.remove({id: 'mekanism:processing/uranium/nugget/from_ingot'})
 
-    // Block of Coal Coke
+    // Obsidian TNT
     event.remove({id: 'mekanismadditions:obsidian_tnt'})
-    event.shapeless('mekanismadditions:obsidian_tnt', [
-        'minecraft:tnt',
-        '2x bsa:obsidian'
-    ])
+    event.shaped(
+        Item.of('mekanismadditions:obsidian_tnt', 4),
+        [
+            'RTR',
+            'TOT',
+            'RTR'
+        ],
+        {
+            R: '#tfc:blasting_aggregate',
+            T: 'minecraft:tnt',
+            O: 'bsa:obsidian'
+        }
+    )
 })

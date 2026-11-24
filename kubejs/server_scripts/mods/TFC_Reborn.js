@@ -904,4 +904,54 @@ ServerEvents.recipes(event => {
     })
     tfc.heating('kubejs:metal/unfinished_crowbar/diamond', 1540)
         .resultFluid(Fluid.of('tfc:metal/unknown', 200))
+        
+    // Nitrate Solution
+    event.custom({
+        type: 'tfc:barrel_instant',
+        input_item: {
+            ingredient: {
+                tag: 'forge:dusts/saltpeter'
+            }
+        },
+        input_fluid: {
+            ingredient: {
+                tag: 'tfc:any_fresh_water'
+            },
+            amount: 250
+        },
+        output_fluid: {
+            fluid: 'kubejs:nitrate_solution',
+            amount: 250
+        }
+    }).id('nitrate_solution')
+
+    // Concentrated Blasting Mixture
+    event.shapeless(
+        Item.of('kubejs:powder/concentrated_blasting_mixture', 3), 
+        [
+            '#forge:gunpowder',
+            '#forge:dusts/charcoal',
+            '#forge:sand'
+        ]
+    )
+
+    // Nitrated Blasting Mixture
+    event.custom({
+        type: 'tfc:barrel_sealed',
+        input_item: {
+            ingredient: {
+                item: 'kubejs:powder/concentrated_blasting_mixture'
+            }
+        },
+        input_fluid: {
+            ingredient: {
+                fluid: 'kubejs:nitrate_solution'
+            },
+            amount: 250
+        },
+        output_item: {
+            item: 'kubejs:powder/nitrated_blasting_mixture'
+        },
+        duration: 16000
+    }).id('nitrated_blasting_bixture')
 })

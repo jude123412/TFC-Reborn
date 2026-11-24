@@ -246,4 +246,17 @@ StartupEvents.registry('item', event => {
     event.create('kubejs:metal/unfinished_crowbar/diamond')
         .texture('kubejs:item/metal/unfinished_crowbar/diamond')
         .translationKey('kubejs:item/metal/unfinished_crowbar/diamond')
+
+    // Concentrated Blasting Mixture
+    event.create('kubejs:powder/concentrated_blasting_mixture')
+        .texture('kubejs:item/powder/concentrated_blasting_mixture')
+        .translationKey('kubejs:item/powder/concentrated_blasting_mixture')
+        .tag('forge:dusts')
+
+    // Nitrated Blasting Mixture
+    event.create('kubejs:powder/nitrated_blasting_mixture')
+        .texture('kubejs:item/powder/nitrated_blasting_mixture')
+        .translationKey('kubejs:item/powder/nitrated_blasting_mixture')
+        .tag('forge:dusts')
+        .tag('tfc:usable_in_powder_keg')
 })

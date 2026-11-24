@@ -165,6 +165,8 @@ ClientEvents.lang('en_us', event => {
     event.add('item.kubejs.powder.obsidian', 'Obsidian Powder')
     event.add('item.kubejs.powder.wood', 'Sawdust')
     event.add('item.kubejs.powder.ender', 'Ender Pearl Powder')
+    event.add('item.kubejs.powder.concentrated_blasting_mixture', 'Concentrated Blasting Mixture')
+    event.add('item.kubejs.powder.nitrated_blasting_mixture', 'Nitrated Blasting Powder')
 
     // Misc Items
     event.add('item.kubejs.coal_coke', 'Coal Coke')
@@ -332,6 +334,9 @@ ClientEvents.lang('en_us', event => {
     event.add('item.kubejs.slurry.sphalerite_bucket', 'Sphalerite Slurry Bucket')
     event.add('item.kubejs.slurry.tetrahedrite_bucket', 'Tetrahedrite Slurry Bucket')
 
+    // Misc Liquid Buckets
+    event.add('item.kubejs.nitrate_solution_bucket', 'Nitrate Solution Bucket')
+
     // Fluid Slurries
     event.add('fluid.kubejs.slurry.chromite', 'Chromite Slurry')
     event.add('fluid.kubejs.slurry.bauxite', 'Bauxite Slurry')
@@ -350,12 +355,15 @@ ClientEvents.lang('en_us', event => {
     event.add('fluid.kubejs.slurry.sphalerite', 'Sphalerite Slurry')
     event.add('fluid.kubejs.slurry.tetrahedrite', 'Tetrahedrite Slurry')
 
-    // Metals
+    // Fluid Metals
     event.add('metal.kubejs.andesite_alloy', 'Andesite Alloy')
     event.add('metal.kubejs.andesite', 'Andesite')
     event.add('metal.kubejs.manasteel', 'Manasteel')
     event.add('metal.kubejs.elementium', 'Elementium')
     event.add('metal.kubejs.terrasteel', 'Terrasteel')
+
+    // Misc Fluids
+    event.add('fluid.kubejs.nitrate_solution', 'Nitrate Solution')
     
     // Liquid Metal Blocks
     event.add('block.kubejs.metal.andesite_alloy', 'Andesite Alloy')
@@ -381,6 +389,9 @@ ClientEvents.lang('en_us', event => {
     event.add('block.kubejs.slurry.limonite', 'Limonite Slurry')
     event.add('block.kubejs.slurry.sphalerite', 'Sphalerite Slurry')
     event.add('block.kubejs.slurry.tetrahedrite', 'Tetrahedrite Slurry')
+
+    // Misc Liquid Blocks
+    event.add('block.kubejs.nitrate_solution', 'Nitrate Solution')
 
     // Blocks
     event.add('block.kubejs.coal_coke_block', 'Block of Coal Coke')
@@ -423,6 +434,8 @@ ClientEvents.lang('en_us', event => {
     event.add('tfc.recipe.barrel.minecraft.treated_wood_stick', 'Treated Wood Stick')
     event.add('tfc.recipe.barrel.minecraft.redstone_board_etching', 'Redstone Board Etching')
     event.add('tfc.recipe.barrel.minecraft.pipe_sealant', 'Pipe Sealant')
+    event.add('tfc.recipe.barrel.minecraft.nitrate_solution', 'Nitrate Solution')
+    event.add('tfc.recipe.barrel.minecraft.nitrated_blasting_bixture', 'Nitrated Blasting Mixture')
 
     // Knapping Recipe Names
     event.add('tfc.jei.refactory_clay_knapping', 'Refactory Clay Knapping Recipe')

@@ -252,6 +252,16 @@ ServerEvents.tags('item', event => {
     event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/gneiss')
     event.add('forge:cobblestone/mossy', 'tfc:rock/mossy_cobble/marble')
 
+    // Blasting Aggregate
+    event.add('tfc:blasting_aggregate', 'tfc:rock/loose/quartzite')
+    event.add('tfc:blasting_aggregate', 'tfc:rock/mossy_loose/quartzite')
+    event.add('tfc:blasting_aggregate', 'tfc:rock/loose/gneiss')
+    event.add('tfc:blasting_aggregate', 'tfc:rock/mossy_loose/gneiss')
+    event.add('tfc:blasting_aggregate', 'tfc:rock/loose/basalt')
+    event.add('tfc:blasting_aggregate', 'tfc:rock/mossy_loose/basalt')
+    event.add('tfc:blasting_aggregate', 'tfc:rock/loose/gabbro')
+    event.add('tfc:blasting_aggregate', 'tfc:rock/mossy_loose/gabbro')
+
     // Remove these to stop them showing up
     // in railcraft loot tables
     event.removeAll('railcraft:ingot_chest_loot')
