@@ -401,6 +401,7 @@ ClientEvents.lang('en_us', event => {
     event.add('block.kubejs.precision_machine_frame', 'Precision Machine Frame')
     event.add('block.kubejs.refactory_clay_block', 'Refactory Clay Block')
     event.add('block.kubejs.refactory_bricks', 'Refactory Bricks')
+    event.add('block.kubejs.steel_reinforced_refactory_bricks', 'Steel Reinforced Refactory Bricks')
     event.add('block.kubejs.iron_reinforced_fire_bricks', 'Wrought Iron Reinforced Fire Bricks')
     event.add('block.kubejs.steel_reinforced_fire_bricks', 'Steel Reinforced Fire Bricks')
 

@@ -75,6 +75,15 @@ StartupEvents.registry('block', event => {
         .requiresTool(true)
         .tagBlock('minecraft:mineable/pickaxe')
 
+    // Steel Reinforced Refactory Bricks
+    event.create('steel_reinforced_refactory_bricks')
+        .textureAll('kubejs:block/steel_reinforced_refactory_bricks')
+        .soundType(SoundType.STONE)
+        .hardness(6)
+        .resistance(20)
+        .requiresTool(true)
+        .tagBlock('minecraft:mineable/pickaxe')
+
     // Wrought Iron Reinforced Fire Bricks
     event.create('iron_reinforced_fire_bricks')
         .textureAll('kubejs:block/iron_reinforced_fire_bricks')
