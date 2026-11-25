@@ -148,6 +148,10 @@ TFCEvents.data(event => {
         if (m.stairs != null && m.stairs.startsWith('kubejs:')) {
             event.itemHeat(m.block, m.capacity * 2, m.work, m.weld)
         }
+
+        if (m.anvil != null && m.anvil.startsWith('kubejs:')) {
+            event.itemHeat(m.anvil, 40.0, m.work, m.weld)
+        }
     }
 })
 
@@ -1014,6 +1018,23 @@ ServerEvents.recipes(event => {
 
             tfc.heating(m.stairs, m.melt)
                 .resultFluid(Fluid.of(m.fluid, 600))
+        }
+
+        if (m.anvil != null && m.double_ingot != null && m.fluid != null) {
+            event.shaped(
+                Item.of(m.anvil),
+                [
+                    'DDD',
+                    ' D ',
+                    'DDD'
+                ],
+                {
+                    D: m.double_ingot
+                }
+            )
+            
+            tfc.heating(m.anvil, m.melt)
+                .resultFluid(Fluid.of(m.fluid, 1400))
         }
     }
 })

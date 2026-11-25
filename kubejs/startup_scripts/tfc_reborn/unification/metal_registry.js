@@ -207,6 +207,18 @@ StartupEvents.registry('block', event => {
 				.requiresTool(true)
 				.tagBlock('minecraft:mineable/pickaxe')
 		})
+
+		// Metal Anvil
+		global.createIfNeeded(m.anvil, () => {
+			event.create(m.anvil, 'tfc:anvil')
+				.tier(m.tier)
+				.textureAll(`kubejs:block/metal/anvil/${metal}`)
+				.soundType(SoundType.ANVIL)
+				.hardness(10)
+				.resistance(20)
+				.requiresTool(true)
+				.tagBlock('minecraft:mineable/pickaxe')
+				.tagItem(`tfc:metal_item/${metal}`)
 		})
 	}
 })

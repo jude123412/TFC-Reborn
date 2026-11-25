@@ -451,6 +451,10 @@ ClientEvents.lang('en_us', event => {
     event.add('block.kubejs.metal.block.elementium_stairs', 'Elementium Plated Stairs')
     event.add('block.kubejs.metal.block.terrasteel_stairs', 'Terrasteel Plated Stairs')
 
+    // Metal Anvils
+    event.add('block.kubejs.metal.anvil.manasteel', 'Manasteel Anvil')
+    event.add('block.kubejs.metal.anvil.terrasteel', 'Terrasteel Anvil')
+
     // Barrel Recipes Names
     event.add('tfc.recipe.barrel.minecraft.wood_pulp', 'Wood Pulp')
     event.add('tfc.recipe.barrel.minecraft.prismarine_crystals', 'Prismarine Crystals')

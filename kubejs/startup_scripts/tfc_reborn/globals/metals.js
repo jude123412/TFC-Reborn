@@ -13,6 +13,7 @@ global.metals = {
         double_ingot: 'firmalife:metal/double_ingot/chromium',
         sheet: 'firmalife:metal/sheet/chromium',
         double_sheet: null,
+        anvil: null,
         
         nugget: null,
         plate: null,
@@ -65,6 +66,7 @@ global.metals = {
         double_ingot: 'firmalife:metal/double_ingot/stainless_steel',
         sheet: 'firmalife:metal/sheet/stainless_steel',
         double_sheet: null,
+        anvil: null,
         
         nugget: null,
         plate: null,
@@ -117,6 +119,7 @@ global.metals = {
         double_ingot: 'tfc_ie_addon:metal/double_ingot/electrum',
         sheet: 'tfc_ie_addon:metal/sheet/electrum',
         double_sheet: null,
+        anvil: null,
 
         nugget: 'immersiveengineering:nugget_electrum',
         plate: 'kubejs:metal/plate/electrum',
@@ -169,6 +172,7 @@ global.metals = {
         double_ingot: 'tfc_ie_addon:metal/double_ingot/constantan',
         sheet: 'tfc_ie_addon:metal/sheet/constantan',
         double_sheet: null,
+        anvil: null,
 
         nugget: 'immersiveengineering:nugget_constantan',
         plate: 'kubejs:metal/plate/constantan',
@@ -221,6 +225,7 @@ global.metals = {
         double_ingot: 'tfc_ie_addon:metal/double_ingot/aluminum',
         sheet: 'tfc_ie_addon:metal/sheet/aluminum',
         double_sheet: null,
+        anvil: null,
 
         nugget: 'immersiveengineering:nugget_aluminum',
         plate: 'kubejs:metal/plate/aluminum',
@@ -273,6 +278,7 @@ global.metals = {
         double_ingot: 'tfc_ie_addon:metal/double_ingot/lead',
         sheet: 'tfc_ie_addon:metal/sheet/lead',
         double_sheet: null,
+        anvil: null,
 
         nugget: 'immersiveengineering:nugget_lead',
         plate: 'kubejs:metal/plate/lead',
@@ -325,6 +331,7 @@ global.metals = {
         double_ingot: 'tfc_ie_addon:metal/double_ingot/uranium',
         sheet: 'tfc_ie_addon:metal/sheet/uranium',
         double_sheet: null,
+        anvil: null,
 
         nugget: 'immersiveengineering:nugget_uranium',
         plate: 'kubejs:metal/plate/uranium',
@@ -377,6 +384,7 @@ global.metals = {
         double_ingot: 'tfc:metal/double_ingot/bismuth',
         sheet: 'tfc:metal/sheet/bismuth',
         double_sheet: null,
+        anvil: null,
 
         nugget: null,
         plate: null,
@@ -429,6 +437,7 @@ global.metals = {
         double_ingot: 'tfc:metal/double_ingot/bismuth_bronze',
         sheet: 'tfc:metal/sheet/bismuth_bronze',
         double_sheet: null,
+        anvil: null,
 
         nugget: null,
         plate: null,
@@ -481,6 +490,7 @@ global.metals = {
         double_ingot: 'tfc:metal/double_ingot/black_bronze',
         sheet: 'tfc:metal/sheet/black_bronze',
         double_sheet: null,
+        anvil: null,
 
         nugget: null,
         plate: null,
@@ -533,6 +543,7 @@ global.metals = {
         double_ingot: 'tfc:metal/double_ingot/bronze',
         sheet: 'tfc:metal/sheet/bronze',
         double_sheet: null,
+        anvil: null,
 
         nugget: 'mekanism:nugget_bronze',
         plate: 'kubejs:metal/plate/bronze',
@@ -585,6 +596,7 @@ global.metals = {
         double_ingot: 'tfc:metal/double_ingot/brass',
         sheet: 'tfc:metal/sheet/brass',
         double_sheet: null,
+        anvil: null,
 
         nugget: 'create:brass_nugget',
         plate: 'kubejs:metal/plate/brass',
@@ -637,6 +649,7 @@ global.metals = {
         double_ingot: 'tfc:metal/double_ingot/copper',
         sheet: 'tfc:metal/sheet/copper',
         double_sheet: null,
+        anvil: null,
         
         nugget: 'immersiveengineering:nugget_copper',
         plate: 'kubejs:metal/plate/copper',
@@ -689,6 +702,7 @@ global.metals = {
         double_ingot: 'tfc:metal/double_ingot/gold',
         sheet: 'tfc:metal/sheet/gold',
         double_sheet: null,
+        anvil: null,
 
         nugget: 'minecraft:gold_nugget',
         plate: 'kubejs:metal/plate/gold',
@@ -741,6 +755,7 @@ global.metals = {
         double_ingot: 'tfc:metal/double_ingot/nickel',
         sheet: 'tfc:metal/sheet/nickel',
         double_sheet: null,
+        anvil: null,
 
         nugget: 'immersiveengineering:nugget_nickel',
         plate: 'kubejs:metal/plate/nickel',
@@ -793,6 +808,7 @@ global.metals = {
         double_ingot: 'tfc:metal/double_ingot/rose_gold',
         sheet: 'tfc:metal/sheet/rose_gold',
         double_sheet: null,
+        anvil: null,
 
         nugget: null,
         plate: null,
@@ -845,6 +861,7 @@ global.metals = {
         double_ingot: 'tfc:metal/double_ingot/silver',
         sheet: 'tfc:metal/sheet/silver',
         double_sheet: null,
+        anvil: null,
 
         nugget: 'immersiveengineering:nugget_silver',
         plate: 'kubejs:metal/plate/silver',
@@ -897,6 +914,7 @@ global.metals = {
         double_ingot: 'tfc:metal/double_ingot/tin',
         sheet: 'tfc:metal/sheet/tin',
         double_sheet: null,
+        anvil: null,
 
         nugget: null,
         plate: 'kubejs:metal/plate/tin',
@@ -949,6 +967,7 @@ global.metals = {
         double_ingot: 'tfc:metal/double_ingot/zinc',
         sheet: 'tfc:metal/sheet/zinc',
         double_sheet: null,
+        anvil: null,
 
         nugget: 'create:zinc_nugget',
         plate: 'kubejs:metal/plate/zinc',
@@ -1001,6 +1020,7 @@ global.metals = {
         double_ingot: 'tfc:metal/double_ingot/sterling_silver',
         sheet: 'tfc:metal/sheet/sterling_silver',
         double_sheet: null,
+        anvil: null,
 
         nugget: null,
         plate: null,
@@ -1053,6 +1073,7 @@ global.metals = {
         double_ingot: 'tfc:metal/double_ingot/wrought_iron',
         sheet: 'tfc:metal/sheet/wrought_iron',
         double_sheet: null,
+        anvil: null,
 
         nugget: 'minecraft:iron_nugget',
         plate: 'kubejs:metal/plate/wrought_iron',
@@ -1105,6 +1126,7 @@ global.metals = {
         double_ingot: 'tfc:metal/double_ingot/cast_iron',
         sheet: 'tfc:metal/sheet/cast_iron',
         double_sheet: null,
+        anvil: null,
 
         nugget: null,
         plate: null,
@@ -1157,6 +1179,7 @@ global.metals = {
         double_ingot: 'tfc:metal/double_ingot/steel',
         sheet: 'tfc:metal/sheet/steel',
         double_sheet: null,
+        anvil: null,
 
         nugget: 'immersiveengineering:nugget_steel',
         plate: 'kubejs:metal/plate/steel',
@@ -1209,6 +1232,7 @@ global.metals = {
         double_ingot: 'tfc:metal/double_ingot/black_steel',
         sheet: 'tfc:metal/sheet/black_steel',
         double_sheet: null,
+        anvil: null,
 
         nugget: null,
         plate: 'kubejs:metal/plate/black_steel',
@@ -1261,6 +1285,7 @@ global.metals = {
         double_ingot: 'tfc:metal/double_ingot/blue_steel',
         sheet: 'tfc:metal/sheet/blue_steel',
         double_sheet: null,
+        anvil: null,
 
         nugget: null,
         plate: null,
@@ -1313,6 +1338,7 @@ global.metals = {
         double_ingot: 'tfc:metal/double_ingot/red_steel',
         sheet: 'tfc:metal/sheet/red_steel',
         double_sheet: null,
+        anvil: null,
 
         nugget: null,
         plate: 'kubejs:metal/plate/red_steel',
@@ -1365,6 +1391,7 @@ global.metals = {
         double_ingot: 'rosia:invar_double_ingot',
         sheet: 'rosia:invar_sheet',
         double_sheet: null,
+        anvil: null,
 
         nugget: null,
         plate: 'kubejs:metal/plate/invar',
@@ -1417,6 +1444,7 @@ global.metals = {
         double_ingot: 'rosia:purple_steel_double_ingot',
         sheet: 'rosia:purple_steel_sheet',
         double_sheet: null,
+        anvil: null,
 
         nugget: null,
         plate: null,
@@ -1469,6 +1497,7 @@ global.metals = {
         double_ingot: null,
         sheet: null,
         double_sheet: null,
+        anvil: null,
 
         nugget: null,
         plate: null,
@@ -1521,6 +1550,7 @@ global.metals = {
         double_ingot: null,
         sheet: null,
         double_sheet: null,
+        anvil: null,
 
         nugget: null,
         plate: null,
@@ -1560,7 +1590,7 @@ global.metals = {
         unfinished_boots: null,
     },
     manasteel: {
-        tier: 3,
+        tier: 4,
         melt: 1285,
         capacity: 2.212,
         work: 671,
@@ -1573,6 +1603,7 @@ global.metals = {
         double_ingot: 'kubejs:metal/double_ingot/manasteel',
         sheet: 'kubejs:metal/sheet/manasteel',
         double_sheet: 'kubejs:metal/double_sheet/manasteel',
+        anvil: 'kubejs:metal/anvil/manasteel',
 
         nugget: 'botania:manasteel_nugget',
         plate: 'kubejs:metal/plate/manasteel',
@@ -1625,6 +1656,7 @@ global.metals = {
         double_ingot: 'kubejs:metal/double_ingot/elementium',
         sheet: 'kubejs:metal/sheet/elementium',
         double_sheet: 'kubejs:metal/double_sheet/elementium',
+        anvil: null,
 
         nugget: 'botania:elementium_nugget',
         plate: 'kubejs:metal/plate/elementium',
@@ -1664,7 +1696,7 @@ global.metals = {
         unfinished_boots: 'kubejs:metal/unfinished_boots/elementium',
     },
     terrasteel: {
-        tier: 4,
+        tier: 5,
         melt: 1535,
         capacity: 2.857,
         work: 921,
@@ -1677,6 +1709,7 @@ global.metals = {
         double_ingot: 'kubejs:metal/double_ingot/terrasteel',
         sheet: 'kubejs:metal/sheet/terrasteel',
         double_sheet: 'kubejs:metal/double_sheet/terrasteel',
+        anvil: 'kubejs:metal/anvil/terrasteel',
 
         nugget: 'botania:terrasteel_nugget',
         plate: null,
