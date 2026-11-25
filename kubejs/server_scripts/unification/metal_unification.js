@@ -281,7 +281,7 @@ ServerEvents.recipes(event => {
                     TFC.itemStackProvider.of(m.double_ingot).copyHeat(),
                     Ingredient.of(m.ingot),
                     Ingredient.of(m.ingot),
-                    m.tier
+                    m.tier - 1
                 )
 
                 tfc.heating(m.double_ingot , m.melt)
