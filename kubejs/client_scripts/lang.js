@@ -430,6 +430,27 @@ ClientEvents.lang('en_us', event => {
     event.add('block.kubejs.wood.support.dreamwood', 'Dreamwood Vertical Support')
     event.add('block.kubejs.wood.support.dreamwood_horizontal', 'Dreamwood Horizontal Support')
 
+    // Metal Blocks
+    event.add('block.kubejs.metal.block.invar', 'Invar Plated Block')
+    event.add('block.kubejs.metal.block.purple_steel', 'Purple Steel Plated Block')
+    event.add('block.kubejs.metal.block.manasteel', 'Manasteel Plated Block')
+    event.add('block.kubejs.metal.block.elementium', 'Elementium Plated Block')
+    event.add('block.kubejs.metal.block.terrasteel', 'Terrasteel Plated Block')
+
+    // Metal Slabs
+    event.add('block.kubejs.metal.block.invar_slab', 'Invar Plated Slab')
+    event.add('block.kubejs.metal.block.purple_steel_slab', 'Purple Steel Plated Slab')
+    event.add('block.kubejs.metal.block.manasteel_slab', 'Manasteel Plated Slab')
+    event.add('block.kubejs.metal.block.elementium_slab', 'Elementium Plated Slab')
+    event.add('block.kubejs.metal.block.terrasteel_slab', 'Terrasteel Plated Slab')
+
+    // Metal Stairs
+    event.add('block.kubejs.metal.block.invar_stairs', 'Invar Plated Stairs')
+    event.add('block.kubejs.metal.block.purple_steel_stairs', 'Purple Steel Plated Stairs')
+    event.add('block.kubejs.metal.block.manasteel_stairs', 'Manasteel Plated Stairs')
+    event.add('block.kubejs.metal.block.elementium_stairs', 'Elementium Plated Stairs')
+    event.add('block.kubejs.metal.block.terrasteel_stairs', 'Terrasteel Plated Stairs')
+
     // Barrel Recipes Names
     event.add('tfc.recipe.barrel.minecraft.wood_pulp', 'Wood Pulp')
     event.add('tfc.recipe.barrel.minecraft.prismarine_crystals', 'Prismarine Crystals')

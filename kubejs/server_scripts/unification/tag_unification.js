@@ -201,6 +201,10 @@ ServerEvents.tags('item', event => {
     // TFC Wood Knapping
     event.add('tfc:wood_knapping', '#tfc:lumber')
 
+    // Minecreaft Iron
+    event.remove('forge:ingots/cast_iron', 'minecraft:iron_ingot')
+    event.add('forge:ingots/wrought_iron', 'minecraft:iron_ingot')
+
     // Iron Tags
     event.add('forge:ingots/iron', '#forge:ingots/wrought_iron')
     event.add('forge:rods/iron', '#forge:rods/wrought_iron')

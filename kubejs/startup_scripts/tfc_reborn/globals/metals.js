@@ -21,6 +21,9 @@ global.metals = {
         wire: null,
         rod: 'firmalife:metal/rod/chromium',
         dust: null,
+        block: 'firmalife:metal/block/chromium',
+        slab: 'firmalife:metal/block/chromium_slab',
+        stairs: 'firmalife:metal/block/chromium_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -70,6 +73,9 @@ global.metals = {
         wire: null,
         rod: 'firmalife:metal/rod/stainless_steel',
         dust: null,
+        block: 'firmalife:metal/block/stainless_steel',
+        slab: 'firmalife:metal/block/stainless_steel_slab',
+        stairs: 'firmalife:metal/block/stainless_steel_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -119,6 +125,9 @@ global.metals = {
         wire: 'kubejs:metal/wire/electrum',
         rod: 'kubejs:metal/rod/electrum',
         dust: null,
+        block: 'tfc_ie_addon:metal/block/electrum',
+        slab: 'tfc_ie_addon:metal/block/electrum_slab',
+        stairs: 'tfc_ie_addon:metal/block/electrum_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -168,6 +177,9 @@ global.metals = {
         wire: null,
         rod: null,
         dust: null,
+        block: 'tfc_ie_addon:metal/block/constantan',
+        slab: 'tfc_ie_addon:metal/block/constantan_slab',
+        stairs: 'tfc_ie_addon:metal/block/constantan_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -217,6 +229,9 @@ global.metals = {
         wire: 'kubejs:metal/wire/aluminum',
         rod: 'kubejs:metal/rod/aluminum',
         dust: 'kubejs:metal/powder/aluminum',
+        block: 'tfc_ie_addon:metal/block/aluminum',
+        slab: 'tfc_ie_addon:metal/block/aluminum_slab',
+        stairs: 'tfc_ie_addon:metal/block/aluminum_slab',
 
         aiot: null,
         pickaxe: null,
@@ -266,6 +281,9 @@ global.metals = {
         wire: 'kubejs:metal/wire/lead',
         rod: null,
         dust: 'kubejs:metal/powder/lead',
+        block: 'tfc_ie_addon:metal/block/lead',
+        slab: 'tfc_ie_addon:metal/block/lead_slab',
+        stairs: 'tfc_ie_addon:metal/block/lead_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -315,6 +333,9 @@ global.metals = {
         wire: null,
         rod: null,
         dust: null,
+        block: 'tfc_ie_addon:metal/block/uranium',
+        slab: 'tfc_ie_addon:metal/block/uranium_slab',
+        stairs: 'tfc_ie_addon:metal/block/uranium_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -364,6 +385,9 @@ global.metals = {
         wire: null,
         rod: 'tfc:metal/rod/bismuth',
         dust: null,
+        block: 'tfc:metal/block/bismuth',
+        slab: 'tfc:metal/block/bismuth_slab',
+        stairs: 'tfc:metal/block/bismuth_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -413,6 +437,9 @@ global.metals = {
         wire: null,
         rod: 'tfc:metal/rod/bismuth_bronze',
         dust: null,
+        block: 'tfc:metal/block/bismuth_bronze',
+        slab: 'tfc:metal/block/bismuth_bronze_slab',
+        stairs: 'tfc:metal/block/bismuth_bronze_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -462,6 +489,9 @@ global.metals = {
         wire: null,
         rod: 'tfc:metal/rod/black_bronze',
         dust: null,
+        block: 'tfc:metal/block/black_bronze',
+        slab: 'tfc:metal/block/black_bronze_slab',
+        stairs: 'tfc:metal/block/black_bronze_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -511,6 +541,9 @@ global.metals = {
         wire: null,
         rod: 'tfc:metal/rod/bronze',
         dust: null,
+        block: 'tfc:metal/block/bronze',
+        slab: 'tfc:metal/block/bronze_slab',
+        stairs: 'tfc:metal/block/bronze_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -560,6 +593,9 @@ global.metals = {
         wire: null,
         rod: 'tfc:metal/rod/brass',
         dust: null,
+        block: 'tfc:metal/block/brass',
+        slab: 'tfc:metal/block/brass_slab',
+        stairs: 'tfc:metal/block/brass_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -609,6 +645,9 @@ global.metals = {
         wire: 'kubejs:metal/wire/copper',
         rod: 'tfc:metal/rod/copper',
         dust: 'kubejs:metal/powder/copper',
+        block: 'tfc:metal/block/copper',
+        slab: 'tfc:metal/block/copper_slab',
+        stairs: 'tfc:metal/block/copper_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -658,6 +697,9 @@ global.metals = {
         wire: 'kubejs:metal/wire/gold',
         rod: 'tfc:metal/rod/gold',
         dust: 'kubejs:metal/powder/gold',
+        block: 'tfc:metal/block/gold',
+        slab: 'tfc:metal/block/gold_slab',
+        stairs: 'tfc:metal/block/gold_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -707,6 +749,9 @@ global.metals = {
         wire: null,
         rod: 'tfc:metal/rod/nickel',
         dust: null,
+        block: 'tfc:metal/block/nickel',
+        slab: 'tfc:metal/block/nickel_slab',
+        stairs: 'tfc:metal/block/nickel_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -756,6 +801,9 @@ global.metals = {
         wire: null,
         rod: 'tfc:metal/rod/rose_gold',
         dust: null,
+        block: 'tfc:metal/block/rose_gold',
+        slab: 'tfc:metal/block/rose_gold_slab',
+        stairs: 'tfc:metal/block/rose_gold_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -805,6 +853,9 @@ global.metals = {
         wire: null,
         rod: 'tfc:metal/rod/silver',
         dust: 'kubejs:metal/powder/silver',
+        block: 'tfc:metal/block/silver',
+        slab: 'tfc:metal/block/silver_slab',
+        stairs: 'tfc:metal/block/silver_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -854,6 +905,9 @@ global.metals = {
         wire: null,
         rod: 'tfc:metal/rod/tin',
         dust: null,
+        block: 'tfc:metal/block/tin',
+        slab: 'tfc:metal/block/tin_slab',
+        stairs: 'tfc:metal/block/tin_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -903,6 +957,9 @@ global.metals = {
         wire: null,
         rod: 'tfc:metal/rod/zinc',
         dust: null,
+        block: 'tfc:metal/block/zinc',
+        slab: 'tfc:metal/block/zinc_slab',
+        stairs: 'tfc:metal/block/zinc_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -952,6 +1009,9 @@ global.metals = {
         wire: null,
         rod: 'tfc:metal/rod/sterling_silver',
         dust: null,
+        block: 'tfc:metal/block/sterling_silver',
+        slab: 'tfc:metal/block/sterling_silver_slab',
+        stairs: 'tfc:metal/block/sterling_silver_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -1001,6 +1061,9 @@ global.metals = {
         wire: 'kubejs:metal/wire/wrought_iron',
         rod: 'tfc:metal/rod/wrought_iron',
         dust: 'kubejs:metal/powder/wrought_iron',
+        block: 'tfc:metal/block/wrought_iron',
+        slab: 'tfc:metal/block/wrought_iron_slab',
+        stairs: 'tfc:metal/block/wrought_iron_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -1050,6 +1113,9 @@ global.metals = {
         wire: null,
         rod: 'tfc:metal/rod/cast_iron',
         dust: null,
+        block: 'tfc:metal/block/cast_iron',
+        slab: 'tfc:metal/block/cast_iron_slab',
+        stairs: 'tfc:metal/block/cast_iron_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -1099,6 +1165,9 @@ global.metals = {
         wire: 'kubejs:metal/wire/steel',
         rod: 'tfc:metal/rod/steel',
         dust: 'kubejs:metal/powder/steel',
+        block: 'tfc:metal/block/steel',
+        slab: 'tfc:metal/block/steel_slab',
+        stairs: 'tfc:metal/block/steel_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -1148,6 +1217,9 @@ global.metals = {
         wire: null,
         rod: 'tfc:metal/rod/black_steel',
         dust: null,
+        block: 'tfc:metal/block/black_steel',
+        slab: 'tfc:metal/block/black_steel_slab',
+        stairs: 'tfc:metal/block/black_steel_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -1197,6 +1269,9 @@ global.metals = {
         wire: null,
         rod: 'tfc:metal/rod/blue_steel',
         dust: null,
+        block: 'tfc:metal/block/blue_steel',
+        slab: 'tfc:metal/block/blue_steel_slab',
+        stairs: 'tfc:metal/block/blue_steel_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -1246,6 +1321,9 @@ global.metals = {
         wire: null,
         rod: 'tfc:metal/rod/red_steel',
         dust: null,
+        block: 'tfc:metal/block/red_steel',
+        slab: 'tfc:metal/block/red_steel_slab',
+        stairs: 'tfc:metal/block/red_steel_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -1295,6 +1373,9 @@ global.metals = {
         wire: null,
         rod: 'rosia:invar_rod',
         dust: null,
+        block: 'kubejs:metal/block/invar',
+        slab: 'kubejs:metal/block/invar_slab',
+        stairs: 'kubejs:metal/block/invar_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -1344,6 +1425,9 @@ global.metals = {
         wire: 'kubejs:metal/wire/purple_steel',
         rod: 'rosia:purple_steel_rod',
         dust: null,
+        block: 'kubejs:metal/block/purple_steel',
+        slab: 'kubejs:metal/block/purple_steel_slab',
+        stairs: 'kubejs:metal/block/purple_steel_stairs',
 
         aiot: null,
         pickaxe: null,
@@ -1393,6 +1477,9 @@ global.metals = {
         wire: null,
         rod: null,
         dust: null,
+        block: null,
+        slab: null,
+        stairs: null,
 
         aiot: null,
         pickaxe: null,
@@ -1442,6 +1529,9 @@ global.metals = {
         wire: null,
         rod: null,
         dust: null,
+        block: null,
+        slab: null,
+        stairs: null,
 
         aiot: null,
         pickaxe: null,
@@ -1491,6 +1581,9 @@ global.metals = {
         wire: null,
         rod: null,
         dust: null,
+        block: 'kubejs:metal/block/manasteel',
+        slab: 'kubejs:metal/block/manasteel_slab',
+        stairs: 'kubejs:metal/block/manasteel_stairs',
 
         aiot: 'aiotbotania:manasteel_aiot',
         pickaxe: 'botania:manasteel_pick',
@@ -1540,6 +1633,9 @@ global.metals = {
         wire: null,
         rod: null,
         dust: null,
+        block: 'kubejs:metal/block/elementium',
+        slab: 'kubejs:metal/block/elementium_slab',
+        stairs: 'kubejs:metal/block/elementium_stairs',
 
         aiot: 'aiotbotania:elementium_aiot',
         pickaxe: 'botania:elementium_pickaxe',
@@ -1589,6 +1685,9 @@ global.metals = {
         wire: null,
         rod: null,
         dust: null,
+        block: 'kubejs:metal/block/terrasteel',
+        slab: 'kubejs:metal/block/terrasteel_slab',
+        stairs: 'kubejs:metal/block/terrasteel_stairs',
 
         aiot: 'aiotbotania:terra_aiot',
         pickaxe: 'botania:terra_pick',

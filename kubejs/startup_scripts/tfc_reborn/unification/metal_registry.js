@@ -169,6 +169,47 @@ StartupEvents.registry('item', event => {
 	}
 })
 
+StartupEvents.registry('block', event => {
+
+	// Block Registry
+	for(const metal in global.metals) {
+		let m = global.metals[metal]
+
+		// Metal Block
+		global.createIfNeeded(m.block, () => {
+			event.create(m.block)
+				.textureAll(`kubejs:block/metal/block/${metal}`)
+				.soundType(SoundType.METAL)
+				.hardness(5)
+				.resistance(12)
+				.requiresTool(true)
+				.tagBlock('minecraft:mineable/shovel')
+		})
+
+		// Metal Slab
+		global.createIfNeeded(m.slab, () => {
+			event.create(m.slab, 'slab')
+				.textureAll(`kubejs:block/metal/block/${metal}`)
+				.soundType(SoundType.METAL)
+				.hardness(5)
+				.resistance(12)
+				.requiresTool(true)
+				.tagBlock('minecraft:mineable/shovel')
+		})
+
+		// Metal Stairs
+		global.createIfNeeded(m.stairs, () => {
+			event.create(m.stairs, 'stairs')
+				.textureAll(`kubejs:block/metal/block/${metal}`)
+				.soundType(SoundType.METAL)
+				.hardness(5)
+				.resistance(12)
+				.requiresTool(true)
+				.tagBlock('minecraft:mineable/shovel')
+		})
+	}
+})
+
 StartupEvents.registry('fluid', event => {
 
 	// Metal Fluid Registry

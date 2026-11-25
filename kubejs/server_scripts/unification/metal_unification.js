@@ -140,10 +140,8 @@ TFCEvents.data(event => {
 })
 
 ServerEvents.tags('item', event => {
-    // Fix cast iron tag
-    event.remove('forge:ingots/cast_iron', 'minecraft:iron_ingot')
-    event.add('forge:ingots/wrought_iron', 'minecraft:iron_ingot')
-    
+
+    // Recipe Removal    
     
     for (const metal in global.metals) {
         let m = global.metals[metal]
