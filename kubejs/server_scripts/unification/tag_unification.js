@@ -267,6 +267,10 @@ ServerEvents.tags('item', event => {
     event.add('tfc:blasting_aggregate', 'tfc:rock/loose/gabbro')
     event.add('tfc:blasting_aggregate', 'tfc:rock/mossy_loose/gabbro')
 
+    // Glass Batches
+    event.add('tfc:glass_batches', '#forge:slag')
+    event.add('tfc:glass_batches_not_tier_1', '#forge:slag') 
+
     // Remove these to stop them showing up
     // in railcraft loot tables
     event.removeAll('railcraft:ingot_chest_loot')

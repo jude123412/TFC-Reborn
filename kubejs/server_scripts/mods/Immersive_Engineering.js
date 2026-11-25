@@ -283,6 +283,9 @@ ServerEvents.recipes(event => {
     event.remove({id: 'immersiveengineering:fermenter/potato'})
     event.remove({id: 'immersiveengineering:fermenter/sugar_cane'})
     event.remove({id: 'immersiveengineering:blastfurnace/steel_block'})
+    event.remove({id: 'immersiveengineering:alloysmelter/insulating_glass'})
+    event.remove({id: 'immersiveengineering:arcfurnace/insulating_glass'})
+    event.remove({id: 'immersiveengineering:smelting/slag_glass'})
 
     // Recipe Removal by output
     event.remove({output: 'immersiveengineering:dust_wood'})
@@ -703,5 +706,36 @@ ServerEvents.recipes(event => {
                 amount: 16
             }
         ]
+    })
+
+    // Insulating Glass
+    event.custom({
+        type: 'tfc:glassworking',
+        operations: [
+            'iron',
+            'blow',
+            'basin_pour'
+        ],
+        batch: {
+            tag: 'tfc:glass_batches'
+        },
+        result: {
+            item: 'immersiveengineering:insulating_glass'
+        }
+    })
+
+    // Slag Glass
+    event.custom({
+        type: 'tfc:glassworking',
+        operations: [
+            'blow',
+            'basin_pour'
+        ],
+        batch: {
+            item: 'kubejs:slag'
+        },
+        result: {
+            item: 'immersiveengineering:slag_glass'
+        }
     })
 })

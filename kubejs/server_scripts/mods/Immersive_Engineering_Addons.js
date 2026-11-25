@@ -42,6 +42,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'tfc_ie_addon:fermenter/banana'})
     event.remove({id: 'tfc_ie_addon:fermenter/strawberry'})
     event.remove({id: 'tfc_ie_addon:fermenter/cabbage'})
+    event.remove({id: 'tfc_ie_addon:heating/slag'})
 
     // Distilled Water
     event.remove({id: 'immersivetechnology:distiller/water'})
