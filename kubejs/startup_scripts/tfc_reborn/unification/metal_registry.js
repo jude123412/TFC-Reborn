@@ -183,7 +183,7 @@ StartupEvents.registry('block', event => {
 				.hardness(5)
 				.resistance(12)
 				.requiresTool(true)
-				.tagBlock('minecraft:mineable/shovel')
+				.tagBlock('minecraft:mineable/pickaxe')
 		})
 
 		// Metal Slab
@@ -194,7 +194,7 @@ StartupEvents.registry('block', event => {
 				.hardness(5)
 				.resistance(12)
 				.requiresTool(true)
-				.tagBlock('minecraft:mineable/shovel')
+				.tagBlock('minecraft:mineable/pickaxe')
 		})
 
 		// Metal Stairs
@@ -205,7 +205,8 @@ StartupEvents.registry('block', event => {
 				.hardness(5)
 				.resistance(12)
 				.requiresTool(true)
-				.tagBlock('minecraft:mineable/shovel')
+				.tagBlock('minecraft:mineable/pickaxe')
+		})
 		})
 	}
 })
