@@ -212,6 +212,7 @@ ServerEvents.tags('item', event => {
     event.add('forge:dusts/iron', '#forge:dusts/wrought_iron')
     event.add('forge:plates/iron', '#forge:plates/wrought_iron')
     event.add('forge:wires/iron', '#forge:wires/wrought_iron')
+    event.add('forge:storage_blocks/wrought_iron', '#forge:storage_blocks/iron')
 
     // Create Crafts & Additions Plants
     event.add('createaddition:plants', '#tfc:plants')

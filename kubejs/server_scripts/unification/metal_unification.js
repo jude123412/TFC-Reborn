@@ -157,167 +157,80 @@ ServerEvents.tags('item', event => {
         let m = global.metals[metal]
         
         if (m.ingot != null) {
-            // If the item is NOT in #forge:ingots/<metal>, add it
-            if (!Ingredient.of(`#forge:ingots/${metal}`).test(m.ingot)) {
-                event.add(`forge:ingots/${metal}`, m.ingot)
-            }
-
-            // If the item is NOT in #forge:ingots, add it
-            if (!Ingredient.of(`#forge:ingots`).test(m.ingot)) {
-                event.add(`forge:ingots`, m.ingot)
-            }
-
-            // If the item is NOT in #tfc:pileable_ingots, add it
-            if (!Ingredient.of(`#tfc:pileable_ingots`).test(m.ingot)) {
-                event.add(`tfc:pileable_ingots`, m.ingot)
-            }
-
-            // If the item is NOT in #tfc:metal_item/${metal}, add it
-            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.ingot)) {
-                event.add(`tfc:metal_item/${metal}`, m.ingot)
-            }
+            event.add(`forge:ingots/${metal}`, m.ingot)
+            event.add('forge:ingots', m.ingot)
+            event.add('tfc:pileable_ingots', m.ingot)
+            event.add(`tfc:metal_item/${metal}`, m.ingot)
         }
 
         if (m.nugget != null) {
-            // If the item is NOT in #forge:nuggets/<metal>, add it
-            if (!Ingredient.of(`#forge:nuggets/${metal}`).test(m.nugget)) {
-                event.add(`forge:nuggets/${metal}`, m.nugget)
-            }
-
-            // If the item is NOT in #forge:nuggets, add it
-            if (!Ingredient.of(`#forge:nuggets`).test(m.nugget)) {
-                event.add(`forge:nuggets`, m.nugget)
-            }
-
-            // If the item is NOT in #tfc:metal_item/${metal}, add it
-            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.nugget)) {
-                event.add(`tfc:metal_item/${metal}`, m.nugget)
-            }
+            event.add(`forge:nuggets/${metal}`, m.nugget)
+            event.add(`forge:nuggets`, m.nugget)
+            event.add(`tfc:metal_item/${metal}`, m.nugget)
         }
 
         if (m.dust != null) {
-            // If the item is NOT in #forge:dusts/<metal>, add it
-            if (!Ingredient.of(`#forge:dusts/${metal}`).test(m.dust)) {
-                event.add(`forge:dusts/${metal}`, m.dust)
-            }
-
-            // If the item is NOT in #forge:dusts, add it
-            if (!Ingredient.of(`#forge:dusts`).test(m.dust)) {
-                event.add(`forge:dusts`, m.dust)
-            }
-
-            // If the item is NOT in #tfc:metal_item/${metal}, add it
-            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.dust)) {
-                event.add(`tfc:metal_item/${metal}`, m.dust)
-            }
+            event.add(`forge:dusts/${metal}`, m.dust)
+            event.add(`forge:dusts`, m.dust)
+            event.add(`tfc:metal_item/${metal}`, m.dust)
         }
 
         if (m.aiot != null) {
-            // If the item is NOT in #tfc:metal_item/${metal}, add it
-            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.aiot)) {
-                event.add(`tfc:metal_item/${metal}`, m.aiot)
-            }
+            event.add(`tfc:metal_item/${metal}`, m.aiot)
         }
 
         if (m.pickaxe != null) {
-            // If the item is NOT in #tfc:metal_item/${metal}, add it
-            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.pickaxe)) {
-                event.add(`tfc:metal_item/${metal}`, m.pickaxe)
-            }
+            event.add(`tfc:metal_item/${metal}`, m.pickaxe)
         }
 
         if (m.axe != null) {
-            // If the item is NOT in #tfc:metal_item/${metal}, add it
-            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.axe)) {
-                event.add(`tfc:metal_item/${metal}`, m.axe)
-            }
+            event.add(`tfc:metal_item/${metal}`, m.axe)
         }
 
         if (m.shovel != null) {
-            // If the item is NOT in #tfc:metal_item/${metal}, add it
-            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.shovel)) {
-                event.add(`tfc:metal_item/${metal}`, m.shovel)
-            }
+            event.add(`tfc:metal_item/${metal}`, m.shovel)
         }
 
         if (m.hoe != null) {
-            // If the item is NOT in #tfc:metal_item/${metal}, add it
-            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.hoe)) {
-                event.add(`tfc:metal_item/${metal}`, m.hoe)
-            }
+            event.add(`tfc:metal_item/${metal}`, m.hoe)
         }
 
         if (m.sword != null) {
-            // If the item is NOT in #tfc:metal_item/${metal}, add it
-            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.sword)) {
-                event.add(`tfc:metal_item/${metal}`, m.sword)
-            }
+            event.add(`tfc:metal_item/${metal}`, m.sword)
         }
 
         if (m.shears != null) {
-            // If the item is NOT in #tfc:metal_item/${metal}, add it
-            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.shears)) {
-                event.add(`tfc:metal_item/${metal}`, m.shears)
-            }
+            event.add(`tfc:metal_item/${metal}`, m.shears)
         }
 
         if (m.helmet != null) {
-            // If the item is NOT in #tfc:metal_item/${metal}, add it
-            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.helmet)) {
-                event.add(`tfc:metal_item/${metal}`, m.helmet)
-            }
+            event.add(`tfc:metal_item/${metal}`, m.helmet)
         }
 
         if (m.chestplate != null) {
-            // If the item is NOT in #tfc:metal_item/${metal}, add it
-            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.chestplate)) {
-                event.add(`tfc:metal_item/${metal}`, m.chestplate)
-            }
+            event.add(`tfc:metal_item/${metal}`, m.chestplate)
         }
 
         if (m.greaves != null) {
-            // If the item is NOT in #tfc:metal_item/${metal}, add it
-            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.greaves)) {
-                event.add(`tfc:metal_item/${metal}`, m.greaves)
-            }
+            event.add(`tfc:metal_item/${metal}`, m.greaves)
         }
 
         if (m.boots != null) {
-            // If the item is NOT in #tfc:metal_item/${metal}, add it
-            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.boots)) {
-                event.add(`tfc:metal_item/${metal}`, m.boots)
-            }
+            event.add(`tfc:metal_item/${metal}`, m.boots)
         }
 
         if (m.block != null) {
-            // If the block is NOT in #tfc:metal_item/${metal}, add it
-            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.block)) {
-                event.add(`tfc:metal_item/${metal}`, m.block)
-            }
-
-            // If the block is NOT in #tfc:metal_plated_blocks, add it
-            if (!Ingredient.of('#tfc:metal_plated_blocks').test(m.block)) {
-                event.add('tfc:metal_plated_blocks', m.block)
-            }
-
-            // If the block is NOT in #forge:storage_blocks/${metal}, add it
-            if (!Ingredient.of(`#forge:storage_blocks/${metal}`).test(m.block)) {
-                event.add(`forge:storage_blocks/${metal}`, m.block)
-            }
+            event.add(`tfc:metal_item/${metal}`, m.block)
+            event.add('tfc:metal_plated_blocks', m.block)
+            event.add(`forge:storage_blocks/${metal}`, m.block)
         }
 
         if (m.slab != null) {
-            // If the block is NOT in #tfc:metal_item/${metal}, add it
-            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.slab)) {
-                event.add(`tfc:metal_item/${metal}`, m.slab)
-            }
+            event.add(`tfc:metal_item/${metal}`, m.slab)
         }
 
         if (m.stairs != null) {
-            // If the block is NOT in #tfc:metal_item/${metal}, add it
-            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.stairs)) {
-                event.add(`tfc:metal_item/${metal}`, m.stairs)
-            }
+            event.add(`tfc:metal_item/${metal}`, m.stairs)
         }
     }
 })
@@ -1043,6 +956,14 @@ ServerEvents.recipes(event => {
 
         // Metal Plated Blocks
         if (m.block != null && m.sheet != null && m.fluid != null) {
+            let blocks = Ingredient.of(`#forge:storage_blocks/${metal}`).itemIds
+
+            if (blocks.length > 1) {
+                for (const id of blocks) {
+                    event.stonecutting(id, `#forge:storage_blocks/${metal}`)
+                }
+            }
+
             event.shaped(
                 Item.of(m.block),
                 [
