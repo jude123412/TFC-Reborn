@@ -136,16 +136,25 @@ TFCEvents.data(event => {
             event.itemHeat(m.unfinished_greaves, m.capacity * 4, m.work, m.weld)
             event.itemHeat(m.unfinished_boots, m.capacity * 2, m.work, m.weld)
         }
+
+        if (m.block != null && m.block.startsWith('kubejs:')) {
+            event.itemHeat(m.block, m.capacity * 3, m.work, m.weld)
+        }
+
+        if (m.slab != null && m.slab.startsWith('kubejs:')) {
+            event.itemHeat(m.block, m.capacity * 1.5, m.work, m.weld)
+        }
+
+        if (m.stairs != null && m.stairs.startsWith('kubejs:')) {
+            event.itemHeat(m.block, m.capacity * 2, m.work, m.weld)
+        }
     }
 })
 
 ServerEvents.tags('item', event => {
-
-    // Recipe Removal    
     
     for (const metal in global.metals) {
         let m = global.metals[metal]
-
         
         if (m.ingot != null) {
             // If the item is NOT in #forge:ingots/<metal>, add it
@@ -279,12 +288,52 @@ ServerEvents.tags('item', event => {
                 event.add(`tfc:metal_item/${metal}`, m.boots)
             }
         }
+
+        if (m.block != null) {
+            // If the block is NOT in #tfc:metal_item/${metal}, add it
+            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.block)) {
+                event.add(`tfc:metal_item/${metal}`, m.block)
+            }
+
+            // If the block is NOT in #tfc:metal_plated_blocks, add it
+            if (!Ingredient.of('#tfc:metal_plated_blocks').test(m.block)) {
+                event.add('tfc:metal_plated_blocks', m.block)
+            }
+
+            // If the block is NOT in #forge:storage_blocks/${metal}, add it
+            if (!Ingredient.of(`#forge:storage_blocks/${metal}`).test(m.block)) {
+                event.add(`forge:storage_blocks/${metal}`, m.block)
+            }
+        }
+
+        if (m.slab != null) {
+            // If the block is NOT in #tfc:metal_item/${metal}, add it
+            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.slab)) {
+                event.add(`tfc:metal_item/${metal}`, m.slab)
+            }
+        }
+
+        if (m.stairs != null) {
+            // If the block is NOT in #tfc:metal_item/${metal}, add it
+            if (!Ingredient.of(`#tfc:metal_item/${metal}`).test(m.stairs)) {
+                event.add(`tfc:metal_item/${metal}`, m.stairs)
+            }
+        }
     }
 })
 
 ServerEvents.recipes(event => {
     const tfc = event.recipes.tfc
     const create = event.recipes.create
+
+    // Recipe Removal
+    event.remove({id: /firmalife:crafting\/crafting\/metal\/block\/.*/})
+    event.remove({id: /firmalife:crafting\/metal\/block\/.*/})
+    event.remove({id: /tfc_ie_addon:crafting\/metal\/block\/.*/})
+    event.remove({id: /tfc:crafting\/metal\/block\/.*/})
+    event.remove({id: /firmalife:heating\/metal\/.*_block.*/})
+    event.remove({id: /tfc_ie_addon:heating\/metal\/.*_block.*/})
+    event.remove({id: /tfc:heating\/metal\/.*_block.*/})
 
     for (const metal in global.metals) {
         let m = global.metals[metal]
@@ -948,7 +997,7 @@ ServerEvents.recipes(event => {
         }
 
         // Dusts
-        if (m.dust != null && m.ingot != null  && m.fluid != null) {
+        if (m.dust != null && m.ingot != null && m.fluid != null) {
             event.custom({
                 type: 'railcraft:crusher',
                 ingredient: {
@@ -990,6 +1039,60 @@ ServerEvents.recipes(event => {
 
             tfc.heating(m.dust, m.melt)
                 .resultFluid(Fluid.of(m.fluid, 100))
+        }
+
+        // Metal Plated Blocks
+        if (m.block != null && m.sheet != null && m.fluid != null) {
+            event.shaped(
+                Item.of(m.block),
+                [
+                    ' S ',
+                    'SPS',
+                    ' SH'
+                ],
+                {
+                    S: m.sheet,
+                    P: '#minecraft:planks',
+                    H: '#tfc:hammers'
+                }
+            ).damageIngredient('#tfc:hammers')
+
+            tfc.heating(m.block, m.melt)
+                .resultFluid(Fluid.of(m.fluid, 800))
+        }
+
+        // Metal Plated Slabs
+        if (m.slab != null && m.block != null && m.fluid != null) {
+            event.shaped(
+                Item.of(m.slab, 6),
+                [
+                    'BBB'
+                ],
+                {
+                    B: m.block
+                }
+            )
+
+            tfc.heating(m.slab, m.melt)
+                .resultFluid(Fluid.of(m.fluid, 400))
+        }
+
+        // Metal Plated Slabs
+        if (m.stairs != null && m.block != null && m.fluid != null) {
+            event.shaped(
+                Item.of(m.stairs, 8),
+                [
+                    'B  ',
+                    'BB ',
+                    'BBB'
+                ],
+                {
+                    B: m.block
+                }
+            )
+
+            tfc.heating(m.stairs, m.melt)
+                .resultFluid(Fluid.of(m.fluid, 600))
         }
     }
 })
