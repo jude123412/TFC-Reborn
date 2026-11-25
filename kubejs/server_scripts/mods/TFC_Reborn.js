@@ -257,6 +257,18 @@ ServerEvents.recipes(event => {
         }
     )
 
+    // Refactory Clay Block
+    event.shaped(
+        Item.of('kubejs:refactory_clay_block'), 
+        [
+            'CC',
+            'CC'
+        ],
+        {
+            C: 'kubejs:refactory_clay'
+        }
+    )
+
     // Unfired Refactory Brick
     event.custom({
         type: 'tfc:knapping',
@@ -285,6 +297,44 @@ ServerEvents.recipes(event => {
         },
         temperature: 1399
     })
+
+    // Refactory Bricks
+    event.shaped(
+        Item.of('kubejs:refactory_bricks', 2), 
+        [
+            'BMB',
+            'MBM',
+            'BMB'
+        ],
+        {
+            B: 'kubejs:refactory_brick',
+            M: 'tfc:mortar'
+        }
+    )
+    event.shaped(
+        Item.of('kubejs:refactory_bricks', 4), 
+        [
+            'BMB',
+            'MFM',
+            'BMB'
+        ],
+        {
+            B: 'kubejs:refactory_brick',
+            M: 'tfc:mortar',
+            F: 'tfc:ceramic/fire_brick'
+        }
+    )
+
+    // Steel Reinforced Refactory Bricks
+    event.shapeless(
+        Item.of('kubejs:steel_reinforced_refactory_bricks'),
+        [
+            '#forge:double_sheets/steel',
+            '#forge:plates/black_steel',
+            'kubejs:refactory_bricks',
+            '#tfc:hammers'
+        ]
+    ).damageIngredient('#tfc:hammers')
 
     // Unfired Ceramic Insulator
     event.custom({
@@ -954,4 +1004,26 @@ ServerEvents.recipes(event => {
         },
         duration: 16000
     }).id('nitrated_blasting_bixture')
+
+    // Wrought Iron Reinforced Fire Bricks
+    event.shapeless(
+        Item.of('kubejs:iron_reinforced_fire_bricks'),
+        [
+            '#forge:double_sheets/wrought_iron',
+            '#forge:plates/steel',
+            'tfc:fire_bricks',
+            '#tfc:hammers'
+        ]
+    ).damageIngredient('#tfc:hammers')
+
+    // Steel Reinforced Fire Bricks
+    event.shapeless(
+        Item.of('kubejs:steel_reinforced_fire_bricks'),
+        [
+            '#forge:double_sheets/steel',
+            '#forge:plates/black_steel',
+            'kubejs:iron_reinforced_fire_bricks',
+            '#tfc:hammers'
+        ]
+    ).damageIngredient('#tfc:hammers')
 })

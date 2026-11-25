@@ -193,18 +193,10 @@ ServerEvents.recipes(event => {
 
     // Coke Oven Bricks
     event.remove({id: 'railcraft:coke_oven_bricks'})
-    event.shaped(
-        Item.of('railcraft:coke_oven_bricks', 2),
-        [
-            'BMB',
-            'MBM',
-            'BMB'
-        ],
-        {
-            B: 'kubejs:refactory_brick',
-            M: 'tfc:mortar',
-        }
-    )
+    event.shapeless('railcraft:coke_oven_bricks', [
+        'kubejs:refactory_bricks',
+        '#forge:sand'
+    ])
 
     // Coal Coke
     event.remove({id: 'railcraft:coke_oven/coal_coke'})
@@ -220,6 +212,13 @@ ServerEvents.recipes(event => {
             item: 'kubejs:coal_coke'
         }
     })
+    event.shapeless(
+        Item.of('kubejs:refactory_bricks'),
+        [
+            'railcraft:coke_oven_bricks',
+            '#tfc:chisels'
+        ]
+    ).damageIngredient('#tfc:chisels')
 
     // Block of Coal Coke
     event.remove({id: 'railcraft:coke_oven/coal_coke_block'})

@@ -10,6 +10,7 @@ ClientEvents.lang('en_us', event => {
     event.add('item.kubejs.metal.plate.constantan', 'Constantan Plate')
     event.add('item.kubejs.metal.plate.electrum', 'Electrum Plate')
     event.add('item.kubejs.metal.plate.steel', 'Steel Plate')
+    event.add('item.kubejs.metal.plate.black_steel', 'Black Steel Plate')
     event.add('item.kubejs.metal.plate.wrought_iron', 'Wrought Iron Plate')
     event.add('item.kubejs.metal.plate.gold', 'Gold Plate')
     event.add('item.kubejs.metal.plate.tin', 'Tin Plate')

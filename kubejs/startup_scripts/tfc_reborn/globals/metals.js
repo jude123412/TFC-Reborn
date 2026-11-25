@@ -1142,7 +1142,7 @@ global.metals = {
         double_sheet: null,
 
         nugget: null,
-        plate: null,
+        plate: 'kubejs:metal/plate/black_steel',
         gear: null,
         gear_half: null,
         wire: null,
