@@ -288,18 +288,6 @@ ServerEvents.recipes(event => {
                     .resultFluid(Fluid.of(m.fluid, 200))
             }
 
-            if (m.double_sheet != null && m.sheet != null) {
-               tfc.welding(
-                    TFC.itemStackProvider.of(m.double_sheet).copyHeat(),
-                    Ingredient.of(m.sheet),
-                    Ingredient.of(m.sheet),
-                    m.tier
-                )
-
-                tfc.heating(m.double_sheet, m.melt)
-                    .resultFluid(Fluid.of(m.fluid, 400))
-            }
-
             if (m.aiot != null) {
                 tfc.heating(m.aiot, m.melt)
                     .resultFluid(Fluid.of(m.fluid, 600))
@@ -956,6 +944,21 @@ ServerEvents.recipes(event => {
 
             tfc.heating(m.dust, m.melt)
                 .resultFluid(Fluid.of(m.fluid, 100))
+        }
+
+        // Double Sheets
+        if (m.double_sheet != null && m.sheet != null && m.fluid != null) {
+            tfc.welding(
+                TFC.itemStackProvider.of(m.double_sheet).copyHeat(),
+                Ingredient.of(m.sheet),
+                Ingredient.of(m.sheet),
+                m.tier - 1
+            )
+
+            if (m.double_sheet.startsWith('kubejs:')) {
+                tfc.heating(m.double_sheet, m.melt)
+                    .resultFluid(Fluid.of(m.fluid, 400))
+            }
         }
 
         // Metal Plated Blocks
