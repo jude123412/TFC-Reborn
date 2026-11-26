@@ -1026,4 +1026,14 @@ ServerEvents.recipes(event => {
             '#tfc:hammers'
         ]
     ).damageIngredient('#tfc:hammers')
+
+    // Slag Glass Batch
+    event.shapeless(
+        Item.of('kubejs:slag_glass_batch', 4),
+        [
+            '4x #forge:slag',
+            '#tfc:glassworking_potash',
+            '#forge:dusts/lime'
+        ]
+    )
 })

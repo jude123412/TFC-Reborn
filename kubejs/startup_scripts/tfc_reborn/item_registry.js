@@ -185,6 +185,13 @@ StartupEvents.registry('item', event => {
         .tag('tfc:glass_batches')
         .tag('tfc:glass_batches_tier_3')
 
+    // Slag Glass Batch
+    event.create('kubejs:slag_glass_batch')
+        .texture('kubejs:item/slag_glass_batch')
+        .translationKey('kubejs:item/slag_glass_batch')
+        .tag('tfc:glass_batches')
+        .tag('tfc:glass_batches_not_tier_1')
+
     // Engine Core
     event.create('kubejs:engine_core')
         .texture('kubejs:item/engine_core')

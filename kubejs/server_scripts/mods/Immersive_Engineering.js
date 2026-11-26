@@ -732,7 +732,7 @@ ServerEvents.recipes(event => {
             'basin_pour'
         ],
         batch: {
-            item: 'kubejs:slag'
+            item: 'kubejs:slag_glass_batch'
         },
         result: {
             item: 'immersiveengineering:slag_glass'

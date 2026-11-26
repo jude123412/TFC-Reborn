@@ -303,6 +303,7 @@ ClientEvents.lang('en_us', event => {
     // Glass Batches
     event.add('item.kubejs.mana_glass_batch', 'Managlass Batch')
     event.add('item.kubejs.alf_glass_batch', 'Alfglass Batch')
+    event.add('item.kubejs.slag_glass_batch', 'Slag Glass Batch')
     
     // Metal Buckets
     event.add('item.kubejs.metal.andesite_alloy_bucket', 'Andesite Alloy Bucket')
