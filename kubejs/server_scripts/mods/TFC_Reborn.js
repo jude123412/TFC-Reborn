@@ -94,10 +94,6 @@ ServerEvents.recipes(event => {
     const mekanism = event.recipes.mekanism
     const create = event.recipes.create
 
-    // Molten Andesite
-    tfc.heating('tfc:rock/loose/andesite', 1450)
-        .resultFluid(Fluid.of('kubejs:metal/andesite', 100))
-
     // Andesite Alloy
     tfc.alloy(
         'kubejs:andesite_alloy',

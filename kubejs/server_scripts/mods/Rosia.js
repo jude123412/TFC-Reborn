@@ -32,4 +32,92 @@ ServerEvents.recipes(event => {
             W: '#forge:wires/purple_steel'
         }
     )
+
+    // Weak Purple Steel Ingot
+    event.custom({
+        type: 'immersiveengineering:arc_furnace',
+        energy: 51200,
+        input: {
+            base_ingredient: {
+                tag: 'forge:ingots/red_steel',
+            }
+        },
+        additives: [
+            {
+                base_ingredient: {
+                    tag: 'forge:ingots/blue_steel',
+                },
+            }
+        ],
+        results: [
+            {
+                base_ingredient: {
+                    item: 'rosia:weak_purple_steel_ingot'
+                },
+                count: 2
+            }
+        ],
+        secondaries: [],
+        time: 100
+    })
+
+    // Purple Steel Ingot
+    event.custom({
+        type: 'immersiveengineering:arc_furnace',
+        energy: 51200,
+        input: {
+            base_ingredient: {
+                tag: 'forge:ingots/weak_purple_steel',
+            }
+        },
+        additives: [
+            {
+                base_ingredient: {
+                    tag: 'forge:dusts/coke',
+                },
+            }
+        ],
+        results: [
+            {
+                base_ingredient: {
+                    item: 'rosia:purple_steel_ingot'
+                }
+            }
+        ],
+        slag: {
+            item: 'kubejs:slag'
+        },
+        secondaries: [],
+        time: 100
+    })
+
+    // Invar Ingot
+    event.custom({
+        type: 'immersiveengineering:arc_furnace',
+        energy: 51200,
+        input: {
+            base_ingredient: {
+                tag: 'forge:ingots/cast_iron',
+            },
+            count: 3
+        },
+        additives: [
+            {
+                base_ingredient: {
+                    tag: 'forge:ingots/nickel',
+                },
+                count: 2
+            }
+        ],
+        results: [
+            {
+                base_ingredient: {
+                    item: 'rosia:invar_ingot'
+                },
+                count: 5
+            }
+        ],
+        secondaries: [],
+        time: 100
+    })
 })

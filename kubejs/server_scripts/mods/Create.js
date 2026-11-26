@@ -888,4 +888,60 @@ ServerEvents.recipes(event => {
             item: 'create:incomplete_precision_mechanism'
         }
     })
+
+    // Andesite Alloy
+    event.custom({
+        type: 'immersiveengineering:arc_furnace',
+        energy: 51200,
+        input: {
+            base_ingredient: {
+                tag: 'forge:ingots/andesite',
+            },
+            count: 19
+        },
+        additives: [
+            {
+                base_ingredient: {
+                    tag: 'forge:ingots/zinc',
+                },
+            }
+        ],
+        results: [
+            {
+                base_ingredient: {
+                    item: 'create:andesite_alloy'
+                },
+                count: 20
+            }
+        ],
+        secondaries: [],
+        time: 100
+    })
+    event.custom({
+        type: 'immersiveengineering:arc_furnace',
+        energy: 51200,
+        input: {
+            base_ingredient: {
+                tag: 'forge:ingots/andesite',
+            },
+            count: 19
+        },
+        additives: [
+            {
+                base_ingredient: {
+                    tag: 'forge:ingots/cast_iron',
+                },
+            }
+        ],
+        results: [
+            {
+                base_ingredient: {
+                    item: 'create:andesite_alloy'
+                },
+                count: 20
+            }
+        ],
+        secondaries: [],
+        time: 100
+    })
 })

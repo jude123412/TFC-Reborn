@@ -744,7 +744,7 @@ ServerEvents.recipes(event => {
         energy: 51200,
         input: {
             base_ingredient: {
-                tag: 'forge:ingots/wrought_iron',
+                tag: 'forge:ingots/pig_iron',
             }
         },
         additives: [
@@ -896,6 +896,36 @@ ServerEvents.recipes(event => {
                 count: 5
             }
         ],
+        secondaries: [],
+        time: 100
+    })
+
+    // Pig Iron Ingot
+    event.custom({
+        type: 'immersiveengineering:arc_furnace',
+        energy: 51200,
+        input: {
+            base_ingredient: {
+                tag: 'forge:ingots/wrought_iron',
+            }
+        },
+        additives: [
+            {
+                base_ingredient: {
+                    tag: 'forge:dusts/coke',
+                },
+            }
+        ],
+        results: [
+            {
+                base_ingredient: {
+                    item: 'tfc:metal/ingot/pig_iron'
+                }
+            }
+        ],
+        slag: {
+            item: 'kubejs:slag'
+        },
         secondaries: [],
         time: 100
     })
