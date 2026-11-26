@@ -797,6 +797,18 @@ ServerEvents.recipes(event => {
             count: 8
         }
     })
+    event.shaped(
+        Item.of('buildcrafttransport:structure', 4),
+        [
+            'GFG',
+            'FGF',
+            'GFG'
+        ],
+        {
+            G: '#forge:cobblestone',
+            F: 'kubejs:pipe_frame/cobblestone'
+        }
+    )
 
     // Wooden Pipe
     event.remove({id: 'buildcrafttransport:wood_item'})
@@ -821,13 +833,15 @@ ServerEvents.recipes(event => {
         }
     })
     event.shaped(
-        Item.of('buildcrafttransport:wood_item'),
+        Item.of('buildcrafttransport:wood_item', 4),
         [
+            'GFG',
             'FGF',
+            'GFG'
         ],
         {
-            F: 'kubejs:pipe_frame/wood',
-            G: '#forge:glass/colorless'
+            G: '#forge:glass_panes/colorless',
+            F: 'kubejs:pipe_frame/wood'
         }
     )
 
@@ -854,13 +868,15 @@ ServerEvents.recipes(event => {
         }
     })
     event.shaped(
-        Item.of('buildcrafttransport:cobblestone_item'),
+        Item.of('buildcrafttransport:cobblestone_item', 4),
         [
+            'GFG',
             'FGF',
+            'GFG'
         ],
         {
-            F: 'kubejs:pipe_frame/cobblestone',
-            G: '#forge:glass/colorless'
+            G: '#forge:glass_panes/colorless',
+            F: 'kubejs:pipe_frame/cobblestone'
         }
     )
 
@@ -886,6 +902,18 @@ ServerEvents.recipes(event => {
             count: 8
         }
     })
+    event.shaped(
+        Item.of('buildcrafttransport:stone_item', 4),
+        [
+            'GFG',
+            'FGF',
+            'GFG'
+        ],
+        {
+            G: '#forge:glass_panes/colorless',
+            F: 'kubejs:pipe_frame/stone'
+        }
+    )
 
     // Quartz Pipe
     event.remove({id: 'buildcrafttransport:quartz_item'})
@@ -909,6 +937,18 @@ ServerEvents.recipes(event => {
             count: 8
         }
     })
+    event.shaped(
+        Item.of('buildcrafttransport:quartz_item', 4),
+        [
+            'GFG',
+            'FGF',
+            'GFG'
+        ],
+        {
+            G: '#forge:glass_panes/colorless',
+            F: 'kubejs:pipe_frame/quartz'
+        }
+    )
 
     // Iron Pipe
     event.remove({id: 'buildcrafttransport:iron_item'})
@@ -932,6 +972,18 @@ ServerEvents.recipes(event => {
             count: 8
         }
     })
+    event.shaped(
+        Item.of('buildcrafttransport:iron_item', 4),
+        [
+            'GFG',
+            'FGF',
+            'GFG'
+        ],
+        {
+            G: '#forge:glass_panes/colorless',
+            F: 'kubejs:pipe_frame/iron'
+        }
+    )
 
     // Gold Pipe
     event.remove({id: 'buildcrafttransport:gold_item'})
@@ -955,6 +1007,18 @@ ServerEvents.recipes(event => {
             count: 8
         }
     })
+    event.shaped(
+        Item.of('buildcrafttransport:gold_item', 4),
+        [
+            'GFG',
+            'FGF',
+            'GFG'
+        ],
+        {
+            G: '#forge:glass_panes/colorless',
+            F: 'kubejs:pipe_frame/gold'
+        }
+    )
 
     // Clay Pipe
     event.remove({id: 'buildcrafttransport:clay_item'})
@@ -978,6 +1042,18 @@ ServerEvents.recipes(event => {
             count: 8
         }
     })
+    event.shaped(
+        Item.of('buildcrafttransport:clay_item', 4),
+        [
+            'GFG',
+            'FGF',
+            'GFG'
+        ],
+        {
+            G: '#forge:glass_panes/colorless',
+            F: 'kubejs:pipe_frame/clay'
+        }
+    )
 
     // Sandstone Pipe
     event.remove({id: 'buildcrafttransport:sandstone_item'})
@@ -1001,6 +1077,18 @@ ServerEvents.recipes(event => {
             count: 8
         }
     })
+    event.shaped(
+        Item.of('buildcrafttransport:sandstone_item', 4),
+        [
+            'GFG',
+            'FGF',
+            'GFG'
+        ],
+        {
+            G: '#forge:glass_panes/colorless',
+            F: 'kubejs:pipe_frame/sandstone'
+        }
+    )
 
     // Void Pipe
     event.remove({id: 'buildcrafttransport:void_item'})
@@ -1028,6 +1116,19 @@ ServerEvents.recipes(event => {
             count: 8
         }
     })
+    event.shaped(
+        Item.of('buildcrafttransport:void_item', 4),
+        [
+            'GFG',
+            'PGP',
+            'GFG'
+        ],
+        {
+            G: '#forge:glass_panes/colorless',
+            F: 'kubejs:pipe_frame/obsidian',
+            P: 'kubejs:pipe_frame/cobblestone'  
+        }
+    )
 
     // Obsidian Pipe
     event.remove({id: 'buildcrafttransport:obsidian_item'})
@@ -1051,6 +1152,18 @@ ServerEvents.recipes(event => {
             count: 8
         }
     })
+    event.shaped(
+        Item.of('buildcrafttransport:obsidian_item', 4),
+        [
+            'GFG',
+            'FGF',
+            'GFG'
+        ],
+        {
+            G: '#forge:glass_panes/colorless',
+            F: 'kubejs:pipe_frame/obsidian'
+        }
+    )
 
     // Diamond Pipe
     event.remove({id: 'buildcrafttransport:diamond_item'})
@@ -1074,6 +1187,18 @@ ServerEvents.recipes(event => {
             count: 8
         }
     })
+    event.shaped(
+        Item.of('buildcrafttransport:diamond_item', 4),
+        [
+            'GFG',
+            'FGF',
+            'GFG'
+        ],
+        {
+            G: '#forge:glass_panes/colorless',
+            F: 'kubejs:pipe_frame/diamond'
+        }
+    )
 
     // Wooden Diamond Pipe
     event.remove({id: 'buildcrafttransport:diamond_wood_item'})
@@ -1101,6 +1226,19 @@ ServerEvents.recipes(event => {
             count: 8
         }
     })
+    event.shaped(
+        Item.of('buildcrafttransport:diamond_wood_item', 4),
+        [
+            'GFG',
+            'PGP',
+            'GFG'
+        ],
+        {
+            G: '#forge:glass_panes/colorless',
+            F: 'kubejs:pipe_frame/diamond',
+            P: 'kubejs:pipe_frame/wood'  
+        }
+    )
 
     // Lazuli Pipe
     event.remove({id: 'buildcrafttransport:lapis_item'})
@@ -1124,6 +1262,18 @@ ServerEvents.recipes(event => {
             count: 8
         }
     })
+    event.shaped(
+        Item.of('buildcrafttransport:lapis_item', 4),
+        [
+            'GFG',
+            'FGF',
+            'GFG'
+        ],
+        {
+            G: '#forge:glass_panes/colorless',
+            F: 'kubejs:pipe_frame/lapis'
+        }
+    )
 
     // Daizuli Pipe
     event.remove({id: 'buildcrafttransport:daizuli_item'})
@@ -1151,6 +1301,19 @@ ServerEvents.recipes(event => {
             count: 8
         }
     })
+    event.shaped(
+        Item.of('buildcrafttransport:daizuli_item', 4),
+        [
+            'GFG',
+            'PGP',
+            'GFG'
+        ],
+        {
+            G: '#forge:glass_panes/colorless',
+            F: 'kubejs:pipe_frame/diamond',
+            P: 'kubejs:pipe_frame/lapis'  
+        }
+    )
 
     // Emzuli Pipe
     event.remove({id: 'buildcrafttransport:emzuli_item'})
@@ -1178,6 +1341,19 @@ ServerEvents.recipes(event => {
             count: 8
         }
     })
+    event.shaped(
+        Item.of('buildcrafttransport:emzuli_item', 4),
+        [
+            'GFG',
+            'PGP',
+            'GFG'
+        ],
+        {
+            G: '#forge:glass_panes/colorless',
+            F: 'kubejs:pipe_frame/emerald',
+            P: 'kubejs:pipe_frame/lapis'  
+        }
+    )
 
     // Stripes Pipe
     event.remove({id: 'buildcrafttransport:stripes_item'})
@@ -1205,6 +1381,19 @@ ServerEvents.recipes(event => {
             count: 8
         }
     })
+    event.shaped(
+        Item.of('buildcrafttransport:stripes_item', 4),
+        [
+            'GFG',
+            'PGP',
+            'GFG'
+        ],
+        {
+            G: '#forge:glass_panes/colorless',
+            F: 'kubejs:pipe_frame/gold',
+            P: 'kubejs:pipe_frame/cobblestone'  
+        }
+    )
 
     // Power Adaptor
     event.replaceInput(
