@@ -53,6 +53,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'buildcrafttransport:sandstone_fe_undo'})
     event.remove({id: 'buildcrafttransport:diamond_fe_undo'})
     event.remove({id: 'buildcrafttransport:diamond_wood_fe_undo'})
+    event.remove({id: 'buildcraftcore:engine_redstone'})
     
     // Construction Marker
     event.replaceInput(
@@ -242,24 +243,6 @@ ServerEvents.recipes(event => {
         {id: 'buildcraftcore:marker_path'},
         'minecraft:green_dye',
         '#forge:dyes/green'
-    )
-
-    // Redstone Engine
-    event.remove({id: 'buildcraftcore:engine_redstone'})
-    event.shaped(
-        Item.of('buildcraftcore:engine_redstone'),
-        [
-            'WWW',
-            'BCB',
-            'GPG'
-        ],
-        {
-            W: '#minecraft:planks',
-            B: 'buildcraftrobotics:redstone_board',
-            C: 'kubejs:engine_core',
-            G: 'buildcraftcore:gears/gear_wood',
-            P: 'minecraft:piston'
-        }
     )
 
     // Stirling Engine
@@ -735,21 +718,44 @@ ServerEvents.recipes(event => {
         type: 'buildcraftsilicon:assembly',
         MJ: global.mj(1000),
         ingredient_counts: [
-            1,
-            2
+            4,
+            2,
+            2,
+            1
         ],
         ingredients: [
             {
-                item: 'buildcraftcore:engine_redstone'
+                item: 'buildcrafttransport:plug_blocker'
             },
             {
-                tag: 'forge:plates/wrought_iron'
+                item: 'buildcraftcore:gears/gear_stone'
+            },
+            {
+                item: 'buildcraftcore:gears/gear_wood'
+            },
+            {
+                tag: 'forge:storage_blocks/redstone'
             }
         ],
         result: {
-            item: 'buildcraftsilicon:plug/pulsar'
+            item: 'buildcraftsilicon:plug/pulsar',
+            count: 2
         }
     })
+    event.shaped(
+        Item.of('buildcraftsilicon:plug/pulsar'),
+        [
+            'PSP',
+            'WRW',
+            'PSP'
+        ],
+        {
+            P: 'buildcrafttransport:plug_blocker',
+            S: 'buildcraftcore:gears/gear_stone',
+            W: 'buildcraftcore:gears/gear_wood',
+            R: '#forge:storage_blocks/redstone'
+        }
+    )
 
     // Pipe Sealant
     event.remove({id: 'buildcraftenergy:residue_to_pipe_sealant'})
