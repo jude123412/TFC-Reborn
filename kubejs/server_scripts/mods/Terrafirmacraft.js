@@ -624,4 +624,279 @@ ServerEvents.recipes(event => {
             item: 'tfc:wooden_bucket'
         }
     })
+
+    // Weak Red Steel Ingot
+    event.custom({
+        type: 'immersiveengineering:arc_furnace',
+        energy: 51200,
+        input: {
+            base_ingredient: {
+                tag: 'forge:ingots/black_steel',
+            },
+            count: 5
+        },
+        additives: [
+            {
+                base_ingredient: {
+                    tag: 'forge:ingots/steel',
+                },
+                count: 4
+            },
+            {
+                base_ingredient: {
+                    tag: 'forge:ingots/brass',
+                },
+                count: 3
+            },
+            {
+                base_ingredient: {
+                    tag: 'forge:ingots/rose_gold',
+                },
+                count: 3
+            }
+        ],
+        results: [
+            {
+                base_ingredient: {
+                    item: 'tfc:metal/ingot/weak_red_steel'
+                },
+                count: 15
+            }
+        ],
+        secondaries: [],
+        time: 100
+    })
+
+    // Weak Blue Steel Ingot
+    event.custom({
+        type: 'immersiveengineering:arc_furnace',
+        energy: 51200,
+        input: {
+            base_ingredient: {
+                tag: 'forge:ingots/black_steel',
+            },
+            count: 5
+        },
+        additives: [
+            {
+                base_ingredient: {
+                    tag: 'forge:ingots/steel',
+                },
+                count: 4
+            },
+            {
+                base_ingredient: {
+                    tag: 'forge:ingots/sterling_silver',
+                },
+                count: 3
+            },
+            {
+                base_ingredient: {
+                    tag: 'forge:ingots/bismuth_bronze',
+                },
+                count: 3
+            }
+        ],
+        results: [
+            {
+                base_ingredient: {
+                    item: 'tfc:metal/ingot/weak_blue_steel'
+                },
+                count: 15
+            }
+        ],
+        secondaries: [],
+        time: 100
+    })
+
+    // Rose Gold
+    event.custom({
+        type: 'immersiveengineering:arc_furnace',
+        energy: 51200,
+        input: {
+            base_ingredient: {
+                tag: 'forge:ingots/gold',
+            },
+            count: 4
+        },
+        additives: [
+            {
+                base_ingredient: {
+                    tag: 'forge:ingots/copper',
+                },
+            }
+        ],
+        results: [
+            {
+                base_ingredient: {
+                    item: 'tfc:metal/ingot/rose_gold'
+                },
+                count: 5
+            }
+        ],
+        secondaries: [],
+        time: 100
+    })
+
+    // Steel Ingot
+    event.custom({
+        type: 'immersiveengineering:arc_furnace',
+        energy: 51200,
+        input: {
+            base_ingredient: {
+                tag: 'forge:ingots/wrought_iron',
+            }
+        },
+        additives: [
+            {
+                base_ingredient: {
+                    tag: 'forge:dusts/coke',
+                },
+            }
+        ],
+        results: [
+            {
+                base_ingredient: {
+                    item: 'tfc:metal/ingot/steel'
+                }
+            }
+        ],
+        slag: {
+            item: 'kubejs:slag'
+        },
+        secondaries: [],
+        time: 100
+    })
+
+    // Wrought Iron Ingot
+    event.custom({
+        type: 'immersiveengineering:arc_furnace',
+        energy: 51200,
+        input: {
+            base_ingredient: {
+                tag: 'forge:ingots/cast_iron',
+            }
+        },
+        additives: [
+            {
+                base_ingredient: {
+                    tag: 'forge:dusts/coke',
+                },
+            }
+        ],
+        results: [
+            {
+                base_ingredient: {
+                    item: 'tfc:metal/ingot/wrought_iron'
+                }
+            }
+        ],
+        slag: {
+            item: 'kubejs:slag'
+        },
+        secondaries: [],
+        time: 100
+    })
+
+    // Bismuth Bronze Ingot
+    event.custom({
+        type: 'immersiveengineering:arc_furnace',
+        energy: 51200,
+        input: {
+            base_ingredient: {
+                tag: 'forge:ingots/copper',
+            },
+            count: 3
+        },
+        additives: [
+            {
+                base_ingredient: {
+                    tag: 'forge:ingots/zinc',
+                },
+            },
+            {
+                base_ingredient: {
+                    tag: 'forge:ingots/bismuth',
+                },
+            }
+        ],
+        results: [
+            {
+                base_ingredient: {
+                    item: 'tfc:metal/ingot/bismuth_bronze'
+                },
+                count: 5
+            }
+        ],
+        secondaries: [],
+        time: 100
+    })
+
+    // Black Bronze Ingot
+    event.custom({
+        type: 'immersiveengineering:arc_furnace',
+        energy: 51200,
+        input: {
+            base_ingredient: {
+                tag: 'forge:ingots/copper',
+            },
+            count: 3
+        },
+        additives: [
+            {
+                base_ingredient: {
+                    tag: 'forge:ingots/gold',
+                },
+            },
+            {
+                base_ingredient: {
+                    tag: 'forge:ingots/silver',
+                },
+            }
+        ],
+        results: [
+            {
+                base_ingredient: {
+                    item: 'tfc:metal/ingot/black_bronze'
+                },
+                count: 5
+            }
+        ],
+        secondaries: [],
+        time: 100
+    })
+
+    // Week Steel Ingot
+    event.custom({
+        type: 'immersiveengineering:arc_furnace',
+        energy: 51200,
+        input: {
+            base_ingredient: {
+                tag: 'forge:ingots/steel',
+            },
+            count: 3
+        },
+        additives: [
+            {
+                base_ingredient: {
+                    tag: 'forge:ingots/black_bronze',
+                },
+            },
+            {
+                base_ingredient: {
+                    tag: 'forge:ingots/nickel',
+                },
+            }
+        ],
+        results: [
+            {
+                base_ingredient: {
+                    item: 'tfc:metal/ingot/weak_steel'
+                },
+                count: 5
+            }
+        ],
+        secondaries: [],
+        time: 100
+    })
 })
