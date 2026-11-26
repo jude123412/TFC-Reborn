@@ -5,17 +5,38 @@ ServerEvents.recipes(event => {
 
     // Golden Hopper
     event.remove({id: 'goldenhopper:golden_hopper'})
-    event.shaped(
-        Item.of('goldenhopper:golden_hopper'),
-        [
-            'S S',
-            ' C '
+    event.custom({
+        type: 'tfc:anvil',
+        input: {
+            tag: 'forge:double_sheets/gold'
+        },
+        result: {
+            item: 'goldenhopper:golden_hopper'
+        },
+        tier: 1,
+        rules: [
+            'bend_third_last',
+            'bend_second_last',
+            'hit_last'
         ],
-        {
-            S: '#forge:sheets/gold',
-            C: '#forge:chests/wooden'
-        }
-    )
+        "apply_forging_bonus": false
+    })
+    event.custom({
+        type: 'tfc:anvil',
+        input: {
+            tag: 'forge:double_sheets/rose_gold'
+        },
+        result: {
+            item: 'goldenhopper:golden_hopper'
+        },
+        tier: 1,
+        rules: [
+            'bend_third_last',
+            'bend_second_last',
+            'hit_last'
+        ],
+        "apply_forging_bonus": false
+    })
 
     // Cooling Lunch Box
     event.remove({id: 'tfclunchbox:upgrade_to_cooling_lunchbox'})

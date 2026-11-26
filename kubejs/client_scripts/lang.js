@@ -101,6 +101,7 @@ ClientEvents.lang('en_us', event => {
     event.add('item.kubejs.metal.double_sheet.manasteel', 'Manasteel Double Sheet')
     event.add('item.kubejs.metal.double_sheet.elementium', 'Elementium Double Sheet')
     event.add('item.kubejs.metal.double_sheet.terrasteel', 'Terrasteel Double Sheet')
+    event.add('item.kubejs.metal.double_sheet.lead', 'Lead Double Sheet')
 
     // Metal Pickaxe Head
     event.add('item.kubejs.metal.pickaxe_head.manasteel', 'Manasteel Pickaxe Head')

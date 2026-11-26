@@ -705,4 +705,72 @@ ServerEvents.recipes(event => {
             P: '#forge:paper'
         }
     )
+
+    // Hopper
+    event.custom({
+        type: 'tfc:anvil',
+        input: {
+            tag: 'forge:double_sheets/lead'
+        },
+        result: {
+            item: 'minecraft:hopper'
+        },
+        tier: 2,
+        rules: [
+            'bend_third_last',
+            'bend_second_last',
+            'hit_last'
+        ],
+        "apply_forging_bonus": false
+    })
+    event.custom({
+        type: 'tfc:anvil',
+        input: {
+            tag: 'forge:double_sheets/wrought_iron'
+        },
+        result: {
+            item: 'minecraft:hopper'
+        },
+        tier: 3,
+        rules: [
+            'bend_third_last',
+            'bend_second_last',
+            'hit_last'
+        ],
+        "apply_forging_bonus": false
+    })
+    event.custom({
+        type: 'tfc:anvil',
+        input: {
+            tag: 'forge:double_sheets/steel'
+        },
+        result: {
+            item: 'minecraft:hopper',
+            count: 2
+        },
+        tier: 4,
+        rules: [
+            'bend_third_last',
+            'bend_second_last',
+            'hit_last'
+        ],
+        "apply_forging_bonus": false
+    })
+    event.custom({
+        type: 'tfc:anvil',
+        input: {
+            tag: 'forge:double_sheets/black_steel'
+        },
+        result: {
+            item: 'minecraft:hopper',
+            count: 4
+        },
+        tier: 4,
+        rules: [
+            'bend_third_last',
+            'bend_second_last',
+            'hit_last'
+        ],
+        "apply_forging_bonus": false
+    })
 })

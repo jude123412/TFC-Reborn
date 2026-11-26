@@ -21,6 +21,8 @@ ServerEvents.recipes(event => {
     event.remove({id: 'tfc:crafting/vanilla/color/pink_concrete_powder'})
     event.remove({id: 'tfc:crafting/vanilla/redstone/steel_rail'})
     event.remove({id: 'tfc:crafting/vanilla/redstone/rail'})
+    event.remove({id: 'tfc:crafting/vanilla/redstone/steel_hopper'})
+    event.remove({id: 'tfc:crafting/vanilla/redstone/hopper'})
 
     // Silt Mud bricks
     event.remove({id: 'tfc:crafting/soil/silt_drying_bricks'})

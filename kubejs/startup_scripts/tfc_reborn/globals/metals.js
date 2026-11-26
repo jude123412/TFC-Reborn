@@ -277,7 +277,7 @@ global.metals = {
         ingot: 'immersiveengineering:ingot_lead',
         double_ingot: 'tfc_ie_addon:metal/double_ingot/lead',
         sheet: 'tfc_ie_addon:metal/sheet/lead',
-        double_sheet: null,
+        double_sheet: 'kubejs:metal/double_sheet/lead',
         anvil: null,
 
         nugget: 'immersiveengineering:nugget_lead',
