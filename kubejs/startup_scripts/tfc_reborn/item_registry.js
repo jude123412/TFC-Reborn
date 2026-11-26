@@ -266,4 +266,19 @@ StartupEvents.registry('item', event => {
         .translationKey('kubejs:item/powder/nitrated_blasting_mixture')
         .tag('forge:dusts')
         .tag('tfc:usable_in_powder_keg')
+
+    // Rough Gun Stock
+    event.create('kubejs:rough_gun_stock')
+        .texture('kubejs:item/rough_gun_stock')
+        .translationKey('kubejs:item/rough_gun_stock')
+
+    // Gun Stock
+    event.create('kubejs:gun_stock')
+        .texture('kubejs:item/gun_stock')
+        .translationKey('kubejs:item/gun_stock')
+
+    // Illegal Gun Parts
+    event.create('kubejs:illegal_gun_parts')
+        .texture('kubejs:item/illegal_gun_parts')
+        .translationKey('kubejs:item/illegal_gun_parts')
 })

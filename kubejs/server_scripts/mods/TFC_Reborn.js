@@ -866,7 +866,7 @@ ServerEvents.recipes(event => {
     event.custom({
         type: 'tfc:anvil',
         input: {
-            item: 'tfc:metal/double_ingot/steel'
+            tag: 'forge:double_ingots/steel'
         },
         result: {
             item: 'kubejs:metal/spike_maul_head/steel'
@@ -902,7 +902,7 @@ ServerEvents.recipes(event => {
     event.custom({
         type: 'tfc:anvil',
         input: {
-            item: 'tfc:metal/double_ingot/wrought_iron'
+            tag: 'forge:double_ingots/wrought_iron'
         },
         result: {
             item: 'kubejs:metal/unfinished_crowbar/iron'
@@ -922,7 +922,7 @@ ServerEvents.recipes(event => {
     event.custom({
         type: 'tfc:anvil',
         input: {
-            item: 'tfc:metal/double_ingot/steel'
+            tag: 'forge:double_ingots/steel'
         },
         result: {
             item: 'kubejs:metal/unfinished_crowbar/steel'
@@ -1036,4 +1036,57 @@ ServerEvents.recipes(event => {
             '#forge:dusts/lime'
         ]
     )
+
+    // Rough Gun Stock
+    event.custom({
+        type: 'tfc:knapping',
+        knapping_type: 'kubejs:lumber',
+        outside_slot_required: false,
+        pattern: [
+            'XXXXX',
+            'XXXXX',
+            ' XXX ',
+            '  XXX',
+            '   XX'
+        ],
+        ingredient: {
+            tag: 'tfc:lumber'
+        },
+        result: {
+            item: 'kubejs:rough_gun_stock'
+        }
+    })
+
+    // Gun Stock
+    event.custom({
+        'type': 'create:sandpaper_polishing',
+        ingredients: [
+            {
+                item: 'kubejs:rough_gun_stock'
+            }
+        ],
+        results: [
+            {
+                item: 'kubejs:gun_stock'
+            }
+        ]
+    })
+
+    // Illegal Gun Parts
+    event.custom({
+        type: 'tfc:anvil',
+        input: {
+            tag: 'forge:sheets/wrought_iron'
+        },
+        result: {
+            item: 'kubejs:illegal_gun_parts'
+        },
+        tier: 3,
+        rules: [
+            'draw_third_last',
+            'punch_second_last',
+            'bend_last'
+        ],
+        "apply_forging_bonus": false
+    })
 })

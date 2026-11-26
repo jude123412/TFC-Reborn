@@ -183,6 +183,9 @@ ClientEvents.lang('en_us', event => {
     event.add('item.kubejs.wooden_board', 'Wooden Board')
     event.add('item.kubejs.laser_core', 'Laser Core')
     event.add('item.kubejs.slag', 'Slag')
+    event.add('item.kubejs.rough_gun_stock', 'Rough Gun Stock')
+    event.add('item.kubejs.gun_stock', 'Gun Stock')
+    event.add('item.kubejs.illegal_gun_parts', 'Illegal Gun Parts')
 
     // Ore Powders
     event.add('item.kubejs.powder.chromite', 'Chromite Powder')
