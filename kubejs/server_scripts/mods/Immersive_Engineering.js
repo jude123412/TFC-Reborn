@@ -337,6 +337,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'immersiveengineering:arcfurnace/dust_copper'})
     event.remove({id: 'immersiveengineering:arcfurnace/alloy_invar'})
     event.remove({id: 'immersiveengineering:arcfurnace/alloy_rose_gold'})
+    event.remove({id: 'immersiveengineering:alloysmelter/rose_gold'})
 
     // Recipe Removal by output
     event.remove({output: 'immersiveengineering:dust_wood'})

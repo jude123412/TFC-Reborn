@@ -81,6 +81,8 @@ ServerEvents.recipes(event => {
     event.remove({id: 'createdieselgenerators:mixing/biodiesel'})
     event.remove({id: 'createdieselgenerators:distillation/superheated_crude_oil'})
     event.remove({id: 'createdieselgenerators:distillation/crude_oil'})
+    event.remove({id: 'createaddition:compat/immersiveengineering/item_application/kiln_brick_using_deployer'})
+    event.remove({id: 'createaddition:compat/immersiveengineering/item_application/kiln_brick'})
 
     // Recipe Removal by output
     event.remove({output: 'createdieselgenerators:wood_chip'})
