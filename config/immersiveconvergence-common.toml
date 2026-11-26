@@ -20,9 +20,38 @@
 #Experimental settings
 [experimental]
 	#EXPERIMENTAL. Run as though Immersive Engineering were not installed, even when it is.
-	#Every Immersive Engineering path in Immersive Convergence and Immersive Technology gates off: no wires, no conveyors, no connectors, no IE multiblock templates, and none of the content built out of IE blocks or items. Immersive Petroleum gates off with it, because it cannot work without Immersive Engineering.
-	#Recipes that name IE items will have no valid ingredients, multiblocks whose templates are built from IE blocks cannot be assembled, and anything already placed from them will not come back.
+	#Every Immersive Engineering path in Immersive Convergence and Immersive Technology gates off: no wires, no fittings, and none of the content built out of IE blocks or items. Immersive Petroleum gates off with it, because it cannot work without Immersive Engineering.
+	#Immersive Technology has two template sets, and its recipes switch between them at load, dropping the old hand-made recipes and NBT text. Recipes that name IE items will have no valid ingredients, and anything already placed from IE blocks will not come back.
 	#Turning this on means: I know what I am doing, and I can replace the needed recipes, and NBT data myself.
 	#Read once at startup; a change needs a game restart.
 	disable_immersive_engineering = false
+
+#Wire terminal settings
+[wires]
+	#The most energy per tick an Immersive Convergence low voltage terminal holds and passes on to the block it faces, in FE. Default 2048. A change needs a game restart.
+	#Range: > 1
+	lv_rate = 2048
+	#The most energy per tick an Immersive Convergence medium voltage terminal holds and passes on to the block it faces, in FE. Default 8192. A change needs a game restart.
+	#Range: > 1
+	mv_rate = 8192
+	#The most energy per tick an Immersive Convergence high voltage terminal holds and passes on to the block it faces, in FE. Default 32768. A change needs a game restart.
+	#Range: > 1
+	hv_rate = 32768
+
+#Fluid pipe settings
+[pipes]
+	#How much a fluid pipe can move per operation, in mB. Default 100.
+	#Range: > 1
+	transferRate = 100
+	#How much a fluid pipe can move per operation while pressurized, in mB. Default 2500.
+	#Range: > 1
+	pressurizedTransferRate = 2500
+	#Pipes remember the last path they served (cheaper) instead of round-robining every destination. Default false.
+	lastServed = false
+
+#Creative content settings
+[creative]
+	#Whether the Creative Energy Source block is registered. AUTO registers it only when Immersive Engineering is not loaded, since Immersive Engineering has its own creative capacitor; TRUE always registers it and FALSE never does. Read once at startup; a change needs a game restart.
+	#Allowed Values: AUTO, TRUE, FALSE
+	energySource = "AUTO"
 
