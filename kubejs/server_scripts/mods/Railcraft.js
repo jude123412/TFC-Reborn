@@ -190,65 +190,10 @@ ServerEvents.recipes(event => {
     event.remove({id: 'railcraft:bronze_tunnel_bore_head'})
     event.remove({id: 'railcraft:steel_tunnel_bore_head'})
     event.remove({id: 'railcraft:diamond_tunnel_bore_head'})
-
-    // Coke Oven Bricks
-    event.remove({id: 'railcraft:coke_oven_bricks'})
-    event.shapeless('railcraft:coke_oven_bricks', [
-        'kubejs:refactory_bricks',
-        '#forge:sand'
-    ])
-
-    // Coal Coke
-    event.remove({id: 'railcraft:coke_oven/coal_coke'})
-    event.custom({
-        type: 'railcraft:coking',
-        cookingTime: 3600,
-        creosoteOutput: 500,
-        experience: 0.0,
-        ingredient: {
-            tag: 'forge:gems/coal'
-        },
-        result: {
-            item: 'kubejs:coal_coke'
-        }
-    })
-    event.shapeless(
-        Item.of('kubejs:refactory_bricks'),
-        [
-            'railcraft:coke_oven_bricks',
-            '#tfc:chisels'
-        ]
-    ).damageIngredient('#tfc:chisels')
-
-    // Block of Coal Coke
-    event.remove({id: 'railcraft:coke_oven/coal_coke_block'})
-    event.custom({
-        type: 'railcraft:coking',
-        cookingTime: 32400,
-        creosoteOutput: 4500,
-        experience: 0.0,
-        ingredient: {
-            item: 'minecraft:coal_block'
-        },
-        result: {
-            item: 'kubejs:coal_coke_block'
-        }
-    })
-
-    // Charcoal
     event.remove({id: 'railcraft:coke_oven/charcoal'})
-    event.custom({
-        type: 'railcraft:coking',
-        cookingTime: 1800,
-        creosoteOutput: 250,
-        experience: 0.0,
-        ingredient: {
-            tag: 'tfc:pit_kiln_logs'
-        },
-        result: {
-            item: 'minecraft:charcoal'
-        }
-    })
+    event.remove({id: 'railcraft:coke_oven/coal_coke_block'})
+    event.remove({id: 'railcraft:coke_oven/coal_coke'})
+    event.remove({id: 'railcraft:coke_oven_bricks'})
 
     // Locking Track Kit
     event.replaceInput(

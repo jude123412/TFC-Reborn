@@ -131,6 +131,7 @@ JEIEvents.hideItems(event => {
     event.hide('immersiveengineering:alloybrick')
     event.hide('immersiveengineering:slab_alloybrick')
     event.hide('immersiveengineering:alloy_smelter')
+    event.hide('railcraft:coke_oven_bricks')
 
     // Hidden Buckets
     event.hide('buildcraftenergy:oil/hot_bucket')
