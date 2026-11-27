@@ -37,7 +37,7 @@ TFCEvents.data(event => {
         }
 
         if (o.ore_sand != null && o.ore_sand.startsWith('kubejs:')) {
-            event.itemHeat(o.ore_sand, m.capacity / 2, m.work, m.weld)
+            event.itemHeat(o.ore_sand, m.capacity, m.work, m.weld)
         }
     }
 })
