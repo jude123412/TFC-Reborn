@@ -176,7 +176,7 @@ ServerEvents.recipes(event => {
         B: '#forge:clay'
     })
 
-    // Wrought Iron 1:1
+    // Raw Iron Bloom
     tfc.bloomery(
         'tfc:raw_iron_bloom',
         'kubejs:coal_coke',
@@ -184,7 +184,7 @@ ServerEvents.recipes(event => {
         15000
     )
 
-    // Wrought Iron
+    // Wrought Iron Ingot
     event.custom({
         type: 'vintage:hammering',
         hammerBlows: 5,
@@ -199,8 +199,49 @@ ServerEvents.recipes(event => {
             }
         ],
     })
+    event.custom({
+        type: 'immersiveengineering:blast_furnace',
+        input: {
+            tag: 'forge:ingots/cast_iron'
+        },
+        result: {
+            item: 'tfc:metal/ingot/wrought_iron'
+        },
+        slag: {
+            item: 'kubejs:slag'
+        },
+        time: 1200
+    })
+    event.custom({
+        type: 'immersiveengineering:arc_furnace',
+        energy: 51200,
+        input: {
+            base_ingredient: {
+                tag: 'forge:ingots/cast_iron'
+            }
+        },
+        additives: [
+            {
+                base_ingredient: {
+                    tag: 'forge:dusts/coke'
+                }
+            }
+        ],
+        results: [
+            {
+                base_ingredient: {
+                    item: 'tfc:metal/ingot/wrought_iron'
+                }
+            }
+        ],
+        slag: {
+            item: 'kubejs:slag'
+        },
+        secondaries: [],
+        time: 100
+    })
 
-    // Steel
+    // Steel Ingot
     event.custom({
         type: 'vintage:hammering',
         hammerBlows: 5,
@@ -215,8 +256,49 @@ ServerEvents.recipes(event => {
             }
         ],
     })
+    event.custom({
+        type: 'immersiveengineering:blast_furnace',
+        input: {
+            tag: 'forge:ingots/pig_iron'
+        },
+        result: {
+            item: 'tfc:metal/ingot/steel'
+        },
+        slag: {
+            item: 'kubejs:slag'
+        },
+        time: 1200
+    })
+    event.custom({
+        type: 'immersiveengineering:arc_furnace',
+        energy: 51200,
+        input: {
+            base_ingredient: {
+                tag: 'forge:ingots/pig_iron'
+            }
+        },
+        additives: [
+            {
+                base_ingredient: {
+                    tag: 'forge:dusts/coke'
+                }
+            }
+        ],
+        results: [
+            {
+                base_ingredient: {
+                    item: 'tfc:metal/ingot/steel'
+                }
+            }
+        ],
+        slag: {
+            item: 'kubejs:slag'
+        },
+        secondaries: [],
+        time: 100
+    })
     
-    // Black Steel
+    // Black Steel Ingot
     event.custom({
         type: 'vintage:hammering',
         hammerBlows: 10,
@@ -232,7 +314,7 @@ ServerEvents.recipes(event => {
         ],
     })
     
-    // Blue Steel
+    // Blue Steel Ingot
     event.custom({
         type: 'vintage:hammering',
         hammerBlows: 10,
@@ -248,7 +330,7 @@ ServerEvents.recipes(event => {
         ],
     })
 
-    // Red Steel
+    // Red Steel Ingot
     event.custom({
         type: 'vintage:hammering',
         hammerBlows: 10,
@@ -738,86 +820,26 @@ ServerEvents.recipes(event => {
         time: 100
     })
 
-    // Steel Ingot
-    event.custom({
-        type: 'immersiveengineering:arc_furnace',
-        energy: 51200,
-        input: {
-            base_ingredient: {
-                tag: 'forge:ingots/pig_iron',
-            }
-        },
-        additives: [
-            {
-                base_ingredient: {
-                    tag: 'forge:dusts/coke',
-                },
-            }
-        ],
-        results: [
-            {
-                base_ingredient: {
-                    item: 'tfc:metal/ingot/steel'
-                }
-            }
-        ],
-        slag: {
-            item: 'kubejs:slag'
-        },
-        secondaries: [],
-        time: 100
-    })
-
-    // Wrought Iron Ingot
-    event.custom({
-        type: 'immersiveengineering:arc_furnace',
-        energy: 51200,
-        input: {
-            base_ingredient: {
-                tag: 'forge:ingots/cast_iron',
-            }
-        },
-        additives: [
-            {
-                base_ingredient: {
-                    tag: 'forge:dusts/coke',
-                },
-            }
-        ],
-        results: [
-            {
-                base_ingredient: {
-                    item: 'tfc:metal/ingot/wrought_iron'
-                }
-            }
-        ],
-        slag: {
-            item: 'kubejs:slag'
-        },
-        secondaries: [],
-        time: 100
-    })
-
     // Bismuth Bronze Ingot
     event.custom({
         type: 'immersiveengineering:arc_furnace',
         energy: 51200,
         input: {
             base_ingredient: {
-                tag: 'forge:ingots/copper',
+                tag: 'forge:ingots/copper'
             },
             count: 3
         },
         additives: [
             {
                 base_ingredient: {
-                    tag: 'forge:ingots/zinc',
-                },
+                    tag: 'forge:ingots/zinc'
+                }
             },
             {
                 base_ingredient: {
-                    tag: 'forge:ingots/bismuth',
-                },
+                    tag: 'forge:ingots/bismuth'
+                }
             }
         ],
         results: [
@@ -845,13 +867,13 @@ ServerEvents.recipes(event => {
         additives: [
             {
                 base_ingredient: {
-                    tag: 'forge:ingots/gold',
-                },
+                    tag: 'forge:ingots/gold'
+                }
             },
             {
                 base_ingredient: {
-                    tag: 'forge:ingots/silver',
-                },
+                    tag: 'forge:ingots/silver'
+                }
             }
         ],
         results: [
@@ -872,7 +894,7 @@ ServerEvents.recipes(event => {
         energy: 51200,
         input: {
             base_ingredient: {
-                tag: 'forge:ingots/steel',
+                tag: 'forge:ingots/steel'
             },
             count: 3
         },
@@ -880,12 +902,12 @@ ServerEvents.recipes(event => {
             {
                 base_ingredient: {
                     tag: 'forge:ingots/black_bronze',
-                },
+                }
             },
             {
                 base_ingredient: {
                     tag: 'forge:ingots/nickel',
-                },
+                }
             }
         ],
         results: [
@@ -902,6 +924,19 @@ ServerEvents.recipes(event => {
 
     // Pig Iron Ingot
     event.custom({
+        type: 'immersiveengineering:blast_furnace',
+        input: {
+            tag: 'forge:ingots/wrought_iron'
+        },
+        result: {
+            item: 'tfc:metal/ingot/pig_iron'
+        },
+        slag: {
+            item: 'kubejs:slag'
+        },
+        time: 1200
+    })
+    event.custom({
         type: 'immersiveengineering:arc_furnace',
         energy: 51200,
         input: {
@@ -913,7 +948,7 @@ ServerEvents.recipes(event => {
             {
                 base_ingredient: {
                     tag: 'forge:dusts/coke',
-                },
+                }
             }
         ],
         results: [
