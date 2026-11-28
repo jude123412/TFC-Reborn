@@ -169,6 +169,7 @@ ClientEvents.lang('en_us', event => {
     event.add('item.kubejs.powder.ender', 'Ender Pearl Powder')
     event.add('item.kubejs.powder.concentrated_blasting_mixture', 'Concentrated Blasting Mixture')
     event.add('item.kubejs.powder.nitrated_blasting_mixture', 'Nitrated Blasting Powder')
+    event.add('item.kubejs.powder.coal', 'Coal Powder')
 
     // Misc Items
     event.add('item.kubejs.coal_coke', 'Coal Coke')

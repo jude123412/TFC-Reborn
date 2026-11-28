@@ -1085,4 +1085,94 @@ ServerEvents.recipes(event => {
         ],
         "apply_forging_bonus": false
     })
+
+    // Coal Powder
+    event.custom({
+        type: 'tfc:quern',
+        ingredient: {
+            tag: 'forge:gems/coal'
+        },
+        result: {
+            item: 'kubejs:powder/coal',
+            count: 4
+        }
+    })
+    event.custom({
+        type: 'create:milling',
+        ingredients: [
+            {
+                tag: 'forge:gems/coal'
+            }
+        ],
+        processingTime: 400,
+        results: [
+            {
+                item: 'kubejs:powder/coal',
+                count: 4
+            }
+        ]
+    })
+    event.custom({
+        type: 'create:crushing',
+        ingredients: [
+            {
+                tag: 'forge:gems/coal'
+            }
+        ],
+        processingTime: 400,
+        results: [
+            {
+                item: 'kubejs:powder/coal',
+                count: 4
+            },
+            {
+                chance: 0.50,
+                item: 'kubejs:powder/coal'
+            },
+            {
+                chance: 0.10,
+                item: 'tfc:powder/sulfur'
+            }
+        ]
+    })
+    event.custom({
+        type: 'railcraft:crusher',
+        ingredient: {
+            tag: 'forge:gems/coal'
+        },
+        outputs: [
+            {
+                probability: 1.00,
+                result: {
+                    item: 'kubejs:powder/coal'
+                },
+                count: 5
+            },
+            {
+                probability: 0.20,
+                result: {
+                    item: 'tfc:powder/sulfur'
+                }
+            },
+        ]
+    })
+    event.custom({
+        type: "immersiveengineering:crusher",
+        energy: 6000,
+        input: {
+            tag: 'forge:gems/coal'
+        },
+        result: {
+            item: 'kubejs:powder/coal',
+            count: 6
+        },
+        secondaries: [
+            {
+                chance: 0.30,
+                output: {
+                    item: 'tfc:powder/sulfur'
+                } 
+            }
+        ]
+    })
 })

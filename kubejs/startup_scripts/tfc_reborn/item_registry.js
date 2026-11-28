@@ -220,6 +220,26 @@ StartupEvents.registry('item', event => {
         .tag('forge:dusts')
         .tag('forge:dusts/ender')
 
+    // Concentrated Blasting Mixture
+    event.create('kubejs:powder/concentrated_blasting_mixture')
+        .texture('kubejs:item/powder/concentrated_blasting_mixture')
+        .translationKey('kubejs:item/powder/concentrated_blasting_mixture')
+        .tag('forge:dusts')
+
+    // Nitrated Blasting Mixture
+    event.create('kubejs:powder/nitrated_blasting_mixture')
+        .texture('kubejs:item/powder/nitrated_blasting_mixture')
+        .translationKey('kubejs:item/powder/nitrated_blasting_mixture')
+        .tag('forge:dusts')
+        .tag('tfc:usable_in_powder_keg')
+
+    // Coal Powder
+    event.create('kubejs:powder/coal')
+        .texture('kubejs:item/powder/coal')
+        .translationKey('kubejs:item/powder/coal')
+        .tag('forge:dusts')
+        .tag('forge:dusts/coal')
+
     // Iron Spike Maul Head
     event.create('kubejs:metal/spike_maul_head/iron')
         .texture('kubejs:item/metal/spike_maul_head/iron')
@@ -253,19 +273,6 @@ StartupEvents.registry('item', event => {
     event.create('kubejs:metal/unfinished_crowbar/diamond')
         .texture('kubejs:item/metal/unfinished_crowbar/diamond')
         .translationKey('kubejs:item/metal/unfinished_crowbar/diamond')
-
-    // Concentrated Blasting Mixture
-    event.create('kubejs:powder/concentrated_blasting_mixture')
-        .texture('kubejs:item/powder/concentrated_blasting_mixture')
-        .translationKey('kubejs:item/powder/concentrated_blasting_mixture')
-        .tag('forge:dusts')
-
-    // Nitrated Blasting Mixture
-    event.create('kubejs:powder/nitrated_blasting_mixture')
-        .texture('kubejs:item/powder/nitrated_blasting_mixture')
-        .translationKey('kubejs:item/powder/nitrated_blasting_mixture')
-        .tag('forge:dusts')
-        .tag('tfc:usable_in_powder_keg')
 
     // Rough Gun Stock
     event.create('kubejs:rough_gun_stock')

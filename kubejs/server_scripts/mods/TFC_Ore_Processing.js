@@ -2,6 +2,8 @@ ServerEvents.recipes(event => {
     const tfc = event.recipes.tfc
 
     event.remove({id: 'tfcoreprocessing:heating/coke_baking'})
+    event.remove({id: 'tfcoreprocessing:quern/kindle/coal_dust_bituminous_coal'})
+    event.remove({id: 'tfcoreprocessing:quern/kindle/coal_dust_lignite'})
 
     // Firelog
     event.remove({id: 'tfcoreprocessing:compress/firelog'})

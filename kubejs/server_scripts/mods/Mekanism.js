@@ -200,6 +200,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'mekanism:processing/tin/nugget/from_ingot'})
     event.remove({id: 'mekanism:processing/lead/nugget/from_ingot'})
     event.remove({id: 'mekanism:processing/uranium/nugget/from_ingot'})
+    event.remove({id: 'mekanism:processing/coal/from_dust'})
 
     // Obsidian TNT
     event.remove({id: 'mekanismadditions:obsidian_tnt'})
