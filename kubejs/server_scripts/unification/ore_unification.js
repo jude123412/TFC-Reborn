@@ -137,7 +137,7 @@ ServerEvents.recipes(event => {
                         count: 2
                     },
                     {
-                        chance: 0.33,
+                        chance: 0.11,
                         item: o.ore_secondary_powder
                     }
                 ]
@@ -158,7 +158,7 @@ ServerEvents.recipes(event => {
                         count: 2
                     },
                     {
-                        probability: 0.66,
+                        probability: 0.22,
                         result: {
                             item: o.ore_secondary_powder
                         }
@@ -179,7 +179,7 @@ ServerEvents.recipes(event => {
                 },
                 secondaries: [
                     {
-                        chance: 1.00,
+                        chance: 0.33,
                         output: {
                             item: o.ore_secondary_powder
                         } 
@@ -235,7 +235,7 @@ ServerEvents.recipes(event => {
                         count: 3
                     },
                     {
-                        chance: 0.33,
+                        chance: 0.11,
                         item: o.ore_secondary_powder
                     }
                 ]
@@ -256,7 +256,7 @@ ServerEvents.recipes(event => {
                         count: 3
                     },
                     {
-                        probability: 0.66,
+                        probability: 0.22,
                         result: {
                             item: o.ore_secondary_powder
                         }
@@ -277,7 +277,7 @@ ServerEvents.recipes(event => {
                 },
                 secondaries: [
                     {
-                        chance: 1.00,
+                        chance: 0.33,
                         output: {
                             item: o.ore_secondary_powder
                         } 
@@ -333,7 +333,7 @@ ServerEvents.recipes(event => {
                         count: 5
                     },
                     {
-                        chance: 0.33,
+                        chance: 0.11,
                         item: o.ore_secondary_powder,
                         count: 2
                     }
@@ -355,7 +355,7 @@ ServerEvents.recipes(event => {
                         count: 5
                     },
                     {
-                        probability: 0.66,
+                        probability: 0.22,
                         result: {
                             item: o.ore_secondary_powder
                         },
@@ -377,7 +377,7 @@ ServerEvents.recipes(event => {
                 },
                 secondaries: [
                     {
-                        chance: 1.00,
+                        chance: 0.33,
                         output: {
                             item: o.ore_secondary_powder,
                             count: 2
@@ -434,7 +434,7 @@ ServerEvents.recipes(event => {
                         count: 7
                     },
                     {
-                        chance: 0.33,
+                        chance: 0.11,
                         item: o.ore_secondary_powder,
                         count: 3
                     }
@@ -456,7 +456,7 @@ ServerEvents.recipes(event => {
                         count: 7
                     },
                     {
-                        probability: 0.66,
+                        probability: 0.22,
                         result: {
                             item: o.ore_secondary_powder
                         },
@@ -478,7 +478,7 @@ ServerEvents.recipes(event => {
                 },
                 secondaries: [
                     {
-                        chance: 1.00,
+                        chance: 0.33,
                         output: {
                             item: o.ore_secondary_powder,
                             count: 3
