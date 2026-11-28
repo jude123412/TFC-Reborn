@@ -183,6 +183,12 @@ ServerEvents.recipes(event => {
         Fluid.of('tfc:metal/cast_iron', 100),
         15000
     )
+    tfc.bloomery(
+        'tfc:raw_iron_bloom',
+        'tfcoreprocessing:kindle/coke_pellets',
+        Fluid.of('tfc:metal/cast_iron', 100),
+        15000
+    )
 
     // Wrought Iron Ingot
     event.custom({
