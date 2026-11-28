@@ -342,7 +342,7 @@ ServerEvents.recipes(event => {
     // Recipe Removal by output
     event.remove({output: 'immersiveengineering:dust_wood'})
 
-    // Coal Coke
+    // Block of Coal Coke
     event.remove({id: 'tfc_ie_addon:cokeoven/bituminous_coal'})
     event.remove({id: 'immersiveengineering:cokeoven/coke'})
     event.remove({id: 'tfc_ie_addon:cokeoven/lignite'})
@@ -355,10 +355,10 @@ ServerEvents.recipes(event => {
         result: {
             item: 'kubejs:coal_coke_block'
         },
-        time: 1800
+        time: 16200
     })
 
-    // Block of Coal Coke
+    // Coal Coke
     event.remove({id: 'immersiveengineering:cokeoven/coke_block'})
     event.custom({
         type: 'immersiveengineering:coke_oven',
@@ -369,7 +369,7 @@ ServerEvents.recipes(event => {
         result: {
             item: 'kubejs:coal_coke'
         },
-        time: 16200
+        time: 1800
     })
 
     // Charcoal
@@ -378,7 +378,7 @@ ServerEvents.recipes(event => {
         type: 'immersiveengineering:coke_oven',
         creosote: 250,
         input: {
-            tag: 'tfc:pit_kiln_logs'
+            tag: 'tfc:firepit_logs'
         },
         result: {
             item: 'minecraft:charcoal'
